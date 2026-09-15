@@ -1,0 +1,861 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.759 --> 00:00:19.770
+Estimated expected value right and likewise
+at the end to recommend a specific arm I also
+
+00:00:19.770 --> 00:00:26.919
+use the estimated expected value right there
+is a whole other class of algorithms that
+
+00:00:26.919 --> 00:00:38.630
+directly work with the directly work with
+the representation of the policy right so
+
+00:00:38.630 --> 00:00:45.190
+what do I mean by a policy here, I told you
+what a policy was in the very first class
+
+00:00:45.190 --> 00:00:55.320
+right what is the policy, I said its a mapping
+from States to actions or states to action
+
+00:00:55.320 --> 00:01:01.320
+probabilities right in this case we really
+have no states right so far we have not considered
+
+00:01:01.320 --> 00:01:02.910
+any states.
+
+00:01:02.910 --> 00:01:14.900
+So what would a policy be in this case sorry
+yeah it could be just one arm or it could
+
+00:01:14.900 --> 00:01:19.270
+be some kind of a probability distribution
+over the arms right it could be one arm or
+
+00:01:19.270 --> 00:01:29.700
+some probability distribution over the arms
+so I am going to denote this by right, so
+
+00:01:29.700 --> 00:01:37.009
+which is the probability of pulling arm a
+right and my goal is to keep changing this
+
+00:01:37.009 --> 00:01:42.800
+policy over time, such that eventually I will
+be recommending with probability one to pull
+
+00:01:42.800 --> 00:01:47.049
+the best arm right.
+
+00:01:47.049 --> 00:02:05.710
+So this policy is going to keep changing over
+time so I am going to denote this by hmm..so
+
+00:02:05.710 --> 00:02:13.140
+the policy is going to keep changing over
+time and denote this by pi t right, so now
+
+00:02:13.140 --> 00:02:17.960
+what a learning algorithm has to do in such
+a case is it has to give me a way of changing
+
+00:02:17.960 --> 00:02:25.819
+this pi t with time right, so one way of thinking
+about things like epsilon greedy right or
+
+00:02:25.819 --> 00:02:33.140
+soft max is that they define this pi t in
+an indirect fashion right if you remember
+
+00:02:33.140 --> 00:02:35.730
+I wrote it down also right.
+
+00:02:35.730 --> 00:02:40.440
+I wrote I wrote down what pi t would be for
+epsilon greedy and soft max I started off
+
+00:02:40.440 --> 00:02:45.610
+by writing it for soft max then i came back
+and wrote it down for epsilon greedy right
+
+00:02:45.610 --> 00:02:53.209
+people remember that I said what will be the
+probability of picking I don't know if I used
+
+00:02:53.209 --> 00:03:01.980
+the pi notation did I use the pi notation
+? yes, I use P the probability of picking
+
+00:03:01.980 --> 00:03:05.450
+action right I didn't because I didn't introduce
+the pi notation I did not think I used it
+
+00:03:05.450 --> 00:03:10.180
+but essentially the probability of picking
+an action I would have written probability
+
+00:03:10.180 --> 00:03:17.270
+at equal to a right, that is exactly what
+pi t of a is right.
+
+00:03:17.270 --> 00:03:26.860
+So this is, it is a probability that at equal
+to a to this is additional notation we will
+
+00:03:26.860 --> 00:03:32.819
+be using the notation pi throughout right,
+so later we will use will condition this on
+
+00:03:32.819 --> 00:03:38.370
+this states also that will essentially be
+the probability that at equal to a given st
+
+00:03:38.370 --> 00:03:44.230
+equal to s right, here since there's only
+one state we do not have to do that great,
+
+00:03:44.230 --> 00:03:51.950
+so some of the earliest known approaches for
+solving bandits use this kind of a direct
+
+00:03:51.950 --> 00:03:53.230
+policy search right.
+
+00:03:53.230 --> 00:04:05.480
+So some kind of a policy search approach right
+so in that what we do is, so let us let us
+
+00:04:05.480 --> 00:04:10.480
+keep it simple I will talk about a two action
+case right and then we can talk about other
+
+00:04:10.480 --> 00:04:22.060
+things right so a very very simplified situation
+which is called the 
+
+00:04:22.060 --> 00:04:28.640
+binary bandit where there are only two outcomes
+either you get a 0 or you get a 1 right, so
+
+00:04:28.640 --> 00:04:33.669
+1 is a good outcome 0 is a bad outcome this
+just makes me I am just going to give you
+
+00:04:33.669 --> 00:04:36.630
+like the historic perspective here okay.
+
+00:04:36.630 --> 00:04:42.740
+So in fact it is so historic that in edition
+2 they got rid of all of this discussion in
+
+00:04:42.740 --> 00:04:46.800
+the book, right so if you want to know more
+about the kind of things I am talking about
+
+00:04:46.800 --> 00:04:53.770
+right now you will have to go back and read
+edition one of the RL book, so let us say
+
+00:04:53.770 --> 00:05:02.639
+I will talk about binary bandits, so Rt can
+be either 0 or 1 okay, and let us say I have
+
+00:05:02.639 --> 00:05:08.760
+a two armed bandit case here so I have only
+arm 1 or arm 2 just to make my thing easy.
+
+00:05:08.760 --> 00:05:29.340
+So if right at some time t, Rt equal to 1
+right, then what I will do is I will make,
+
+00:05:29.340 --> 00:05:34.490
+pi t plus 1 of at essentially the action I
+took at time t right, a t is the action I
+
+00:05:34.490 --> 00:05:52.490
+took at time T and the reward I got was 1
+so what should I do, hmm, should increase
+
+00:05:52.490 --> 00:06:14.090
+all right so how will I do that right, so
+if alpha is small enough ok, so the best action
+
+00:06:14.090 --> 00:06:18.250
+will eventually converge to a probability
+of 1 if alpha is very large I will start oscillating
+
+00:06:18.250 --> 00:06:23.700
+this will this might not be probabilities
+all those problems are there right.
+
+00:06:23.700 --> 00:06:36.870
+And what about the other case if this is this
+if I am doing this, the action some other
+
+00:06:36.870 --> 00:07:01.720
+action a prime 
+what should I do for that right, I mean ideally
+
+00:07:01.720 --> 00:07:11.090
+it should be plus alpha times 0 minus pi so
+this will work if it is two actions if its
+
+00:07:11.090 --> 00:07:16.860
+multiple actions what happens, it will not
+be a probability distribution I will have
+
+00:07:16.860 --> 00:07:22.110
+to make sure that everything stays a probability
+distribution, right if there are multiple
+
+00:07:22.110 --> 00:07:27.160
+actions instead of taking alpha from everybody,
+then I should take away alpha by n minus 1
+
+00:07:27.160 --> 00:07:30.000
+from the other actions okay.
+
+00:07:30.000 --> 00:07:35.580
+So that when I sum up everything after that
+also it will still be 1, starting off with
+
+00:07:35.580 --> 00:07:40.840
+assumption that pi t sums to 1, so I need
+to make sure pi t plus 1 also sums to 1, so
+
+00:07:40.840 --> 00:07:45.889
+I will have to adjust these numbers accordingly
+okay, so I am pretty sure all of you can do
+
+00:07:45.889 --> 00:08:01.630
+the correct adjustment, so this is essentially
+one update rule one sec what happens any ideas
+
+00:08:01.630 --> 00:08:37.380
+hmm..sorry..I got 0, the reward was 0, this
+1 has nothing to do with the reward okay.
+
+00:08:37.380 --> 00:08:41.700
+In fact this 1 here has nothing to do with
+the reward the 1 here it has to do with the
+
+00:08:41.700 --> 00:08:47.269
+fact that if the probability I would like
+this probability to be 1 you remember the
+
+00:08:47.269 --> 00:08:53.840
+form of the rule I told you right, current
+value target minus the current value, so the
+
+00:08:53.840 --> 00:08:58.700
+error right so current value plus alpha times
+error so that is the thing it's the same way
+
+00:08:58.700 --> 00:09:05.500
+here the probability I want is 0 okay, so
+it is the current value plus alpha times 0
+
+00:09:05.500 --> 00:09:10.149
+minus pi, so I simplified that I wrote it
+as 1 minus alpha right.
+
+00:09:10.149 --> 00:09:14.220
+So I'm always writing it in the same stochastic
+averaging form right, so the 1 is the target
+
+00:09:14.220 --> 00:09:22.649
+I want this is not the reward right, suppose
+i got a reward of zero what do I do, you flip
+
+00:09:22.649 --> 00:09:29.180
+it around right it turns out that well that
+is one valid option there are many options
+
+00:09:29.180 --> 00:10:31.010
+that you can have right, so just flip this
+around right, I reduce the probability of
+
+00:10:31.010 --> 00:10:34.889
+the action at took at time t, I increase the
+probability of the action I took I didn't
+
+00:10:34.889 --> 00:10:35.920
+take at time t right.
+
+00:10:35.920 --> 00:10:39.750
+So why do I have to do this just to make sure
+it is a probability distribution right when
+
+00:10:39.750 --> 00:10:44.440
+I reduce this probability this will automatically
+have to go up, it is not like I am rewarding
+
+00:10:44.440 --> 00:10:49.100
+the action I didn't take right, but the fact
+we have this constraint of the probabilities
+
+00:10:49.100 --> 00:10:55.339
+have to sum to 1 we will automatically reward
+the other action, okay so but notice i wrote
+
+00:10:55.339 --> 00:11:00.040
+alpha and beta, so depending on the relationship
+between alpha and beta.
+
+00:11:00.040 --> 00:11:08.050
+So you have different kinds of algorithms
+right so if alpha equal to beta, so we have
+
+00:11:08.050 --> 00:11:17.950
+something called, something called linear
+reward penalty LRP algorithm okay, so it's
+
+00:11:17.950 --> 00:11:24.649
+this these things have been around for many
+many many decades ok, so the LRP algorithm
+
+00:11:24.649 --> 00:11:28.860
+is linear because the relationships there
+is all linear so you can see there are no
+
+00:11:28.860 --> 00:11:34.649
+higher order terms in the updates that you
+write, so you have.. you do something you
+
+00:11:34.649 --> 00:11:39.870
+change the parameters on a reward and you
+also change the parameters when you get a
+
+00:11:39.870 --> 00:11:41.220
+penalty right.
+
+00:11:41.220 --> 00:11:45.940
+So the reward is plus 1, penalty is 0 and
+you are changing them by equal amounts right,
+
+00:11:45.940 --> 00:11:54.180
+that is when alpha equal to beta, so when
+alpha is much greater than beta right, remember
+
+00:11:54.180 --> 00:11:58.760
+these are relative terms okay, when I say
+alpha much greater than beta still alpha is
+
+00:11:58.760 --> 00:12:03.779
+very small and I expect alpha to be like 10
+power minus 3 or 10 power minus 2 or something
+
+00:12:03.779 --> 00:12:07.110
+like that right even though I write alpha
+is far far greater than beta that means beta
+
+00:12:07.110 --> 00:12:19.880
+should be 10 power minus 5 or 10 power minus
+7 something much smaller right this is called
+
+00:12:19.880 --> 00:12:21.269
+L R epsilon P.
+
+00:12:21.269 --> 00:12:27.889
+So I do something when I get a reward right
+I do a much much smaller change when I get
+
+00:12:27.889 --> 00:12:58.110
+a penalty ok, any idea what the I stands for
+yeah, it stands for inaction but yeah you
+
+00:12:58.110 --> 00:13:04.970
+get the idea right so when rewards comes I
+do something when the penalty side of it happens
+
+00:13:04.970 --> 00:13:10.850
+I do nothing, in action I just leave the probabilities
+as it is okay and it turns out that there
+
+00:13:10.850 --> 00:13:16.769
+is very very small change right the algorithm
+itself is the same all I am doing is changing
+
+00:13:16.769 --> 00:13:20.610
+these things around and it turns out the convergence
+behaviors of these three algorithms are very
+
+00:13:20.610 --> 00:13:28.709
+different right and depending on how how rewarding
+your arms are right.
+
+00:13:28.709 --> 00:13:35.480
+So for example my best arm let us say has
+a probability of, say a binary bandit right
+
+00:13:35.480 --> 00:13:44.089
+0 or 1, let us say my best arm has a probability
+of say 0.9 of coming up as 1, right and the
+
+00:13:44.089 --> 00:13:52.439
+other arm has say a probability of 0.6 of
+coming up as 1, then LRP will work well right,
+
+00:13:52.439 --> 00:14:02.829
+but suppose my best arm has probability of
+0.3 of coming up as 1 right and my bad arm
+
+00:14:02.829 --> 00:14:10.519
+my worst arm has a probability of 0.2 of coming
+up as 1 or 0.25 of coming up as 1, LRP is
+
+00:14:10.519 --> 00:14:16.860
+going to have a hard time in fact it turns
+out that in such cases LRI works better because
+
+00:14:16.860 --> 00:14:21.639
+whenever a small reward comes also you whenever
+the reward comes right you keep hiking the
+
+00:14:21.639 --> 00:14:27.649
+probability right, because the probability
+of getting the reward is so small right.
+
+00:14:27.649 --> 00:14:32.779
+So if I am doing something on the penalty
+side I always almost always be depressing
+
+00:14:32.779 --> 00:14:36.910
+my probabilities I will just keep decreasing
+the probabilities and increasing the other
+
+00:14:36.910 --> 00:14:41.860
+probability so there will be a lot of oscillations
+right, so in cases where rewards are scarce
+
+00:14:41.860 --> 00:14:49.029
+to come by its best to ignore the penalties
+right so there are many many things like this
+
+00:14:49.029 --> 00:14:55.640
+so yeah, so there is still a very vibrant
+community that works with this kind of learning
+
+00:14:55.640 --> 00:15:01.199
+automaton ideas and this is the most basic
+most fundamental of these things I told you
+
+00:15:01.199 --> 00:15:07.880
+about this variable structure stochastic automata
+right, I asked you about finite state machines
+
+00:15:07.880 --> 00:15:12.410
+and you all of you said you know finite state
+machines right and I told you then there is
+
+00:15:12.410 --> 00:15:16.009
+this variable structure finite state machines
+as people use for solving.
+
+00:15:16.009 --> 00:15:21.339
+So these are kind of the culmination of the
+variable structure finite state machines right
+
+00:15:21.339 --> 00:15:28.089
+so you can go down and write it more explicitly
+as to how it turns out to be automata right,
+
+00:15:28.089 --> 00:15:34.500
+but this is more of a compact way of representing
+those variable structure finite automata so
+
+00:15:34.500 --> 00:15:38.540
+I am not going to get into too much detail
+even though there is a vibrant community that
+
+00:15:38.540 --> 00:15:45.870
+does this, right and so this is just to tell
+you that this history of using this policy
+
+00:15:45.870 --> 00:15:52.230
+representations directly right goes back several
+decades in fact the earliest such learning
+
+00:15:52.230 --> 00:15:59.380
+automaton method was proposed in the 1930s,
+in fact these approaches even predate some
+
+00:15:59.380 --> 00:16:08.029
+of the value function value estimate based
+approaches we have talked about okay right.
+
+00:16:08.029 --> 00:16:18.130
+So fine so we're all on board here so taking
+this further now this looks like some kind
+
+00:16:18.130 --> 00:16:24.149
+of ad hoc way of coming up with the policy
+updates right, I mean it seems very natural
+
+00:16:24.149 --> 00:16:29.170
+way of doing it why I get a reward I increase
+the probability ok if I get a penalty I decrease
+
+00:16:29.170 --> 00:16:32.490
+the probability seems like a very natural
+way of doing it but is there a more systematic
+
+00:16:32.490 --> 00:16:36.680
+way of thinking about learning the policy
+directly right.
+
+00:16:36.680 --> 00:16:48.110
+So there is a very well-studied and increasingly
+a a direction which is receiving a lot of
+
+00:16:48.110 --> 00:17:00.389
+attention called 
+policy gradient approaches, the book calls
+
+00:17:00.389 --> 00:17:07.539
+these parameterized policy representations,
+while the earlier one where you know value
+
+00:17:07.539 --> 00:17:15.189
+function based methods they call this parameterized
+policy approaches, so the basic idea here
+
+00:17:15.189 --> 00:17:23.610
+is I am going to assume that my policies right,
+so here I am giving you the policy as explicit
+
+00:17:23.610 --> 00:17:24.610
+probability values right.
+
+00:17:24.610 --> 00:17:47.679
+So I'm going to assume that my policy depends
+on, the policy depends on some set of parameters,
+
+00:17:47.679 --> 00:18:01.940
+so what do I mean by this, so my policy is
+a probability distribution right I can specify
+
+00:18:01.940 --> 00:18:07.169
+the probability distribution in many ways
+for example I can specify the probability
+
+00:18:07.169 --> 00:18:14.111
+distribution like we did earlier by a soft
+max function right, so if I specify it by
+
+00:18:14.111 --> 00:18:20.419
+a soft max function what is it that I need
+to give you in order to define the policy
+
+00:18:20.419 --> 00:18:25.570
+people remember soft max.
+
+00:18:25.570 --> 00:18:31.080
+So e power something divided by summation
+e power something right, so suppose I am saying
+
+00:18:31.080 --> 00:18:36.200
+that I need to tell you what the soft max
+function is corresponding to my current policy,
+
+00:18:36.200 --> 00:18:43.430
+right so what is the information that I should
+communicate to you, so all those exponents
+
+00:18:43.430 --> 00:18:46.960
+that I am putting in there right for each
+action I have something I put in the exponent
+
+00:18:46.960 --> 00:18:52.299
+I will have to tell you that right, it need
+not be values, just remember very much so
+
+00:18:52.299 --> 00:18:57.240
+I am just talking about the soft max function
+right however I derive the value that goes
+
+00:18:57.240 --> 00:19:00.980
+into the exponent it can be a value function
+it can be something else right.
+
+00:19:00.980 --> 00:19:06.240
+I could have just arbitrarily pulled out some
+numbers I could have said action 1 put a 3
+
+00:19:06.240 --> 00:19:12.180
+in the exponent ok action 2 put a 15 in the
+exponent action 3 put a 22 in the exponent
+
+00:19:12.180 --> 00:19:17.429
+okay I just gave you those numbers arbitrarily
+but this defines a policy, right however i
+
+00:19:17.429 --> 00:19:22.890
+arrived at those numbers this defines a policy
+right, so this is what I call as a parameterized
+
+00:19:22.890 --> 00:19:28.010
+representation, so i have the set of parameters
+ok that defined the policy for me so I the
+
+00:19:28.010 --> 00:19:33.549
+parameters are somehow used to generate these
+numbers for me right.
+
+00:19:33.549 --> 00:19:38.440
+So this is essentially what we mean by parameters
+so we have a set of parameters right they
+
+00:19:38.440 --> 00:19:42.910
+could be anything they could be those values
+that I plug into the exponents which sometimes
+
+00:19:42.910 --> 00:19:52.370
+are called preferences okay, so that e power
+thing there right, so I can just say I prefer
+
+00:19:52.370 --> 00:19:57.190
+action a to action b right and then I can
+have some way of converting that into actual
+
+00:19:57.190 --> 00:20:01.390
+probabilities, right I would say my preference
+for action a is 25, my preference for action
+
+00:20:01.390 --> 00:20:10.090
+b is 13 right and from that I can convert
+it into probabilities.
+
+00:20:10.090 --> 00:20:13.400
+Because the value has a separate semantic
+associated with it right the value is the
+
+00:20:13.400 --> 00:20:16.760
+expected payoff that I am going to get on
+pulling the arm when I say the preference
+
+00:20:16.760 --> 00:20:21.920
+for the arm is 23 does not have need necessarily
+have any semantics so 23 versus 15, so 23
+
+00:20:21.920 --> 00:20:26.270
+is higher than 15 that is the only semantics
+I have, right not necessarily that 23 means
+
+00:20:26.270 --> 00:20:29.990
+that this is the payoff i am going to get
+so this gives me a lot more flexibility in
+
+00:20:29.990 --> 00:20:34.070
+how I change those values, right. it need
+not necessarily come from the estimation of
+
+00:20:34.070 --> 00:20:38.240
+the expectation okay right.
+
+00:20:38.240 --> 00:20:43.890
+So it could be preferences it could be say
+the weights of a neural network if you are
+
+00:20:43.890 --> 00:20:54.730
+so inclined, right so this is something which
+all of you should be thinking about how many
+
+00:20:54.730 --> 00:21:10.039
+of you read this article about the go playing
+agent? 1.2..3..4..5..6..7 not enough people
+
+00:21:10.039 --> 00:21:18.020
+everybody go read the go playing agent about
+alpha go...go go go to Google search for alpha
+
+00:21:18.020 --> 00:21:27.429
+go, it is there in the Hindu for crying out
+loud right, anyway.
+
+00:21:27.429 --> 00:21:31.669
+So this is this machine learning agent which
+they do not actually specify exactly what
+
+00:21:31.669 --> 00:21:35.309
+is the machine learning algorithm that they
+use it is a machine learning agent that learns
+
+00:21:35.309 --> 00:21:40.330
+to play this game of Go which for a long long
+long time was considered one of the hardest
+
+00:21:40.330 --> 00:21:46.490
+games for computers to play because the number
+of patterns that you could have are just huge,
+
+00:21:46.490 --> 00:21:52.730
+right and rules are very simple but then it
+turned out to be a very very hard game for
+
+00:21:52.730 --> 00:21:58.909
+computers to play certainly not at human levels,
+right but then Google deep mind has come up
+
+00:21:58.909 --> 00:22:03.740
+as soon as say Google deep mind you should
+know what algorithm that they use there right
+
+00:22:03.740 --> 00:22:07.700
+at least what how they formulated the problem
+right.
+
+00:22:07.700 --> 00:22:13.470
+So they use reinforcement learning and a deep
+neural network to train a go agent that actually
+
+00:22:13.470 --> 00:22:19.539
+beat the European champion 5-0, I mean they
+played a series of five matches and it beat
+
+00:22:19.539 --> 00:22:24.770
+the champion on all five of them, right and
+they are hoping to have a matchup with the
+
+00:22:24.770 --> 00:22:35.159
+world champion go player, in March I do not
+know.. they mentioned some dates March yeah
+
+00:22:35.159 --> 00:22:40.111
+and maybe they still do not hope to beat the
+world champion because apparently the world
+
+00:22:40.111 --> 00:22:44.929
+champion player is at a much higher level
+than, the all the other players out there
+
+00:22:44.929 --> 00:22:48.020
+but still it so there is hope right.
+
+00:22:48.020 --> 00:22:55.280
+So the point is RL plus neural networks seems
+to be the hot thing nowadays right so everybody
+
+00:22:55.280 --> 00:23:02.670
+wants to do that, right so this is not a esoteric
+example if you are going to go out there and
+
+00:23:02.670 --> 00:23:06.220
+do reinforcement learning this is probably
+what you will end up doing right, so where
+
+00:23:06.220 --> 00:23:12.480
+the parameters would be given by a weights
+of a neural network, right and I'll give you
+
+00:23:12.480 --> 00:23:18.200
+other examples as we go along right so even
+this you can think of as a parameterized representation
+
+00:23:18.200 --> 00:23:21.159
+right okay here is a question for you.
+
+00:23:21.159 --> 00:23:29.950
+So what kind of a probability distribution
+are we talking about here, binomial or Bernoulli
+
+00:23:29.950 --> 00:23:34.220
+depending on whether it is repeated trials
+or 1 trial right, so Bernoulli if I had multiple
+
+00:23:34.220 --> 00:23:41.370
+actions it would have been a multinomial right
+yeah so binomial multinomial so what is the
+
+00:23:41.370 --> 00:23:51.620
+equivalent version of Bernoulli, actually
+I mentioned this in ML class.. guys you know
+
+00:23:51.620 --> 00:23:56.919
+who were there in the ML class should be able
+to tell them.. I am not talking about the
+
+00:23:56.919 --> 00:24:01.610
+conjugate priors boss.. I am saying for repeated
+experiments, 2 outcome repeated experiments
+
+00:24:01.610 --> 00:24:07.809
+is binomial single trial is Bernoulli, multiple
+outcome repeated experience experiments is
+
+00:24:07.809 --> 00:24:16.190
+multinomial, single experiment is categorical,
+okay there is a distribution called the categorical
+
+00:24:16.190 --> 00:24:21.789
+distribution which is essentially multiple
+outcomes single single experiment probability
+
+00:24:21.789 --> 00:24:23.020
+distributions okay but anyway.
+
+00:24:23.020 --> 00:24:33.320
+So what are the parameters that describe binomial
+distribution.. 
+
+00:24:33.320 --> 00:24:36.440
+probability of 1 or something right.. so that
+is essentially that so this is again one way
+
+00:24:36.440 --> 00:24:42.330
+to think about this is this is also a parameterized
+distribution, where I am specifying directly
+
+00:24:42.330 --> 00:24:48.870
+the parameters of the multinomial or the binomial
+in this case I just said a prime i could say
+
+00:24:48.870 --> 00:24:54.350
+says all a prime not equal to a t and then
+I have if I adjust this alpha then I basically
+
+00:24:54.350 --> 00:24:58.539
+made it into a multinomial case ok
+
+00:24:58.539 --> 00:25:02.970
+So this is also parameterized thing so I could
+specify any kind of distribution like this
+
+00:25:02.970 --> 00:25:10.020
+right so now what I am going to do is, just
+like we did here i am going to modify the
+
+00:25:10.020 --> 00:25:15.702
+policy parameters directly, right instead
+of modified the value functions i will modify
+
+00:25:15.702 --> 00:25:21.770
+the policy parameters directly what would
+be a systematic way of doing this we can come
+
+00:25:21.770 --> 00:25:24.710
+up with many things right so but I am talking
+about a gradient based approach.
+
+00:25:24.710 --> 00:25:25.710
+IIT Madras Production
+
+00:25:25.710 --> 00:25:26.710
+Funded by
+Department of Higher Education
+
+00:25:26.710 --> 00:25:27.710
+Ministry of Human Resources Development
+Government of India
+
+00:25:27.710 --> 00:25:28.710
+www.nptel.ac.in
+
+00:25:28.710 --> 00:25:28.712
+Copyrights Reserved
+

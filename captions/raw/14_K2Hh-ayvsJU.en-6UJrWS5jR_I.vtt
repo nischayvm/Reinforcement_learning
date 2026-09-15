@@ -1,0 +1,495 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.080 --> 00:00:22.460
+Another class of algorithms in the Bandit
+space which ideally I should have spent a
+
+00:00:22.460 --> 00:00:27.770
+lot more time but we are really running out
+of time in some sense I do not want to spend
+
+00:00:27.770 --> 00:00:31.520
+too much time on bandits I want to get on
+and talk about other topics in reinforcement
+
+00:00:31.520 --> 00:00:44.500
+learning so there is something called 
+
+00:00:44.500 --> 00:00:47.800
+contextual bandits.
+
+00:00:47.800 --> 00:00:55.670
+So what are contextual bandits one way to
+think about it is to say that I am relaxing
+
+00:00:55.670 --> 00:00:59.070
+my bandit assumption that there is no state.
+
+00:00:59.070 --> 00:01:07.799
+I am introducing a state, right so this is
+like I am taking one step from my immediate
+
+00:01:07.799 --> 00:01:14.530
+RL problem towards the full RL problem right.
+
+00:01:14.530 --> 00:01:19.700
+Now so what did the immediate our real problem
+had it had all this Explore exploit trade-off
+
+00:01:19.700 --> 00:01:23.960
+stochastic right it has the are the noise
+in the selections that it had the fact that
+
+00:01:23.960 --> 00:01:28.170
+I knew about the rewards only through sampling
+I do not know the true underlying reward distribution
+
+00:01:28.170 --> 00:01:32.380
+so all of these characteristic of the reinforcement
+learning problem it had.
+
+00:01:32.380 --> 00:01:37.090
+Right so what is what is the third thing we
+are adding now and adding this state dependence
+
+00:01:37.090 --> 00:01:42.030
+right in different states I am going to have
+different kinds of reward functions so what
+
+00:01:42.030 --> 00:01:50.399
+is still missing, sequential dependence remember
+I was talking to you about when cycling you
+
+00:01:50.399 --> 00:01:54.909
+know when you might make a mistake initially
+but then that is going to influence how hard
+
+00:01:54.909 --> 00:01:59.149
+it is going to be to balance in the later
+stages right so I do not have that sequential
+
+00:01:59.149 --> 00:02:06.689
+dependence now right I so I give you a state
+you give me an action right independent of
+
+00:02:06.689 --> 00:02:09.110
+what action you selected I will give you another
+state.
+
+00:02:09.110 --> 00:02:13.520
+They keep going like this so, so essentially
+what you are going to do is look at an input
+
+00:02:13.520 --> 00:02:19.430
+and then you are going to take an action right
+and then you're going to move on right you
+
+00:02:19.430 --> 00:02:23.020
+get a reward and then you will move on to
+another state so one other way of thinking
+
+00:02:23.020 --> 00:02:24.520
+about it is to say that hey!
+
+00:02:24.520 --> 00:02:31.341
+I am not solving one bandit problem I am solving
+a set of bandit problems right and I will
+
+00:02:31.341 --> 00:02:34.630
+tell you at every point which bandit problem
+you are going to solve okay.
+
+00:02:34.630 --> 00:02:39.099
+Here is problem three tell me what is the
+option, option here is problem five tell me
+
+00:02:39.099 --> 00:02:44.910
+what is it option like the right so one naive
+way to think about solving this well it's
+
+00:02:44.910 --> 00:02:49.140
+not really naive the way I have stated the
+problem ok it's pretty naive so one way of
+
+00:02:49.140 --> 00:02:51.190
+solving this is to essentially say that okay.
+
+00:02:51.190 --> 00:02:57.580
+I am going to maintain suppose I have 10 different
+bandits i will maintain 10 different sets
+
+00:02:57.580 --> 00:03:03.190
+of action values or 10 different sets of policies
+right I am way is going to do this all independently
+
+00:03:03.190 --> 00:03:05.140
+and I solve it okay.
+
+00:03:05.140 --> 00:03:11.269
+So that's one way of handling it but what
+if I tell you that these problems can be many
+
+00:03:11.269 --> 00:03:21.709
+not just like a handful but I am going to
+have a huge set of problems right . For example
+
+00:03:21.709 --> 00:03:28.099
+I told you one of the success stories of reinforcement
+learning was in like those news story selections
+
+00:03:28.099 --> 00:03:32.120
+and ad selections and so on so forth right
+people remember that the very first class
+
+00:03:32.120 --> 00:03:37.960
+I showed you some examples where I said Yahoo's
+chose add new stories to show on the web page
+
+00:03:37.960 --> 00:03:42.550
+by treating it as essentially they are treating
+it has bandit problems right.
+
+00:03:42.550 --> 00:03:46.880
+So I have like 20 new stories when somebody
+comes to the web page I will show him one
+
+00:03:46.880 --> 00:03:51.960
+out of the 20 stories essentially like pulling
+an arm and if the person clicks on it I get
+
+00:03:51.960 --> 00:03:56.540
+a reward of 1 if they do not click on the
+story I get a reward of 0 it's like a binary
+
+00:03:56.540 --> 00:04:02.900
+bandit problem but then if i solve it as a
+single bandit problem it is not very interesting
+
+00:04:02.900 --> 00:04:07.370
+right because that means that everybody who
+comes to the page will get shown the same
+
+00:04:07.370 --> 00:04:13.760
+news story or if you go back again will get
+shown the same news story.
+
+00:04:13.760 --> 00:04:19.519
+That is not going to be is not a good thing
+so what you really want to do is depending
+
+00:04:19.519 --> 00:04:26.990
+on who comes to your page right so you want
+to be able to change your choices so one way
+
+00:04:26.990 --> 00:04:30.070
+of thinking about it is now to say that hey
+I am going to group all the people coming
+
+00:04:30.070 --> 00:04:36.100
+to my page right if somebody from Group one
+comes I will use this bandit, somebody from
+
+00:04:36.100 --> 00:04:40.940
+group 2 comes I'll use this bandit somebody
+from group 3 comes I will use this bandit
+
+00:04:40.940 --> 00:04:43.090
+right does it make sense right.
+
+00:04:43.090 --> 00:04:54.410
+Now somehow found a way of grouping them and
+how do I group them.
+
+00:04:54.410 --> 00:04:58.100
+Best well there are too many options here
+so you could look at their browsing history
+
+00:04:58.100 --> 00:05:01.750
+you could look at if they already have an
+account on say Yahoo or Google or something
+
+00:05:01.750 --> 00:05:07.030
+you can look at the data that they filled
+in right and a variety of things right so
+
+00:05:07.030 --> 00:05:10.800
+you can look at which country they are coming
+from what time of the day they are clicking
+
+00:05:10.800 --> 00:05:16.400
+from are they are browsing from a phone, or
+from a laptop so there's so much information
+
+00:05:16.400 --> 00:05:21.100
+that each one of these Internet sites gathers
+about you right in fact they know more about
+
+00:05:21.100 --> 00:05:25.169
+you than you do right.
+
+00:05:25.169 --> 00:05:31.530
+That is not is not as stupid as you think
+it is in fact there are lot of times when
+
+00:05:31.530 --> 00:05:36.639
+people are consciously not aware of what they
+are doing right but then by watching the person's
+
+00:05:36.639 --> 00:05:43.410
+behavior they are able to form a more informed
+model about you what you are trying to do
+
+00:05:43.410 --> 00:05:48.460
+than what you yourself are doing you quite
+often you are desultorily doing things right
+
+00:05:48.460 --> 00:05:52.240
+so you do not really realize what you are
+what you are doing what you want anyway so
+
+00:05:52.240 --> 00:05:55.630
+fine so you can do all kinds of things you
+can group the users right.
+
+00:05:55.630 --> 00:06:23.330
+Is that something you can do better than which
+variables I use include them exactly so why,
+
+00:06:23.330 --> 00:06:28.400
+why would that help.
+
+00:06:28.400 --> 00:06:56.120
+It will reduce the number of parameters for
+each person you can define a unique set of
+
+00:06:56.120 --> 00:06:59.710
+parameters and that's not interesting right
+it's going back to solving the same problem
+
+00:06:59.710 --> 00:07:06.120
+for you do not want them to have unique parameters
+you want them to have some kind of grouping
+
+00:07:06.120 --> 00:07:10.320
+so essentially what this will allow you to
+do is it gives you greater flexibility to
+
+00:07:10.320 --> 00:07:14.880
+figure out what kind of generalization you
+want to happen over the users right
+
+00:07:14.880 --> 00:07:21.470
+When I say fine groups right and then assign
+one bandit to each group in some sense you
+
+00:07:21.470 --> 00:07:26.130
+are making everybody in the group have the
+same recommendations right the same, same
+
+00:07:26.130 --> 00:07:30.440
+stories will be shown to them right by doing
+this kind of a parameterize function so you
+
+00:07:30.440 --> 00:07:35.120
+could be sharing some parameters with him
+on four accounts right so you should be sharing
+
+00:07:35.120 --> 00:07:38.910
+parameters with him on three other things
+right so essentially there will be like a
+
+00:07:38.910 --> 00:07:43.910
+smoother generalization across people right
+so the extreme case of this would be where
+
+00:07:43.910 --> 00:07:48.160
+everyone has a unique parameterization but
+if you make everyone you force them to be
+
+00:07:48.160 --> 00:07:54.680
+unique then you are not doing much, much generalizations
+right so you essentially want some kind of
+
+00:07:54.680 --> 00:07:59.220
+generalization to happen so that will kind
+of fallout from doing this in a parameterized
+
+00:07:59.220 --> 00:08:01.110
+fashion right.
+
+00:08:01.110 --> 00:08:04.910
+So there are many ways so contextual bandits
+is just a problem setting there are many ways
+
+00:08:04.910 --> 00:08:11.120
+of solving it one of them is to do this kind
+of parameterization of the value depending
+
+00:08:11.120 --> 00:08:19.840
+on, the state as well as the action.
+
+00:08:19.840 --> 00:08:27.530
+So what I mean by the action here the action
+can have parameters so what do I mean by that
+
+00:08:27.530 --> 00:08:34.779
+let go back to the new story case right, so
+I can think of it as new story one I can also
+
+00:08:34.779 --> 00:08:43.599
+think of it as political article, from India
+right about the central whatever so I mean
+
+00:08:43.599 --> 00:08:48.061
+I can I can think of some kind of attributes
+that describe the new story as well right
+
+00:08:48.061 --> 00:08:52.220
+so these are attributes that describe my arm
+they are not describing my states.
+
+00:08:52.220 --> 00:08:57.050
+They are describing my arm so in this case
+state or the people who are coming to the
+
+00:08:57.050 --> 00:09:01.310
+page and arms are the new stories right so
+I could have attributes that describe both
+
+00:09:01.310 --> 00:09:06.899
+the new stories and the arms I am sorry and
+the users and I can use all of these attributes
+
+00:09:06.899 --> 00:09:13.839
+to define my value function so I can have
+a parameterization that depends on both the
+
+00:09:13.839 --> 00:09:20.810
+actions and the state it apart from that I
+could have additional parameterizations like,
+
+00:09:20.810 --> 00:09:30.270
+like this for defining my value functions
+and my and my policy's.
+
+00:09:30.270 --> 00:09:43.019
+Whatever alright so 
+
+00:09:43.019 --> 00:09:47.880
+and people talk about parameterized bandits
+typically they talk about parameterizing the
+
+00:09:47.880 --> 00:09:51.930
+value functions okay not necessarily the policy
+gradient kind of things even though this is
+
+00:09:51.930 --> 00:09:54.170
+also a form of parameterized bandits.
+
+00:09:54.170 --> 00:09:59.529
+When typically when people talk about parameterized
+bandits in the contextual bandit case they
+
+00:09:59.529 --> 00:10:05.579
+are talking about parameterizing the value
+functions okay.
+
+00:10:05.579 --> 00:10:10.029
+And just, just to point out these are very
+close and sometimes they are used interchangeably
+
+00:10:10.029 --> 00:10:13.399
+like parameterized bandits or linear bandits.
+
+00:10:13.399 --> 00:10:20.310
+Where the function the value function is assumed
+to be linear in the set of parameters that
+
+00:10:20.310 --> 00:10:23.610
+you have right so that is linear bandits right
+and contextual bandits there are often use
+
+00:10:23.610 --> 00:10:27.860
+interchangeably but there is a subtle difference
+contextual bandits is a problem setting while
+
+00:10:27.860 --> 00:10:30.980
+linear bandits is a specific way of solving
+that problem.
+
+00:10:30.980 --> 00:10:34.420
+So contextual bandage is essentially like
+I said there are many ways in which you can
+
+00:10:34.420 --> 00:10:39.220
+solve it right you can just replicate the
+bandits you can do group and then solve we
+
+00:10:39.220 --> 00:10:44.410
+do not really have to assume some kind of
+parameterized version but that's it so this
+
+00:10:44.410 --> 00:10:51.490
+again very, very popular now in fact most
+deployments of bandits right use this kind
+
+00:10:51.490 --> 00:10:58.589
+of parameterized contextual bandits so for
+example the one of the most popular deployments
+
+00:10:58.589 --> 00:11:04.889
+of UCB right only UCB has become the most
+popular bandit algorithm right but the most
+
+00:11:04.889 --> 00:11:11.260
+popular deployment of UCB we find is called
+Lin UCB which is UCB with a linear parameterization
+
+00:11:11.260 --> 00:11:16.910
+assumed for the value functions so I will
+assume some set of parameters I will assume
+
+00:11:16.910 --> 00:11:23.519
+my Q of A right that is what I am estimating
+my Q of A is some function of these parameters
+
+00:11:23.519 --> 00:11:27.279
+and that function is linear in the parameters
+right.
+
+00:11:27.279 --> 00:11:32.620
+So that's essentially what Lie UCB we would
+do right and then you have to have some mechanism
+
+00:11:32.620 --> 00:11:36.040
+by which you determine what the upper confidence
+bounds are right.
+
+00:11:36.040 --> 00:11:42.110
+So, it's a slightly different update rule
+then what we do for UCB but it is more or
+
+00:11:42.110 --> 00:12:04.720
+less the, the same principle right so I will
+be doing something like this should be something
+
+00:12:04.720 --> 00:12:05.720
+like this.
+
+00:12:05.720 --> 00:12:13.180
+So theta1 theta2 theta3 will be my parameters
+I assume for the representation.
+
+00:12:13.180 --> 00:12:22.070
+So fine so I will stop here there will be
+the end of bandits.
+
+00:12:22.070 --> 00:12:26.639
+So next class I will start with chapter 3
+in the book so if you want to read ahead please
+
+00:12:26.639 --> 00:12:26.880
+do so.
+

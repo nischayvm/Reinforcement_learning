@@ -1,0 +1,1295 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.880 --> 00:00:19.400
+We have been looking at the dynamic programming
+based methods for solving problems so far
+
+00:00:19.400 --> 00:00:27.439
+and solving empty piece right so why do we
+call them dynamic programming method so what
+
+00:00:27.439 --> 00:00:30.970
+is the problem are we solving here what is
+this a problem I actually give you the intuition
+
+00:00:30.970 --> 00:00:38.860
+in assuming that you have a like remember
+I talked about one step problems right as
+
+00:00:38.860 --> 00:00:45.880
+I said that they can assume that the value
+is one step problem.
+
+00:00:45.880 --> 00:00:53.190
+Where for the first step you get the reward
+and then you have a cost for termination or
+
+00:00:53.190 --> 00:01:00.260
+a value for termination and I said you can
+think of it as R plus ? times V so the ? V
+
+00:01:00.260 --> 00:01:11.189
+is the value for termination right so if you
+think about what we did for value iteration.
+
+00:01:11.189 --> 00:01:30.450
+.
+In order to use it so was it find it I introduced
+
+00:01:30.450 --> 00:01:50.810
+the DARSI notation or there any resist explicitly
+
+00:01:50.810 --> 00:02:02.909
+right so we did this similar mother so suppose
+I am in a specific state right in which as
+
+00:02:02.909 --> 00:02:10.259
+soon as I take a step the problem is right
+the episode ends as soon as I take a step
+
+00:02:10.259 --> 00:02:15.290
+the episode ends really it means I am not
+asking you to hypothesis really the episode
+
+00:02:15.290 --> 00:02:23.750
+names okay if I do this once on that if I
+say let it start I start off with a zero value
+
+00:02:23.750 --> 00:02:32.790
+function right so this part will be 0 in fact
+this really does not play a role but anyway
+
+00:02:32.790 --> 00:02:38.060
+this part will be 0 and then I will just get
+the expected reward right so I take as I start
+
+00:02:38.060 --> 00:02:45.860
+from the state okay.
+Let us call with some S1 I take one step and
+
+00:02:45.860 --> 00:02:55.610
+I end okay, some time will say I reach and
+then you get a reward will say plus 1 or something
+
+00:02:55.610 --> 00:03:05.540
+so the VN plus 1 I compute will be the value
+function for s1 right just one time I do this
+
+00:03:05.540 --> 00:03:10.980
+I will get the right value do you see what
+I am saying so there is an end point right
+
+00:03:10.980 --> 00:03:15.191
+if I look at the state just before the end
+point that is the very first iteration I will
+
+00:03:15.191 --> 00:03:27.290
+compute the right value for the state correct.
+Let us say I have another state which is one
+
+00:03:27.290 --> 00:03:36.020
+step before the s-1 right that is all that
+is only transition available from S2 okay
+
+00:03:36.020 --> 00:03:39.680
+so I take there is an action I take as to
+and from which to I take the rational go test
+
+00:03:39.680 --> 00:03:51.010
+one okay so how many iterations should I run
+before I get the value for is 2 so one way
+
+00:03:51.010 --> 00:03:59.740
+of thinking about what this is doing is to
+say that this computes a solution for n step
+
+00:03:59.740 --> 00:04:04.430
+problem it computes the solution for an N
+step problem.
+
+00:04:04.430 --> 00:04:10.470
+And assuming that I start from s prime I will
+end in n steps this gives me the value right
+
+00:04:10.470 --> 00:04:17.850
+and this concludes the value for n + 1 right
+so that is essentially where thee the dynamic
+
+00:04:17.850 --> 00:04:22.049
+programming aspect comes in so the smaller
+problem the sub problem is solved is the one
+
+00:04:22.049 --> 00:04:27.620
+for the end step prediction right and then
+the larger problem I solve is using this repeat
+
+00:04:27.620 --> 00:04:34.040
+the substructure so the value of n + one prediction
+will be R plus the value of n prediction so
+
+00:04:34.040 --> 00:04:39.550
+this using this sub problems and making it
+I am trying to solve the larger problem makes
+
+00:04:39.550 --> 00:04:44.470
+it a dynamic programming.
+I is stochastic dynamic programming is typically
+
+00:04:44.470 --> 00:04:48.990
+called stochastic dynamic programming because
+you mean all this to cast city is there right
+
+00:04:48.990 --> 00:04:54.090
+and it is really this works are in respective
+of whether it is a finite horizon problem
+
+00:04:54.090 --> 00:04:59.770
+or not right so assuming you stop in one step
+what is the solution right here I am saying
+
+00:04:59.770 --> 00:05:04.150
+you actually get to the terminal state but
+you can just think about forget about terminal
+
+00:05:04.150 --> 00:05:09.240
+state any state can be terminal straight but.
+I allow you to act for only one time step
+
+00:05:09.240 --> 00:05:13.880
+I will elevate act for two time steps three
+times for time steps and I keep going to allow
+
+00:05:13.880 --> 00:05:23.460
+you to act for an infinite number of time
+steps right so that is essentially what value
+
+00:05:23.460 --> 00:05:28.120
+iteration this so it is like a dynamic programming
+approach right that is why we see you solve
+
+00:05:28.120 --> 00:05:34.100
+for n and then you use that sub problem solution
+to solve for n plus 1 okay, so that is why
+
+00:05:34.100 --> 00:05:37.270
+it is called dynamic program.
+I said clear right so these classes of methods
+
+00:05:37.270 --> 00:05:41.100
+both value iteration and policy iteration
+So policy situation also has dynamic programming
+
+00:05:41.100 --> 00:05:45.620
+method which is a little tricky to see what
+the dynamic programming dynamic program there
+
+00:05:45.620 --> 00:05:50.460
+is but still it is also a dynamic programming
+approach and so I am going to talk about a
+
+00:05:50.460 --> 00:05:57.139
+general class of dynamic programming solution
+here but before that I want to introduce one
+
+00:05:57.139 --> 00:06:12.270
+other distinction actually a couple more distinction.
+So there is something called a synchronous
+
+00:06:12.270 --> 00:06:20.010
+dynamic programming so if you think about
+this is one step in the value iteration that
+
+00:06:20.010 --> 00:06:25.830
+means I am assuming most people who in here
+have that in your notebook so I am not going
+
+00:06:25.830 --> 00:06:31.300
+to write out the entire value iteration procedure
+right so that is one step right that is one
+
+00:06:31.300 --> 00:06:35.919
+iteration in think that is the main iteration
+in the value iteration algorithm right.
+
+00:06:35.919 --> 00:06:46.510
+So what is the crucial thing to note here
+is that for all the VN + 1 computation right
+
+00:06:46.510 --> 00:06:54.440
+I use VN on the right hand side right so one
+way of thinking about it is okay I have this
+
+00:06:54.440 --> 00:06:59.370
+array right now I have this data structure
+some array that represents the value function
+
+00:06:59.370 --> 00:07:04.130
+at time n so I use the array and compute the
+value function at time n plus 1 so it is a
+
+00:07:04.130 --> 00:07:09.419
+different array right so I make it says I
+have n and then I make another array which
+
+00:07:09.419 --> 00:07:13.949
+is n + 1 and they compute it and then I copy
+that n plus 1 over 2n and then keep doing
+
+00:07:13.949 --> 00:07:17.940
+this right.
+Instead of that you could think of a way of
+
+00:07:17.940 --> 00:07:24.720
+doing it where I do this in place I do not
+use to erase I do not use one array for n1
+
+00:07:24.720 --> 00:07:32.570
+a referendum I can do it with a single array
+so what that would mean is when I suppose
+
+00:07:32.570 --> 00:07:36.500
+I have some ordering on the state still have
+to go through some loop on the state's say
+
+00:07:36.500 --> 00:07:44.020
+for s equal one to n or something like that
+say so when I do a s = 1 right I will be using
+
+00:07:44.020 --> 00:07:48.850
+the old values of V n so I will be using VN
+right.
+
+00:07:48.850 --> 00:07:56.410
+So when I use s =2 here I will be using VN
+for 2 3 4 5 2 n but I will use VN plus 1 for
+
+00:07:56.410 --> 00:08:08.830
+1 likewise when I use VN + 1 of 3 when I am
+computing it I will be computing VN + 1 of
+
+00:08:08.830 --> 00:08:16.780
+2 and 1 and VN of all the other states okay.
+Now this is a little tricky if you think about
+
+00:08:16.780 --> 00:08:24.540
+it because it is not clear what I am doing
+right there it is VN + 1 or VN + 2 suppose
+
+00:08:24.540 --> 00:08:34.779
+I come to state 5 okay and all the transition
+from five is going to state 1 &amp; 2 so when
+
+00:08:34.779 --> 00:08:40.740
+I am actually computing me n plus 1 of 5 I
+will be using VN + 1 of 1 and V n + 1 of 2
+
+00:08:40.740 --> 00:08:53.120
+so is it I am a competing GN +1of five.
+Or I am computing VN + 2 of everything the
+
+00:08:53.120 --> 00:09:00.420
+second iterate off I am using one further
+literate of one and two right. So in fact
+
+00:09:00.420 --> 00:09:05.910
+it is not even clear whether if you do it
+this way it will converge or not right turns
+
+00:09:05.910 --> 00:09:10.330
+out it will converge right and it turns out
+that I do not even have to do it in this kind
+
+00:09:10.330 --> 00:09:19.520
+of a you know sequential order and I can do
+it I can pick any state right and then update
+
+00:09:19.520 --> 00:09:25.490
+its value and then pick some other state right
+now then update its value I can keep randomly
+
+00:09:25.490 --> 00:09:30.600
+picking states and keep updating their value
+using whatever is the current stored value
+
+00:09:30.600 --> 00:09:40.110
+of its neighbors right.
+So instead of using that right so I can do
+
+00:09:40.110 --> 00:09:44.460
+this I mean from an array point of view right
+so whenever I update some value this is all
+
+00:09:44.460 --> 00:09:48.800
+the Eigen side also will change I guess keep
+picking states and I can do this right so
+
+00:09:48.800 --> 00:09:54.100
+this is called as synchronous mode for running
+dynamic programming so the only condition
+
+00:09:54.100 --> 00:10:02.540
+I need now to make sure this dynamic programming
+converges is 
+
+00:10:02.540 --> 00:10:06.960
+I have to say I love our from the other things
+in it an additional condition I have to assume
+
+00:10:06.960 --> 00:10:28.160
+I have to ensure is that I sample all the
+states at least 
+
+00:10:28.160 --> 00:10:31.740
+infinite number of times so that I can ensure
+convergence okay. I am just waiting I give
+
+00:10:31.740 --> 00:10:38.030
+you a rock Q as I think it is equally guys
+will do, but I have to apply the update in
+
+00:10:38.030 --> 00:10:41.310
+every state infinite number of times for it
+to converge right.
+
+00:10:41.310 --> 00:10:46.399
+So that is the convergence criterion we saw
+earlier and only as this the iterates tend
+
+00:10:46.399 --> 00:10:51.350
+to infinity we have looked at all the the
+fixed point theorems only as a traits tend
+
+00:10:51.350 --> 00:10:56.040
+to infinity do we converge right. So in that
+case so we have to make sure that all the
+
+00:10:56.040 --> 00:11:01.760
+states are sampled infinitely often right
+so then it will converge. So it turns out
+
+00:11:01.760 --> 00:11:04.520
+it does not matter in what order example may
+say actually very powerful reason.
+
+00:11:04.520 --> 00:11:12.770
+And it allows us to do a whole bunch of interesting
+stuff right in fact it allows us to do something
+
+00:11:12.770 --> 00:11:24.580
+called real-time dynamic programming which
+is a very interesting algorithm which is almost
+
+00:11:24.580 --> 00:11:29.670
+like reinforcement learning but not quite
+there okay. So one of the main problems in
+
+00:11:29.670 --> 00:11:35.290
+doing value iteration and policy creation
+and things like that is when you are working
+
+00:11:35.290 --> 00:11:40.810
+with really large state spaces right when
+you are working with really large state spaces
+
+00:11:40.810 --> 00:11:44.230
+you will be every time you do this iteration
+right.
+
+00:11:44.230 --> 00:11:48.980
+Whether do it in the synchronous on a thickness
+fashion so every time you do this iteration
+
+00:11:48.980 --> 00:11:56.050
+right you basically run through all the states.
+So in fact if you think about the amount of
+
+00:11:56.050 --> 00:12:00.480
+effort you spend in computing the solution
+you spend the same effort in computing the
+
+00:12:00.480 --> 00:12:09.810
+value function for every state right, but
+that is not often needed if you think about
+
+00:12:09.810 --> 00:12:15.850
+any practical problem there are many, many
+states which are very seldom visited right.
+
+00:12:15.850 --> 00:12:21.940
+So you want to spend more effort in trying
+to discover the true value function for states
+
+00:12:21.940 --> 00:12:29.540
+that you visit often right, and states that
+you very rarely visit you do not mind right.
+
+00:12:29.540 --> 00:12:39.399
+So if people remember the the expected error
+formulation that we used in machine learning
+
+00:12:39.399 --> 00:12:44.640
+right so we always try to vary the error by
+the probability of actually seeing the data
+
+00:12:44.640 --> 00:12:51.050
+point. So like that here I would like to if
+I want to try to do an optimization I would
+
+00:12:51.050 --> 00:12:56.050
+like to weigh the error with the probability
+of me actually visiting that state.
+
+00:12:56.050 --> 00:13:03.610
+So now I have some estimate some BBB hat of
+S right so when I am evaluating my performance
+
+00:13:03.610 --> 00:13:11.029
+I look at the true V*-V hat right times the
+probability of going to yes right, this is
+
+00:13:11.029 --> 00:13:35.490
+a, so why do I want to do that why do not
+you, common sense things yeah, you do not
+
+00:13:35.490 --> 00:13:40.350
+have infinite computational power I mean,
+we just say nicely run none thing still infinity
+
+00:13:40.350 --> 00:13:42.430
+you really do not have infinite computational
+power.
+
+00:13:42.430 --> 00:13:46.930
+So that is why we gave you some epsilon criterion
+so you can sadly satisfy the epsilon optimal
+
+00:13:46.930 --> 00:13:50.700
+policies and so on so forth it so you do not
+have to run till infinity but if I give you
+
+00:13:50.700 --> 00:14:05.040
+a mdp which has say 100 million states 
+so I do not even want to run into finite number
+
+00:14:05.040 --> 00:14:08.510
+of times on all the states right that is a
+still a significant amount of computation
+
+00:14:08.510 --> 00:14:12.760
+usually a limited amount of computation.
+So now we have to figure out how am I going
+
+00:14:12.760 --> 00:14:16.830
+to assign this limited amount of computation
+and how am I going to spend this limited amount
+
+00:14:16.830 --> 00:14:22.050
+of computation. So what you would really like
+to do is spend a lot of time on those states
+
+00:14:22.050 --> 00:14:26.920
+which you are likely to visit under an optimal
+policy. So you do not want to miss out on
+
+00:14:26.920 --> 00:14:32.480
+states which are good with which you need
+to execute an optimal policy right.
+
+00:14:32.480 --> 00:14:44.200
+So one way that people do it is the following
+right, they start from some state, they execute
+
+00:14:44.200 --> 00:14:53.490
+some trajectory right then they look at states
+that occur along those trajectory right and
+
+00:14:53.490 --> 00:14:59.980
+do the dynamic programming updates only on
+those states. Then what you do is now you
+
+00:14:59.980 --> 00:15:05.060
+have a value function right you have made
+some changes to the value function and this
+
+00:15:05.060 --> 00:15:08.390
+implicitly gives you a policy, so we all know
+that right.
+
+00:15:08.390 --> 00:15:11.871
+So you know how to recover the policy given
+a value function, so I looked at it we looked
+
+00:15:11.871 --> 00:15:16.600
+at it from V look at it from Q given a V function
+you know how to recover their policy, given
+
+00:15:16.600 --> 00:15:20.839
+a Q function you know how to recover a policy.
+So now recover the policy from this value
+
+00:15:20.839 --> 00:15:26.730
+function okay. Now run another trajectory
+just by running this policy so it is like
+
+00:15:26.730 --> 00:15:30.890
+a sample you are taking from the world.
+So it starts from the starting state execute
+
+00:15:30.890 --> 00:15:39.120
+this policy see which are the states that
+you visit right and then run your updates
+
+00:15:39.120 --> 00:15:43.850
+on those states, but the crucial thing to
+remember here is that every state you are
+
+00:15:43.850 --> 00:15:48.610
+running your dynamic programming update like
+this we are assuming that you know their expected
+
+00:15:48.610 --> 00:15:52.360
+value of the reward you are assuming you know
+your transition probabilities and then with
+
+00:15:52.360 --> 00:15:56.980
+these you are changing the value right.
+So I am not worried about what was the sample
+
+00:15:56.980 --> 00:16:01.020
+I am getting here if you think of the Bandit
+case whenever I draw a sample I get just one
+
+00:16:01.020 --> 00:16:07.820
+reward right. So in this case what we are
+using the sampling for just to determine which
+
+00:16:07.820 --> 00:16:11.820
+are the states that which we have to do the
+update right. So not in the reward and all
+
+00:16:11.820 --> 00:16:15.060
+that we assume that the reward distribution
+everything is given to us we are only doing
+
+00:16:15.060 --> 00:16:18.000
+the sampling to figure out which are the states
+we have to do the updates.
+
+00:16:18.000 --> 00:16:22.019
+So it is called real-time dynamic programming
+I mean the real time is within coats here
+
+00:16:22.019 --> 00:16:29.920
+that is because you are generating these trajectories
+using the current policy. So the idea is that
+
+00:16:29.920 --> 00:16:34.820
+as your policy as your value function gets
+closer and closer to the optimal value function
+
+00:16:34.820 --> 00:16:39.089
+the policies become closer and closer to the
+optimal policies and therefore the set of
+
+00:16:39.089 --> 00:16:45.730
+states that you sample will be those that
+are highly likely to appear under those trajectories
+
+00:16:45.730 --> 00:16:48.730
+right.
+For example, if I have to start here and go
+
+00:16:48.730 --> 00:16:53.800
+here right states at all to the corners might
+not get some sample that often you know I
+
+00:16:53.800 --> 00:16:57.630
+will probably start trying to go in a straight
+line from here to here so we will start going
+
+00:16:57.630 --> 00:17:06.459
+like this after sometime. So you can see that
+there will be some kind of like an envelope
+
+00:17:06.459 --> 00:17:13.679
+of states that will get sampled a lot right
+and I will be applying the the the DP updates
+
+00:17:13.679 --> 00:17:19.949
+on those states more than DP updates on the
+side other things.
+
+00:17:19.949 --> 00:17:42.370
+Yeah sure, so I did not talk about exploitation
+here so, you never behave getting you with
+
+00:17:42.370 --> 00:17:46.100
+respect to the value function we always have
+some kind of exploration you could ? greedy.
+
+00:17:46.100 --> 00:17:51.169
+So you know about ? greedy right. So at every
+point so I look at the values of the actions
+
+00:17:51.169 --> 00:17:56.500
+or values of the next state and be greedy
+only with the probability 1 - ? and then the
+
+00:17:56.500 --> 00:18:00.049
+probability of ? I do something right yeah
+you should do something ? right yeah.
+
+00:18:00.049 --> 00:18:05.740
+So this is called real-time dynamic program
+it is actually a pretty powerful method provided
+
+00:18:05.740 --> 00:18:11.130
+you have a model available to you this allows
+you to focus your computation only on a small
+
+00:18:11.130 --> 00:18:17.970
+number of states okay. But if you want to
+ensure convergence in real time dynamic programming
+
+00:18:17.970 --> 00:18:25.910
+right what is the condition you need, you
+have to visit every state infinitely often
+
+00:18:25.910 --> 00:18:29.510
+I mean, so does not matter that you are focusing
+your computation.
+
+00:18:29.510 --> 00:18:35.549
+So what essentially dynamic programming allows
+you to do is that given a finite number of
+
+00:18:35.549 --> 00:18:39.300
+updates that you can do okay it allows you
+to focus those finite number of updates in
+
+00:18:39.300 --> 00:18:45.450
+things are in states which are more likely
+to be useful to you right. But given an infinite
+
+00:18:45.450 --> 00:18:51.530
+amount of computation it will eventually converge
+assuming that you have an ? said never going
+
+00:18:51.530 --> 00:18:59.590
+to zero okay.
+So crucial thing that you should note here
+
+00:18:59.590 --> 00:19:08.179
+is we will have the DP we use the sampling
+only to figure out which states to update
+
+00:19:08.179 --> 00:19:14.140
+okay nothing more than that. If you move on
+when we actually look at true reinforcement
+
+00:19:14.140 --> 00:19:20.030
+learning algorithms you will be using the
+sampling to determine not only the states
+
+00:19:20.030 --> 00:19:25.160
+to update right but also what is the reward
+that you have to update it with because I
+
+00:19:25.160 --> 00:19:32.299
+do not have this reward right.
+And also what is the the terminal cost you
+
+00:19:32.299 --> 00:19:37.580
+will use here what is the VS’ you will use
+here because this also I do not have this
+
+00:19:37.580 --> 00:19:43.910
+is why I said, this takes you some ways towards
+a full reinforcement learning algorithm but
+
+00:19:43.910 --> 00:19:48.610
+it is still a dynamic programming solution
+because it uses all the expectations okay
+
+00:19:48.610 --> 00:19:58.210
+good any questions on this.
+So how many of you have been reading ahead
+
+00:19:58.210 --> 00:20:06.160
+on this is what chapter is am I on in the
+book okay good how many of you have read chapter
+
+00:20:06.160 --> 00:20:14.970
+four you are my only hope man come on disappointed
+only gate has been reading so far yeah anyway
+
+00:20:14.970 --> 00:20:20.010
+yeah so I do not think our TDP is that in
+Chapter four so whatever I told you is the
+
+00:20:20.010 --> 00:20:24.130
+thing if you want to read more and probably
+have to pick up the rtd be paper it actually
+
+00:20:24.130 --> 00:20:29.050
+is very well written the version lottery if
+you captain of course I am a big fan of Andy's
+
+00:20:29.050 --> 00:20:36.010
+writing.
+So I always say that but so the next thing
+
+00:20:36.010 --> 00:20:42.660
+I want to talk about this very very powerful
+technique that we use called the generalized
+
+00:20:42.660 --> 00:20:48.200
+policy iteration people remember policy iteration
+right so they say essentially has two steps
+
+00:20:48.200 --> 00:21:07.840
+right so you have policy evaluation and then
+you have policy improvement 
+
+00:21:07.840 --> 00:21:17.590
+so what is the synchronous just checking if
+people are listening you can look we are so
+
+00:21:17.590 --> 00:21:22.440
+you do not have to do it in last step right.
+All the states do not have to get updated
+
+00:21:22.440 --> 00:21:27.530
+in one iteration right so there is no actual
+definition iteration itself is gone here as
+
+00:21:27.530 --> 00:21:31.059
+synchronous state, but anyway so people know
+me that is policy iteration right. So I have
+
+00:21:31.059 --> 00:21:38.020
+a policy evaluation step right and then have
+a policy improvement step the PI stands for
+
+00:21:38.020 --> 00:21:41.570
+policy improvement not policy iteration right.
+Policy evaluation policy improvement I keep
+
+00:21:41.570 --> 00:21:49.020
+doing this until my policy does not change
+anymore right and so we did do the convergence
+
+00:21:49.020 --> 00:21:52.510
+of policy iteration then I can kind of convince
+you that policy iteration would converge at
+
+00:21:52.510 --> 00:21:56.530
+least on finite in degrees. So we have not
+done the convergence on its infinite state
+
+00:21:56.530 --> 00:22:00.500
+spaces I am not going to do that because most
+of the results I will be showing you will
+
+00:22:00.500 --> 00:22:06.110
+be only on finite state spaces.
+Mainly because I need to develop a lot more
+
+00:22:06.110 --> 00:22:10.690
+mechanism for showing you this on infinite
+state paces and it really belongs to a course
+
+00:22:10.690 --> 00:22:20.410
+on one mdp not on RL right. So it really belongs
+to a course on mdp so if interest rate I do
+
+00:22:20.410 --> 00:22:25.590
+not know Sir Rachal Murata used to teach a
+course in dorms on MVPs I do not think he
+
+00:22:25.590 --> 00:22:29.250
+does that anymore he actually used to teach
+out of cysts.
+
+00:22:29.250 --> 00:22:34.570
+So whatever book I have been using to get
+all this material for you it's called Markov
+
+00:22:34.570 --> 00:22:44.549
+decision processes by put in on so what do
+we have a copies of the chapters from put
+
+00:22:44.549 --> 00:22:50.070
+minus on this earth I do not tell me if there
+is an online version of put man but maybe
+
+00:22:50.070 --> 00:22:59.050
+you should tell them not me we do not have
+a version of Phutra Marissa did they give
+
+00:22:59.050 --> 00:23:08.520
+one last year I think you can pick it up from
+the last years material or something whatever
+
+00:23:08.520 --> 00:23:13.490
+yeah do not try to read it right.
+So what is essentially did was took three
+
+00:23:13.490 --> 00:23:18.700
+different chapters from the book and cherry
+picked results that I wanted to present here
+
+00:23:18.700 --> 00:23:24.799
+and then kind of you know simplified the theorems
+and other proofs and so on so forth and presented
+
+00:23:24.799 --> 00:23:29.020
+it to you so if you actually read put Herman
+directly it in fact some of you might being
+
+00:23:29.020 --> 00:23:35.490
+confused as to where the heck of those theorems
+he did in class in the book right but I assure
+
+00:23:35.490 --> 00:23:39.230
+you that the place to go if you want to understand
+this better.
+
+00:23:39.230 --> 00:23:44.990
+And that is where I took this material from
+anyway so going back to policy iteration right
+
+00:23:44.990 --> 00:23:53.419
+so there is this technique called generalized
+policy iteration somewhat like a synchronous
+
+00:23:53.419 --> 00:24:03.440
+DP right in the sense that it does the following
+so I have a policy I have evaluated the policy
+
+00:24:03.440 --> 00:24:09.810
+right I do not try to be greedy on all the
+states in the value function I just pick some
+
+00:24:09.810 --> 00:24:13.039
+states right.
+And then I say okay I am going to change my
+
+00:24:13.039 --> 00:24:26.659
+policy by being greedy only here 
+right then I go back and do the evaluation
+
+00:24:26.659 --> 00:24:35.340
+of this new policy 
+but then we have to evaluate this new policy
+
+00:24:35.340 --> 00:24:44.070
+in every state only which are updated not
+really I have to I learned it a little bit
+
+00:24:44.070 --> 00:24:48.679
+more because states that are close by which
+moving here their values will also change
+
+00:24:48.679 --> 00:24:52.230
+because this values change.
+So I have to do some amount of evaluation
+
+00:24:52.230 --> 00:24:56.130
+around the states where I change it right
+in fact it turns out that this works both
+
+00:24:56.130 --> 00:25:02.880
+ways so I start off with a policy I do not
+evaluate it on every state okay evaluated
+
+00:25:02.880 --> 00:25:09.919
+only on some states just like we did in our
+theory p it actually DPI did value iteration
+
+00:25:09.919 --> 00:25:17.080
+right guidance of doing value iteration right
+I would have taken off this max here right
+
+00:25:17.080 --> 00:25:22.780
+I could have put a summation over p SI, so
+I start off with some arbitrary p it run this
+
+00:25:22.780 --> 00:25:29.679
+update only on trajectories right.
+Now I will sample some states I will update
+
+00:25:29.679 --> 00:25:35.809
+the value function therefore the current p
+that I am following right and then what I
+
+00:25:35.809 --> 00:25:43.780
+do now I go try to be greedy with respect
+to this value function now here it makes sense
+
+00:25:43.780 --> 00:25:50.799
+only to be greedy with respect to those states
+in which no need to be greedy in those states
+
+00:25:50.799 --> 00:25:53.610
+in which you change the value function because
+other states it would not change okay.
+
+00:25:53.610 --> 00:25:58.290
+I am only looking at the value function and
+I try to be greedy right so it will not change
+
+00:25:58.290 --> 00:26:03.200
+but in those states where I change the value
+function I have gone do the clarification
+
+00:26:03.200 --> 00:26:10.210
+I'll change the policy now now what I do have
+a new policy I can go back and sample some
+
+00:26:10.210 --> 00:26:14.940
+more states according to this new policy and
+into the policy evaluation only on those states
+
+00:26:14.940 --> 00:26:22.000
+at a sample so I am doing both a partial policy
+evaluation and a partial policy improvement
+
+00:26:22.000 --> 00:26:25.780
+this is called generalized policy improvement
+right.
+
+00:26:25.780 --> 00:26:31.400
+So one way of thinking about it is that instead
+of that's a picture in the book if you do
+
+00:26:31.400 --> 00:26:37.260
+not like so instead of doing a complete evaluation
+or a complete improvement you are doing this
+
+00:26:37.260 --> 00:26:45.050
+partially bit bits and pieces right so why
+do you want to do this again you can save
+
+00:26:45.050 --> 00:26:52.780
+computation yeah you have to remember thee
+in which you did the policy evaluation in
+
+00:26:52.780 --> 00:26:58.750
+policy or even you do not really have to the
+most effect you will get is if you do the
+
+00:26:58.750 --> 00:27:02.870
+policy improvement only on the states where
+we evaluated the policy right.
+
+00:27:02.870 --> 00:27:07.080
+But you don't have to so I can always say
+that I will pick some random number of states
+
+00:27:07.080 --> 00:27:12.120
+and then I will go I will pick some random
+set of states I will do my policy evaluation
+
+00:27:12.120 --> 00:27:15.860
+there I will go pick another random set of
+states and term a policy improvement that
+
+00:27:15.860 --> 00:27:21.150
+if the intersection is empty then you are
+probably not change my policy at all but that
+
+00:27:21.150 --> 00:27:23.850
+should not be your shopping criterion so you
+should have a different stopping criterion
+
+00:27:23.850 --> 00:27:27.890
+we are doing generalized Paula situation right.
+But the feed intersection is empty you wouldn't
+
+00:27:27.890 --> 00:27:31.490
+stop and then when you would not change the
+policy go back and sample some more states
+
+00:27:31.490 --> 00:27:35.610
+so that way if you do you will be doing a
+lot of wasteful computation when the ball
+
+00:27:35.610 --> 00:27:41.559
+the policy improvement it it'd be wasted but
+you do not need to remember it is more useful
+
+00:27:41.559 --> 00:27:53.350
+if you do it on trajectories so why is that
+I mean technically I mean the rtdp style of
+
+00:27:53.350 --> 00:27:56.429
+convergence rate I mean if I do not do it
+on trajectories it becomes more or less like
+
+00:27:56.429 --> 00:28:01.160
+a synchronous DP right but I am claiming that
+are TDP will have a greater effect than a
+
+00:28:01.160 --> 00:28:11.500
+synchronous tpy I am sorry.
+Not just happen more often there is a slightly
+
+00:28:11.500 --> 00:28:16.299
+subtle point here but I am looking along the
+trajectory so I am actually not only sampling
+
+00:28:16.299 --> 00:28:20.549
+a state I am also sampling a successor I am
+sampling a successor and sampling a successor
+
+00:28:20.549 --> 00:28:28.350
+so that will be changes you know when I am
+going to update VN + 1 off remember I put
+
+00:28:28.350 --> 00:28:38.789
+in some space like so other day of sample
+guess three right I will re compute the value
+
+00:28:38.789 --> 00:28:42.790
+of S3 ?? that also affect the value of s 2
+right so now because I'm sampling along the
+
+00:28:42.790 --> 00:28:45.650
+trajectory I will actually get this sequence
+here.
+
+00:28:45.650 --> 00:28:50.090
+So when it when it update is three my stool
+also get updated my phone will also get updated
+
+00:28:50.090 --> 00:28:55.420
+so because of this connectedness right so
+I actually have a greater effect for that
+
+00:28:55.420 --> 00:28:59.179
+sample I drew that if had sample some S1 somewhere
+and this to somewhere else and they are not
+
+00:28:59.179 --> 00:29:05.210
+connected there is no way they are going to
+win appear in each other's update equations
+
+00:29:05.210 --> 00:29:11.910
+right then I will be using the same world
+values that I had and I will be trying to
+
+00:29:11.910 --> 00:29:16.559
+update this so that is why so sampling along
+a trajectory can be more effective.
+
+00:29:16.559 --> 00:29:22.830
+So you want to sample opposite race again
+you do not have to right so what we are trying
+
+00:29:22.830 --> 00:29:31.090
+to do is so even how to in the in the sense
+of time to show convergence right all you
+
+00:29:31.090 --> 00:29:34.870
+need to do to show convergence is you sample
+it infinitely enough right so you don't have
+
+00:29:34.870 --> 00:29:42.919
+to show that the samples are long trajectories
+right it is possible that the few wits a little
+
+00:29:42.919 --> 00:29:46.990
+know with a lot of work you can show that
+by your rate of convergence improves if you
+
+00:29:46.990 --> 00:29:50.419
+are sampling along trajectories.
+But I am not aware of any search results that
+
+00:29:50.419 --> 00:29:55.400
+people have actually worked out there maybe
+just because it is too hard to show and it's
+
+00:29:55.400 --> 00:30:00.309
+not that much of an interesting result anyway
+but the people get the idea began generalized
+
+00:30:00.309 --> 00:30:05.720
+policy iteration right. In fact you can take
+generalized policy iteration to an extreme
+
+00:30:05.720 --> 00:30:25.120
+how, I can sample a state okay, taken one
+action according to the policy we have right
+
+00:30:25.120 --> 00:30:30.370
+and then be greedy with respect to the updated
+value function.
+
+00:30:30.370 --> 00:30:40.940
+So sample state take one action right, update
+the value of the state now be greedy disrespect
+
+00:30:40.940 --> 00:30:53.059
+to that and produce a new policy only for
+that state I will change the action right,
+
+00:30:53.059 --> 00:30:59.780
+sounds too extreme, right so this is policy
+evaluation policy improvement we talked about
+
+00:30:59.780 --> 00:31:03.830
+it I just take some trajectories I do the
+policy evaluation on that and then I do policy
+
+00:31:03.830 --> 00:31:07.080
+improvement and I keep iterating this and
+I am claiming it will converge, okay so I
+
+00:31:07.080 --> 00:31:10.789
+am not going to show you proofs of generalized
+policy iteration converging.
+
+00:31:10.789 --> 00:31:15.360
+But I am claiming that will converge and trust
+me right, now the question I am asking you
+
+00:31:15.360 --> 00:31:21.840
+is I am doing this one day on one state at
+a time pick a state, I pick an action according
+
+00:31:21.840 --> 00:31:29.860
+to the policy right and then I update the
+value function and then I change the policy
+
+00:31:29.860 --> 00:31:38.900
+for the state to be greedy with respect to
+that value function. I can do this by randomly
+
+00:31:38.900 --> 00:31:43.490
+sampling states over the thing or I can do
+this way sweeping through states I start with
+
+00:31:43.490 --> 00:31:47.960
+this s1 I will do this and change the policy
+they I will start with S2 is change the policy
+
+00:31:47.960 --> 00:31:58.040
+there and keep doing this, as it sound like
+a reasonable thing to do.
+
+00:31:58.040 --> 00:32:03.210
+Why I just look at the value function and
+then pick that one action it gives me the
+
+00:32:03.210 --> 00:32:09.491
+maximum value right, so that is what I mean
+by greedy is that I am not saying that I have
+
+00:32:09.491 --> 00:32:14.740
+only one choice to make choose from I am saying
+I have to take only one action I have multiple
+
+00:32:14.740 --> 00:32:21.779
+choices among those i picked the one that
+is greedy with respect to the very function.
+
+00:32:21.779 --> 00:32:30.570
+No we have already looked at an algorithm
+that does that that is exactly what value
+
+00:32:30.570 --> 00:32:43.240
+iteration does if you think about it, right.
+So I pick the best action right so being greedy
+
+00:32:43.240 --> 00:32:49.399
+I pick one step and then I find out what the
+next thing is and use that I update the value
+
+00:32:49.399 --> 00:32:54.429
+function, so the next time I come to the state
+I will pick the best action according to the
+
+00:32:54.429 --> 00:32:57.980
+new iterate of the value function, right so
+this is essentially what value iteration does
+
+00:32:57.980 --> 00:33:03.130
+is one way of thinking about value iteration
+is an extreme form of generalized policy iteration
+
+00:33:03.130 --> 00:33:12.350
+and you pick a state right, pick a greedy
+action, right evaluate the policy then change
+
+00:33:12.350 --> 00:33:15.590
+the policy right.
+So in fact we are learning the policy evaluation
+
+00:33:15.590 --> 00:33:25.490
+in the policy improvement step has been rolled
+into one equation there can a crazy right,
+
+00:33:25.490 --> 00:33:29.610
+so that is what value iteration is in think
+of it as generalized extreme power of 10 based
+
+00:33:29.610 --> 00:33:33.360
+policy inflation so that does not appeal to
+you do not worry about it right but what we
+
+00:33:33.360 --> 00:33:37.620
+will do later is that many of the reinforcement
+learning algorithms that we will look at or
+
+00:33:37.620 --> 00:33:40.970
+some form or the other of generalized policy
+iteration.
+
+00:33:40.970 --> 00:33:44.880
+So many, many, many cases that we look at
+is some form or the other of generalized policy
+
+00:33:44.880 --> 00:33:52.570
+iteration and so one of the powers of power
+of generalized policy iteration is the following
+
+00:33:52.570 --> 00:33:59.250
+so as soon as I come up with a mechanism by
+which I can evaluate a policy, if I give you
+
+00:33:59.250 --> 00:34:03.980
+some policy I can evaluate the policy hey,
+that is all you know right I can use that
+
+00:34:03.980 --> 00:34:14.159
+and to enter it into mechanism for learning
+to solve the MDP right.
+
+00:34:14.159 --> 00:34:18.370
+If I give a mechanism for evaluating a policy
+I can turn that into mechanism for solving
+
+00:34:18.370 --> 00:34:23.059
+the MDP just saying that I am going to repeatedly
+evaluate policies and then improve between
+
+00:34:23.059 --> 00:34:29.209
+the evaluations, let us as soon as I define
+that policy evaluation scheme I can convert
+
+00:34:29.209 --> 00:34:35.409
+that into a solution for the MDP itself, so
+this is essentially the framework that we
+
+00:34:35.409 --> 00:34:40.959
+will see in many of the reinforcement learning
+algorithms we look at, so we will first look
+
+00:34:40.959 --> 00:34:48.179
+at the evaluation set up and then we look
+at the optimal solution setup, okay.
+

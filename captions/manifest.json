@@ -1,0 +1,308 @@
+[
+  {
+    "position": 1,
+    "id": "YaPSPu7K9S0",
+    "status": "complete",
+    "file": "01_Introduction_to_RL.md",
+    "words": 4684,
+    "last_caption_seconds": 1683.49,
+    "duration_seconds": 1712
+  },
+  {
+    "position": 2,
+    "id": "ewkm38skUlY",
+    "status": "complete",
+    "file": "02_RL_Framework_and_Applications.md",
+    "words": 9457,
+    "last_caption_seconds": 3304.39,
+    "duration_seconds": 3306
+  },
+  {
+    "position": 3,
+    "id": "nNK4xKkAapM",
+    "status": "complete",
+    "file": "03_Introduction_to_Immediate_RL.md",
+    "words": 3980,
+    "last_caption_seconds": 1491.47,
+    "duration_seconds": 1499
+  },
+  {
+    "position": 4,
+    "id": "AizR8uvhX-s",
+    "status": "complete",
+    "file": "04_Bandit_Optimalities.md",
+    "words": 2445,
+    "last_caption_seconds": 1072.35,
+    "duration_seconds": 1074
+  },
+  {
+    "position": 5,
+    "id": "iB4m-jP7blI",
+    "status": "complete",
+    "file": "05_Value_Function_Based_Methods.md",
+    "words": 4816,
+    "last_caption_seconds": 2355.73,
+    "duration_seconds": 2356
+  },
+  {
+    "position": 6,
+    "id": "TIlDzLZPyhY",
+    "status": "complete",
+    "file": "06_UCB_1.md",
+    "words": 1977,
+    "last_caption_seconds": 810.899,
+    "duration_seconds": 813
+  },
+  {
+    "position": 7,
+    "id": "KB-ZDvLbuOQ",
+    "status": "complete",
+    "file": "07_Concentration_Bounds.md",
+    "words": 2746,
+    "last_caption_seconds": 1471.67,
+    "duration_seconds": 1474
+  },
+  {
+    "position": 8,
+    "id": "7IA6Zb7KZM0",
+    "status": "complete",
+    "file": "08_UCB_1_Theorem.md",
+    "words": 6021,
+    "last_caption_seconds": 3338.49,
+    "duration_seconds": 3339
+  },
+  {
+    "position": 9,
+    "id": "N_9HgdhXKIY",
+    "status": "complete",
+    "file": "09_PAC_Bounds.md",
+    "words": 2944,
+    "last_caption_seconds": 1807.779,
+    "duration_seconds": 1808
+  },
+  {
+    "position": 10,
+    "id": "3iNaR0Mq1ug",
+    "status": "complete",
+    "file": "10_Median_Elimination.md",
+    "words": 4112,
+    "last_caption_seconds": 2445.42,
+    "duration_seconds": 2446
+  },
+  {
+    "position": 11,
+    "id": "H2OWTxdauqA",
+    "status": "complete",
+    "file": "11_Thompson_Sampling.md",
+    "words": 2323,
+    "last_caption_seconds": 857.209,
+    "duration_seconds": 861
+  },
+  {
+    "position": 12,
+    "id": "y3QEOmkxsQo",
+    "status": "complete",
+    "file": "12_Policy_Search.md",
+    "words": 3434,
+    "last_caption_seconds": 1528.71,
+    "duration_seconds": 1529
+  },
+  {
+    "position": 13,
+    "id": "WIBWQ7lOXoA",
+    "status": "complete",
+    "file": "13_REINFORCE.md",
+    "words": 5192,
+    "last_caption_seconds": 2510.18,
+    "duration_seconds": 2514
+  },
+  {
+    "position": 14,
+    "id": "K2Hh-ayvsJU",
+    "status": "complete",
+    "file": "14_Contextual_Bandits.md",
+    "words": 1906,
+    "last_caption_seconds": 746.639,
+    "duration_seconds": 752
+  },
+  {
+    "position": 15,
+    "id": "yIdgKWFulNQ",
+    "status": "complete",
+    "file": "15_Full_RL_Introduction.md",
+    "words": 5518,
+    "last_caption_seconds": 2208.359,
+    "duration_seconds": 2209
+  },
+  {
+    "position": 16,
+    "id": "BiY_X1c068U",
+    "status": "complete",
+    "file": "16_Returns_Value_functions_and_MDPs.md",
+    "words": 5760,
+    "last_caption_seconds": 2680.46,
+    "duration_seconds": 2681
+  },
+  {
+    "position": 17,
+    "id": "BpSNh1h4HeQ",
+    "status": "complete",
+    "file": "17_MDP_Modelling.md",
+    "words": 5208,
+    "last_caption_seconds": 1985.039,
+    "duration_seconds": 1988
+  },
+  {
+    "position": 18,
+    "id": "CTPHADvQxSs",
+    "status": "complete",
+    "file": "18_Bellman_Equation.md",
+    "words": 1594,
+    "last_caption_seconds": 845.959,
+    "duration_seconds": 863
+  },
+  {
+    "position": 19,
+    "id": "4S9aRrsP954",
+    "status": "complete",
+    "file": "19_Bellman_Optimality_Equation.md",
+    "words": 3687,
+    "last_caption_seconds": 1761.01,
+    "duration_seconds": 1766
+  },
+  {
+    "position": 20,
+    "id": "THmztE-ghWc",
+    "status": "complete",
+    "file": "20_Lec_20_-_Cauchy_Sequence_and_Green_s_Equation.md",
+    "words": 3604,
+    "last_caption_seconds": 1881.37,
+    "duration_seconds": 1883
+  },
+  {
+    "position": 21,
+    "id": "EKwc7rw9YCU",
+    "status": "complete",
+    "file": "21_Banach_Fixed_Point_Theorem.md",
+    "words": 2807,
+    "last_caption_seconds": 1546.9,
+    "duration_seconds": 1551
+  },
+  {
+    "position": 22,
+    "id": "9UhK8U6rEVY",
+    "status": "complete",
+    "file": "22_Convergence_Proof.md",
+    "words": 1653,
+    "last_caption_seconds": 1082.43,
+    "duration_seconds": 1083
+  },
+  {
+    "position": 23,
+    "id": "ybEyXc4hNuk",
+    "status": "complete",
+    "file": "23_Lpi_Convergence.md",
+    "words": 3658,
+    "last_caption_seconds": 1872.039,
+    "duration_seconds": 1873
+  },
+  {
+    "position": 24,
+    "id": "F3DjpixO1bY",
+    "status": "complete",
+    "file": "24_Value_Iteration.md",
+    "words": 2211,
+    "last_caption_seconds": 1407.06,
+    "duration_seconds": 1407
+  },
+  {
+    "position": 25,
+    "id": "09L0nqw9Vnc",
+    "status": "complete",
+    "file": "25_Policy_Iteration.md",
+    "words": 1307,
+    "last_caption_seconds": 798.75,
+    "duration_seconds": 805
+  },
+  {
+    "position": 26,
+    "id": "_0BQZyXx0eU",
+    "status": "complete",
+    "file": "26_Dynamic_Programming.md",
+    "words": 5454,
+    "last_caption_seconds": 2080.959,
+    "duration_seconds": 2093
+  },
+  {
+    "position": 27,
+    "id": "DaxOiIdjQ4Y",
+    "status": "complete",
+    "file": "27_Monte_Carlo.md",
+    "words": 3421,
+    "last_caption_seconds": 1357.789,
+    "duration_seconds": 1367
+  },
+  {
+    "position": 28,
+    "id": "h7lfqnV-8Pc",
+    "status": "complete",
+    "file": "28_Control_in_Monte_Carlo.md",
+    "words": 3737,
+    "last_caption_seconds": 1653.07,
+    "duration_seconds": 1660
+  },
+  {
+    "position": 29,
+    "id": "oHE7u15n7Qg",
+    "status": "complete",
+    "file": "29_Off_Policy_MC.md",
+    "words": 1294,
+    "last_caption_seconds": 985.64,
+    "duration_seconds": 992
+  },
+  {
+    "position": 30,
+    "id": "unCdZCQS64g",
+    "status": "complete",
+    "file": "30_UCT.md",
+    "words": 5075,
+    "last_caption_seconds": 2176.44,
+    "duration_seconds": 2183
+  },
+  {
+    "position": 31,
+    "id": "4KlVxH8wMWQ",
+    "status": "complete",
+    "file": "31_TD_0.md",
+    "words": 4166,
+    "last_caption_seconds": 2104.92,
+    "duration_seconds": 2111
+  },
+  {
+    "position": 32,
+    "id": "x3PgPnVC-bQ",
+    "status": "complete",
+    "file": "32_TD_0_Control.md",
+    "words": 2347,
+    "last_caption_seconds": 1315.82,
+    "duration_seconds": 1327
+  },
+  {
+    "position": 33,
+    "id": "ioQz9Pkycb0",
+    "status": "complete",
+    "file": "33_Lec_33_-_Q-Learning.md",
+    "words": 3532,
+    "last_caption_seconds": 1806.229,
+    "duration_seconds": 1812
+  },
+  {
+    "position": 34,
+    "id": "w3wGvwi336I",
+    "status": "complete",
+    "file": "34_Lec_34_-_Afterstate.md",
+    "words": 1051,
+    "last_caption_seconds": 419.33,
+    "duration_seconds": 426
+  }
+]

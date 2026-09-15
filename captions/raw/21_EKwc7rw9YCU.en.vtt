@@ -1,0 +1,686 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.288 --> 00:00:13.960
+[Music]
+
+00:00:13.960 --> 00:00:14.840
+so I'm going to
+
+00:00:14.840 --> 00:00:25.280
+Define an operator a linear operator called&nbsp;
+LP okay so LP is something uh that's going to
+
+00:00:25.280 --> 00:00:36.200
+take a vector from the space V where capital&nbsp;
+V is the space of all value functions right&nbsp;&nbsp;
+
+00:00:36.200 --> 00:00:41.200
+so capital V is a complete normed Vector&nbsp;
+space of all value functions right so I'm&nbsp;&nbsp;
+
+00:00:41.200 --> 00:00:47.080
+going I'm going to Define an operator L Pi that&nbsp;
+takes an element in V to another element in V&nbsp;&nbsp;
+
+00:00:47.080 --> 00:00:59.920
+right so how I Define l Pi L Pi operating&nbsp;
+on V will give me back a function that is
+
+00:01:04.520 --> 00:01:11.600
+right so V is some element in capital V it's a&nbsp;
+some value function okay or rather some element&nbsp;&nbsp;
+
+00:01:11.600 --> 00:01:18.120
+in capital V okay so what's the difference between&nbsp;
+saying that is some value function and then saying&nbsp;&nbsp;
+
+00:01:18.120 --> 00:01:24.840
+some element in capital B when it say it's a value&nbsp;
+function I'm kind of implicitly saying that there&nbsp;&nbsp;
+
+00:01:24.840 --> 00:01:31.520
+is a policy for which that is the expected return&nbsp;
+right right but when I say it's a point in the&nbsp;&nbsp;
+
+00:01:31.520 --> 00:01:36.080
+space V that need not necessarily be true I&nbsp;
+mean it's just some point in a s dimensional&nbsp;&nbsp;
+
+00:01:36.080 --> 00:01:43.000
+space that need not necessarily exist exist a&nbsp;
+policy corresponding to that function okay so&nbsp;&nbsp;
+
+00:01:43.000 --> 00:01:49.480
+I'm just saying it's some function V right&nbsp;
+that ends in exists in that space capital
+
+00:01:49.480 --> 00:02:04.320
+V what is the right hand side space V to v v to V&nbsp;
+other space what other space space V2 V yeah right&nbsp;&nbsp;
+
+00:02:04.320 --> 00:02:07.720
+does that make sense I mean is that confusing&nbsp;
+to people yes everybody is on board right
+
+00:02:07.720 --> 00:02:15.520
+good right so what does my&nbsp;
+uh bman equation tell me if&nbsp;&nbsp;
+
+00:02:15.520 --> 00:02:29.840
+you think about it the Melman equation tells me
+
+00:02:33.960 --> 00:02:37.880
+right that's what my bman equation is telling me&nbsp;
+essentially it's saying that I take this point V&nbsp;&nbsp;
+
+00:02:37.880 --> 00:02:44.640
+Pi in the space capital V I apply the operator&nbsp;
+L Pi on it whatever it gives me back will be V
+
+00:02:44.640 --> 00:02:51.880
+PI right so likewise if I can define an&nbsp;
+operator for the optimality equation it&nbsp;&nbsp;
+
+00:02:51.880 --> 00:02:56.720
+will tell me that V Star is a point&nbsp;
+in space V say that if I apply the&nbsp;&nbsp;
+
+00:02:56.720 --> 00:02:59.840
+operator let's call it l if I apply&nbsp;
+L on it it will give me back V Star
+
+00:03:02.440 --> 00:03:03.360
+so this implies
+
+00:03:03.360 --> 00:03:25.840
+that V Pi is what is known as a fixed point of&nbsp;
+L PI right so I so if you think about it right&nbsp;&nbsp;
+
+00:03:25.840 --> 00:03:30.960
+so normally I take some vector v I apply L&nbsp;
+Pi on it okay it'll go to some other point&nbsp;&nbsp;
+
+00:03:30.960 --> 00:03:34.800
+then I'll apply LP on it it'll go to some&nbsp;
+other point then I'll apply LP on it it'll&nbsp;&nbsp;
+
+00:03:34.800 --> 00:03:39.680
+keep moving around right in space right if I&nbsp;
+apply LP on it and it stays there then I call&nbsp;&nbsp;
+
+00:03:39.680 --> 00:03:46.720
+it a fixed Point what uh because I'm using&nbsp;
+the I'm defining the operator through R pi&nbsp;&nbsp;
+
+00:03:46.720 --> 00:03:52.200
+and P Pi which themselves are defined&nbsp;
+through PI right I mean if you looked&nbsp;&nbsp;
+
+00:03:52.200 --> 00:03:59.960
+at if you remember the independent of no it's&nbsp;
+not because mapping is r p i mean mapping Ed&nbsp;&nbsp;
+
+00:03:59.960 --> 00:04:07.760
+R pi and P pi as integral components of it&nbsp;
+right so it's not independent so the other one&nbsp;&nbsp;
+
+00:04:07.760 --> 00:04:11.920
+is independent there we'll drop the dependence&nbsp;
+the optimality equation has no dependence on&nbsp;&nbsp;
+
+00:04:11.920 --> 00:04:21.200
+Pi there we'll drop the dependence on Pi but the&nbsp;
+belman equation has a that's the P init okay great
+
+00:04:21.200 --> 00:04:37.360
+so we introduce you to something called&nbsp;
+The banak Fix Point theorem okay this a&nbsp;&nbsp;
+
+00:04:37.360 --> 00:04:43.640
+very basic I mean believe it or not whatever we&nbsp;
+are doing is very very fundamental stuff right&nbsp;&nbsp;
+
+00:04:43.640 --> 00:04:49.120
+very minimal minimal math in terms of trying to&nbsp;
+prove convergence and things like that because&nbsp;&nbsp;
+
+00:04:49.120 --> 00:04:56.880
+I have restricted you to finite mdps okay so&nbsp;
+the the more Harry the more interesting math&nbsp;&nbsp;
+
+00:04:56.880 --> 00:05:02.880
+comes when you start operating in the infinite&nbsp;
+State spaces right uh where uh I mean you can't&nbsp;&nbsp;
+
+00:05:02.880 --> 00:05:09.240
+write down simple results okay you have to have&nbsp;
+lot of qualifications if your mdp says that yes&nbsp;&nbsp;
+
+00:05:09.240 --> 00:05:14.920
+satisfies this and that and that and a satisfies&nbsp;
+this and that and that then something will hold&nbsp;&nbsp;
+
+00:05:14.920 --> 00:05:19.600
+right but here we can say some we can write very&nbsp;
+easy results so I'm going to use something called&nbsp;&nbsp;
+
+00:05:19.600 --> 00:05:29.640
+the banak fixon theorem okay which will&nbsp;
+uh which makes our life a lot easy right
+
+00:05:42.880 --> 00:05:47.280
+sounds like a very fancy term right&nbsp;
+banak space so what is a banak
+
+00:05:47.280 --> 00:05:51.800
+space we already know what a banak space
+
+00:05:51.800 --> 00:05:59.200
+is complete normed Vector space is&nbsp;
+called a banak space just don't get&nbsp;&nbsp;
+
+00:05:59.200 --> 00:06:03.320
+put off by by terminology we understand&nbsp;
+this right so we know what a banak space&nbsp;&nbsp;
+
+00:06:03.320 --> 00:06:08.240
+is a complete nored Vector space is a banak space
+
+00:06:08.240 --> 00:06:29.560
+right H so one thing which I forgot&nbsp;
+I'll introduce it lat this now okay
+
+00:06:34.960 --> 00:06:35.960
+[Music]
+
+00:06:35.960 --> 00:06:43.440
+so some mapping T that Maps points in U to another&nbsp;
+point in U right um assume it's a contraction&nbsp;&nbsp;
+
+00:06:43.440 --> 00:06:48.320
+mapping I'll tell you what is a contraction&nbsp;
+mapping in a minute okay but you can think kind&nbsp;&nbsp;
+
+00:06:48.320 --> 00:06:54.760
+of guess what a contraction mapping is right it&nbsp;
+takes two points in space right I take u and v i&nbsp;&nbsp;
+
+00:06:54.760 --> 00:07:01.240
+take T of U and I take T of V right so T of U and&nbsp;
+T of V will be close to each other than u and v
+
+00:07:01.240 --> 00:07:08.600
+were okay so that's essentially contraction&nbsp;
+mapping so I'll write it down formally in a minute
+
+00:07:08.600 --> 00:07:29.520
+right then
+
+00:08:07.480 --> 00:08:29.440
+for
+
+00:08:43.520 --> 00:08:44.520
+[Music]
+
+00:08:44.520 --> 00:08:48.760
+okay so what we are saying suppose U is a Bak&nbsp;
+space and T is a contraction mapping essentially&nbsp;&nbsp;
+
+00:08:48.760 --> 00:08:56.640
+things that brings points together uh then&nbsp;
+there exist a unique V Star in U such that&nbsp;&nbsp;
+
+00:08:56.640 --> 00:09:04.480
+T V Star equal to V Star so that essentially&nbsp;
+means that that t has a fixed Point T has a&nbsp;&nbsp;
+
+00:09:04.480 --> 00:09:10.960
+fixed point and it is a unique fixed Point&nbsp;
+okay and the second thing is for arbitrary&nbsp;&nbsp;
+
+00:09:10.960 --> 00:09:17.520
+starting point V if I keep repeatedly&nbsp;
+applying t on V right I'll converge to V
+
+00:09:17.520 --> 00:09:29.360
+St right so showing one does not imply two&nbsp;
+okay just because the fixed Point exists&nbsp;&nbsp;
+
+00:09:30.040 --> 00:09:34.320
+right repeatedly applying did not necessarily&nbsp;
+converge to the fix point in fact there are&nbsp;&nbsp;
+
+00:09:34.320 --> 00:09:39.960
+some results for certain algorithms where we can&nbsp;
+show that that algorithm itself has a fixed point&nbsp;&nbsp;
+
+00:09:39.960 --> 00:09:44.800
+I mean or rather the the system of equations you&nbsp;
+set up itself has a fixed point but the iterative&nbsp;&nbsp;
+
+00:09:44.800 --> 00:09:48.800
+process that you are using for solving it need not&nbsp;
+necessarily converge to it okay there are cases&nbsp;&nbsp;
+
+00:09:48.800 --> 00:09:53.440
+that will happen but in this case it says turns&nbsp;
+out that repeatedly applying T that's essentially&nbsp;&nbsp;
+
+00:09:53.440 --> 00:09:58.880
+what the sequence is right I start off with v&nbsp;
+not I apply t on it once I get V1 I apply t on it&nbsp;&nbsp;
+
+00:09:58.880 --> 00:10:05.960
+again I get V2 I apply t on it again I get V3 and&nbsp;
+so on so forth right I keep doing this well often&nbsp;&nbsp;
+
+00:10:05.960 --> 00:10:13.080
+enough right I'll end up in V Star right how how&nbsp;
+many times is often enough something we'll study&nbsp;&nbsp;
+
+00:10:13.080 --> 00:10:17.960
+when we look at actual algorithms uh for solving&nbsp;
+these problems uh but these are the things right&nbsp;&nbsp;
+
+00:10:17.960 --> 00:10:23.800
+that exists a unique V Star and this there a&nbsp;
+couple of things that we need to show one is that&nbsp;&nbsp;
+
+00:10:23.800 --> 00:10:32.520
+use a banak space yeah why you call fixed point&nbsp;
+isn't it like a whole line basically an Vector
+
+00:10:32.520 --> 00:10:43.000
+of well it's a point it's a point in the V Space&nbsp;
+right it's I Vector fine but I Vector is a point&nbsp;&nbsp;
+
+00:10:43.000 --> 00:10:50.560
+in the v space no the point in the right that's&nbsp;
+what we have been saying so what is V Pi V Pi is&nbsp;&nbsp;
+
+00:10:50.560 --> 00:10:55.320
+a vector that the first component is V Pi of&nbsp;
+one then V Pi of 2 V Pi of 3 V Pi of 4 it's&nbsp;&nbsp;
+
+00:10:55.320 --> 00:11:04.520
+ESS simply a point in in in a s dimensional&nbsp;
+vector space right confusing let's think of&nbsp;&nbsp;
+
+00:11:04.520 --> 00:11:10.720
+a case where there are two states alone let's&nbsp;
+State one state two right I Define some policy&nbsp;&nbsp;
+
+00:11:10.720 --> 00:11:29.240
+let's I'm just going to cook up something let's&nbsp;
+let's look at how it works I have one I have two
+
+00:11:37.000 --> 00:11:38.000
+[Music]
+
+00:11:38.000 --> 00:11:48.040
+okay some arbitrary thing I have written an&nbsp;
+mdp for you here right so I take action one&nbsp;&nbsp;
+
+00:11:48.040 --> 00:11:52.280
+from State one I'll go to state two I'll get&nbsp;
+a reward of one I'll take action one in state&nbsp;&nbsp;
+
+00:11:52.280 --> 00:11:56.240
+two I'll get go to state one with the reward&nbsp;
+of one I take action two in either State one&nbsp;&nbsp;
+
+00:11:56.240 --> 00:12:00.360
+or state two I'm going to stay there with the&nbsp;
+reward of minus one okay now let me Define a&nbsp;&nbsp;
+
+00:12:00.360 --> 00:12:09.880
+policy so what is a policy Pi of 1 is A1 and&nbsp;
+Pi of 2 is A2 I determine sorry A1 Pi of 2&nbsp;&nbsp;
+
+00:12:09.880 --> 00:12:29.360
+is A1 let's just Define A1 A1 for both right&nbsp;
+so what is the value of uh State one under pi
+
+00:12:29.360 --> 00:12:32.360
+I me you can do it easily enough but
+
+00:12:32.360 --> 00:12:49.920
+[Music] uh for some value of gamma you&nbsp;
+can solve it or you can just write the&nbsp;&nbsp;
+
+00:12:49.920 --> 00:12:54.240
+summation right just 1 + GMA plus GMA&nbsp;
+square + GMA Cub I mean you can solve&nbsp;&nbsp;
+
+00:12:54.240 --> 00:12:59.120
+the system of equation or you can just&nbsp;
+tell me what is the limit of the summation
+
+00:13:00.760 --> 00:13:01.400
+somebody tell
+
+00:13:01.400 --> 00:13:05.080
+me
+
+00:13:05.080 --> 00:13:17.480
+yeah right now if I think of this in a&nbsp;
+two dimensional space so I have a two&nbsp;&nbsp;
+
+00:13:17.480 --> 00:13:29.120
+dimensional space this Dimension is V Pi of&nbsp;
+1 this Dimension is V Pi of 2 just a point
+
+00:13:37.560 --> 00:13:42.160
+so this point is this V of
+
+00:13:42.160 --> 00:13:59.040
+one now we can think of defining&nbsp;
+a pi Prime which is like uh
+
+00:14:06.840 --> 00:14:08.680
+same minus of
+
+00:14:08.680 --> 00:14:33.320
+that right so for any policy I choose like this&nbsp;
+right Pi Pi Pi of A1 and Pi of A2 whatever things&nbsp;&nbsp;
+
+00:14:33.320 --> 00:14:38.480
+I choose I'm going to end up with some point in&nbsp;
+this space right so this is what I mean by the&nbsp;&nbsp;
+
+00:14:38.480 --> 00:14:45.520
+space capital V so this is my space capital V&nbsp;
+and each value function is a point in the space&nbsp;&nbsp;
+
+00:14:45.520 --> 00:14:51.840
+right I mean I was hoping people had actually&nbsp;
+this this in their mind when they are nodding&nbsp;&nbsp;
+
+00:14:51.840 --> 00:14:56.600
+with whatever I was saying earlier right so&nbsp;
+this is what I mean by saying all of these&nbsp;&nbsp;
+
+00:14:56.600 --> 00:15:02.120
+things which we talked about right this being a&nbsp;
+complete normed Vector space everything we have&nbsp;&nbsp;
+
+00:15:02.120 --> 00:15:11.240
+talked about is with this picture in mind right so&nbsp;
+okay does it make sense any questions about that&nbsp;&nbsp;
+
+00:15:11.240 --> 00:15:15.840
+of course I just chose deterministic policies&nbsp;
+to be easy right you could choose stochastic&nbsp;&nbsp;
+
+00:15:15.840 --> 00:15:22.320
+policies you just have to write out this more&nbsp;
+terms in this equation right this equation will&nbsp;&nbsp;
+
+00:15:22.320 --> 00:15:28.960
+have the sum over PSA right and then you&nbsp;
+solve it and then you get it right so it's&nbsp;&nbsp;
+
+00:15:29.520 --> 00:15:34.240
+so essentially the tricky part here turns&nbsp;
+out showing that whatever mapping T you are&nbsp;&nbsp;
+
+00:15:34.240 --> 00:15:39.520
+considering is a contraction mapping so if you&nbsp;
+can show whatever is the map that you consider&nbsp;&nbsp;
+
+00:15:39.520 --> 00:15:44.840
+in this case we are going to be considering L&nbsp;
+Pi if you can show that L Pi is a contraction&nbsp;&nbsp;
+
+00:15:44.840 --> 00:15:51.160
+mapping right then you get the rest of it for&nbsp;
+free yeah yeah so that's it essentially that's&nbsp;&nbsp;
+
+00:15:51.160 --> 00:15:55.040
+what you have to do to show it's a conversion&nbsp;
+uh it's it's a contraction mapping I I'll&nbsp;&nbsp;
+
+00:15:55.040 --> 00:16:28.920
+just tell you in a minute I formally write&nbsp;
+down what a contraction map fing us right
+
+00:16:47.840 --> 00:17:00.320
+right so for sure okay it's it moves away it's&nbsp;
+a this is what a contraction mapping is so if&nbsp;&nbsp;
+
+00:17:00.320 --> 00:17:07.720
+u and v were some distance apart after I apply&nbsp;
+t on both of them they will be closer than what&nbsp;&nbsp;
+
+00:17:07.720 --> 00:17:16.040
+they were earlier right by a factor of at least&nbsp;
+Lambda right where Lambda lies between 0 and 1&nbsp;&nbsp;
+
+00:17:16.040 --> 00:17:24.480
+right one excluded okay so the smaller the value&nbsp;
+of Lambda what does it mean the faster the points&nbsp;&nbsp;
+
+00:17:24.480 --> 00:17:29.040
+are B together the more the contraction&nbsp;
+is right the closer the value of Lambda&nbsp;&nbsp;
+
+00:17:29.040 --> 00:17:33.640
+to one the lesser the contractions obviously&nbsp;
+Lambda equal to 1 does not make sense right&nbsp;&nbsp;
+
+00:17:33.640 --> 00:17:41.160
+if Lambda is one then there is no&nbsp;
+contraction okay if Lambda 1 is T
+
+00:17:41.160 --> 00:17:46.280
+identity need not be I'm just just telling&nbsp;&nbsp;
+
+00:17:46.280 --> 00:17:49.800
+you just the distance have to be&nbsp;
+preserved right I can swap u and v
+
+00:17:49.800 --> 00:17:58.840
+also right just remember that&nbsp;
+okay so now let's look at the
+
+00:17:59.480 --> 00:18:05.120
+proof of the banak fix point so why is it&nbsp;
+called the banak fix Point theorem there's&nbsp;&nbsp;
+
+00:18:05.120 --> 00:18:11.160
+a fix point to which all because it applies&nbsp;
+in b space right so for different kinds of&nbsp;&nbsp;
+
+00:18:11.160 --> 00:18:14.040
+spaces that you are starting off with&nbsp;
+you have different kinds of fix Point&nbsp;&nbsp;
+
+00:18:14.040 --> 00:18:17.480
+here that's a whole family of fix Point&nbsp;
+theorems okay depending on the underlying&nbsp;&nbsp;
+
+00:18:17.480 --> 00:18:20.800
+assumptions you make so this is a fix&nbsp;
+Point theorem that will show in the Bak&nbsp;&nbsp;
+
+00:18:20.800 --> 00:18:25.520
+bace it's one of the simplest of the fix&nbsp;
+Point theorems okay so if you have lesser&nbsp;&nbsp;
+
+00:18:25.520 --> 00:18:32.600
+restrictions on the underlying space then&nbsp;
+the showing fixed points becomes more tricky
+
+00:18:32.600 --> 00:18:58.520
+okay okay so here's the trick that we'll be using&nbsp;
+repeatedly okay I'm just taking some some iterates&nbsp;&nbsp;
+
+00:18:58.520 --> 00:19:06.160
+in that sequence right so I've taken some VN&nbsp;
+and some VN plus M so VN plus M occurs after VN
+
+00:19:06.160 --> 00:19:16.400
+okay so I'm going to use the triangle INE equality
+
+00:19:16.400 --> 00:19:23.200
+right so I can pick some arbitrary Point let us&nbsp;&nbsp;
+
+00:19:23.200 --> 00:19:28.720
+say in between in the sequence&nbsp;
+right so we say VN plus m by2&nbsp;&nbsp;
+
+00:19:29.280 --> 00:19:33.800
+I can pick some arbitrary point in the sequence&nbsp;
+which is v n + m by2 and then I can say this is&nbsp;&nbsp;
+
+00:19:33.800 --> 00:19:58.640
+less than VN + m minus VN + m by2 + VN + m by2&nbsp;
+minus VM right so I can write it like this right
+
+00:20:04.720 --> 00:20:09.440
+for the time being forget about the produ they&nbsp;
+coming from a sequence just think of them as&nbsp;&nbsp;
+
+00:20:09.440 --> 00:20:16.520
+three points in space right so VN is some some&nbsp;
+point in that space v m n plus m is some other&nbsp;&nbsp;
+
+00:20:16.520 --> 00:20:21.200
+point in that space and this guy is a third&nbsp;
+point in that space right so once I give you&nbsp;&nbsp;
+
+00:20:21.200 --> 00:20:26.880
+three points I can use a triangle inequality right&nbsp;
+I just chosen the third point to be somewhere in&nbsp;&nbsp;
+
+00:20:26.880 --> 00:20:30.960
+between in the sequence Okay so so that's all&nbsp;
+I mean nothing to do with the fact that these&nbsp;&nbsp;
+
+00:20:30.960 --> 00:20:35.000
+three points are a sequence I can use a triangle&nbsp;
+inequality given any three points okay so I can&nbsp;&nbsp;
+
+00:20:35.000 --> 00:20:41.400
+do it this way right but there is nothing S&nbsp;
+no sanctity about doing this in fact I can&nbsp;&nbsp;
+
+00:20:41.400 --> 00:20:50.200
+split this further I can say VN plus M by2 and&nbsp;
+then n by 4 right I can split that and do that&nbsp;&nbsp;
+
+00:20:50.200 --> 00:20:58.600
+in fact I can do this for every step along&nbsp;
+the way so I'm going to replace it with this
+
+00:21:22.800 --> 00:21:28.880
+right so basically n n + 1 n + 1&nbsp;
+n + 2 n+ 2 n+ 3 so it gives doing&nbsp;&nbsp;
+
+00:21:28.880 --> 00:21:32.920
+this so repeatedly applied the&nbsp;
+triangle inequality to get this
+
+00:21:32.920 --> 00:21:46.000
+right
+
+00:21:46.000 --> 00:22:02.400
+yeah no T takes from U to u u to U U and&nbsp;
+then Maps another point in U cont no so&nbsp;&nbsp;
+
+00:22:02.400 --> 00:22:06.160
+two different points right so I take&nbsp;
+two arbitrary points U and B this for&nbsp;&nbsp;
+
+00:22:06.160 --> 00:22:11.760
+all points u and v and U right so any&nbsp;
+arbitrary point I take I apply t on U&nbsp;&nbsp;
+
+00:22:11.760 --> 00:22:16.680
+and I apply t on V right so I'll get two&nbsp;
+resulting points right so I'll take the&nbsp;&nbsp;
+
+00:22:16.680 --> 00:22:20.840
+distance between them they should be less&nbsp;
+than the original distance between u and&nbsp;&nbsp;
+
+00:22:20.840 --> 00:22:28.520
+v t is a mapping from U to U it's not U cross&nbsp;
+U to U cross U right it's mapping from U to U
+
+00:22:40.280 --> 00:22:46.160
+okay so now we have reduced it to the same T&nbsp;
+applied multiple times right so I can apply T&nbsp;&nbsp;
+
+00:22:46.160 --> 00:22:58.440
+use this multiple times right so what I'm going&nbsp;
+to get using this contraction operator here
+
+00:23:10.000 --> 00:23:10.360
+is it
+
+00:23:10.360 --> 00:23:22.040
+fine why T because it's decreasing what's&nbsp;
+it in the Second Step app the operator T&nbsp;&nbsp;
+
+00:23:22.040 --> 00:23:25.960
+because we found that it's decreasing the&nbsp;
+distance between the two subse why did I&nbsp;&nbsp;
+
+00:23:25.960 --> 00:23:32.240
+apply the operator T by definition we&nbsp;
+n + k + 1 is T operating on V1 n plus K
+
+00:23:32.240 --> 00:23:42.880
+[Music]
+
+00:23:42.880 --> 00:23:47.600
+* does it make sense now now this quantity is&nbsp;&nbsp;
+
+00:23:47.600 --> 00:23:58.440
+independent of K so I can take it out&nbsp;
+and sum over okay so what is the sum
+
+00:24:03.000 --> 00:24:28.360
+I mean very OD I keep getting calls today I don't&nbsp;
+know why like my third call during the class
+
+00:24:30.480 --> 00:24:31.480
+[Music]
+
+00:24:31.480 --> 00:24:32.520
+so what can you say about this
+
+00:24:32.520 --> 00:24:46.360
+sequence as n and M become large it become&nbsp;
+smaller and smaller and smaller right as n&nbsp;&nbsp;
+
+00:24:46.360 --> 00:24:50.440
+and M becomes larger and larger that sequence&nbsp;
+is going to become smaller and smaller so this&nbsp;&nbsp;
+
+00:24:50.440 --> 00:24:54.560
+is a constant so it doesn't matter so&nbsp;
+n and M become larger and larger this&nbsp;&nbsp;
+
+00:24:54.560 --> 00:25:00.480
+is going to become smaller and smaller&nbsp;
+so what can you say the sequence VN is
+
+00:25:00.480 --> 00:25:16.280
+kosi okay people get
+
+00:25:16.280 --> 00:25:33.480
+that anything else we can say we assume&nbsp;
+that's a banak space right that's why&nbsp;&nbsp;
+
+00:25:33.480 --> 00:25:38.400
+I said banak space fix Point theorems are&nbsp;
+easy we assume it's a banak space therefore&nbsp;&nbsp;
+
+00:25:38.400 --> 00:25:52.767
+VN is convergent we already know that right so&nbsp;
+what needs to be shown now [Music] [Applause]
+

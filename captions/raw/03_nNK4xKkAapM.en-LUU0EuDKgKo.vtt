@@ -1,0 +1,948 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.670 --> 00:00:32.160
+So what we will start looking at today is
+what.
+
+00:00:32.160 --> 00:00:41.420
+.
+Right so what we call immediate RL immediate
+
+00:00:41.420 --> 00:00:47.820
+reinforcement having problems so if you remember
+I said there are many, many characteristics
+
+00:00:47.820 --> 00:00:56.280
+of a reinforcement learning problem and one
+of those was that you get this evaluation
+
+00:00:56.280 --> 00:01:01.729
+from the environment and could potentially
+be delayed right so I said you might actually
+
+00:01:01.729 --> 00:01:05.600
+lose a piece very important piece in the middle
+of a chess game but you get a reward only
+
+00:01:05.600 --> 00:01:09.860
+at the end it is not like the final move you
+made it someone that causes you to lose it
+
+00:01:09.860 --> 00:01:12.380
+could be somewhere along the way right.
+
+00:01:12.380 --> 00:01:17.750
+So what we are going to do now is to actually
+consider a much simpler version of the problem
+
+00:01:17.750 --> 00:01:24.020
+where we do not have this the temporal nature
+to it right, so we are not we are not going
+
+00:01:24.020 --> 00:01:29.119
+to assume that the rewards are the scalar
+evaluation that comes from the environment
+
+00:01:29.119 --> 00:01:35.750
+is going to come at a further time than when
+the action is actually performed right so
+
+00:01:35.750 --> 00:01:40.509
+I am going to assume that as soon as you perform
+an action like you are going to get a evaluation
+
+00:01:40.509 --> 00:01:43.329
+right and that is it basically right.
+
+00:01:43.329 --> 00:01:51.100
+So we are going to consider a much more simplified
+version of the problem that is at every time
+
+00:01:51.100 --> 00:02:00.890
+instance I am required to pick an action right,
+so every time instant T right I pick an action
+
+00:02:00.890 --> 00:02:16.370
+at right, and then I receive a reward RT and
+that is it my interaction is ended right.
+
+00:02:16.370 --> 00:02:21.780
+So I can learn something from this interaction
+and go back and pick a another action at time
+
+00:02:21.780 --> 00:02:28.340
+t + 1 right so that is why we call this immediate
+reinforcement learning problems because the
+
+00:02:28.340 --> 00:02:32.569
+outcome is immediate so as soon as if take
+an action I get a reward right.
+
+00:02:32.569 --> 00:02:39.349
+So what else is missing in my description
+here there is no real input to the system
+
+00:02:39.349 --> 00:02:43.430
+right there is no state signal that the system
+is seeing so all the input it is getting are
+
+00:02:43.430 --> 00:02:50.459
+the rewards right there is no state input
+to the system right, so it is like it's just
+
+00:02:50.459 --> 00:02:55.530
+solving the same problem again and again right
+so instead of thinking of it as not having
+
+00:02:55.530 --> 00:03:00.030
+a state you could think of it as having like
+every time I give it the same input and I
+
+00:03:00.030 --> 00:03:04.659
+am asking you to give me a action in response
+to that this is seem like a reasonable thing
+
+00:03:04.659 --> 00:03:10.810
+to have you think of cases where this might
+actually be an appropriate model.
+
+00:03:10.810 --> 00:03:17.250
+So one example which people give us in drug
+testing right so I have I have a certain symptom
+
+00:03:17.250 --> 00:03:25.030
+that is presented to me right and I can choose
+on one of four different drugs to treat that
+
+00:03:25.030 --> 00:03:32.840
+symptom right so I first I give Doug one it
+may or may not cure the person if it cures
+
+00:03:32.840 --> 00:03:36.849
+the person then I get a reward if it does
+not cure a person I do not get a reward right
+
+00:03:36.849 --> 00:03:40.540
+but it could very well be that for a variety
+of reasons the person did not get cured it
+
+00:03:40.540 --> 00:03:45.990
+is not because that the drug one was not the
+right give for this person right.
+
+00:03:45.990 --> 00:03:50.360
+For this symptoms but for a variety of other
+reasons the patient might not have been cured
+
+00:03:50.360 --> 00:03:56.939
+so I cannot conclude by just administering
+the drug once that the drug is ineffective
+
+00:03:56.939 --> 00:04:03.750
+for a set of symptoms and I have to keep trying
+the drug multiple times right before I can
+
+00:04:03.750 --> 00:04:12.250
+come to a conclusion that the drug is ineffective
+or a person okay alright so for a certain
+
+00:04:12.250 --> 00:04:18.489
+set of symptoms so it is like saying that
+okay there are multiple you know samples that
+
+00:04:18.489 --> 00:04:22.250
+I have in a lab and each of them is exhibiting
+the same disease.
+
+00:04:22.250 --> 00:04:27.770
+Let us not talk about human beings administering
+drugs and killing them or something can think
+
+00:04:27.770 --> 00:04:32.070
+of what samples in the lab right I'm going
+to add some drugs to that and see if that
+
+00:04:32.070 --> 00:04:38.480
+particular organism dies right in that in
+the when I add the drug and so far it is essentially
+
+00:04:38.480 --> 00:04:44.100
+the same presentation as far as the drug testing
+is goes right it is the same organism that
+
+00:04:44.100 --> 00:04:48.540
+I am trying to kill say microorganism that
+I am trying to kill across all of these different
+
+00:04:48.540 --> 00:04:53.380
+instances it is like the same state that is
+being presented to me over and over again
+
+00:04:53.380 --> 00:04:57.790
+but then I have multiple choices that I could
+make and as soon as I do the choice I get
+
+00:04:57.790 --> 00:04:58.790
+a feedback saying okay.
+
+00:04:58.790 --> 00:05:04.580
+Yeah the organism died or it did not die right,
+so I have to keep trying this multiple before
+
+00:05:04.580 --> 00:05:11.010
+I figure out which is the right drug to administer
+okay good it clear so that gives you an example
+
+00:05:11.010 --> 00:05:16.920
+right so there are a couple of things which
+I kind of rolled into their example as well
+
+00:05:16.920 --> 00:05:24.320
+so one of the is this that the outcome can
+be stochastic right, so every time I take
+
+00:05:24.320 --> 00:05:32.160
+an action right so I did not be given the
+same evaluation back right so I take a tissue
+
+00:05:32.160 --> 00:05:38.639
+sample added up to it right so i might not
+succeed every time right so sometimes I will
+
+00:05:38.639 --> 00:05:42.520
+succeed sometimes I might not succeed so that
+is some kind of a stochastic nature to the
+
+00:05:42.520 --> 00:05:45.960
+outcome right.
+
+00:05:45.960 --> 00:05:52.500
+So as a consequence of the stochastic nature
+what did you have to do I have to repeat things
+
+00:05:52.500 --> 00:05:56.970
+multiple times right so this is these are
+things which you have to keep in mind when
+
+00:05:56.970 --> 00:06:00.030
+we are talking about this kind of immediate
+reinforcement learning problems that we are
+
+00:06:00.030 --> 00:06:06.940
+going to have a stick outcomes and then we
+have to think about repeating choices multiple
+
+00:06:06.940 --> 00:06:14.340
+times before we can be sure of the outcome
+right is there anything else that was that
+
+00:06:14.340 --> 00:06:20.250
+could have been critical to the successful
+outcome of this let us say that I tried drug
+
+00:06:20.250 --> 00:06:21.780
+one okay.
+
+00:06:21.780 --> 00:06:28.180
+And the organism survived okay, so then I
+just can I keep using drug one for all the
+
+00:06:28.180 --> 00:06:32.841
+other organisms as well let us say let us
+keep the problem simplified I just will say
+
+00:06:32.841 --> 00:06:38.000
+heavily to drugs drug or drug too okay I take
+the first organism give it drug one its advice
+
+00:06:38.000 --> 00:06:44.630
+I take the second organism give it to does
+not survive okay, now can I conclude that
+
+00:06:44.630 --> 00:06:48.530
+which one is more effective during go in order
+to win do not know me assuming is oneself
+
+00:06:48.530 --> 00:06:53.350
+the survival what we are looking for not survey
+well what we are looking for not survival
+
+00:06:53.350 --> 00:06:56.820
+talking about microorganisms he is right I
+actually flipped it around I do not know but
+
+00:06:56.820 --> 00:06:58.100
+nobody actually noticed it.
+
+00:06:58.100 --> 00:07:03.430
+So yeah so I am looking for non survival of
+a microorganism right so in this case drug
+
+00:07:03.430 --> 00:07:07.430
+to appear to be more effective than drug one
+right so that does not mean I can keep giving
+
+00:07:07.430 --> 00:07:13.340
+drug to all the other samples and I need to
+actually go back and try drag one a few times
+
+00:07:13.340 --> 00:07:20.120
+right so this is the exploration and I was
+telling you about exploration in the previous
+
+00:07:20.120 --> 00:07:26.090
+class size this is the exploration here that
+I have to do exploration so the critical thing
+
+00:07:26.090 --> 00:07:38.520
+here that even the simple case of this immediate
+reinforcement learning introduces to is the
+
+00:07:38.520 --> 00:07:46.370
+need for exploration right but can I just
+keep exploring can I just keep giving random
+
+00:07:46.370 --> 00:07:50.360
+drugs to each of the samples and at some point
+I have to stop right.
+
+00:07:50.360 --> 00:07:54.270
+I am interested actually in killing this microorganism
+today at some point I have to stop and I said
+
+00:07:54.270 --> 00:07:57.690
+okay here this is the actual drug that is
+going to kill the microorganisms and I have
+
+00:07:57.690 --> 00:08:03.100
+to start giving that drug right this did not
+be an explicit point where I stopped we will
+
+00:08:03.100 --> 00:08:09.841
+see as we go along but I am interested in
+eventually exploiting the knowledge that I
+
+00:08:09.841 --> 00:08:26.520
+am acquiring about this the whole system right,
+so either I explore or I have to at some point
+
+00:08:26.520 --> 00:08:32.330
+I have to stop and start exploiting so there
+is his inherent tension between exploration
+
+00:08:32.330 --> 00:08:33.390
+and exploitation okay.
+
+00:08:33.390 --> 00:08:39.779
+They are in some sense at loggerheads with
+each other right if I stop at some point and
+
+00:08:39.779 --> 00:08:44.399
+say okay I have know enough about the system
+and then I start exploiting then I necessarily
+
+00:08:44.399 --> 00:08:49.660
+have to stop my exploration right but then
+if I do not explore enough I will be exploiting
+
+00:08:49.660 --> 00:08:55.490
+a poor solution right so this exploration
+exploitation so sometimes people call it a
+
+00:08:55.490 --> 00:09:00.209
+conflict sometimes it is called the called
+the Explorer exploit dilemma right so too
+
+00:09:00.209 --> 00:09:04.750
+should I explore Philly explain so that is
+essentially what this immediate reinforce
+
+00:09:04.750 --> 00:09:10.480
+will any problems captures for okay.
+
+00:09:10.480 --> 00:09:19.300
+Since this is a very crucial question in reinforcement
+learning so we will look at this immediate
+
+00:09:19.300 --> 00:09:24.610
+reinforcement learning problems in a little
+bit of detail so that it will motivate some
+
+00:09:24.610 --> 00:09:29.350
+of the other things that we will do later
+when we move to the full RL problem right
+
+00:09:29.350 --> 00:09:36.410
+and so what I will do which is slightly different
+from what is there in the textbook, so how
+
+00:09:36.410 --> 00:09:44.410
+many of you have actually looked at the textbook
+good see I did not ask how many of you have
+
+00:09:44.410 --> 00:09:45.410
+read the book right.
+
+00:09:45.410 --> 00:09:50.379
+So what I will do the slightly different from
+the book and I am still not decided whether
+
+00:09:50.379 --> 00:09:57.570
+it will be for both versions of the course
+let us talk a little bit more about some of
+
+00:09:57.570 --> 00:10:01.910
+the critical questions that people are interested
+in addressing in the immediate RL setting
+
+00:10:01.910 --> 00:10:02.910
+right.
+
+00:10:02.910 --> 00:10:09.220
+It is a book just gives you a very algorithmic
+very prescriptive viewpoint of this right
+
+00:10:09.220 --> 00:10:13.810
+this is or here is how you solve the immediate
+reinforcement learning problem right it does
+
+00:10:13.810 --> 00:10:20.560
+not go beyond that it does not give you anything
+about right so why do people solve it the
+
+00:10:20.560 --> 00:10:23.959
+way they do it I will go a little bit beyond
+that and try to give you some way intuition
+
+00:10:23.959 --> 00:10:31.560
+in that mainly because that seems to be a
+very active area of research nowadays in reinforcements
+
+00:10:31.560 --> 00:10:36.649
+and many of the ideas that people are using
+there are also being transferred to see the
+
+00:10:36.649 --> 00:10:38.019
+full reinforcement learning setting.
+
+00:10:38.019 --> 00:10:42.379
+The one with all the delayed rewards the states
+and things like that right so lot of ideas
+
+00:10:42.379 --> 00:10:48.149
+from the research in this immediate RL setting
+is also being used to the full URL setting
+
+00:10:48.149 --> 00:10:57.120
+so I want to introduce you to those topics
+right, yeah so despite the makeup of the class
+
+00:10:57.120 --> 00:11:03.190
+right just predominantly undergrad this is
+a graduate level course rate so I want you
+
+00:11:03.190 --> 00:11:07.379
+to want to introduce people to research questions
+and other things Sarah mean demands for I
+
+00:11:07.379 --> 00:11:10.930
+to actually teach an advanced trouble codes
+at some point I know at least one person who'll
+
+00:11:10.930 --> 00:11:13.949
+take it I am going to try this.
+
+00:11:13.949 --> 00:11:17.699
+Now every class I am going to make people
+turn and look at you at least once I manage
+
+00:11:17.699 --> 00:11:29.709
+to do that last class anyway so go back so
+we will look at a little bit of formalism
+
+00:11:29.709 --> 00:11:40.350
+on this right so what I am going to assume
+is that I have a set of actions A which will
+
+00:11:40.350 --> 00:11:45.579
+index by 1to n so action one could be anything
+right and this is just giving the arbitrary
+
+00:11:45.579 --> 00:11:51.009
+numbers 1 to n it could be drug one drug to
+drug three it or it could be add one add two
+
+00:11:51.009 --> 00:11:55.079
+add three whatever it is just one point is
+what we will denote it as right.
+
+00:11:55.079 --> 00:12:03.720
+And each action when I pick that action it
+gets a payoff it is an evaluation so I am
+
+00:12:03.720 --> 00:12:13.791
+going to be using these terms interchangeably
+right reward payoff evaluation cost so all
+
+00:12:13.791 --> 00:12:20.149
+of this denote the same thing that dotted
+line that came in my box diagram right so
+
+00:12:20.149 --> 00:12:27.329
+depending on what literature you come from
+you use different by different names for it
+
+00:12:27.329 --> 00:12:38.829
+right so the reward typically comes from guess
+psychology it cost comes from control theory
+
+00:12:38.829 --> 00:12:50.320
+optimization yeah payoff comes from econ economics
+and what is the last thing I say evaluation
+
+00:12:50.320 --> 00:13:00.100
+comes from optimization okay fine.
+
+00:13:00.100 --> 00:13:04.089
+So depending on which, which background you
+come from you give it different names right
+
+00:13:04.089 --> 00:13:08.900
+and so I will use them interchangeably for
+example for most of this literature I will
+
+00:13:08.900 --> 00:13:18.079
+be using payoffs because a lot of the work
+has been done in the in the o, r and economics
+
+00:13:18.079 --> 00:13:23.589
+community in when they are trying to analyze
+these kinds of problems right so when you
+
+00:13:23.589 --> 00:13:30.360
+pull each when I actually select an arm I
+select an action right what's going to happen
+
+00:13:30.360 --> 00:13:36.720
+is that I will get a reward or a payoff sample
+from some unknown distribution so what do
+
+00:13:36.720 --> 00:13:42.579
+I mean by that stochastic but what do I mean
+more I mean it can right this is something
+
+00:13:42.579 --> 00:13:47.110
+which I found people have difficulty so some
+people at least have difficulty when I say
+
+00:13:47.110 --> 00:13:52.339
+it is sample from a distribution so what I
+mean by mean is the following.
+
+00:13:52.339 --> 00:14:00.230
+Let us keep it simple so that people can conceptualize
+it so associated with each action let us say
+
+00:14:00.230 --> 00:14:07.189
+that I have a coil associated with each action
+there is a coin okay that has some probability
+
+00:14:07.189 --> 00:14:12.899
+of coming up heads and some probability of
+coming up tails so let us some probability
+
+00:14:12.899 --> 00:14:19.559
+P of coming up as they say pick action one
+then there is a probability P one of coming
+
+00:14:19.559 --> 00:14:25.959
+up heads when it toss the coin right and I
+will say that if the coin comes up heads ok
+
+00:14:25.959 --> 00:14:30.960
+I will give you a payoff of one if the coin
+comes up tails I will give you a payoff of
+
+00:14:30.960 --> 00:14:33.010
+0 right.
+
+00:14:33.010 --> 00:14:37.120
+So every time I select an action I am going
+to toss this coin so depending on whether
+
+00:14:37.120 --> 00:14:44.089
+it comes up heads or tails I will give you
+either a one or a zero right so the payoff
+
+00:14:44.089 --> 00:14:51.709
+that I will get every time I select that action
+is not the same right but what is same the
+
+00:14:51.709 --> 00:14:57.119
+coin right if I select actual action one I
+will always toss coin one if is elect action
+
+00:14:57.119 --> 00:15:05.670
+5 and always toss coin five right I am not
+changing these coins okay, is it clear does
+
+00:15:05.670 --> 00:15:11.579
+it make sense to people and I will not change
+the coins but the coins will be the same right.
+
+00:15:11.579 --> 00:15:17.009
+But every time I pick action I will toss that
+coin and I will give you the payoff or reward
+
+00:15:17.009 --> 00:15:25.439
+corresponding to the outcome of the coin toss
+so if I say that the probability of reward
+
+00:15:25.439 --> 00:15:31.119
+for picking action 1 is 0.8 what does it mean
+a probability of heads of the associated coin
+
+00:15:31.119 --> 00:15:37.220
+is point eight right in this case I can go
+further I can also say something else I can
+
+00:15:37.220 --> 00:15:45.240
+say that the expected payoff of picking action
+one is point eight as well right because the
+
+00:15:45.240 --> 00:15:49.300
+probability pointed will get a reward of 1
+with the probability point2 will get a reward
+
+00:15:49.300 --> 00:15:54.110
+of 0 so if I take the expectation of this
+it will get will be point eight right.
+
+00:15:54.110 --> 00:16:01.360
+We will understand this now so when they say
+select an arm select an action I will tell
+
+00:16:01.360 --> 00:16:05.870
+you why I keep calling it off in a second
+and then I will keep calling it up so when
+
+00:16:05.870 --> 00:16:10.912
+I select an action right then I am going to
+toss a coil right depending on the outcome
+
+00:16:10.912 --> 00:16:14.730
+of the coin I am going to give you one this
+is something which you should remember when
+
+00:16:14.730 --> 00:16:20.740
+you are actually going and implementing these
+things right so I had people do all kinds
+
+00:16:20.740 --> 00:16:28.569
+of weird things right and make sure that you
+remember what I mean when I say you sample
+
+00:16:28.569 --> 00:16:34.019
+from a distribution okay great.
+
+00:16:34.019 --> 00:16:38.779
+So now I gave you the simple example of tossing
+a coin I could actually have any complex distribution
+
+00:16:38.779 --> 00:16:43.889
+right so if a toss a coin what is the distribution
+I am sampling from enrolling right I could
+
+00:16:43.889 --> 00:16:48.860
+have other kinds of distributions I could
+have a Gaussian distribution let us say so
+
+00:16:48.860 --> 00:16:53.519
+now what does it mean for every action I choose
+okay.
+
+00:16:53.519 --> 00:17:01.699
+So for action when that is going to be a like
+some kind of a Gaussian distribution right
+
+00:17:01.699 --> 00:17:12.780
+and so what is the axis here x axis here the
+payoff the payoff for the reward x axis the
+
+00:17:12.780 --> 00:17:17.240
+payoff for the river and the y axis is the
+probability that you will see such a payoff
+
+00:17:17.240 --> 00:17:27.250
+right so that is the most probable pay off
+as it also happens to be the forgotten this
+
+00:17:27.250 --> 00:17:34.800
+also happens to be the expected payoff right
+so how will I sample from a Gaussian they
+
+00:17:34.800 --> 00:17:43.870
+can add a number and 0 and anyone else have
+a sample from a Gaussian okay.
+
+00:17:43.870 --> 00:17:54.370
+How do you do that people who are in my minor
+I told you how to do this in the class okay
+
+00:17:54.370 --> 00:18:02.430
+little bit more efficient we have to get yeah
+and then what you do?
+
+00:18:02.430 --> 00:18:11.470
+Do not tell me you smite lab no man it is
+your role you know too many terminology just
+
+00:18:11.470 --> 00:18:20.720
+keep throwing them around go to CMC stand
+for in then there are two emcees then you
+
+00:18:20.720 --> 00:18:23.870
+just told me a Monte Carlo I said give me
+something more efficient and then he keeps
+
+00:18:23.870 --> 00:18:34.990
+saying another Monte Carlo method what is
+it no one oh come on, fine okay Paulo you
+
+00:18:34.990 --> 00:18:42.540
+tell me, so the guys who were in the guys
+were there in my minor rights I actually told
+
+00:18:42.540 --> 00:18:47.530
+you how to sample me remember I said so I
+did this with a discrete distribution and
+
+00:18:47.530 --> 00:18:53.340
+then I told you how to do this with continuous
+distributions as well can you give the me
+
+00:18:53.340 --> 00:18:55.050
+write-up on model okay.
+
+00:18:55.050 --> 00:19:01.660
+So basically the idea is you generate a random
+number right between 0 and 1 generate a uniform
+
+00:19:01.660 --> 00:19:06.460
+random number between 0 and 1 right and then
+keep integrating the area under the curve
+
+00:19:06.460 --> 00:19:13.060
+what is it called the CDF right and then when
+the CDF reaches that random number you generate
+
+00:19:13.060 --> 00:19:20.941
+so that is the number you sample does it make
+sense, so this is a complete aside.
+
+00:19:20.941 --> 00:19:25.250
+.
+Let us say that I have four possible outcomes
+
+00:19:25.250 --> 00:19:31.090
+right I want to generate one of those four
+outcomes at random right so the probabilities
+
+00:19:31.090 --> 00:19:45.490
+are p1 p2 p3 p4 how will I do that I generate
+a uniform random number between 0 to 1 right,
+
+00:19:45.490 --> 00:19:51.110
+no so I will see if the number is less than
+P1 if the number is less than P1 I will generate
+
+00:19:51.110 --> 00:19:56.690
+outcome 1 if the number is between p1 and
+p2 and generate the outcome of two this number
+
+00:19:56.690 --> 00:20:03.790
+is between p2 and p3 l generate the outcome
+of three generate number is between p3 and
+
+00:20:03.790 --> 00:20:16.690
+p4 is it correct or not, it should be between
+p1 and p1 + p2 okay it should be between p1
+
+00:20:16.690 --> 00:20:24.200
+plus p2and p1 plus p2 plus p3 so it should
+be the cumulative sum right it should be the
+
+00:20:24.200 --> 00:20:27.540
+cumulative some previous cumulative sum and
+the next cumulative sum.
+
+00:20:27.540 --> 00:20:31.860
+So if it lies between that then that is the
+outcome I will tend right so is less than
+
+00:20:31.860 --> 00:20:38.080
+P1 I will generate one if it is between p1
+and p1 plus p2 I will generate two if it is
+
+00:20:38.080 --> 00:20:47.680
+between p1 plus p2and p1 + p2 plus p3 I will
+generate three if it is between p1 + p2 +
+
+00:20:47.680 --> 00:21:07.270
+p3 and one I will generate four right do not
+tell me if p1 + p2 +p 3 + p4, so you can simulate
+
+00:21:07.270 --> 00:21:12.240
+the CDF for the question right yeah so there
+are ways of doing it right so there we have
+
+00:21:12.240 --> 00:21:17.360
+doing this so you can do this for any probability
+distribution for which you can define the
+
+00:21:17.360 --> 00:21:19.840
+CDF.
+
+00:21:19.840 --> 00:21:23.360
+Not just Gaussian it's not just discreet so
+the discrete case it is very clear right so
+
+00:21:23.360 --> 00:21:27.120
+what you are doing is essentially cumulate
+adding up the probability so whenever you
+
+00:21:27.120 --> 00:21:32.980
+hit that number you say that is the Nazi sample
+that you have drawn right in this case you
+
+00:21:32.980 --> 00:21:37.860
+just do this oh my gosh she is okay so this
+is what I mean when I say sample from a probability
+
+00:21:37.860 --> 00:21:43.180
+distribution again it is not the most probable
+outcome like a nice a sample from this Gaussian
+
+00:21:43.180 --> 00:21:47.700
+I have actually seen people implement okay
+the reason I keep reiterating this people
+
+00:21:47.700 --> 00:21:52.290
+actually form the Gaussian and then keep returning
+the value that has the highest probability
+
+00:21:52.290 --> 00:21:54.930
+right.
+
+00:21:54.930 --> 00:21:58.900
+So please do not do that of course if you
+are using MATLAB or something like that you
+
+00:21:58.900 --> 00:22:03.360
+don't even have to think about it we can just
+say Rand N and then it will give you a sample
+
+00:22:03.360 --> 00:22:08.820
+from a normal distribution which is what she
+was going to tell you what is the way to sample
+
+00:22:08.820 --> 00:22:14.920
+from a Gaussian but this is what it does internally
+wait and to give you the sample having said
+
+00:22:14.920 --> 00:22:22.440
+this now you can go back to using random yeah
+we had a question okay fine so going back
+
+00:22:22.440 --> 00:22:27.520
+associated with each of these actions right
+I am going to have some distribution from
+
+00:22:27.520 --> 00:22:32.790
+which the payoff Is being sampled okay is
+it clear.
+
+00:22:32.790 --> 00:22:39.020
+And these distributions I am going to assume
+at least initially will be fixed for the duration
+
+00:22:39.020 --> 00:22:44.540
+of the experiment for duration of the learning
+this distributions will be fixed like I said
+
+00:22:44.540 --> 00:22:50.910
+you do not change the coin you don't change
+the Gaussian also okay now if I knew the Gaussian
+
+00:22:50.910 --> 00:22:59.100
+then or if I knew the coin send you the probability
+with which the coin will turn up tails heads
+
+00:22:59.100 --> 00:23:11.310
+right so how will I solve the problem there
+is no problem right I just picked the action
+
+00:23:11.310 --> 00:23:16.510
+that has the highest mean right highest mean
+and for the Gaussian or the highest p 1 for
+
+00:23:16.510 --> 00:23:22.830
+the coins right whatever it is the highest
+expected payoff I just picked a topic that
+
+00:23:22.830 --> 00:23:26.720
+action right.
+
+00:23:26.720 --> 00:23:35.090
+So the challenge comes when I do not know
+the distributions all I know is that is some
+
+00:23:35.090 --> 00:23:40.750
+distribution which I am assuming is fixed
+according to misty payoffs are generated I
+
+00:23:40.750 --> 00:23:47.120
+do not know the distribution so I basically
+have to figure out the distribution and then
+
+00:23:47.120 --> 00:23:58.470
+pick the pick the action I picked action corresponding
+to that right so is it clear so for each of
+
+00:23:58.470 --> 00:24:08.940
+these actions right for each of these actions
+I am going to assume that that is a true expected
+
+00:24:08.940 --> 00:24:17.150
+payoff which will denoted by Q* of A.
+Let us say it's action so Q* is a function
+
+00:24:17.150 --> 00:24:26.490
+that will give me the true expected payoff
+of action a right so in the case of the coins
+
+00:24:26.490 --> 00:24:32.250
+Q star of one will give me p 1 this is a probability
+of heads that Q star of 2 will give me p2and
+
+00:24:32.250 --> 00:24:38.110
+so on so forth in the case of Gaussians Q*
+of one will give me µ1 let you star of 2
+
+00:24:38.110 --> 00:24:42.790
+will give me Bo 2and so on so forth and see
+what the Q* function is this is again unknown
+
+00:24:42.790 --> 00:24:47.310
+to me and if I know Q*I am done right I am
+a problem is solved right but this the assumption
+
+00:24:47.310 --> 00:24:52.710
+we are going to make so we have a set of actions
+A and we have a set when corresponding Q*
+
+00:24:52.710 --> 00:24:53.790
+that we do not know about right.
+

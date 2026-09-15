@@ -1,0 +1,1124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.830 --> 00:00:34.400
+So the first thing I want to talk about this
+or a very simple, what the textbook calls
+
+00:00:34.400 --> 00:00:43.300
+value function based methods right, what the
+textbook calls value function based methods
+
+00:00:43.300 --> 00:00:52.080
+these are approaches where I do not know the
+Q* right what I am going to try and form a
+
+00:00:52.080 --> 00:01:01.119
+estimate of the Q*. So how can I do that so
+what is Q* the expected payoff right.
+
+00:01:01.119 --> 00:01:06.860
+So I play each action, I choose each action
+say 10 times I can take the average of that
+
+00:01:06.860 --> 00:01:18.750
+gives me an estimate for Q* right. So we will
+denote the estimates by QT. So whenever we
+
+00:01:18.750 --> 00:01:24.490
+attach a estimate to an action we will be
+using the notation Q take this list, so that
+
+00:01:24.490 --> 00:01:31.230
+you know so we use Q here, and whenever we
+esteem we will attach a estimate of the payoffs
+
+00:01:31.230 --> 00:01:41.570
+to a state we will denote it by V, V stands
+for value function okay that is easy to remember
+
+00:01:41.570 --> 00:01:51.210
+do not ask me what Q stands for.
+So one of the problems with the RL is that
+
+00:01:51.210 --> 00:01:56.420
+because there are so many different influences
+that came in right. So you have at least three
+
+00:01:56.420 --> 00:02:03.670
+different sets of notations that people use
+in the literature okay. So you have to swap
+
+00:02:03.670 --> 00:02:07.260
+back and forth if you are reading papers in
+reinforcement learning right, so somebody
+
+00:02:07.260 --> 00:02:15.190
+will say that the value function is denoted
+by J right and Q denotes the cost function
+
+00:02:15.190 --> 00:02:19.590
+right.
+So if they use disjoint set of symbols at
+
+00:02:19.590 --> 00:02:24.290
+least is easy for us right, but they will
+use the same symbol that one body of literature
+
+00:02:24.290 --> 00:02:29.160
+will call the value function another body
+will call that payoff function right which
+
+00:02:29.160 --> 00:02:36.120
+is essentially corresponds to the reward that
+you are getting at every time right. So that
+
+00:02:36.120 --> 00:02:43.720
+will be denoted by Q, so the all kinds of
+confusions are there. So this is one set of
+
+00:02:43.720 --> 00:02:49.410
+permutations that I am choosing essentially
+because it is the one that is adopted in the
+
+00:02:49.410 --> 00:02:52.940
+Satan Berger book.
+In fact people who are reading edition one
+
+00:02:52.940 --> 00:03:03.040
+right there has been a overall of notation
+in addition to right. So to the extent possible
+
+00:03:03.040 --> 00:03:08.450
+I will try to follow the addition to notation,
+but addition one is ingrained in me right,
+
+00:03:08.450 --> 00:03:16.700
+so I mean, I have been using addition one
+notation for god knows, 15 years or something
+
+00:03:16.700 --> 00:03:20.240
+right.
+So suddenly they decided to change the notation
+
+00:03:20.240 --> 00:03:25.560
+in addition to, so by force of habit I will
+slip into addition one notation occasionally
+
+00:03:25.560 --> 00:03:31.820
+so it is in your well-being to read ahead
+so that you can correct me whenever I do that
+
+00:03:31.820 --> 00:03:37.010
+right. So do not wait for me to teach and
+then go and are well do not wait for the quizzes
+
+00:03:37.010 --> 00:03:42.400
+and then read the book right.
+But read ahead and come to class okay. This
+
+00:03:42.400 --> 00:03:48.300
+will certainly help you significantly in following
+the material better right. So I am deliberately
+
+00:03:48.300 --> 00:03:56.849
+going slow today warming you up okay. But
+then there is lot lot of material that we
+
+00:03:56.849 --> 00:04:02.989
+cover in fact usually I cover the material
+in the book in about one and a half months
+
+00:04:02.989 --> 00:04:11.650
+right in the rest of the time I will be doing
+material outside the book that one and a half
+
+00:04:11.650 --> 00:04:19.549
+months, two months okay.
+So the book is big it is at some point I will
+
+00:04:19.549 --> 00:04:27.340
+switch modes and start going fast. So reading
+ahead helps okay, so we are going to have
+
+00:04:27.340 --> 00:04:38.389
+QT so essentially what you can do is you can
+just take whenever I 
+
+00:04:38.389 --> 00:04:45.820
+took action A right the reward I got at that
+time and I can just keep adding those up and
+
+00:04:45.820 --> 00:04:55.610
+divide by the number of times I took action
+A that will give me my QT right.
+
+00:04:55.610 --> 00:05:05.610
+So how will we write this, let us look at
+interview some notation so that is a notation
+
+00:05:05.610 --> 00:05:10.599
+that I will use whenever I want an indicator
+function right. So normally what is the notation
+
+00:05:10.599 --> 00:05:22.770
+that people use for indicator functions I
+or ? right, so people typically used ? or
+
+00:05:22.770 --> 00:05:30.539
+I so I will use one because we use I and ? for
+other things later on okay.
+
+00:05:30.539 --> 00:05:47.689
+So this essentially means that it is one whenever
+it is A or it is 0 right, so should I divide
+
+00:05:47.689 --> 00:06:04.690
+this way okay. So this gives me the average
+right great. So once I have this now I have
+
+00:06:04.690 --> 00:06:20.139
+made an estimate for my Q starts right. Once
+I have an estimate for my Q* so how will I
+
+00:06:20.139 --> 00:06:33.219
+select an action apologies okay. So I use
+t on the left hand side so I cannot use T
+
+00:06:33.219 --> 00:06:43.800
+as the running variable as well okay. So now
+I have come to time T, I have this estimates
+
+00:06:43.800 --> 00:06:49.439
+for my Q*.
+So how can I use that for selecting actions
+
+00:06:49.439 --> 00:07:01.240
+select the maximum right. So I could be what
+we call greedy right, so greedy would be I
+
+00:07:01.240 --> 00:07:24.860
+am going to select right. So I will take that
+action that gives me the max it is R max is
+
+00:07:24.860 --> 00:07:28.529
+the action that gives me the max right, so
+I will take that action that gives me the
+
+00:07:28.529 --> 00:07:32.139
+max and use that as the action to perform
+at that time right.
+
+00:07:32.139 --> 00:07:40.050
+Is there a good choice or alternatively what
+does this choice correspond to exploitation
+
+00:07:40.050 --> 00:07:45.529
+this choice corresponds to exploitation, but
+I cannot just exploit right I have to explore
+
+00:07:45.529 --> 00:07:51.020
+as well, if I cannot come up with an algorithm
+that only exploits right. So what do you think
+
+00:07:51.020 --> 00:07:57.179
+will happen let us say that I pulled an arm
+right the first time well I select and actually
+
+00:07:57.179 --> 00:08:00.240
+and then you get a reward of 1 let us say
+right.
+
+00:08:00.240 --> 00:08:06.909
+So what will happen to my Q it will be one,
+what about other Qs well depends on what you
+
+00:08:06.909 --> 00:08:11.370
+initialize them with the finish line with
+0 they will state zero, but I could have initialized
+
+00:08:11.370 --> 00:08:18.639
+them with the 100 right I could have initialize
+them with -100 I do not know whatever it is
+
+00:08:18.639 --> 00:08:22.759
+initialization with then stay there, but this
+one will become one right.
+
+00:08:22.759 --> 00:08:28.969
+Now if I am doing greedy what will happen
+I will do this again let us assume that I
+
+00:08:28.969 --> 00:08:35.690
+get a 1 again right, and they keep getting
+one every time I pull this. So what will happen
+
+00:08:35.690 --> 00:08:42.360
+is I will never ever sample any of the other
+arms right. It could very well be that arm
+
+00:08:42.360 --> 00:08:50.180
+3 has a reward of 50 right, just because I
+happen to pull arm one the first time right,
+
+00:08:50.180 --> 00:09:00.200
+I will never ever go and pull log 3 even though
+it has a much, much higher reward right.
+
+00:09:00.200 --> 00:09:05.320
+So we do not want to be exploitative completely
+so we need to have some kind of a exploration
+
+00:09:05.320 --> 00:09:21.750
+policy okay. So the simple exploration policy
+okay, so I am going to confuse you a little
+
+00:09:21.750 --> 00:09:34.060
+bit is called ? 
+greedy nothing to do with this ? okay. So
+
+00:09:34.060 --> 00:09:39.900
+this ? is completely different okay, it talks
+about a solution concept and just because
+
+00:09:39.900 --> 00:09:44.460
+I have something ? greedy does not mean I
+am going to give you some ? pack guarantee
+
+00:09:44.460 --> 00:09:47.840
+okay. ?
+This is a completely different ? in fact it
+
+00:09:47.840 --> 00:09:52.710
+was named ? greedy before people even started
+thinking about bringing all this pack optimality
+
+00:09:52.710 --> 00:10:06.600
+equations into RL okay. So what is ? greedy
+means any guesses sorry, within ? of the function
+
+00:10:06.600 --> 00:10:13.640
+okay good choice. But I said this has nothing
+to do with this ? it is got nothing to this
+
+00:10:13.640 --> 00:10:21.550
+?, what I do is with probability 1 minus ? I
+will be greedy okay, with probability ? I
+
+00:10:21.550 --> 00:10:33.261
+will just explore okay.
+So ? greedy means with 1 minus ? I will choose
+
+00:10:33.261 --> 00:10:58.210
+probability 1 minus ? probability ? I will
+choose which is uniformly from the set of
+
+00:10:58.210 --> 00:11:04.900
+actions A okay. Si it is one thing which you
+should note here is that if I choose uniformly
+
+00:11:04.900 --> 00:11:15.150
+from a I still have a probability of hitting
+that R max A right. So in fact the probability
+
+00:11:15.150 --> 00:11:26.389
+of me taking this action is 1 minus ? plus
+? by n right.
+
+00:11:26.389 --> 00:11:34.630
+The probability of me exploring is actually
+n minus 1 ? by n okay, so this is something
+
+00:11:34.630 --> 00:11:40.630
+which is just a small thing net picking thing
+but just remember that. So the probability
+
+00:11:40.630 --> 00:11:50.190
+of exploration is not ? because I am picking
+uniformly random you could choose to say that
+
+00:11:50.190 --> 00:11:56.700
+I pick uniformly from a minus this R max action
+right does not make a difference, but I am
+
+00:11:56.700 --> 00:12:00.730
+just pointing out that there is a small difference
+just remember that okay.
+
+00:12:00.730 --> 00:12:07.590
+So ? greedy by far is one of the most popular
+exploration is by far the most popular exploration
+
+00:12:07.590 --> 00:12:15.580
+strategy that people adopt okay, by far the
+most popular explorations. There is another
+
+00:12:15.580 --> 00:12:22.580
+one which ironically I could not find in addition
+two of the book which is also rather popular
+
+00:12:22.580 --> 00:12:33.110
+is called soft max or maybe I flip through
+addition to too quickly to notice it, but
+
+00:12:33.110 --> 00:12:40.060
+so the soft max exploration policy there is
+something slightly cleverer okay.
+
+00:12:40.060 --> 00:12:47.830
+So if you think about the ? greedy what is
+it that you would notice is that I have the
+
+00:12:47.830 --> 00:12:51.770
+best action the best according to my current
+estimates right. So when I say, whenever I
+
+00:12:51.770 --> 00:12:57.510
+say greedy or best it is according to my current
+estimate it is not Q* okay, it is according
+
+00:12:57.510 --> 00:13:01.880
+to capital Q whenever I say greedy is according
+to capital Q okay.
+
+00:13:01.880 --> 00:13:09.090
+So the greedy action gets the bulk of the
+probability right, and every other action
+
+00:13:09.090 --> 00:13:16.510
+as a equal probability of being picked in
+exploration correct. Suppose if some actions
+
+00:13:16.510 --> 00:13:22.570
+are clearly bad right if I figure out some
+actions are clearly bad, so I do not want
+
+00:13:22.570 --> 00:13:29.010
+to be picking them in during exploration,
+because I know that they are bad I really
+
+00:13:29.010 --> 00:13:32.770
+do not want to be picking them during exploration
+or at least I want to reduce the probability
+
+00:13:32.770 --> 00:13:39.620
+of picking them during exploration right.
+And if two actions look equally likely to
+
+00:13:39.620 --> 00:13:47.690
+be good right maybe 0.0001 difference right
+some small ? difference between the two actions
+
+00:13:47.690 --> 00:13:53.490
+in ? greedy what will happen the one that
+is that 0.0001 higher will get the highest
+
+00:13:53.490 --> 00:13:58.880
+probability okay the other one will have the
+same probability as the all the other arms
+
+00:13:58.880 --> 00:14:04.050
+of being picked right.
+But then in reality I just want to be able
+
+00:14:04.050 --> 00:14:09.760
+to compare these two things more closely and
+figure out which one is better right, because
+
+00:14:09.760 --> 00:14:13.500
+the difference is so small I really want to
+compare them and figure out which one is better
+
+00:14:13.500 --> 00:14:21.130
+right. So what people did was they came up
+with this soft max idea right where instead
+
+00:14:21.130 --> 00:14:27.970
+of giving all the probability two one action
+right I make the probability of picking the
+
+00:14:27.970 --> 00:14:33.370
+actions proportional to the estimate current
+estimate.
+
+00:14:33.370 --> 00:14:38.610
+So whatever is the current Q I will make the
+probability proportional to the queue right.
+
+00:14:38.610 --> 00:15:03.370
+So ideally it should be something like, so
+this should be the probability with which
+
+00:15:03.370 --> 00:15:08.770
+the TH step I will pick action A right that
+should be the probability right, what is the
+
+00:15:08.770 --> 00:15:23.050
+problem with 
+the different orders yeah, different signs
+
+00:15:23.050 --> 00:15:26.600
+right.
+So I mean the things could be also negative
+
+00:15:26.600 --> 00:15:32.910
+numbers inside you I could even end up with
+a negative probability right, if my QT(A)
+
+00:15:32.910 --> 00:15:38.200
+was -1 then I will end up with that minus
+something as the probability of picking the
+
+00:15:38.200 --> 00:16:03.270
+ration does not make sense right. So to encompass
+all kinds of options what do we do exponential
+
+00:16:03.270 --> 00:16:14.630
+right.
+So why is this called soft max because it
+
+00:16:14.630 --> 00:16:20.170
+is not greedy just not written to you the
+one that has the highest Q value all the time,
+
+00:16:20.170 --> 00:16:28.750
+but if there is a big difference it will return
+that value to you most often. I suppose there
+
+00:16:28.750 --> 00:16:37.420
+are four actions right and action 1 has a
+value of say 19, action 2 has a value of 1.2,
+
+00:16:37.420 --> 00:16:45.640
+action 3 has a value of 0.7, action 4 has
+a value of -0.3 right.
+
+00:16:45.640 --> 00:16:53.380
+So now this will return to you most often
+it will return action 1 to you right, so because
+
+00:16:53.380 --> 00:16:58.361
+that says a significantly higher value okay
+that is why it is called soft max right. Sometimes
+
+00:16:58.361 --> 00:17:09.339
+what people do is they throw in another parameter
+called the temperature parameter sometimes
+
+00:17:09.339 --> 00:17:16.039
+so ß right. So now think about if ß is very,
+very high.
+
+00:17:16.039 --> 00:17:24.899
+So what will happen to your soft max function
+everything will get squished down right, so
+
+00:17:24.899 --> 00:17:32.029
+ß is very, very high. So essentially you
+will be behaving at random, uniformly random
+
+00:17:32.029 --> 00:17:37.210
+right because all the regardless of what the
+Q values are right if the ß is very, very
+
+00:17:37.210 --> 00:17:41.679
+let us say ß is 1 million right and I say
+17 and 1.8 no, no it does not make any difference
+
+00:17:41.679 --> 00:17:48.840
+right, all of them will look close to 0 right.
+So essentially I will be picking all actions
+
+00:17:48.840 --> 00:17:53.749
+uniformly randomly right, this way it is called
+temperature. So if you are very, very hot
+
+00:17:53.749 --> 00:17:59.769
+right so things will move around at random
+right and then people typically cool it down
+
+00:17:59.769 --> 00:18:04.230
+say they make ß smaller and smaller and smaller
+so that from a very high temperature where
+
+00:18:04.230 --> 00:18:08.360
+you are essentially behaving at random regardless
+of what the Q values are as you keep cooling
+
+00:18:08.360 --> 00:18:14.610
+it down it becomes more and more ß.
+So if beta becomes closer and closer to 0
+
+00:18:14.610 --> 00:18:26.710
+what happens it becomes max right as ß goes
+to zero this function goes to max is it become
+
+00:18:26.710 --> 00:18:31.659
+clean. So it gives an additional parameter
+for tuning right if you do not trust me you
+
+00:18:31.659 --> 00:18:35.669
+can note it out right way it is smart enough
+to work it out. So this gives you an additional
+
+00:18:35.669 --> 00:18:41.620
+parameter for tuning how sharp your probability
+needs to fall right.
+
+00:18:41.620 --> 00:18:51.809
+So this is called soft max and so if we think
+about ? greedy then writing it in this notation.
+
+00:18:51.809 --> 00:19:31.240
+So this will be right, so probability AT=
+A* will be 1 minus ? plus ? by n where A*
+
+00:19:31.240 --> 00:19:36.799
+is the greedy action according to the current
+estimate right. The probability AT is not
+
+00:19:36.799 --> 00:19:47.090
+equal to A* or probability AD = A which is
+not equal to A* will be ? by n okay, and likewise
+
+00:19:47.090 --> 00:19:51.450
+here you have this probabilities here okay.
+So these are the two rather popular ways of
+
+00:19:51.450 --> 00:19:58.100
+selecting actions in fact ? greedy and soft
+max are also used in the full reinforcement
+
+00:19:58.100 --> 00:20:05.950
+learning problem right, they are also used
+in the full reinforcement learning problem
+
+00:20:05.950 --> 00:20:12.830
+for selecting or for implementing the exploration
+policy right. Now you can convince yourself
+
+00:20:12.830 --> 00:20:19.571
+that ? will be very simply you can convince
+yourselves at ? greedy right. We will give
+
+00:20:19.571 --> 00:20:27.440
+you asymptotic correctness provided something
+but can you convince yourself that it will
+
+00:20:27.440 --> 00:20:37.249
+give you asymptotic correctness right.
+You are always going to be taking all the
+
+00:20:37.249 --> 00:20:44.980
+actions right so eventually you will converge
+to the true to expectations right you will
+
+00:20:44.980 --> 00:20:49.440
+eventually converge to Q* because you are
+taking all the actions all the time right.
+
+00:20:49.440 --> 00:20:55.529
+So but what is a problem if I keep my ? fixed
+at some value let us say I keep ? fixed at
+
+00:20:55.529 --> 00:21:03.470
+0.1 at 90% of the times I am behaving optimally
+10% of the times I choose at random right.
+
+00:21:03.470 --> 00:21:08.450
+So what will happen I will know the right
+Q* after a long time, but I will still be
+
+00:21:08.450 --> 00:21:15.009
+behaving randomly 10% of the times right what
+asymptotic correctness says is eventually
+
+00:21:15.009 --> 00:21:19.330
+I should be only giving you the behaving according
+to the right arm right. So I should be only
+
+00:21:19.330 --> 00:21:25.859
+doing the right choice eventually to assume
+that what should you do, you have to cool
+
+00:21:25.859 --> 00:21:31.659
+? right, so ? has to keep decreasing.
+But then you should not decrease it too fast
+
+00:21:31.659 --> 00:21:36.419
+if you decrease it too fast then you do not
+have the guarantee that you will get the correct
+
+00:21:36.419 --> 00:21:46.880
+Q* right. So there are ways in which you can
+balance this right and so in fact people show
+
+00:21:46.880 --> 00:22:02.190
+that if ? falls as 1 by T right that is usually
+a sufficient rate, but unfortunately that
+
+00:22:02.190 --> 00:22:09.610
+will actually slow down your convergence tremendously
+because it becomes truly an asymptotic convergence
+
+00:22:09.610 --> 00:22:13.720
+I mean you have one little infinity for you
+to get convergence.
+
+00:22:13.720 --> 00:22:19.980
+So in practice what you can do is you can
+cool it in steps it set the high ? right,
+
+00:22:19.980 --> 00:22:25.489
+run it for a while okay, and then drop into
+a little bit, and then run it for a while,
+
+00:22:25.489 --> 00:22:30.019
+and then drop it a little bit, then run it
+for a while, and so on so forth right. So
+
+00:22:30.019 --> 00:22:35.080
+the figuring out how long the while should
+be is a tricky question depends on a variety
+
+00:22:35.080 --> 00:22:41.600
+of factors but you can do some kind of empirical
+estimates for the time being right.
+
+00:22:41.600 --> 00:22:53.330
+So do we move on from here, so before I go
+on to regret optimality one small thing which
+
+00:22:53.330 --> 00:23:03.139
+I want to talk about right. So here I gave
+you a way of estimating the QTs right. So
+
+00:23:03.139 --> 00:23:13.820
+what do you notice about that 
+I run an experiment still time T right, and
+
+00:23:13.820 --> 00:23:19.119
+then when I want to know what QT is I look
+back and see how many times I have taken action
+
+00:23:19.119 --> 00:23:24.080
+A and then I take the average right. So that
+essentially means that at time step T I need
+
+00:23:24.080 --> 00:23:28.690
+to know what are all the actions I picked
+earlier and what were all the rewards I got
+
+00:23:28.690 --> 00:23:33.780
+for those actions right.
+So I need to remember this whole history okay.
+
+00:23:33.780 --> 00:23:57.009
+So is there a more efficient way of doing
+it I am sorry, yeah so I can essentially do
+
+00:23:57.009 --> 00:24:05.960
+this in a kind of doing the run I can do this
+running some right. So how do I do that right,
+
+00:24:05.960 --> 00:24:28.590
+so I want QT(A) right, so it is some numbers
+right. So it is intensely QT-1(A) right. So
+
+00:24:28.590 --> 00:24:48.809
+let me introduce a little bit of a notation
+make my little easier okay. So the number
+
+00:24:48.809 --> 00:25:40.010
+of times have taken action A I will denote
+by NA okay, right look at this okay great.
+
+00:25:40.010 --> 00:25:50.629
+So assuming that I actually took action A
+at this time right, so what will happen okay,
+
+00:25:50.629 --> 00:26:34.399
+you want me to erase and rewrite both the
+numerator and the denominator only a denominator,
+
+00:26:34.399 --> 00:26:56.789
+numerator sign okay and assuming this is fine.
+So now I can do this in a incremental fashion
+
+00:26:56.789 --> 00:27:10.340
+right, so this is NA to NA+1 RT/NA+1 I can
+just keep adding this right.
+
+00:27:10.340 --> 00:27:14.619
+So I do not need to remember all the rewards
+all I need to know is how how many times have
+
+00:27:14.619 --> 00:27:21.600
+taken action A so far and what is the previous
+estimate of QT right. If AT was not equal
+
+00:27:21.600 --> 00:27:27.759
+to A what happens this will vanish this will
+vanish the NA will get cancelled just the
+
+00:27:27.759 --> 00:28:18.159
+same thing okay so no change. I decided this
+is a different way we can write this, QT(A)
+
+00:28:18.159 --> 00:28:33.740
+okay is it fine right, this is N/NA+1.
+So I can write it as 1-1/NA+1 right. Now I
+
+00:28:33.740 --> 00:29:15.759
+can rearrange this quantities and get a better
+looking expression right looks good. So this
+
+00:29:15.759 --> 00:29:22.509
+is the form of a general class of equations
+known as stochastic averaging equations and
+
+00:29:22.509 --> 00:29:27.230
+this really no stochastic that you need to
+worry about here but this is called stochastic
+
+00:29:27.230 --> 00:29:32.100
+averaging equations.
+So one way to think about it this I have an
+
+00:29:32.100 --> 00:29:42.409
+old estimate right and to the old estimate
+I add a error term, so what is the error term
+
+00:29:42.409 --> 00:29:49.379
+this is my target right I should have predicted
+the reward is RT right so this is my target
+
+00:29:49.379 --> 00:29:57.400
+and that is my actual output right, QT - 1
+is what I said will be the payoff RT was what
+
+00:29:57.400 --> 00:30:05.389
+the worthy actual payoff that occurred right.
+So RT- QT – 1A is some kind of a error term
+
+00:30:05.389 --> 00:30:12.989
+right.
+Now this is some kind of a step size 1/NA+1
+
+00:30:12.989 --> 00:30:18.529
+is some kind of a step size. So what I am
+doing is I am taking my old estimate and adding
+
+00:30:18.529 --> 00:30:27.899
+some a times an error right. So many, many
+iterative algorithms that we have looked at
+
+00:30:27.899 --> 00:30:32.659
+even if you have taken ml that some of the
+algorithms we looked at in ml right and many
+
+00:30:32.659 --> 00:30:37.059
+iterative algorithms that we will look at
+later in the course will all have this form,
+
+00:30:37.059 --> 00:30:44.820
+old estimate times I mean plus some a times
+an error term right.
+
+00:30:44.820 --> 00:30:48.380
+So what is the thing that you should note
+here why is it called stochastic averaging
+
+00:30:48.380 --> 00:30:57.820
+rule, what I am really trying to find out,
+what my real target is the what is my real
+
+00:30:57.820 --> 00:31:06.080
+target, the expected value of RT the real
+target is not RT right. The real target is
+
+00:31:06.080 --> 00:31:11.919
+the expected value of RT right, so my actual
+error should have been expected value of RT
+
+00:31:11.919 --> 00:31:17.389
+- QT - 1 right, that would have been my actual
+error.
+
+00:31:17.389 --> 00:31:24.560
+But since I do not know the expected value
+of RT so what I am I using here is a some
+
+00:31:24.560 --> 00:31:32.099
+kind of a measurement of the expected value
+right and the unbiased measurement is a sample
+
+00:31:32.099 --> 00:31:38.210
+drawn from the distribution according to which
+you are taking the expectation, when I say
+
+00:31:38.210 --> 00:31:43.269
+expected value of RT let so RT is a sample
+right, and this is I think I am going to take
+
+00:31:43.269 --> 00:31:45.320
+the average of all these samples that is going
+to give me the expected value.
+
+00:31:45.320 --> 00:31:51.830
+Since they do not know the two expectations
+I can operate with these samples right. So
+
+00:31:51.830 --> 00:31:57.399
+I am going to form the estimate of the target
+or estimate of the error right by using a
+
+00:31:57.399 --> 00:32:01.899
+sample as supposed to using the true expectation
+that is why we call these a stochastic averaging
+
+00:32:01.899 --> 00:32:07.460
+rules. And so this is a very standard form
+that will keep seeing again and again in all
+
+00:32:07.460 --> 00:32:14.951
+the algorithms that we look at right.
+So current estimate plus target- current estimate
+
+00:32:14.951 --> 00:32:28.809
+right, so this is thing. And this particular
+choice for my a here 1/NA+1 gives me the the
+
+00:32:28.809 --> 00:32:34.229
+exact average I mean this is exactly I did
+no approximations anywhere this gives me exactly
+
+00:32:34.229 --> 00:32:44.090
+the same estimate as I would have obtained
+by storing all the values and taking the average
+
+00:32:44.090 --> 00:32:56.909
+at every time okay, great.
+So we will stop here today or we can just
+
+00:32:56.909 --> 00:33:01.179
+do one more thing and then we can move on
+to the other things in the next class. So
+
+00:33:01.179 --> 00:33:12.789
+far we have assumed that your coins are not
+changed right, so we are assuming that the
+
+00:33:12.789 --> 00:33:19.359
+distributions from which the rewards are sampled
+or the payoffs or sample is stationary okay
+
+00:33:19.359 --> 00:33:25.099
+constant has a different meaning stationary,
+stationery means it does not change with time
+
+00:33:25.099 --> 00:33:28.700
+okay.
+So if it is, so when they say something does
+
+00:33:28.700 --> 00:33:32.909
+not change with time what does it mean, it
+means the coin does not change with time,
+
+00:33:32.909 --> 00:33:38.039
+it does not mean it always comes up heads
+okay, when you say something is stationary
+
+00:33:38.039 --> 00:33:43.080
+okay it does not mean that its outcome is
+always the same okay. It means that the distribution
+
+00:33:43.080 --> 00:33:47.950
+from which I am sampling the outcomes is always
+the same okay, but sometimes you might have
+
+00:33:47.950 --> 00:33:53.529
+non stationary problems right.
+So it is basically keep tossing the coin the
+
+00:33:53.529 --> 00:33:59.029
+coin once I starts wearing off a little bit
+right, so after a while it might start falling
+
+00:33:59.029 --> 00:34:05.649
+tails more often than heads or what will happen
+if the head wears off, will start falling
+
+00:34:05.649 --> 00:34:16.230
+heads more often or tails more often. Start
+falling heads more often right, because there
+
+00:34:16.230 --> 00:34:22.110
+will be more metal on the head side, so it
+will be heavier so it will tend to come at
+
+00:34:22.110 --> 00:34:25.310
+the bottom more often.
+So if head starts wearing off okay it will
+
+00:34:25.310 --> 00:34:30.850
+tend to come relatively more frequently on
+the top and it used to earlier anyway fine.
+
+00:34:30.850 --> 00:34:40.210
+So things will start changing our time right
+and so what do you do in such cases. So you
+
+00:34:40.210 --> 00:34:45.120
+need a way and there are technical ways of
+handling it I am just giving you a practical
+
+00:34:45.120 --> 00:34:50.960
+way of handling, you need away to be able
+to track the changes overtime right.
+
+00:34:50.960 --> 00:34:56.710
+So if I am going to use this kind of an update
+so what will be the problem after I have pulled
+
+00:34:56.710 --> 00:35:03.590
+arm say 1000 times write this number will
+become very small it will be 1/1000+1 right
+
+00:35:03.590 --> 00:35:11.560
+it will be 1/1000+1 right. So the impact of
+the new samples I am drawing will become smaller
+
+00:35:11.560 --> 00:35:18.970
+and smaller and smaller right. Suppose I pulled
+an arm 1000 times okay 1000 and first time
+
+00:35:18.970 --> 00:35:22.110
+I pulled on right the impact will be very
+very small.
+
+00:35:22.110 --> 00:35:26.440
+And if you think about it, I am averaging
+like a 1000 numbers any individual number
+
+00:35:26.440 --> 00:35:32.540
+is going to have a very small impact on the
+average right, but this is all fine if I am
+
+00:35:32.540 --> 00:35:36.730
+sampling from a stationary distribution, because
+I already done 1000 samples what is the 1000
+
+00:35:36.730 --> 00:35:42.370
+and first sample going to tell me right.
+But if I am drawing from its changing distribution
+
+00:35:42.370 --> 00:35:50.770
+so the more recent samples are more important
+to me than the older samples things are changing
+
+00:35:50.770 --> 00:35:55.380
+my coin is varying out or time when more recent
+samples are more important to me than the
+
+00:35:55.380 --> 00:36:44.750
+older samples right. So what do I do in such
+cases is, but a &lt;1 so you can do a little
+
+00:36:44.750 --> 00:36:53.670
+bit of expanding out on this and you can convince
+yourself that the as time passes by the older
+
+00:36:53.670 --> 00:36:59.080
+rewards that I get will get exponentially
+lesser weight right.
+
+00:36:59.080 --> 00:37:05.620
+The first time I do this right the new reward
+will get in a weight of a right, but second
+
+00:37:05.620 --> 00:37:11.450
+time I get another reward what will happen
+I will get a weight of a2 going in there for
+
+00:37:11.450 --> 00:37:17.350
+the older reward, the new reward will still
+get an a the older reward will get an a2 right.
+
+00:37:17.350 --> 00:37:21.400
+So like that so I will be paying more and
+more attention to the newer rewards right,
+
+00:37:21.400 --> 00:37:27.650
+and the older rewards will keep getting decay.
+And already it was very simple change instead
+
+00:37:27.650 --> 00:37:34.530
+of having 1/n constant alpha, so making it
+a constant a actually allows me to pay more
+
+00:37:34.530 --> 00:37:39.270
+attention to recent rewards and less attention
+to the older rewards right. And depending
+
+00:37:39.270 --> 00:37:47.570
+on how quickly your rewards are changing you
+can tune the value of a right. So problem
+
+00:37:47.570 --> 00:38:05.520
+with keeping a fixed is what, if it is stationary
+that you not converge if it is stationary
+
+00:38:05.520 --> 00:38:09.430
+you still not converge because you are still
+paying attention to the more recent rewards
+
+00:38:09.430 --> 00:38:11.590
+right.
+And we will keep oscillating around the true
+
+00:38:11.590 --> 00:38:16.780
+reward right, so whenever you get a 1 you
+will go up, whenever you get a 0 will come
+
+00:38:16.780 --> 00:38:20.970
+down up down, up down we keep going like that
+right because you are paying more attention
+
+00:38:20.970 --> 00:38:26.250
+to the recent rewards. But the advantage of
+keeping a constant is that if it happens to
+
+00:38:26.250 --> 00:38:33.830
+be non stationary right, you take it to some
+extent there are other more more robust ways
+
+00:38:33.830 --> 00:38:38.790
+of tracking non-stationary problems but this
+is very simple trick that you can use right.
+
+00:38:38.790 --> 00:38:43.830
+And more often than not we will actually end
+up using a constant a in many of the algorithms
+
+00:38:43.830 --> 00:38:49.360
+that we look at and but whenever we talk about
+theoretical convergence will always talk about
+
+00:38:49.360 --> 00:38:53.650
+a decay right whenever it look at practical
+implementations of this algorithms will always
+
+00:38:53.650 --> 00:38:59.870
+have a constant a right. So the problem is
+decaying a is 1/n is again the same thing
+
+00:38:59.870 --> 00:39:07.910
+which I told you where decaying ? right the
+changes will become small very fast right.
+
+00:39:07.910 --> 00:39:11.990
+So that is always a trade-off that you have
+to right.
+

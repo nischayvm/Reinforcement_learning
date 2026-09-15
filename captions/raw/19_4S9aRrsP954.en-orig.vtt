@@ -1,0 +1,4568 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.180 --> 00:00:14.789 align:start position:0%
+ 
+[Music]
+
+00:00:14.789 --> 00:00:14.799 align:start position:0%
+ 
+ 
+
+00:00:14.799 --> 00:00:17.750 align:start position:0%
+ 
+great<00:00:15.799><c> so</c><00:00:16.119><c> now</c><00:00:16.800><c> I</c><00:00:16.920><c> want</c><00:00:17.080><c> to</c><00:00:17.199><c> introduce</c><00:00:17.640><c> a</c>
+
+00:00:17.750 --> 00:00:17.760 align:start position:0%
+great so now I want to introduce a
+ 
+
+00:00:17.760 --> 00:00:20.670 align:start position:0%
+great so now I want to introduce a
+notion<00:00:18.080><c> of</c><00:00:18.240><c> something</c><00:00:18.960><c> called</c><00:00:19.960><c> the</c><00:00:20.160><c> optimal</c>
+
+00:00:20.670 --> 00:00:20.680 align:start position:0%
+notion of something called the optimal
+ 
+
+00:00:20.680 --> 00:00:22.990 align:start position:0%
+notion of something called the optimal
+value<00:00:20.960><c> function</c><00:00:21.960><c> so</c><00:00:22.119><c> any</c><00:00:22.320><c> questions</c><00:00:22.640><c> about</c>
+
+00:00:22.990 --> 00:00:23.000 align:start position:0%
+value function so any questions about
+ 
+
+00:00:23.000 --> 00:00:25.310 align:start position:0%
+value function so any questions about
+the<00:00:23.359><c> the</c><00:00:23.480><c> bman</c>
+
+00:00:25.310 --> 00:00:25.320 align:start position:0%
+the the bman
+ 
+
+00:00:25.320 --> 00:00:28.189 align:start position:0%
+the the bman
+equations<00:00:26.320><c> all</c><00:00:26.560><c> crystal</c>
+
+00:00:28.189 --> 00:00:28.199 align:start position:0%
+equations all crystal
+ 
+
+00:00:28.199 --> 00:00:30.870 align:start position:0%
+equations all crystal
+clear<00:00:29.199><c> right</c><00:00:29.519><c> so</c><00:00:29.640><c> if</c><00:00:29.720><c> I</c><00:00:29.840><c> give</c><00:00:30.080><c> an</c><00:00:30.160><c> mdp</c><00:00:30.560><c> and</c><00:00:30.679><c> ask</c>
+
+00:00:30.870 --> 00:00:30.880 align:start position:0%
+clear right so if I give an mdp and ask
+ 
+
+00:00:30.880 --> 00:00:32.549 align:start position:0%
+clear right so if I give an mdp and ask
+you<00:00:30.960><c> to</c><00:00:31.080><c> form</c><00:00:31.279><c> the</c><00:00:31.400><c> vman</c>
+
+00:00:32.549 --> 00:00:32.559 align:start position:0%
+you to form the vman
+ 
+
+00:00:32.559 --> 00:00:35.350 align:start position:0%
+you to form the vman
+equation<00:00:33.559><c> solve</c><00:00:33.920><c> it</c><00:00:34.520><c> and</c><00:00:34.680><c> give</c><00:00:34.840><c> me</c><00:00:34.960><c> the</c><00:00:35.079><c> value</c>
+
+00:00:35.350 --> 00:00:35.360 align:start position:0%
+equation solve it and give me the value
+ 
+
+00:00:35.360 --> 00:00:37.670 align:start position:0%
+equation solve it and give me the value
+function<00:00:35.640><c> V</c><00:00:35.840><c> Pi</c><00:00:36.040><c> can</c><00:00:36.120><c> you</c><00:00:36.239><c> do</c>
+
+00:00:37.670 --> 00:00:37.680 align:start position:0%
+function V Pi can you do
+ 
+
+00:00:37.680 --> 00:00:40.709 align:start position:0%
+function V Pi can you do
+that<00:00:38.680><c> I'll</c><00:00:38.879><c> give</c><00:00:38.960><c> you</c><00:00:39.079><c> a</c><00:00:39.200><c> pi</c>
+
+00:00:40.709 --> 00:00:40.719 align:start position:0%
+that I'll give you a pi
+ 
+
+00:00:40.719 --> 00:00:43.990 align:start position:0%
+that I'll give you a pi
+also<00:00:41.719><c> can</c><00:00:41.840><c> you</c><00:00:41.960><c> solve</c><00:00:42.200><c> it</c><00:00:42.320><c> and</c><00:00:42.440><c> give</c><00:00:42.559><c> me</c><00:00:42.640><c> a</c><00:00:42.760><c> v</c>
+
+00:00:43.990 --> 00:00:44.000 align:start position:0%
+also can you solve it and give me a v
+ 
+
+00:00:44.000 --> 00:00:51.069 align:start position:0%
+also can you solve it and give me a v
+Pi<00:00:45.000><c> huh</c><00:00:45.760><c> maybe</c><00:00:46.480><c> here</c><00:00:47.480><c> too</c><00:00:47.680><c> many</c><00:00:48.120><c> to</c>
+
+00:00:51.069 --> 00:00:51.079 align:start position:0%
+ 
+ 
+
+00:00:51.079 --> 00:00:57.229 align:start position:0%
+ 
+Compu<00:00:52.079><c> what</c><00:00:52.280><c> of</c>
+
+00:00:57.229 --> 00:00:57.239 align:start position:0%
+ 
+ 
+
+00:00:57.239 --> 00:01:00.470 align:start position:0%
+ 
+computers<00:00:58.239><c> come</c><00:00:58.559><c> on</c><00:00:59.559><c> I'm</c><00:00:59.719><c> going</c><00:00:59.800><c> to</c><00:01:00.239><c> at</c><00:01:00.320><c> some</c>
+
+00:01:00.470 --> 00:01:00.480 align:start position:0%
+computers come on I'm going to at some
+ 
+
+00:01:00.480 --> 00:01:01.990 align:start position:0%
+computers come on I'm going to at some
+point<00:01:00.640><c> I'm</c><00:01:00.760><c> going</c><00:01:00.840><c> to</c><00:01:01.000><c> give</c><00:01:01.079><c> you</c><00:01:01.239><c> like</c><00:01:01.399><c> mdps</c>
+
+00:01:01.990 --> 00:01:02.000 align:start position:0%
+point I'm going to give you like mdps
+ 
+
+00:01:02.000 --> 00:01:03.509 align:start position:0%
+point I'm going to give you like mdps
+with<00:01:02.160><c> millions</c><00:01:02.480><c> of</c><00:01:02.640><c> states</c><00:01:02.960><c> and</c><00:01:03.120><c> ask</c><00:01:03.280><c> you</c><00:01:03.399><c> to</c>
+
+00:01:03.509 --> 00:01:03.519 align:start position:0%
+with millions of states and ask you to
+ 
+
+00:01:03.519 --> 00:01:05.429 align:start position:0%
+with millions of states and ask you to
+compute<00:01:03.840><c> value</c><00:01:04.119><c> functions</c><00:01:04.439><c> or</c><00:01:04.680><c> that</c><00:01:05.239><c> don't</c>
+
+00:01:05.429 --> 00:01:05.439 align:start position:0%
+compute value functions or that don't
+ 
+
+00:01:05.439 --> 00:01:12.630 align:start position:0%
+compute value functions or that don't
+try<00:01:05.600><c> to</c><00:01:05.720><c> do</c><00:01:05.840><c> that</c><00:01:05.960><c> with</c><00:01:06.080><c> pencil</c><00:01:06.360><c> and</c><00:01:06.560><c> paper</c>
+
+00:01:12.630 --> 00:01:12.640 align:start position:0%
+ 
+ 
+
+00:01:12.640 --> 00:01:14.910 align:start position:0%
+ 
+right<00:01:13.640><c> so</c><00:01:14.040><c> maybe</c><00:01:14.240><c> we</c><00:01:14.320><c> should</c><00:01:14.520><c> give</c><00:01:14.640><c> them</c><00:01:14.799><c> the</c>
+
+00:01:14.910 --> 00:01:14.920 align:start position:0%
+right so maybe we should give them the
+ 
+
+00:01:14.920 --> 00:01:16.510 align:start position:0%
+right so maybe we should give them the
+head<00:01:15.080><c> management</c>
+
+00:01:16.510 --> 00:01:16.520 align:start position:0%
+head management
+ 
+
+00:01:16.520 --> 00:01:19.190 align:start position:0%
+head management
+program<00:01:17.520><c> you</c><00:01:17.720><c> think</c><00:01:17.880><c> we</c>
+
+00:01:19.190 --> 00:01:19.200 align:start position:0%
+program you think we
+ 
+
+00:01:19.200 --> 00:01:21.270 align:start position:0%
+program you think we
+should<00:01:20.200><c> did</c><00:01:20.320><c> you</c><00:01:20.439><c> do</c><00:01:20.560><c> the</c><00:01:20.680><c> head</c><00:01:20.840><c> management</c>
+
+00:01:21.270 --> 00:01:21.280 align:start position:0%
+should did you do the head management
+ 
+
+00:01:21.280 --> 00:01:23.270 align:start position:0%
+should did you do the head management
+when<00:01:21.360><c> you</c><00:01:21.479><c> did</c><00:01:21.680><c> the</c><00:01:21.759><c> course</c><00:01:22.400><c> I</c><00:01:22.479><c> don't</c><00:01:23.159><c> you</c>
+
+00:01:23.270 --> 00:01:23.280 align:start position:0%
+when you did the course I don't you
+ 
+
+00:01:23.280 --> 00:01:26.950 align:start position:0%
+when you did the course I don't you
+don't<00:01:23.479><c> think</c><00:01:23.880><c> so</c><00:01:24.960><c> okay</c><00:01:25.960><c> fine</c><00:01:26.479><c> so</c><00:01:26.720><c> that's</c>
+
+00:01:26.950 --> 00:01:26.960 align:start position:0%
+don't think so okay fine so that's
+ 
+
+00:01:26.960 --> 00:01:28.630 align:start position:0%
+don't think so okay fine so that's
+that's<00:01:27.079><c> a</c><00:01:27.280><c> problem</c><00:01:27.560><c> that</c><00:01:27.680><c> we</c><00:01:27.840><c> formulated</c><00:01:28.439><c> when</c>
+
+00:01:28.630 --> 00:01:28.640 align:start position:0%
+that's a problem that we formulated when
+ 
+
+00:01:28.640 --> 00:01:33.310 align:start position:0%
+that's a problem that we formulated when
+I<00:01:28.759><c> was</c><00:01:29.520><c> uh</c><00:01:30.119><c> when</c><00:01:30.240><c> was</c><00:01:30.360><c> a</c><00:01:30.479><c> TA</c><00:01:30.799><c> for</c><00:01:31.360><c> uh</c><00:01:31.840><c> Andy</c><00:01:32.840><c> right</c>
+
+00:01:33.310 --> 00:01:33.320 align:start position:0%
+I was uh when was a TA for uh Andy right
+ 
+
+00:01:33.320 --> 00:01:35.190 align:start position:0%
+I was uh when was a TA for uh Andy right
+uh<00:01:33.399><c> so</c><00:01:33.600><c> he</c><00:01:33.720><c> wanted</c><00:01:34.040><c> people</c><00:01:34.240><c> to</c><00:01:34.479><c> appreciate</c><00:01:35.000><c> how</c>
+
+00:01:35.190 --> 00:01:35.200 align:start position:0%
+uh so he wanted people to appreciate how
+ 
+
+00:01:35.200 --> 00:01:37.910 align:start position:0%
+uh so he wanted people to appreciate how
+hard<00:01:35.439><c> it</c><00:01:35.600><c> is</c><00:01:35.799><c> for</c><00:01:36.479><c> uh</c><00:01:37.200><c> how</c><00:01:37.360><c> hard</c><00:01:37.520><c> it</c><00:01:37.600><c> is</c><00:01:37.680><c> to</c>
+
+00:01:37.910 --> 00:01:37.920 align:start position:0%
+hard it is for uh how hard it is to
+ 
+
+00:01:37.920 --> 00:01:40.270 align:start position:0%
+hard it is for uh how hard it is to
+solve<00:01:38.280><c> dynamic</c><00:01:39.000><c> programming</c><00:01:40.000><c> how</c><00:01:40.159><c> how</c>
+
+00:01:40.270 --> 00:01:40.280 align:start position:0%
+solve dynamic programming how how
+ 
+
+00:01:40.280 --> 00:01:42.789 align:start position:0%
+solve dynamic programming how how
+hardest<00:01:40.560><c> to</c><00:01:40.680><c> solve</c><00:01:40.880><c> mdps</c><00:01:41.439><c> are</c><00:01:41.600><c> large</c><00:01:41.799><c> mdps</c><00:01:42.640><c> and</c>
+
+00:01:42.789 --> 00:01:42.799 align:start position:0%
+hardest to solve mdps are large mdps and
+ 
+
+00:01:42.799 --> 00:01:44.469 align:start position:0%
+hardest to solve mdps are large mdps and
+this<00:01:42.880><c> was</c><00:01:43.040><c> a</c><00:01:43.200><c> problem</c><00:01:43.479><c> that</c><00:01:43.600><c> was</c><00:01:43.799><c> inspired</c><00:01:44.320><c> by</c>
+
+00:01:44.469 --> 00:01:44.479 align:start position:0%
+this was a problem that was inspired by
+ 
+
+00:01:44.479 --> 00:01:48.350 align:start position:0%
+this was a problem that was inspired by
+a<00:01:44.600><c> real</c><00:01:44.920><c> life</c><00:01:45.240><c> problem</c><00:01:46.240><c> uh</c><00:01:46.360><c> some</c><00:01:46.880><c> sheep</c><00:01:47.360><c> or</c>
+
+00:01:48.350 --> 00:01:48.360 align:start position:0%
+a real life problem uh some sheep or
+ 
+
+00:01:48.360 --> 00:01:49.910 align:start position:0%
+a real life problem uh some sheep or
+Farmers<00:01:48.840><c> like</c><00:01:49.000><c> diary</c><00:01:49.280><c> farmers</c><00:01:49.640><c> in</c><00:01:49.759><c> New</c>
+
+00:01:49.910 --> 00:01:49.920 align:start position:0%
+Farmers like diary farmers in New
+ 
+
+00:01:49.920 --> 00:01:53.990 align:start position:0%
+Farmers like diary farmers in New
+Zealand<00:01:50.680><c> actually</c><00:01:50.920><c> so</c><00:01:51.920><c> okay</c><00:01:52.520><c> so</c><00:01:53.439><c> so</c><00:01:53.600><c> they</c><00:01:53.759><c> had</c>
+
+00:01:53.990 --> 00:01:54.000 align:start position:0%
+Zealand actually so okay so so they had
+ 
+
+00:01:54.000 --> 00:01:56.230 align:start position:0%
+Zealand actually so okay so so they had
+lots<00:01:54.240><c> of</c><00:01:54.439><c> cows</c><00:01:54.759><c> and</c><00:01:54.880><c> they</c><00:01:55.000><c> had</c><00:01:55.119><c> to</c><00:01:55.320><c> decide</c><00:01:56.039><c> when</c>
+
+00:01:56.230 --> 00:01:56.240 align:start position:0%
+lots of cows and they had to decide when
+ 
+
+00:01:56.240 --> 00:02:00.029 align:start position:0%
+lots of cows and they had to decide when
+to<00:01:56.439><c> milk</c><00:01:56.880><c> cows</c><00:01:57.360><c> and</c><00:01:58.320><c> um</c><00:01:59.320><c> you</c><00:01:59.439><c> know</c><00:01:59.600><c> when</c><00:01:59.920><c> went</c>
+
+00:02:00.029 --> 00:02:00.039 align:start position:0%
+to milk cows and um you know when went
+ 
+
+00:02:00.039 --> 00:02:01.789 align:start position:0%
+to milk cows and um you know when went
+to<00:02:00.119><c> use</c><00:02:00.320><c> C</c><00:02:00.560><c> for</c><00:02:00.719><c> something</c><00:02:00.960><c> else</c><00:02:01.439><c> my</c><00:02:01.600><c> God</c><00:02:01.719><c> in</c>
+
+00:02:01.789 --> 00:02:01.799 align:start position:0%
+to use C for something else my God in
+ 
+
+00:02:01.799 --> 00:02:02.910 align:start position:0%
+to use C for something else my God in
+India<00:02:02.039><c> is</c><00:02:02.119><c> now</c><00:02:02.240><c> becoming</c><00:02:02.520><c> a</c><00:02:02.600><c> political</c>
+
+00:02:02.910 --> 00:02:02.920 align:start position:0%
+India is now becoming a political
+ 
+
+00:02:02.920 --> 00:02:08.029 align:start position:0%
+India is now becoming a political
+statement<00:02:03.719><c> right</c><00:02:04.719><c> but</c><00:02:05.280><c> uh</c><00:02:06.280><c> yeah</c><00:02:07.039><c> so</c><00:02:07.759><c> okay</c>
+
+00:02:08.029 --> 00:02:08.039 align:start position:0%
+statement right but uh yeah so okay
+ 
+
+00:02:08.039 --> 00:02:12.390 align:start position:0%
+statement right but uh yeah so okay
+sheep<00:02:08.520><c> sheep</c>
+
+00:02:12.390 --> 00:02:12.400 align:start position:0%
+ 
+ 
+
+00:02:12.400 --> 00:02:16.949 align:start position:0%
+ 
+okay<00:02:13.400><c> so</c><00:02:14.080><c> so</c><00:02:14.400><c> when</c><00:02:15.160><c> when</c><00:02:15.400><c> you</c><00:02:16.400><c> when</c><00:02:16.560><c> you</c><00:02:16.680><c> milk</c>
+
+00:02:16.949 --> 00:02:16.959 align:start position:0%
+okay so so when when you when you milk
+ 
+
+00:02:16.959 --> 00:02:19.670 align:start position:0%
+okay so so when when you when you milk
+the<00:02:17.120><c> cow</c><00:02:17.440><c> and</c><00:02:18.040><c> when</c><00:02:18.160><c> do</c><00:02:18.280><c> you</c><00:02:18.720><c> uh</c><00:02:19.080><c> retire</c><00:02:19.519><c> the</c>
+
+00:02:19.670 --> 00:02:19.680 align:start position:0%
+the cow and when do you uh retire the
+ 
+
+00:02:19.680 --> 00:02:21.430 align:start position:0%
+the cow and when do you uh retire the
+cows<00:02:20.000><c> you</c><00:02:20.080><c> know</c><00:02:20.319><c> so</c><00:02:20.560><c> so</c><00:02:20.760><c> they</c><00:02:20.879><c> have</c><00:02:21.000><c> to</c><00:02:21.160><c> figure</c>
+
+00:02:21.430 --> 00:02:21.440 align:start position:0%
+cows you know so so they have to figure
+ 
+
+00:02:21.440 --> 00:02:23.190 align:start position:0%
+cows you know so so they have to figure
+out<00:02:22.000><c> so</c><00:02:22.160><c> let's</c><00:02:22.360><c> assume</c><00:02:22.640><c> that</c><00:02:22.760><c> cows</c><00:02:23.000><c> have</c><00:02:23.080><c> a</c>
+
+00:02:23.190 --> 00:02:23.200 align:start position:0%
+out so let's assume that cows have a
+ 
+
+00:02:23.200 --> 00:02:26.110 align:start position:0%
+out so let's assume that cows have a
+retirement<00:02:23.680><c> home</c><00:02:24.680><c> and</c><00:02:25.440><c> and</c><00:02:25.560><c> so</c><00:02:25.800><c> that's</c><00:02:25.920><c> a</c>
+
+00:02:26.110 --> 00:02:26.120 align:start position:0%
+retirement home and and so that's a
+ 
+
+00:02:26.120 --> 00:02:27.830 align:start position:0%
+retirement home and and so that's a
+that's<00:02:26.360><c> that's</c><00:02:26.440><c> a</c><00:02:26.599><c> problem</c><00:02:26.840><c> so</c><00:02:27.000><c> then</c><00:02:27.400><c> the</c><00:02:27.560><c> cows</c>
+
+00:02:27.830 --> 00:02:27.840 align:start position:0%
+that's that's a problem so then the cows
+ 
+
+00:02:27.840 --> 00:02:29.470 align:start position:0%
+that's that's a problem so then the cows
+could<00:02:28.000><c> be</c><00:02:28.239><c> young</c><00:02:28.680><c> you</c><00:02:28.760><c> know</c><00:02:28.959><c> they</c><00:02:29.080><c> could</c><00:02:29.239><c> be</c><00:02:29.360><c> in</c>
+
+00:02:29.470 --> 00:02:29.480 align:start position:0%
+could be young you know they could be in
+ 
+
+00:02:29.480 --> 00:02:30.509 align:start position:0%
+could be young you know they could be in
+breedable
+
+00:02:30.509 --> 00:02:30.519 align:start position:0%
+breedable
+ 
+
+00:02:30.519 --> 00:02:32.110 align:start position:0%
+breedable
+they<00:02:30.640><c> could</c><00:02:30.800><c> be</c><00:02:30.959><c> old</c><00:02:31.360><c> I</c><00:02:31.400><c> mean</c><00:02:31.519><c> there</c><00:02:31.599><c> are</c><00:02:31.800><c> like</c>
+
+00:02:32.110 --> 00:02:32.120 align:start position:0%
+they could be old I mean there are like
+ 
+
+00:02:32.120 --> 00:02:34.710 align:start position:0%
+they could be old I mean there are like
+something<00:02:32.400><c> like</c><00:02:32.560><c> 14</c><00:02:32.920><c> or</c><00:02:33.080><c> 17</c><00:02:33.560><c> different</c><00:02:33.920><c> states</c>
+
+00:02:34.710 --> 00:02:34.720 align:start position:0%
+something like 14 or 17 different states
+ 
+
+00:02:34.720 --> 00:02:37.869 align:start position:0%
+something like 14 or 17 different states
+that<00:02:34.879><c> they</c><00:02:35.080><c> had</c><00:02:35.519><c> the</c><00:02:35.720><c> cows</c><00:02:36.440><c> be</c><00:02:36.680><c> in</c><00:02:37.599><c> right</c><00:02:37.720><c> and</c>
+
+00:02:37.869 --> 00:02:37.879 align:start position:0%
+that they had the cows be in right and
+ 
+
+00:02:37.879 --> 00:02:39.190 align:start position:0%
+that they had the cows be in right and
+then<00:02:38.000><c> they</c><00:02:38.120><c> have</c><00:02:38.239><c> rewards</c><00:02:38.640><c> like</c><00:02:38.879><c> if</c><00:02:38.959><c> you</c><00:02:39.080><c> can</c>
+
+00:02:39.190 --> 00:02:39.200 align:start position:0%
+then they have rewards like if you can
+ 
+
+00:02:39.200 --> 00:02:41.229 align:start position:0%
+then they have rewards like if you can
+Milk<00:02:39.440><c> The</c><00:02:39.599><c> Cow</c><00:02:39.879><c> in</c><00:02:39.959><c> a</c><00:02:40.080><c> particular</c><00:02:40.519><c> State</c><00:02:40.840><c> then</c>
+
+00:02:41.229 --> 00:02:41.239 align:start position:0%
+Milk The Cow in a particular State then
+ 
+
+00:02:41.239 --> 00:02:42.470 align:start position:0%
+Milk The Cow in a particular State then
+you<00:02:41.400><c> get</c><00:02:41.560><c> so</c><00:02:41.720><c> much</c><00:02:41.879><c> milk</c><00:02:42.120><c> you</c><00:02:42.239><c> know</c><00:02:42.319><c> if</c><00:02:42.400><c> you</c>
+
+00:02:42.470 --> 00:02:42.480 align:start position:0%
+you get so much milk you know if you
+ 
+
+00:02:42.480 --> 00:02:43.910 align:start position:0%
+you get so much milk you know if you
+milk<00:02:42.680><c> a</c><00:02:42.800><c> cow</c><00:02:42.959><c> in</c><00:02:43.040><c> a</c><00:02:43.120><c> later</c><00:02:43.360><c> State</c><00:02:43.599><c> the</c><00:02:43.680><c> milk</c>
+
+00:02:43.910 --> 00:02:43.920 align:start position:0%
+milk a cow in a later State the milk
+ 
+
+00:02:43.920 --> 00:02:46.390 align:start position:0%
+milk a cow in a later State the milk
+comes<00:02:44.159><c> down</c><00:02:44.640><c> blah</c><00:02:44.879><c> blah</c><00:02:45.080><c> blah</c><00:02:45.680><c> right</c><00:02:45.879><c> so</c><00:02:46.200><c> whole</c>
+
+00:02:46.390 --> 00:02:46.400 align:start position:0%
+comes down blah blah blah right so whole
+ 
+
+00:02:46.400 --> 00:02:48.149 align:start position:0%
+comes down blah blah blah right so whole
+bunch<00:02:46.599><c> of</c><00:02:46.760><c> things</c><00:02:47.040><c> and</c><00:02:47.519><c> there's</c><00:02:47.760><c> a</c><00:02:47.879><c> small</c>
+
+00:02:48.149 --> 00:02:48.159 align:start position:0%
+bunch of things and there's a small
+ 
+
+00:02:48.159 --> 00:02:49.910 align:start position:0%
+bunch of things and there's a small
+probability<00:02:48.680><c> that</c><00:02:48.879><c> old</c><00:02:49.440><c> what</c><00:02:49.599><c> have</c><00:02:49.720><c> been</c>
+
+00:02:49.910 --> 00:02:49.920 align:start position:0%
+probability that old what have been
+ 
+
+00:02:49.920 --> 00:02:52.630 align:start position:0%
+probability that old what have been
+classified<00:02:50.400><c> as</c><00:02:50.560><c> old</c><00:02:50.879><c> cows</c><00:02:51.519><c> also</c>
+
+00:02:52.630 --> 00:02:52.640 align:start position:0%
+classified as old cows also
+ 
+
+00:02:52.640 --> 00:02:55.030 align:start position:0%
+classified as old cows also
+have<00:02:53.640><c> cough</c><00:02:53.959><c> you</c><00:02:54.040><c> know</c><00:02:54.159><c> I</c><00:02:54.200><c> mean</c><00:02:54.360><c> so</c><00:02:54.680><c> basically</c>
+
+00:02:55.030 --> 00:02:55.040 align:start position:0%
+have cough you know I mean so basically
+ 
+
+00:02:55.040 --> 00:02:58.070 align:start position:0%
+have cough you know I mean so basically
+they<00:02:55.200><c> become</c><00:02:55.959><c> milk</c><00:02:56.840><c> and</c><00:02:57.200><c> so</c><00:02:57.599><c> all</c><00:02:57.760><c> kinds</c><00:02:57.920><c> of</c>
+
+00:02:58.070 --> 00:02:58.080 align:start position:0%
+they become milk and so all kinds of
+ 
+
+00:02:58.080 --> 00:03:00.430 align:start position:0%
+they become milk and so all kinds of
+very<00:02:58.319><c> complex</c><00:02:59.080><c> situation</c><00:02:59.959><c> and</c><00:03:00.120><c> somebody</c>
+
+00:03:00.430 --> 00:03:00.440 align:start position:0%
+very complex situation and somebody
+ 
+
+00:03:00.440 --> 00:03:01.990 align:start position:0%
+very complex situation and somebody
+actually<00:03:00.680><c> wrote</c><00:03:00.920><c> a</c><00:03:01.120><c> paper</c><00:03:01.400><c> out</c><00:03:01.519><c> of</c><00:03:01.760><c> wrote</c><00:03:01.920><c> a</c>
+
+00:03:01.990 --> 00:03:02.000 align:start position:0%
+actually wrote a paper out of wrote a
+ 
+
+00:03:02.000 --> 00:03:03.830 align:start position:0%
+actually wrote a paper out of wrote a
+research<00:03:02.319><c> paper</c><00:03:02.560><c> out</c><00:03:02.720><c> of</c><00:03:03.239><c> solving</c><00:03:03.640><c> this</c>
+
+00:03:03.830 --> 00:03:03.840 align:start position:0%
+research paper out of solving this
+ 
+
+00:03:03.840 --> 00:03:05.910 align:start position:0%
+research paper out of solving this
+problem<00:03:04.080><c> how</c><00:03:04.200><c> do</c><00:03:04.319><c> you</c><00:03:04.519><c> cast</c><00:03:04.760><c> it</c><00:03:04.920><c> as</c><00:03:05.080><c> a</c><00:03:05.640><c> as</c><00:03:05.760><c> an</c>
+
+00:03:05.910 --> 00:03:05.920 align:start position:0%
+problem how do you cast it as a as an
+ 
+
+00:03:05.920 --> 00:03:07.630 align:start position:0%
+problem how do you cast it as a as an
+mdp<00:03:06.480><c> and</c><00:03:06.640><c> then</c><00:03:07.000><c> come</c><00:03:07.159><c> up</c><00:03:07.239><c> with</c><00:03:07.360><c> a</c><00:03:07.440><c> way</c><00:03:07.560><c> of</c>
+
+00:03:07.630 --> 00:03:07.640 align:start position:0%
+mdp and then come up with a way of
+ 
+
+00:03:07.640 --> 00:03:10.430 align:start position:0%
+mdp and then come up with a way of
+solving<00:03:08.000><c> it</c><00:03:08.400><c> because</c><00:03:09.200><c> when</c><00:03:09.640><c> uh</c><00:03:09.799><c> in</c><00:03:10.000><c> that</c><00:03:10.239><c> case</c>
+
+00:03:10.430 --> 00:03:10.440 align:start position:0%
+solving it because when uh in that case
+ 
+
+00:03:10.440 --> 00:03:12.229 align:start position:0%
+solving it because when uh in that case
+when<00:03:10.560><c> you</c><00:03:10.720><c> actually</c><00:03:11.200><c> cast</c><00:03:11.440><c> it</c><00:03:11.599><c> as</c><00:03:11.680><c> an</c><00:03:11.760><c> mdp</c><00:03:12.120><c> you</c>
+
+00:03:12.229 --> 00:03:12.239 align:start position:0%
+when you actually cast it as an mdp you
+ 
+
+00:03:12.239 --> 00:03:13.830 align:start position:0%
+when you actually cast it as an mdp you
+ended<00:03:12.440><c> up</c><00:03:12.640><c> with</c><00:03:12.959><c> um</c><00:03:13.200><c> like</c><00:03:13.319><c> a</c><00:03:13.440><c> few</c><00:03:13.560><c> million</c>
+
+00:03:13.830 --> 00:03:13.840 align:start position:0%
+ended up with um like a few million
+ 
+
+00:03:13.840 --> 00:03:15.830 align:start position:0%
+ended up with um like a few million
+variables<00:03:14.760><c> few</c><00:03:14.959><c> million</c><00:03:15.239><c> States</c><00:03:15.599><c> not</c>
+
+00:03:15.830 --> 00:03:15.840 align:start position:0%
+variables few million States not
+ 
+
+00:03:15.840 --> 00:03:17.670 align:start position:0%
+variables few million States not
+variables<00:03:16.200><c> a</c><00:03:16.280><c> few</c><00:03:16.400><c> million</c><00:03:16.680><c> States</c><00:03:17.440><c> and</c><00:03:17.560><c> how</c>
+
+00:03:17.670 --> 00:03:17.680 align:start position:0%
+variables a few million States and how
+ 
+
+00:03:17.680 --> 00:03:19.190 align:start position:0%
+variables a few million States and how
+do<00:03:17.799><c> you</c><00:03:17.920><c> go</c><00:03:18.040><c> about</c><00:03:18.200><c> solving</c><00:03:18.560><c> that</c><00:03:18.760><c> problem</c><00:03:19.040><c> it</c>
+
+00:03:19.190 --> 00:03:19.200 align:start position:0%
+do you go about solving that problem it
+ 
+
+00:03:19.200 --> 00:03:21.229 align:start position:0%
+do you go about solving that problem it
+was<00:03:19.360><c> not</c><00:03:19.599><c> not</c><00:03:19.720><c> at</c><00:03:19.840><c> all</c><00:03:20.000><c> clear</c><00:03:20.560><c> so</c><00:03:20.720><c> what</c><00:03:20.879><c> we</c><00:03:21.000><c> did</c>
+
+00:03:21.229 --> 00:03:21.239 align:start position:0%
+was not not at all clear so what we did
+ 
+
+00:03:21.239 --> 00:03:22.589 align:start position:0%
+was not not at all clear so what we did
+was<00:03:21.400><c> we</c><00:03:21.519><c> came</c><00:03:21.680><c> up</c><00:03:21.799><c> with</c><00:03:21.879><c> a</c><00:03:22.000><c> very</c><00:03:22.159><c> simplified</c>
+
+00:03:22.589 --> 00:03:22.599 align:start position:0%
+was we came up with a very simplified
+ 
+
+00:03:22.599 --> 00:03:24.589 align:start position:0%
+was we came up with a very simplified
+version<00:03:22.840><c> of</c><00:03:23.000><c> it</c><00:03:23.519><c> so</c><00:03:23.840><c> where</c><00:03:24.040><c> there</c><00:03:24.200><c> instead</c><00:03:24.480><c> of</c>
+
+00:03:24.589 --> 00:03:24.599 align:start position:0%
+version of it so where there instead of
+ 
+
+00:03:24.599 --> 00:03:26.229 align:start position:0%
+version of it so where there instead of
+like<00:03:24.720><c> 17</c><00:03:25.080><c> states</c><00:03:25.360><c> there</c><00:03:25.480><c> are</c><00:03:25.599><c> three</c><00:03:25.799><c> states</c><00:03:26.080><c> in</c>
+
+00:03:26.229 --> 00:03:26.239 align:start position:0%
+like 17 states there are three states in
+ 
+
+00:03:26.239 --> 00:03:27.990 align:start position:0%
+like 17 states there are three states in
+which<00:03:26.360><c> the</c><00:03:26.480><c> C</c><00:03:26.799><c> could</c><00:03:26.959><c> be</c><00:03:27.680><c> right</c><00:03:27.799><c> and</c><00:03:27.920><c> the</c>
+
+00:03:27.990 --> 00:03:28.000 align:start position:0%
+which the C could be right and the
+ 
+
+00:03:28.000 --> 00:03:29.830 align:start position:0%
+which the C could be right and the
+transition<00:03:28.480><c> Dynamics</c><00:03:28.920><c> were</c><00:03:29.159><c> much</c><00:03:29.360><c> much</c><00:03:29.519><c> simp</c>
+
+00:03:29.830 --> 00:03:29.840 align:start position:0%
+transition Dynamics were much much simp
+ 
+
+00:03:29.840 --> 00:03:32.350 align:start position:0%
+transition Dynamics were much much simp
+simplified<00:03:30.840><c> right</c><00:03:31.319><c> so</c><00:03:31.599><c> it</c><00:03:31.720><c> could</c><00:03:31.920><c> from</c><00:03:32.120><c> Young</c>
+
+00:03:32.350 --> 00:03:32.360 align:start position:0%
+simplified right so it could from Young
+ 
+
+00:03:32.360 --> 00:03:33.990 align:start position:0%
+simplified right so it could from Young
+it<00:03:32.480><c> could</c><00:03:32.640><c> become</c><00:03:32.920><c> breedable</c><00:03:33.519><c> and</c><00:03:33.640><c> it</c><00:03:33.799><c> could</c>
+
+00:03:33.990 --> 00:03:34.000 align:start position:0%
+it could become breedable and it could
+ 
+
+00:03:34.000 --> 00:03:36.789 align:start position:0%
+it could become breedable and it could
+become<00:03:34.280><c> old</c><00:03:35.280><c> and</c><00:03:35.680><c> then</c><00:03:35.840><c> from</c><00:03:36.040><c> old</c><00:03:36.360><c> it</c><00:03:36.480><c> could</c>
+
+00:03:36.789 --> 00:03:36.799 align:start position:0%
+become old and then from old it could
+ 
+
+00:03:36.799 --> 00:03:38.949 align:start position:0%
+become old and then from old it could
+become<00:03:37.799><c> breedable</c><00:03:38.319><c> again</c><00:03:38.480><c> so</c><00:03:38.599><c> it</c><00:03:38.720><c> doesn't</c>
+
+00:03:38.949 --> 00:03:38.959 align:start position:0%
+become breedable again so it doesn't
+ 
+
+00:03:38.959 --> 00:03:42.509 align:start position:0%
+become breedable again so it doesn't
+become<00:03:39.200><c> young</c><00:03:39.920><c> right</c><00:03:40.480><c> so</c><00:03:41.480><c> uh</c><00:03:41.640><c> so</c><00:03:41.879><c> so</c><00:03:42.080><c> there</c>
+
+00:03:42.509 --> 00:03:42.519 align:start position:0%
+become young right so uh so so there
+ 
+
+00:03:42.519 --> 00:03:44.070 align:start position:0%
+become young right so uh so so there
+like<00:03:42.640><c> a</c><00:03:42.760><c> very</c><00:03:42.920><c> few</c><00:03:43.120><c> transition</c><00:03:43.599><c> and</c><00:03:43.720><c> so</c><00:03:43.799><c> on</c><00:03:43.959><c> so</c>
+
+00:03:44.070 --> 00:03:44.080 align:start position:0%
+like a very few transition and so on so
+ 
+
+00:03:44.080 --> 00:03:46.190 align:start position:0%
+like a very few transition and so on so
+forth<00:03:44.319><c> but</c><00:03:44.439><c> it</c><00:03:44.560><c> still</c><00:03:44.799><c> turns</c><00:03:45.200><c> out</c><00:03:45.879><c> that</c><00:03:46.040><c> you</c>
+
+00:03:46.190 --> 00:03:46.200 align:start position:0%
+forth but it still turns out that you
+ 
+
+00:03:46.200 --> 00:03:47.710 align:start position:0%
+forth but it still turns out that you
+have<00:03:46.319><c> to</c><00:03:46.519><c> for</c><00:03:46.799><c> computing</c><00:03:47.239><c> the</c><00:03:47.400><c> exact</c>
+
+00:03:47.710 --> 00:03:47.720 align:start position:0%
+have to for computing the exact
+ 
+
+00:03:47.720 --> 00:03:50.630 align:start position:0%
+have to for computing the exact
+transition<00:03:48.519><c> probabilities</c><00:03:49.519><c> right</c><00:03:50.319><c> uh</c><00:03:50.480><c> you</c>
+
+00:03:50.630 --> 00:03:50.640 align:start position:0%
+transition probabilities right uh you
+ 
+
+00:03:50.640 --> 00:03:54.069 align:start position:0%
+transition probabilities right uh you
+have<00:03:50.799><c> to</c><00:03:50.959><c> come</c><00:03:51.120><c> up</c><00:03:51.319><c> with</c><00:03:51.439><c> a</c><00:03:51.680><c> combinatorial</c>
+
+00:03:54.069 --> 00:03:54.079 align:start position:0%
+have to come up with a combinatorial
+ 
+
+00:03:54.079 --> 00:03:56.470 align:start position:0%
+have to come up with a combinatorial
+summation<00:03:55.079><c> right</c><00:03:55.280><c> it's</c><00:03:55.439><c> it's</c><00:03:55.599><c> actually</c><00:03:56.319><c> turns</c>
+
+00:03:56.470 --> 00:03:56.480 align:start position:0%
+summation right it's it's actually turns
+ 
+
+00:03:56.480 --> 00:03:58.270 align:start position:0%
+summation right it's it's actually turns
+out<00:03:56.599><c> to</c><00:03:56.680><c> be</c><00:03:56.760><c> incredibly</c><00:03:57.239><c> hard</c><00:03:57.720><c> to</c><00:03:57.959><c> get</c><00:03:58.120><c> the</c>
+
+00:03:58.270 --> 00:03:58.280 align:start position:0%
+out to be incredibly hard to get the
+ 
+
+00:03:58.280 --> 00:04:00.110 align:start position:0%
+out to be incredibly hard to get the
+right<00:03:58.480><c> transition</c><00:03:59.000><c> probabilities</c><00:03:59.480><c> just</c><00:03:59.840><c> the</c>
+
+00:04:00.110 --> 00:04:00.120 align:start position:0%
+right transition probabilities just the
+ 
+
+00:04:00.120 --> 00:04:02.630 align:start position:0%
+right transition probabilities just the
+P<00:04:00.640><c> alone</c><00:04:01.640><c> everything</c><00:04:01.879><c> else</c><00:04:02.040><c> is</c><00:04:02.200><c> simple</c><00:04:02.439><c> we</c>
+
+00:04:02.630 --> 00:04:02.640 align:start position:0%
+P alone everything else is simple we
+ 
+
+00:04:02.640 --> 00:04:04.190 align:start position:0%
+P alone everything else is simple we
+give<00:04:02.760><c> you</c><00:04:02.959><c> what</c><00:04:03.079><c> the</c><00:04:03.239><c> state</c><00:04:03.560><c> is</c><00:04:03.760><c> we</c><00:04:03.920><c> give</c><00:04:04.040><c> you</c>
+
+00:04:04.190 --> 00:04:04.200 align:start position:0%
+give you what the state is we give you
+ 
+
+00:04:04.200 --> 00:04:06.949 align:start position:0%
+give you what the state is we give you
+what<00:04:04.319><c> the</c><00:04:04.439><c> action</c><00:04:04.760><c> is</c><00:04:05.680><c> right</c><00:04:06.280><c> uh</c><00:04:06.439><c> just</c><00:04:06.680><c> coming</c>
+
+00:04:06.949 --> 00:04:06.959 align:start position:0%
+what the action is right uh just coming
+ 
+
+00:04:06.959 --> 00:04:09.589 align:start position:0%
+what the action is right uh just coming
+up<00:04:07.120><c> with</c><00:04:07.239><c> the</c><00:04:07.400><c> p</c><00:04:07.599><c> and</c><00:04:07.840><c> the</c><00:04:07.959><c> r</c><00:04:08.560><c> the</c><00:04:08.720><c> exact</c><00:04:09.239><c> CL</c>
+
+00:04:09.589 --> 00:04:09.599 align:start position:0%
+up with the p and the r the exact CL
+ 
+
+00:04:09.599 --> 00:04:11.550 align:start position:0%
+up with the p and the r the exact CL
+expression<00:04:09.959><c> for</c><00:04:10.159><c> P</c><00:04:10.319><c> and</c><00:04:10.480><c> R</c><00:04:10.879><c> itself</c><00:04:11.200><c> turns</c><00:04:11.400><c> out</c>
+
+00:04:11.550 --> 00:04:11.560 align:start position:0%
+expression for P and R itself turns out
+ 
+
+00:04:11.560 --> 00:04:14.309 align:start position:0%
+expression for P and R itself turns out
+to<00:04:11.680><c> be</c><00:04:12.239><c> very</c><00:04:12.400><c> very</c><00:04:12.560><c> hard</c><00:04:12.840><c> problem</c><00:04:13.680><c> right</c><00:04:14.159><c> and</c>
+
+00:04:14.309 --> 00:04:14.319 align:start position:0%
+to be very very hard problem right and
+ 
+
+00:04:14.319 --> 00:04:16.789 align:start position:0%
+to be very very hard problem right and
+it's<00:04:14.480><c> not</c><00:04:14.640><c> a</c><00:04:14.799><c> it's</c><00:04:14.959><c> not</c><00:04:15.519><c> so</c><00:04:15.760><c> there</c><00:04:15.879><c> are</c><00:04:16.519><c> I</c><00:04:16.600><c> don't</c>
+
+00:04:16.789 --> 00:04:16.799 align:start position:0%
+it's not a it's not so there are I don't
+ 
+
+00:04:16.799 --> 00:04:19.270 align:start position:0%
+it's not a it's not so there are I don't
+know<00:04:17.639><c> about</c><00:04:17.880><c> 300</c><00:04:18.280><c> States</c><00:04:18.560><c> or</c><00:04:18.720><c> something</c><00:04:18.959><c> or</c>
+
+00:04:19.270 --> 00:04:19.280 align:start position:0%
+know about 300 States or something or
+ 
+
+00:04:19.280 --> 00:04:22.469 align:start position:0%
+know about 300 States or something or
+158<00:04:20.160><c> States</c><00:04:20.720><c> it's</c><00:04:20.840><c> a</c><00:04:20.959><c> small</c><00:04:21.280><c> problem</c><00:04:21.840><c> right</c>
+
+00:04:22.469 --> 00:04:22.479 align:start position:0%
+158 States it's a small problem right
+ 
+
+00:04:22.479 --> 00:04:24.390 align:start position:0%
+158 States it's a small problem right
+but<00:04:23.280><c> Computing</c><00:04:23.759><c> that</c><00:04:23.919><c> transition</c>
+
+00:04:24.390 --> 00:04:24.400 align:start position:0%
+but Computing that transition
+ 
+
+00:04:24.400 --> 00:04:26.230 align:start position:0%
+but Computing that transition
+probability<00:04:24.880><c> even</c><00:04:25.120><c> when</c><00:04:25.240><c> it</c><00:04:25.360><c> is</c><00:04:25.479><c> just</c><00:04:25.639><c> 158</c>
+
+00:04:26.230 --> 00:04:26.240 align:start position:0%
+probability even when it is just 158
+ 
+
+00:04:26.240 --> 00:04:27.870 align:start position:0%
+probability even when it is just 158
+States<00:04:26.960><c> Computing</c><00:04:27.320><c> the</c><00:04:27.440><c> transition</c>
+
+00:04:27.870 --> 00:04:27.880 align:start position:0%
+States Computing the transition
+ 
+
+00:04:27.880 --> 00:04:29.670 align:start position:0%
+States Computing the transition
+probability<00:04:28.280><c> turns</c><00:04:28.520><c> out</c><00:04:28.680><c> to</c><00:04:28.800><c> require</c><00:04:29.160><c> a</c>
+
+00:04:29.670 --> 00:04:29.680 align:start position:0%
+probability turns out to require a
+ 
+
+00:04:29.680 --> 00:04:31.110 align:start position:0%
+probability turns out to require a
+combinatorial
+
+00:04:31.110 --> 00:04:31.120 align:start position:0%
+combinatorial
+ 
+
+00:04:31.120 --> 00:04:33.230 align:start position:0%
+combinatorial
+sum<00:04:32.120><c> right</c><00:04:32.240><c> so</c><00:04:32.360><c> it's</c><00:04:32.520><c> it's</c><00:04:32.680><c> it's</c><00:04:32.759><c> a</c><00:04:32.880><c> little</c>
+
+00:04:33.230 --> 00:04:33.240 align:start position:0%
+sum right so it's it's it's a little
+ 
+
+00:04:33.240 --> 00:04:36.469 align:start position:0%
+sum right so it's it's it's a little
+tricky<00:04:33.960><c> so</c><00:04:34.199><c> many</c><00:04:34.479><c> people</c><00:04:35.199><c> actually</c><00:04:35.639><c> fail</c><00:04:36.320><c> in</c>
+
+00:04:36.469 --> 00:04:36.479 align:start position:0%
+tricky so many people actually fail in
+ 
+
+00:04:36.479 --> 00:04:37.950 align:start position:0%
+tricky so many people actually fail in
+getting<00:04:36.759><c> the</c><00:04:36.880><c> right</c><00:04:37.039><c> transition</c><00:04:37.479><c> probability</c>
+
+00:04:37.950 --> 00:04:37.960 align:start position:0%
+getting the right transition probability
+ 
+
+00:04:37.960 --> 00:04:39.270 align:start position:0%
+getting the right transition probability
+they<00:04:38.039><c> would</c><00:04:38.240><c> write</c><00:04:38.400><c> the</c><00:04:38.560><c> correct</c><00:04:38.880><c> code</c><00:04:39.120><c> for</c>
+
+00:04:39.270 --> 00:04:39.280 align:start position:0%
+they would write the correct code for
+ 
+
+00:04:39.280 --> 00:04:41.550 align:start position:0%
+they would write the correct code for
+solving<00:04:39.680><c> the</c><00:04:40.000><c> problem</c><00:04:41.000><c> right</c><00:04:41.199><c> but</c><00:04:41.360><c> then</c><00:04:41.479><c> they</c>
+
+00:04:41.550 --> 00:04:41.560 align:start position:0%
+solving the problem right but then they
+ 
+
+00:04:41.560 --> 00:04:42.710 align:start position:0%
+solving the problem right but then they
+would<00:04:41.720><c> not</c><00:04:41.880><c> know</c><00:04:42.039><c> how</c><00:04:42.160><c> to</c><00:04:42.320><c> compute</c><00:04:42.600><c> the</c>
+
+00:04:42.710 --> 00:04:42.720 align:start position:0%
+would not know how to compute the
+ 
+
+00:04:42.720 --> 00:04:44.110 align:start position:0%
+would not know how to compute the
+transition<00:04:43.120><c> probability</c><00:04:43.560><c> just</c><00:04:43.680><c> to</c><00:04:43.840><c> get</c><00:04:43.960><c> you</c>
+
+00:04:44.110 --> 00:04:44.120 align:start position:0%
+transition probability just to get you
+ 
+
+00:04:44.120 --> 00:04:45.909 align:start position:0%
+transition probability just to get you
+to<00:04:44.280><c> appreciate</c><00:04:44.759><c> the</c><00:04:45.120><c> difficulty</c>
+
+00:04:45.909 --> 00:04:45.919 align:start position:0%
+to appreciate the difficulty
+ 
+
+00:04:45.919 --> 00:04:49.469 align:start position:0%
+to appreciate the difficulty
+of<00:04:46.919><c> coming</c><00:04:47.160><c> up</c><00:04:47.320><c> with</c><00:04:47.440><c> that</c><00:04:47.639><c> P</c><00:04:47.960><c> and</c><00:04:48.479><c> therefore</c>
+
+00:04:49.469 --> 00:04:49.479 align:start position:0%
+of coming up with that P and therefore
+ 
+
+00:04:49.479 --> 00:04:51.350 align:start position:0%
+of coming up with that P and therefore
+you'll<00:04:49.800><c> appreciate</c><00:04:50.360><c> why</c><00:04:50.840><c> reinforcement</c>
+
+00:04:51.350 --> 00:04:51.360 align:start position:0%
+you'll appreciate why reinforcement
+ 
+
+00:04:51.360 --> 00:04:52.749 align:start position:0%
+you'll appreciate why reinforcement
+learning<00:04:51.600><c> algorithms</c><00:04:52.000><c> are</c><00:04:52.120><c> useful</c><00:04:52.520><c> because</c>
+
+00:04:52.749 --> 00:04:52.759 align:start position:0%
+learning algorithms are useful because
+ 
+
+00:04:52.759 --> 00:04:58.629 align:start position:0%
+learning algorithms are useful because
+they<00:04:52.880><c> can</c><00:04:53.039><c> work</c><00:04:53.240><c> without</c><00:04:53.520><c> the</c>
+
+00:04:58.629 --> 00:04:58.639 align:start position:0%
+ 
+ 
+
+00:04:58.639 --> 00:05:02.110 align:start position:0%
+ 
+p
+
+00:05:02.110 --> 00:05:02.120 align:start position:0%
+ 
+ 
+
+00:05:02.120 --> 00:05:04.430 align:start position:0%
+ 
+so<00:05:02.320><c> what</c><00:05:02.440><c> is</c><00:05:02.600><c> optimal</c><00:05:03.080><c> here</c><00:05:03.880><c> what</c><00:05:04.080><c> what</c><00:05:04.199><c> am</c><00:05:04.280><c> I</c>
+
+00:05:04.430 --> 00:05:04.440 align:start position:0%
+so what is optimal here what what am I
+ 
+
+00:05:04.440 --> 00:05:06.749 align:start position:0%
+so what is optimal here what what am I
+talking<00:05:04.680><c> about</c><00:05:05.199><c> as</c><00:05:05.400><c> being</c><00:05:05.639><c> optimal</c><00:05:06.440><c> so</c><00:05:06.600><c> we</c>
+
+00:05:06.749 --> 00:05:06.759 align:start position:0%
+talking about as being optimal so we
+ 
+
+00:05:06.759 --> 00:05:08.870 align:start position:0%
+talking about as being optimal so we
+never<00:05:07.000><c> talked</c><00:05:07.280><c> about</c><00:05:07.520><c> that</c><00:05:07.720><c> so</c><00:05:07.919><c> far</c><00:05:08.160><c> right</c><00:05:08.680><c> so</c>
+
+00:05:08.870 --> 00:05:08.880 align:start position:0%
+never talked about that so far right so
+ 
+
+00:05:08.880 --> 00:05:12.310 align:start position:0%
+never talked about that so far right so
+what<00:05:09.000><c> is</c><00:05:09.199><c> optimality</c><00:05:09.800><c> in</c><00:05:09.919><c> the</c><00:05:10.039><c> context</c><00:05:10.479><c> of</c><00:05:11.039><c> uh</c>
+
+00:05:12.310 --> 00:05:12.320 align:start position:0%
+what is optimality in the context of uh
+ 
+
+00:05:12.320 --> 00:05:14.830 align:start position:0%
+what is optimality in the context of uh
+mtps<00:05:13.320><c> or</c><00:05:13.440><c> in</c><00:05:13.560><c> the</c><00:05:13.639><c> context</c><00:05:13.960><c> of</c><00:05:14.080><c> RL</c><00:05:14.400><c> so</c><00:05:14.560><c> we</c><00:05:14.720><c> we</c>
+
+00:05:14.830 --> 00:05:14.840 align:start position:0%
+mtps or in the context of RL so we we
+ 
+
+00:05:14.840 --> 00:05:16.189 align:start position:0%
+mtps or in the context of RL so we we
+already<00:05:15.080><c> talked</c><00:05:15.320><c> about</c><00:05:15.520><c> optimality</c><00:05:16.000><c> in</c><00:05:16.080><c> the</c>
+
+00:05:16.189 --> 00:05:16.199 align:start position:0%
+already talked about optimality in the
+ 
+
+00:05:16.199 --> 00:05:17.749 align:start position:0%
+already talked about optimality in the
+context<00:05:16.479><c> of</c><00:05:16.600><c> orl</c><00:05:16.880><c> what</c><00:05:16.960><c> is</c><00:05:17.080><c> optimality</c><00:05:17.560><c> in</c><00:05:17.639><c> the</c>
+
+00:05:17.749 --> 00:05:17.759 align:start position:0%
+context of orl what is optimality in the
+ 
+
+00:05:17.759 --> 00:05:20.430 align:start position:0%
+context of orl what is optimality in the
+context<00:05:18.080><c> of</c><00:05:18.199><c> orl</c><00:05:19.199><c> I</c><00:05:19.319><c> want</c><00:05:19.520><c> a</c>
+
+00:05:20.430 --> 00:05:20.440 align:start position:0%
+context of orl I want a
+ 
+
+00:05:20.440 --> 00:05:22.510 align:start position:0%
+context of orl I want a
+pi<00:05:21.440><c> such</c>
+
+00:05:22.510 --> 00:05:22.520 align:start position:0%
+pi such
+ 
+
+00:05:22.520 --> 00:05:27.870 align:start position:0%
+pi such
+that<00:05:23.520><c> for</c><00:05:23.840><c> no</c><00:05:24.039><c> other</c><00:05:24.639><c> Pi</c><00:05:25.639><c> can</c><00:05:25.759><c> I</c><00:05:25.960><c> get</c><00:05:26.440><c> a</c><00:05:27.440><c> better</c>
+
+00:05:27.870 --> 00:05:27.880 align:start position:0%
+that for no other Pi can I get a better
+ 
+
+00:05:27.880 --> 00:05:31.590 align:start position:0%
+that for no other Pi can I get a better
+return<00:05:28.120><c> than</c><00:05:28.440><c> expected</c><00:05:28.960><c> return</c><00:05:29.160><c> than</c><00:05:29.319><c> this</c><00:05:29.479><c> pi</c>
+
+00:05:31.590 --> 00:05:31.600 align:start position:0%
+return than expected return than this pi
+ 
+
+00:05:31.600 --> 00:05:34.670 align:start position:0%
+return than expected return than this pi
+right<00:05:31.759><c> so</c><00:05:31.919><c> I</c><00:05:32.039><c> want</c><00:05:32.240><c> a</c>
+
+00:05:34.670 --> 00:05:34.680 align:start position:0%
+ 
+ 
+
+00:05:34.680 --> 00:05:39.550 align:start position:0%
+ 
+PI<00:05:35.680><c> right</c>
+
+00:05:39.550 --> 00:05:39.560 align:start position:0%
+ 
+ 
+
+00:05:39.560 --> 00:05:42.510 align:start position:0%
+ 
+so<00:05:40.560><c> and</c><00:05:40.720><c> I</c><00:05:40.800><c> want</c><00:05:40.960><c> a</c><00:05:41.120><c> pi</c><00:05:41.400><c> that</c><00:05:41.520><c> is</c><00:05:41.800><c> the</c><00:05:42.000><c> best</c><00:05:42.240><c> over</c>
+
+00:05:42.510 --> 00:05:42.520 align:start position:0%
+so and I want a pi that is the best over
+ 
+
+00:05:42.520 --> 00:05:50.350 align:start position:0%
+so and I want a pi that is the best over
+all<00:05:42.840><c> Pi</c><00:05:43.800><c> what</c><00:05:43.919><c> should</c><00:05:44.080><c> be</c><00:05:44.199><c> the</c><00:05:44.319><c> quantity</c>
+
+00:05:50.350 --> 00:05:50.360 align:start position:0%
+ 
+ 
+
+00:05:50.360 --> 00:05:54.510 align:start position:0%
+ 
+here<00:05:51.360><c> but</c><00:05:51.520><c> that</c><00:05:51.639><c> is</c><00:05:51.800><c> not</c><00:05:52.479><c> defined</c><00:05:52.880><c> we</c><00:05:53.000><c> know</c>
+
+00:05:54.510 --> 00:05:54.520 align:start position:0%
+here but that is not defined we know
+ 
+
+00:05:54.520 --> 00:05:57.469 align:start position:0%
+here but that is not defined we know
+that<00:05:55.520><c> right</c><00:05:55.720><c> so</c><00:05:55.960><c> the</c><00:05:56.120><c> expectation</c><00:05:56.680><c> over</c>
+
+00:05:57.469 --> 00:05:57.479 align:start position:0%
+that right so the expectation over
+ 
+
+00:05:57.479 --> 00:06:00.189 align:start position:0%
+that right so the expectation over
+return<00:05:57.919><c> doesn't</c><00:05:58.160><c> make</c><00:05:58.639><c> sense</c><00:05:59.759><c> so</c><00:05:59.919><c> what</c><00:06:00.039><c> should</c>
+
+00:06:00.189 --> 00:06:00.199 align:start position:0%
+return doesn't make sense so what should
+ 
+
+00:06:00.199 --> 00:06:02.950 align:start position:0%
+return doesn't make sense so what should
+I<00:06:00.319><c> do</c><00:06:00.479><c> I</c><00:06:00.560><c> should</c><00:06:00.720><c> qualify</c><00:06:01.080><c> it</c><00:06:01.199><c> over</c><00:06:01.560><c> a</c><00:06:02.560><c> state</c>
+
+00:06:02.950 --> 00:06:02.960 align:start position:0%
+I do I should qualify it over a state
+ 
+
+00:06:02.960 --> 00:06:04.430 align:start position:0%
+I do I should qualify it over a state
+right<00:06:03.080><c> I</c><00:06:03.160><c> should</c><00:06:03.440><c> talk</c><00:06:03.680><c> about</c><00:06:03.919><c> where</c><00:06:04.080><c> I</c><00:06:04.199><c> start</c>
+
+00:06:04.430 --> 00:06:04.440 align:start position:0%
+right I should talk about where I start
+ 
+
+00:06:04.440 --> 00:06:05.830 align:start position:0%
+right I should talk about where I start
+the<00:06:04.680><c> return</c><00:06:05.080><c> and</c><00:06:05.199><c> then</c><00:06:05.319><c> I</c><00:06:05.440><c> can</c><00:06:05.600><c> take</c>
+
+00:06:05.830 --> 00:06:05.840 align:start position:0%
+the return and then I can take
+ 
+
+00:06:05.840 --> 00:06:08.110 align:start position:0%
+the return and then I can take
+expectations<00:06:06.360><c> over</c><00:06:06.639><c> that</c><00:06:06.840><c> or</c><00:06:07.039><c> whatever</c><00:06:07.919><c> but</c>
+
+00:06:08.110 --> 00:06:08.120 align:start position:0%
+expectations over that or whatever but
+ 
+
+00:06:08.120 --> 00:06:13.230 align:start position:0%
+expectations over that or whatever but
+even<00:06:08.720><c> better</c><00:06:09.440><c> I</c><00:06:09.560><c> can</c><00:06:09.759><c> do</c><00:06:10.440><c> this</c>
+
+00:06:13.230 --> 00:06:13.240 align:start position:0%
+even better I can do this
+ 
+
+00:06:13.240 --> 00:06:16.150 align:start position:0%
+even better I can do this
+pointwise<00:06:14.240><c> so</c><00:06:14.440><c> what</c><00:06:14.520><c> do</c><00:06:14.639><c> I</c><00:06:14.759><c> mean</c><00:06:14.960><c> by</c><00:06:15.160><c> that</c><00:06:16.039><c> I</c>
+
+00:06:16.150 --> 00:06:16.160 align:start position:0%
+pointwise so what do I mean by that I
+ 
+
+00:06:16.160 --> 00:06:28.550 align:start position:0%
+pointwise so what do I mean by that I
+can<00:06:16.319><c> say</c><00:06:16.479><c> I</c><00:06:16.599><c> need</c><00:06:16.840><c> something</c><00:06:17.800><c> like</c>
+
+00:06:28.550 --> 00:06:28.560 align:start position:0%
+ 
+ 
+
+00:06:28.560 --> 00:06:30.990 align:start position:0%
+ 
+this
+
+00:06:30.990 --> 00:06:31.000 align:start position:0%
+this
+ 
+
+00:06:31.000 --> 00:06:39.150 align:start position:0%
+this
+p<00:06:31.360><c> p</c>
+
+00:06:39.150 --> 00:06:39.160 align:start position:0%
+ 
+ 
+
+00:06:39.160 --> 00:06:43.749 align:start position:0%
+ 
+p<00:06:40.160><c> okay</c><00:06:40.440><c> thanks</c><00:06:41.919><c> yeah</c><00:06:42.919><c> this</c><00:06:43.039><c> is</c><00:06:43.199><c> on</c><00:06:43.360><c> the</c><00:06:43.479><c> flight</c>
+
+00:06:43.749 --> 00:06:43.759 align:start position:0%
+p okay thanks yeah this is on the flight
+ 
+
+00:06:43.759 --> 00:06:46.469 align:start position:0%
+p okay thanks yeah this is on the flight
+translation<00:06:44.319><c> problems</c><00:06:44.840><c> Edition</c><00:06:45.199><c> one</c><00:06:45.440><c> has</c><00:06:45.680><c> RT</c>
+
+00:06:46.469 --> 00:06:46.479 align:start position:0%
+translation problems Edition one has RT
+ 
+
+00:06:46.479 --> 00:06:48.830 align:start position:0%
+translation problems Edition one has RT
+Capital<00:06:46.759><c> RT</c><00:06:47.080><c> is</c><00:06:47.199><c> written</c><00:06:48.120><c> okay</c><00:06:48.319><c> and</c><00:06:48.520><c> addition</c>
+
+00:06:48.830 --> 00:06:48.840 align:start position:0%
+Capital RT is written okay and addition
+ 
+
+00:06:48.840 --> 00:06:51.270 align:start position:0%
+Capital RT is written okay and addition
+to<00:06:49.080><c> g</c><00:06:49.199><c> capital</c><00:06:49.479><c> GT</c><00:06:49.759><c> is</c><00:06:49.880><c> written</c><00:06:50.240><c> anyway</c><00:06:50.919><c> so</c>
+
+00:06:51.270 --> 00:06:51.280 align:start position:0%
+to g capital GT is written anyway so
+ 
+
+00:06:51.280 --> 00:06:53.950 align:start position:0%
+to g capital GT is written anyway so
+this<00:06:51.680><c> is</c><00:06:52.680><c> this</c><00:06:52.800><c> is</c><00:06:52.960><c> what</c><00:06:53.120><c> I'm</c><00:06:53.280><c> looking</c><00:06:53.639><c> for</c>
+
+00:06:53.950 --> 00:06:53.960 align:start position:0%
+this is this is what I'm looking for
+ 
+
+00:06:53.960 --> 00:06:55.390 align:start position:0%
+this is this is what I'm looking for
+right<00:06:54.319><c> and</c><00:06:54.440><c> we</c><00:06:54.560><c> know</c><00:06:54.720><c> what</c><00:06:54.880><c> that</c><00:06:55.000><c> quantity</c>
+
+00:06:55.390 --> 00:06:55.400 align:start position:0%
+right and we know what that quantity
+ 
+
+00:06:55.400 --> 00:06:58.510 align:start position:0%
+right and we know what that quantity
+inside<00:06:55.759><c> there</c>
+
+00:06:58.510 --> 00:06:58.520 align:start position:0%
+ 
+ 
+
+00:06:58.520 --> 00:07:08.390 align:start position:0%
+ 
+is
+
+00:07:08.390 --> 00:07:08.400 align:start position:0%
+ 
+ 
+
+00:07:08.400 --> 00:07:12.309 align:start position:0%
+ 
+right<00:07:08.840><c> so</c><00:07:09.080><c> pointwise</c><00:07:09.599><c> I'm</c><00:07:09.759><c> trying</c><00:07:10.000><c> to</c>
+
+00:07:12.309 --> 00:07:12.319 align:start position:0%
+ 
+ 
+
+00:07:12.319 --> 00:07:16.749 align:start position:0%
+ 
+find<00:07:13.319><c> Max</c><00:07:13.680><c> over</c><00:07:13.960><c> Pi</c><00:07:14.440><c> V</c><00:07:14.680><c> Pi</c><00:07:14.879><c> of</c><00:07:15.039><c> s</c><00:07:15.919><c> for</c><00:07:16.120><c> all</c><00:07:16.400><c> this</c>
+
+00:07:16.749 --> 00:07:16.759 align:start position:0%
+find Max over Pi V Pi of s for all this
+ 
+
+00:07:16.759 --> 00:07:19.510 align:start position:0%
+find Max over Pi V Pi of s for all this
+right<00:07:16.879><c> so</c><00:07:17.039><c> this</c><00:07:17.160><c> is</c><00:07:17.360><c> I</c><00:07:17.479><c> want</c><00:07:17.680><c> a</c><00:07:18.160><c> state</c><00:07:19.160><c> I</c><00:07:19.240><c> mean</c><00:07:19.400><c> I</c>
+
+00:07:19.510 --> 00:07:19.520 align:start position:0%
+right so this is I want a state I mean I
+ 
+
+00:07:19.520 --> 00:07:23.830 align:start position:0%
+right so this is I want a state I mean I
+want<00:07:19.759><c> a</c><00:07:20.800><c> policy</c><00:07:21.800><c> that</c><00:07:21.960><c> achieves</c><00:07:22.400><c> the</c><00:07:22.879><c> maximum</c>
+
+00:07:23.830 --> 00:07:23.840 align:start position:0%
+want a policy that achieves the maximum
+ 
+
+00:07:23.840 --> 00:07:26.869 align:start position:0%
+want a policy that achieves the maximum
+value<00:07:24.840><c> for</c><00:07:25.160><c> every</c>
+
+00:07:26.869 --> 00:07:26.879 align:start position:0%
+value for every
+ 
+
+00:07:26.879 --> 00:07:29.230 align:start position:0%
+value for every
+state<00:07:27.879><c> right</c><00:07:28.240><c> so</c><00:07:28.440><c> and</c><00:07:28.560><c> I'm</c><00:07:28.720><c> going</c><00:07:28.879><c> to</c><00:07:29.000><c> call</c>
+
+00:07:29.230 --> 00:07:29.240 align:start position:0%
+state right so and I'm going to call
+ 
+
+00:07:29.240 --> 00:07:33.070 align:start position:0%
+state right so and I'm going to call
+this
+
+00:07:33.070 --> 00:07:33.080 align:start position:0%
+ 
+ 
+
+00:07:33.080 --> 00:07:35.909 align:start position:0%
+ 
+yeah<00:07:34.080><c> I'm</c><00:07:34.280><c> going</c><00:07:34.400><c> to</c><00:07:34.599><c> call</c><00:07:34.840><c> this</c><00:07:35.080><c> P</c><00:07:35.360><c> Star</c><00:07:35.680><c> right</c>
+
+00:07:35.909 --> 00:07:35.919 align:start position:0%
+yeah I'm going to call this P Star right
+ 
+
+00:07:35.919 --> 00:07:43.869 align:start position:0%
+yeah I'm going to call this P Star right
+if<00:07:36.160><c> I</c><00:07:37.160><c> yeah</c><00:07:37.280><c> I</c><00:07:37.400><c> can</c><00:07:37.599><c> do</c>
+
+00:07:43.869 --> 00:07:43.879 align:start position:0%
+ 
+ 
+
+00:07:43.879 --> 00:07:46.230 align:start position:0%
+ 
+Ariz<00:07:44.879><c> so</c><00:07:45.039><c> one</c><00:07:45.199><c> thing</c><00:07:45.360><c> one</c><00:07:45.599><c> cave</c><00:07:45.840><c> had</c><00:07:45.919><c> to</c><00:07:46.039><c> note</c>
+
+00:07:46.230 --> 00:07:46.240 align:start position:0%
+Ariz so one thing one cave had to note
+ 
+
+00:07:46.240 --> 00:07:48.990 align:start position:0%
+Ariz so one thing one cave had to note
+here<00:07:46.400><c> is</c><00:07:46.520><c> that</c><00:07:46.680><c> AR</c><00:07:46.960><c> Max</c><00:07:47.199><c> might</c><00:07:47.360><c> not</c><00:07:47.680><c> return</c><00:07:48.000><c> a</c>
+
+00:07:48.990 --> 00:07:49.000 align:start position:0%
+here is that AR Max might not return a
+ 
+
+00:07:49.000 --> 00:07:50.510 align:start position:0%
+here is that AR Max might not return a
+unique
+
+00:07:50.510 --> 00:07:50.520 align:start position:0%
+unique
+ 
+
+00:07:50.520 --> 00:07:53.029 align:start position:0%
+unique
+Pi<00:07:51.520><c> that</c><00:07:51.680><c> could</c><00:07:51.800><c> be</c><00:07:51.960><c> multiple</c><00:07:52.440><c> policies</c><00:07:52.840><c> for</c>
+
+00:07:53.029 --> 00:07:53.039 align:start position:0%
+Pi that could be multiple policies for
+ 
+
+00:07:53.039 --> 00:07:55.309 align:start position:0%
+Pi that could be multiple policies for
+which<00:07:53.240><c> this</c><00:07:53.400><c> Maxima</c><00:07:53.840><c> is</c><00:07:53.960><c> achieved</c><00:07:54.960><c> in</c><00:07:55.120><c> which</c>
+
+00:07:55.309 --> 00:07:55.319 align:start position:0%
+which this Maxima is achieved in which
+ 
+
+00:07:55.319 --> 00:07:57.990 align:start position:0%
+which this Maxima is achieved in which
+case<00:07:55.599><c> any</c><00:07:55.800><c> one</c><00:07:55.960><c> of</c><00:07:56.120><c> them</c><00:07:56.319><c> can</c><00:07:56.479><c> be</c><00:07:56.639><c> called</c><00:07:57.000><c> the</c>
+
+00:07:57.990 --> 00:07:58.000 align:start position:0%
+case any one of them can be called the
+ 
+
+00:07:58.000 --> 00:07:59.790 align:start position:0%
+case any one of them can be called the
+optimal<00:07:58.440><c> policy</c><00:07:58.759><c> so</c><00:07:58.919><c> there</c><00:07:59.000><c> is</c><00:07:59.159><c> no</c><00:07:59.560><c> the</c>
+
+00:07:59.790 --> 00:07:59.800 align:start position:0%
+optimal policy so there is no the
+ 
+
+00:07:59.800 --> 00:08:02.550 align:start position:0%
+optimal policy so there is no the
+optimal<00:08:00.560><c> policy</c><00:08:01.560><c> right</c><00:08:01.759><c> but</c><00:08:01.919><c> there</c><00:08:02.039><c> is</c><00:08:02.199><c> a</c>
+
+00:08:02.550 --> 00:08:02.560 align:start position:0%
+optimal policy right but there is a
+ 
+
+00:08:02.560 --> 00:08:04.029 align:start position:0%
+optimal policy right but there is a
+optimal<00:08:03.000><c> policy</c><00:08:03.319><c> that</c><00:08:03.440><c> could</c><00:08:03.560><c> be</c><00:08:03.680><c> multiple</c>
+
+00:08:04.029 --> 00:08:04.039 align:start position:0%
+optimal policy that could be multiple
+ 
+
+00:08:04.039 --> 00:08:06.909 align:start position:0%
+optimal policy that could be multiple
+optimal<00:08:04.440><c> policies</c><00:08:05.199><c> just</c><00:08:05.360><c> remember</c><00:08:05.759><c> that</c><00:08:06.759><c> very</c>
+
+00:08:06.909 --> 00:08:06.919 align:start position:0%
+optimal policies just remember that very
+ 
+
+00:08:06.919 --> 00:08:09.149 align:start position:0%
+optimal policies just remember that very
+simple<00:08:07.199><c> example</c><00:08:07.599><c> I</c><00:08:07.720><c> can</c><00:08:08.120><c> give</c><00:08:08.280><c> you</c><00:08:08.479><c> think</c><00:08:08.720><c> of</c>
+
+00:08:09.149 --> 00:08:09.159 align:start position:0%
+simple example I can give you think of
+ 
+
+00:08:09.159 --> 00:08:12.029 align:start position:0%
+simple example I can give you think of
+uh<00:08:09.759><c> like</c><00:08:09.879><c> a</c><00:08:10.080><c> grid</c><00:08:10.919><c> world</c><00:08:11.599><c> so</c><00:08:11.800><c> this</c><00:08:11.919><c> is</c>
+
+00:08:12.029 --> 00:08:12.039 align:start position:0%
+uh like a grid world so this is
+ 
+
+00:08:12.039 --> 00:08:20.909 align:start position:0%
+uh like a grid world so this is
+something<00:08:12.280><c> we'll</c><00:08:12.560><c> revisit</c>
+
+00:08:20.909 --> 00:08:20.919 align:start position:0%
+ 
+ 
+
+00:08:20.919 --> 00:08:22.710 align:start position:0%
+ 
+often
+
+00:08:22.710 --> 00:08:22.720 align:start position:0%
+often
+ 
+
+00:08:22.720 --> 00:08:26.230 align:start position:0%
+often
+right<00:08:23.720><c> let's</c><00:08:23.879><c> say</c><00:08:24.120><c> that</c><00:08:24.400><c> every</c><00:08:25.080><c> state</c><00:08:26.080><c> has</c>
+
+00:08:26.230 --> 00:08:26.240 align:start position:0%
+right let's say that every state has
+ 
+
+00:08:26.240 --> 00:08:28.430 align:start position:0%
+right let's say that every state has
+four<00:08:26.520><c> actions</c><00:08:26.840><c> I</c><00:08:26.960><c> can</c><00:08:27.120><c> go</c><00:08:27.360><c> up</c><00:08:27.599><c> down</c><00:08:27.840><c> left</c><00:08:28.039><c> or</c>
+
+00:08:28.430 --> 00:08:28.440 align:start position:0%
+four actions I can go up down left or
+ 
+
+00:08:28.440 --> 00:08:31.189 align:start position:0%
+four actions I can go up down left or
+right<00:08:29.639><c> and</c><00:08:29.840><c> every</c><00:08:30.120><c> action</c><00:08:30.560><c> is</c><00:08:30.720><c> going</c><00:08:30.879><c> to</c><00:08:31.000><c> get</c><00:08:31.080><c> a</c>
+
+00:08:31.189 --> 00:08:31.199 align:start position:0%
+right and every action is going to get a
+ 
+
+00:08:31.199 --> 00:08:34.350 align:start position:0%
+right and every action is going to get a
+reward<00:08:31.479><c> of</c><00:08:31.599><c> minus</c>
+
+00:08:34.350 --> 00:08:34.360 align:start position:0%
+ 
+ 
+
+00:08:34.360 --> 00:08:37.750 align:start position:0%
+ 
+one<00:08:35.360><c> right</c><00:08:36.120><c> and</c><00:08:36.599><c> uh</c><00:08:36.760><c> in</c><00:08:36.880><c> a</c><00:08:37.039><c> deterministic</c>
+
+00:08:37.750 --> 00:08:37.760 align:start position:0%
+one right and uh in a deterministic
+ 
+
+00:08:37.760 --> 00:08:40.190 align:start position:0%
+one right and uh in a deterministic
+world<00:08:38.560><c> so</c><00:08:38.800><c> if</c><00:08:38.880><c> I</c><00:08:39.039><c> go</c><00:08:39.200><c> up</c><00:08:39.399><c> I'll</c><00:08:39.560><c> move</c><00:08:39.760><c> up</c><00:08:39.919><c> by</c><00:08:40.039><c> one</c>
+
+00:08:40.190 --> 00:08:40.200 align:start position:0%
+world so if I go up I'll move up by one
+ 
+
+00:08:40.200 --> 00:08:42.230 align:start position:0%
+world so if I go up I'll move up by one
+square<00:08:41.120><c> and</c><00:08:41.240><c> if</c><00:08:41.320><c> I</c><00:08:41.440><c> go</c><00:08:41.599><c> right</c><00:08:41.760><c> I'll</c><00:08:41.919><c> go</c><00:08:42.080><c> right</c>
+
+00:08:42.230 --> 00:08:42.240 align:start position:0%
+square and if I go right I'll go right
+ 
+
+00:08:42.240 --> 00:08:43.750 align:start position:0%
+square and if I go right I'll go right
+by<00:08:42.360><c> one</c><00:08:42.519><c> square</c><00:08:42.760><c> and</c><00:08:42.839><c> so</c><00:08:42.959><c> on</c><00:08:43.120><c> so</c><00:08:43.240><c> forth</c><00:08:43.519><c> like</c>
+
+00:08:43.750 --> 00:08:43.760 align:start position:0%
+by one square and so on so forth like
+ 
+
+00:08:43.760 --> 00:08:45.509 align:start position:0%
+by one square and so on so forth like
+like<00:08:43.880><c> in</c><00:08:43.959><c> the</c><00:08:44.080><c> indicated</c><00:08:44.519><c> directions</c><00:08:45.200><c> or</c><00:08:45.360><c> you</c>
+
+00:08:45.509 --> 00:08:45.519 align:start position:0%
+like in the indicated directions or you
+ 
+
+00:08:45.519 --> 00:08:47.030 align:start position:0%
+like in the indicated directions or you
+could<00:08:45.640><c> think</c><00:08:45.800><c> of</c><00:08:45.880><c> a</c><00:08:46.000><c> stochastic</c><00:08:46.519><c> world</c><00:08:46.839><c> where</c>
+
+00:08:47.030 --> 00:08:47.040 align:start position:0%
+could think of a stochastic world where
+ 
+
+00:08:47.040 --> 00:08:48.949 align:start position:0%
+could think of a stochastic world where
+you<00:08:47.160><c> try</c><00:08:47.360><c> to</c><00:08:47.519><c> go</c><00:08:47.720><c> up</c><00:08:48.120><c> with</c><00:08:48.320><c> probability</c><00:08:48.760><c> Point</c>
+
+00:08:48.949 --> 00:08:48.959 align:start position:0%
+you try to go up with probability Point
+ 
+
+00:08:48.959 --> 00:08:50.990 align:start position:0%
+you try to go up with probability Point
+9<00:08:49.200><c> I'll</c><00:08:49.399><c> go</c><00:08:49.560><c> up</c><00:08:50.000><c> with</c><00:08:50.200><c> probability</c><00:08:50.600><c> point1</c>
+
+00:08:50.990 --> 00:08:51.000 align:start position:0%
+9 I'll go up with probability point1
+ 
+
+00:08:51.000 --> 00:08:53.190 align:start position:0%
+9 I'll go up with probability point1
+I'll<00:08:51.120><c> just</c><00:08:51.240><c> stay</c><00:08:51.480><c> where</c><00:08:51.600><c> I</c><00:08:51.839><c> am</c><00:08:52.839><c> right</c><00:08:52.959><c> you</c><00:08:53.040><c> can</c>
+
+00:08:53.190 --> 00:08:53.200 align:start position:0%
+I'll just stay where I am right you can
+ 
+
+00:08:53.200 --> 00:08:54.990 align:start position:0%
+I'll just stay where I am right you can
+think<00:08:53.360><c> of</c><00:08:53.519><c> this</c><00:08:53.680><c> as</c><00:08:53.839><c> some</c><00:08:54.000><c> Wheels</c><00:08:54.279><c> slipping</c>
+
+00:08:54.990 --> 00:08:55.000 align:start position:0%
+think of this as some Wheels slipping
+ 
+
+00:08:55.000 --> 00:08:56.110 align:start position:0%
+think of this as some Wheels slipping
+when<00:08:55.120><c> you</c><00:08:55.200><c> have</c><00:08:55.320><c> a</c><00:08:55.399><c> bot</c><00:08:55.640><c> that's</c><00:08:55.800><c> trying</c><00:08:56.000><c> to</c>
+
+00:08:56.110 --> 00:08:56.120 align:start position:0%
+when you have a bot that's trying to
+ 
+
+00:08:56.120 --> 00:08:58.030 align:start position:0%
+when you have a bot that's trying to
+move<00:08:56.279><c> forward</c><00:08:57.120><c> and</c><00:08:57.240><c> with</c><00:08:57.399><c> some</c><00:08:57.600><c> probability</c>
+
+00:08:58.030 --> 00:08:58.040 align:start position:0%
+move forward and with some probability
+ 
+
+00:08:58.040 --> 00:08:59.269 align:start position:0%
+move forward and with some probability
+the<00:08:58.120><c> wheels</c><00:08:58.399><c> slip</c><00:08:58.680><c> and</c><00:08:58.760><c> then</c><00:08:58.880><c> you</c><00:08:58.959><c> stay</c><00:08:59.120><c> in</c><00:08:59.200><c> the</c>
+
+00:08:59.269 --> 00:08:59.279 align:start position:0%
+the wheels slip and then you stay in the
+ 
+
+00:08:59.279 --> 00:09:00.590 align:start position:0%
+the wheels slip and then you stay in the
+same<00:08:59.440><c> same</c><00:08:59.640><c> place</c><00:08:59.800><c> and</c><00:08:59.920><c> you</c><00:09:00.079><c> probably</c><00:09:00.320><c> have</c><00:09:00.440><c> to</c>
+
+00:09:00.590 --> 00:09:00.600 align:start position:0%
+same same place and you probably have to
+ 
+
+00:09:00.600 --> 00:09:02.389 align:start position:0%
+same same place and you probably have to
+try<00:09:00.880><c> moving</c><00:09:01.240><c> again</c><00:09:01.399><c> and</c><00:09:01.600><c> again</c><00:09:02.040><c> until</c><00:09:02.279><c> you</c>
+
+00:09:02.389 --> 00:09:02.399 align:start position:0%
+try moving again and again until you
+ 
+
+00:09:02.399 --> 00:09:03.949 align:start position:0%
+try moving again and again until you
+succeed<00:09:02.959><c> right</c><00:09:03.079><c> so</c><00:09:03.240><c> you</c><00:09:03.360><c> could</c><00:09:03.519><c> think</c><00:09:03.680><c> of</c><00:09:03.800><c> it</c>
+
+00:09:03.949 --> 00:09:03.959 align:start position:0%
+succeed right so you could think of it
+ 
+
+00:09:03.959 --> 00:09:06.910 align:start position:0%
+succeed right so you could think of it
+that<00:09:04.160><c> way</c><00:09:05.120><c> right</c><00:09:06.040><c> so</c><00:09:06.200><c> that's</c><00:09:06.320><c> a</c><00:09:06.440><c> stochastic</c>
+
+00:09:06.910 --> 00:09:06.920 align:start position:0%
+that way right so that's a stochastic
+ 
+
+00:09:06.920 --> 00:09:08.710 align:start position:0%
+that way right so that's a stochastic
+world<00:09:07.120><c> and</c><00:09:07.279><c> every</c><00:09:07.519><c> time</c><00:09:07.640><c> you</c><00:09:07.839><c> make</c><00:09:08.000><c> an</c><00:09:08.160><c> action</c>
+
+00:09:08.710 --> 00:09:08.720 align:start position:0%
+world and every time you make an action
+ 
+
+00:09:08.720 --> 00:09:10.710 align:start position:0%
+world and every time you make an action
+regardless<00:09:09.160><c> of</c><00:09:09.320><c> whether</c><00:09:09.519><c> you</c><00:09:09.600><c> move</c><00:09:09.839><c> or</c><00:09:10.040><c> not</c>
+
+00:09:10.710 --> 00:09:10.720 align:start position:0%
+regardless of whether you move or not
+ 
+
+00:09:10.720 --> 00:09:12.550 align:start position:0%
+regardless of whether you move or not
+you<00:09:10.880><c> get</c><00:09:11.000><c> a</c><00:09:11.120><c> minus</c>
+
+00:09:12.550 --> 00:09:12.560 align:start position:0%
+you get a minus
+ 
+
+00:09:12.560 --> 00:09:16.230 align:start position:0%
+you get a minus
+one<00:09:13.560><c> right</c><00:09:14.000><c> so</c><00:09:14.160><c> if</c><00:09:14.240><c> you</c><00:09:14.399><c> try</c><00:09:14.600><c> to</c><00:09:15.399><c> go</c><00:09:15.720><c> up</c><00:09:15.959><c> in</c><00:09:16.120><c> the</c>
+
+00:09:16.230 --> 00:09:16.240 align:start position:0%
+one right so if you try to go up in the
+ 
+
+00:09:16.240 --> 00:09:18.870 align:start position:0%
+one right so if you try to go up in the
+top<00:09:16.440><c> row</c><00:09:16.640><c> what</c><00:09:16.720><c> will</c>
+
+00:09:18.870 --> 00:09:18.880 align:start position:0%
+top row what will
+ 
+
+00:09:18.880 --> 00:09:21.509 align:start position:0%
+top row what will
+happen<00:09:19.880><c> will</c><00:09:20.000><c> you</c><00:09:20.120><c> stay</c><00:09:20.360><c> there</c><00:09:21.120><c> you'll</c><00:09:21.279><c> stay</c>
+
+00:09:21.509 --> 00:09:21.519 align:start position:0%
+happen will you stay there you'll stay
+ 
+
+00:09:21.519 --> 00:09:22.790 align:start position:0%
+happen will you stay there you'll stay
+there<00:09:21.680><c> whether</c><00:09:21.880><c> the</c><00:09:21.959><c> action</c><00:09:22.200><c> succeeds</c><00:09:22.560><c> or</c><00:09:22.680><c> not</c>
+
+00:09:22.790 --> 00:09:22.800 align:start position:0%
+there whether the action succeeds or not
+ 
+
+00:09:22.800 --> 00:09:23.990 align:start position:0%
+there whether the action succeeds or not
+you'll<00:09:22.959><c> stay</c><00:09:23.160><c> there</c><00:09:23.279><c> and</c><00:09:23.399><c> you'll</c><00:09:23.560><c> get</c><00:09:23.640><c> a</c><00:09:23.760><c> ro</c><00:09:23.920><c> of</c>
+
+00:09:23.990 --> 00:09:24.000 align:start position:0%
+you'll stay there and you'll get a ro of
+ 
+
+00:09:24.000 --> 00:09:25.470 align:start position:0%
+you'll stay there and you'll get a ro of
+minus
+
+00:09:25.470 --> 00:09:25.480 align:start position:0%
+minus
+ 
+
+00:09:25.480 --> 00:09:31.550 align:start position:0%
+minus
+one<00:09:26.480><c> okay</c><00:09:27.680><c> so</c><00:09:28.680><c> and</c><00:09:29.040><c> this</c><00:09:29.200><c> is</c><00:09:29.440><c> episodic</c><00:09:30.560><c> task</c>
+
+00:09:31.550 --> 00:09:31.560 align:start position:0%
+one okay so and this is episodic task
+ 
+
+00:09:31.560 --> 00:09:32.790 align:start position:0%
+one okay so and this is episodic task
+right<00:09:31.800><c> the</c><00:09:31.959><c> whole</c><00:09:32.120><c> thing</c><00:09:32.240><c> will</c><00:09:32.399><c> end</c><00:09:32.600><c> when</c><00:09:32.680><c> you</c>
+
+00:09:32.790 --> 00:09:32.800 align:start position:0%
+right the whole thing will end when you
+ 
+
+00:09:32.800 --> 00:09:35.190 align:start position:0%
+right the whole thing will end when you
+reach<00:09:33.000><c> the</c><00:09:33.120><c> state</c><00:09:33.320><c> Mark</c>
+
+00:09:35.190 --> 00:09:35.200 align:start position:0%
+reach the state Mark
+ 
+
+00:09:35.200 --> 00:09:37.590 align:start position:0%
+reach the state Mark
+G<00:09:36.200><c> right</c><00:09:36.320><c> so</c><00:09:36.519><c> what</c><00:09:36.640><c> would</c><00:09:36.839><c> be</c><00:09:37.120><c> behaving</c>
+
+00:09:37.590 --> 00:09:37.600 align:start position:0%
+G right so what would be behaving
+ 
+
+00:09:37.600 --> 00:09:40.670 align:start position:0%
+G right so what would be behaving
+optimally<00:09:38.160><c> here</c><00:09:38.959><c> we</c><00:09:39.959><c> and</c><00:09:40.120><c> get</c><00:09:40.240><c> to</c><00:09:40.399><c> G</c><00:09:40.560><c> as</c>
+
+00:09:40.670 --> 00:09:40.680 align:start position:0%
+optimally here we and get to G as
+ 
+
+00:09:40.680 --> 00:09:42.069 align:start position:0%
+optimally here we and get to G as
+quickly<00:09:41.000><c> as</c>
+
+00:09:42.069 --> 00:09:42.079 align:start position:0%
+quickly as
+ 
+
+00:09:42.079 --> 00:09:45.389 align:start position:0%
+quickly as
+possible<00:09:43.079><c> right</c><00:09:43.240><c> so</c><00:09:43.480><c> the</c><00:09:43.640><c> shortest</c><00:09:44.079><c> path</c><00:09:44.279><c> to</c>
+
+00:09:45.389 --> 00:09:45.399 align:start position:0%
+possible right so the shortest path to
+ 
+
+00:09:45.399 --> 00:09:47.790 align:start position:0%
+possible right so the shortest path to
+G<00:09:46.399><c> right</c><00:09:46.519><c> so</c><00:09:46.720><c> that</c><00:09:46.920><c> that</c><00:09:47.040><c> is</c><00:09:47.200><c> be</c><00:09:47.360><c> the</c><00:09:47.440><c> optimal</c>
+
+00:09:47.790 --> 00:09:47.800 align:start position:0%
+G right so that that is be the optimal
+ 
+
+00:09:47.800 --> 00:09:49.829 align:start position:0%
+G right so that that is be the optimal
+way<00:09:47.920><c> of</c><00:09:48.040><c> behaving</c><00:09:48.399><c> in</c><00:09:48.560><c> this</c><00:09:48.680><c> world</c>
+
+00:09:49.829 --> 00:09:49.839 align:start position:0%
+way of behaving in this world
+ 
+
+00:09:49.839 --> 00:09:53.550 align:start position:0%
+way of behaving in this world
+right<00:09:51.200><c> so</c><00:09:52.200><c> how</c><00:09:52.320><c> many</c><00:09:52.640><c> optimal</c><00:09:53.040><c> ways</c><00:09:53.200><c> are</c><00:09:53.440><c> there</c>
+
+00:09:53.550 --> 00:09:53.560 align:start position:0%
+right so how many optimal ways are there
+ 
+
+00:09:53.560 --> 00:09:58.310 align:start position:0%
+right so how many optimal ways are there
+of<00:09:53.720><c> behaving</c><00:09:54.079><c> in</c><00:09:54.200><c> this</c>
+
+00:09:58.310 --> 00:09:58.320 align:start position:0%
+ 
+ 
+
+00:09:58.320 --> 00:10:00.829 align:start position:0%
+ 
+world
+
+00:10:00.829 --> 00:10:00.839 align:start position:0%
+world
+ 
+
+00:10:00.839 --> 00:10:03.829 align:start position:0%
+world
+a<00:10:01.040><c> policy</c><00:10:01.560><c> mapping</c><00:10:01.880><c> from</c><00:10:02.040><c> states</c><00:10:02.360><c> to</c><00:10:02.839><c> actions</c>
+
+00:10:03.829 --> 00:10:03.839 align:start position:0%
+a policy mapping from states to actions
+ 
+
+00:10:03.839 --> 00:10:05.509 align:start position:0%
+a policy mapping from states to actions
+right<00:10:04.120><c> doesn't</c><00:10:04.360><c> matter</c><00:10:04.560><c> where</c><00:10:04.680><c> they</c><00:10:04.800><c> start</c>
+
+00:10:05.509 --> 00:10:05.519 align:start position:0%
+right doesn't matter where they start
+ 
+
+00:10:05.519 --> 00:10:08.430 align:start position:0%
+right doesn't matter where they start
+from<00:10:06.519><c> right</c><00:10:06.640><c> this</c><00:10:06.760><c> is</c><00:10:06.880><c> the</c><00:10:07.160><c> maress</c><00:10:08.160><c> here</c><00:10:08.320><c> right</c>
+
+00:10:08.430 --> 00:10:08.440 align:start position:0%
+from right this is the maress here right
+ 
+
+00:10:08.440 --> 00:10:09.949 align:start position:0%
+from right this is the maress here right
+so<00:10:08.519><c> we</c><00:10:08.680><c> assuming</c><00:10:09.040><c> everything</c><00:10:09.279><c> is</c><00:10:09.399><c> Marco</c><00:10:09.800><c> it</c>
+
+00:10:09.949 --> 00:10:09.959 align:start position:0%
+so we assuming everything is Marco it
+ 
+
+00:10:09.959 --> 00:10:11.230 align:start position:0%
+so we assuming everything is Marco it
+really<00:10:10.120><c> shouldn't</c><00:10:10.399><c> depend</c><00:10:10.640><c> on</c><00:10:10.760><c> where</c><00:10:10.880><c> I</c><00:10:11.000><c> start</c>
+
+00:10:11.230 --> 00:10:11.240 align:start position:0%
+really shouldn't depend on where I start
+ 
+
+00:10:11.240 --> 00:10:15.430 align:start position:0%
+really shouldn't depend on where I start
+from<00:10:12.120><c> right</c><00:10:13.360><c> so</c><00:10:14.360><c> so</c><00:10:14.560><c> regardless</c><00:10:15.000><c> of</c><00:10:15.160><c> where</c><00:10:15.279><c> I</c>
+
+00:10:15.430 --> 00:10:15.440 align:start position:0%
+from right so so regardless of where I
+ 
+
+00:10:15.440 --> 00:10:17.509 align:start position:0%
+from right so so regardless of where I
+start<00:10:15.680><c> from</c><00:10:15.920><c> for</c><00:10:16.079><c> example</c><00:10:16.800><c> when</c><00:10:17.000><c> I'm</c><00:10:17.240><c> here</c><00:10:17.440><c> the</c>
+
+00:10:17.509 --> 00:10:17.519 align:start position:0%
+start from for example when I'm here the
+ 
+
+00:10:17.519 --> 00:10:19.389 align:start position:0%
+start from for example when I'm here the
+optimal<00:10:17.880><c> action</c><00:10:18.079><c> is</c><00:10:18.160><c> to</c><00:10:18.320><c> go</c><00:10:18.440><c> this</c><00:10:18.600><c> way</c><00:10:19.200><c> right</c><00:10:19.320><c> I</c>
+
+00:10:19.389 --> 00:10:19.399 align:start position:0%
+optimal action is to go this way right I
+ 
+
+00:10:19.399 --> 00:10:20.670 align:start position:0%
+optimal action is to go this way right I
+don't<00:10:19.560><c> care</c><00:10:19.760><c> whether</c><00:10:19.880><c> I</c><00:10:20.000><c> started</c><00:10:20.360><c> here</c><00:10:20.480><c> and</c>
+
+00:10:20.670 --> 00:10:20.680 align:start position:0%
+don't care whether I started here and
+ 
+
+00:10:20.680 --> 00:10:22.230 align:start position:0%
+don't care whether I started here and
+came<00:10:20.920><c> here</c><00:10:21.279><c> or</c><00:10:21.440><c> whether</c><00:10:21.600><c> I'm</c><00:10:21.760><c> starting</c><00:10:22.079><c> here</c>
+
+00:10:22.230 --> 00:10:22.240 align:start position:0%
+came here or whether I'm starting here
+ 
+
+00:10:22.240 --> 00:10:23.509 align:start position:0%
+came here or whether I'm starting here
+or<00:10:22.360><c> not</c><00:10:22.600><c> right</c><00:10:22.720><c> regardless</c><00:10:23.120><c> of</c><00:10:23.240><c> where</c><00:10:23.399><c> I'm</c>
+
+00:10:23.509 --> 00:10:23.519 align:start position:0%
+or not right regardless of where I'm
+ 
+
+00:10:23.519 --> 00:10:28.310 align:start position:0%
+or not right regardless of where I'm
+starting<00:10:23.800><c> the</c><00:10:23.920><c> action</c><00:10:24.120><c> is</c><00:10:24.279><c> like</c><00:10:24.440><c> that</c>
+
+00:10:28.310 --> 00:10:28.320 align:start position:0%
+ 
+ 
+
+00:10:28.320 --> 00:10:30.670 align:start position:0%
+ 
+likewise
+
+00:10:30.670 --> 00:10:30.680 align:start position:0%
+likewise
+ 
+
+00:10:30.680 --> 00:10:32.389 align:start position:0%
+likewise
+okay<00:10:31.079><c> Things</c><00:10:31.320><c> become</c>
+
+00:10:32.389 --> 00:10:32.399 align:start position:0%
+okay Things become
+ 
+
+00:10:32.399 --> 00:10:58.230 align:start position:0%
+okay Things become
+interesting<00:10:33.399><c> from</c>
+
+00:10:58.230 --> 00:10:58.240 align:start position:0%
+ 
+ 
+
+00:10:58.240 --> 00:11:01.190 align:start position:0%
+ 
+here
+
+00:11:01.190 --> 00:11:01.200 align:start position:0%
+here
+ 
+
+00:11:01.200 --> 00:11:02.710 align:start position:0%
+here
+my<00:11:01.480><c> God</c><00:11:01.680><c> look</c><00:11:01.800><c> at</c><00:11:01.920><c> the</c><00:11:02.040><c> number</c><00:11:02.200><c> of</c><00:11:02.320><c> optimal</c>
+
+00:11:02.710 --> 00:11:02.720 align:start position:0%
+my God look at the number of optimal
+ 
+
+00:11:02.720 --> 00:11:05.150 align:start position:0%
+my God look at the number of optimal
+policies<00:11:03.120><c> we</c><00:11:03.279><c> have</c>
+
+00:11:05.150 --> 00:11:05.160 align:start position:0%
+policies we have
+ 
+
+00:11:05.160 --> 00:11:07.829 align:start position:0%
+policies we have
+huh<00:11:06.160><c> so</c><00:11:06.480><c> any</c><00:11:06.680><c> one</c><00:11:06.880><c> of</c><00:11:07.079><c> these</c><00:11:07.279><c> states</c><00:11:07.600><c> I</c><00:11:07.680><c> can</c>
+
+00:11:07.829 --> 00:11:07.839 align:start position:0%
+huh so any one of these states I can
+ 
+
+00:11:07.839 --> 00:11:11.790 align:start position:0%
+huh so any one of these states I can
+choose<00:11:08.120><c> any</c><00:11:08.240><c> one</c><00:11:08.399><c> of</c><00:11:08.560><c> those</c>
+
+00:11:11.790 --> 00:11:11.800 align:start position:0%
+ 
+ 
+
+00:11:11.800 --> 00:11:15.310 align:start position:0%
+ 
+actions<00:11:12.800><c> right</c><00:11:13.399><c> so</c><00:11:14.000><c> basically</c><00:11:14.360><c> I</c><00:11:14.440><c> have</c><00:11:14.600><c> now</c><00:11:14.800><c> 12</c>
+
+00:11:15.310 --> 00:11:15.320 align:start position:0%
+actions right so basically I have now 12
+ 
+
+00:11:15.320 --> 00:11:18.310 align:start position:0%
+actions right so basically I have now 12
+States<00:11:16.320><c> and</c><00:11:16.440><c> I</c><00:11:16.560><c> can</c><00:11:16.760><c> to</c><00:11:16.959><c> choose</c><00:11:17.880><c> any</c><00:11:18.079><c> of</c><00:11:18.200><c> the</c>
+
+00:11:18.310 --> 00:11:18.320 align:start position:0%
+States and I can to choose any of the
+ 
+
+00:11:18.320 --> 00:11:20.629 align:start position:0%
+States and I can to choose any of the
+two<00:11:18.480><c> actions</c><00:11:18.760><c> in</c><00:11:18.920><c> those</c><00:11:19.040><c> 12</c>
+
+00:11:20.629 --> 00:11:20.639 align:start position:0%
+two actions in those 12
+ 
+
+00:11:20.639 --> 00:11:24.470 align:start position:0%
+two actions in those 12
+States<00:11:21.639><c> right</c><00:11:22.240><c> so</c><00:11:22.959><c> I</c><00:11:23.079><c> have</c><00:11:23.279><c> a</c><00:11:23.399><c> huge</c><00:11:23.680><c> number</c><00:11:23.920><c> of</c>
+
+00:11:24.470 --> 00:11:24.480 align:start position:0%
+States right so I have a huge number of
+ 
+
+00:11:24.480 --> 00:11:26.750 align:start position:0%
+States right so I have a huge number of
+optimal
+
+00:11:26.750 --> 00:11:26.760 align:start position:0%
+optimal
+ 
+
+00:11:26.760 --> 00:11:28.829 align:start position:0%
+optimal
+policies<00:11:27.760><c> right</c><00:11:28.000><c> and</c><00:11:28.240><c> you</c><00:11:28.360><c> can</c><00:11:28.519><c> convince</c>
+
+00:11:28.829 --> 00:11:28.839 align:start position:0%
+policies right and you can convince
+ 
+
+00:11:28.839 --> 00:11:30.110 align:start position:0%
+policies right and you can convince
+yourself<00:11:29.120><c> this</c><00:11:29.360><c> are</c><00:11:29.480><c> optimal</c><00:11:29.839><c> because</c><00:11:30.040><c> they</c>
+
+00:11:30.110 --> 00:11:30.120 align:start position:0%
+yourself this are optimal because they
+ 
+
+00:11:30.120 --> 00:11:32.069 align:start position:0%
+yourself this are optimal because they
+will<00:11:30.279><c> take</c><00:11:30.440><c> me</c><00:11:30.600><c> to</c><00:11:31.279><c> the</c><00:11:31.440><c> expected</c><00:11:31.800><c> number</c><00:11:31.959><c> of</c>
+
+00:11:32.069 --> 00:11:32.079 align:start position:0%
+will take me to the expected number of
+ 
+
+00:11:32.079 --> 00:11:33.629 align:start position:0%
+will take me to the expected number of
+steps<00:11:32.360><c> if</c><00:11:32.440><c> it's</c><00:11:32.600><c> the</c><00:11:32.720><c> deterministic</c><00:11:33.320><c> world</c><00:11:33.560><c> I</c>
+
+00:11:33.629 --> 00:11:33.639 align:start position:0%
+steps if it's the deterministic world I
+ 
+
+00:11:33.639 --> 00:11:34.990 align:start position:0%
+steps if it's the deterministic world I
+can<00:11:33.760><c> tell</c><00:11:33.880><c> you</c><00:11:34.040><c> exactly</c><00:11:34.360><c> how</c><00:11:34.480><c> many</c><00:11:34.680><c> steps</c><00:11:34.920><c> it</c>
+
+00:11:34.990 --> 00:11:35.000 align:start position:0%
+can tell you exactly how many steps it
+ 
+
+00:11:35.000 --> 00:11:37.269 align:start position:0%
+can tell you exactly how many steps it
+will<00:11:35.200><c> take</c><00:11:35.360><c> me</c><00:11:36.240><c> but</c><00:11:36.399><c> if</c><00:11:36.480><c> it's</c><00:11:36.600><c> a</c><00:11:36.720><c> stochastic</c>
+
+00:11:37.269 --> 00:11:37.279 align:start position:0%
+will take me but if it's a stochastic
+ 
+
+00:11:37.279 --> 00:11:38.470 align:start position:0%
+will take me but if it's a stochastic
+World<00:11:37.480><c> depending</c><00:11:37.800><c> on</c><00:11:38.160><c> what</c><00:11:38.279><c> is</c><00:11:38.360><c> the</c>
+
+00:11:38.470 --> 00:11:38.480 align:start position:0%
+World depending on what is the
+ 
+
+00:11:38.480 --> 00:11:40.629 align:start position:0%
+World depending on what is the
+probability<00:11:38.880><c> of</c><00:11:39.000><c> failure</c><00:11:39.320><c> of</c><00:11:39.440><c> the</c><00:11:39.639><c> action</c>
+
+00:11:40.629 --> 00:11:40.639 align:start position:0%
+probability of failure of the action
+ 
+
+00:11:40.639 --> 00:11:42.310 align:start position:0%
+probability of failure of the action
+right<00:11:41.079><c> uh</c><00:11:41.200><c> I'll</c><00:11:41.399><c> have</c><00:11:41.560><c> some</c><00:11:41.800><c> probability</c><00:11:42.200><c> of</c>
+
+00:11:42.310 --> 00:11:42.320 align:start position:0%
+right uh I'll have some probability of
+ 
+
+00:11:42.320 --> 00:11:45.710 align:start position:0%
+right uh I'll have some probability of
+reaching<00:11:42.560><c> the</c><00:11:42.680><c> goal</c><00:11:43.040><c> right</c><00:11:43.240><c> so</c>
+
+00:11:45.710 --> 00:11:45.720 align:start position:0%
+reaching the goal right so
+ 
+
+00:11:45.720 --> 00:11:50.190 align:start position:0%
+reaching the goal right so
+great<00:11:46.720><c> so</c><00:11:47.000><c> okay</c><00:11:47.160><c> there</c><00:11:47.240><c> are</c><00:11:47.399><c> too</c><00:11:47.519><c> many</c><00:11:47.720><c> optimal</c>
+
+00:11:50.190 --> 00:11:50.200 align:start position:0%
+ 
+ 
+
+00:11:50.200 --> 00:11:52.190 align:start position:0%
+ 
+policies<00:11:51.200><c> is</c><00:11:51.279><c> there</c><00:11:51.480><c> something</c><00:11:51.839><c> common</c>
+
+00:11:52.190 --> 00:11:52.200 align:start position:0%
+policies is there something common
+ 
+
+00:11:52.200 --> 00:11:55.509 align:start position:0%
+policies is there something common
+across<00:11:52.480><c> all</c><00:11:52.639><c> these</c>
+
+00:11:55.509 --> 00:11:55.519 align:start position:0%
+ 
+ 
+
+00:11:55.519 --> 00:11:58.230 align:start position:0%
+ 
+policies
+
+00:11:58.230 --> 00:11:58.240 align:start position:0%
+policies
+ 
+
+00:11:58.240 --> 00:12:02.190 align:start position:0%
+policies
+number<00:11:59.480><c> okay</c><00:11:59.760><c> can</c><00:11:59.880><c> you</c><00:12:00.200><c> can</c><00:12:00.320><c> you</c><00:12:00.519><c> refresh</c><00:12:01.200><c> that</c>
+
+00:12:02.190 --> 00:12:02.200 align:start position:0%
+number okay can you can you refresh that
+ 
+
+00:12:02.200 --> 00:12:03.590 align:start position:0%
+number okay can you can you refresh that
+the<00:12:02.320><c> number</c><00:12:02.560><c> of</c><00:12:02.680><c> steps</c><00:12:02.920><c> it</c><00:12:03.040><c> moves</c><00:12:03.279><c> to</c><00:12:03.440><c> the</c>
+
+00:12:03.590 --> 00:12:03.600 align:start position:0%
+the number of steps it moves to the
+ 
+
+00:12:03.600 --> 00:12:06.670 align:start position:0%
+the number of steps it moves to the
+right<00:12:04.240><c> is</c><00:12:04.399><c> the</c><00:12:04.519><c> same</c><00:12:04.760><c> in</c><00:12:04.880><c> all</c><00:12:05.040><c> the</c>
+
+00:12:06.670 --> 00:12:06.680 align:start position:0%
+right is the same in all the
+ 
+
+00:12:06.680 --> 00:12:09.790 align:start position:0%
+right is the same in all the
+policies<00:12:07.720><c> okay</c><00:12:08.720><c> not</c><00:12:08.920><c> in</c><00:12:09.040><c> terms</c><00:12:09.240><c> of</c><00:12:09.399><c> steps</c>
+
+00:12:09.790 --> 00:12:09.800 align:start position:0%
+policies okay not in terms of steps
+ 
+
+00:12:09.800 --> 00:12:11.910 align:start position:0%
+policies okay not in terms of steps
+terms<00:12:10.000><c> of</c><00:12:10.120><c> something</c><00:12:10.360><c> else</c><00:12:10.519><c> that</c><00:12:10.680><c> we</c><00:12:10.800><c> know</c><00:12:11.800><c> the</c>
+
+00:12:11.910 --> 00:12:11.920 align:start position:0%
+terms of something else that we know the
+ 
+
+00:12:11.920 --> 00:12:14.110 align:start position:0%
+terms of something else that we know the
+net<00:12:12.160><c> reward</c><00:12:12.519><c> is</c><00:12:12.720><c> the</c><00:12:13.440><c> net</c><00:12:13.639><c> reward</c><00:12:13.959><c> the</c>
+
+00:12:14.110 --> 00:12:14.120 align:start position:0%
+net reward is the net reward the
+ 
+
+00:12:14.120 --> 00:12:15.590 align:start position:0%
+net reward is the net reward the
+expected<00:12:14.480><c> reward</c><00:12:14.760><c> is</c><00:12:14.839><c> going</c><00:12:14.959><c> to</c><00:12:15.040><c> be</c><00:12:15.199><c> the</c><00:12:15.320><c> same</c>
+
+00:12:15.590 --> 00:12:15.600 align:start position:0%
+expected reward is going to be the same
+ 
+
+00:12:15.600 --> 00:12:18.150 align:start position:0%
+expected reward is going to be the same
+so<00:12:16.079><c> for</c><00:12:16.320><c> any</c><00:12:16.600><c> state</c><00:12:17.120><c> regardless</c><00:12:17.639><c> of</c><00:12:17.880><c> what</c><00:12:18.000><c> is</c>
+
+00:12:18.150 --> 00:12:18.160 align:start position:0%
+so for any state regardless of what is
+ 
+
+00:12:18.160 --> 00:12:20.509 align:start position:0%
+so for any state regardless of what is
+the<00:12:18.560><c> optimal</c><00:12:19.040><c> policy</c><00:12:19.360><c> I</c><00:12:19.480><c> choose</c><00:12:19.720><c> to</c><00:12:19.880><c> execute</c>
+
+00:12:20.509 --> 00:12:20.519 align:start position:0%
+the optimal policy I choose to execute
+ 
+
+00:12:20.519 --> 00:12:24.389 align:start position:0%
+the optimal policy I choose to execute
+the<00:12:20.680><c> value</c><00:12:20.959><c> of</c><00:12:21.120><c> the</c><00:12:21.279><c> state</c><00:12:21.480><c> will</c><00:12:21.639><c> be</c><00:12:21.800><c> the</c>
+
+00:12:24.389 --> 00:12:24.399 align:start position:0%
+ 
+ 
+
+00:12:24.399 --> 00:12:26.990 align:start position:0%
+ 
+same
+
+00:12:26.990 --> 00:12:27.000 align:start position:0%
+same
+ 
+
+00:12:27.000 --> 00:12:29.710 align:start position:0%
+same
+correct<00:12:28.000><c> is</c><00:12:28.120><c> that</c><00:12:28.279><c> clear</c>
+
+00:12:29.710 --> 00:12:29.720 align:start position:0%
+correct is that clear
+ 
+
+00:12:29.720 --> 00:12:31.389 align:start position:0%
+correct is that clear
+regardless<00:12:30.240><c> of</c><00:12:30.360><c> the</c><00:12:30.519><c> policy</c><00:12:30.839><c> I</c><00:12:30.920><c> choose</c><00:12:31.160><c> to</c>
+
+00:12:31.389 --> 00:12:31.399 align:start position:0%
+regardless of the policy I choose to
+ 
+
+00:12:31.399 --> 00:12:33.470 align:start position:0%
+regardless of the policy I choose to
+execute<00:12:32.399><c> the</c><00:12:32.519><c> value</c><00:12:32.800><c> of</c><00:12:32.880><c> the</c><00:12:33.000><c> state</c><00:12:33.199><c> is</c><00:12:33.320><c> going</c>
+
+00:12:33.470 --> 00:12:33.480 align:start position:0%
+execute the value of the state is going
+ 
+
+00:12:33.480 --> 00:12:35.350 align:start position:0%
+execute the value of the state is going
+to<00:12:33.560><c> be</c><00:12:33.760><c> the</c>
+
+00:12:35.350 --> 00:12:35.360 align:start position:0%
+to be the
+ 
+
+00:12:35.360 --> 00:12:55.790 align:start position:0%
+to be the
+same<00:12:36.440><c> correct</c><00:12:37.880><c> so</c><00:12:38.880><c> I</c><00:12:39.000><c> can</c><00:12:39.279><c> write</c>
+
+00:12:55.790 --> 00:12:55.800 align:start position:0%
+ 
+ 
+
+00:12:55.800 --> 00:12:59.509 align:start position:0%
+ 
+this<00:12:56.800><c> I</c><00:12:56.959><c> got</c><00:12:57.120><c> rid</c><00:12:57.279><c> of</c><00:12:57.399><c> the</c><00:12:57.560><c> P</c><00:12:57.760><c> star</c><00:12:58.120><c> here</c><00:12:59.399><c> I'm</c>
+
+00:12:59.509 --> 00:12:59.519 align:start position:0%
+this I got rid of the P star here I'm
+ 
+
+00:12:59.519 --> 00:13:03.670 align:start position:0%
+this I got rid of the P star here I'm
+going<00:12:59.680><c> to</c><00:12:59.800><c> call</c><00:13:00.000><c> this</c><00:13:00.160><c> V</c><00:13:00.519><c> Star</c><00:13:01.519><c> and</c><00:13:01.880><c> V</c><00:13:02.079><c> Star</c><00:13:02.320><c> is</c>
+
+00:13:03.670 --> 00:13:03.680 align:start position:0%
+going to call this V Star and V Star is
+ 
+
+00:13:03.680 --> 00:13:08.590 align:start position:0%
+going to call this V Star and V Star is
+unique<00:13:04.680><c> given</c><00:13:04.920><c> an</c><00:13:05.079><c> mdp</c><00:13:05.760><c> V</c><00:13:06.000><c> Star</c><00:13:06.279><c> will</c><00:13:06.399><c> be</c>
+
+00:13:08.590 --> 00:13:08.600 align:start position:0%
+ 
+ 
+
+00:13:08.600 --> 00:13:12.310 align:start position:0%
+ 
+unique<00:13:09.600><c> right</c><00:13:10.199><c> P</c><00:13:10.440><c> star</c><00:13:10.720><c> need</c><00:13:10.920><c> not</c><00:13:11.079><c> be</c><00:13:11.320><c> unique</c>
+
+00:13:12.310 --> 00:13:12.320 align:start position:0%
+unique right P star need not be unique
+ 
+
+00:13:12.320 --> 00:13:13.949 align:start position:0%
+unique right P star need not be unique
+but<00:13:12.519><c> regardless</c><00:13:13.000><c> of</c><00:13:13.160><c> how</c><00:13:13.240><c> many</c><00:13:13.440><c> different</c><00:13:13.760><c> P</c>
+
+00:13:13.949 --> 00:13:13.959 align:start position:0%
+but regardless of how many different P
+ 
+
+00:13:13.959 --> 00:13:14.990 align:start position:0%
+but regardless of how many different P
+Stars<00:13:14.240><c> you</c>
+
+00:13:14.990 --> 00:13:15.000 align:start position:0%
+Stars you
+ 
+
+00:13:15.000 --> 00:13:18.310 align:start position:0%
+Stars you
+have<00:13:16.000><c> right</c><00:13:16.120><c> V</c><00:13:16.320><c> Star</c><00:13:16.519><c> is</c><00:13:16.639><c> going</c><00:13:16.800><c> to</c><00:13:17.199><c> be</c><00:13:18.199><c> the</c>
+
+00:13:18.310 --> 00:13:18.320 align:start position:0%
+have right V Star is going to be the
+ 
+
+00:13:18.320 --> 00:13:20.230 align:start position:0%
+have right V Star is going to be the
+same<00:13:18.760><c> whichever</c><00:13:19.120><c> Pi</c><00:13:19.279><c> star</c><00:13:19.480><c> you</c><00:13:19.600><c> consider</c><00:13:19.920><c> V</c><00:13:20.079><c> Pi</c>
+
+00:13:20.230 --> 00:13:20.240 align:start position:0%
+same whichever Pi star you consider V Pi
+ 
+
+00:13:20.240 --> 00:13:21.750 align:start position:0%
+same whichever Pi star you consider V Pi
+star<00:13:20.440><c> will</c><00:13:20.560><c> be</c><00:13:20.680><c> the</c><00:13:20.760><c> same</c><00:13:20.920><c> so</c><00:13:21.040><c> regardless</c><00:13:21.480><c> of</c><00:13:21.600><c> V</c>
+
+00:13:21.750 --> 00:13:21.760 align:start position:0%
+star will be the same so regardless of V
+ 
+
+00:13:21.760 --> 00:13:23.670 align:start position:0%
+star will be the same so regardless of V
+Pi<00:13:21.920><c> star</c><00:13:22.639><c> regardless</c><00:13:23.000><c> of</c><00:13:23.079><c> the</c><00:13:23.199><c> P</c><00:13:23.360><c> star</c><00:13:23.560><c> you</c>
+
+00:13:23.670 --> 00:13:23.680 align:start position:0%
+Pi star regardless of the P star you
+ 
+
+00:13:23.680 --> 00:13:25.509 align:start position:0%
+Pi star regardless of the P star you
+choose<00:13:24.279><c> I'm</c><00:13:24.440><c> going</c><00:13:24.600><c> to</c><00:13:24.720><c> call</c><00:13:24.920><c> the</c><00:13:25.120><c> optimal</c>
+
+00:13:25.509 --> 00:13:25.519 align:start position:0%
+choose I'm going to call the optimal
+ 
+
+00:13:25.519 --> 00:13:27.110 align:start position:0%
+choose I'm going to call the optimal
+value<00:13:25.800><c> function</c><00:13:26.079><c> as</c><00:13:26.240><c> V</c>
+
+00:13:27.110 --> 00:13:27.120 align:start position:0%
+value function as V
+ 
+
+00:13:27.120 --> 00:13:36.790 align:start position:0%
+value function as V
+Star<00:13:28.120><c> okay</c><00:13:28.240><c> so</c><00:13:28.399><c> this</c><00:13:28.480><c> is</c><00:13:28.639><c> called</c><00:13:28.839><c> the</c>
+
+00:13:36.790 --> 00:13:36.800 align:start position:0%
+ 
+ 
+
+00:13:36.800 --> 00:13:44.350 align:start position:0%
+ 
+okay<00:13:36.959><c> so</c><00:13:37.160><c> this</c><00:13:37.240><c> is</c><00:13:37.320><c> an</c><00:13:37.440><c> optimal</c>
+
+00:13:44.350 --> 00:13:44.360 align:start position:0%
+ 
+ 
+
+00:13:44.360 --> 00:13:47.949 align:start position:0%
+ 
+policy<00:13:45.360><c> it's</c><00:13:45.600><c> optimal</c><00:13:45.920><c> value</c><00:13:46.160><c> function</c><00:13:47.040><c> okay</c>
+
+00:13:47.949 --> 00:13:47.959 align:start position:0%
+policy it's optimal value function okay
+ 
+
+00:13:47.959 --> 00:13:58.030 align:start position:0%
+policy it's optimal value function okay
+is<00:13:48.160><c> is</c><00:13:48.240><c> it</c>
+
+00:13:58.030 --> 00:13:58.040 align:start position:0%
+ 
+ 
+
+00:13:58.040 --> 00:14:11.550 align:start position:0%
+ 
+clear
+
+00:14:11.550 --> 00:14:11.560 align:start position:0%
+ 
+ 
+
+00:14:11.560 --> 00:14:12.590 align:start position:0%
+ 
+there's<00:14:11.759><c> only</c><00:14:11.959><c> one</c><00:14:12.120><c> thing</c><00:14:12.240><c> which</c><00:14:12.360><c> you</c><00:14:12.480><c> guys</c>
+
+00:14:12.590 --> 00:14:12.600 align:start position:0%
+there's only one thing which you guys
+ 
+
+00:14:12.600 --> 00:14:14.269 align:start position:0%
+there's only one thing which you guys
+should<00:14:12.720><c> be</c><00:14:12.880><c> asking</c><00:14:13.160><c> me</c><00:14:13.360><c> now</c><00:14:13.720><c> how</c><00:14:13.839><c> do</c><00:14:13.959><c> I</c><00:14:14.079><c> know</c>
+
+00:14:14.269 --> 00:14:14.279 align:start position:0%
+should be asking me now how do I know
+ 
+
+00:14:14.279 --> 00:14:16.670 align:start position:0%
+should be asking me now how do I know
+that<00:14:14.399><c> the</c><00:14:14.560><c> same</c><00:14:14.839><c> P</c><00:14:15.079><c> will</c><00:14:15.199><c> reach</c><00:14:15.519><c> the</c><00:14:16.279><c> max</c>
+
+00:14:16.670 --> 00:14:16.680 align:start position:0%
+that the same P will reach the max
+ 
+
+00:14:16.680 --> 00:14:23.230 align:start position:0%
+that the same P will reach the max
+across
+
+00:14:23.230 --> 00:14:23.240 align:start position:0%
+ 
+ 
+
+00:14:23.240 --> 00:14:25.990 align:start position:0%
+ 
+all<00:14:24.240><c> so</c><00:14:24.399><c> if</c><00:14:24.480><c> you</c><00:14:24.600><c> have</c><00:14:24.759><c> finite</c><00:14:25.120><c> mdps</c><00:14:25.800><c> it's</c>
+
+00:14:25.990 --> 00:14:26.000 align:start position:0%
+all so if you have finite mdps it's
+ 
+
+00:14:26.000 --> 00:14:28.430 align:start position:0%
+all so if you have finite mdps it's
+actually<00:14:26.759><c> straightforward</c><00:14:27.440><c> to</c><00:14:27.560><c> show</c><00:14:27.800><c> that</c>
+
+00:14:28.430 --> 00:14:28.440 align:start position:0%
+actually straightforward to show that
+ 
+
+00:14:28.440 --> 00:14:30.790 align:start position:0%
+actually straightforward to show that
+okay<00:14:28.639><c> if</c><00:14:28.759><c> you</c><00:14:28.880><c> have</c>
+
+00:14:30.790 --> 00:14:30.800 align:start position:0%
+okay if you have
+ 
+
+00:14:30.800 --> 00:14:33.110 align:start position:0%
+okay if you have
+continuous<00:14:31.240><c> mdps</c><00:14:32.000><c> right</c><00:14:32.519><c> then</c><00:14:32.639><c> it</c><00:14:32.759><c> becomes</c><00:14:33.040><c> a</c>
+
+00:14:33.110 --> 00:14:33.120 align:start position:0%
+continuous mdps right then it becomes a
+ 
+
+00:14:33.120 --> 00:14:35.749 align:start position:0%
+continuous mdps right then it becomes a
+little<00:14:33.399><c> trickier</c><00:14:34.399><c> uh</c><00:14:34.519><c> so</c><00:14:34.800><c> we</c><00:14:35.000><c> we</c><00:14:35.120><c> will</c><00:14:35.360><c> discuss</c>
+
+00:14:35.749 --> 00:14:35.759 align:start position:0%
+little trickier uh so we we will discuss
+ 
+
+00:14:35.759 --> 00:14:37.590 align:start position:0%
+little trickier uh so we we will discuss
+this<00:14:36.040><c> when</c><00:14:36.199><c> I'm</c><00:14:36.399><c> actually</c><00:14:36.639><c> starting</c><00:14:37.079><c> the</c>
+
+00:14:37.590 --> 00:14:37.600 align:start position:0%
+this when I'm actually starting the
+ 
+
+00:14:37.600 --> 00:14:39.910 align:start position:0%
+this when I'm actually starting the
+proofs<00:14:37.920><c> in</c><00:14:38.000><c> the</c><00:14:38.120><c> next</c><00:14:38.360><c> class</c><00:14:39.160><c> why</c><00:14:39.360><c> is</c><00:14:39.480><c> it</c><00:14:39.720><c> that</c>
+
+00:14:39.910 --> 00:14:39.920 align:start position:0%
+proofs in the next class why is it that
+ 
+
+00:14:39.920 --> 00:14:43.550 align:start position:0%
+proofs in the next class why is it that
+there<00:14:40.160><c> exists</c><00:14:40.560><c> a</c><00:14:41.560><c> optimal</c><00:14:42.040><c> policy</c><00:14:42.360><c> at</c><00:14:42.560><c> all</c>
+
+00:14:43.550 --> 00:14:43.560 align:start position:0%
+there exists a optimal policy at all
+ 
+
+00:14:43.560 --> 00:14:45.389 align:start position:0%
+there exists a optimal policy at all
+right<00:14:43.680><c> so</c><00:14:43.880><c> we</c><00:14:44.000><c> we'll</c><00:14:44.199><c> discuss</c><00:14:44.519><c> this</c><00:14:44.639><c> in</c><00:14:44.800><c> the</c>
+
+00:14:45.389 --> 00:14:45.399 align:start position:0%
+right so we we'll discuss this in the
+ 
+
+00:14:45.399 --> 00:14:46.910 align:start position:0%
+right so we we'll discuss this in the
+next<00:14:45.639><c> class</c><00:14:45.839><c> when</c><00:14:45.959><c> I'm</c><00:14:46.120><c> talking</c><00:14:46.320><c> about</c><00:14:46.480><c> proofs</c>
+
+00:14:46.910 --> 00:14:46.920 align:start position:0%
+next class when I'm talking about proofs
+ 
+
+00:14:46.920 --> 00:14:50.069 align:start position:0%
+next class when I'm talking about proofs
+right<00:14:47.360><c> so</c><00:14:48.120><c> right</c><00:14:48.320><c> now</c><00:14:48.800><c> we'll</c><00:14:49.040><c> try</c><00:14:49.240><c> to</c><00:14:49.720><c> do</c><00:14:49.920><c> the</c>
+
+00:14:50.069 --> 00:14:50.079 align:start position:0%
+right so right now we'll try to do the
+ 
+
+00:14:50.079 --> 00:14:53.790 align:start position:0%
+right so right now we'll try to do the
+equivalent<00:14:50.519><c> of</c><00:14:50.720><c> belman</c><00:14:51.199><c> equations</c><00:14:51.839><c> for</c><00:14:52.240><c> V</c>
+
+00:14:53.790 --> 00:14:53.800 align:start position:0%
+equivalent of belman equations for V
+ 
+
+00:14:53.800 --> 00:14:56.110 align:start position:0%
+equivalent of belman equations for V
+Star<00:14:54.800><c> right</c><00:14:55.199><c> I</c><00:14:55.279><c> mean</c><00:14:55.480><c> like</c><00:14:55.600><c> likewise</c><00:14:55.920><c> I</c><00:14:56.000><c> can</c>
+
+00:14:56.110 --> 00:14:56.120 align:start position:0%
+Star right I mean like likewise I can
+ 
+
+00:14:56.120 --> 00:14:58.030 align:start position:0%
+Star right I mean like likewise I can
+define<00:14:56.360><c> an</c><00:14:56.440><c> optimal</c><00:14:56.800><c> value</c><00:14:57.040><c> function</c><00:14:57.320><c> for</c>
+
+00:14:58.030 --> 00:14:58.040 align:start position:0%
+define an optimal value function for
+ 
+
+00:14:58.040 --> 00:14:59.949 align:start position:0%
+define an optimal value function for
+Q<00:14:59.040><c> what</c><00:14:59.120><c> would</c><00:14:59.240><c> be</c><00:14:59.360><c> the</c><00:14:59.440><c> optimal</c><00:14:59.759><c> value</c>
+
+00:14:59.949 --> 00:14:59.959 align:start position:0%
+Q what would be the optimal value
+ 
+
+00:14:59.959 --> 00:15:27.949 align:start position:0%
+Q what would be the optimal value
+function<00:15:00.199><c> for</c>
+
+00:15:27.949 --> 00:15:27.959 align:start position:0%
+ 
+ 
+
+00:15:27.959 --> 00:15:34.030 align:start position:0%
+ 
+Q
+
+00:15:34.030 --> 00:15:34.040 align:start position:0%
+ 
+ 
+
+00:15:34.040 --> 00:15:57.910 align:start position:0%
+ 
+H
+
+00:15:57.910 --> 00:15:57.920 align:start position:0%
+ 
+ 
+
+00:15:57.920 --> 00:16:00.309 align:start position:0%
+ 
+sorry
+
+00:16:00.309 --> 00:16:00.319 align:start position:0%
+sorry
+ 
+
+00:16:00.319 --> 00:16:27.910 align:start position:0%
+sorry
+s
+
+00:16:27.910 --> 00:16:27.920 align:start position:0%
+ 
+ 
+
+00:16:27.920 --> 00:16:37.509 align:start position:0%
+ 
+Comm
+
+00:16:37.509 --> 00:16:37.519 align:start position:0%
+ 
+ 
+
+00:16:37.519 --> 00:16:39.269 align:start position:0%
+ 
+something<00:16:37.920><c> sound</c><00:16:38.160><c> doesn't</c><00:16:38.600><c> sound</c><00:16:39.000><c> right</c>
+
+00:16:39.269 --> 00:16:39.279 align:start position:0%
+something sound doesn't sound right
+ 
+
+00:16:39.279 --> 00:16:43.790 align:start position:0%
+something sound doesn't sound right
+right<00:16:39.880><c> so</c><00:16:40.040><c> what</c><00:16:40.120><c> is</c><00:16:40.360><c> problem</c>
+
+00:16:43.790 --> 00:16:43.800 align:start position:0%
+ 
+ 
+
+00:16:43.800 --> 00:16:54.949 align:start position:0%
+ 
+here<00:16:44.800><c> so</c><00:16:44.959><c> we</c><00:16:45.079><c> need</c><00:16:45.199><c> to</c><00:16:45.360><c> put</c><00:16:45.600><c> that</c><00:16:45.839><c> Pi</c><00:16:46.079><c> thing</c>
+
+00:16:54.949 --> 00:16:54.959 align:start position:0%
+ 
+ 
+
+00:16:54.959 --> 00:16:57.829 align:start position:0%
+ 
+here
+
+00:16:57.829 --> 00:16:57.839 align:start position:0%
+here
+ 
+
+00:16:57.839 --> 00:17:17.350 align:start position:0%
+here
+right
+
+00:17:17.350 --> 00:17:17.360 align:start position:0%
+ 
+ 
+
+00:17:17.360 --> 00:17:18.870 align:start position:0%
+ 
+right<00:17:17.679><c> so</c><00:17:17.959><c> what</c><00:17:18.079><c> I</c><00:17:18.280><c> what</c><00:17:18.360><c> I</c><00:17:18.439><c> want</c><00:17:18.600><c> you</c><00:17:18.720><c> to</c>
+
+00:17:18.870 --> 00:17:18.880 align:start position:0%
+right so what I what I want you to
+ 
+
+00:17:18.880 --> 00:17:21.150 align:start position:0%
+right so what I what I want you to
+appreciate<00:17:19.360><c> here</c><00:17:19.520><c> is</c><00:17:19.720><c> that</c><00:17:20.640><c> even</c><00:17:20.880><c> though</c><00:17:21.000><c> I'm</c>
+
+00:17:21.150 --> 00:17:21.160 align:start position:0%
+appreciate here is that even though I'm
+ 
+
+00:17:21.160 --> 00:17:22.909 align:start position:0%
+appreciate here is that even though I'm
+talking<00:17:21.360><c> about</c><00:17:21.559><c> optimal</c><00:17:22.000><c> policies</c><00:17:22.480><c> I</c><00:17:22.600><c> still</c>
+
+00:17:22.909 --> 00:17:22.919 align:start position:0%
+talking about optimal policies I still
+ 
+
+00:17:22.919 --> 00:17:27.830 align:start position:0%
+talking about optimal policies I still
+the<00:17:23.039><c> first</c><00:17:23.240><c> action</c><00:17:23.480><c> I</c><00:17:23.640><c> take</c><00:17:23.799><c> is</c>
+
+00:17:27.830 --> 00:17:27.840 align:start position:0%
+ 
+ 
+
+00:17:27.840 --> 00:17:29.510 align:start position:0%
+ 
+here
+
+00:17:29.510 --> 00:17:29.520 align:start position:0%
+here
+ 
+
+00:17:29.520 --> 00:17:31.310 align:start position:0%
+here
+right<00:17:29.679><c> so</c><00:17:29.919><c> first</c><00:17:30.160><c> action</c><00:17:30.360><c> I</c><00:17:30.520><c> take</c><00:17:30.679><c> is</c><00:17:30.840><c> always</c><00:17:31.120><c> a</c>
+
+00:17:31.310 --> 00:17:31.320 align:start position:0%
+right so first action I take is always a
+ 
+
+00:17:31.320 --> 00:17:32.950 align:start position:0%
+right so first action I take is always a
+whether<00:17:31.480><c> I'm</c><00:17:31.640><c> talking</c><00:17:31.840><c> about</c><00:17:32.280><c> optimal</c><00:17:32.840><c> so</c>
+
+00:17:32.950 --> 00:17:32.960 align:start position:0%
+whether I'm talking about optimal so
+ 
+
+00:17:32.960 --> 00:17:34.990 align:start position:0%
+whether I'm talking about optimal so
+it's<00:17:33.160><c> only</c><00:17:33.559><c> after</c><00:17:33.919><c> I</c><00:17:34.080><c> take</c><00:17:34.320><c> a</c><00:17:34.559><c> I</c><00:17:34.679><c> behave</c>
+
+00:17:34.990 --> 00:17:35.000 align:start position:0%
+it's only after I take a I behave
+ 
+
+00:17:35.000 --> 00:17:37.789 align:start position:0%
+it's only after I take a I behave
+optimally<00:17:35.760><c> so</c><00:17:35.960><c> that</c><00:17:36.039><c> is</c><00:17:36.200><c> why</c><00:17:36.360><c> this</c><00:17:36.520><c> Max</c><00:17:36.880><c> is</c>
+
+00:17:37.789 --> 00:17:37.799 align:start position:0%
+optimally so that is why this Max is
+ 
+
+00:17:37.799 --> 00:17:39.789 align:start position:0%
+optimally so that is why this Max is
+after<00:17:38.280><c> in</c><00:17:38.400><c> fact</c><00:17:38.600><c> I</c><00:17:38.720><c> can</c><00:17:38.840><c> remove</c><00:17:39.120><c> the</c><00:17:39.240><c> Max</c><00:17:39.520><c> from</c>
+
+00:17:39.789 --> 00:17:39.799 align:start position:0%
+after in fact I can remove the Max from
+ 
+
+00:17:39.799 --> 00:17:47.310 align:start position:0%
+after in fact I can remove the Max from
+here<00:17:40.600><c> and</c><00:17:40.720><c> I</c><00:17:40.840><c> can</c><00:17:40.960><c> insert</c>
+
+00:17:47.310 --> 00:17:47.320 align:start position:0%
+ 
+ 
+
+00:17:47.320 --> 00:17:49.789 align:start position:0%
+ 
+it<00:17:48.320><c> anything</c><00:17:48.640><c> that</c><00:17:48.760><c> comes</c><00:17:49.000><c> before</c><00:17:49.280><c> that</c><00:17:49.440><c> is</c>
+
+00:17:49.789 --> 00:17:49.799 align:start position:0%
+it anything that comes before that is
+ 
+
+00:17:49.799 --> 00:17:52.270 align:start position:0%
+it anything that comes before that is
+not<00:17:49.960><c> influenced</c><00:17:50.440><c> by</c><00:17:50.559><c> the</c><00:17:50.919><c> max</c><00:17:51.919><c> right</c><00:17:52.080><c> because</c>
+
+00:17:52.270 --> 00:17:52.280 align:start position:0%
+not influenced by the max right because
+ 
+
+00:17:52.280 --> 00:17:54.549 align:start position:0%
+not influenced by the max right because
+I<00:17:52.400><c> take</c><00:17:52.559><c> a</c><00:17:52.640><c> fixed</c><00:17:53.000><c> action</c><00:17:53.320><c> a</c><00:17:54.200><c> okay</c><00:17:54.360><c> this</c><00:17:54.440><c> is</c>
+
+00:17:54.549 --> 00:17:54.559 align:start position:0%
+I take a fixed action a okay this is
+ 
+
+00:17:54.559 --> 00:17:55.750 align:start position:0%
+I take a fixed action a okay this is
+something<00:17:54.799><c> which</c><00:17:54.960><c> you</c><00:17:55.080><c> have</c><00:17:55.200><c> to</c><00:17:55.320><c> keep</c><00:17:55.440><c> in</c><00:17:55.559><c> mind</c>
+
+00:17:55.750 --> 00:17:55.760 align:start position:0%
+something which you have to keep in mind
+ 
+
+00:17:55.760 --> 00:17:58.190 align:start position:0%
+something which you have to keep in mind
+so<00:17:55.880><c> whenever</c><00:17:56.159><c> you</c><00:17:56.360><c> talk</c><00:17:56.559><c> about</c><00:17:56.840><c> Q</c><00:17:57.120><c> star</c><00:17:57.919><c> s</c>
+
+00:17:58.190 --> 00:17:58.200 align:start position:0%
+so whenever you talk about Q star s
+ 
+
+00:17:58.200 --> 00:17:59.430 align:start position:0%
+so whenever you talk about Q star s
+comma<00:17:58.520><c> a</c>
+
+00:17:59.430 --> 00:17:59.440 align:start position:0%
+comma a
+ 
+
+00:17:59.440 --> 00:18:02.350 align:start position:0%
+comma a
+right<00:18:00.400><c> the</c><00:18:00.559><c> a</c><00:18:00.720><c> is</c><00:18:00.840><c> still</c>
+
+00:18:02.350 --> 00:18:02.360 align:start position:0%
+right the a is still
+ 
+
+00:18:02.360 --> 00:18:05.990 align:start position:0%
+right the a is still
+fixed<00:18:03.360><c> it</c><00:18:03.559><c> might</c><00:18:03.799><c> not</c><00:18:03.960><c> be</c><00:18:04.120><c> the</c><00:18:04.240><c> best</c><00:18:04.480><c> a</c><00:18:04.679><c> to</c>
+
+00:18:05.990 --> 00:18:06.000 align:start position:0%
+fixed it might not be the best a to
+ 
+
+00:18:06.000 --> 00:18:08.270 align:start position:0%
+fixed it might not be the best a to
+do<00:18:07.000><c> right</c><00:18:07.400><c> in</c>
+
+00:18:08.270 --> 00:18:08.280 align:start position:0%
+do right in
+ 
+
+00:18:08.280 --> 00:18:11.669 align:start position:0%
+do right in
+fact<00:18:09.280><c> I</c><00:18:09.400><c> can</c><00:18:09.640><c> have</c><00:18:09.799><c> a</c><00:18:10.000><c> qar</c><00:18:10.520><c> a</c><00:18:10.679><c> defined</c><00:18:11.039><c> for</c><00:18:11.480><c> this</c>
+
+00:18:11.669 --> 00:18:11.679 align:start position:0%
+fact I can have a qar a defined for this
+ 
+
+00:18:11.679 --> 00:18:15.270 align:start position:0%
+fact I can have a qar a defined for this
+action
+
+00:18:15.270 --> 00:18:15.280 align:start position:0%
+ 
+ 
+
+00:18:15.280 --> 00:18:17.789 align:start position:0%
+ 
+here<00:18:16.280><c> right</c><00:18:16.440><c> I</c><00:18:16.520><c> can</c><00:18:16.640><c> have</c><00:18:16.760><c> a</c><00:18:16.840><c> qar</c><00:18:17.280><c> a</c><00:18:17.480><c> defined</c>
+
+00:18:17.789 --> 00:18:17.799 align:start position:0%
+here right I can have a qar a defined
+ 
+
+00:18:17.799 --> 00:18:19.630 align:start position:0%
+here right I can have a qar a defined
+for<00:18:18.200><c> this</c><00:18:18.360><c> action</c><00:18:18.720><c> also</c><00:18:19.000><c> for</c><00:18:19.159><c> each</c><00:18:19.360><c> one</c><00:18:19.480><c> of</c>
+
+00:18:19.630 --> 00:18:19.640 align:start position:0%
+for this action also for each one of
+ 
+
+00:18:19.640 --> 00:18:24.430 align:start position:0%
+for this action also for each one of
+these<00:18:19.799><c> actions</c><00:18:20.120><c> I</c><00:18:20.200><c> can</c><00:18:20.360><c> have</c><00:18:20.480><c> a</c><00:18:21.039><c> Q</c><00:18:21.320><c> star</c>
+
+00:18:24.430 --> 00:18:24.440 align:start position:0%
+ 
+ 
+
+00:18:24.440 --> 00:18:27.110 align:start position:0%
+ 
+defined<00:18:25.440><c> right</c><00:18:25.600><c> you</c><00:18:25.679><c> see</c><00:18:25.880><c> that</c><00:18:26.240><c> so</c><00:18:26.440><c> the</c><00:18:26.559><c> Q</c><00:18:26.799><c> star</c>
+
+00:18:27.110 --> 00:18:27.120 align:start position:0%
+defined right you see that so the Q star
+ 
+
+00:18:27.120 --> 00:18:30.070 align:start position:0%
+defined right you see that so the Q star
+of<00:18:27.440><c> the</c><00:18:27.559><c> down</c><00:18:27.840><c> action</c><00:18:28.159><c> will</c><00:18:28.320><c> essentially</c><00:18:29.080><c> be</c>
+
+00:18:30.070 --> 00:18:30.080 align:start position:0%
+of the down action will essentially be
+ 
+
+00:18:30.080 --> 00:18:31.909 align:start position:0%
+of the down action will essentially be
+minus1
+
+00:18:31.909 --> 00:18:31.919 align:start position:0%
+minus1
+ 
+
+00:18:31.919 --> 00:18:35.070 align:start position:0%
+minus1
+plus<00:18:32.919><c> V</c><00:18:33.159><c> Star</c><00:18:33.440><c> of</c><00:18:33.600><c> going</c><00:18:33.799><c> from</c><00:18:34.000><c> here</c><00:18:34.159><c> to</c><00:18:34.280><c> the</c>
+
+00:18:35.070 --> 00:18:35.080 align:start position:0%
+plus V Star of going from here to the
+ 
+
+00:18:35.080 --> 00:18:37.430 align:start position:0%
+plus V Star of going from here to the
+goal<00:18:36.080><c> right</c><00:18:36.200><c> and</c><00:18:36.320><c> the</c><00:18:36.400><c> Q</c><00:18:36.600><c> star</c><00:18:36.840><c> of</c><00:18:36.960><c> this</c><00:18:37.120><c> action</c>
+
+00:18:37.430 --> 00:18:37.440 align:start position:0%
+goal right and the Q star of this action
+ 
+
+00:18:37.440 --> 00:18:39.470 align:start position:0%
+goal right and the Q star of this action
+will
+
+00:18:39.470 --> 00:18:39.480 align:start position:0%
+will
+ 
+
+00:18:39.480 --> 00:18:44.510 align:start position:0%
+will
+be<00:18:40.480><c> minus1</c><00:18:41.360><c> plus</c><00:18:42.360><c> the</c><00:18:42.600><c> V</c><00:18:42.840><c> Star</c><00:18:43.120><c> of</c><00:18:43.280><c> going</c><00:18:43.600><c> here</c>
+
+00:18:44.510 --> 00:18:44.520 align:start position:0%
+be minus1 plus the V Star of going here
+ 
+
+00:18:44.520 --> 00:18:46.630 align:start position:0%
+be minus1 plus the V Star of going here
+assuming<00:18:44.960><c> it</c><00:18:45.000><c> is</c><00:18:45.240><c> deterministic</c><00:18:46.240><c> otherwise</c>
+
+00:18:46.630 --> 00:18:46.640 align:start position:0%
+assuming it is deterministic otherwise
+ 
+
+00:18:46.640 --> 00:18:48.990 align:start position:0%
+assuming it is deterministic otherwise
+it<00:18:46.720><c> will</c>
+
+00:18:48.990 --> 00:18:49.000 align:start position:0%
+ 
+ 
+
+00:18:49.000 --> 00:18:52.510 align:start position:0%
+ 
+be9<00:18:50.000><c> -</c><00:18:50.320><c> 1</c><00:18:50.520><c> +.9</c><00:18:51.320><c> *</c><00:18:51.600><c> the</c><00:18:51.720><c> value</c><00:18:51.960><c> of</c><00:18:52.080><c> going</c><00:18:52.280><c> from</c>
+
+00:18:52.510 --> 00:18:52.520 align:start position:0%
+be9 - 1 +.9 * the value of going from
+ 
+
+00:18:52.520 --> 00:18:54.190 align:start position:0%
+be9 - 1 +.9 * the value of going from
+here<00:18:52.640><c> and</c><00:18:52.799><c> 0.1</c><00:18:53.200><c> *</c><00:18:53.480><c> the</c><00:18:53.559><c> value</c><00:18:53.760><c> of</c><00:18:53.880><c> going</c><00:18:54.039><c> from</c>
+
+00:18:54.190 --> 00:18:54.200 align:start position:0%
+here and 0.1 * the value of going from
+ 
+
+00:18:54.200 --> 00:18:56.789 align:start position:0%
+here and 0.1 * the value of going from
+it<00:18:54.320><c> if</c><00:18:54.440><c> it</c><00:18:54.520><c> is</c><00:18:54.600><c> stochastic</c><00:18:55.240><c> right</c><00:18:55.400><c> so</c><00:18:56.280><c> so</c><00:18:56.520><c> I</c><00:18:56.600><c> can</c>
+
+00:18:56.789 --> 00:18:56.799 align:start position:0%
+it if it is stochastic right so so I can
+ 
+
+00:18:56.799 --> 00:18:58.870 align:start position:0%
+it if it is stochastic right so so I can
+think<00:18:56.960><c> of</c><00:18:57.120><c> defining</c><00:18:57.559><c> Q</c><00:18:57.799><c> star</c><00:18:58.080><c> for</c><00:18:58.320><c> even</c>
+
+00:18:58.870 --> 00:18:58.880 align:start position:0%
+think of defining Q star for even
+ 
+
+00:18:58.880 --> 00:19:00.070 align:start position:0%
+think of defining Q star for even
+optimal<00:18:59.200><c> action</c><00:18:59.480><c> this</c><00:18:59.559><c> is</c><00:18:59.679><c> one</c><00:18:59.760><c> thing</c><00:18:59.880><c> which</c><00:19:00.000><c> I</c>
+
+00:19:00.070 --> 00:19:00.080 align:start position:0%
+optimal action this is one thing which I
+ 
+
+00:19:00.080 --> 00:19:01.630 align:start position:0%
+optimal action this is one thing which I
+want<00:19:00.159><c> to</c><00:19:00.240><c> keep</c><00:19:00.400><c> in</c><00:19:00.480><c> mind</c><00:19:00.640><c> so</c><00:19:00.760><c> it's</c><00:19:00.880><c> not</c><00:19:01.080><c> like</c><00:19:01.240><c> Q</c>
+
+00:19:01.630 --> 00:19:01.640 align:start position:0%
+want to keep in mind so it's not like Q
+ 
+
+00:19:01.640 --> 00:19:05.430 align:start position:0%
+want to keep in mind so it's not like Q
+is<00:19:01.720><c> defined</c><00:19:02.000><c> only</c><00:19:02.200><c> for</c><00:19:02.760><c> optimal</c><00:19:03.200><c> actions</c><00:19:04.440><c> okay</c>
+
+00:19:05.430 --> 00:19:05.440 align:start position:0%
+is defined only for optimal actions okay
+ 
+
+00:19:05.440 --> 00:19:07.990 align:start position:0%
+is defined only for optimal actions okay
+is<00:19:05.559><c> that</c><00:19:05.760><c> clear</c><00:19:06.320><c> okay</c><00:19:06.520><c> great</c><00:19:07.200><c> so</c><00:19:07.400><c> now</c><00:19:07.600><c> we</c><00:19:07.760><c> have</c>
+
+00:19:07.990 --> 00:19:08.000 align:start position:0%
+is that clear okay great so now we have
+ 
+
+00:19:08.000 --> 00:19:10.110 align:start position:0%
+is that clear okay great so now we have
+these<00:19:08.240><c> things</c><00:19:08.880><c> so</c><00:19:09.120><c> let</c><00:19:09.240><c> us</c><00:19:09.440><c> try</c><00:19:09.640><c> to</c><00:19:09.760><c> see</c><00:19:10.000><c> what</c>
+
+00:19:10.110 --> 00:19:10.120 align:start position:0%
+these things so let us try to see what
+ 
+
+00:19:10.120 --> 00:19:13.750 align:start position:0%
+these things so let us try to see what
+we<00:19:10.240><c> can</c><00:19:10.440><c> do</c><00:19:11.280><c> so</c><00:19:11.520><c> I</c><00:19:11.600><c> want</c><00:19:11.760><c> to</c><00:19:11.919><c> do</c><00:19:12.120><c> V</c><00:19:12.400><c> Star</c><00:19:12.760><c> of</c><00:19:13.000><c> s</c>
+
+00:19:13.750 --> 00:19:13.760 align:start position:0%
+we can do so I want to do V Star of s
+ 
+
+00:19:13.760 --> 00:19:17.710 align:start position:0%
+we can do so I want to do V Star of s
+right<00:19:14.760><c> I</c><00:19:14.880><c> want</c><00:19:15.039><c> to</c><00:19:15.120><c> find</c><00:19:15.320><c> V</c><00:19:15.520><c> Star</c><00:19:15.760><c> of</c>
+
+00:19:17.710 --> 00:19:17.720 align:start position:0%
+right I want to find V Star of
+ 
+
+00:19:17.720 --> 00:19:20.669 align:start position:0%
+right I want to find V Star of
+s<00:19:18.720><c> uh</c><00:19:18.880><c> so</c><00:19:19.120><c> what</c><00:19:19.240><c> would</c><00:19:19.440><c> V</c><00:19:19.679><c> Star</c><00:19:19.880><c> of</c><00:19:20.039><c> s</c><00:19:20.240><c> be</c><00:19:20.440><c> equal</c>
+
+00:19:20.669 --> 00:19:20.679 align:start position:0%
+s uh so what would V Star of s be equal
+ 
+
+00:19:20.679 --> 00:19:23.430 align:start position:0%
+s uh so what would V Star of s be equal
+to<00:19:21.280><c> you</c>
+
+00:19:23.430 --> 00:19:23.440 align:start position:0%
+to you
+ 
+
+00:19:23.440 --> 00:19:27.710 align:start position:0%
+to you
+think<00:19:24.440><c> in</c><00:19:24.600><c> terms</c><00:19:24.799><c> of</c><00:19:24.960><c> Q</c>
+
+00:19:27.710 --> 00:19:27.720 align:start position:0%
+ 
+ 
+
+00:19:27.720 --> 00:19:35.310 align:start position:0%
+ 
+star
+
+00:19:35.310 --> 00:19:35.320 align:start position:0%
+ 
+ 
+
+00:19:35.320 --> 00:19:37.470 align:start position:0%
+ 
+there's<00:19:35.480><c> no</c><00:19:35.679><c> P</c><00:19:35.919><c> here</c><00:19:36.840><c> so</c><00:19:36.960><c> what</c><00:19:37.039><c> do</c><00:19:37.080><c> you</c><00:19:37.159><c> think</c><00:19:37.320><c> V</c>
+
+00:19:37.470 --> 00:19:37.480 align:start position:0%
+there's no P here so what do you think V
+ 
+
+00:19:37.480 --> 00:19:57.630 align:start position:0%
+there's no P here so what do you think V
+Star<00:19:37.679><c> of</c><00:19:37.799><c> s</c><00:19:37.919><c> will</c><00:19:38.039><c> be</c><00:19:38.159><c> in</c><00:19:38.240><c> terms</c><00:19:38.440><c> of</c>
+
+00:19:57.630 --> 00:19:57.640 align:start position:0%
+ 
+ 
+
+00:19:57.640 --> 00:19:59.510 align:start position:0%
+ 
+qar
+
+00:19:59.510 --> 00:19:59.520 align:start position:0%
+qar
+ 
+
+00:19:59.520 --> 00:20:02.230 align:start position:0%
+qar
+so<00:19:59.720><c> what</c><00:19:59.840><c> does</c><00:20:00.000><c> qar</c><00:20:00.440><c> tell</c><00:20:00.720><c> me</c><00:20:01.720><c> if</c><00:20:01.840><c> I</c><00:20:02.039><c> take</c>
+
+00:20:02.230 --> 00:20:02.240 align:start position:0%
+so what does qar tell me if I take
+ 
+
+00:20:02.240 --> 00:20:04.390 align:start position:0%
+so what does qar tell me if I take
+action<00:20:02.480><c> a</c><00:20:02.640><c> and</c><00:20:02.799><c> behave</c><00:20:03.080><c> optimally</c>
+
+00:20:04.390 --> 00:20:04.400 align:start position:0%
+action a and behave optimally
+ 
+
+00:20:04.400 --> 00:20:07.190 align:start position:0%
+action a and behave optimally
+thereafter<00:20:05.400><c> right</c><00:20:05.720><c> so</c><00:20:05.960><c> what</c><00:20:06.200><c> can</c><00:20:06.400><c> wear</c><00:20:06.919><c> B</c><00:20:07.159><c> I</c>
+
+00:20:07.190 --> 00:20:07.200 align:start position:0%
+thereafter right so what can wear B I
+ 
+
+00:20:07.200 --> 00:20:08.310 align:start position:0%
+thereafter right so what can wear B I
+mean<00:20:07.360><c> that</c><00:20:07.440><c> is</c><00:20:07.559><c> essentially</c><00:20:07.919><c> behaving</c>
+
+00:20:08.310 --> 00:20:08.320 align:start position:0%
+mean that is essentially behaving
+ 
+
+00:20:08.320 --> 00:20:10.789 align:start position:0%
+mean that is essentially behaving
+optimally<00:20:08.799><c> from</c><00:20:09.000><c> the</c><00:20:09.120><c> current</c><00:20:09.720><c> state</c><00:20:10.720><c> right</c>
+
+00:20:10.789 --> 00:20:10.799 align:start position:0%
+optimally from the current state right
+ 
+
+00:20:10.799 --> 00:20:13.230 align:start position:0%
+optimally from the current state right
+so<00:20:10.919><c> I'm</c><00:20:11.080><c> going</c><00:20:11.200><c> to</c><00:20:11.360><c> look</c><00:20:11.720><c> at</c><00:20:12.720><c> okay</c><00:20:12.919><c> which</c><00:20:13.039><c> one</c>
+
+00:20:13.230 --> 00:20:13.240 align:start position:0%
+so I'm going to look at okay which one
+ 
+
+00:20:13.240 --> 00:20:14.430 align:start position:0%
+so I'm going to look at okay which one
+Whatever<00:20:13.600><c> gives</c>
+
+00:20:14.430 --> 00:20:14.440 align:start position:0%
+Whatever gives
+ 
+
+00:20:14.440 --> 00:20:17.310 align:start position:0%
+Whatever gives
+me<00:20:15.440><c> the</c><00:20:15.600><c> best</c><00:20:15.880><c> reward</c><00:20:16.159><c> on</c><00:20:16.360><c> taking</c><00:20:16.720><c> a</c><00:20:17.000><c> and</c><00:20:17.159><c> then</c>
+
+00:20:17.310 --> 00:20:17.320 align:start position:0%
+me the best reward on taking a and then
+ 
+
+00:20:17.320 --> 00:20:19.310 align:start position:0%
+me the best reward on taking a and then
+behaving<00:20:17.679><c> optimally</c>
+
+00:20:19.310 --> 00:20:19.320 align:start position:0%
+behaving optimally
+ 
+
+00:20:19.320 --> 00:20:21.190 align:start position:0%
+behaving optimally
+thereafter<00:20:20.320><c> right</c><00:20:20.440><c> so</c><00:20:20.600><c> think</c><00:20:20.799><c> about</c><00:20:21.039><c> what</c>
+
+00:20:21.190 --> 00:20:21.200 align:start position:0%
+thereafter right so think about what
+ 
+
+00:20:21.200 --> 00:20:22.590 align:start position:0%
+thereafter right so think about what
+this<00:20:21.360><c> expression</c><00:20:21.720><c> is</c><00:20:21.960><c> right</c><00:20:22.120><c> this</c><00:20:22.240><c> expression</c>
+
+00:20:22.590 --> 00:20:22.600 align:start position:0%
+this expression is right this expression
+ 
+
+00:20:22.600 --> 00:20:24.590 align:start position:0%
+this expression is right this expression
+is<00:20:22.760><c> essentially</c><00:20:23.679><c> okay</c><00:20:23.840><c> I</c><00:20:24.000><c> behave</c><00:20:24.280><c> according</c>
+
+00:20:24.590 --> 00:20:24.600 align:start position:0%
+is essentially okay I behave according
+ 
+
+00:20:24.600 --> 00:20:27.630 align:start position:0%
+is essentially okay I behave according
+to<00:20:24.760><c> a</c><00:20:25.520><c> and</c><00:20:25.799><c> after</c><00:20:26.039><c> that</c><00:20:26.200><c> I</c><00:20:26.320><c> behave</c>
+
+00:20:27.630 --> 00:20:27.640 align:start position:0%
+to a and after that I behave
+ 
+
+00:20:27.640 --> 00:20:30.630 align:start position:0%
+to a and after that I behave
+optimally
+
+00:20:30.630 --> 00:20:30.640 align:start position:0%
+optimally
+ 
+
+00:20:30.640 --> 00:20:32.909 align:start position:0%
+optimally
+right<00:20:30.799><c> so</c><00:20:30.960><c> that</c><00:20:31.080><c> is</c><00:20:31.200><c> essentially</c><00:20:31.640><c> this</c>
+
+00:20:32.909 --> 00:20:32.919 align:start position:0%
+right so that is essentially this
+ 
+
+00:20:32.919 --> 00:20:35.630 align:start position:0%
+right so that is essentially this
+expression<00:20:33.919><c> right</c><00:20:34.080><c> and</c><00:20:34.200><c> I'm</c><00:20:34.360><c> taking</c><00:20:34.559><c> a</c><00:20:34.679><c> Max</c>
+
+00:20:35.630 --> 00:20:35.640 align:start position:0%
+expression right and I'm taking a Max
+ 
+
+00:20:35.640 --> 00:20:38.990 align:start position:0%
+expression right and I'm taking a Max
+here<00:20:36.640><c> which</c><00:20:36.760><c> essentially</c><00:20:37.120><c> means</c><00:20:37.360><c> that</c><00:20:38.000><c> okay</c>
+
+00:20:38.990 --> 00:20:39.000 align:start position:0%
+here which essentially means that okay
+ 
+
+00:20:39.000 --> 00:20:40.789 align:start position:0%
+here which essentially means that okay
+which<00:20:39.159><c> is</c><00:20:39.320><c> the</c><00:20:39.480><c> action</c><00:20:39.760><c> that</c><00:20:39.919><c> gives</c><00:20:40.120><c> me</c><00:20:40.360><c> this</c>
+
+00:20:40.789 --> 00:20:40.799 align:start position:0%
+which is the action that gives me this
+ 
+
+00:20:40.799 --> 00:20:42.549 align:start position:0%
+which is the action that gives me this
+the<00:20:40.960><c> best</c><00:20:41.159><c> of</c><00:20:41.360><c> this</c>
+
+00:20:42.549 --> 00:20:42.559 align:start position:0%
+the best of this
+ 
+
+00:20:42.559 --> 00:20:44.750 align:start position:0%
+the best of this
+expression<00:20:43.559><c> and</c><00:20:43.799><c> that</c><00:20:43.960><c> I</c><00:20:44.080><c> can't</c><00:20:44.320><c> behave</c><00:20:44.640><c> more</c>
+
+00:20:44.750 --> 00:20:44.760 align:start position:0%
+expression and that I can't behave more
+ 
+
+00:20:44.760 --> 00:20:46.630 align:start position:0%
+expression and that I can't behave more
+optimally<00:20:45.200><c> than</c><00:20:45.360><c> that</c><00:20:45.559><c> because</c><00:20:46.280><c> it's</c><00:20:46.440><c> only</c>
+
+00:20:46.630 --> 00:20:46.640 align:start position:0%
+optimally than that because it's only
+ 
+
+00:20:46.640 --> 00:20:48.510 align:start position:0%
+optimally than that because it's only
+the<00:20:46.799><c> first</c><00:20:47.039><c> action</c><00:20:47.280><c> I</c><00:20:47.400><c> have</c><00:20:47.520><c> a</c><00:20:47.640><c> choice</c><00:20:47.960><c> here</c>
+
+00:20:48.510 --> 00:20:48.520 align:start position:0%
+the first action I have a choice here
+ 
+
+00:20:48.520 --> 00:20:49.870 align:start position:0%
+the first action I have a choice here
+after<00:20:48.760><c> that</c><00:20:48.919><c> I'm</c><00:20:49.080><c> assuming</c><00:20:49.440><c> I'm</c><00:20:49.559><c> behaving</c>
+
+00:20:49.870 --> 00:20:49.880 align:start position:0%
+after that I'm assuming I'm behaving
+ 
+
+00:20:49.880 --> 00:20:51.430 align:start position:0%
+after that I'm assuming I'm behaving
+optimally<00:20:50.360><c> whatever</c><00:20:50.640><c> is</c><00:20:50.720><c> the</c><00:20:50.840><c> optimal</c>
+
+00:20:51.430 --> 00:20:51.440 align:start position:0%
+optimally whatever is the optimal
+ 
+
+00:20:51.440 --> 00:20:53.390 align:start position:0%
+optimally whatever is the optimal
+Behavior<00:20:52.440><c> right</c><00:20:52.559><c> so</c><00:20:52.720><c> I'm</c><00:20:52.840><c> not</c><00:20:52.960><c> talking</c><00:20:53.200><c> about</c>
+
+00:20:53.390 --> 00:20:53.400 align:start position:0%
+Behavior right so I'm not talking about
+ 
+
+00:20:53.400 --> 00:20:54.789 align:start position:0%
+Behavior right so I'm not talking about
+recovering<00:20:53.760><c> the</c><00:20:53.880><c> optimal</c><00:20:54.159><c> Behavior</c><00:20:54.600><c> yet</c>
+
+00:20:54.789 --> 00:20:54.799 align:start position:0%
+recovering the optimal Behavior yet
+ 
+
+00:20:54.799 --> 00:20:56.510 align:start position:0%
+recovering the optimal Behavior yet
+right<00:20:54.919><c> I'm</c><00:20:55.039><c> only</c><00:20:55.240><c> talking</c><00:20:55.480><c> about</c><00:20:56.159><c> finding</c>
+
+00:20:56.510 --> 00:20:56.520 align:start position:0%
+right I'm only talking about finding
+ 
+
+00:20:56.520 --> 00:20:59.190 align:start position:0%
+right I'm only talking about finding
+what<00:20:56.640><c> the</c><00:20:56.760><c> optimal</c><00:20:57.080><c> value</c><00:20:57.360><c> function</c><00:20:57.679><c> is</c>
+
+00:20:59.190 --> 00:20:59.200 align:start position:0%
+what the optimal value function is
+ 
+
+00:20:59.200 --> 00:21:01.350 align:start position:0%
+what the optimal value function is
+right<00:20:59.400><c> I'm</c><00:20:59.559><c> assuming</c><00:21:00.000><c> after</c><00:21:00.799><c> action</c><00:21:01.080><c> a</c><00:21:01.240><c> I'm</c>
+
+00:21:01.350 --> 00:21:01.360 align:start position:0%
+right I'm assuming after action a I'm
+ 
+
+00:21:01.360 --> 00:21:03.110 align:start position:0%
+right I'm assuming after action a I'm
+behaving<00:21:01.679><c> optimally</c><00:21:02.360><c> so</c><00:21:02.520><c> now</c><00:21:02.679><c> the</c><00:21:02.760><c> only</c><00:21:02.960><c> thing</c>
+
+00:21:03.110 --> 00:21:03.120 align:start position:0%
+behaving optimally so now the only thing
+ 
+
+00:21:03.120 --> 00:21:05.430 align:start position:0%
+behaving optimally so now the only thing
+I<00:21:03.240><c> need</c><00:21:03.360><c> to</c><00:21:03.480><c> figure</c><00:21:03.720><c> out</c><00:21:03.880><c> is</c><00:21:04.039><c> what</c><00:21:04.159><c> is</c><00:21:04.320><c> action</c><00:21:04.600><c> a</c>
+
+00:21:05.430 --> 00:21:05.440 align:start position:0%
+I need to figure out is what is action a
+ 
+
+00:21:05.440 --> 00:21:07.510 align:start position:0%
+I need to figure out is what is action a
+and<00:21:05.600><c> I</c><00:21:05.720><c> need</c><00:21:05.880><c> to</c><00:21:06.120><c> pick</c><00:21:06.400><c> that</c><00:21:06.679><c> action</c><00:21:06.960><c> a</c><00:21:07.200><c> says</c>
+
+00:21:07.510 --> 00:21:07.520 align:start position:0%
+and I need to pick that action a says
+ 
+
+00:21:07.520 --> 00:21:09.590 align:start position:0%
+and I need to pick that action a says
+that<00:21:08.120><c> when</c><00:21:08.240><c> I</c><00:21:08.440><c> add</c><00:21:08.679><c> the</c><00:21:08.840><c> reward</c><00:21:09.159><c> for</c><00:21:09.360><c> taking</c>
+
+00:21:09.590 --> 00:21:09.600 align:start position:0%
+that when I add the reward for taking
+ 
+
+00:21:09.600 --> 00:21:12.510 align:start position:0%
+that when I add the reward for taking
+immediate<00:21:09.960><c> reward</c><00:21:10.240><c> for</c><00:21:10.440><c> taking</c><00:21:10.720><c> action</c><00:21:11.039><c> a</c><00:21:11.679><c> and</c>
+
+00:21:12.510 --> 00:21:12.520 align:start position:0%
+immediate reward for taking action a and
+ 
+
+00:21:12.520 --> 00:21:14.070 align:start position:0%
+immediate reward for taking action a and
+the<00:21:12.799><c> return</c><00:21:13.000><c> for</c><00:21:13.200><c> behaving</c><00:21:13.600><c> optimally</c>
+
+00:21:14.070 --> 00:21:14.080 align:start position:0%
+the return for behaving optimally
+ 
+
+00:21:14.080 --> 00:21:16.430 align:start position:0%
+the return for behaving optimally
+thereafter<00:21:14.559><c> I</c><00:21:14.679><c> get</c><00:21:14.840><c> the</c><00:21:15.120><c> most</c><00:21:16.120><c> right</c><00:21:16.200><c> so</c><00:21:16.360><c> this</c>
+
+00:21:16.430 --> 00:21:16.440 align:start position:0%
+thereafter I get the most right so this
+ 
+
+00:21:16.440 --> 00:21:18.269 align:start position:0%
+thereafter I get the most right so this
+is<00:21:16.559><c> essentially</c><00:21:17.400><c> very</c><00:21:17.600><c> intuitive</c><00:21:18.039><c> way</c><00:21:18.159><c> of</c>
+
+00:21:18.269 --> 00:21:18.279 align:start position:0%
+is essentially very intuitive way of
+ 
+
+00:21:18.279 --> 00:21:19.870 align:start position:0%
+is essentially very intuitive way of
+defining<00:21:18.720><c> what</c><00:21:18.840><c> the</c><00:21:18.960><c> optimal</c><00:21:19.360><c> value</c><00:21:19.600><c> function</c>
+
+00:21:19.870 --> 00:21:19.880 align:start position:0%
+defining what the optimal value function
+ 
+
+00:21:19.880 --> 00:21:23.149 align:start position:0%
+defining what the optimal value function
+is<00:21:20.039><c> now</c><00:21:20.200><c> I</c><00:21:20.279><c> can</c><00:21:20.480><c> expand</c><00:21:21.400><c> this</c><00:21:22.400><c> I</c><00:21:22.559><c> can</c><00:21:22.720><c> say</c><00:21:22.919><c> it's</c>
+
+00:21:23.149 --> 00:21:23.159 align:start position:0%
+is now I can expand this I can say it's
+ 
+
+00:21:23.159 --> 00:21:25.070 align:start position:0%
+is now I can expand this I can say it's
+Max<00:21:23.520><c> over</c>
+
+00:21:25.070 --> 00:21:25.080 align:start position:0%
+Max over
+ 
+
+00:21:25.080 --> 00:21:46.350 align:start position:0%
+Max over
+a<00:21:26.080><c> summation</c><00:21:26.840><c> S</c><00:21:27.520><c> Prime</c>
+
+00:21:46.350 --> 00:21:46.360 align:start position:0%
+ 
+ 
+
+00:21:46.360 --> 00:21:48.510 align:start position:0%
+ 
+that's<00:21:46.559><c> what</c><00:21:46.679><c> Max</c><00:21:46.919><c> over</c><00:21:47.120><c> Pi</c><00:21:47.360><c> is</c><00:21:47.640><c> Right</c><00:21:47.880><c> Max</c><00:21:48.360><c> Pi</c>
+
+00:21:48.510 --> 00:21:48.520 align:start position:0%
+that's what Max over Pi is Right Max Pi
+ 
+
+00:21:48.520 --> 00:21:51.029 align:start position:0%
+that's what Max over Pi is Right Max Pi
+V<00:21:48.679><c> Pi</c><00:21:48.840><c> is</c><00:21:48.960><c> V</c>
+
+00:21:51.029 --> 00:21:51.039 align:start position:0%
+V Pi is V
+ 
+
+00:21:51.039 --> 00:21:57.510 align:start position:0%
+V Pi is V
+Star
+
+00:21:57.510 --> 00:21:57.520 align:start position:0%
+ 
+ 
+
+00:21:57.520 --> 00:22:03.070 align:start position:0%
+ 
+soar
+
+00:22:03.070 --> 00:22:03.080 align:start position:0%
+ 
+ 
+
+00:22:03.080 --> 00:22:05.750 align:start position:0%
+ 
+is<00:22:03.240><c> it</c><00:22:03.360><c> clear</c><00:22:03.559><c> how</c><00:22:03.679><c> we</c><00:22:03.799><c> got</c>
+
+00:22:05.750 --> 00:22:05.760 align:start position:0%
+is it clear how we got
+ 
+
+00:22:05.760 --> 00:22:09.310 align:start position:0%
+is it clear how we got
+that<00:22:06.760><c> right</c><00:22:07.240><c> so</c><00:22:07.520><c> this</c><00:22:07.640><c> is</c><00:22:07.799><c> called</c><00:22:08.080><c> the</c><00:22:08.400><c> belman</c>
+
+00:22:09.310 --> 00:22:09.320 align:start position:0%
+that right so this is called the belman
+ 
+
+00:22:09.320 --> 00:22:27.510 align:start position:0%
+that right so this is called the belman
+optimality<00:22:09.960><c> equation</c><00:22:10.320><c> for</c>
+
+00:22:27.510 --> 00:22:27.520 align:start position:0%
+ 
+ 
+
+00:22:27.520 --> 00:22:37.590 align:start position:0%
+ 
+v
+
+00:22:37.590 --> 00:22:37.600 align:start position:0%
+ 
+ 
+
+00:22:37.600 --> 00:22:39.190 align:start position:0%
+ 
+likewise<00:22:37.960><c> you</c><00:22:38.039><c> can</c><00:22:38.200><c> write</c><00:22:38.320><c> a</c><00:22:38.440><c> b</c><00:22:38.760><c> optimality</c>
+
+00:22:39.190 --> 00:22:39.200 align:start position:0%
+likewise you can write a b optimality
+ 
+
+00:22:39.200 --> 00:22:40.990 align:start position:0%
+likewise you can write a b optimality
+equation
+
+00:22:40.990 --> 00:22:41.000 align:start position:0%
+equation
+ 
+
+00:22:41.000 --> 00:22:46.870 align:start position:0%
+equation
+for<00:22:42.320><c> qar</c><00:22:43.400><c> qar</c><00:22:44.400><c> not</c><00:22:44.720><c> be</c><00:22:44.919><c> uni</c><00:22:45.640><c> ACR</c>
+
+00:22:46.870 --> 00:22:46.880 align:start position:0%
+for qar qar not be uni ACR
+ 
+
+00:22:46.880 --> 00:22:49.909 align:start position:0%
+for qar qar not be uni ACR
+all<00:22:47.880><c> they</c><00:22:48.039><c> have</c><00:22:48.159><c> to</c><00:22:48.320><c> be</c><00:22:48.640><c> why</c><00:22:48.799><c> not</c>
+
+00:22:49.909 --> 00:22:49.919 align:start position:0%
+all they have to be why not
+ 
+
+00:22:49.919 --> 00:22:57.430 align:start position:0%
+all they have to be why not
+unique<00:22:50.919><c> some</c><00:22:51.840><c> over</c>
+
+00:22:57.430 --> 00:22:57.440 align:start position:0%
+ 
+ 
+
+00:22:57.440 --> 00:23:00.710 align:start position:0%
+ 
+there
+
+00:23:00.710 --> 00:23:00.720 align:start position:0%
+ 
+ 
+
+00:23:00.720 --> 00:23:03.190 align:start position:0%
+ 
+why<00:23:00.880><c> would</c><00:23:01.080><c> it</c><00:23:02.080><c> some</c><00:23:02.520><c> policy</c><00:23:02.880><c> there's</c><00:23:03.080><c> no</c>
+
+00:23:03.190 --> 00:23:03.200 align:start position:0%
+why would it some policy there's no
+ 
+
+00:23:03.200 --> 00:23:04.510 align:start position:0%
+why would it some policy there's no
+question<00:23:03.400><c> of</c><00:23:03.480><c> some</c><00:23:03.720><c> policy</c><00:23:04.039><c> will</c><00:23:04.200><c> give</c><00:23:04.320><c> you</c><00:23:04.400><c> a</c>
+
+00:23:04.510 --> 00:23:04.520 align:start position:0%
+question of some policy will give you a
+ 
+
+00:23:04.520 --> 00:23:07.269 align:start position:0%
+question of some policy will give you a
+higher<00:23:04.760><c> policy</c><00:23:05.120><c> I</c><00:23:05.400><c> mean</c><00:23:06.400><c> why</c><00:23:06.760><c> I</c><00:23:06.919><c> given</c><00:23:07.080><c> you</c><00:23:07.200><c> all</c>
+
+00:23:07.269 --> 00:23:07.279 align:start position:0%
+higher policy I mean why I given you all
+ 
+
+00:23:07.279 --> 00:23:08.590 align:start position:0%
+higher policy I mean why I given you all
+the<00:23:07.360><c> optimal</c><00:23:07.679><c> policies</c><00:23:08.080><c> tell</c><00:23:08.200><c> me</c><00:23:08.360><c> which</c><00:23:08.480><c> one</c>
+
+00:23:08.590 --> 00:23:08.600 align:start position:0%
+the optimal policies tell me which one
+ 
+
+00:23:08.600 --> 00:23:12.990 align:start position:0%
+the optimal policies tell me which one
+would<00:23:08.760><c> do</c>
+
+00:23:12.990 --> 00:23:13.000 align:start position:0%
+ 
+ 
+
+00:23:13.000 --> 00:23:15.390 align:start position:0%
+ 
+that<00:23:14.000><c> so</c><00:23:14.200><c> just</c><00:23:14.360><c> just</c><00:23:14.559><c> think</c><00:23:14.720><c> about</c><00:23:14.880><c> it</c><00:23:15.080><c> if</c><00:23:15.240><c> that</c>
+
+00:23:15.390 --> 00:23:15.400 align:start position:0%
+that so just just think about it if that
+ 
+
+00:23:15.400 --> 00:23:16.990 align:start position:0%
+that so just just think about it if that
+is<00:23:15.600><c> some</c><00:23:15.880><c> policy</c><00:23:16.240><c> that</c><00:23:16.360><c> will</c><00:23:16.520><c> do</c><00:23:16.720><c> that</c><00:23:16.880><c> then</c>
+
+00:23:16.990 --> 00:23:17.000 align:start position:0%
+is some policy that will do that then
+ 
+
+00:23:17.000 --> 00:23:18.430 align:start position:0%
+is some policy that will do that then
+I'll<00:23:17.200><c> basically</c><00:23:17.520><c> change</c><00:23:17.720><c> the</c><00:23:17.880><c> action</c><00:23:18.120><c> to</c><00:23:18.320><c> that</c>
+
+00:23:18.430 --> 00:23:18.440 align:start position:0%
+I'll basically change the action to that
+ 
+
+00:23:18.440 --> 00:23:19.789 align:start position:0%
+I'll basically change the action to that
+I<00:23:18.520><c> mean</c><00:23:18.640><c> that</c><00:23:18.799><c> has</c><00:23:18.880><c> to</c><00:23:19.000><c> be</c><00:23:19.159><c> optimal</c><00:23:19.559><c> right</c><00:23:19.679><c> if</c>
+
+00:23:19.789 --> 00:23:19.799 align:start position:0%
+I mean that has to be optimal right if
+ 
+
+00:23:19.799 --> 00:23:22.950 align:start position:0%
+I mean that has to be optimal right if
+that<00:23:20.320><c> is</c><00:23:21.320><c> it's</c><00:23:21.559><c> going</c><00:23:21.840><c> right</c><00:23:22.080><c> is</c><00:23:22.559><c> doesn't</c><00:23:22.840><c> have</c>
+
+00:23:22.950 --> 00:23:22.960 align:start position:0%
+that is it's going right is doesn't have
+ 
+
+00:23:22.960 --> 00:23:25.149 align:start position:0%
+that is it's going right is doesn't have
+the<00:23:23.080><c> same</c><00:23:23.240><c> value</c><00:23:23.480><c> as</c><00:23:23.679><c> going</c><00:23:23.919><c> up</c><00:23:24.679><c> going</c><00:23:24.880><c> up</c><00:23:25.039><c> has</c>
+
+00:23:25.149 --> 00:23:25.159 align:start position:0%
+the same value as going up going up has
+ 
+
+00:23:25.159 --> 00:23:26.350 align:start position:0%
+the same value as going up going up has
+a<00:23:25.240><c> higher</c><00:23:25.440><c> value</c><00:23:25.640><c> than</c><00:23:25.799><c> going</c><00:23:26.039><c> right</c><00:23:26.240><c> then</c>
+
+00:23:26.350 --> 00:23:26.360 align:start position:0%
+a higher value than going right then
+ 
+
+00:23:26.360 --> 00:23:28.510 align:start position:0%
+a higher value than going right then
+going<00:23:26.559><c> up</c><00:23:26.760><c> has</c><00:23:26.840><c> to</c><00:23:26.960><c> be</c><00:23:27.080><c> optimal</c><00:23:27.960><c> going</c><00:23:28.200><c> right</c>
+
+00:23:28.510 --> 00:23:28.520 align:start position:0%
+going up has to be optimal going right
+ 
+
+00:23:28.520 --> 00:23:30.269 align:start position:0%
+going up has to be optimal going right
+cannot<00:23:28.720><c> be</c><00:23:28.840><c> optimal</c><00:23:29.240><c> because</c><00:23:29.760><c> then</c><00:23:29.919><c> if</c><00:23:30.000><c> I</c><00:23:30.120><c> do</c>
+
+00:23:30.269 --> 00:23:30.279 align:start position:0%
+cannot be optimal because then if I do
+ 
+
+00:23:30.279 --> 00:23:31.830 align:start position:0%
+cannot be optimal because then if I do
+the
+
+00:23:31.830 --> 00:23:31.840 align:start position:0%
+the
+ 
+
+00:23:31.840 --> 00:23:37.190 align:start position:0%
+the
+max<00:23:32.840><c> only</c><00:23:33.080><c> one</c><00:23:33.279><c> will</c><00:23:33.919><c> the</c><00:23:34.000><c> other</c><00:23:34.159><c> one</c><00:23:34.279><c> won't</c>
+
+00:23:37.190 --> 00:23:37.200 align:start position:0%
+ 
+ 
+
+00:23:37.200 --> 00:23:40.510 align:start position:0%
+ 
+appear<00:23:38.400><c> right</c><00:23:39.400><c> yeah</c><00:23:39.720><c> so</c><00:23:39.880><c> one</c><00:23:40.039><c> other</c><00:23:40.240><c> thing</c><00:23:40.400><c> so</c>
+
+00:23:40.510 --> 00:23:40.520 align:start position:0%
+appear right yeah so one other thing so
+ 
+
+00:23:40.520 --> 00:23:41.269 align:start position:0%
+appear right yeah so one other thing so
+I've<00:23:40.640><c> been</c><00:23:40.760><c> talking</c><00:23:40.960><c> only</c><00:23:41.120><c> about</c>
+
+00:23:41.269 --> 00:23:41.279 align:start position:0%
+I've been talking only about
+ 
+
+00:23:41.279 --> 00:23:43.750 align:start position:0%
+I've been talking only about
+deterministic<00:23:41.799><c> optimal</c><00:23:42.480><c> policies</c><00:23:43.480><c> right</c><00:23:43.640><c> I</c>
+
+00:23:43.750 --> 00:23:43.760 align:start position:0%
+deterministic optimal policies right I
+ 
+
+00:23:43.760 --> 00:23:46.110 align:start position:0%
+deterministic optimal policies right I
+said<00:23:44.000><c> there</c><00:23:44.559><c> are</c><00:23:45.559><c> like</c><00:23:45.679><c> there</c><00:23:45.760><c> are</c><00:23:45.880><c> 12</c>
+
+00:23:46.110 --> 00:23:46.120 align:start position:0%
+said there are like there are 12
+ 
+
+00:23:46.120 --> 00:23:47.830 align:start position:0%
+said there are like there are 12
+elements<00:23:46.440><c> and</c><00:23:46.559><c> there</c><00:23:46.640><c> are</c><00:23:46.799><c> two</c><00:23:46.960><c> options</c><00:23:47.400><c> there</c>
+
+00:23:47.830 --> 00:23:47.840 align:start position:0%
+elements and there are two options there
+ 
+
+00:23:47.840 --> 00:23:50.390 align:start position:0%
+elements and there are two options there
+they<00:23:48.080><c> not</c><00:23:48.279><c> be</c><00:23:49.000><c> so</c><00:23:49.200><c> as</c><00:23:49.400><c> long</c><00:23:49.640><c> as</c><00:23:49.919><c> I</c><00:23:50.080><c> have</c><00:23:50.240><c> a</c>
+
+00:23:50.390 --> 00:23:50.400 align:start position:0%
+they not be so as long as I have a
+ 
+
+00:23:50.400 --> 00:23:53.430 align:start position:0%
+they not be so as long as I have a
+policy<00:23:51.200><c> which</c><00:23:51.400><c> assigns</c><00:23:51.880><c> only</c><00:23:52.840><c> non-zero</c>
+
+00:23:53.430 --> 00:23:53.440 align:start position:0%
+policy which assigns only non-zero
+ 
+
+00:23:53.440 --> 00:23:55.950 align:start position:0%
+policy which assigns only non-zero
+probabilities<00:23:54.000><c> to</c><00:23:54.159><c> the</c><00:23:54.279><c> optimal</c>
+
+00:23:55.950 --> 00:23:55.960 align:start position:0%
+probabilities to the optimal
+ 
+
+00:23:55.960 --> 00:23:57.909 align:start position:0%
+probabilities to the optimal
+actions<00:23:56.960><c> right</c><00:23:57.120><c> that's</c><00:23:57.279><c> also</c><00:23:57.440><c> an</c><00:23:57.559><c> optimal</c>
+
+00:23:57.909 --> 00:23:57.919 align:start position:0%
+actions right that's also an optimal
+ 
+
+00:23:57.919 --> 00:23:59.070 align:start position:0%
+actions right that's also an optimal
+policy
+
+00:23:59.070 --> 00:23:59.080 align:start position:0%
+policy
+ 
+
+00:23:59.080 --> 00:24:00.909 align:start position:0%
+policy
+so<00:23:59.240><c> in</c><00:23:59.400><c> this</c><00:23:59.600><c> state</c><00:24:00.200><c> I</c><00:24:00.320><c> can</c><00:24:00.440><c> choose</c><00:24:00.720><c> with</c>
+
+00:24:00.909 --> 00:24:00.919 align:start position:0%
+so in this state I can choose with
+ 
+
+00:24:00.919 --> 00:24:03.190 align:start position:0%
+so in this state I can choose with
+probability<00:24:01.440><c> .5</c><00:24:01.960><c> to</c><00:24:02.120><c> go</c><00:24:02.320><c> up</c><00:24:02.559><c> or</c><00:24:02.760><c> probability</c>
+
+00:24:03.190 --> 00:24:03.200 align:start position:0%
+probability .5 to go up or probability
+ 
+
+00:24:03.200 --> 00:24:05.710 align:start position:0%
+probability .5 to go up or probability
+.5<00:24:03.600><c> to</c><00:24:03.760><c> go</c>
+
+00:24:05.710 --> 00:24:05.720 align:start position:0%
+.5 to go
+ 
+
+00:24:05.720 --> 00:24:09.269 align:start position:0%
+.5 to go
+right<00:24:06.720><c> right</c><00:24:06.840><c> so5</c><00:24:07.400><c> go</c><00:24:07.520><c> up5</c><00:24:08.080><c> go</c><00:24:08.279><c> right</c><00:24:09.080><c> that's</c>
+
+00:24:09.269 --> 00:24:09.279 align:start position:0%
+right right so5 go up5 go right that's
+ 
+
+00:24:09.279 --> 00:24:11.990 align:start position:0%
+right right so5 go up5 go right that's
+also<00:24:09.440><c> an</c><00:24:09.559><c> optimal</c><00:24:10.320><c> policy</c><00:24:11.320><c> right</c><00:24:11.480><c> it</c><00:24:11.600><c> could</c><00:24:11.760><c> be</c>
+
+00:24:11.990 --> 00:24:12.000 align:start position:0%
+also an optimal policy right it could be
+ 
+
+00:24:12.000 --> 00:24:13.909 align:start position:0%
+also an optimal policy right it could be
+any<00:24:12.400><c> combination</c><00:24:12.960><c> as</c><00:24:13.080><c> long</c><00:24:13.200><c> as</c><00:24:13.320><c> I</c><00:24:13.440><c> have</c><00:24:13.640><c> zero</c>
+
+00:24:13.909 --> 00:24:13.919 align:start position:0%
+any combination as long as I have zero
+ 
+
+00:24:13.919 --> 00:24:16.310 align:start position:0%
+any combination as long as I have zero
+probability<00:24:14.400><c> for</c><00:24:14.600><c> going</c><00:24:14.880><c> right</c><00:24:15.039><c> or</c><00:24:15.240><c> going</c>
+
+00:24:16.310 --> 00:24:16.320 align:start position:0%
+probability for going right or going
+ 
+
+00:24:16.320 --> 00:24:18.990 align:start position:0%
+probability for going right or going
+down<00:24:17.320><c> right</c><00:24:17.799><c> then</c><00:24:17.960><c> I'm</c><00:24:18.440><c> happy</c><00:24:18.720><c> then</c><00:24:18.840><c> it's</c><00:24:18.880><c> is</c>
+
+00:24:18.990 --> 00:24:19.000 align:start position:0%
+down right then I'm happy then it's is
+ 
+
+00:24:19.000 --> 00:24:21.590 align:start position:0%
+down right then I'm happy then it's is
+an<00:24:19.080><c> optimal</c><00:24:19.919><c> policy</c><00:24:20.919><c> right</c><00:24:21.039><c> so</c><00:24:21.200><c> there's</c><00:24:21.360><c> an</c>
+
+00:24:21.590 --> 00:24:21.600 align:start position:0%
+an optimal policy right so there's an
+ 
+
+00:24:21.600 --> 00:24:26.950 align:start position:0%
+an optimal policy right so there's an
+infinite<00:24:22.039><c> number</c><00:24:22.240><c> of</c><00:24:23.000><c> optimal</c>
+
+00:24:26.950 --> 00:24:26.960 align:start position:0%
+ 
+ 
+
+00:24:26.960 --> 00:24:29.590 align:start position:0%
+ 
+policies<00:24:27.960><c> hm</c><00:24:28.720><c> there's</c><00:24:29.000><c> infinite</c><00:24:29.320><c> number</c><00:24:29.480><c> of</c>
+
+00:24:29.590 --> 00:24:29.600 align:start position:0%
+policies hm there's infinite number of
+ 
+
+00:24:29.600 --> 00:24:33.389 align:start position:0%
+policies hm there's infinite number of
+optimal<00:24:29.919><c> policies</c><00:24:30.799><c> there</c><00:24:31.799><c> is</c><00:24:31.880><c> it</c><00:24:32.039><c> clear</c><00:24:33.039><c> okay</c>
+
+00:24:33.389 --> 00:24:33.399 align:start position:0%
+optimal policies there is it clear okay
+ 
+
+00:24:33.399 --> 00:24:34.669 align:start position:0%
+optimal policies there is it clear okay
+so<00:24:33.559><c> now</c><00:24:33.720><c> here</c><00:24:33.840><c> is</c><00:24:33.919><c> the</c><00:24:34.080><c> next</c><00:24:34.240><c> question</c><00:24:34.480><c> I</c><00:24:34.559><c> want</c>
+
+00:24:34.669 --> 00:24:34.679 align:start position:0%
+so now here is the next question I want
+ 
+
+00:24:34.679 --> 00:24:37.549 align:start position:0%
+so now here is the next question I want
+to<00:24:34.799><c> ask</c><00:24:35.200><c> so</c><00:24:35.440><c> given</c><00:24:35.720><c> a</c>
+
+00:24:37.549 --> 00:24:37.559 align:start position:0%
+to ask so given a
+ 
+
+00:24:37.559 --> 00:24:40.870 align:start position:0%
+to ask so given a
+policy<00:24:38.559><c> so</c><00:24:38.799><c> given</c><00:24:39.039><c> a</c><00:24:39.159><c> value</c><00:24:39.760><c> function</c><00:24:40.760><c> how</c>
+
+00:24:40.870 --> 00:24:40.880 align:start position:0%
+policy so given a value function how
+ 
+
+00:24:40.880 --> 00:24:57.310 align:start position:0%
+policy so given a value function how
+will<00:24:41.000><c> you</c><00:24:41.159><c> recover</c><00:24:41.480><c> a</c><00:24:41.720><c> optimal</c><00:24:42.120><c> policy</c><00:24:42.520><c> from</c>
+
+00:24:57.310 --> 00:24:57.320 align:start position:0%
+ 
+ 
+
+00:24:57.320 --> 00:25:01.669 align:start position:0%
+ 
+that
+
+00:25:01.669 --> 00:25:01.679 align:start position:0%
+ 
+ 
+
+00:25:01.679 --> 00:25:03.070 align:start position:0%
+ 
+I<00:25:01.799><c> give</c><00:25:01.880><c> you</c><00:25:02.039><c> V</c><00:25:02.240><c> Star</c><00:25:02.720><c> so</c><00:25:02.799><c> how</c><00:25:02.919><c> will</c><00:25:03.000><c> you</c>
+
+00:25:03.070 --> 00:25:03.080 align:start position:0%
+I give you V Star so how will you
+ 
+
+00:25:03.080 --> 00:25:09.350 align:start position:0%
+I give you V Star so how will you
+recover<00:25:03.360><c> an</c><00:25:03.440><c> optimal</c><00:25:03.799><c> policy</c><00:25:04.159><c> from</c>
+
+00:25:09.350 --> 00:25:09.360 align:start position:0%
+ 
+ 
+
+00:25:09.360 --> 00:25:12.070 align:start position:0%
+ 
+that<00:25:10.360><c> so</c><00:25:10.520><c> I</c><00:25:10.600><c> have</c><00:25:10.720><c> to</c><00:25:10.880><c> know</c><00:25:11.320><c> figure</c><00:25:11.559><c> out</c><00:25:11.840><c> what</c>
+
+00:25:12.070 --> 00:25:12.080 align:start position:0%
+that so I have to know figure out what
+ 
+
+00:25:12.080 --> 00:25:14.269 align:start position:0%
+that so I have to know figure out what
+action<00:25:12.399><c> I</c><00:25:12.480><c> have</c><00:25:12.600><c> to</c><00:25:12.760><c> take</c><00:25:12.919><c> in</c><00:25:13.080><c> each</c><00:25:13.279><c> state</c>
+
+00:25:14.269 --> 00:25:14.279 align:start position:0%
+action I have to take in each state
+ 
+
+00:25:14.279 --> 00:25:16.990 align:start position:0%
+action I have to take in each state
+right<00:25:14.760><c> and</c><00:25:14.880><c> I</c><00:25:15.000><c> have</c><00:25:15.120><c> to</c><00:25:15.279><c> take</c><00:25:15.600><c> that</c><00:25:16.000><c> action</c>
+
+00:25:16.990 --> 00:25:17.000 align:start position:0%
+right and I have to take that action
+ 
+
+00:25:17.000 --> 00:25:18.149 align:start position:0%
+right and I have to take that action
+that<00:25:17.159><c> achieves</c>
+
+00:25:18.149 --> 00:25:18.159 align:start position:0%
+that achieves
+ 
+
+00:25:18.159 --> 00:25:21.310 align:start position:0%
+that achieves
+the<00:25:19.159><c> the</c><00:25:19.320><c> max</c><00:25:20.159><c> right</c><00:25:20.600><c> so</c><00:25:20.760><c> what</c><00:25:20.840><c> do</c><00:25:20.919><c> I</c><00:25:21.039><c> mean</c><00:25:21.200><c> by</c>
+
+00:25:21.310 --> 00:25:21.320 align:start position:0%
+the the max right so what do I mean by
+ 
+
+00:25:21.320 --> 00:25:23.350 align:start position:0%
+the the max right so what do I mean by
+achieves<00:25:21.640><c> the</c><00:25:21.760><c> max</c><00:25:22.360><c> so</c><00:25:22.520><c> in</c><00:25:22.600><c> the</c><00:25:22.720><c> case</c><00:25:22.880><c> of</c><00:25:23.080><c> V</c>
+
+00:25:23.350 --> 00:25:23.360 align:start position:0%
+achieves the max so in the case of V
+ 
+
+00:25:23.360 --> 00:25:26.269 align:start position:0%
+achieves the max so in the case of V
+Star<00:25:24.039><c> I</c><00:25:24.120><c> should</c><00:25:24.520><c> take</c><00:25:24.640><c> an</c><00:25:24.880><c> action</c><00:25:25.840><c> figure</c><00:25:26.120><c> out</c>
+
+00:25:26.269 --> 00:25:26.279 align:start position:0%
+Star I should take an action figure out
+ 
+
+00:25:26.279 --> 00:25:29.510 align:start position:0%
+Star I should take an action figure out
+where<00:25:26.440><c> I</c><00:25:26.640><c> land</c><00:25:26.840><c> up</c><00:25:27.320><c> it</c>
+
+00:25:29.510 --> 00:25:29.520 align:start position:0%
+where I land up it
+ 
+
+00:25:29.520 --> 00:25:31.590 align:start position:0%
+where I land up it
+right<00:25:29.919><c> and</c><00:25:30.159><c> take</c><00:25:30.440><c> that</c><00:25:30.679><c> action</c><00:25:31.000><c> that</c><00:25:31.159><c> gives</c><00:25:31.360><c> me</c>
+
+00:25:31.590 --> 00:25:31.600 align:start position:0%
+right and take that action that gives me
+ 
+
+00:25:31.600 --> 00:25:35.230 align:start position:0%
+right and take that action that gives me
+the<00:25:32.360><c> max</c><00:25:32.760><c> over</c><00:25:33.080><c> that</c><00:25:33.919><c> right</c><00:25:34.640><c> so</c><00:25:34.799><c> what</c><00:25:34.960><c> I</c><00:25:35.080><c> mean</c>
+
+00:25:35.230 --> 00:25:35.240 align:start position:0%
+the max over that right so what I mean
+ 
+
+00:25:35.240 --> 00:25:36.909 align:start position:0%
+the max over that right so what I mean
+by<00:25:35.399><c> where</c><00:25:35.520><c> I</c><00:25:35.640><c> land</c><00:25:35.840><c> up</c><00:25:36.000><c> it</c><00:25:36.120><c> so</c><00:25:36.240><c> I</c><00:25:36.399><c> pick</c><00:25:36.640><c> some</c>
+
+00:25:36.909 --> 00:25:36.919 align:start position:0%
+by where I land up it so I pick some
+ 
+
+00:25:36.919 --> 00:25:44.430 align:start position:0%
+by where I land up it so I pick some
+action<00:25:37.799><c> right</c><00:25:38.399><c> then</c><00:25:38.559><c> I</c><00:25:38.760><c> sum</c><00:25:39.000><c> over</c><00:25:39.200><c> S</c>
+
+00:25:44.430 --> 00:25:44.440 align:start position:0%
+ 
+ 
+
+00:25:44.440 --> 00:25:54.310 align:start position:0%
+ 
+Prime
+
+00:25:54.310 --> 00:25:54.320 align:start position:0%
+ 
+ 
+
+00:25:54.320 --> 00:25:57.310 align:start position:0%
+ 
+sorry<00:25:55.320><c> right</c><00:25:55.799><c> so</c><00:25:56.000><c> this</c><00:25:56.120><c> is</c><00:25:56.279><c> the</c><00:25:56.679><c> utility</c><00:25:57.120><c> for</c>
+
+00:25:57.310 --> 00:25:57.320 align:start position:0%
+sorry right so this is the utility for
+ 
+
+00:25:57.320 --> 00:25:58.830 align:start position:0%
+sorry right so this is the utility for
+taking<00:25:57.559><c> an</c><00:25:57.720><c> action</c>
+
+00:25:58.830 --> 00:25:58.840 align:start position:0%
+taking an action
+ 
+
+00:25:58.840 --> 00:26:00.990 align:start position:0%
+taking an action
+right<00:25:59.720><c> so</c><00:25:59.919><c> I</c><00:26:00.000><c> have</c><00:26:00.159><c> to</c><00:26:00.279><c> pick</c><00:26:00.440><c> an</c><00:26:00.600><c> action</c><00:26:00.880><c> that</c>
+
+00:26:00.990 --> 00:26:01.000 align:start position:0%
+right so I have to pick an action that
+ 
+
+00:26:01.000 --> 00:26:09.789 align:start position:0%
+right so I have to pick an action that
+gives<00:26:01.200><c> me</c>
+
+00:26:09.789 --> 00:26:09.799 align:start position:0%
+ 
+ 
+
+00:26:09.799 --> 00:26:12.470 align:start position:0%
+ 
+the<00:26:10.799><c> so</c><00:26:11.000><c> given</c><00:26:11.240><c> a</c><00:26:11.360><c> V</c><00:26:11.600><c> Star</c><00:26:11.960><c> this</c><00:26:12.080><c> is</c><00:26:12.159><c> how</c><00:26:12.320><c> I'll</c>
+
+00:26:12.470 --> 00:26:12.480 align:start position:0%
+the so given a V Star this is how I'll
+ 
+
+00:26:12.480 --> 00:26:13.669 align:start position:0%
+the so given a V Star this is how I'll
+recover<00:26:12.799><c> a</c><00:26:12.919><c> p</c>
+
+00:26:13.669 --> 00:26:13.679 align:start position:0%
+recover a p
+ 
+
+00:26:13.679 --> 00:26:17.710 align:start position:0%
+recover a p
+Star<00:26:14.919><c> right</c><00:26:15.919><c> probab</c><00:26:16.919><c> yeah</c><00:26:17.080><c> depends</c><00:26:17.360><c> on</c><00:26:17.559><c> how</c>
+
+00:26:17.710 --> 00:26:17.720 align:start position:0%
+Star right probab yeah depends on how
+ 
+
+00:26:17.720 --> 00:26:20.470 align:start position:0%
+Star right probab yeah depends on how
+you<00:26:18.200><c> how</c><00:26:18.360><c> you</c><00:26:18.679><c> implement</c><00:26:19.080><c> the</c><00:26:19.360><c> argmax</c><00:26:20.360><c> right</c>
+
+00:26:20.470 --> 00:26:20.480 align:start position:0%
+you how you implement the argmax right
+ 
+
+00:26:20.480 --> 00:26:21.950 align:start position:0%
+you how you implement the argmax right
+if<00:26:20.600><c> the</c><00:26:20.679><c> argmax</c><00:26:21.120><c> you</c><00:26:21.200><c> can</c><00:26:21.360><c> write</c><00:26:21.520><c> it</c><00:26:21.679><c> such</c><00:26:21.840><c> a</c>
+
+00:26:21.950 --> 00:26:21.960 align:start position:0%
+if the argmax you can write it such a
+ 
+
+00:26:21.960 --> 00:26:24.870 align:start position:0%
+if the argmax you can write it such a
+way<00:26:22.080><c> that</c><00:26:22.200><c> it</c><00:26:22.640><c> return</c><00:26:22.880><c> any</c><00:26:23.120><c> of</c><00:26:23.279><c> the</c><00:26:23.880><c> maximizers</c>
+
+00:26:24.870 --> 00:26:24.880 align:start position:0%
+way that it return any of the maximizers
+ 
+
+00:26:24.880 --> 00:26:26.630 align:start position:0%
+way that it return any of the maximizers
+then<00:26:25.000><c> you'll</c><00:26:25.159><c> get</c><00:26:25.279><c> a</c><00:26:25.399><c> deterministic</c><00:26:26.000><c> policy</c>
+
+00:26:26.630 --> 00:26:26.640 align:start position:0%
+then you'll get a deterministic policy
+ 
+
+00:26:26.640 --> 00:26:28.310 align:start position:0%
+then you'll get a deterministic policy
+or<00:26:26.799><c> you</c><00:26:26.880><c> can</c><00:26:27.159><c> return</c><00:26:27.279><c> your</c><00:26:27.440><c> argmax</c><00:26:27.919><c> say</c><00:26:28.120><c> that</c>
+
+00:26:28.310 --> 00:26:28.320 align:start position:0%
+or you can return your argmax say that
+ 
+
+00:26:28.320 --> 00:26:30.549 align:start position:0%
+or you can return your argmax say that
+it<00:26:28.559><c> returns</c><00:26:28.840><c> all</c><00:26:29.000><c> the</c><00:26:29.279><c> maximizers</c><00:26:30.279><c> then</c><00:26:30.440><c> you</c>
+
+00:26:30.549 --> 00:26:30.559 align:start position:0%
+it returns all the maximizers then you
+ 
+
+00:26:30.559 --> 00:26:32.870 align:start position:0%
+it returns all the maximizers then you
+can<00:26:30.760><c> think</c><00:26:31.000><c> of</c><00:26:31.799><c> having</c><00:26:32.039><c> some</c><00:26:32.200><c> kind</c><00:26:32.360><c> of</c>
+
+00:26:32.870 --> 00:26:32.880 align:start position:0%
+can think of having some kind of
+ 
+
+00:26:32.880 --> 00:26:33.909 align:start position:0%
+can think of having some kind of
+whatever<00:26:33.159><c> some</c><00:26:33.360><c> some</c><00:26:33.520><c> probability</c>
+
+00:26:33.909 --> 00:26:33.919 align:start position:0%
+whatever some some probability
+ 
+
+00:26:33.919 --> 00:26:35.310 align:start position:0%
+whatever some some probability
+distribution<00:26:34.360><c> over</c><00:26:34.559><c> the</c><00:26:34.640><c> maximizer</c><00:26:35.120><c> it</c><00:26:35.200><c> can</c>
+
+00:26:35.310 --> 00:26:35.320 align:start position:0%
+distribution over the maximizer it can
+ 
+
+00:26:35.320 --> 00:26:37.470 align:start position:0%
+distribution over the maximizer it can
+be<00:26:35.440><c> uniform</c><00:26:36.279><c> or</c><00:26:36.480><c> it</c><00:26:36.559><c> could</c><00:26:36.720><c> be</c><00:26:36.919><c> one</c><00:26:37.080><c> way</c><00:26:37.240><c> or</c><00:26:37.360><c> the</c>
+
+00:26:37.470 --> 00:26:37.480 align:start position:0%
+be uniform or it could be one way or the
+ 
+
+00:26:37.480 --> 00:26:39.269 align:start position:0%
+be uniform or it could be one way or the
+other<00:26:37.880><c> but</c><00:26:38.000><c> if</c><00:26:38.080><c> you</c><00:26:38.200><c> think</c><00:26:38.320><c> of</c><00:26:38.440><c> AR</c><00:26:38.679><c> Max</c><00:26:38.919><c> as</c>
+
+00:26:39.269 --> 00:26:39.279 align:start position:0%
+other but if you think of AR Max as
+ 
+
+00:26:39.279 --> 00:26:41.750 align:start position:0%
+other but if you think of AR Max as
+returning<00:26:40.279><c> arbitrarily</c><00:26:40.840><c> returning</c><00:26:41.320><c> one</c><00:26:41.600><c> one</c>
+
+00:26:41.750 --> 00:26:41.760 align:start position:0%
+returning arbitrarily returning one one
+ 
+
+00:26:41.760 --> 00:26:43.190 align:start position:0%
+returning arbitrarily returning one one
+of<00:26:41.880><c> the</c><00:26:42.000><c> maximizers</c><00:26:42.760><c> you'll</c><00:26:43.000><c> get</c><00:26:43.120><c> a</c>
+
+00:26:43.190 --> 00:26:43.200 align:start position:0%
+of the maximizers you'll get a
+ 
+
+00:26:43.200 --> 00:26:45.230 align:start position:0%
+of the maximizers you'll get a
+deterministic<00:26:43.799><c> policy</c><00:26:44.720><c> right</c><00:26:44.840><c> this</c><00:26:44.960><c> is</c><00:26:45.080><c> one</c>
+
+00:26:45.230 --> 00:26:45.240 align:start position:0%
+deterministic policy right this is one
+ 
+
+00:26:45.240 --> 00:26:47.190 align:start position:0%
+deterministic policy right this is one
+way<00:26:45.360><c> of</c><00:26:45.480><c> recovering</c><00:26:46.200><c> optimal</c><00:26:46.640><c> policies</c><00:26:47.039><c> from</c>
+
+00:26:47.190 --> 00:26:47.200 align:start position:0%
+way of recovering optimal policies from
+ 
+
+00:26:47.200 --> 00:26:49.389 align:start position:0%
+way of recovering optimal policies from
+the<00:26:47.320><c> optimal</c><00:26:47.640><c> value</c><00:26:47.880><c> function</c><00:26:48.840><c> okay</c><00:26:49.039><c> so</c><00:26:49.320><c> a</c>
+
+00:26:49.389 --> 00:26:49.399 align:start position:0%
+the optimal value function okay so a
+ 
+
+00:26:49.399 --> 00:26:50.750 align:start position:0%
+the optimal value function okay so a
+little<00:26:49.600><c> tricky</c><00:26:49.919><c> right</c><00:26:50.039><c> I</c><00:26:50.120><c> still</c><00:26:50.320><c> need</c><00:26:50.440><c> to</c><00:26:50.559><c> know</c>
+
+00:26:50.750 --> 00:26:50.760 align:start position:0%
+little tricky right I still need to know
+ 
+
+00:26:50.760 --> 00:26:52.710 align:start position:0%
+little tricky right I still need to know
+p<00:26:50.960><c> and</c><00:26:51.080><c> I</c><00:26:51.320><c> need</c><00:26:51.480><c> to</c><00:26:51.600><c> know</c><00:26:51.919><c> the</c><00:26:52.039><c> expected</c><00:26:52.480><c> values</c>
+
+00:26:52.710 --> 00:26:52.720 align:start position:0%
+p and I need to know the expected values
+ 
+
+00:26:52.720 --> 00:26:54.029 align:start position:0%
+p and I need to know the expected values
+and<00:26:52.880><c> other</c><00:26:53.039><c> things</c><00:26:53.240><c> even</c><00:26:53.399><c> if</c><00:26:53.520><c> somebody</c><00:26:53.840><c> gives</c>
+
+00:26:54.029 --> 00:26:54.039 align:start position:0%
+and other things even if somebody gives
+ 
+
+00:26:54.039 --> 00:26:56.230 align:start position:0%
+and other things even if somebody gives
+me<00:26:54.279><c> the</c><00:26:54.440><c> value</c><00:26:54.720><c> function</c><00:26:55.559><c> I</c><00:26:55.720><c> still</c><00:26:55.919><c> need</c><00:26:56.080><c> to</c>
+
+00:26:56.230 --> 00:26:56.240 align:start position:0%
+me the value function I still need to
+ 
+
+00:26:56.240 --> 00:26:57.950 align:start position:0%
+me the value function I still need to
+know<00:26:56.480><c> the</c><00:26:56.840><c> rest</c><00:26:57.039><c> of</c><00:26:57.200><c> the</c><00:26:57.320><c> parameters</c><00:26:57.760><c> of</c><00:26:57.880><c> the</c>
+
+00:26:57.950 --> 00:26:57.960 align:start position:0%
+know the rest of the parameters of the
+ 
+
+00:26:57.960 --> 00:27:01.430 align:start position:0%
+know the rest of the parameters of the
+mdp<00:26:58.440><c> for</c><00:26:58.559><c> me</c><00:26:58.679><c> to</c><00:26:58.799><c> recover</c><00:26:59.200><c> the</c><00:26:59.799><c> optimal</c><00:27:00.440><c> policy</c>
+
+00:27:01.430 --> 00:27:01.440 align:start position:0%
+mdp for me to recover the optimal policy
+ 
+
+00:27:01.440 --> 00:27:03.070 align:start position:0%
+mdp for me to recover the optimal policy
+but<00:27:01.600><c> suppose</c><00:27:01.840><c> somebody</c><00:27:02.080><c> gives</c><00:27:02.240><c> me</c><00:27:02.360><c> the</c><00:27:02.480><c> Q</c>
+
+00:27:03.070 --> 00:27:03.080 align:start position:0%
+but suppose somebody gives me the Q
+ 
+
+00:27:03.080 --> 00:27:16.269 align:start position:0%
+but suppose somebody gives me the Q
+function<00:27:04.080><c> how</c><00:27:04.200><c> will</c><00:27:04.320><c> I</c><00:27:04.440><c> recover</c><00:27:04.840><c> the</c><00:27:05.000><c> optimal</c>
+
+00:27:16.269 --> 00:27:16.279 align:start position:0%
+ 
+ 
+
+00:27:16.279 --> 00:27:18.310 align:start position:0%
+ 
+policy<00:27:17.279><c> if</c><00:27:17.360><c> we</c><00:27:17.520><c> think</c><00:27:17.679><c> about</c><00:27:17.919><c> look</c><00:27:18.039><c> at</c><00:27:18.159><c> the</c>
+
+00:27:18.310 --> 00:27:18.320 align:start position:0%
+policy if we think about look at the
+ 
+
+00:27:18.320 --> 00:27:20.510 align:start position:0%
+policy if we think about look at the
+expression<00:27:18.760><c> there</c><00:27:19.080><c> right</c><00:27:19.200><c> in</c><00:27:19.279><c> the</c>
+
+00:27:20.510 --> 00:27:20.520 align:start position:0%
+expression there right in the
+ 
+
+00:27:20.520 --> 00:27:23.029 align:start position:0%
+expression there right in the
+argmax<00:27:21.520><c> is</c><00:27:21.720><c> exactly</c>
+
+00:27:23.029 --> 00:27:23.039 align:start position:0%
+argmax is exactly
+ 
+
+00:27:23.039 --> 00:27:27.149 align:start position:0%
+argmax is exactly
+this<00:27:24.039><c> right</c>
+
+00:27:27.149 --> 00:27:27.159 align:start position:0%
+ 
+ 
+
+00:27:27.159 --> 00:27:33.070 align:start position:0%
+ 
+so
+
+00:27:33.070 --> 00:27:33.080 align:start position:0%
+ 
+ 
+
+00:27:33.080 --> 00:27:34.950 align:start position:0%
+ 
+so<00:27:33.240><c> if</c><00:27:33.320><c> I</c><00:27:33.480><c> give</c><00:27:33.600><c> you</c><00:27:33.720><c> the</c><00:27:33.880><c> Q</c><00:27:34.159><c> functions</c><00:27:34.720><c> if</c><00:27:34.840><c> I</c>
+
+00:27:34.950 --> 00:27:34.960 align:start position:0%
+so if I give you the Q functions if I
+ 
+
+00:27:34.960 --> 00:27:38.389 align:start position:0%
+so if I give you the Q functions if I
+give<00:27:35.080><c> you</c><00:27:35.200><c> Q</c><00:27:35.440><c> star</c><00:27:36.159><c> I</c><00:27:36.279><c> don't</c><00:27:36.480><c> need</c><00:27:36.760><c> all</c><00:27:37.399><c> this</c>
+
+00:27:38.389 --> 00:27:38.399 align:start position:0%
+give you Q star I don't need all this
+ 
+
+00:27:38.399 --> 00:27:39.669 align:start position:0%
+give you Q star I don't need all this
+that<00:27:38.559><c> what</c><00:27:38.679><c> I'm</c><00:27:38.840><c> doing</c><00:27:39.080><c> that</c><00:27:39.200><c> is</c><00:27:39.320><c> essentially</c>
+
+00:27:39.669 --> 00:27:39.679 align:start position:0%
+that what I'm doing that is essentially
+ 
+
+00:27:39.679 --> 00:27:42.669 align:start position:0%
+that what I'm doing that is essentially
+looking<00:27:39.919><c> ahead</c><00:27:40.159><c> one</c><00:27:40.360><c> step</c><00:27:40.679><c> right</c><00:27:41.159><c> if</c><00:27:41.360><c> I</c><00:27:41.519><c> do</c><00:27:41.799><c> a</c>
+
+00:27:42.669 --> 00:27:42.679 align:start position:0%
+looking ahead one step right if I do a
+ 
+
+00:27:42.679 --> 00:27:45.149 align:start position:0%
+looking ahead one step right if I do a
+okay<00:27:42.840><c> what</c><00:27:42.960><c> will</c><00:27:43.640><c> happen</c><00:27:44.640><c> right</c><00:27:44.840><c> so</c><00:27:45.039><c> I'm</c>
+
+00:27:45.149 --> 00:27:45.159 align:start position:0%
+okay what will happen right so I'm
+ 
+
+00:27:45.159 --> 00:27:46.590 align:start position:0%
+okay what will happen right so I'm
+looking<00:27:45.399><c> at</c><00:27:45.559><c> the</c><00:27:45.640><c> outcome</c><00:27:46.080><c> and</c><00:27:46.200><c> then</c><00:27:46.360><c> trying</c>
+
+00:27:46.590 --> 00:27:46.600 align:start position:0%
+looking at the outcome and then trying
+ 
+
+00:27:46.600 --> 00:27:48.669 align:start position:0%
+looking at the outcome and then trying
+to<00:27:46.799><c> make</c><00:27:47.000><c> the</c><00:27:47.559><c> decision</c><00:27:48.000><c> the</c><00:27:48.159><c> best</c><00:27:48.360><c> decision</c>
+
+00:27:48.669 --> 00:27:48.679 align:start position:0%
+to make the decision the best decision
+ 
+
+00:27:48.679 --> 00:27:51.630 align:start position:0%
+to make the decision the best decision
+based<00:27:48.919><c> on</c><00:27:49.039><c> that</c><00:27:49.200><c> outcome</c><00:27:49.720><c> right</c><00:27:50.640><c> but</c><00:27:50.880><c> here</c><00:27:51.519><c> in</c>
+
+00:27:51.630 --> 00:27:51.640 align:start position:0%
+based on that outcome right but here in
+ 
+
+00:27:51.640 --> 00:27:53.750 align:start position:0%
+based on that outcome right but here in
+the<00:27:51.799><c> Q</c><00:27:52.000><c> star</c><00:27:52.240><c> I</c><00:27:52.320><c> don't</c><00:27:52.480><c> even</c><00:27:52.679><c> have</c><00:27:52.760><c> to</c><00:27:52.919><c> do</c><00:27:53.080><c> that</c>
+
+00:27:53.750 --> 00:27:53.760 align:start position:0%
+the Q star I don't even have to do that
+ 
+
+00:27:53.760 --> 00:27:57.110 align:start position:0%
+the Q star I don't even have to do that
+one<00:27:54.000><c> step</c><00:27:54.240><c> look</c><00:27:54.440><c> ahead</c><00:27:55.399><c> right</c><00:27:55.600><c> I</c><00:27:55.679><c> can</c><00:27:55.880><c> just</c><00:27:56.120><c> be</c>
+
+00:27:57.110 --> 00:27:57.120 align:start position:0%
+one step look ahead right I can just be
+ 
+
+00:27:57.120 --> 00:27:59.509 align:start position:0%
+one step look ahead right I can just be
+greedy<00:27:57.559><c> with</c><00:27:57.720><c> respect</c><00:27:57.960><c> to</c><00:27:58.200><c> my</c><00:27:58.320><c> current</c><00:27:58.600><c> Q</c><00:27:58.799><c> star</c>
+
+00:27:59.509 --> 00:27:59.519 align:start position:0%
+greedy with respect to my current Q star
+ 
+
+00:27:59.519 --> 00:28:02.350 align:start position:0%
+greedy with respect to my current Q star
+and<00:27:59.679><c> I</c><00:27:59.760><c> will</c><00:27:59.919><c> get</c><00:28:00.120><c> P</c>
+
+00:28:02.350 --> 00:28:02.360 align:start position:0%
+ 
+ 
+
+00:28:02.360 --> 00:28:06.029 align:start position:0%
+ 
+star<00:28:03.360><c> okay</c><00:28:04.279><c> make</c><00:28:04.519><c> sense</c><00:28:05.519><c> right</c><00:28:05.640><c> so</c><00:28:05.720><c> if</c><00:28:05.799><c> I</c><00:28:05.919><c> give</c>
+
+00:28:06.029 --> 00:28:06.039 align:start position:0%
+star okay make sense right so if I give
+ 
+
+00:28:06.039 --> 00:28:07.630 align:start position:0%
+star okay make sense right so if I give
+you<00:28:06.200><c> V</c><00:28:06.360><c> Star</c><00:28:06.559><c> and</c><00:28:06.679><c> qar</c><00:28:07.080><c> now</c><00:28:07.159><c> we</c><00:28:07.279><c> can</c><00:28:07.399><c> know</c><00:28:07.519><c> how</c>
+
+00:28:07.630 --> 00:28:07.640 align:start position:0%
+you V Star and qar now we can know how
+ 
+
+00:28:07.640 --> 00:28:11.590 align:start position:0%
+you V Star and qar now we can know how
+to<00:28:08.080><c> find</c><00:28:09.080><c> pi</c><00:28:09.399><c> star</c><00:28:10.399><c> okay</c><00:28:10.559><c> and</c><00:28:10.679><c> we</c><00:28:10.840><c> also</c><00:28:11.480><c> we</c>
+
+00:28:11.590 --> 00:28:11.600 align:start position:0%
+to find pi star okay and we also we
+ 
+
+00:28:11.600 --> 00:28:13.149 align:start position:0%
+to find pi star okay and we also we
+spoke<00:28:11.840><c> about</c><00:28:12.039><c> how</c><00:28:12.159><c> you</c><00:28:12.279><c> can</c><00:28:12.440><c> solve</c><00:28:12.679><c> the</c><00:28:12.799><c> belman</c>
+
+00:28:13.149 --> 00:28:13.159 align:start position:0%
+spoke about how you can solve the belman
+ 
+
+00:28:13.159 --> 00:28:16.110 align:start position:0%
+spoke about how you can solve the belman
+equation<00:28:13.480><c> for</c><00:28:13.640><c> v</c><00:28:13.880><c> pi</c><00:28:14.000><c> and</c><00:28:14.159><c> Q</c><00:28:14.679><c> Pi</c><00:28:15.679><c> can</c><00:28:15.799><c> you</c><00:28:15.919><c> solve</c>
+
+00:28:16.110 --> 00:28:16.120 align:start position:0%
+equation for v pi and Q Pi can you solve
+ 
+
+00:28:16.120 --> 00:28:17.710 align:start position:0%
+equation for v pi and Q Pi can you solve
+the<00:28:16.240><c> bman</c><00:28:16.559><c> equation</c><00:28:16.919><c> like</c><00:28:17.080><c> that</c><00:28:17.200><c> for</c><00:28:17.360><c> V</c><00:28:17.519><c> Star</c>
+
+00:28:17.710 --> 00:28:17.720 align:start position:0%
+the bman equation like that for V Star
+ 
+
+00:28:17.720 --> 00:28:21.190 align:start position:0%
+the bman equation like that for V Star
+and
+
+00:28:21.190 --> 00:28:21.200 align:start position:0%
+ 
+ 
+
+00:28:21.200 --> 00:28:24.029 align:start position:0%
+ 
+qar<00:28:22.200><c> so</c><00:28:22.320><c> I</c><00:28:22.440><c> have</c><00:28:22.519><c> a</c><00:28:22.880><c> system</c><00:28:23.159><c> of</c><00:28:23.320><c> n</c><00:28:23.559><c> equations</c><00:28:23.919><c> in</c>
+
+00:28:24.029 --> 00:28:24.039 align:start position:0%
+qar so I have a system of n equations in
+ 
+
+00:28:24.039 --> 00:28:24.909 align:start position:0%
+qar so I have a system of n equations in
+N
+
+00:28:24.909 --> 00:28:24.919 align:start position:0%
+N
+ 
+
+00:28:24.919 --> 00:28:27.110 align:start position:0%
+N
+variables<00:28:25.919><c> same</c><00:28:26.120><c> thing</c><00:28:26.320><c> as</c>
+
+00:28:27.110 --> 00:28:27.120 align:start position:0%
+variables same thing as
+ 
+
+00:28:27.120 --> 00:28:30.389 align:start position:0%
+variables same thing as
+before<00:28:28.600><c> can</c><00:28:28.679><c> I</c><00:28:28.840><c> solve</c>
+
+00:28:30.389 --> 00:28:30.399 align:start position:0%
+before can I solve
+ 
+
+00:28:30.399 --> 00:28:32.750 align:start position:0%
+before can I solve
+it<00:28:31.399><c> what's</c><00:28:31.559><c> the</c>
+
+00:28:32.750 --> 00:28:32.760 align:start position:0%
+it what's the
+ 
+
+00:28:32.760 --> 00:28:35.310 align:start position:0%
+it what's the
+problem<00:28:33.760><c> it's</c><00:28:33.919><c> not</c><00:28:34.080><c> linear</c><00:28:34.519><c> right</c><00:28:34.640><c> so</c><00:28:34.760><c> it's</c><00:28:35.240><c> I</c>
+
+00:28:35.310 --> 00:28:35.320 align:start position:0%
+problem it's not linear right so it's I
+ 
+
+00:28:35.320 --> 00:28:37.269 align:start position:0%
+problem it's not linear right so it's I
+have<00:28:35.480><c> this</c><00:28:35.640><c> Max</c><00:28:35.960><c> here</c><00:28:36.320><c> makes</c><00:28:36.519><c> it</c><00:28:36.640><c> a</c><00:28:36.760><c> nonlinear</c>
+
+00:28:37.269 --> 00:28:37.279 align:start position:0%
+have this Max here makes it a nonlinear
+ 
+
+00:28:37.279 --> 00:28:39.110 align:start position:0%
+have this Max here makes it a nonlinear
+system<00:28:37.559><c> of</c><00:28:37.720><c> equations</c><00:28:38.399><c> so</c><00:28:38.519><c> we</c><00:28:38.679><c> have</c><00:28:38.799><c> to</c><00:28:38.919><c> figure</c>
+
+00:28:39.110 --> 00:28:39.120 align:start position:0%
+system of equations so we have to figure
+ 
+
+00:28:39.120 --> 00:28:40.789 align:start position:0%
+system of equations so we have to figure
+out<00:28:39.240><c> how</c><00:28:39.360><c> we</c><00:28:39.519><c> going</c><00:28:39.640><c> to</c><00:28:39.760><c> solve</c><00:28:40.000><c> it</c><00:28:40.279><c> right</c><00:28:40.679><c> so</c>
+
+00:28:40.789 --> 00:28:40.799 align:start position:0%
+out how we going to solve it right so
+ 
+
+00:28:40.799 --> 00:28:42.430 align:start position:0%
+out how we going to solve it right so
+this<00:28:40.919><c> is</c><00:28:41.000><c> what</c><00:28:41.120><c> we</c><00:28:41.200><c> will</c><00:28:41.320><c> look</c><00:28:41.480><c> at</c><00:28:41.640><c> in</c><00:28:41.760><c> the</c><00:28:42.200><c> next</c>
+
+00:28:42.430 --> 00:28:42.440 align:start position:0%
+this is what we will look at in the next
+ 
+
+00:28:42.440 --> 00:28:43.789 align:start position:0%
+this is what we will look at in the next
+class<00:28:42.640><c> so</c><00:28:42.799><c> next</c><00:28:42.960><c> class</c><00:28:43.159><c> what</c><00:28:43.279><c> I'll</c><00:28:43.480><c> do</c><00:28:43.640><c> is</c>
+
+00:28:43.789 --> 00:28:43.799 align:start position:0%
+class so next class what I'll do is
+ 
+
+00:28:43.799 --> 00:28:46.909 align:start position:0%
+class so next class what I'll do is
+first<00:28:44.399><c> show</c><00:28:44.799><c> that</c><00:28:45.279><c> uh</c><00:28:45.480><c> well</c><00:28:45.720><c> in</c><00:28:45.880><c> multiple</c><00:28:46.360><c> ways</c>
+
+00:28:46.909 --> 00:28:46.919 align:start position:0%
+first show that uh well in multiple ways
+ 
+
+00:28:46.919 --> 00:28:49.750 align:start position:0%
+first show that uh well in multiple ways
+show<00:28:47.200><c> that</c><00:28:47.360><c> V</c><00:28:47.559><c> Pi</c><00:28:47.720><c> is</c><00:28:48.279><c> unique</c><00:28:49.279><c> and</c><00:28:49.399><c> then</c><00:28:49.519><c> show</c>
+
+00:28:49.750 --> 00:28:49.760 align:start position:0%
+show that V Pi is unique and then show
+ 
+
+00:28:49.760 --> 00:28:52.470 align:start position:0%
+show that V Pi is unique and then show
+that<00:28:49.919><c> V</c><00:28:50.120><c> Star</c><00:28:50.320><c> is</c><00:28:50.480><c> unique</c><00:28:51.480><c> right</c><00:28:52.200><c> and</c><00:28:52.320><c> then</c>
+
+00:28:52.470 --> 00:28:52.480 align:start position:0%
+that V Star is unique right and then
+ 
+
+00:28:52.480 --> 00:28:53.509 align:start position:0%
+that V Star is unique right and then
+come<00:28:52.640><c> up</c><00:28:52.799><c> with</c>
+
+00:28:53.509 --> 00:28:53.519 align:start position:0%
+come up with
+ 
+
+00:28:53.519 --> 00:28:55.870 align:start position:0%
+come up with
+a<00:28:54.519><c> talk</c><00:28:54.679><c> about</c><00:28:54.880><c> multiple</c><00:28:55.200><c> ways</c><00:28:55.399><c> of</c><00:28:55.519><c> solving</c>
+
+00:28:55.870 --> 00:28:55.880 align:start position:0%
+a talk about multiple ways of solving
+ 
+
+00:28:55.880 --> 00:29:00.029 align:start position:0%
+a talk about multiple ways of solving
+for<00:28:56.399><c> V</c><00:28:56.640><c> Star</c><00:28:56.919><c> and</c><00:28:57.880><c> uh</c><00:28:58.360><c> well</c><00:28:58.519><c> not</c><00:28:59.080><c> VP</c><00:28:59.399><c> you</c><00:28:59.480><c> can</c>
+
+00:29:00.029 --> 00:29:00.039 align:start position:0%
+for V Star and uh well not VP you can
+ 
+
+00:29:00.039 --> 00:29:01.389 align:start position:0%
+for V Star and uh well not VP you can
+solve<00:29:00.360><c> but</c><00:29:00.440><c> we'll</c><00:29:00.640><c> talk</c><00:29:00.760><c> about</c><00:29:00.919><c> multiple</c><00:29:01.240><c> ways</c>
+
+00:29:01.389 --> 00:29:01.399 align:start position:0%
+solve but we'll talk about multiple ways
+ 
+
+00:29:01.399 --> 00:29:05.509 align:start position:0%
+solve but we'll talk about multiple ways
+of<00:29:01.519><c> solving</c><00:29:01.799><c> for</c><00:29:02.039><c> V</c><00:29:02.600><c> Star</c><00:29:03.600><c> okay</c><00:29:04.320><c> in</c><00:29:04.480><c> fact</c><00:29:05.360><c> the</c>
+
+00:29:05.509 --> 00:29:05.519 align:start position:0%
+of solving for V Star okay in fact the
+ 
+
+00:29:05.519 --> 00:29:07.549 align:start position:0%
+of solving for V Star okay in fact the
+rest<00:29:05.720><c> of</c><00:29:05.880><c> the</c><00:29:06.080><c> course</c><00:29:06.320><c> in</c><00:29:06.440><c> some</c><00:29:06.640><c> sense</c><00:29:06.960><c> is</c>
+
+00:29:07.549 --> 00:29:07.559 align:start position:0%
+rest of the course in some sense is
+ 
+
+00:29:07.559 --> 00:29:09.630 align:start position:0%
+rest of the course in some sense is
+figuring<00:29:07.960><c> out</c><00:29:08.279><c> multiple</c><00:29:08.679><c> ways</c><00:29:08.919><c> of</c><00:29:09.240><c> solving</c>
+
+00:29:09.630 --> 00:29:09.640 align:start position:0%
+figuring out multiple ways of solving
+ 
+
+00:29:09.640 --> 00:29:12.190 align:start position:0%
+figuring out multiple ways of solving
+for<00:29:10.240><c> V</c><00:29:10.480><c> Star</c><00:29:10.679><c> and</c><00:29:10.840><c> qar</c><00:29:11.600><c> under</c><00:29:11.880><c> different</c>
+
+00:29:12.190 --> 00:29:12.200 align:start position:0%
+for V Star and qar under different
+ 
+
+00:29:12.200 --> 00:29:13.750 align:start position:0%
+for V Star and qar under different
+assumptions<00:29:12.840><c> okay</c><00:29:13.000><c> how</c><00:29:13.159><c> much</c><00:29:13.320><c> information</c>
+
+00:29:13.750 --> 00:29:13.760 align:start position:0%
+assumptions okay how much information
+ 
+
+00:29:13.760 --> 00:29:14.950 align:start position:0%
+assumptions okay how much information
+you<00:29:13.880><c> have</c><00:29:14.080><c> how</c><00:29:14.159><c> much</c><00:29:14.320><c> data</c><00:29:14.519><c> you</c><00:29:14.640><c> have</c><00:29:14.760><c> and</c><00:29:14.880><c> so</c>
+
+00:29:14.950 --> 00:29:14.960 align:start position:0%
+you have how much data you have and so
+ 
+
+00:29:14.960 --> 00:29:17.990 align:start position:0%
+you have how much data you have and so
+on<00:29:15.159><c> so</c><00:29:15.320><c> forth</c><00:29:15.760><c> right</c><00:29:16.600><c> so</c><00:29:17.440><c> great</c><00:29:17.640><c> so</c><00:29:17.799><c> any</c>
+
+00:29:17.990 --> 00:29:18.000 align:start position:0%
+on so forth right so great so any
+ 
+
+00:29:18.000 --> 00:29:19.430 align:start position:0%
+on so forth right so great so any
+questions<00:29:18.360><c> so</c>
+
+00:29:19.430 --> 00:29:19.440 align:start position:0%
+questions so
+ 
+
+00:29:19.440 --> 00:29:21.870 align:start position:0%
+questions so
+far<00:29:20.440><c> so</c><00:29:20.600><c> we're</c>
+
+00:29:21.870 --> 00:29:21.880 align:start position:0%
+far so we're
+ 
+
+00:29:21.880 --> 00:29:22.920 align:start position:0%
+far so we're
+[Music]
+
+00:29:22.920 --> 00:29:22.930 align:start position:0%
+[Music]
+ 
+
+00:29:22.930 --> 00:29:24.830 align:start position:0%
+[Music]
+[Applause]
+
+00:29:24.830 --> 00:29:24.840 align:start position:0%
+[Applause]
+ 
+
+00:29:24.840 --> 00:29:27.840 align:start position:0%
+[Applause]
+done
+

@@ -1,0 +1,386 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.160 --> 00:00:17.279
+.
+So we are talking about value functions okay
+
+00:00:17.279 --> 00:00:22.430
+people remember value functions is we define
+value functions we said
+
+00:00:22.430 --> 00:00:44.880
+V? (S)= to expected value under ? of right.
+
+00:00:44.880 --> 00:01:23.220
+And then we defined Q? .Right good, so now
+we are going to start unrolling their expectation
+
+00:01:23.220 --> 00:01:28.960
+and so people remember this expression right
+so all of your player but I don't have to
+
+00:01:28.960 --> 00:01:33.500
+explain what is happening there again right
+so V? (s) is means starting in status following
+
+00:01:33.500 --> 00:01:39.580
+policy ? . Thereafter and taking the expectations
+of the, the returns that I am getting I am
+
+00:01:39.580 --> 00:01:47.670
+going to start unrolling this right so what
+does it what does it look like so
+
+00:01:47.670 --> 00:02:25.470
+i am going to say V? (s) equal to, yes
+
+00:02:25.470 --> 00:02:46.100
+What can right here, I GT+1 right but what
+is what would be the value of GT+ for the
+
+00:02:46.100 --> 00:02:56.990
+expected value of GT+1.V? off whatever state
+you land up in right so let us go I am going
+
+00:02:56.990 --> 00:02:58.790
+to say that this is equal to
+
+00:02:58.790 --> 00:03:05.580
+V? (s) prime were s prime is the state I am
+going to add up and we will quantify as Prime
+
+00:03:05.580 --> 00:03:09.760
+in a minute right so, so people agree with
+me on this right is s prime is the state I
+
+00:03:09.760 --> 00:03:23.090
+go to from s right so I can take this summation
+and write it like this. Everybody on board
+
+00:03:23.090 --> 00:03:34.110
+okay great so now I need a slight slight of
+hand here right so I took GT and then I wrote
+
+00:03:34.110 --> 00:03:39.680
+it as one term plus the expected value of
+GT but that is fine because I am anyway going
+
+00:03:39.680 --> 00:03:45.430
+to take a expectation eventually right so
+this is slight reordering of expectations
+
+00:03:45.430 --> 00:03:47.960
+right instead of taking an expectation of
+the full expression.
+
+00:03:47.960 --> 00:03:52.520
+I took the expectation of the inner one alone
+but one thing you have to remember is it is
+
+00:03:52.520 --> 00:03:58.540
+only a partial expectation because s prime
+can change right so for me to get the full
+
+00:03:58.540 --> 00:04:01.900
+expectation i need to condition on s prime
+also
+
+00:04:01.900 --> 00:04:07.650
+That is why this expression is still inside
+the expectation so if this has been the full
+
+00:04:07.650 --> 00:04:13.420
+expectation we are taking it out, out of the
+expectation since it is still only partially
+
+00:04:13.420 --> 00:04:17.880
+conditioned so I need to conditioned on the
+full thing okay so now I have to write it
+
+00:04:17.880 --> 00:04:25.460
+out so that will get rid of the expectations
+okay so one way of writing out this expectation
+
+00:04:25.460 --> 00:04:30.250
+is to think of it like a generative process
+okay.
+
+00:04:30.250 --> 00:04:38.090
+So remember what did I say we are going to
+do we'll start in state s right then select
+
+00:04:38.090 --> 00:04:47.180
+actions according to policy ? right and measure
+the, expected return right so the starting
+
+00:04:47.180 --> 00:04:50.130
+in state is and the selecting actions according
+to policy ?.
+
+00:04:50.130 --> 00:05:03.650
+So what does that mean 
+
+00:05:03.650 --> 00:05:11.590
+using ? right and I am selecting actions according
+to policy ? so let us say I pick some action
+
+00:05:11.590 --> 00:05:16.300
+a right so now what I am going to do I am
+going to get some reward corresponding to
+
+00:05:16.300 --> 00:05:27.900
+that RT+ yeah the RT+1 will be something that
+corresponds to that reward so but then.Before
+
+00:05:27.900 --> 00:05:33.600
+I can find out what RT +1 this I need to specify
+what the next state is going to be so I need
+
+00:05:33.600 --> 00:05:37.150
+this.
+
+00:05:37.150 --> 00:05:42.370
+So taken action a then I determine what s
+prime is and then I determine
+
+00:05:42.370 --> 00:05:55.030
+What 
+but I already determined what s prime is it
+
+00:05:55.030 --> 00:05:56.030
+so
+
+00:05:56.030 --> 00:06:09.990
+I can do this 
+
+00:06:09.990 --> 00:06:14.610
+right so this is one step I am taking a pick
+an action a according to ? right now that
+
+00:06:14.610 --> 00:06:19.840
+is going to cause a transition to some s Prime
+according to this P that we have that right
+
+00:06:19.840 --> 00:06:24.770
+and once I know what the S prime is I can
+figure out what the expected reward will be
+
+00:06:24.770 --> 00:06:30.790
+as well as V? (s) prime because I know what
+is frame is so what is the probability that
+
+00:06:30.790 --> 00:06:39.930
+this will be my return is this times the probability
+i will pick action so this whole thing gives
+
+00:06:39.930 --> 00:06:51.600
+me the probability that this will be my expected
+return okay so now i have to do this overall
+
+00:06:51.600 --> 00:06:53.470
+all possible outcomes.
+
+00:06:53.470 --> 00:07:11.699
+So basically a sum over spray okay is it clear
+how we got this right this one right so i
+
+00:07:11.699 --> 00:07:17.850
+have a s a right that i picked a a first then
+I pick an s Prime according to p now I have
+
+00:07:17.850 --> 00:07:22.800
+a SA S prime so what I need to do is figure
+out what this our expectation of RT+1 would
+
+00:07:22.800 --> 00:07:28.810
+be right so that is given in my MDP right
+the expectation of RT+1 would be given SA
+
+00:07:28.810 --> 00:07:31.300
+S prime.
+What is the reward so that is this expectation
+
+00:07:31.300 --> 00:07:37.509
+I've written it here expectation of are given
+SAS prime right and then the future is ? V?(s)
+
+00:07:37.509 --> 00:07:42.979
+prime so that S Prime has already been fixed
+so I can just add the ? beep is prime here.
+
+00:07:42.979 --> 00:07:49.360
+So the probability that this will be the outcome
+right is the probability of s prime given
+
+00:07:49.360 --> 00:07:53.770
+S and A time's the probability of picking
+A given is S .
+
+00:07:53.770 --> 00:07:57.430
+So all these things put together gives me
+the probability that this will be the outcome
+
+00:07:57.430 --> 00:08:04.610
+right so that is the expected outcome for
+one choice of A and one choice of S prime
+
+00:08:04.610 --> 00:08:08.669
+so I'll have to sum this overall choices of
+S prime and all choices of A for me to get
+
+00:08:08.669 --> 00:08:15.360
+the overall expectation so that is essentially
+what I've done here ?xI ?a .
+
+00:08:15.360 --> 00:08:39.449
+This is nice right so we written V? in terms
+of V?. So this, this system of it is a system
+
+00:08:39.449 --> 00:08:43.209
+of equations right you can see there is a
+system of equations that you have one equation
+
+00:08:43.209 --> 00:08:56.730
+for every, every state how many variables
+are there number of as many variables as there
+
+00:08:56.730 --> 00:09:00.610
+are number of states the number of states
+is not the variable that is also fixed as
+
+00:09:00.610 --> 00:09:07.949
+many variables as number of states and what
+is a very we here V?(s) is the variable.
+
+00:09:07.949 --> 00:09:11.529
+So essentially so in some thinking of it as
+a function now I can think of it as a collection
+
+00:09:11.529 --> 00:09:18.829
+of variables right one for each state right
+and I have N such equations and N such variables
+
+00:09:18.829 --> 00:09:43.300
+and can I solve it. Depends on what, its linear
+N variables in equations so when can you not
+
+00:09:43.300 --> 00:09:52.519
+solve it yeah then ,then then yeah certainly
+get dependent columns and so it becomes redundant
+
+00:09:52.519 --> 00:09:56.180
+so you have multiple solutions and sorts of
+three so it turns out as I'll show you in
+
+00:09:56.180 --> 00:10:02.370
+the next class right the system of equations
+have a unique solution.
+
+00:10:02.370 --> 00:10:13.519
+Always right by virtue of the fact that the
+P that you are using is stochastic so the
+
+00:10:13.519 --> 00:10:19.829
+rows of that P matrix will come to one right
+so by virtue of that fact we can actually
+
+00:10:19.829 --> 00:10:24.579
+go back and show that there will be a unique
+solution for this need to write, write is
+
+00:10:24.579 --> 00:10:27.880
+slightly different in a different notation
+for us to see that so I will do that in the
+
+00:10:27.880 --> 00:10:32.980
+next class right so this is free which has
+a unique solution and this is sometimes known
+
+00:10:32.980 --> 00:10:42.019
+as
+
+00:10:42.019 --> 00:10:50.360
+The Bellman Equation for V? after the Richard
+Bellman who's one of the pioneers in the field
+
+00:10:50.360 --> 00:10:55.709
+of stochastic dynamic programming okay. Like
+ways you can write a bellman equation for
+
+00:10:55.709 --> 00:11:18.910
+Q? okay. Satan wants to tell me about the
+bellman equation for Q? would be
+
+00:11:18.910 --> 00:11:24.800
+So think of it in the generative process right
+so what is the first thing you do when you're
+
+00:11:24.800 --> 00:11:30.920
+thinking about Q?SA .They start with yes I
+pick a right I mean it is fixed so there is
+
+00:11:30.920 --> 00:11:36.620
+no summing over there right it's S and A is
+picked right so what do I have to sum over
+
+00:11:36.620 --> 00:11:42.019
+next only the Express because this ?(a/s)
+is out of the picture here right because I
+
+00:11:42.019 --> 00:11:46.749
+have already picked A . So I do not need to
+I do not need to sample from ? they already
+
+00:11:46.749 --> 00:11:51.410
+pick case so I just start my summing over
+s prime.
+
+00:11:51.410 --> 00:12:04.480
+But now, now SA is prime are all fixed right
+so I can write expected value of R given SA
+
+00:12:04.480 --> 00:12:07.040
+s prime plus ? times.
+
+00:12:07.040 --> 00:12:13.839
+Now the interesting question is what goes
+there I could write V? and it will be perfectly
+
+00:12:13.839 --> 00:12:21.920
+correct but I will not be writing Q? in terms
+of Q?.
+
+00:12:21.920 --> 00:12:52.439
+Sum over all actions
+
+00:12:52.439 --> 00:13:04.759
+Use a Bellman Equation for Q? okay.
+
+00:13:04.759 --> 00:13:08.369
+So this should also give you one, one more
+ancillary equation there which is.
+
+00:13:08.369 --> 00:13:34.350
+And that is 
+
+00:13:34.350 --> 00:13:44.809
+a way Q and V are related and what about Q?
+can you write Q? in terms of V? .But exactly
+
+00:13:44.809 --> 00:13:48.910
+what the earlier equation was the Bellman
+Equation substitute the last summation with
+
+00:13:48.910 --> 00:13:57.709
+V? and that is essentially Q? in terms of
+V?. Right so I cannot write Q? SE in terms
+
+00:13:57.709 --> 00:14:07.059
+of V?s it has to be in terms of V? of the
+subsequent state right but V? is I can write
+
+00:14:07.059 --> 00:14:17.109
+in terms of Q? oops sorry.
+

@@ -1,0 +1,804 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.230 --> 00:00:23.430
+So let us move on to a situation where I do
+not have access to the MDP I am interested
+
+00:00:23.430 --> 00:00:30.220
+in solving a problem but I do not have access
+to the MTP and this is the most cases right
+
+00:00:30.220 --> 00:00:35.390
+remember I motivated you about cycling pretty
+with this whole thing about cycling and what
+
+00:00:35.390 --> 00:00:45.040
+is your PS’ Sa in cycling all if you know
+what the states are what the actions are you
+
+00:00:45.040 --> 00:00:50.969
+might not be able to enumerate it but you
+can kind of an intuitive feeling about what
+
+00:00:50.969 --> 00:00:54.579
+the states and actions are.
+But you cannot even begin to think of writing
+
+00:00:54.579 --> 00:01:01.899
+down your PS’ given S, A right so maybe
+you can some rough idea of what the expected
+
+00:01:01.899 --> 00:01:07.740
+reward is right so if you fall down your bleeding
+and things like that so negative reward and
+
+00:01:07.740 --> 00:01:13.020
+those kinds of things but the transition for
+dynamic sare hard to write but you still want
+
+00:01:13.020 --> 00:01:15.330
+to solve this problems right.
+.
+
+00:01:15.330 --> 00:01:28.590
+So I want to look at the whole definition
+of V?(S) All over again, so what is V?(S)
+
+00:01:28.590 --> 00:01:49.850
+right? Such that is where we started off right
+and then we wrote GTS GT+ ? may have an RT
+
+00:01:49.850 --> 00:01:56.789
++ ? GT + 1 and so on so forth which are there
+simplifying but if I had not told you anything
+
+00:01:56.789 --> 00:02:01.380
+else about this whole MDP business right and
+if I told you that this is a random variable
+
+00:02:01.380 --> 00:02:08.780
+GT is a random variable right and V?is the
+expectation of the random variable and I asked
+
+00:02:08.780 --> 00:02:17.060
+you to give me a way of estimating this expectation.
+How will you do that, some random variable
+
+00:02:17.060 --> 00:02:22.239
+I want to find the expectation of the random
+variable sample and a lot of times and take
+
+00:02:22.239 --> 00:02:28.510
+the average right that is the most straightforward
+way of solving this right so what we mean
+
+00:02:28.510 --> 00:02:37.591
+by saying sample GT a lot of times for other
+policy ? so starts in some state S follow
+
+00:02:37.591 --> 00:02:45.329
+policy ? until you come to some end and then
+what you do you add up all the in some of
+
+00:02:45.329 --> 00:02:48.560
+this some of the reward or some of the discount
+is the word whatever you do.
+
+00:02:48.560 --> 00:02:53.060
+Whether you use a ? or not in fact his here
+I am not even telling you what the reward
+
+00:02:53.060 --> 00:02:57.989
+is neither the ? is there or not is itself
+a good thing so sum up everything that will
+
+00:02:57.989 --> 00:03:10.920
+give me one sample right then what I do is
+shattered S again that gives me the second
+
+00:03:10.920 --> 00:03:16.849
+sample so like this I draw many samples by
+executing ? multiple times and then I take
+
+00:03:16.849 --> 00:03:25.340
+the average that gives me the value in sC
+test.
+
+00:03:25.340 --> 00:03:40.609
+He said all I can do with this trajectory
+so from S I have gone to S1 right so can we
+
+00:03:40.609 --> 00:03:57.260
+use this summation as a sample for V(S1) why
+is that fine policy same and we had also assuming
+
+00:03:57.260 --> 00:04:02.250
+things are Markov so it does not matter whether
+it came from S2, S1 or for s’ to S1 let
+
+00:04:02.250 --> 00:04:06.189
+him at all it matters is I started in this
+one and from there on what I did right so
+
+00:04:06.189 --> 00:04:08.709
+since I am assuming things are all markup
+so I can do this.
+
+00:04:08.709 --> 00:04:12.760
+So once what essentially what I should do
+is you should generate a trajectory first
+
+00:04:12.760 --> 00:04:18.190
+look at all the states that occur in the trajectory
+and then after that take the sum of the rewards
+
+00:04:18.190 --> 00:04:23.310
+that I get and you set as a sample so what
+I do is a fix a policy ? and I am NOT going
+
+00:04:23.310 --> 00:04:27.419
+to write down the pseudo code for this please
+look it up in the book I am going to fix a
+
+00:04:27.419 --> 00:04:34.090
+policy ? generate multiple trajectories, okay.
+And use that to evaluate the policy so I could
+
+00:04:34.090 --> 00:04:44.560
+get a P’ right so we call these kinds of
+techniques as 
+
+00:04:44.560 --> 00:04:52.090
+Monte Carlo methods right because we are in
+some sense using some form of a simulation
+
+00:04:52.090 --> 00:04:56.390
+to get these samples right so I have this
+model and they run trajectories on that I
+
+00:04:56.390 --> 00:05:00.690
+get these samples and use that to update the
+value function so these are called Monte Carlo
+
+00:05:00.690 --> 00:05:11.160
+methods right and so this is a Monte Carlo
+method for policy evaluation right sided policy
+
+00:05:11.160 --> 00:05:14.300
+evaluation.
+So what are the things that you have to note
+
+00:05:14.300 --> 00:05:23.990
+here first thing is I do not really need the
+model I do not really need the model I do
+
+00:05:23.990 --> 00:05:30.250
+not really need the you are all I need is
+a ways sampling from that system right I need
+
+00:05:30.250 --> 00:05:38.950
+to be able to run trajectories according to
+? okay. I really need to be able to run trajectories
+
+00:05:38.950 --> 00:05:42.750
+coordinates all I need is a cycle and again
+it is getting on the cycle and start pedaling
+
+00:05:42.750 --> 00:05:46.340
+around and fall over fall down get hurt and
+things like this all I need is a cycle.
+
+00:05:46.340 --> 00:05:53.400
+I do not really need you to explain to me
+what this PS’ Sa right so or if you want
+
+00:05:53.400 --> 00:05:57.300
+to think of it in the herd management case
+all you really need is a infinite supply of
+
+00:05:57.300 --> 00:06:02.490
+course okay you start breeding them you see
+what happens to them and then you know that
+
+00:06:02.490 --> 00:06:08.230
+you can solve it right so some kind of gruesome
+but you could you could do that is that is
+
+00:06:08.230 --> 00:06:10.890
+essentially what we are talking about here
+okay.
+
+00:06:10.890 --> 00:06:17.840
+But you could also get by without the real
+system right I do not give you an infinite
+
+00:06:17.840 --> 00:06:22.910
+supply of cows or something but I give you
+a simulation model so what I mean by a simulation
+
+00:06:22.910 --> 00:06:30.020
+model let us give you an example so how many
+of you have written programs to play games
+
+00:06:30.020 --> 00:06:37.080
+anybody like play card games okay something
+if you know about the game blackjack is an
+
+00:06:37.080 --> 00:06:39.810
+example given in the book.
+How many of you have heard of the name game
+
+00:06:39.810 --> 00:06:49.070
+blackjack, really heard, heard only I am not
+going to ask you to play here today okay,
+
+00:06:49.070 --> 00:06:55.020
+so it is like how many of you saw the movie
+what 21 yeah everyone says then you have a
+
+00:06:55.020 --> 00:06:59.120
+blackjack now they are more confidents of
+putting your hands up when they said how many
+
+00:06:59.120 --> 00:07:04.560
+of you seen the movie21 do not worry I am
+not going to play the movie here either.
+
+00:07:04.560 --> 00:07:09.930
+So it is a card game where you deal a hand
+of cards to people right and then people can
+
+00:07:09.930 --> 00:07:13.710
+start turning over their cards and then they
+have to make sure they get as close as two
+
+00:07:13.710 --> 00:07:24.350
+21 as possible right so the state space would
+be what, what cards you see right what cause
+
+00:07:24.350 --> 00:07:32.030
+has your opponent has right, so you know the
+first two cards then you know your cards and
+
+00:07:32.030 --> 00:07:35.560
+then you can keep going if you want or stop
+right.
+
+00:07:35.560 --> 00:07:39.430
+Do you see your opponent cards you do not
+have to stop before you see your opponent's
+
+00:07:39.430 --> 00:07:45.670
+cards yeah you know to stop before I see up
+front all right so you do not see opponent
+
+00:07:45.670 --> 00:07:54.060
+card so you see whatever cards you have in
+the keep going and what are their actions
+
+00:07:54.060 --> 00:08:05.570
+yeah was it flush no I am not going to it
+I am talking about 21blackjack so essentially
+
+00:08:05.570 --> 00:08:14.621
+it is hit me or stay right again it is state
+means you do not do this I hit me it give
+
+00:08:14.621 --> 00:08:17.490
+me a more card right.
+So that is all the two actions either continue
+
+00:08:17.490 --> 00:08:22.170
+or stop right so that is basically it is a
+very simple problem right but no if you want
+
+00:08:22.170 --> 00:08:26.330
+to think of it as okay what is the probability
+that the next card that flipped will be an
+
+00:08:26.330 --> 00:08:30.150
+ace what is the probability the next car they
+flip will be a king right then it becomes
+
+00:08:30.150 --> 00:08:35.990
+a little tricky and it is right so it is you
+have to do this on a specific game right and
+
+00:08:35.990 --> 00:08:40.090
+then what is the probability that the opponent
+will win given that these are the cars I have
+
+00:08:40.090 --> 00:08:44.269
+turned over.
+Now we have to come into your comment Oriole
+
+00:08:44.269 --> 00:08:49.430
+summation all right what are many different
+combinations that the operand can flip over
+
+00:08:49.430 --> 00:08:55.810
+and that will actually be controlled by what
+cards you have already flipped over all right
+
+00:08:55.810 --> 00:09:00.060
+so this becomes a little tricky on the other
+hand suppose I asked you to write a computer
+
+00:09:00.060 --> 00:09:06.240
+program that will play 21 with me or blackjack
+with me it is a fairly straightforward thing
+
+00:09:06.240 --> 00:09:08.079
+right.
+You just need to keep track of which cards
+
+00:09:08.079 --> 00:09:12.399
+you have dealt and then randomly sample from
+the other cards and then give it I do not
+
+00:09:12.399 --> 00:09:19.639
+I can write the program that will play blackjack
+with me much easily write much more easily
+
+00:09:19.639 --> 00:09:28.709
+than actually writing a program that will
+compute that PS’ S, A blackjack right, so
+
+00:09:28.709 --> 00:09:35.279
+such models are called simulation models or
+sample models okay this is already generate
+
+00:09:35.279 --> 00:09:37.819
+samples.
+But they are not a full specification of the
+
+00:09:37.819 --> 00:09:53.949
+transition probabilities right, so I can run
+these Monte Carlo methods with a sample model
+
+00:09:53.949 --> 00:09:59.720
+I do not have to use the sample model to compute
+my transition probabilities I can just leave
+
+00:09:59.720 --> 00:10:03.100
+the sample one I can run Monte Carlo method
+to the sample mall so that is one of the nice
+
+00:10:03.100 --> 00:10:12.410
+things about Monte Carlo methods right, one
+thing which I want you to note here is the
+
+00:10:12.410 --> 00:10:15.959
+samples I draw like the trajectories are run
+here.
+
+00:10:15.959 --> 00:10:23.209
+Not only pick the states at which I will be
+doing the evaluation they also give me the
+
+00:10:23.209 --> 00:10:27.749
+value with which I will be doing the evaluation
+right this expectation rate so whatever the
+
+00:10:27.749 --> 00:10:33.660
+expectation computation that is also determined
+by the sample later right so here when we
+
+00:10:33.660 --> 00:10:37.490
+draw when we did trajectories you are only
+using them for picking the states but the
+
+00:10:37.490 --> 00:10:43.440
+updation was using this kind of a recursive
+evaluation right using the model.
+
+00:10:43.440 --> 00:10:47.490
+But here the trajectory is I draw not only
+give me the state but they also give me the
+
+00:10:47.490 --> 00:10:57.860
+rewards with which I am updating the value
+of the state okay good, so this is called
+
+00:10:57.860 --> 00:11:04.189
+Monte Carlo policy evaluation is there any
+other question that you want to ask me here
+
+00:11:04.189 --> 00:11:16.149
+and the ? could be stochastic why it should
+be I am evaluating a ? and I am only interested
+
+00:11:16.149 --> 00:11:24.589
+in evaluating a ? why it should be if ? is
+deterministic you need to do one small additional
+
+00:11:24.589 --> 00:11:37.939
+thing what is that.
+Very simple I am talking about very practical
+
+00:11:37.939 --> 00:11:47.800
+things here yeah I 
+have a fixed ? okay and look for the back
+
+00:11:47.800 --> 00:11:52.889
+of a policy evaluation I have a fixed ? there
+is no greedy no nothing business okay no exploration
+
+00:11:52.889 --> 00:12:00.080
+business if I explore the policy will change
+right I am giving you a fixed ? if I am going
+
+00:12:00.080 --> 00:12:04.129
+to explore then that if the ? is probabilistic
+then already and doing some kind of explains
+
+00:12:04.129 --> 00:12:08.079
+to Casting I am doing some kind of exploration.
+If the ? is deterministic if you know if we
+
+00:12:08.079 --> 00:12:14.180
+explore on the ? then it is not no longer
+? right I will come to that case later but
+
+00:12:14.180 --> 00:12:21.369
+this is a good point now so what should I
+do, I am interested in finding v ? (S) right
+
+00:12:21.369 --> 00:12:25.160
+if I am only interested in the small subset
+then a sufficient for me to start my trajectory
+
+00:12:25.160 --> 00:12:29.370
+is only from that small subset but if I am
+interested in finding the value for all these
+
+00:12:29.370 --> 00:12:36.319
+TX in the MDP then I allowed to make sure
+that I atleast start from each and every state.
+
+00:12:36.319 --> 00:12:40.820
+Because it is a deterministic policy right
+I have no guarantee that the states should
+
+00:12:40.820 --> 00:12:44.990
+be visiting only a specific trajectory that
+I will be following repeatedly right there
+
+00:12:44.990 --> 00:12:48.819
+is no guarantee that the states that I do
+not start from will ever be visited for me
+
+00:12:48.819 --> 00:12:55.069
+to get samples from them so I have to start
+from many different states so that I can get
+
+00:12:55.069 --> 00:12:59.351
+samples from those states okay, so infact
+even if it is a stochastic policy you will
+
+00:12:59.351 --> 00:13:03.600
+have to do this exploring starts.
+Because there is no guarantee that you will
+
+00:13:03.600 --> 00:13:12.079
+hit every state even with the stochastic policy,
+right unless the policy happens to be something
+
+00:13:12.079 --> 00:13:20.040
+that log you to explore the entire state spaces
+like a random policy if you have like a completely
+
+00:13:20.040 --> 00:13:25.631
+random policy every state I pick an action
+with probability half or whatever 1/n, so
+
+00:13:25.631 --> 00:13:29.459
+I have n actions in each state like each action
+with probability 1 by n.
+
+00:13:29.459 --> 00:13:45.569
+That essentially means I leveled up covering
+the entire state space provided no provided
+
+00:13:45.569 --> 00:13:55.519
+the entire state space is reachable so I can
+I can have a grid word like this that is a
+
+00:13:55.519 --> 00:14:01.920
+wall right so everything here is I can go
+everything here they can go if I start from
+
+00:14:01.920 --> 00:14:08.889
+here and go even if I am acting randomly there
+is no way I will go to this part of the world,
+
+00:14:08.889 --> 00:14:12.269
+right if I start from here even if I am acting
+completely randomly is no way I will go to
+
+00:14:12.269 --> 00:14:15.559
+this part of the world right.
+So they have not reachable from one another
+
+00:14:15.559 --> 00:14:23.870
+was it how do you find do you need to is a
+question so if you need to there are ways
+
+00:14:23.870 --> 00:14:29.769
+of doing it for smaller problems for larger
+and larger problems they become not ready
+
+00:14:29.769 --> 00:14:35.240
+tractable right so you can use techniques
+from dynamical systems you can use techniques
+
+00:14:35.240 --> 00:14:40.490
+from physics you can use techniques from graph
+theory depending on what assistance is set
+
+00:14:40.490 --> 00:14:59.220
+up that you are interested in solving right.
+So where were we so sample models then exploring
+
+00:14:59.220 --> 00:15:04.660
+starts so is one other question that I am
+expecting people to ask me no one is happening
+
+00:15:04.660 --> 00:15:11.240
+you know I start from s I run a trajectory
+so use the trajectory value for updating the
+
+00:15:11.240 --> 00:15:23.889
+value of s, okay so what you hear sub KS again
+in the physically this is two trajectory starting
+
+00:15:23.889 --> 00:15:30.701
+from s or one trajectory sorry promise why
+is it one when we started from S.
+
+00:15:30.701 --> 00:15:35.309
+I said this is next state after case 1 then
+we can consider that as a trajectory starting
+
+00:15:35.309 --> 00:15:47.249
+from s 1 right and we are talking about probability
+of transition is that even if I am using a
+
+00:15:47.249 --> 00:15:52.100
+deterministic policy as a probability of transition
+right so I may come to s and then I may skip
+
+00:15:52.100 --> 00:15:59.939
+and go out of s and extreme as possible I
+mean here is a simple example so I have S
+
+00:15:59.939 --> 00:16:16.879
+only one action from S I do that so twenty
+percent of the times I am going to come to
+
+00:16:16.879 --> 00:16:22.679
+S and then I am going to stop right.
+So S stop SSS stop so that is also going to
+
+00:16:22.679 --> 00:16:34.309
+be perfection it is possible, which is correct
+one trajectory or two trajectories? One trajectory
+
+00:16:34.309 --> 00:16:41.759
+how many of you say one trajectory, no my
+question was how many of you say one trajectory
+
+00:16:41.759 --> 00:16:47.111
+either put your hand up or down put your hand
+up so many said one trajectory yeah only one
+
+00:16:47.111 --> 00:16:51.790
+person is putting his hand up okay, how many
+of you say two trajectories.
+
+00:16:51.790 --> 00:17:02.180
+What about the rest a tragic releases zero
+you have to have an opinion I am going to
+
+00:17:02.180 --> 00:17:14.730
+start from 0 again so I am going to keep going
+until everybody put their hand up 0 okay turns
+
+00:17:14.730 --> 00:17:29.900
+out both are right one and two right, so when
+you do one it is actually call first we set
+
+00:17:29.900 --> 00:18:03.690
+Monte Carlo when you say to what is called
+close, it can be better than that right, so
+
+00:18:03.690 --> 00:18:08.890
+if you use the only the first occurrence of
+the state is called first visit protocol know
+
+00:18:08.890 --> 00:18:11.830
+if you use every occurrence of the state is
+called every visit want to call.
+
+00:18:11.830 --> 00:18:16.600
+So when you say you use the first occurrence
+what does it mean so I take the return occurring
+
+00:18:16.600 --> 00:18:22.090
+after that let the entire thing you set as
+one sample for updating v ? of it when you
+
+00:18:22.090 --> 00:18:27.419
+say every visit that means I take the return
+after every occurrence oh right so the first
+
+00:18:27.419 --> 00:18:32.080
+return will be this much right now the second
+return will be using will be this much okay,
+
+00:18:32.080 --> 00:18:41.169
+so what is the real problem here is that when
+I do every visit Monte Carlo.
+
+00:18:41.169 --> 00:18:48.269
+I have just taken one sample trajectory right
+but I am using the sample trajectory twice
+
+00:18:48.269 --> 00:18:53.179
+atleast part of the sample trajectory I am
+using it twice okay why is that a problem
+
+00:18:53.179 --> 00:19:07.040
+yeah so is that a problem so when I approximate
+an expectation with samples I am assuming
+
+00:19:07.040 --> 00:19:12.769
+that the samples were drawn according to the
+distribution on which I am taking the expectation
+
+00:19:12.769 --> 00:19:21.630
+right, so the distribution yield at me this
+one sample once right that one trajectory
+
+00:19:21.630 --> 00:19:24.840
+delayed it once.
+But I am using it twice essentially I am changing
+
+00:19:24.840 --> 00:19:37.700
+the distribution right so that is a pain problem
+so I am not using the same distribution that
+
+00:19:37.700 --> 00:19:42.490
+I am taking the expectation with respect to
+but it turns out that all this adds is a little
+
+00:19:42.490 --> 00:19:48.730
+bit more biased estimation people remember
+bias-variance strain of it is not very important
+
+00:19:48.730 --> 00:19:53.510
+to know if you do not remember bias-variance
+trade or never heard of bias variance.
+
+00:19:53.510 --> 00:19:59.630
+So it induces a little additional bias into
+estimator but I turns out that in the limit
+
+00:19:59.630 --> 00:20:03.710
+right if you do a lot a lot of samples in
+this particular case it turns out both converge
+
+00:20:03.710 --> 00:20:15.049
+to the same value function so it is right,
+see I roll the dice and take a sample right
+
+00:20:15.049 --> 00:20:20.760
+I mean so essentially I am for every step
+I take I roll the dice first pick an action
+
+00:20:20.760 --> 00:20:25.610
+according to my ? then I pick a next state
+according to PS’SA and then I pick a reward
+
+00:20:25.610 --> 00:20:29.519
+according to the expected reward so on so
+forth, I so I do a lot of simulation.
+
+00:20:29.519 --> 00:20:35.880
+So a specific trajectory is now appeared so
+S, s1 s2 s3 s4 and then for each one of these
+
+00:20:35.880 --> 00:20:44.350
+I get r1 r2 r3 r4 and I would up into actions
+a1 a2 a3 a4 right but then how many times
+
+00:20:44.350 --> 00:20:49.580
+this kind of a thing occur should be determined
+by rolling the dice again and again rolling
+
+00:20:49.580 --> 00:20:55.039
+my coins again whatever right tossing the
+coins again and again but I did not do that
+
+00:20:55.039 --> 00:20:59.520
+right I just generated this once sample once
+and I kept saying okay.
+
+00:20:59.520 --> 00:21:03.220
+So this part is one sample now this part is
+another sample this part is another sample
+
+00:21:03.220 --> 00:21:08.350
+so for one roll of the die and this taking
+multiple subsections of it and then repeatedly
+
+00:21:08.350 --> 00:21:17.260
+using it right, so if I had started from S
+here and rerun the experiment and I might
+
+00:21:17.260 --> 00:21:21.380
+not that this might not be the one that I
+produced that I will actually produce something
+
+00:21:21.380 --> 00:21:26.470
+else again alright so essentially that is
+the pet sitter keeper that is why I am saying
+
+00:21:26.470 --> 00:21:29.410
+you are changing the distribution to some
+extent.
+
+00:21:29.410 --> 00:21:36.669
+Was it should not hurt the same saying it
+will eventually converge to the same thing
+
+00:21:36.669 --> 00:21:42.760
+so if at all there was a thought about why
+you should not do every visit that was the
+
+00:21:42.760 --> 00:21:51.620
+reason or it affects its effects in some sense
+but it is it just how do I put it let us say
+
+00:21:51.620 --> 00:21:58.539
+that there is something here that happened
+right that is very rare very that it occurred
+
+00:21:58.539 --> 00:22:03.190
+once right it will probably occur once in
+a million times if you are actually random
+
+00:22:03.190 --> 00:22:06.010
+independently it occurred once on this trajectory
+.
+
+00:22:06.010 --> 00:22:12.751
+But you are going to count it twice once for
+this is one saw that is right but if you had
+
+00:22:12.751 --> 00:22:15.789
+drawn independent samples it will happen only
+once every million through the fleece now
+
+00:22:15.789 --> 00:22:24.210
+it is happening twice everybody into the cliffs
+which is a significant change, in something
+
+00:22:24.210 --> 00:22:30.570
+you double the probability of it is missing
+so that is that ids why it is it could be
+
+00:22:30.570 --> 00:22:35.149
+a problem using a very visit NC could be a
+problem right.
+
+00:22:35.149 --> 00:22:37.789
+So there any questions on this so far the
+thing you have covered all the things I wanted
+
+00:22:37.789 --> 00:22:42.109
+to do so Monte Carlo equal to sample models
+exploding starts first was it revisit.
+

@@ -1,0 +1,22 @@
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+
+# Tooling and test output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+
+# Download diagnostics; source data and generated transcripts are versioned.
+*.log

@@ -1,0 +1,1350 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.059 --> 00:00:22.900
+So far we have been looking at bandit algorithms
+right or the immediate reinforcement learning
+
+00:00:22.900 --> 00:00:29.519
+and so what we are going to start from today
+is looking at the full reinforcement learning
+
+00:00:29.519 --> 00:00:39.410
+problem right.
+
+00:00:39.410 --> 00:00:43.340
+So we know little bit already about the full
+RL problem right so what are the complications
+
+00:00:43.340 --> 00:00:49.330
+that we are going to insert here States we
+already looked at states in contextual bandits
+
+00:00:49.330 --> 00:00:57.390
+right temporal dependence right the sequential
+nature of the problem is something that we
+
+00:00:57.390 --> 00:01:03.030
+are going to introduce here so what we are
+going to look at is that we will assume that
+
+00:01:03.030 --> 00:01:16.650
+there is a there is an environment okay and
+an agent 
+
+00:01:16.650 --> 00:01:29.369
+interacts with the environment, the agent
+interacts with the environment at any point
+
+00:01:29.369 --> 00:01:36.650
+the agent senses the state the environment
+is in okay.
+
+00:01:36.650 --> 00:01:48.670
+Then in response to that the agent takes a
+action which is then applied to the environment
+
+00:01:48.670 --> 00:01:58.219
+okay so the agent senses the state the environment
+is in that is St and it takes an action that
+
+00:01:58.219 --> 00:02:04.070
+gets applied to the environment and as a result
+of applying this action environment changes
+
+00:02:04.070 --> 00:02:16.319
+to a state S t plus 1 which then gets fed
+back into the agent as the current state St
+
+00:02:16.319 --> 00:02:23.560
+and then you keep doing this in a loop right
+so this could go on indefinitely or there
+
+00:02:23.560 --> 00:02:29.440
+could be a well designated stopping state
+right if you reach that state you stop the
+
+00:02:29.440 --> 00:02:35.400
+trials okay or a group of states I mean you
+can always this is this trick right.
+
+00:02:35.400 --> 00:02:39.150
+So when I say there is a starting state and
+a stopping state, it could very well be a
+
+00:02:39.150 --> 00:02:45.349
+group of starting states and a group of stopping
+states I can always define a dummy state to
+
+00:02:45.349 --> 00:02:49.530
+which all the states go to right so I can
+always say that there is a single starting
+
+00:02:49.530 --> 00:02:53.340
+state and a single stopping state right so
+that for ease of exposition so I will keep
+
+00:02:53.340 --> 00:02:58.920
+saying that makes sense and even if there
+are multiple states where you will stop I
+
+00:02:58.920 --> 00:03:04.250
+can insert one dummy state and say that automatically
+as soon as you reach one of these states you
+
+00:03:04.250 --> 00:03:06.680
+will make a transition to the dummy state
+and you will stop there okay.
+
+00:03:06.680 --> 00:03:11.530
+So there will always be a one-stop state and
+one start state right so that might happen
+
+00:03:11.530 --> 00:03:22.610
+and apart from this 
+
+00:03:22.610 --> 00:03:30.930
+you also get a reward signal from the environment
+okay this is like I was mentioning earlier
+
+00:03:30.930 --> 00:03:35.290
+this is a convenience a modeling convenience
+that we put the reward in the environment
+
+00:03:35.290 --> 00:03:42.890
+okay that is because we want to put the reward
+in a place which is outside the agent's direct
+
+00:03:42.890 --> 00:03:49.120
+control right agent should not just arbitrarily
+say okay I okay I am getting a reward of five
+
+00:03:49.120 --> 00:03:51.189
+now right.
+
+00:03:51.189 --> 00:03:55.989
+So it should get this reward as a result of
+the behavior in the world okay it cannot just
+
+00:03:55.989 --> 00:04:02.269
+arbitrarily set its own rewards okay so that
+is the reason we put the reward in the environment
+
+00:04:02.269 --> 00:04:07.909
+okay so that it is outside in reality right
+this will be a very much more complex picture
+
+00:04:07.909 --> 00:04:13.140
+right because if you think about it I mean
+I have been repeatedly saying that all biological
+
+00:04:13.140 --> 00:04:17.970
+agents are reinforcement learning agents right
+humans are reinforcement learning agents so
+
+00:04:17.970 --> 00:04:20.590
+do you have a separate reward conduit right.
+
+00:04:20.590 --> 00:04:26.350
+We have a reward sensing mechanism somewhere
+right so you only have what you sense from
+
+00:04:26.350 --> 00:04:30.650
+the world right so you look around you see
+whatever is whatever inputs that are coming
+
+00:04:30.650 --> 00:04:34.910
+in whether you are in you could be ingesting
+food, you could be looking at the outside
+
+00:04:34.910 --> 00:04:40.010
+world right somebody might be touching you
+on the skin whatever right so you are taking
+
+00:04:40.010 --> 00:04:46.120
+in all these complex sensory inputs and other
+kinds of actual physical ingestible inputs
+
+00:04:46.120 --> 00:04:55.350
+okay and then you are converting them into
+rewards right so that is how the rewards happen
+
+00:04:55.350 --> 00:04:56.350
+right.
+
+00:04:56.350 --> 00:05:02.550
+So if you are hungry and you eat okay that
+is that is rewarding right but then you find
+
+00:05:02.550 --> 00:05:11.560
+out that you have I do not know eaten something
+that is gone stale right that is not rewarding
+
+00:05:11.560 --> 00:05:16.470
+it is in fact opposite of it right and if
+you are not hungry and somebody just gives
+
+00:05:16.470 --> 00:05:21.100
+you something to eat you just eat for the
+sake of you know hey give me company and then
+
+00:05:21.100 --> 00:05:25.470
+you go and eat some really bad food and things
+like that so there is no immediate reward
+
+00:05:25.470 --> 00:05:29.630
+apart from the company part of it but the
+act of eating itself does not give you any
+
+00:05:29.630 --> 00:05:37.131
+immediate reward but probably will have a
+consequence in the long run Yeah right so
+
+00:05:37.131 --> 00:05:42.040
+go eat some fried food just because your friend
+asked you to eat will have consequences in
+
+00:05:42.040 --> 00:05:44.470
+the in the long run right .
+
+00:05:44.470 --> 00:05:49.830
+So rewards are iffy things right I mean so
+we are going to make it very concrete right
+
+00:05:49.830 --> 00:05:54.259
+I am going to say there is this some mechanism
+in the environment that gives you a reward
+
+00:05:54.259 --> 00:06:03.280
+but if you really think about it these rewards
+are are everywhere right in fact the last
+
+00:06:03.280 --> 00:06:08.479
+few years so Andy Barto was asking going around
+asking this question where do rewards come
+
+00:06:08.479 --> 00:06:20.520
+from right so when was he here 2009 yeah so
+I hosted him here in 2009 and one of the talks
+
+00:06:20.520 --> 00:06:24.090
+I mean at that time the talk he was going
+around giving everywhere was where do rewards
+
+00:06:24.090 --> 00:06:31.270
+come from okay so it was it is really an unforgettable
+thing yeah.
+
+00:06:31.270 --> 00:06:35.530
+So so this is not very clear so take it with
+a pinch of salt when I say that the environment
+
+00:06:35.530 --> 00:06:39.300
+is going to give you a reward signal, the
+rewards could come from anywhere right in
+
+00:06:39.300 --> 00:06:46.759
+fact it is not even clear what is the agent
+what is the environment hmm so we have a lot
+
+00:06:46.759 --> 00:06:53.580
+of Robotics guys here right suppose I am having
+a robot learning problem right so what would
+
+00:06:53.580 --> 00:07:06.220
+be the agent what would be the environment
+the robot is the agent really okay let us
+
+00:07:06.220 --> 00:07:10.560
+say I give you a navigation problem or a reaching
+problem let us say I am trying to train a
+
+00:07:10.560 --> 00:07:15.840
+robot to reach out and pick an object on the
+table.
+
+00:07:15.840 --> 00:07:26.330
+Environment is the workspace what about the
+arm, what about the angle of the arm is it
+
+00:07:26.330 --> 00:07:33.430
+in the environment or is it part of the agent
+so where is the agent then so the arm is not
+
+00:07:33.430 --> 00:07:38.820
+part of the agent the one controlling the
+arm is the Agent so it becomes tricky right
+
+00:07:38.820 --> 00:07:42.969
+we have to actually think about it is not
+like okay as a robot the robot is a agent
+
+00:07:42.969 --> 00:07:46.990
+everything outside the robot is the environment
+right so it is not that boundaries are not
+
+00:07:46.990 --> 00:07:54.110
+drawn as neatly around the physical entities
+right suppose suppose let us consider forget
+
+00:07:54.110 --> 00:08:04.080
+about robots let us say you are driving a
+car okay so who is the agent what is the agent
+
+00:08:04.080 --> 00:08:05.770
+and what is the environment there.
+
+00:08:05.770 --> 00:08:14.170
+Right I mean always the right answer is depends
+okay but but what does it depend on right
+
+00:08:14.170 --> 00:08:22.849
+in this case the agent could be the car right
+the environment could be the road right so
+
+00:08:22.849 --> 00:08:26.009
+as a human being sitting and driving a car
+you can look at okay what is the velocity
+
+00:08:26.009 --> 00:08:29.960
+at which the car is moving okay and what is
+the direction which the car is moving are
+
+00:08:29.960 --> 00:08:35.030
+there pedestrians jumping in front of me right
+and all those things right so this could be
+
+00:08:35.030 --> 00:08:40.310
+your this could be your environment right
+and the agent itself is the car you know I
+
+00:08:40.310 --> 00:08:46.680
+am controlling the car on the other hand the
+environment could include the car right and
+
+00:08:46.680 --> 00:08:50.589
+the agent could be the human sitting there
+and you can think of okay.
+
+00:08:50.589 --> 00:08:55.960
+How much how much am I pushing my foot down
+on the pedal which pedal should I be keeping
+
+00:08:55.960 --> 00:09:01.510
+my feet on first case right and then should
+I how much what torque should I apply to the
+
+00:09:01.510 --> 00:09:06.290
+steering wheel right where should I be turning
+my head to look at right should I be looking
+
+00:09:06.290 --> 00:09:10.860
+at the mirror should I look at front right
+or should I be looking down at my phone right
+
+00:09:10.860 --> 00:09:16.050
+so all of these things decisions that you
+have to make right while you are driving right
+
+00:09:16.050 --> 00:09:21.820
+so there is this interface now the agent environment
+interface becomes the human and the car right
+
+00:09:21.820 --> 00:09:28.959
+or it could be even more right you can go
+further back you can even go further back
+
+00:09:28.959 --> 00:09:35.019
+into the human right thinking about okay which
+okay I am talking about the motor cortex right.
+
+00:09:35.019 --> 00:09:39.970
+So which neurons in my motor cortex should
+fire now so that my arm twitches enough so
+
+00:09:39.970 --> 00:09:48.440
+that I turn the wheel this much right so which
+neurons should fire in my motor I mean the
+
+00:09:48.440 --> 00:09:53.440
+autonomous nervous system so that my leg actually
+pushes down with some kind of pressure right
+
+00:09:53.440 --> 00:09:57.560
+so I could I could think of depending on the
+kind of problem that I am solving right I
+
+00:09:57.560 --> 00:10:03.760
+could think of drawing this agent environment
+boundary anywhere right I mean not arbitrarily
+
+00:10:03.760 --> 00:10:08.630
+anywhere but you can think of multiple places
+where the same set of interacting entities
+
+00:10:08.630 --> 00:10:13.720
+are there right but you have very different
+kinds of modeling that you could do.
+
+00:10:13.720 --> 00:10:17.480
+Okay it is not very clear when I say there
+is an agent there is an environment do not
+
+00:10:17.480 --> 00:10:21.530
+expect people to come and give you okay this
+is the agent here is the environment now come
+
+00:10:21.530 --> 00:10:26.260
+up with a reinforcement learning algorithm
+that will solve this problem right so typically
+
+00:10:26.260 --> 00:10:30.690
+you will have to think about this figure out
+what is a right abstraction that you would
+
+00:10:30.690 --> 00:10:36.579
+need right before you go start a solution
+for this right so this is something which
+
+00:10:36.579 --> 00:10:42.700
+you have to keep in mind nobody is giving
+this to you apriori right so having said all
+
+00:10:42.700 --> 00:10:46.829
+of this one other way of thinking about how
+this interaction proceeds right.
+
+00:10:46.829 --> 00:10:52.269
+So modulo all the caveats I have been giving
+to you there is an agent okay it senses the
+
+00:10:52.269 --> 00:10:57.700
+state of the environment it takes an action
+okay and then that causes a change in the
+
+00:10:57.700 --> 00:11:01.600
+state of the environment right so having said
+all of this you can think of the interactions
+
+00:11:01.600 --> 00:11:16.029
+as proceeding like this so I have St right
+I sense that I take action At okay that causes
+
+00:11:16.029 --> 00:11:28.880
+new state S t plus 1 and a reward so this
+is a slight quark of the book itself right
+
+00:11:28.880 --> 00:11:36.270
+where the reward corresponding to the state
+and action at time t is labeled as R t plus
+
+00:11:36.270 --> 00:11:43.829
+1 okay so this is a quirk in the book and
+the reason they say is typically the next
+
+00:11:43.829 --> 00:11:47.769
+state and the next reward are determined at
+the same time.
+
+00:11:47.769 --> 00:11:56.339
+And therefore it makes more sense to label
+both of them with t plus 1 okay so one thing
+
+00:11:56.339 --> 00:12:01.889
+here in the bandit case I was making a distinction
+between n and t okay I am going back to using
+
+00:12:01.889 --> 00:12:10.670
+t here but the t could be discrete time as
+well in fact for most of the course t is going
+
+00:12:10.670 --> 00:12:25.329
+to be discrete okay in fact t need not even
+be time, t need not even be time okay so t
+
+00:12:25.329 --> 00:12:33.950
+is steps so what are you talking about here
+typically these are my decision epochs right
+
+00:12:33.950 --> 00:12:37.889
+when I say t equal to 1 that means I am taking
+my first decision when you say t equal to
+
+00:12:37.889 --> 00:12:41.760
+2 that means I am taking my second decision
+right this is typically okay.
+
+00:12:41.760 --> 00:12:45.250
+Sometimes I am also interested in cases where
+I do not take any decisions but the state
+
+00:12:45.250 --> 00:12:51.220
+keeps changing over time but for most parts
+when I say when I advance t by 1, that is
+
+00:12:51.220 --> 00:12:57.959
+typically at the point where I am required
+to take the next decision okay so later we
+
+00:12:57.959 --> 00:13:04.360
+will actually look at a still a discrete-time
+case but where decisions need not happen at
+
+00:13:04.360 --> 00:13:08.910
+every time tick okay so we will look at that
+case as well later but not immediately okay
+
+00:13:08.910 --> 00:13:17.570
+for most part of it assume that t is a decision
+tick ok not a time tick when t goes from t
+
+00:13:17.570 --> 00:13:22.019
+to t plus 1, that means have taken another
+decision the decisions could need not necessarily
+
+00:13:22.019 --> 00:13:23.019
+take the same time.
+
+00:13:23.019 --> 00:13:28.399
+For example consider the game of chess right
+so each move that you make I mean so initially
+
+00:13:28.399 --> 00:13:32.810
+you will be making moves very rapidly right
+because you are playing from a standard opening
+
+00:13:32.810 --> 00:13:37.540
+play or something and later on you actually
+have to study the board position and then
+
+00:13:37.540 --> 00:13:41.490
+you have to think about it and make moves
+right but I still count each everything as
+
+00:13:41.490 --> 00:13:47.540
+a single move right so you do not say the
+first few moves were all count as one fourth
+
+00:13:47.540 --> 00:13:52.250
+of a move each or anything because you did
+it very fast so just exactly like that so
+
+00:13:52.250 --> 00:13:56.050
+each move itself could take different amounts
+of time right.
+
+00:13:56.050 --> 00:14:00.440
+I am not worried about it and the intervals
+at which you are asked to make decisions might
+
+00:14:00.440 --> 00:14:06.500
+also be non-uniform I am not worried about
+it okay this is the basic setting I am having
+
+00:14:06.500 --> 00:14:15.170
+later when we talk about hierarchical RL we
+will start worrying about the duration of
+
+00:14:15.170 --> 00:14:20.070
+decisions if I take one action now how long
+will it take for that action to complete and
+
+00:14:20.070 --> 00:14:23.940
+those kinds of things we will worry about
+later right now we are assuming that every
+
+00:14:23.940 --> 00:14:32.520
+action takes the same time to complete so
+time within quotes here okay.
+
+00:14:32.520 --> 00:14:43.560
+So that is basically it this just keeps going
+right so we will denote by S plus that distinguished
+
+00:14:43.560 --> 00:14:48.199
+terminal state right so this just keeps going
+until I reach S plus or it just keeps going
+
+00:14:48.199 --> 00:14:59.060
+indefinitely if there is no distinguished
+terminal state okay any questions so far,
+
+00:14:59.060 --> 00:15:02.940
+the setup is clear right so what we are going
+to do okay next thing I want to talk about
+
+00:15:02.940 --> 00:15:17.339
+is the 
+reward itself so I am going to be very religiously
+
+00:15:17.339 --> 00:15:22.740
+following chapter 3 in the book right and
+I did ask people to read ahead to Chapter
+
+00:15:22.740 --> 00:15:33.800
+three how many of you actually read chapter
+three, four my god Subho you did you put your
+
+00:15:33.800 --> 00:15:34.800
+hand up.
+
+00:15:34.800 --> 00:15:49.410
+Okay then no that is not counted so 4 people
+yeah sorry you are busy doing the assignments
+
+00:15:49.410 --> 00:15:57.500
+is it hey release the assignments from chapter
+3 as well so from now onwards what we will
+
+00:15:57.500 --> 00:16:09.899
+do is before I start the chapter we will release
+the assignments will that help written assignment
+
+00:16:09.899 --> 00:16:14.160
+of course not the programming assignment yeah
+so when is when is the second written assignment
+
+00:16:14.160 --> 00:16:19.660
+due Friday is it so if you release some questions
+today they will be able to finish it before
+
+00:16:19.660 --> 00:16:25.630
+Friday night I only promised I will not release
+it on Thursday.
+
+00:16:25.630 --> 00:16:33.100
+Right I promised I will not release questions
+on Thursday right I did not say anything about
+
+00:16:33.100 --> 00:16:42.279
+Wednesday.. Varun is not giving any opinion
+you were just thinking about okay they will
+
+00:16:42.279 --> 00:16:50.839
+not do anything to him I am the one who will
+get beaten up okay so we will extend the deadline
+
+00:16:50.839 --> 00:16:57.110
+to Monday and then give them additional assignments
+today yes so the people who read ahead so
+
+00:16:57.110 --> 00:17:17.070
+what does the chapter say about reward functions
+does it say anything about rewards yeah anything
+
+00:17:17.070 --> 00:17:22.850
+else about the reward so classically reinforcement
+learning assumes that the reward is a scalar
+
+00:17:22.850 --> 00:17:45.070
+quantity alright so the rewards are 
+
+00:17:45.070 --> 00:17:47.840
+so the rewards are scalar and it is outside
+the direct control of agent.
+
+00:17:47.840 --> 00:17:55.299
+That is why I told you we put it in the environment
+yeah we will come to that right so what does
+
+00:17:55.299 --> 00:17:59.920
+that mean that the agent cannot arbitrarily
+set the reward it has to do it through interaction
+
+00:17:59.920 --> 00:18:05.490
+with the environment okay so that is essentially
+the two main things that we need so the more
+
+00:18:05.490 --> 00:18:10.500
+important thing here is the assumption that
+the rewards are scalar right so what does
+
+00:18:10.500 --> 00:18:18.330
+it mean it means is just a number right so
+it might look that it is a pretty weak model
+
+00:18:18.330 --> 00:18:23.770
+for the rewards but if you remember we talked
+about a wide variety of applications of reinforcement
+
+00:18:23.770 --> 00:18:27.680
+learning in the first lecture and in all of
+those applications that we went through we
+
+00:18:27.680 --> 00:18:30.670
+were actually looking at scalar robots.
+
+00:18:30.670 --> 00:18:34.500
+Right so it does turn out that there is a
+wide variety of settings where you can use
+
+00:18:34.500 --> 00:18:39.780
+the scalar rewards and get away with it right
+but there are cases where you might have to
+
+00:18:39.780 --> 00:18:44.590
+make some kind of calls about trade-offs between
+how much importance you want to give to one
+
+00:18:44.590 --> 00:18:48.990
+event versus another so for example let us
+again take the reaching tasks that we had
+
+00:18:48.990 --> 00:19:01.200
+right so the so when I want to reach out to
+an.. how would you set the rewards here 
+
+00:19:01.200 --> 00:19:04.900
+once I grasp it I will give a reward right
+I can give you some reward like I can give
+
+00:19:04.900 --> 00:19:11.150
+you a reward of 10 or something when I grasp
+the yeah but then I need to optim..I need
+
+00:19:11.150 --> 00:19:12.150
+to get there right.
+
+00:19:12.150 --> 00:19:16.220
+So I what I am trying to do is optimize my
+reward function if you remember the whole
+
+00:19:16.220 --> 00:19:20.700
+problem in the reinforcement learning is to
+well this is something I mentioned in the
+
+00:19:20.700 --> 00:19:26.960
+very beginning the problem in RL is to behave
+in such a way so that you get as much as reward
+
+00:19:26.960 --> 00:19:31.860
+as possible in the long run right so if I
+do not give you any reward function right
+
+00:19:31.860 --> 00:19:36.570
+I will just be flailing around right I could
+be happily moving waving my hand around not
+
+00:19:36.570 --> 00:19:39.200
+doing anything with regard to grasping the
+object right.
+
+00:19:39.200 --> 00:19:45.030
+So I need to give some kind of a reward either
+for grasping the object or how else would
+
+00:19:45.030 --> 00:19:51.679
+you do this negative reward for every time
+step I keep flailing around right it is like
+
+00:19:51.679 --> 00:19:59.260
+you are in constant pain right and the pain
+will stop once you hold this right because
+
+00:19:59.260 --> 00:20:03.720
+the episode ends and you stop getting minus
+ones there right so it is like somebody keeps
+
+00:20:03.720 --> 00:20:13.900
+poking you with a pin all the time hmm keep
+go go until you reach this is how we train
+
+00:20:13.900 --> 00:20:19.549
+yeah any any any animal that draws a vehicle
+right you keep pushing it in the side until
+
+00:20:19.549 --> 00:20:23.190
+it actually reaches the destination right.
+
+00:20:23.190 --> 00:20:28.490
+I mean humans are very cruel man I mean anyway
+so that is how we do it right so but then
+
+00:20:28.490 --> 00:20:35.440
+is that sufficient so you do not really want
+to strain your hand right so I mean there
+
+00:20:35.440 --> 00:20:39.740
+are joint limits right so you really do not
+want to come up with a grasp grasp that looks
+
+00:20:39.740 --> 00:20:46.679
+like this right this is also valid I have
+caught the phone right so you do not want
+
+00:20:46.679 --> 00:20:53.309
+to do that right you want to give some kind
+of a.. you know additional pain right if I
+
+00:20:53.309 --> 00:20:58.600
+do things like this right so if in fact for
+me it actually was painful right but so you
+
+00:20:58.600 --> 00:21:02.700
+want to do this communicate this to the bot
+right how much additional pain do you give
+
+00:21:02.700 --> 00:21:03.700
+it.
+
+00:21:03.700 --> 00:21:09.350
+So grabbing this thing let us say gives you
+a reward of 10 right and doing that gives
+
+00:21:09.350 --> 00:21:15.450
+you a reward of say minus 100 so what is going
+to happen you are going to be very cautious
+
+00:21:15.450 --> 00:21:22.840
+right in trying to grab it right but if grabbing
+this gives you a reward of 100 right and doing
+
+00:21:22.840 --> 00:21:30.580
+that gives you a reward of minus point 1 right
+you would still be cautious because I am being
+
+00:21:30.580 --> 00:21:39.980
+optimal right so 99.1 is worse than 99.5 so
+I will still be cautious about avoiding those
+
+00:21:39.980 --> 00:21:46.669
+but I will not go to to significant extent
+to do that because I am still getting my minus
+
+00:21:46.669 --> 00:21:52.669
+1's right so the longer I take to get to the
+get to a grasp right the more minus 1 I am
+
+00:21:52.669 --> 00:21:59.100
+going to get right and the better form the
+grasp is, the fewer minus point 1s I am going
+
+00:21:59.100 --> 00:22:01.169
+to get.
+
+00:22:01.169 --> 00:22:05.020
+So there is some trade-off I will form at
+some point right but where the trade-off point
+
+00:22:05.020 --> 00:22:09.260
+lies depends on the magnitude of the rewards
+I am going to give you as well so if I am
+
+00:22:09.260 --> 00:22:13.159
+going to give you a minus 1000 for doing something
+like this right then I will be more careful
+
+00:22:13.159 --> 00:22:21.330
+right so these are all trade-offs right when
+you design the problem but so how do you set
+
+00:22:21.330 --> 00:22:28.870
+these reward functions well understood problems
+like grasping or reaching or robotics in general
+
+00:22:28.870 --> 00:22:33.880
+right you can look at the problem that you
+are trying to solve and try to figure out
+
+00:22:33.880 --> 00:22:36.580
+okay which are the undesirable configurations
+okay,
+
+00:22:36.580 --> 00:22:41.210
+So very expensive robot so I do not want to
+break it so let me make sure that all these
+
+00:22:41.210 --> 00:22:46.900
+other things have a highly high negative values
+right and versus a cheap robot or what I really
+
+00:22:46.900 --> 00:22:52.140
+want to do is get there as soon as I can okay
+do not mind throwing 300 robots at it because
+
+00:22:52.140 --> 00:22:58.970
+each robot costs only 1 rupee right then I
+can just not worry about crashing and burning
+
+00:22:58.970 --> 00:23:04.400
+a few along the way right so it depends on
+the domain right so there is still a significant
+
+00:23:04.400 --> 00:23:15.039
+trade off that you will have to think about
+right so even though I am saying it is a scalar
+
+00:23:15.039 --> 00:23:21.730
+quantity there are instances where I will
+have to kind of put multiple outcomes right
+
+00:23:21.730 --> 00:23:26.880
+multiple outcomes on the same scale right
+which makes it a little tricky just like in
+
+00:23:26.880 --> 00:23:31.140
+this case I mean there is an outcome associated
+with success which is grasping it and there
+
+00:23:31.140 --> 00:23:36.870
+is outcome associated with well not really
+failures but outcomes associated with undesirable
+
+00:23:36.870 --> 00:23:39.110
+events along the way.
+
+00:23:39.110 --> 00:23:42.950
+So I have to put all of these on the same
+scale and I have to do it might have been
+
+00:23:42.950 --> 00:23:49.100
+more convenient if you could have thought
+of okay 100 for that ok, -minus 5 for this
+
+00:23:49.100 --> 00:23:51.600
+but these are just things that you need to
+avoid you know if there is some other way
+
+00:23:51.600 --> 00:23:56.460
+I can communicate these things to robot then
+that might be a better mechanism it turns
+
+00:23:56.460 --> 00:24:02.760
+out it is hard to come up with an appropriate
+optimization set up for doing this so the
+
+00:24:02.760 --> 00:24:13.150
+scalar reward thing A is pretty powerful and
+B kind of gels in some sense with how we also
+
+00:24:13.150 --> 00:24:17.840
+do decision-making at the end of the day we
+are very good at judging trade-offs right.
+
+00:24:17.840 --> 00:24:21.200
+So whenever as soon as you start thinking
+of doing these kinds of trade-offs in some
+
+00:24:21.200 --> 00:24:26.570
+sense you are putting these on a same scale
+right the putting them on the same scale because
+
+00:24:26.570 --> 00:24:31.390
+they only then you can think about trade-offs
+so in that way also it seems to be natural
+
+00:24:31.390 --> 00:24:37.330
+and the third thing is having a single scalar
+value makes it easier for us to optimize the
+
+00:24:37.330 --> 00:24:42.159
+solution right we can always get a good optimal
+solution this is for various reasons the scalar
+
+00:24:42.159 --> 00:24:45.409
+values are fine right so I think that is one
+of the homework questions which ask you to
+
+00:24:45.409 --> 00:24:50.990
+think about scalar values a little bit more
+I mean think and reason about it.
+
+00:24:50.990 --> 00:25:07.990
+And so what else do we need the reward to
+do well mathematically we need the rewards
+
+00:25:07.990 --> 00:25:14.390
+to be bounded when we are talking about biological
+systems that is not really a criterion because
+
+00:25:14.390 --> 00:25:20.680
+I mean it has to be physical right so you
+cannot have an unbounded neural spike in your
+
+00:25:20.680 --> 00:25:27.820
+brain for corresponding to a reward right
+so you may just fry your brain right so but
+
+00:25:27.820 --> 00:25:34.960
+when talking about mathematical settings you
+really want the reward to be bounded right
+
+00:25:34.960 --> 00:25:48.960
+and so basically that is it so one other thing
+later on we would like the rewards to be frequent
+
+00:25:48.960 --> 00:25:54.350
+I will explain this later like once we start
+looking at learning algorithms and stuff but
+
+00:25:54.350 --> 00:26:00.090
+this essentially means that it should not
+be that I get rewards say once in a million
+
+00:26:00.090 --> 00:26:03.630
+time steps.
+
+00:26:03.630 --> 00:26:13.960
+There is very little very limited literature
+in this right so the one alternative which
+
+00:26:13.960 --> 00:26:20.860
+people have explored is to look at vector-valued
+rewards where each component of the reward
+
+00:26:20.860 --> 00:26:24.970
+corresponds to a different thing that you
+want to achieve and these are called typically
+
+00:26:24.970 --> 00:26:30.340
+multi-criteria RL right there are very few
+papers maybe five or six papers out there
+
+00:26:30.340 --> 00:26:34.279
+which talk about multi criterion reinforcement
+learning in fact there is a corresponding
+
+00:26:34.279 --> 00:26:37.700
+optimization thing also called multi-criterion
+optimization right.
+
+00:26:37.700 --> 00:26:41.940
+So where people talk about different notions
+of optimality even so what exactly is optimal
+
+00:26:41.940 --> 00:26:45.890
+right so optimal is where the objective function
+you reach a minima of the objective function
+
+00:26:45.890 --> 00:26:49.380
+but now if you are going to look at it in
+multiple dimensions so you may end up reaching
+
+00:26:49.380 --> 00:26:54.760
+some kind of saddle points also right so what
+exactly is the optima in this case so people
+
+00:26:54.760 --> 00:26:56.640
+talk about those kinds of characterization.
+
+00:26:56.640 --> 00:27:04.510
+So there is more work in multi-agent settings
+in looking at more richer reward functions
+
+00:27:04.510 --> 00:27:14.029
+than in single agent RL right yeah very little
+out there and it will be interesting to come
+
+00:27:14.029 --> 00:27:19.669
+up with some kind of qualitative feedback
+as well instead of looking at this kind of
+
+00:27:19.669 --> 00:27:24.990
+a quantitative feedback and if you like that
+kind of work there are there is some kind
+
+00:27:24.990 --> 00:27:32.620
+of work in fuzzy RL where the feedback signal
+is a fuzzy signal not much again very little
+
+00:27:32.620 --> 00:27:42.120
+and there is one more thing I want to mention
+yeah but all of those are scalar I mean there
+
+00:27:42.120 --> 00:27:47.159
+are all kinds of work on like instead of looking
+at the reward but look at the perception of
+
+00:27:47.159 --> 00:27:48.539
+reward and so on so forth.
+
+00:27:48.539 --> 00:27:53.870
+But all of these are still scalar quantities
+and they are not vector valued quantities
+
+00:27:53.870 --> 00:28:01.760
+but it is a much richer notion of feedback
+than what you would is typically a reward
+
+00:28:01.760 --> 00:28:08.210
+function yeah so what we mean by frequent
+is that you should not be getting rewards
+
+00:28:08.210 --> 00:28:11.809
+like once in a million time steps or something
+then you will never learn anything right you
+
+00:28:11.809 --> 00:28:15.940
+are trying to optimize rewards and regardless
+of what you do for a million time steps you
+
+00:28:15.940 --> 00:28:22.210
+get nothing right that is too long a horizon
+for you to learn anything over right so typically
+
+00:28:22.210 --> 00:28:27.730
+you expect more reward to come to you along
+the way okay.
+
+00:28:27.730 --> 00:28:39.850
+So that is what is rewards 
+so policy so what is it so I am just talking
+
+00:28:39.850 --> 00:28:45.140
+about different components of a reinforcement
+learning system okay so we talked about states
+
+00:28:45.140 --> 00:28:49.780
+and actions right basically the agent and
+the environment now you're talking about the
+
+00:28:49.780 --> 00:28:54.600
+reward okay the next thing you want to talk
+about is the policy so what is the policy
+
+00:28:54.600 --> 00:29:08.000
+no 0 is non informative right I really cannot
+change my unless I have gotten a minus 1 somewhere
+
+00:29:08.000 --> 00:29:11.840
+I do not know if zero is good or bad right
+I mean I really cannot change anything based
+
+00:29:11.840 --> 00:29:15.620
+on 0 but that is a good point yeah.
+
+00:29:15.620 --> 00:29:29.180
+So when we say frequent rewards I do mean
+frequent non zero rewards right so we know
+
+00:29:29.180 --> 00:29:44.480
+what a policy is right all of us know what
+policies are so what is a policy 
+
+00:29:44.480 --> 00:29:49.179
+so I am going to denote a policy as this as
+a conditional thing from now on so what is
+
+00:29:49.179 --> 00:30:10.690
+this is essentially the probability that right
+the probability that at time t the agent will
+
+00:30:10.690 --> 00:30:24.669
+take action a given that at time t the state
+is small s.
+
+00:30:24.669 --> 00:30:35.990
+So ideally I should have a t there right so
+pi t of a, s is a probability that at time
+
+00:30:35.990 --> 00:30:46.430
+t I will take action a given that at time
+t the state was s okay so normally for most
+
+00:30:46.430 --> 00:30:55.490
+of the material that we cover right I will
+be looking at what are known as stationary
+
+00:30:55.490 --> 00:31:03.750
+policies so what is a stationary policy right
+a stationary policy is something which is
+
+00:31:03.750 --> 00:31:15.620
+essentially 
+so regardless of the value of t I will be
+
+00:31:15.620 --> 00:31:21.760
+using the same probability so the probability
+that let us say my state is 1 right probability
+
+00:31:21.760 --> 00:31:34.470
+that when give me some other symbol to use
+as state let us say my state is l okay I do
+
+00:31:34.470 --> 00:31:46.071
+not think I used l for anything so far right
+we have in the proofs you use l or is it yeah
+
+00:31:46.071 --> 00:31:50.529
+let us say okay fine let us use it one then
+people can all of you are smart enough to
+
+00:31:50.529 --> 00:31:51.529
+figure out this right.
+
+00:31:51.529 --> 00:31:56.840
+So let us say state is 1 right so I do not
+care whether it is 1 that time one whether
+
+00:31:56.840 --> 00:32:04.089
+s1 is equal to 1 or s 25 is equal to 1 the
+probability that I will take action A1 will
+
+00:32:04.089 --> 00:32:08.880
+be the same right the probability I will take
+action A2 will be the same so essentially
+
+00:32:08.880 --> 00:32:10.510
+what I am saying is.
+
+00:32:10.510 --> 00:32:31.830
+Probability that A1 equal to a1 given S1 equal
+to 1 is equal to probability that something
+
+00:32:31.830 --> 00:32:45.200
+like this okay right so this is what I mean
+by stationary that is what I am saying here
+
+00:32:45.200 --> 00:32:51.429
+so if I want to explicitly talk about non-stationary
+policies okay I will use the pi t notation
+
+00:32:51.429 --> 00:33:03.929
+okay if I am talking about stationary policies
+I will just use the pi notation.
+
+00:33:03.929 --> 00:33:10.769
+Okay so what is my policy the what is the
+goal in trying to come up with a policy no
+
+00:33:10.769 --> 00:33:26.200
+see we have not even gone there right I am
+just defining things right a non-stationary
+
+00:33:26.200 --> 00:33:29.780
+policy is just a collection of functions collection
+of probability distributions one for each
+
+00:33:29.780 --> 00:33:36.250
+time step right a stationary policy is a single
+well it is actually also a set of probability
+
+00:33:36.250 --> 00:33:41.779
+distributions one for each state right a non
+stationary policy is a collection of such
+
+00:33:41.779 --> 00:33:47.640
+sets one for each time step as well as one
+for each state that is basically it how you
+
+00:33:47.640 --> 00:33:52.190
+derive how you derive a non-stationary policy
+or how you learn it from data and other things
+
+00:33:52.190 --> 00:33:55.899
+they are independent questions I am just talking
+about its simple definition of the quantity
+
+00:33:55.899 --> 00:34:21.409
+when you learn your goal should be a stationary
+policy right the end goal can be a stationary
+
+00:34:21.409 --> 00:34:29.419
+policy but if you have a stationary policy
+there is no subsequent learning we will come
+
+00:34:29.419 --> 00:34:35.480
+to that right so there are different time
+scales at which you can learn right.
+
+00:34:35.480 --> 00:34:40.329
+So I can have a stationary policy run the
+full episode using the stationary policy and
+
+00:34:40.329 --> 00:34:44.770
+then take the rewards I get and then use that
+to update my parameters and come up with a
+
+00:34:44.770 --> 00:34:51.669
+new stationary policy right so these times
+I am talking about the t here is essentially
+
+00:34:51.669 --> 00:34:56.619
+the index over a single interaction okay I
+am not talking about multiple interactions
+
+00:34:56.619 --> 00:35:02.150
+over the single interaction right suppose
+I start from some S0 I come and end at S plus
+
+00:35:02.150 --> 00:35:08.030
+over that interaction my policy stays fixed
+that seems to be a reasonable assumption right.
+
+00:35:08.030 --> 00:35:13.970
+So you could think of having states learning
+a sequence of stationary policies so what
+
+00:35:13.970 --> 00:35:21.560
+is my goal in learning a policy here is to
+learn something that will maximize the reward
+
+00:35:21.560 --> 00:35:28.369
+that I get right but not individually but
+something that will maximize it in the long
+
+00:35:28.369 --> 00:35:41.990
+run okay so what do I mean by that suppose
+I am riding a cycle right so suppose you leave
+
+00:35:41.990 --> 00:35:46.510
+your hands and say they look at me or something
+like that might give you a temporary kick
+
+00:35:46.510 --> 00:35:52.970
+you know I feel really good about myself but
+then you might the next minute you might ram
+
+00:35:52.970 --> 00:36:00.130
+into another vehicle or a tree or a building
+whatever right and get injured right.
+
+00:36:00.130 --> 00:36:08.550
+So that is something that gives you a well
+depends but hopefully that is something that
+
+00:36:08.550 --> 00:36:15.680
+will deter you from doing crazy things on
+a cycle the next time around right so the
+
+00:36:15.680 --> 00:36:19.640
+short-term reward was just feeling good about
+you for one minute and the long term penalty
+
+00:36:19.640 --> 00:36:25.520
+was getting into a crash or whatever right
+so these kinds of things are odd or even simple
+
+00:36:25.520 --> 00:36:30.890
+things like in chess you know the first thing
+kids they try to capture the Queen and whole
+
+00:36:30.890 --> 00:36:37.970
+bunch of other things and then as a result
+end up losing the game right so these kinds
+
+00:36:37.970 --> 00:36:41.650
+of things ok so do not look for short-term
+rewards you should look for something that
+
+00:36:41.650 --> 00:36:44.359
+maximizes your rewards in the long term.
+
+00:36:44.359 --> 00:36:45.359
+IIT Madras Production
+
+00:36:45.359 --> 00:36:46.359
+Funded by
+Department of Higher Education
+
+00:36:46.359 --> 00:36:47.359
+Ministry of Human Resource Development
+Government of India
+
+00:36:47.359 --> 00:36:48.359
+www.nptel.ac.in
+
+00:36:48.359 --> 00:36:48.361
+Copyrights Reserved
+

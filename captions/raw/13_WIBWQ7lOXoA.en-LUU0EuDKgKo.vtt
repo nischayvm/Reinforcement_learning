@@ -1,0 +1,1213 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:20.090 --> 00:00:23.421
+Let us denote the set of parameters me ? so
+I am going to come up with some kind of a
+
+00:00:23.421 --> 00:00:30.950
+performance measure for a specific choice
+of ?, so I will call it E(?) right so for
+
+00:00:30.950 --> 00:00:38.970
+what is the specific choice of ? correspond
+to, suppose my ? is like composed of ?1 ?2…
+
+00:00:38.970 --> 00:00:48.620
+?K so I give you values for ?1 ?2 ?3… ? K
+so what does this correspond to one, policy
+
+00:00:48.620 --> 00:00:52.870
+when I say I am looking at a specific value
+for ? it corresponds to one policy.
+
+00:00:52.870 --> 00:00:57.920
+So when I say ? (?) that means I am evaluating
+that policy something okay so what is the
+
+00:00:57.920 --> 00:01:12.960
+most natural evaluation measure you can think
+of our policy expected pay off, right expected
+
+00:01:12.960 --> 00:01:19.890
+the expected payoff is the evaluation for
+that policy so yes I am going to do I am going
+
+00:01:19.890 --> 00:01:34.580
+to do that there okay, so what is the expected
+payoff you know what the expected payoff is,
+
+00:01:34.580 --> 00:01:48.179
+this is the expected payoff I will get for
+taking action A.
+
+00:01:48.179 --> 00:01:51.849
+This is a probability that I will take action
+A when I am selecting actions according to
+
+00:01:51.849 --> 00:02:03.880
+? right and so this is a standard notation
+I know if you are familiar with this means
+
+00:02:03.880 --> 00:02:09.240
+? is a function that is parameterize by ? right
+and whatever specific value argue for ? will
+
+00:02:09.240 --> 00:02:15.319
+define what that ? is okay and then this means
+it is going to take some other argument okay,
+
+00:02:15.319 --> 00:02:21.090
+so this is the input to the function okay.
+Which is defined by these parameters ? okay
+
+00:02:21.090 --> 00:02:29.360
+so this is how way when you put a semicolon
+here that means it is forever transformed
+
+00:02:29.360 --> 00:02:41.120
+okay arms are tight from taking all the notes
+is all okay fine yeah, so since ?A; ? means
+
+00:02:41.120 --> 00:02:46.650
+that is the policy defined by the current
+settings of parameters ? times the Q * A right
+
+00:02:46.650 --> 00:02:52.920
+because Q* A is a two expectation for taking
+our may later and then some overall A I will
+
+00:02:52.920 --> 00:02:57.640
+basically get the expected reward but if I
+am having a deterministic policy that means
+
+00:02:57.640 --> 00:03:02.620
+essentially only one arm I will take all the
+other arms of probability 0 then the payoff
+
+00:03:02.620 --> 00:03:12.900
+will be Q*of the term right okay, so now once
+I have this kind of a performance measure
+
+00:03:12.900 --> 00:03:15.189
+so what do I do is essentially I take ?.
+.
+
+00:03:15.189 --> 00:03:33.780
+They take ?, I find the gradient of the performance
+okay so where the gradient is taken with respect
+
+00:03:33.780 --> 00:03:41.069
+to ? right so I look at how the performance
+changes with changing ? and I will try to
+
+00:03:41.069 --> 00:03:49.280
+move ? in the direction of the increase in
+the performance, okay. So this is called gradient
+
+00:03:49.280 --> 00:03:53.549
+ascent the people might have heard about gradient
+descent earlier so this is gradient descent,
+
+00:03:53.549 --> 00:03:58.629
+so I am going up the gradient, right.
+If the performance improves if I change ? in
+
+00:03:58.629 --> 00:04:07.640
+some direction then I will change my ? in
+that direction, okay that make sense we will
+
+00:04:07.640 --> 00:04:24.650
+see this what we need more pictorial analogies
+right, so let us say that a one parameter
+
+00:04:24.650 --> 00:04:43.110
+? we also have one parameter ? right and ? (?) let
+us say this nice it would be to do it right
+
+00:04:43.110 --> 00:04:51.419
+let us say that I have my performance whatever
+is an acceptable range of ? so my performance
+
+00:04:51.419 --> 00:04:58.139
+goes like this right.
+So I initially start off with some guess for
+
+00:04:58.139 --> 00:05:08.020
+? and that will be my initial guess for ? right
+then what I do, I measure this and then I
+
+00:05:08.020 --> 00:05:14.530
+compute the gradient right so the gradient
+is there so if I look at which direction I
+
+00:05:14.530 --> 00:05:21.020
+should move my ?, essentially I should move
+in this direction so I move a little bit and
+
+00:05:21.020 --> 00:05:33.699
+set that as ?1 okay then I measure the radiant
+again okay still I have to move in this direction
+
+00:05:33.699 --> 00:05:43.830
+more so I keep doing that and I think I will
+declare that I have reached the highest performance
+
+00:05:43.830 --> 00:05:46.539
+there.
+So this is essentially how I do it okay so
+
+00:05:46.539 --> 00:05:53.819
+a couple of questions which you might ask
+me here, why do I have to do this in this
+
+00:05:53.819 --> 00:05:58.330
+kind of an incremental fashion why cannot
+I just take the derivative of that and find
+
+00:05:58.330 --> 00:06:10.500
+the highest point and settle down there, sorry
+I do not have the function at all so I get
+
+00:06:10.500 --> 00:06:14.820
+a good close form I do not have the function
+at all what is it function that is Q*A( ?) right
+
+00:06:14.820 --> 00:06:18.979
+I know ? but I do not know Q*.
+The federal Q* my problem is solved right
+
+00:06:18.979 --> 00:06:26.449
+I do not need to do any of these things that
+function itself I do not know right so how
+
+00:06:26.449 --> 00:06:33.419
+am I evaluating this function and trying to
+find the gradient by sampling so I am pulling
+
+00:06:33.419 --> 00:06:39.020
+a lot of farms right according to my current
+policy ? right and then I am trying to evaluate
+
+00:06:39.020 --> 00:06:43.220
+the policy ? and trying to find a gradient
+at that point right, so because everything
+
+00:06:43.220 --> 00:06:47.379
+is done through sampling.
+So whatever gradient I compute at this point
+
+00:06:47.379 --> 00:06:52.580
+will not be the correct gradient right this
+is too simple when it has to either be that
+
+00:06:52.580 --> 00:06:57.319
+direction or this direction this is too simple
+right but think of a multi dimensional case
+
+00:06:57.319 --> 00:07:01.310
+when there are many parameters the right direction
+you will have to compute can get messed up
+
+00:07:01.310 --> 00:07:04.850
+right so instead of going in all the parameters
+in stuff identifying the right direction some
+
+00:07:04.850 --> 00:07:08.490
+parameters you might get the right direction
+some parameters you will get the wrong direction
+
+00:07:08.490 --> 00:07:12.509
+and so on so forth right.
+Therefore every time you make only small steps
+
+00:07:12.509 --> 00:07:16.659
+because if we tried if we say oh I have computed
+the direction of the gradient I will just
+
+00:07:16.659 --> 00:07:22.639
+keep moving in the direction until my power
+I will take a huge step in the direction until
+
+00:07:22.639 --> 00:07:26.120
+my performance drops or something that would
+not work because the direction itself might
+
+00:07:26.120 --> 00:07:33.110
+be wrong so in this case I mean we have always
+moved in the right direction every step.
+
+00:07:33.110 --> 00:07:37.190
+That is possible that because you are estimating
+the gradient you might actually can make the
+
+00:07:37.190 --> 00:07:43.310
+wrong computations and move in the wrong direction
+sometimes okay so what really you can hope
+
+00:07:43.310 --> 00:07:52.680
+for from these kinds of methods which are
+called stochastic gradient approaches okay
+
+00:07:52.680 --> 00:07:56.300
+they are called stochastic gradient approaches
+because you do not know the true gradient
+
+00:07:56.300 --> 00:07:59.669
+and every time you make an estimate of what
+he true gradient will be and then you are
+
+00:07:59.669 --> 00:08:06.120
+using that for making moves.
+I mean the most popular form of this will
+
+00:08:06.120 --> 00:08:11.840
+be called SGD which is stochastic gradient
+descent okay it is a very popular optimization
+
+00:08:11.840 --> 00:08:17.030
+technique nowadays but in this case you are
+using stochastic gradient descent but still
+
+00:08:17.030 --> 00:08:21.379
+it is the same stochastic gradient idea and
+so you have to be careful of how we use it
+
+00:08:21.379 --> 00:08:27.979
+and the best that you can hope to get this
+that in an expected sense over many updates
+
+00:08:27.979 --> 00:08:30.240
+right.
+I did I did know I showed you two updates
+
+00:08:30.240 --> 00:08:34.530
+so if you make this update says this kind
+of updates many times in an expected sense
+
+00:08:34.530 --> 00:08:40.590
+you will move in the right direction of the
+gradient right so that is the kind of guarantee
+
+00:08:40.590 --> 00:08:47.850
+that typically expect for these kinds of methods
+okay, so is it clear now is clearer now if
+
+00:08:47.850 --> 00:08:52.281
+people are not hundred percent clear about
+what I am talking a stop and ask and I can
+
+00:08:52.281 --> 00:09:01.220
+elaborate at the risk of slowing down yeah.
+Good point yeah so we will come to that so
+
+00:09:01.220 --> 00:09:04.980
+you can talk about this is we do not know
+the function itself right how are you going
+
+00:09:04.980 --> 00:09:14.940
+to estimate the gradient right, so we will
+come to that in a minute 
+
+00:09:14.940 --> 00:09:19.210
+so we know we have a functional form for this
+now I am going to write down the gradient
+
+00:09:19.210 --> 00:09:22.070
+for this expression right this is expression
+we here I am going to write down the gradient
+
+00:09:22.070 --> 00:09:53.420
+for this expression.
+So this is assuming that Q * A because it
+
+00:09:53.420 --> 00:09:58.650
+is a parameter of the problem right it is
+nothing to do with the policy made as far
+
+00:09:58.650 --> 00:10:03.690
+as your policy parameterization is concerned
+Q star is a constant right because it is a
+
+00:10:03.690 --> 00:10:06.890
+it is something to do with the problem so
+I can I do not have to do this I just have
+
+00:10:06.890 --> 00:10:38.060
+to differentiate this with respect to ? right,
+so now I am going to do some hand waving.
+
+00:10:38.060 --> 00:10:45.890
+So what did you do here a multiplied and divided
+by ?, okay.
+
+00:10:45.890 --> 00:10:53.120
+So for this to work what do I need ? is non
+zero for all a so this is one condition that
+
+00:10:53.120 --> 00:10:59.220
+you need for all of this any kind of ? that
+you assume okay has to be nonzero for all
+
+00:10:59.220 --> 00:11:07.150
+A I just assume some nonzero problem, now
+if you think about this particular expression
+
+00:11:07.150 --> 00:11:18.070
+right I will put a bracket around that right
+so what does this remained you off, as it
+
+00:11:18.070 --> 00:11:23.350
+look like an expectation computation I am
+looking a the expected value of some function
+
+00:11:23.350 --> 00:11:28.180
+right.
+Were I am taking samples according to probability
+
+00:11:28.180 --> 00:11:33.790
+? right this looks like an expected value
+rate and summing over all possible outcomes
+
+00:11:33.790 --> 00:11:40.190
+of A all possible values here right that is
+the probability so I am essentially taking
+
+00:11:40.190 --> 00:12:18.980
+the expectation taken according to ? of is
+it fine right. So everybody on board with
+
+00:12:18.980 --> 00:12:42.561
+it right so that I can write their expectation
+oh okay sorry about the font, so the expectation
+
+00:12:42.561 --> 00:12:50.770
+is taken with respect to ?, okay.
+Is it clear so now we know how to make an
+
+00:12:50.770 --> 00:12:56.790
+estimate of the expectations right how do
+you do that we draw a sample and then take
+
+00:12:56.790 --> 00:13:06.730
+an average right so we can do that so essentially
+what I am going to do is pull an arm that
+
+00:13:06.730 --> 00:13:11.621
+is a sample right when you say draw a sample
+according to ? but essentially means I have
+
+00:13:11.621 --> 00:13:17.270
+to pull an arm and what happens when I pull
+an arm, I get a reward right but the reward
+
+00:13:17.270 --> 00:13:20.660
+does not figure in here.
+The expectation of the reward directly figures
+
+00:13:20.660 --> 00:13:28.810
+in here a so I can actually write this as
+a double expectation you know mean the expectation
+
+00:13:28.810 --> 00:13:37.770
+is taken over not only ? but also over the
+process that generates the reward Q* right
+
+00:13:37.770 --> 00:13:45.750
+this also the process that generates the reward
+so my sample here is going to consist of RT
+
+00:13:45.750 --> 00:13:53.140
+right is it clear I mean this is a very subtle
+thing a ripple or with me here on this is
+
+00:13:53.140 --> 00:13:58.170
+it clear.
+So Q* itself is already an expectation right
+
+00:13:58.170 --> 00:14:02.910
+so instead of because I do not know this expectation
+I will have to estimate this expectation as
+
+00:14:02.910 --> 00:14:08.290
+well and that can be done by just taking the
+RT’s so what I will do now is at every time
+
+00:14:08.290 --> 00:14:14.110
+t I will sample or now I will pull the arm
+figure out what the reward is right but is
+
+00:14:14.110 --> 00:14:21.541
+that sufficient, no I have to do this right
+I just cannot use the RT directly I have to
+
+00:14:21.541 --> 00:14:31.270
+use this also right.
+So I will take the gradient of ? so valuated
+
+00:14:31.270 --> 00:14:41.860
+at A divided by the so this is my one sample
+right this is because the expectation am taking
+
+00:14:41.860 --> 00:14:47.540
+is of this quantity so the sample that I draw
+is actually this right and I have to do this
+
+00:14:47.540 --> 00:15:13.000
+over I do not know some number n ? 80 you
+are right, defense oh no I am not using t
+
+00:15:13.000 --> 00:15:29.460
+I am sorry if I promised you that I will use
+n for discrete time and T for convenience
+
+00:15:29.460 --> 00:15:32.430
+time.
+So we are talking about discrete times here
+
+00:15:32.430 --> 00:15:39.261
+it has to be n I do not know if i use T here
+sorry about that but all of you a raise in
+
+00:15:39.261 --> 00:15:47.800
+your notebook that T and write down N, for
+this part of see things sorry about that right
+
+00:15:47.800 --> 00:16:07.680
+so this is clear is that anything we see right,
+so I need to have 1/ n that so this gives
+
+00:16:07.680 --> 00:16:19.860
+me the radiant right so this is fine oh it
+is still okay yet not because this is actually
+
+00:16:19.860 --> 00:16:25.000
+a estimation okay.
+So I cannot put equal to that it is only an
+
+00:16:25.000 --> 00:16:40.730
+approximation rate so can we compute this,
+we can right because we know ? we are the
+
+00:16:40.730 --> 00:16:46.290
+ones who determine what ? should be right
+because at the beginning I choose a parameterize
+
+00:16:46.290 --> 00:16:51.240
+representation that I can choose whatever
+suppose it is off max well I know how to take
+
+00:16:51.240 --> 00:16:56.490
+the derivative of soft max at or if it is
+a continuous actions I can just use a say
+
+00:16:56.490 --> 00:17:00.540
+a Gaussian right I know how to take the derivative
+of a Gaussian with respect to its parameters
+
+00:17:00.540 --> 00:17:03.210
+right.
+Or if it is a multinomial what do I do you
+
+00:17:03.210 --> 00:17:13.230
+know how to take the derivative of a multinomial
+as well right so the derivative is very simple
+
+00:17:13.230 --> 00:17:20.650
+so I know what form of the function I choose
+it so I can go ahead and take the derivative,
+
+00:17:20.650 --> 00:17:41.009
+there are a couple of reasons for it 
+
+00:17:41.009 --> 00:17:49.930
+so estimating q store need not always be the
+right thing to do okay because I have not
+
+00:17:49.930 --> 00:17:54.330
+introduced all the complications and the hesitating
+whether I should go there or not.
+
+00:17:54.330 --> 00:18:03.080
+But the thing is so the Q*function sometimes
+turns out to be incredibly complex okay as
+
+00:18:03.080 --> 00:18:08.190
+a function of the state space okay not necessarily
+here way as a function of the state space
+
+00:18:08.190 --> 00:18:12.779
+q turns out to be incredibly complex where
+as a direct representation of the policy turns
+
+00:18:12.779 --> 00:18:19.090
+out to be a lot more simple right for example
+there are many inventory control problems
+
+00:18:19.090 --> 00:18:24.480
+where the policy essentially turns out to
+be if the inventory is below a certain level
+
+00:18:24.480 --> 00:18:28.889
+you buy inventories above a certain level
+you do not buy okay.
+
+00:18:28.889 --> 00:18:33.440
+But then the value function itself becomes
+a very complicated function of how many of
+
+00:18:33.440 --> 00:18:38.159
+the items are left of different types and
+so on so forth so the function itself becomes
+
+00:18:38.159 --> 00:18:42.970
+a lot harder to learn so there are instances
+like this where this is easier to learn right
+
+00:18:42.970 --> 00:18:50.140
+and there are a couple of other cases especially
+when you are talking about very large problems
+
+00:18:50.140 --> 00:18:56.700
+for example we will see that policy gradient
+approaches generalize very easily to problems
+
+00:18:56.700 --> 00:19:01.070
+with continuous actions.
+So whether individual action super if you
+
+00:19:01.070 --> 00:19:06.490
+are talking about value function methods right
+where I typically store a value for each action
+
+00:19:06.490 --> 00:19:11.740
+now I am going to have continuous actions
+it is not clear how to handle it there are
+
+00:19:11.740 --> 00:19:17.070
+ways of handling it but it turns out that
+they are not that well behaved as policy gradient
+
+00:19:17.070 --> 00:19:21.929
+approaches are and the action space is continuous
+right so there are many reasons why you want
+
+00:19:21.929 --> 00:19:26.720
+to consider the contractions I mean policy
+critique metrics.
+
+00:19:26.720 --> 00:19:31.970
+Primarily I would say the Prime one of the
+primary motivations is to handle continues
+
+00:19:31.970 --> 00:20:00.529
+actions, okay. So this is some kind of a batch
+updates, what because the expectation is taken
+
+00:20:00.529 --> 00:20:16.649
+with respect to the ? 
+
+00:20:16.649 --> 00:20:21.570
+now you could do more simplifications of that
+if you want to write but what is your question
+
+00:20:21.570 --> 00:20:33.600
+again, now but I need to take this expectation
+with respect to the sample the probability
+
+00:20:33.600 --> 00:20:41.249
+distribution ? right.
+So and I cannot separate this I cannot write
+
+00:20:41.249 --> 00:20:47.100
+this out I saw some really cannot simplify
+this further because my Q* is here right so
+
+00:20:47.100 --> 00:20:53.820
+this is the expectation of this whole quantity
+so I really cannot split this apart and say
+
+00:20:53.820 --> 00:20:58.140
+that okay I will just simplify this expectation
+and take only the expected value of Q*A can
+
+00:20:58.140 --> 00:21:07.049
+I, I cannot take E(AB) is not A (EFB) is it
+in, A is only a constant rate not otherwise
+
+00:21:07.049 --> 00:21:15.039
+I am not sure that we can simplify this further
+right.
+
+00:21:15.039 --> 00:21:18.620
+So what we are doing here is some kind of
+a batch mode so if you think of how we are
+
+00:21:18.620 --> 00:21:30.160
+doing this sampling so I am taking some ? fixing
+it pulling the arms multiple times right fixing
+
+00:21:30.160 --> 00:21:39.159
+? pulling arms capital n times and then taking
+this average right and then or computing the
+
+00:21:39.159 --> 00:21:45.210
+gradient and then using that to change the
+parameters and this is one way of doing it
+
+00:21:45.210 --> 00:21:50.179
+another way of doing it to stay that okay
+I will have a ? I will pull an arm I will
+
+00:21:50.179 --> 00:21:57.899
+compute the gradient. And I will change the
+parameters wait so you can have a some kind
+
+00:21:57.899 --> 00:22:11.110
+of an incremental version.
+.
+
+00:22:11.110 --> 00:22:17.080
+So where I am saying at every step I will
+change my parameters by some fraction delta
+
+00:22:17.080 --> 00:22:50.910
+T I will do this at every step right 
+sorry and so this is what I am doing so what
+
+00:22:50.910 --> 00:23:03.980
+I am essentially will end up doing is ? will
+be ? plus delta ?, ?n +1 will be ?n plus delta
+
+00:23:03.980 --> 00:23:15.629
+?n right so this basically and I will do you
+said every time you for every time I pull
+
+00:23:15.629 --> 00:23:47.360
+an arm I will change this right I mean that
+is essentially the gradient of the lawn it
+
+00:23:47.360 --> 00:23:54.320
+turns out this simplifies your life a lot
+this observation simplifies your life a lot
+
+00:23:54.320 --> 00:23:58.690
+when you are trying to actually solve the
+solve problems later right now you can immediately
+
+00:23:58.690 --> 00:24:06.299
+think of soft max becoming very easy to differentiate
+we have now taken log and there is also lots
+
+00:24:06.299 --> 00:24:08.899
+of E’s there right.
+So all the e power will thing will vanish
+
+00:24:08.899 --> 00:24:15.890
+so it will become lot easier to differentiate
+for you right so what I am going to do now
+
+00:24:15.890 --> 00:24:37.429
+is to include another term here rather than
+arbitrarily 
+
+00:24:37.429 --> 00:24:49.309
+called BN which we refer to as the reinforcement
+baseline right and adding the BN should not
+
+00:24:49.309 --> 00:24:57.650
+affect the whole process that is what the
+BN should not really be a function of A yeah
+
+00:24:57.650 --> 00:25:00.389
+? basically so it should not be a function
+of the action I take right.
+
+00:25:00.389 --> 00:25:07.191
+If it is a function of the action I take then
+it becomes dependent on ? so as long as it
+
+00:25:07.191 --> 00:25:11.039
+is not a function of the action I take I can
+keep adding a I can add this thing it is called
+
+00:25:11.039 --> 00:25:16.830
+the reinforcement baseline right so one way
+of thinking about it is I am when I get a
+
+00:25:16.830 --> 00:25:21.679
+reward right I do not know if the reward is
+a good reward or a bad reward so giving a
+
+00:25:21.679 --> 00:25:24.690
+baseline and saying that if you are above
+this baseline it is a good reward if you are
+
+00:25:24.690 --> 00:25:29.799
+below this baseline it is a bad reward.
+It kind of allows you to calibrate the rewards
+
+00:25:29.799 --> 00:25:36.649
+right one typical way in which this reinforcement
+base line is used is to just take the average
+
+00:25:36.649 --> 00:25:42.990
+of all the rewards I have obtained so far
+later this is all the reverse regardless of
+
+00:25:42.990 --> 00:25:47.830
+which are my play I keep accumulating the
+rewards right now when I play a particular
+
+00:25:47.830 --> 00:25:52.139
+arm if it is above this average then it is
+a good down which below this average then
+
+00:25:52.139 --> 00:26:10.259
+it is a bad arm right.
+So valid after yeah I eventually it will eventually
+
+00:26:10.259 --> 00:26:14.330
+it will be all fine right so initially you
+might be making some mistakes because the
+
+00:26:14.330 --> 00:26:20.230
+initial fury will B wrong right so you might
+actually think a good arm is bad and a bad
+
+00:26:20.230 --> 00:26:28.230
+arm is good I mean depending but eventually
+it will all work out does not matter so if
+
+00:26:28.230 --> 00:26:33.780
+you think about if the reward is good right
+then I will go in the direction of the gradient
+
+00:26:33.780 --> 00:26:38.360
+right but if the reward is bad and I will
+go in the opposite direction of the gradient
+
+00:26:38.360 --> 00:26:43.321
+right.
+So in some sense that is a little waving hear
+
+00:26:43.321 --> 00:26:49.299
+that but then it is fine it turns out that
+adding the reinforcement baseline makes the
+
+00:26:49.299 --> 00:26:54.870
+convergence behavior of this algorithm a little
+more stable but it is not necessary you can
+
+00:26:54.870 --> 00:26:58.190
+if you are going to implement this you can
+do it without the reinforcement baseline also
+
+00:26:58.190 --> 00:27:13.399
+right so this is called the 
+
+00:27:13.399 --> 00:27:29.340
+and this term is sometimes called the call
+the characteristic eligibility.
+
+00:27:29.340 --> 00:27:43.299
+So what is the characteristic eligibility
+it essentially tells you, if you 
+
+00:27:43.299 --> 00:27:50.999
+do that then you get into a critic I will
+talk about that later and talk about that
+
+00:27:50.999 --> 00:27:56.570
+later yeah sure yeah you could do that right
+and that is essentially the one of the motivations
+
+00:27:56.570 --> 00:28:03.139
+for getting attacked or critical rhythms,
+so that SN requires you to maintain Q star
+
+00:28:03.139 --> 00:28:07.400
+estimates as well as the ? estimates as well
+as a ? representation.
+
+00:28:07.400 --> 00:28:12.220
+So the ? would be that critic and the Q star
+would be the actor other way around the ? would
+
+00:28:12.220 --> 00:28:16.179
+be the actor the Q star will be the critic
+so that is another class of algorithms right
+
+00:28:16.179 --> 00:28:21.669
+which address some of the drawbacks of policy
+gradient approaches and so I will talk about
+
+00:28:21.669 --> 00:28:27.549
+it but somewhere halfway down the course not
+now so after this I am going to go back and
+
+00:28:27.549 --> 00:28:31.929
+start talking about the full RL problem and
+at some point I will come back and do a TRO
+
+00:28:31.929 --> 00:28:35.500
+critic yeah.
+So his question was why do I use RN right
+
+00:28:35.500 --> 00:28:47.129
+why cannot I plug-in q there right you could
+and yeah and typically when you do that it
+
+00:28:47.129 --> 00:28:52.639
+performs better the algorithm it is actually
+a it reduces variants significantly at the
+
+00:28:52.639 --> 00:29:02.889
+cost of adding significant bias and there
+are other issues you know you well you know
+
+00:29:02.889 --> 00:29:07.549
+or other issue is going to actor critic but
+I will talk about it later right and we are
+
+00:29:07.549 --> 00:29:14.989
+going back.
+So why is that called the characteristic eligibility
+
+00:29:14.989 --> 00:29:22.659
+so if you think about it so it essentially
+chooses which of the ? are most responsible
+
+00:29:22.659 --> 00:29:28.580
+for a change at that point right so that is
+the term that determines that is the term
+
+00:29:28.580 --> 00:29:35.100
+that is the ? dependent term in your updates
+right and it tells you which ? is more responsible
+
+00:29:35.100 --> 00:29:41.480
+for change that is happening here there are
+three or four different that I have right.
+
+00:29:41.480 --> 00:29:47.280
+So whichever has the highest gradient whichever
+direction you have the highest gradient that
+
+00:29:47.280 --> 00:29:52.850
+is a direction where the largest change is
+going to happen right, so it is essentially
+
+00:29:52.850 --> 00:29:59.200
+this telling you which ? is more eligible
+to receive the update that is why it is called
+
+00:29:59.200 --> 00:30:08.820
+the characteristic eligibility I did that
+make sense to people I think i have lost more
+
+00:30:08.820 --> 00:30:15.460
+people today than in the previous classes
+no great.
+
+00:30:15.460 --> 00:30:21.710
+So this whole thing right this way of doing
+this incremental version of doing this update
+
+00:30:21.710 --> 00:30:36.419
+is actually called the called the reinforce
+algorithm the first proposed by this guy called
+
+00:30:36.419 --> 00:30:45.190
+Williams in 88, Williams suppose reinforce
+in think in 1988 and in fact he proposed this
+
+00:30:45.190 --> 00:30:51.480
+in the context of neural networks right so
+he when he came up with this algorithm neural
+
+00:30:51.480 --> 00:30:58.100
+networks were still ruling right.
+So he proposed this in the context of neural
+
+00:30:58.100 --> 00:31:03.289
+networks he said that your ? is our weights
+of a neural network right and then he came
+
+00:31:03.289 --> 00:31:10.750
+up with this update and then the biggest contribution
+he did was he said that a this looks like
+
+00:31:10.750 --> 00:31:15.490
+a really crazy update and I mean how is this
+going to work and initially people are very
+
+00:31:15.490 --> 00:31:21.059
+skeptical he actually showed that in an expected
+sense that even though I am doing this update
+
+00:31:21.059 --> 00:31:26.600
+after just pulling one arm in an expected
+since the gradient will be in the right direction
+
+00:31:26.600 --> 00:31:30.029
+right.
+If I repeat this experiment multiple times
+
+00:31:30.029 --> 00:31:34.929
+and I watch how the weights evolve right they
+will actually move in the same direction as
+
+00:31:34.929 --> 00:31:39.980
+it would have happened if I had computed the
+correct gradient and then taken steps in that
+
+00:31:39.980 --> 00:31:44.820
+direction so essentially he established that
+for this reinforce update and it since then
+
+00:31:44.820 --> 00:31:51.380
+it has kind of been the one sole hope of convergence
+for all kinds of complex function approximations
+
+00:31:51.380 --> 00:31:59.160
+and RL okay.
+So it works really well but it is extreme
+
+00:31:59.160 --> 00:32:06.750
+extremely, reinforce is extremely slow because
+the variance is very high so when I want to
+
+00:32:06.750 --> 00:32:13.070
+move on from this I will talk about the other
+problems of reinforce here is a horrible part
+
+00:32:13.070 --> 00:32:21.070
+about the paper so reinforce is actually an
+acronym there is an expansion each letter
+
+00:32:21.070 --> 00:32:27.190
+stands actually for a word he came up with
+a name for the algorithm which actually shortened
+
+00:32:27.190 --> 00:32:32.970
+to reinforce.
+And then that started the trend for convoluted
+
+00:32:32.970 --> 00:32:40.109
+names in him since the RL community okay anyone
+knows what the expansion of real food you
+
+00:32:40.109 --> 00:32:48.889
+know what the expansion of reinforces forgot
+okay, I cannot for the life of me I refuse
+
+00:32:48.889 --> 00:32:58.630
+to memorize what reinforce transform, great
+so let us do some special cases of reinforce
+
+00:32:58.630 --> 00:33:13.970
+right I want to consider a binary bandit.
+.
+
+00:33:13.970 --> 00:33:54.330
+Or let us say I take it banded with two actions
+okay but they can have arbitrary rewards here
+
+00:33:54.330 --> 00:34:00.200
+is the parameterization I choose this is essentially
+the Bernoulli thing rights I have two actions
+
+00:34:00.200 --> 00:34:09.580
+so some probability ? I will select action
+1,1-? I will select action 0 so what do I
+
+00:34:09.580 --> 00:34:23.000
+need to do now to get that update rule we
+have to find ? ln ?/ ?? so what this will
+
+00:34:23.000 --> 00:34:38.500
+be, it will be1 VI is one it will be maybe
+minus 1 here.
+
+00:34:38.500 --> 00:34:54.350
+If correct no yeah look at Log ? it is not
+??/ ?? yeah so it will be 1/ ? via is one
+
+00:34:54.350 --> 00:35:15.370
+and it will be -1/1-F if it case zero right,
+can read it like that this of two day is1
+
+00:35:15.370 --> 00:35:21.010
+so 1 minus ? or minus ETA will get cancelled
+out will get 1 by ? this up today is zero
+
+00:35:21.010 --> 00:35:31.810
+? and ? will get cancelled out we will get
+minus 1 by1 minus ? okay the compact way of
+
+00:35:31.810 --> 00:35:47.750
+writing it and now I am going to say that
+I will choose my a to be some row times ? x
+
+00:35:47.750 --> 00:35:57.280
+1-?.
+So it turns out that as long as your a is
+
+00:35:57.280 --> 00:36:01.660
+not dependent on the actual reward that you
+get okay it can be dependent on the ? this
+
+00:36:01.660 --> 00:36:06.450
+is what William should as long is not dependent
+on the actual reward you are all fine okay
+
+00:36:06.450 --> 00:36:09.640
+you will converge so that is essentially this
+is result so I can make it dependent on by
+
+00:36:09.640 --> 00:36:17.070
+? it should not be dependent on the actual
+action you sample okay and the actual reward
+
+00:36:17.070 --> 00:36:21.190
+that you receive so as long as that is there
+it is fine all right.
+
+00:36:21.190 --> 00:36:30.870
+And I am going to choose my be to be 0 why
+am I making this specific choices so now I
+
+00:36:30.870 --> 00:36:43.460
+let me plug everything back in so what does
+my Delta ? look like, so a n which is ? into
+
+00:36:43.460 --> 00:36:52.160
+? n 1 minus ?n 2 RN minus B this is 0 so it
+is RN into dole on this which will be A- ? /? x
+
+00:36:52.160 --> 00:37:07.360
+1-? right so what we end up getting row okay
+so what is the what is the interpretation
+
+00:37:07.360 --> 00:37:16.050
+for this, let us say I take action one can
+and I get a reward of 1.
+
+00:37:16.050 --> 00:37:28.180
+So what do I get ? into 1 minus ? that is
+how much I change my value by so it is essentially
+
+00:37:28.180 --> 00:37:41.840
+this right ? 1-? right suppose I took action
+but what about I took action one right and
+
+00:37:41.840 --> 00:37:49.580
+my reward was one that what will I do for
+0 oh there is no way there is only one parameter
+
+00:37:49.580 --> 00:37:53.200
+it is automatically my other parameter will
+get our district because it is 1-? suppose
+
+00:37:53.200 --> 00:38:01.430
+I took action one and got a reward of 0 what
+happens no change.
+
+00:38:01.430 --> 00:38:12.470
+Suppose I took action of 0 and got A reward
+of 1 what happens, minus ? into RL right so
+
+00:38:12.470 --> 00:38:19.620
+that is essentially what I have here right
+so this is minus ? into RL right so ? is my
+
+00:38:19.620 --> 00:38:24.140
+piet-80 if you remember right and then this
+is so that is essentially what I have, so
+
+00:38:24.140 --> 00:38:38.140
+this is this is what LR I right so essentially
+LR I is a is a gradient following algorithm
+
+00:38:38.140 --> 00:38:45.110
+actually it is a reinforce algorithm right
+so you can try to look at different choices
+
+00:38:45.110 --> 00:38:56.890
+for the as and the different choices for ? right
+and try to come up with this kind of update
+
+00:38:56.890 --> 00:39:00.460
+rule right.
+We will do the soft max action selection as
+
+00:39:00.460 --> 00:39:07.330
+I described in the previous class right so
+do that right where I replace all my Q’s
+
+00:39:07.330 --> 00:39:14.030
+with some arbitrary ? suppose I have K actions
+or K arms then I will have ?1 to ? K these
+
+00:39:14.030 --> 00:39:22.440
+are my parameters and the probability of selecting
+are my will be e ? I/ß divided by summation
+
+00:39:22.440 --> 00:39:32.270
+over j e ? I/ß right so this is my soft max
+expression so derive my reinforce update rules
+
+00:39:32.270 --> 00:39:41.250
+assuming the fixed pressure, right that is
+one I am going to give you another homework.
+
+00:39:41.250 --> 00:40:03.350
+The same thing I said one of the nice things
+about doing reinforce.
+
+00:40:03.350 --> 00:40:05.210
+.
+Is it allows us to handle continues actions
+
+00:40:05.210 --> 00:40:10.600
+right allows us to handle continuous actual
+actions need not be discreet so far way be
+
+00:40:10.600 --> 00:40:43.090
+looking at the cases or actions are discreet
+so I am going to use that is my probability
+
+00:40:43.090 --> 00:40:53.100
+distribution that is my policy okay give me
+the reinforce update rules so how many rules
+
+00:40:53.100 --> 00:41:09.280
+will I have for reinforce update rules there
+one for the µ one for the s right.
+
+00:41:09.280 --> 00:41:19.930
+Get me the reinforce update rules and yeah
+so try to simplify as much as possible because
+
+00:41:19.930 --> 00:41:27.560
+when you do the log µ I mean the log ? derivatives
+will get all kinds of we had constants coming
+
+00:41:27.560 --> 00:41:33.030
+there so you can choose your a appropriately
+so that some of these constants get cancelled
+
+00:41:33.030 --> 00:41:37.880
+out so that I can have again just like we
+did here right I chose my road to be ? into
+
+00:41:37.880 --> 00:41:44.880
+1minus ? likewise you can choose your constants
+in this case also write the ? has to be something
+
+00:41:44.880 --> 00:41:49.870
+different so that you end up with a good nice-looking
+form okay great.
+

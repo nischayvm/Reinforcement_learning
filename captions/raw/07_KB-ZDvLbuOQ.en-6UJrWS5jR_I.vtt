@@ -1,0 +1,660 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:18.770 --> 00:00:33.790
+So this is interesting because we can have
+a nice theorem which says that, so this particular
+
+00:00:33.790 --> 00:00:42.150
+form of UCB is actually called UCB 1 right,
+and in the literature if you generally see
+
+00:00:42.150 --> 00:00:50.400
+UCB without any qualifier assigned to it,
+it usually means UCB1 okay, there are many
+
+00:00:50.400 --> 00:00:55.900
+many variants on it we are not going to look
+at all the variants there is like normal UCB
+
+00:00:55.900 --> 00:01:04.400
+then UCB Revisited, UCB Improved, UCB2 right
+so, there are many many variations of UCB
+
+00:01:04.400 --> 00:01:10.170
+right and each one gives you a slightly better
+theoretical results than the one that I am
+
+00:01:10.170 --> 00:01:16.240
+going to write down right, and sometimes involving
+exponentially harder analysis.
+
+00:01:16.240 --> 00:01:24.691
+UCB1 is fairly trivial compared to the other
+algorithms that were proposed later and I
+
+00:01:24.691 --> 00:01:28.320
+just want to give you a flavor of the kind
+of work that is done in this area right, so
+
+00:01:28.320 --> 00:01:31.340
+I am NOT going to get into the other things
+but we will certainly put all those papers
+
+00:01:31.340 --> 00:02:06.510
+up on Moodle, if people want to read they
+can read those okay. Another thing about UCB1
+
+00:02:06.510 --> 00:02:11.550
+is that we can have arbitrary reward distributions
+so, some of the other algorithms that are
+
+00:02:11.550 --> 00:02:16.510
+out there assume say Bernoulli rewards right
+for showing their results and so on so forth
+
+00:02:16.510 --> 00:04:21.540
+the right thing about UCB 1 is arbitrary reward.
+
+00:04:21.540 --> 00:04:28.350
+So capital delta i is Q star a star minus
+Q star i essentially this means the loss that
+
+00:04:28.350 --> 00:04:34.389
+you will incur if you play i, the expected
+loss that you will incur if you play i instead
+
+00:04:34.389 --> 00:04:41.430
+of playing a star, right you remember what
+a star is, the max over a of Q star a right
+
+00:04:41.430 --> 00:04:46.870
+so, that is a star, argmax a of Q star a is
+a star right so I will always denote by a
+
+00:04:46.870 --> 00:04:53.590
+star the optimal action right so, what does
+this tell you, so the regret right is upper
+
+00:04:53.590 --> 00:05:03.650
+bounded by eight times ln n by delta I, the
+summation running over all the non optimal
+
+00:05:03.650 --> 00:05:11.289
+arms ,why all the non optimal arms? Because
+delta I is 0 for optimal arm, so I do not
+
+00:05:11.289 --> 00:05:16.530
+really want that to figure in the summation
+okay, plus 1 plus pi squared by 3 that is
+
+00:05:16.530 --> 00:05:23.680
+the magic constant okay, times summation over
+all j delta j right.
+
+00:05:23.680 --> 00:05:29.789
+And here i am being little sloppy i have to
+exclude the optimal arm here also but i do
+
+00:05:29.789 --> 00:05:36.590
+not because it is 0 anyway, delta j 0 anyway
+so, I mean symmetrically just as I have this
+
+00:05:36.590 --> 00:05:40.240
+summation here I should have the summation
+there, but I can be a little sloppy and I
+
+00:05:40.240 --> 00:05:44.430
+can write it like that because, i do not have
+to worry about the additional 0 terms I'm
+
+00:05:44.430 --> 00:05:53.280
+adding okay, great. How did we get from here
+to there or more importantly how do we get
+
+00:05:53.280 --> 00:06:10.229
+this expression? Right so before we go on
+so I want to introduce a little bit of notation
+
+00:06:10.229 --> 00:06:24.680
+here 
+
+00:06:24.680 --> 00:06:30.940
+that's the term that tells you the number
+of times it is a random variable that represents
+
+00:06:30.940 --> 00:06:42.060
+the number of times I have played arm i in
+the first n trials okay.
+
+00:06:42.060 --> 00:06:55.490
+Number of times I have played arm i in the
+first n trials does it make sense, so then
+
+00:06:55.490 --> 00:07:14.030
+i can write my regret after n trials as summation
+over i expected value of that times delta
+
+00:07:14.030 --> 00:07:25.340
+i, people get that so the expected, the regret
+that I expect to have after n time steps is
+
+00:07:25.340 --> 00:07:31.039
+I will take each action, look at the number
+of times I would have played that action till
+
+00:07:31.039 --> 00:07:37.840
+that time right, multiply it by the regret
+of playing that action right. So if I played
+
+00:07:37.840 --> 00:07:43.010
+the optimal action then the regret is 0,so
+if I play some sub optimal action then I will
+
+00:07:43.010 --> 00:07:47.380
+be adding that delta i times, the number of
+times I have played that sub optimal action
+
+00:07:47.380 --> 00:07:49.590
+i right.
+
+00:07:49.590 --> 00:07:56.340
+So this is essentially my definition of regret
+so I have now a formal way of writing down
+
+00:07:56.340 --> 00:08:07.490
+my definition of regret, is this is clear,
+any questions? Okay. so one more notation
+
+00:08:07.490 --> 00:08:17.960
+is one thing which I yeah so one more notation
+that I will have here, it is a random variable
+
+00:08:17.960 --> 00:08:26.220
+that denotes the reward that I obtained for
+playing action i at time n, some n okay some
+
+00:08:26.220 --> 00:08:34.370
+arbitrary n, time n if I play action i right
+what is the reward that I get right? since
+
+00:08:34.370 --> 00:08:50.529
+we are assuming everything is stationary right
+so the expectation of this will be, this will
+
+00:08:50.529 --> 00:09:03.650
+tell me if people are following it or not,
+so what is X i n the reward I get for playing
+
+00:09:03.650 --> 00:09:13.140
+arm i at time n right what is the expected
+value of that somebody say something.
+
+00:09:13.140 --> 00:09:17.300
+One of you put your hand up and say something,
+so that i can, its very hard for me to make
+
+00:09:17.300 --> 00:09:30.130
+out in that murmur hand hand hand, Q star
+of i, people see why since we are assuming
+
+00:09:30.130 --> 00:09:35.380
+things are stationary this expectation is
+really not going to depend on n, so then it
+
+00:09:35.380 --> 00:09:41.399
+becomes expected reward I get for pulling
+arm i which is essentially Q star i okay,
+
+00:09:41.399 --> 00:09:53.060
+great. So anything else that I need to do
+notation wise so, essentially to show this
+
+00:09:53.060 --> 00:10:02.980
+result right, what I am going to try and show
+is that, this guy is bounded and I am going
+
+00:10:02.980 --> 00:10:33.040
+to show that that guy is bounded so what I
+am going to show? We're going to show that
+
+00:10:33.040 --> 00:10:41.500
+the expected value of T j of n or T i of n
+is bounded by 8 by delta j squared ln n so,
+
+00:10:41.500 --> 00:10:45.750
+since i multiply by another delta here to
+get the regret so that will get me the first
+
+00:10:45.750 --> 00:10:58.330
+term in the regret and some constant here
+which will get me the second term in the regret.
+
+00:10:58.330 --> 00:11:09.339
+It's not calculated at the nth stage it's
+calculated by using their true values that's
+
+00:11:09.339 --> 00:11:15.810
+Q star you do not know the values but it's
+just a definition its just a quantity, that's
+
+00:11:15.810 --> 00:11:21.389
+the expected regret that you are going to
+get for playing arm i, its the expected loss
+
+00:11:21.389 --> 00:11:25.139
+you would accrue for playing arm i.
+
+00:11:25.139 --> 00:11:29.240
+If I had played the best arm over and over
+again right, if I played the best term over
+
+00:11:29.240 --> 00:11:36.460
+and over again I would get Q star a star if
+I play arm i, I am going to get Q star i right,
+
+00:11:36.460 --> 00:11:42.950
+so the loss i am going to get is Q star a
+star minus Q star i correct, so this is what
+
+00:11:42.950 --> 00:11:49.899
+I am denoting by delta i this is the loss
+that I expect to accrue for playing arm i,
+
+00:11:49.899 --> 00:11:54.710
+just playing with that one arm right and if
+I keep playing that arm repeatedly the total
+
+00:11:54.710 --> 00:11:59.871
+loss i am going to accrue is delta i a times
+the number of times i will play i right and
+
+00:11:59.871 --> 00:12:05.120
+I sum this over all the arms. So one of these
+arms in the summation or one or more of these
+
+00:12:05.120 --> 00:12:09.540
+arms I mean we do not know one or more of
+these arms in the summation would be optimal.
+
+00:12:09.540 --> 00:12:15.680
+And for those terms delta i will be 0, so
+the regret, the contribution to the regret
+
+00:12:15.680 --> 00:12:31.649
+will be 0 and all the other sub optimal arms
+will contribute delta i to the regret. Yeah.
+
+00:12:31.649 --> 00:12:36.850
+Because I am assuming the reward distributions
+are stationary, right you remember I said
+
+00:12:36.850 --> 00:12:41.030
+you are deciding the reward by tossing a coin
+but you do not change the coin right because
+
+00:12:41.030 --> 00:12:45.050
+you do not change the coin does not matter
+when I toss the coin the probability of it
+
+00:12:45.050 --> 00:12:48.709
+coming up heads will be the same whether I
+toss it the first time or whether toss it
+
+00:12:48.709 --> 00:12:52.880
+at the tenth time I pull the arm, the probability
+of it coming heads will be the same and that
+
+00:12:52.880 --> 00:12:56.510
+is the expectation, right so the expectation
+will be the same right.
+
+00:12:56.510 --> 00:13:05.560
+so one way to think about the this expectation
+is right so, I do multiple experiments right
+
+00:13:05.560 --> 00:13:12.500
+I do several experiments every time starting
+from time 0 right, I do i do like millions
+
+00:13:12.500 --> 00:13:17.839
+of experiments okay every time I start from
+time 0 and I keep pulling arms for some number
+
+00:13:17.839 --> 00:13:23.459
+of time steps right and then i reset my whole
+system start from time 0 and pull for another
+
+00:13:23.459 --> 00:13:27.470
+say 100 time steps or something like that
+right when i do this experiments like this
+
+00:13:27.470 --> 00:13:33.870
+in the 10th time step if I pull arm three
+right so in this million experiments some
+
+00:13:33.870 --> 00:13:37.779
+number of times I would have pulled arm three
+in the 10th time step okay, then I'll take
+
+00:13:37.779 --> 00:13:41.399
+all the rewards I saw then I'll take the average
+of that right that is one way of thinking
+
+00:13:41.399 --> 00:13:43.899
+about what this expectation means.
+
+00:13:43.899 --> 00:13:47.589
+So now you understand right it does not matter
+whether I pulled arm three at the 10th time
+
+00:13:47.589 --> 00:13:52.190
+step or whether I pull arm three at the thousandth
+time step if i take this expectation across
+
+00:13:52.190 --> 00:13:59.839
+these million trials, it will be the same.
+So that is essentially what we're saying here
+
+00:13:59.839 --> 00:14:05.339
+okay, is it is it clear so what we are trying
+to show is this right so if you are able to
+
+00:14:05.339 --> 00:14:10.720
+show this then we are all done as long as
+this constant here evaluates to 1 plus pi
+
+00:14:10.720 --> 00:14:15.709
+squared by 3 okay our proof is all done okay.
+Now we have to now go and start counting that
+
+00:14:15.709 --> 00:14:35.180
+okay, so here things start get getting interesting
+subho you want to complete the proof okay
+
+00:14:35.180 --> 00:15:18.000
+so before I move on with the proof i will
+need one more i need one more fact, so 
+
+00:15:18.000 --> 00:15:23.149
+they're on this whole set of results in probability
+theory called concentration inequalities or
+
+00:15:23.149 --> 00:15:24.769
+concentration bounds okay.
+
+00:15:24.769 --> 00:15:35.730
+Or sometimes called large deviation bounds
+okay, these are essentially results that relate
+
+00:15:35.730 --> 00:15:42.060
+the true expectations of distributions okay,
+with estimated values of those expectations
+
+00:15:42.060 --> 00:15:46.089
+from samples not just expectations I mean
+different kinds of statistics you have different
+
+00:15:46.089 --> 00:15:50.120
+bounds you have bounds on expectations you
+have bounds on variance right and so on so
+
+00:15:50.120 --> 00:15:56.920
+forth, right so essentially the idea behind
+these bounds is to kind of characterize right
+
+00:15:56.920 --> 00:16:01.500
+so, given a certain number of samples from
+which you are estimating a statistic right
+
+00:16:01.500 --> 00:16:07.940
+the statistics in this case will for the one
+that we are interested in is the expectation
+
+00:16:07.940 --> 00:16:08.940
+right.
+
+00:16:08.940 --> 00:16:13.880
+So we are interested in the expectation as
+a statistic right, so I have some number of
+
+00:16:13.880 --> 00:16:23.199
+samples from which I am estimating this expectation
+right and I have the true expectations right
+
+00:16:23.199 --> 00:16:28.930
+so as the number of samples increases how
+quickly or how slowly does this estimation
+
+00:16:28.930 --> 00:16:34.600
+approach my true expectation so this is something
+that we want to characterize so we will talk
+
+00:16:34.600 --> 00:16:38.490
+about one such bound which is very popular
+bound which is applied all over the place
+
+00:16:38.490 --> 00:16:42.319
+okay, so if you are going to do anything in
+machine learning forget about RL anything
+
+00:16:42.319 --> 00:16:47.029
+that has remotely shades of theoretical results
+in machine learning it's a good idea to know
+
+00:16:47.029 --> 00:16:52.650
+more about concentration bounds but at least
+the least you should know about is the Chernoff
+
+00:16:52.650 --> 00:17:05.970
+bounds or the Chernoff Hoeffding bounds.
+
+00:17:05.970 --> 00:17:22.850
+So this is a very specialized form of the
+bound I am writing right very narrow form
+
+00:17:22.850 --> 00:17:27.819
+of the bound that i am writing specifically
+for this setting that we are interested in
+
+00:17:27.819 --> 00:17:32.289
+right the Chernoff bound is slightly more
+general than what i am stating now right and
+
+00:17:32.289 --> 00:17:38.160
+so you can look it up I mean so you can look
+up I don't know your favorite online resource
+
+00:17:38.160 --> 00:17:45.360
+right Wikipedia or whatever mathematica one
+of those things right so it will give you
+
+00:17:45.360 --> 00:18:50.200
+a more expanded bound. Okay So you can see
+the setup here I am assuming that X1 to Xn
+
+00:18:50.200 --> 00:18:57.960
+are random variables right each one with a
+range 0 to 1 right, that is kind of putting
+
+00:18:57.960 --> 00:19:02.240
+it here and if it is not in the range 0 to
+1 you will have to do some kind of normalization
+
+00:19:02.240 --> 00:19:07.440
+in the bound right, but for the time being
+let's just assume it's in the range 0 to 1.
+
+00:19:07.440 --> 00:19:14.380
+And such that the expected value of Xt right
+given all the variables that came before that
+
+00:19:14.380 --> 00:19:20.140
+is mu and then this holds for all t basically
+it essentially means that all of the variables
+
+00:19:20.140 --> 00:19:26.240
+have a mean mu, all the variables each one
+independently X1 is a random variable with
+
+00:19:26.240 --> 00:19:32.860
+mean mu in the range 0 to 1, X2 is a random
+variable with mean mu in the range 0 to 1
+
+00:19:32.860 --> 00:19:37.220
+okay. So essentially that is what we are assuming
+and I am defining another random variable
+
+00:19:37.220 --> 00:19:46.380
+which we call Sn which is essentially summing
+up all the X1 to Xn and divide by n, okay
+
+00:19:46.380 --> 00:19:49.700
+so you get that.
+
+00:19:49.700 --> 00:19:58.409
+So what I am I trying to estimate us with
+Sn, mu right I am trying to estimate the mean
+
+00:19:58.409 --> 00:20:03.110
+mu so, one way right now let us try to make
+this little concrete in our case so, that
+
+00:20:03.110 --> 00:20:10.530
+it becomes easier for you to understand right
+so X1 to Xn are random variables that are
+
+00:20:10.530 --> 00:20:19.650
+corresponding to different times I have pulled
+the same arm i right so I have pulled arm
+
+00:20:19.650 --> 00:20:25.770
+i n times right, so every time I pull the
+arm I am going to get some reward from the
+
+00:20:25.770 --> 00:20:31.200
+range 0 to 1 right, since I am assuming it
+is a stationary distribution all these rewards
+
+00:20:31.200 --> 00:20:40.020
+will have the same mean mu, correct? And Sn
+is the average right this Sn is essentially
+
+00:20:40.020 --> 00:20:47.351
+my Q j right if you think about it so, my
+Q j is like one sample of my random variable
+
+00:20:47.351 --> 00:20:57.809
+Sn, is it clear, what I mean by saying Qj
+is a sample of Sn because, Sn is a random
+
+00:20:57.809 --> 00:21:03.679
+variable right what is Qj it is one realization
+of that random variable, because I have taken
+
+00:21:03.679 --> 00:21:08.809
+actual samples and taken the average it is
+one realization of that random variable right.
+
+00:21:08.809 --> 00:21:15.520
+And what I am going to now tell you is okay
+given that i have taken n samples so, in our
+
+00:21:15.520 --> 00:21:23.309
+case it will be Nj samples right given that
+i have taken Nj samples, how can you relate
+
+00:21:23.309 --> 00:21:38.289
+Q j with what how can I relate Q j with Q
+star j okay, so given that I have taken Nj
+
+00:21:38.289 --> 00:21:46.830
+samples which is my n here how can I relate
+Q j with Q star j okay. So this is how the
+
+00:21:46.830 --> 00:21:50.220
+hoeffding bound is applicable in our case
+right so i will write down the expression
+
+00:21:50.220 --> 00:21:55.600
+i am not going to prove it okay, so that will
+get little bit more involved write down the
+
+00:21:55.600 --> 00:22:02.060
+expression and after that we can apply it
+in deriving those bonds okay.
+
+00:22:02.060 --> 00:22:10.909
+So essentially what i have here is now the
+probability that Sn is greater than or equal
+
+00:22:10.909 --> 00:22:42.429
+to mu plus some epsilon, hmm, where did I
+do a here because a is action right so I don't
+
+00:22:42.429 --> 00:22:47.500
+want to confuse a for action with something
+else yeah, this is what this is the problem
+
+00:22:47.500 --> 00:23:21.410
+with translating on the fly okay, fine so
+it should be n or n squared? Subho.. so what
+
+00:23:21.410 --> 00:23:29.030
+does this mean the probability that my Sn
+will be far away from my mu in one direction,
+
+00:23:29.030 --> 00:23:36.809
+so mu is the true mean, Sn is the estimated
+mean, the probability that Sn will be greater
+
+00:23:36.809 --> 00:23:47.450
+than at least epsilon from mu right is lesser
+than e power minus two epsilon squared n right,
+
+00:23:47.450 --> 00:23:57.820
+so the smaller the epsilon , what happen?
+Smaller the probability or larger the probability
+
+00:23:57.820 --> 00:24:02.059
+larger the probability smaller the epsilon
+larger the probability right so larger the
+
+00:24:02.059 --> 00:24:06.130
+probability of me making an error, I mean
+if I want to be really really confident then
+
+00:24:06.130 --> 00:24:11.603
+I need more and more samples right.
+
+00:24:11.603 --> 00:24:15.280
+If I want epsilon to be very small then n
+has to be very large only then I will get
+
+00:24:15.280 --> 00:24:21.360
+a high probability for it right what about
+this it says in the other direction probability
+
+00:24:21.360 --> 00:24:27.309
+that the estimate I make will be far away
+from epsilon, basically below epsilon right
+
+00:24:27.309 --> 00:24:28.670
+is again bounded by the same expression.
+
+00:24:28.670 --> 00:24:29.670
+IIT Madras Production
+Funded by
+
+00:24:29.670 --> 00:24:30.670
+Department of Higher Education
+Ministry of Human Resource Development
+
+00:24:30.670 --> 00:24:31.670
+Government of India
+
+00:24:31.670 --> 00:24:31.673
+www.nptel.ac.in
+Copyrights Reserved
+

@@ -1,0 +1,312 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.490 --> 00:00:37.470
+So we need to do policy iteration so shall
+we are, should we not when we started late
+
+00:00:37.470 --> 00:00:55.310
+I know it's my mistake here oh okay, so that
+leaves us with 15 minutes I think, we could
+
+00:00:55.310 --> 00:01:04.549
+do it in 15 minutes, so policy ration the
+idea is very simple, right so I start off
+
+00:01:04.549 --> 00:01:10.061
+with some arbitrary policy let us say p0 may
+start off with some arbitrary policy p0 I
+
+00:01:10.061 --> 00:01:22.380
+find weep I not, right then what do, I do
+I be greedy with respect to vp0 I will find
+
+00:01:22.380 --> 00:01:24.810
+p1 right.
+.
+
+00:01:24.810 --> 00:01:32.070
+So being greedy is this right so I will take
+some p0 solve fine vp0, right then do this
+
+00:01:32.070 --> 00:01:40.460
+and I will find p1, right and then I find
+vp1 plug that backend here right, so essentially
+
+00:01:40.460 --> 00:01:51.420
+I will plug in VN here find pn+1 right, so
+keep going until I converge and convergence
+
+00:01:51.420 --> 00:01:57.790
+here is more straight forward if you stay
+with the same policy you converge where unusually
+
+00:01:57.790 --> 00:02:04.430
+convergence is much faster the rate of convergence
+much faster with policy, iteration but, for
+
+00:02:04.430 --> 00:02:11.080
+variety of reasons value iteration remains
+a very favorite algorithm for many war people
+
+00:02:11.080 --> 00:02:17.810
+don’t like policy iterations for, some reasons.
+So but people get the idea for the policy
+
+00:02:17.810 --> 00:02:27.990
+iteration is right you can go implement policy
+patients rather easy, right so first so let's
+
+00:02:27.990 --> 00:02:38.340
+of arbitrary sorry I hate going back and forth
+select an arbitrary p0, right second step
+
+00:02:38.340 --> 00:03:28.410
+is called, policy evaluation so where you
+say, refined vp0 right so policy evaluation
+
+00:03:28.410 --> 00:03:33.090
+is just find vpn right so we can just do this
+by solving the system of equations I can just
+
+00:03:33.090 --> 00:03:38.190
+take the inverter inversion in the inverse
+of that matrix and solve it right or if you
+
+00:03:38.190 --> 00:03:42.770
+like it you could do the iterative fashion
+just just like you did in value iteration
+
+00:03:42.770 --> 00:03:48.730
+instead of iterating on L I can iterate on
+lp, right and then I let have some stopping
+
+00:03:48.730 --> 00:03:58.980
+criterion for stopping it but I can do this
+as well next thing is called policy.
+
+00:03:58.980 --> 00:04:00.900
+.
+Policy improvement okay this is a second step
+
+00:04:00.900 --> 00:04:46.669
+is called policy evaluation third step is
+called policy improvement, just like we mentioned
+
+00:04:46.669 --> 00:04:52.889
+earlier it says mark Maxes then component-wise,
+right for every state yes you do the max,
+
+00:04:52.889 --> 00:04:59.550
+it is whatever I wrote here before erased
+it at the beginning at exactly that, only
+
+00:04:59.550 --> 00:05:05.099
+difference is here I am plugging in vpn it
+is not V* right so this vpn and I do this
+
+00:05:05.099 --> 00:05:15.349
+argmax over p and at every step because I
+am checking for equality for stopping right.
+
+00:05:15.349 --> 00:05:21.009
+So there could be multiple actions that give
+you the max here right, so if at step n you
+
+00:05:21.009 --> 00:05:26.249
+chose an action for giving a max like step
+n there is some action your chosen as policy
+
+00:05:26.249 --> 00:05:32.740
+for a state s in step n+1 if the same action
+belongs to the max set you will pick that
+
+00:05:32.740 --> 00:05:38.080
+actually you do not pick an arbitrary action
+from the maxim, suppose let us say going up
+
+00:05:38.080 --> 00:05:44.099
+and going right right both are optimal, right
+but in the previous step I had chosen going
+
+00:05:44.099 --> 00:05:49.460
+up for the state this step I should chose
+I should choose going up also in otherwise
+
+00:05:49.460 --> 00:05:52.610
+I will just keep oscillating between up and
+right up and right I might not figure out
+
+00:05:52.610 --> 00:05:58.569
+that I have stopped right.
+So I shouldn't choose an action from the maximizes
+
+00:05:58.569 --> 00:06:05.039
+randomly right are arbitrarily I have to have
+some mechanism by which I consistently break
+
+00:06:05.039 --> 00:06:34.409
+ties so that, policies do not change when
+they do not have to, pn+1 =pn stop and declare
+
+00:06:34.409 --> 00:06:48.490
+that pn is 5* otherwise go too, well otherwise
+increment n and go to step 2, right so it’s
+
+00:06:48.490 --> 00:07:07.770
+rather easy, right so if the stopping condition
+holds can you see why pn should be p*, that
+
+00:07:07.770 --> 00:07:12.499
+doesn't mean anything it just means it’s
+a fixed point, ypn should be p* well it is
+
+00:07:12.499 --> 00:07:22.400
+a fixed point but it is a fixed point of L.
+If you think about it max over p rp+?ppvp
+
+00:07:22.400 --> 00:07:28.889
+ray that operation that looks like L that
+is yell operating on vp then if I get that
+
+00:07:28.889 --> 00:07:36.830
+p in the same beep I same p again, right so
+that means the value function hasn't changed,
+
+00:07:36.830 --> 00:07:42.720
+right so that means V=lv, so that means it
+is the optimal value function right so if
+
+00:07:42.720 --> 00:07:53.780
+pn=pn+1, because of the way I am generating
+the sequence of p and if pn=pn+ 1 then pn
+
+00:07:53.780 --> 00:08:02.589
+is p*, also I haven’t changed right because
+the apology has it changes the value function
+
+00:08:02.589 --> 00:08:08.290
+will interchange fiesta no because of the
+way we are generating here right remain so.
+
+00:08:08.290 --> 00:08:14.099
+So if the value function hasn’t changed
+and this is essentially this part of it is
+
+00:08:14.099 --> 00:08:19.759
+essentially L operating on vp and it does
+not change so that essentially means, that
+
+00:08:19.759 --> 00:08:39.610
+it is the optimal value function, okay and
+what else do we need to show I said if pn=pn+1
+
+00:08:39.610 --> 00:08:54.070
+then pn is V* pn is a p* by the way right
+,what else we have to show, that I have to
+
+00:08:54.070 --> 00:08:59.509
+show that happens right I will have to show
+that that happens so we will do that in two
+
+00:08:59.509 --> 00:09:11.220
+ways one we will have to show that so vpn+1
+= vpn, right.
+
+00:09:11.220 --> 00:09:56.100
+So why is that why you think that will be
+greater, so basically pn+1 is a greedy policy
+
+00:09:56.100 --> 00:10:02.199
+according to be pn, okay so taken vpn and
+action greedily with respect to it and I get
+
+00:10:02.199 --> 00:10:29.529
+pn+1, so that is what I mean like pn+1 satisfy
+3 then, right this is clear right so because
+
+00:10:29.529 --> 00:10:38.290
+pn+1 satisfies 3 so that is being greedy with
+respect to vn well pn is some arbitrary policy
+
+00:10:38.290 --> 00:10:43.180
+which is the same as this then that will give
+the same answer otherwise this will be greater,
+
+00:10:43.180 --> 00:10:48.750
+because this is the one obtained by maximizing
+this expression, wait I took this expression
+
+00:10:48.750 --> 00:10:53.090
+I am maximizing it and whatever gives me the
+maximum I am saying is pn+1, right.
+
+00:10:53.090 --> 00:10:57.649
+So this is the maximum on the left hand side
+so the maximum has to be greater than or equal
+
+00:10:57.649 --> 00:11:03.829
+to whatever value I will get by plugging in
+some other pn here because this is the max
+
+00:11:03.829 --> 00:11:26.509
+okay this is clear right one more step, so
+I can say so why can I say this because this
+
+00:11:26.509 --> 00:11:45.000
+is actually equal to vn that the right hand
+side will be equal to vpn because it's a fixed
+
+00:11:45.000 --> 00:11:51.110
+point of lp, so this is lp operating the lpn
+operating on vpn such a fixed-point so this
+
+00:11:51.110 --> 00:12:06.940
+is vpn so essentially this is it and if I
+multiply both sides by, what do I get so that
+
+00:12:06.940 --> 00:12:22.379
+into this is what, right.
+So every step I will keep improving okay so
+
+00:12:22.379 --> 00:12:29.990
+the last bit we need is to show that, there
+are only a finite number of policies that
+
+00:12:29.990 --> 00:12:34.740
+you can search through, if you are having
+a finite MDP finite number of deterministic
+
+00:12:34.740 --> 00:12:38.779
+policies we are searching through only deterministic
+policies here, only finite a number of deterministic
+
+00:12:38.779 --> 00:12:43.300
+policies you can search through if you have
+a finite MDP so that is basic approved it
+
+00:12:43.300 --> 00:12:47.692
+so policy iteration will converge, but every
+time I have to become better and there are
+
+00:12:47.692 --> 00:12:52.259
+only finite number of things I can search
+through at some point so I 'll have to stop,
+
+00:12:52.259 --> 00:13:02.040
+or is it okay the component ways so every
+component, of v is greater than sorry I didn't
+
+00:13:02.040 --> 00:13:07.649
+define it earlier I should have so this essentially
+means set vn+1 of s1 is greater than or equal
+
+00:13:07.649 --> 00:13:18.750
+to v1 of s1 of s2 s3 for all s, right I think
+there are people clamoring to come in so that's
+
+00:13:18.750 --> 00:13:24.269
+why I stopped we can go out and you can ask
+questions.
+

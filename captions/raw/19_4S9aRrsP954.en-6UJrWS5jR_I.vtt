@@ -1,0 +1,927 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:08.950 --> 00:00:22.039
+Great, so now I want to introduce a notion
+of something called the optimal value function
+
+00:00:22.039 --> 00:00:26.490
+so any questions about the bellman equations.
+
+00:00:26.490 --> 00:00:33.840
+All crystal clear right so if I give you an
+MDP and ask you to form the valve in equation
+
+00:00:33.840 --> 00:00:38.740
+solve it and give me the value function Vpi
+can you do that?
+
+00:00:38.740 --> 00:00:49.170
+I will give you a pi also can you solve it
+and give me a V pi, maybe?
+
+00:00:49.170 --> 00:01:02.510
+kind of computers, oh and we're at some point
+I'm going to give you like MDP's with millions
+
+00:01:02.510 --> 00:01:12.979
+of states and ask you to compute a value function
+server, don't try to do that on paper.
+
+00:01:12.979 --> 00:01:20.512
+So maybe we should give them the head management
+program, you think we should?
+
+00:01:20.512 --> 00:01:23.610
+Did he do the head management when he did
+the course?
+
+00:01:23.610 --> 00:01:29.869
+I don't think so right so this is that's a
+problem that we formulated when I was once
+
+00:01:29.869 --> 00:01:37.670
+a TA or Andy right, so he wanted people to
+appreciate how hard it is for how hard is
+
+00:01:37.670 --> 00:01:43.500
+to solve dynamic programming how hard is to
+solve MDP's, large MDP and this was a problem
+
+00:01:43.500 --> 00:01:49.880
+that was inspired by a real-life problem some
+sheep or farmers like dairy farmers in New
+
+00:01:49.880 --> 00:01:53.610
+Zealand actually solved, okay.
+
+00:01:53.610 --> 00:01:59.751
+So they had lots of cows and they have to
+decide when to milk cows and you know, when
+
+00:01:59.751 --> 00:02:03.899
+meant to use a cause for something else I
+got an Indian now becoming a political statement,
+
+00:02:03.899 --> 00:02:14.220
+right but yeah so I think sheep, okay.
+
+00:02:14.220 --> 00:02:21.420
+So when you milk the cow and when do you retire
+the cows you know so, they have to figure
+
+00:02:21.420 --> 00:02:26.780
+out so let us assume that cows have a retirement
+home and, so that's the process that's a problem
+
+00:02:26.780 --> 00:02:31.500
+so then the cows could be young you know they
+could be in breedable they could be old when
+
+00:02:31.500 --> 00:02:37.780
+they were like something like 14 or 17 different
+states that they had the cows be in right,
+
+00:02:37.780 --> 00:02:41.390
+and then they have rewards, okay if you can
+milk the cow in a particular state then you
+
+00:02:41.390 --> 00:02:44.830
+get so much milk, you know if you milk a cow
+in a later stage the milk comes down blah
+
+00:02:44.830 --> 00:02:49.640
+blah blah right, so the whole bunch of things
+and there's a small probability that old what
+
+00:02:49.640 --> 00:02:55.370
+have been classified as old cows also have
+a calf, you know me so basically they become
+
+00:02:55.370 --> 00:02:59.560
+milk able and so all kinds a very complex
+situation.
+
+00:02:59.560 --> 00:03:03.170
+And somebody actually wrote the paper out
+of this, they wrote a research paper out of
+
+00:03:03.170 --> 00:03:07.629
+solving this problem, how do you cast it as
+a as an MDP and then come up with a way of
+
+00:03:07.629 --> 00:03:12.810
+solving it because when in that case when
+you actually cast it as an MDP ended up with
+
+00:03:12.810 --> 00:03:17.459
+like a few million variables, few million
+states not variables a few million states
+
+00:03:17.459 --> 00:03:20.670
+and how do you go about solving the problem
+it was not all clear.
+
+00:03:20.670 --> 00:03:24.379
+So what we did was we came up with a very
+simplified version of it, there were instead
+
+00:03:24.379 --> 00:03:28.450
+of like 17 states there are 3 states in which
+the cows could be right and the transition
+
+00:03:28.450 --> 00:03:31.310
+dynamics were much much simplified right.
+
+00:03:31.310 --> 00:03:36.060
+So it could from young it could become breed
+able and it could pick up old and then from
+
+00:03:36.060 --> 00:03:42.810
+old it could become breed able again so it
+doesn't become n and so, so they're like a
+
+00:03:42.810 --> 00:03:47.310
+very few transition and so on so forth but
+it still turns out that you have to for computing
+
+00:03:47.310 --> 00:03:52.700
+the exact transition probabilities right you
+have to come up with a combinatorial summation
+
+00:03:52.700 --> 00:03:59.500
+right, it's actually it turns out to be incredibly
+hard to get the right transition probabilities
+
+00:03:59.500 --> 00:04:04.129
+just the P alone and everything else is simple,
+we give you what the state is we give you
+
+00:04:04.129 --> 00:04:09.970
+what the action is right, just coming up with
+the P and the R the exact closed expression
+
+00:04:09.970 --> 00:04:13.590
+for P and
+R itself turns out to be a very very hard
+
+00:04:13.590 --> 00:04:14.590
+problem, right.
+
+00:04:14.590 --> 00:04:19.739
+And it's not, it's not so there are I don't
+know about 300 states or something or 158
+
+00:04:19.739 --> 00:04:25.449
+states, it is a small problem right but computing
+that transition probability even when it is
+
+00:04:25.449 --> 00:04:30.341
+just 158 states computing the transition probability
+turns out to require a combinatorial some
+
+00:04:30.341 --> 00:04:33.940
+rights little tricky.
+
+00:04:33.940 --> 00:04:38.580
+So many people actually fail in getting the
+right transition probability they would write
+
+00:04:38.580 --> 00:04:42.610
+the correct code for solving the problem right
+but then they would not know how to compute
+
+00:04:42.610 --> 00:04:47.449
+the transition probability, just to get you'd
+appreciate the difficulty of coming up with
+
+00:04:47.449 --> 00:04:52.039
+that p and therefore, you will appreciate
+why reinforcement learning algorithms are
+
+00:04:52.039 --> 00:05:00.780
+useful because they can work without the p.
+
+00:05:00.780 --> 00:05:07.220
+So what is optimal here what am I talking
+about as being optimal so, whenever talked
+
+00:05:07.220 --> 00:05:13.960
+about that so far right so what is optimality
+in the context of MDP's or in the context
+
+00:05:13.960 --> 00:05:17.630
+of RL so, we already talked about optimality
+in the context of RL what is optimality in
+
+00:05:17.630 --> 00:05:19.169
+the context of RL?
+
+00:05:19.169 --> 00:05:29.080
+I want the ? such that for no other pi can
+I get a better return than expected return
+
+00:05:29.080 --> 00:05:43.930
+than this pi right, so I want a ? right so,
+I want a pi that is the best overall pi what
+
+00:05:43.930 --> 00:05:51.480
+should be the quantity here?
+
+00:05:51.480 --> 00:05:52.919
+But that is not defined.
+
+00:05:52.919 --> 00:06:00.350
+We know that right, so the expectation over
+return does not make sense, so what should
+
+00:06:00.350 --> 00:06:01.350
+I do?
+
+00:06:01.350 --> 00:06:05.110
+Should I qualify it over a state right, I
+should talk about where I start the return
+
+00:06:05.110 --> 00:06:08.000
+and then I can take expectations over that
+or whatever.
+
+00:06:08.000 --> 00:06:16.729
+But even better I can do this point wise so
+what do I mean by that you can say I need
+
+00:06:16.729 --> 00:06:45.190
+something like this, pi ,thanks yeah this
+is on the flight translation problems edition
+
+00:06:45.190 --> 00:06:50.840
+one has R t capital R t is written okay, and
+finishing to capital G t is written anyway
+
+00:06:50.840 --> 00:06:55.919
+so this is this is what I am looking for right
+and we know what that quantity inside there
+
+00:06:55.919 --> 00:07:16.949
+is right, so point wise i am trying to find
+max over pi, Vpi (s) for all is right, so
+
+00:07:16.949 --> 00:07:25.351
+this is I want a state I mean I want a policy
+that achieves the maximum value for every
+
+00:07:25.351 --> 00:07:28.360
+state right.
+
+00:07:28.360 --> 00:07:36.580
+So i am going to call this yeah i am going
+to call this pi star right.
+
+00:07:36.580 --> 00:07:47.310
+If I yeah I can do organized so one thing
+one caveat to note here is that arc max might
+
+00:07:47.310 --> 00:07:54.990
+not return a unique ?, that could be multiple
+policies for which this maximum is achieved
+
+00:07:54.990 --> 00:07:58.849
+in which case any one of them can be called
+the optimal policy.
+
+00:07:58.849 --> 00:08:04.030
+So there is no optimal policy right but that
+is an optimal policy that could be multiple
+
+00:08:04.030 --> 00:08:08.100
+optimal policies, just remember that it went
+very simple.
+
+00:08:08.100 --> 00:08:13.320
+I can give you, think of like a grid well,
+so this is something we will revisit often
+
+00:08:13.320 --> 00:08:16.870
+right.
+
+00:08:16.870 --> 00:08:29.990
+let us say that every state has four actions
+I can go up down left or right wait then every
+
+00:08:29.990 --> 00:08:39.110
+action is going to get a reward of- one right,
+and in the data ballistic world so if I go
+
+00:08:39.110 --> 00:08:42.839
+up I will move up by one square and if you
+go right I will go right by one square and
+
+00:08:42.839 --> 00:08:46.970
+so on so forth, like in the indicator directions
+or you could think of a stochastic world where
+
+00:08:46.970 --> 00:08:51.290
+you're trying to go up with probability point
+9 I will go up the probability point 1, i'll
+
+00:08:51.290 --> 00:08:55.440
+just stay where i am and you can think of
+this as some wheels slipping when you have
+
+00:08:55.440 --> 00:08:58.790
+a bought that is trying to move forward and
+with some probability that we wheel slip and
+
+00:08:58.790 --> 00:09:02.410
+then you stay in the same place and you probably
+have to try moving again and again until you
+
+00:09:02.410 --> 00:09:03.410
+succeed right.
+
+00:09:03.410 --> 00:09:07.950
+So you could think of it that way right that
+is a stochastic world and every time you make
+
+00:09:07.950 --> 00:09:15.680
+an action regardless of whether you move or
+not, you get a -1 right, so if we try to go
+
+00:09:15.680 --> 00:09:20.040
+up in the top row, what will happen?
+
+00:09:20.040 --> 00:09:25.279
+You stay there whether the action succeeds
+or not will stay there and you will get a
+
+00:09:25.279 --> 00:09:26.910
+lot of -1 okay.
+
+00:09:26.910 --> 00:09:33.300
+So and this is an episodic task right, the
+whole thing will end when you reach the state
+
+00:09:33.300 --> 00:09:43.240
+mark G right so what will be behaving optimally
+here we get to G as quickly as possible right,
+
+00:09:43.240 --> 00:09:48.620
+so the shortest path to G alright so, that
+is be the optimal way of behaving in this
+
+00:09:48.620 --> 00:09:50.550
+world right.
+
+00:09:50.550 --> 00:09:57.829
+So how many optimal ways are there of behaving
+in this world?
+
+00:09:57.829 --> 00:10:06.839
+A policy is a mapping from States to actions
+it doesn't matter very structural but this
+
+00:10:06.839 --> 00:10:10.649
+is the mark of earnest right so we are assuming
+everything is Marco is really shouldn't depend
+
+00:10:10.649 --> 00:10:17.200
+on very start from right so, so regardless
+of where I start from for example when I am
+
+00:10:17.200 --> 00:10:20.680
+here the optimal action is to go this way
+wait I do not care whether they started here
+
+00:10:20.680 --> 00:10:23.790
+and came here or whether i am starting here
+or not right regardless of where I'm starting
+
+00:10:23.790 --> 00:11:01.800
+the action is like that likewise, okay things
+become interesting from here okay.
+
+00:11:01.800 --> 00:11:08.389
+The number of optimal policies we have so,
+any one of these states i can choose any one
+
+00:11:08.389 --> 00:11:17.600
+of those actions right so, basically i have
+about 12 states and I can choose choose any
+
+00:11:17.600 --> 00:11:25.770
+of the two actions in those 12 states right
+so, I have a huge number of optimal policies
+
+00:11:25.770 --> 00:11:31.779
+right you can convince yourself these are
+optimal because they will take me to the expected
+
+00:11:31.779 --> 00:11:35.040
+number of steps if it is deterministic well,
+I can tell you exactly how many steps it will
+
+00:11:35.040 --> 00:11:39.470
+take me but if it is a stochastic world depending
+on what is the probability of failure of the
+
+00:11:39.470 --> 00:11:46.810
+action right I'll have some probability of
+reaching the goal right, so great.
+
+00:11:46.810 --> 00:11:53.070
+So there are too many optimal policies it
+says something common across these entire
+
+00:11:53.070 --> 00:12:03.670
+policies okay and can you rephrase it?
+
+00:12:03.670 --> 00:12:14.540
+okay not in terms of steps terms of something
+else that we know net reward the expected
+
+00:12:14.540 --> 00:12:19.340
+reward is going to be the same so for any
+state regardless of what is the optimal policy
+
+00:12:19.340 --> 00:12:30.180
+I choose to execute the value of the state
+will be the same, correct is it clear?
+
+00:12:30.180 --> 00:12:34.160
+Regardless of the policy I choose to execute
+the value of the state is going to be the
+
+00:12:34.160 --> 00:12:56.800
+same correct so i can write this 
+
+00:12:56.800 --> 00:13:05.139
+and I got rid of the ? star here, I am going
+to call this V star and V star is unique given
+
+00:13:05.139 --> 00:13:10.290
+an MDP V star will be unique right.
+
+00:13:10.290 --> 00:13:16.130
+pi star need not be unique, but regardless
+of how many different pi star you have right
+
+00:13:16.130 --> 00:13:20.889
+V star is going to be the same whichever pi
+star you consider V star will be the same
+
+00:13:20.889 --> 00:13:25.020
+so regardless of V pi star regardless of the
+pi star you choose I am going to call the
+
+00:13:25.020 --> 00:13:38.170
+optimal value function as V star okay, so
+this is called the so this is an optimal policy
+
+00:13:38.170 --> 00:14:12.690
+its optimal value function is I said clear
+,there's only one thing which you guys should
+
+00:14:12.690 --> 00:14:24.500
+be asking me now how do I know that the same
+pi will reach the max across all s, so if
+
+00:14:24.500 --> 00:14:31.910
+you have finite MDP's, it is actually straightforward
+to show that okay if you have continuous MDP's
+
+00:14:31.910 --> 00:14:36.980
+right then it becomes a little trickier, so
+we will discuss this when I am actually starting
+
+00:14:36.980 --> 00:14:43.639
+the proofs in the next class, why is it that
+there exists a optimal policy at all right,
+
+00:14:43.639 --> 00:14:47.269
+so we will discuss this in the next class
+when I'm talking about proves right.
+
+00:14:47.269 --> 00:14:55.700
+So right now, we will try to do the equivalent
+of Bellman equations for V star right, I mean
+
+00:14:55.700 --> 00:15:00.160
+likewise i can define an optimal value function
+for q, what would be the optimal value function
+
+00:15:00.160 --> 00:16:45.000
+for q, yeah another solution is there something
+that sound right, what is problem here so
+
+00:16:45.000 --> 00:17:19.419
+we need to put that pi thing here right, so
+what I what I want you to appreciate here
+
+00:17:19.419 --> 00:17:23.750
+is that even though I am talking about optimal
+policies, I still the first action it take
+
+00:17:23.750 --> 00:17:31.040
+easy 
+right the first actually take is a, always
+
+00:17:31.040 --> 00:17:35.760
+here whether I am talking about optimal so,
+it is only after i take a I behave optimally
+
+00:17:35.760 --> 00:17:41.240
+so that is why this max is after, in fact
+I can remove the max here and I can insert
+
+00:17:41.240 --> 00:17:52.260
+it anything that comes before it is it not
+influenced by the max right.
+
+00:17:52.260 --> 00:17:56.120
+Because I take a fixed action it is something
+which you have to keep in mind so whenever
+
+00:17:56.120 --> 00:18:04.720
+you talk about Q star S,A right, the A is
+still fixed it might not be the best A to
+
+00:18:04.720 --> 00:18:16.970
+do right in fact, I can have a Q star a defined
+for this action here, wait I can have a Q
+
+00:18:16.970 --> 00:18:21.530
+star here defined for this action also for
+each one of these actions I can have a Q star
+
+00:18:21.530 --> 00:18:30.680
+defined right, this is it so the Q star of
+the down action will essentially be minus
+
+00:18:30.680 --> 00:18:40.690
+1 plus V star of going from here to the goal,
+right in the Q star of this action will be
+
+00:18:40.690 --> 00:18:50.480
+minus 1 plus V star going here assuming is
+deterministic, otherwise it will be minus
+
+00:18:50.480 --> 00:18:53.860
+1 plus point nine times the value of going
+from here and point nine times the value of
+
+00:18:53.860 --> 00:18:55.850
+going from if it is stochastic right.
+
+00:18:55.850 --> 00:19:00.120
+so I can think of defining Q star for even
+sub optimal action this is one thing if I
+
+00:19:00.120 --> 00:19:05.420
+want to keep in mind so it's not like Q star
+is defined only for optimal actions let there,
+
+00:19:05.420 --> 00:19:11.860
+okay great, so now we have these things so
+let us try to see what we can do so, I want
+
+00:19:11.860 --> 00:19:20.679
+to do V star (s) say I want to find V star
+of s, so what would V star of s equal to?
+
+00:19:20.679 --> 00:19:38.400
+Do you think in terms of Q star ? So what
+do you think V star of s will be in terms
+
+00:19:38.400 --> 00:20:01.289
+of Q star , so what is Q star tell me?
+
+00:20:01.289 --> 00:20:07.500
+If I take action A and behave optimally thereafter
+right so, what can V star be, I mean that
+
+00:20:07.500 --> 00:20:09.920
+is essentially behaving optimally from the
+current state.
+
+00:20:09.920 --> 00:20:16.630
+Let's say I am going to look at okay which
+one whatever gives me the best reward on taking
+
+00:20:16.630 --> 00:20:22.159
+a and then behaving optimally thereafter right
+so think about what this expression is?
+
+00:20:22.159 --> 00:20:23.890
+This expression is essentially okay.
+
+00:20:23.890 --> 00:20:31.740
+I behave according to a and after that I behave
+optimally right, so that is essentially this
+
+00:20:31.740 --> 00:20:39.280
+expression right and I am taking a max here
+which essentially means said okay, which is
+
+00:20:39.280 --> 00:20:40.960
+the action that gives me this?
+
+00:20:40.960 --> 00:20:46.350
+The best of this expression and that I cannot
+behave more optimally than that, because it
+
+00:20:46.350 --> 00:20:50.350
+is only the first action I have a choice here
+after that I'm assuming and behaving optimally
+
+00:20:50.350 --> 00:20:52.720
+whatever is optimal behavior right.
+
+00:20:52.720 --> 00:20:56.140
+So i am not talking about the recovering the
+optimal behavior yet right, I'm only talking
+
+00:20:56.140 --> 00:21:01.409
+about finding what the optimal value function
+is right, I am assuming after-action a and
+
+00:21:01.409 --> 00:21:05.660
+behaving optimally, so now the only thing
+i need to figure out is what is action a and
+
+00:21:05.660 --> 00:21:10.240
+I need to pick that action a says that when
+you add the reward for taking mediate or what
+
+00:21:10.240 --> 00:21:16.340
+for taking action a and the return for behaving
+optimally they are after I get the most.
+
+00:21:16.340 --> 00:21:19.890
+So this is essentially very intuitive way
+of defining what the optimal value function
+
+00:21:19.890 --> 00:21:46.660
+is now I can expand this you can say it's
+max over a summation s prime and that is what
+
+00:21:46.660 --> 00:21:55.040
+max over pi is say max over pi V pi V star
+sort of the V star is prime.
+
+00:21:55.040 --> 00:21:57.210
+e
+
+00:21:57.210 --> 00:22:37.740
+This is how we got that so, this is called
+the bellman optimality equation for V star
+
+00:22:37.740 --> 00:22:53.490
+likewise you can write a bell but optimality
+equation for, you start have to be why not
+
+00:22:53.490 --> 00:23:04.630
+wait whether it is some policy there is no
+question of some policy will give you a higher
+
+00:23:04.630 --> 00:23:14.520
+policy even why I gave you all the optimal
+policies tell me which one will do that?
+
+00:23:14.520 --> 00:23:17.820
+Just think about it if that is some policy
+that will do that then I will basically change
+
+00:23:17.820 --> 00:23:22.930
+the action to that I mean that has to be optimum
+right if there is going right this does not
+
+00:23:22.930 --> 00:23:26.529
+have the same values going up going up as
+a higher value than going right, then going
+
+00:23:26.529 --> 00:23:33.240
+up has to be optimal going right cannot be
+optimal because then if I do the max only
+
+00:23:33.240 --> 00:23:37.330
+one will apply the other one won't appear
+right.
+
+00:23:37.330 --> 00:23:42.780
+so one other thing so I have been talking
+only about deterministic optimal policies
+
+00:23:42.780 --> 00:23:48.520
+right I said there are like there are 12 elements
+and there are two options there did not be
+
+00:23:48.520 --> 00:23:54.900
+so, as long as I have a policy which are saying
+only non zero probabilities to the optimal
+
+00:23:54.900 --> 00:24:01.351
+actions right that is also an optimal policy
+so, in this state I can choose with probability
+
+00:24:01.351 --> 00:24:08.120
+point 5 to go up or probability point 5 to
+go right, right so, point 5 do up, point 5
+
+00:24:08.120 --> 00:24:13.530
+go right that is also an optimal policy right
+it could be any combination as long as I have
+
+00:24:13.530 --> 00:24:19.350
+zero probability for going right or going
+down right then I am self happy then it is
+
+00:24:19.350 --> 00:24:29.309
+an optimal policy right so, there is an infinite
+number of optimal policies is an infinite
+
+00:24:29.309 --> 00:24:33.410
+number of optimal policy.
+
+00:24:33.410 --> 00:24:41.470
+so nowhere is the next question I want to
+ask so given a value function how will you
+
+00:24:41.470 --> 00:25:04.059
+recover optimal policy from that because,
+I give you V star how you recover an optimal
+
+00:25:04.059 --> 00:25:14.289
+policy from that so I have to know figure
+out what action I have to take in each state
+
+00:25:14.289 --> 00:25:21.390
+right and I have to take that action that
+achieves the max right so, what I mean by
+
+00:25:21.390 --> 00:25:26.300
+achieves the max so in the case of V star
+actually take an action figure out where I
+
+00:25:26.300 --> 00:25:34.980
+will end up right, and take that action that
+gives me the max over that right so, what
+
+00:25:34.980 --> 00:25:55.860
+I mean by where I land up at so I pick some
+action right then i sum over s prime sorry,
+
+00:25:55.860 --> 00:25:59.760
+so this is the utility for taking an action
+right.
+
+00:25:59.760 --> 00:26:12.730
+so I have to pick an action that gives me
+so given a V star this is how I will recover
+
+00:26:12.730 --> 00:26:20.860
+a PI star right yeah depends on how you how
+you implement the arc max that if the ark
+
+00:26:20.860 --> 00:26:25.110
+max you can write it such a way that you will
+return any of the maximizes then you will
+
+00:26:25.110 --> 00:26:30.250
+get a deterministic policy or you can return
+your arm access that it returns all the maximizes
+
+00:26:30.250 --> 00:26:34.990
+then you can think of having some kind of
+uniform probability distribution over the
+
+00:26:34.990 --> 00:26:38.970
+Maximize it can be uniform or it could be
+one way or but if, you think of arc max is
+
+00:26:38.970 --> 00:26:44.020
+returning some arbitrarily returning one of
+the maximizes will get a deterministic policy
+
+00:26:44.020 --> 00:26:48.490
+right this is one way of recovering optimal
+policies from the optimal value function okay.
+
+00:26:48.490 --> 00:26:52.860
+so the little trickier I still need to know
+p and c need to know the expected values and
+
+00:26:52.860 --> 00:26:57.030
+other things even if somebody gives me the
+value function I still need to know the rest
+
+00:26:57.030 --> 00:27:00.990
+of the parameters of the MDP for me to recover
+the optimal policy.
+
+00:27:00.990 --> 00:27:17.610
+But suppose somebody gives me the Q function
+how I will recommend the optimal policy, we
+
+00:27:17.610 --> 00:27:24.580
+think about looking at the expression there
+right in the arc max is exactly this right.
+
+00:27:24.580 --> 00:27:35.309
+so 
+if i give you the q functions if I give me
+
+00:27:35.309 --> 00:27:38.710
+Q star I do not need all this.
+
+00:27:38.710 --> 00:27:44.380
+what I am doing is essentially looking at
+one step right if I do a okay what will happen?
+
+00:27:44.380 --> 00:27:45.380
+Right.
+
+00:27:45.380 --> 00:27:48.909
+so I am looking at the outcome and then trying
+to make the decision the best decision based
+
+00:27:48.909 --> 00:27:54.400
+on that outcome right but here the Q star
+I do not even have to do that one step look
+
+00:27:54.400 --> 00:28:01.760
+at it right I can just be greedy with respect
+to my current Q star and I will pi star makes
+
+00:28:01.760 --> 00:28:10.851
+sense so, if i give you V star and Q star
+now we can know how to find pi star and we
+
+00:28:10.851 --> 00:28:16.159
+also we spoke about how we can solve the bellman
+equation for V pi and Q pi, can you solve
+
+00:28:16.159 --> 00:28:23.960
+the bellman equation like that for V star
+and Q star , I have a system of n equations
+
+00:28:23.960 --> 00:28:27.529
+in n variables, the same thing as before.
+
+00:28:27.529 --> 00:28:31.549
+Can I solve it?
+
+00:28:31.549 --> 00:28:33.899
+What's the problem?
+
+00:28:33.899 --> 00:28:37.540
+it's not linear right so it says i have this
+max here it makes it the nonlinear system
+
+00:28:37.540 --> 00:28:40.530
+of equations so you'll have to figure out
+how we are going to solve it right.
+
+00:28:40.530 --> 00:28:44.380
+So this is what we will look at in the next
+class the next layer what I will do is first
+
+00:28:44.380 --> 00:28:50.410
+show that well in multiple ways so that V
+pi is unique and then show that V star is
+
+00:28:50.410 --> 00:28:57.169
+unique right, and then come up with a talk
+about multiple ways of solving for we started
+
+00:28:57.169 --> 00:29:02.399
+well not only this will b V pi can we'll talk
+about multiple ways of solving for V star
+
+00:29:02.399 --> 00:29:10.309
+, in fact the rest of the course in some senses
+figuring out multiple ways of solving for
+
+00:29:10.309 --> 00:29:14.260
+V star and Q star under different assumptions
+okay, how much information you have, how much
+
+00:29:14.260 --> 00:29:18.010
+data you have and so on so forth right, so
+great so any questions?
+
+00:29:18.010 --> 00:29:19.010
+IIT Madras Production
+Funded by
+
+00:29:19.010 --> 00:29:20.010
+Department of Higher Education
+Ministry of Human Resource Development
+
+00:29:20.010 --> 00:29:21.010
+Government of India
+
+00:29:21.010 --> 00:29:21.013
+www.nptel.ac.in
+Copyrights Reserved
+

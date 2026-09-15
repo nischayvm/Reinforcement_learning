@@ -1,0 +1,1214 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.719 --> 00:00:22.519
+So good, so we can finally get underway, so
+this is CS 6700 reinforcement learning, if
+
+00:00:22.519 --> 00:00:29.449
+anyone is here by mistake looking for the
+planning class still well you should leave
+
+00:00:29.449 --> 00:00:38.820
+okay, and yeah so how many of you were in
+the machine learning course just for me to
+
+00:00:38.820 --> 00:00:57.750
+get a sense large fraction of the people were
+enable and so, this is a very the different
+
+00:00:57.750 --> 00:01:04.350
+kind of learning than what we looked at it
+am I right?
+
+00:01:04.350 --> 00:01:09.050
+So in machine learning we looked at familiar
+modes of machine learning where the idea was
+
+00:01:09.050 --> 00:01:15.360
+to learn from data, you know so you had given
+lot of data as training instances for you
+
+00:01:15.360 --> 00:01:18.740
+and essentially we're trying to learn from
+those training instances as to what to do
+
+00:01:18.740 --> 00:01:19.740
+right.
+
+00:01:19.740 --> 00:01:20.950
+.
+And there were different kinds of problems
+
+00:01:20.950 --> 00:01:25.830
+that we are looking at, so one was supervised
+learning problem in which you are looking
+
+00:01:25.830 --> 00:01:30.270
+at classification and regression, oh yeah
+so in the machine learning class we looked
+
+00:01:30.270 --> 00:01:35.960
+at learning from data right primarily so one
+of the models we looked at was supervised
+
+00:01:35.960 --> 00:01:41.960
+learning it where we learnt about classification
+and regression the goal there was to learning
+
+00:01:41.960 --> 00:01:47.960
+from an input space to a output which could
+be a categorical output in which case in classification
+
+00:01:47.960 --> 00:01:51.950
+could be a continuous output in which case
+it was called regression right.
+
+00:01:51.950 --> 00:01:56.050
+So if you haven't been in the ml class don't
+worry about it right because this is just
+
+00:01:56.050 --> 00:01:59.270
+to tell you that our RL is not what we learnt
+in the ML class okay.
+
+00:01:59.270 --> 00:02:03.119
+So she hasn’t learned anything in the ML
+class then you don't have anything to unlearn.
+
+00:02:03.119 --> 00:02:08.030
+So don't worry so the second per second kind
+of learning thing we looked at was unsupervised
+
+00:02:08.030 --> 00:02:13.120
+learning where there was really no output
+that was expected of you right since therefore
+
+00:02:13.120 --> 00:02:17.170
+there was no supervision the goal was to find
+patterns in the input data.
+
+00:02:17.170 --> 00:02:22.030
+I will give you lot of data points you can
+you find out if there are groupings of similar
+
+00:02:22.030 --> 00:02:25.560
+kinds of data points can i divided them into
+segments right.
+
+00:02:25.560 --> 00:02:29.950
+So that kind of a thing was called clustering,
+right or you are asked to figure out if there
+
+00:02:29.950 --> 00:02:34.340
+were frequently repeating patterns in the
+data right and so this is called frequent
+
+00:02:34.340 --> 00:02:38.720
+pattern mining or derived problem there was
+Association rule mining and so on so forth
+
+00:02:38.720 --> 00:02:44.950
+right so people have heard me give this analogy
+multiple, multiple times before but this is
+
+00:02:44.950 --> 00:02:53.270
+the most apt one how did you learn to cycle,
+right.
+
+00:02:53.270 --> 00:02:57.560
+so was it supervised learning so how did you
+learn to cycle, somebody who hasn't heard
+
+00:02:57.560 --> 00:03:02.610
+me or then who hasn't been in ML, you haven't
+been in ML right okay, how did you learn to
+
+00:03:02.610 --> 00:03:10.400
+cycle, was did somebody tell you how to cycle
+and then you just followed their instruction?
+
+00:03:10.400 --> 00:03:15.000
+Okay first of all tell you know how to cycle?
+
+00:03:15.000 --> 00:03:16.000
+Yes.
+
+00:03:16.000 --> 00:03:18.040
+Do you know how to cycle, yeah you?
+
+00:03:18.040 --> 00:03:19.040
+Yes.
+
+00:03:19.040 --> 00:03:26.260
+Okay how did you learn to cycle fell down
+a couple of times and that automatic you made
+
+00:03:26.260 --> 00:03:30.040
+cycle, you have to actually figure out how
+to not default down, right.
+
+00:03:30.040 --> 00:03:33.840
+So falling down alone is not enough but you
+have to try different things right it's not
+
+00:03:33.840 --> 00:03:37.660
+supervised learning is really not supervised
+learning how much everything because, now
+
+00:03:37.660 --> 00:03:43.280
+that I have given this talk multiple times
+people are getting wise to it, right earlier
+
+00:03:43.280 --> 00:03:46.700
+when I used to ask these people uses of course
+in supervised learning mantle was there holding
+
+00:03:46.700 --> 00:03:50.959
+me or my father was telling me what to do
+and so on so forth.
+
+00:03:50.959 --> 00:03:56.879
+At best what did they tell you, hey look out
+look out don't fall down, right.
+
+00:03:56.879 --> 00:04:01.599
+So that doesn't count our supervision, so
+or keep your body right keep your body up
+
+00:04:01.599 --> 00:04:05.209
+or something some kind of very vague instructions
+was what they're giving you right, supervised
+
+00:04:05.209 --> 00:04:09.600
+learning would mean that so we get on the
+cycle somebody tells you okay, now push down
+
+00:04:09.600 --> 00:04:15.069
+with your left foot with three pounds of pressure
+right and move your center of gravity three
+
+00:04:15.069 --> 00:04:16.720
+degrees to the right, right.
+
+00:04:16.720 --> 00:04:22.720
+So this is I mean somebody has to give you
+exactly what is the control signals that you
+
+00:04:22.720 --> 00:04:28.460
+have to give to your body in order for you
+to cycle right, then that would be supervised
+
+00:04:28.460 --> 00:04:29.460
+learning.
+
+00:04:29.460 --> 00:04:33.460
+If somebody actually gives you supervision
+in that scale you would probably have never
+
+00:04:33.460 --> 00:04:39.180
+learned to cycle we think about it because
+it's such a complex, complex dynamical system
+
+00:04:39.180 --> 00:04:42.630
+if somebody gives you control at that level
+gives you input at that level you will never
+
+00:04:42.630 --> 00:04:45.280
+learn to cycle.
+
+00:04:45.280 --> 00:04:53.400
+And so immediately people flip and say that
+it was unsupervised learning right, because
+
+00:04:53.400 --> 00:04:56.690
+here of course nobody told me how to cycle
+therefore it is unsupervised learning.
+
+00:04:56.690 --> 00:05:02.020
+So if it is truly unsupervised learning what
+should have happened is you should have watched
+
+00:05:02.020 --> 00:05:07.110
+hundreds of videos of people cycling figure
+out what is the pattern of cycling that they
+
+00:05:07.110 --> 00:05:12.330
+do okay, and get on a cycle and reproducing
+right.
+
+00:05:12.330 --> 00:05:16.460
+So that is essentially what unsupervised learning
+would be you just have lot of data right and
+
+00:05:16.460 --> 00:05:20.680
+based on the data I figure out what the patterns
+are and then you try to execute those patterns
+
+00:05:20.680 --> 00:05:26.880
+that does not work right, you can watch hours
+and hours of somebody playing fly simulator
+
+00:05:26.880 --> 00:05:33.160
+you cannot go and fly a plane wait, so you
+have to get on the cycle yourself and you
+
+00:05:33.160 --> 00:05:37.900
+have to try things yourself right so that
+that's the crux here right.
+
+00:05:37.900 --> 00:05:43.160
+So what it's its how do you learn to cycle
+is neither of the above right is neither supervised
+
+00:05:43.160 --> 00:05:46.400
+nor and supervised it's an it's a different
+paradigm.
+
+00:05:46.400 --> 00:05:51.650
+So the reason I always start out my talks
+not just in the class but in gender when I
+
+00:05:51.650 --> 00:05:55.740
+talk about reinforcement learning is because
+people will always talk about reinforcement
+
+00:05:55.740 --> 00:05:59.669
+learning and unsupervised learning and it's
+always really irks me because it's not an
+
+00:05:59.669 --> 00:06:05.070
+unsupervised learning just because you don't
+have a classification error or a class label
+
+00:06:05.070 --> 00:06:09.900
+doesn't make it unsupervised learning it is
+a completely different form of learning and
+
+00:06:09.900 --> 00:06:15.360
+so reinforcement learning is essentially this
+mathematical formulas for this trial and error
+
+00:06:15.360 --> 00:06:17.000
+kind of learning right.
+
+00:06:17.000 --> 00:06:22.840
+So how do you learn from this kind of minimal
+feedback you know, falling down hurts or somebody
+
+00:06:22.840 --> 00:06:27.780
+your mom or somebody stands there and claps,
+when you finally managed to get on the cycle
+
+00:06:27.780 --> 00:06:29.220
+you know that's kind of a positive reinforcement.
+
+00:06:29.220 --> 00:06:35.070
+Where did he fall down you get hurt right,
+that's kind of a negative feedback how do
+
+00:06:35.070 --> 00:06:39.919
+you just use this kinds of minimal feedback
+and you learn to cycle then, so this is essentially
+
+00:06:39.919 --> 00:06:46.610
+the crux of what reinforcement learning is
+about trial and error right.
+
+00:06:46.610 --> 00:06:53.460
+So the goal here is to learn about a system
+through interacting with the system right
+
+00:06:53.460 --> 00:06:58.210
+it's not something that is done completely
+offline okay you have some notion of interaction
+
+00:06:58.210 --> 00:07:03.229
+with the system okay and you learn about the
+system through that interaction.
+
+00:07:03.229 --> 00:07:08.539
+Reinforcement learning originally was inspired
+by behavioral psychology right.
+
+00:07:08.539 --> 00:07:10.830
+.
+So one of the earliest reinforcement systems
+
+00:07:10.830 --> 00:07:18.470
+that were said he was a Pavlov's dog, how
+many of you know of the Pavlov's dog experiment?
+
+00:07:18.470 --> 00:07:22.860
+what is the Pavlov's dog experiment in association
+with whenever he's going to do okay, so whenever
+
+00:07:22.860 --> 00:07:42.780
+like he just utterly need above the dog started
+expecting the food and started salivating
+
+00:07:42.780 --> 00:07:47.220
+yeah so that is called a condition perfect,
+so when the dog looks at the food and start
+
+00:07:47.220 --> 00:07:52.740
+salivating it is a primary response because
+that is a reason for it to salivate on the
+
+00:07:52.740 --> 00:08:03.190
+site of food in any idea why?
+
+00:08:03.190 --> 00:08:05.889
+Exactly so it is preparing to digest the food
+you know and then show the food is preparing
+
+00:08:05.889 --> 00:08:08.419
+to digest the food so it starts salivating
+right.
+
+00:08:08.419 --> 00:08:12.550
+So then now if you think about it right hearing
+the bell and it celebrates what is it doing
+
+00:08:12.550 --> 00:08:14.250
+preparing to digest a bell?
+
+00:08:14.250 --> 00:08:17.650
+So when you ring the bell and then serve the
+food the dog forms an association between
+
+00:08:17.650 --> 00:08:23.870
+the bell and the food right and later on when
+you just ring the bell without even giving
+
+00:08:23.870 --> 00:08:29.949
+the food the dog starts salivating in response
+to digesting the food that it expects to be
+
+00:08:29.949 --> 00:08:35.630
+delivered right so essentially the food is
+the payoff you know the food is like the reward
+
+00:08:35.630 --> 00:08:41.380
+for it and it has learned to form associations
+between signals in this case which was a bell
+
+00:08:41.380 --> 00:08:45.380
+like an input signal which was the bell and
+the reward that is going to get right.
+
+00:08:45.380 --> 00:08:52.279
+So this was called behavioral conditioning
+right and so inspired by these kinds of experiments
+
+00:08:52.279 --> 00:08:55.980
+on the more complex behavioral experiments
+on animals and people started to come up with
+
+00:08:55.980 --> 00:08:59.239
+different theories to explain how learning
+proceeds right.
+
+00:08:59.239 --> 00:09:05.800
+In fact some of the earlier reinforcement
+learning papers appeared in behavioral psychology
+
+00:09:05.800 --> 00:09:14.410
+journals right, the earliest paper by Sutton
+and Border appeared in brain and behavioral
+
+00:09:14.410 --> 00:09:20.529
+sciences Journal, just go back I needed to
+need to say something about Sutton- Border
+
+00:09:20.529 --> 00:09:24.499
+know that there's a larger audience you can
+tell that what then so the we're going to
+
+00:09:24.499 --> 00:09:30.189
+follow a textbook written by Richardson and
+Andy border right but more importantly they
+
+00:09:30.189 --> 00:09:35.279
+are also kind of the co-founders of the modern
+field of reinforcement learning right.
+
+00:09:35.279 --> 00:09:43.749
+So in 1983 they wrote a paper adaptive neuron
+like element that learn control behavior from
+
+00:09:43.749 --> 00:09:49.100
+something to that effect right and that essentially
+kick started this whole modern field of reinforcement
+
+00:09:49.100 --> 00:09:50.100
+learning.
+
+00:09:50.100 --> 00:09:53.910
+So the concept of reinforcement learning like
+I said goes back to Pavlov and earlier right,
+
+00:09:53.910 --> 00:09:57.550
+people have been talking about those kind
+of behavioral conditioning and learning and
+
+00:09:57.550 --> 00:10:06.610
+sure, but the whole modern computational techniques
+that people use in reinforcement learning
+
+00:10:06.610 --> 00:10:15.170
+are started by Sutton and border.
+
+00:10:15.170 --> 00:10:22.079
+So what is reinforcement learning right, so
+it's learning about stimuli right the inputs
+
+00:10:22.079 --> 00:10:26.239
+that are coming to you and the actions that
+you can take in response to it right, learning
+
+00:10:26.239 --> 00:10:32.139
+about the stimuli only from rewards and punishments
+so you're not going to get anything else food
+
+00:10:32.139 --> 00:10:35.930
+is a reward right falling down and scraping
+your hand there's a punishment, right.
+
+00:10:35.930 --> 00:10:38.449
+.
+So only from these kinds of rewards and punishments
+
+00:10:38.449 --> 00:10:43.269
+alone right, there is no detailed supervision
+available nobody tells you what is the response
+
+00:10:43.269 --> 00:10:48.350
+that you should give to a specific input right,
+suppose you are playing a game there are multiple
+
+00:10:48.350 --> 00:10:52.959
+ways in which you can learn to play a game
+right so we can learn to play chess by looking
+
+00:10:52.959 --> 00:10:57.860
+at a board position right and then looking
+at a table that tells you for this board position
+
+00:10:57.860 --> 00:11:01.980
+this is the move you have to make right and
+then you go and make the move alright.
+
+00:11:01.980 --> 00:11:06.699
+So that is a kind of supervision that you
+could get you know that gives you a kind of
+
+00:11:06.699 --> 00:11:12.209
+a mapping from the input to the output right,
+it gives you a mapping from the input to the
+
+00:11:12.209 --> 00:11:16.860
+output and essentially you learn to generalize
+from that.
+
+00:11:16.860 --> 00:11:21.049
+So this is what we mean by detailed supervision
+so, another way of learning to play chess
+
+00:11:21.049 --> 00:11:25.949
+is just you have an open-ended sit in front
+of him and you just make a sequence of moves
+
+00:11:25.949 --> 00:11:31.420
+at the end of the move you win okay, you get
+a reward make somebody pays you say 10 rupees,
+
+00:11:31.420 --> 00:11:36.369
+okay if you lose you how to pay the opponent
+and ten rupees that's all, that’s all that
+
+00:11:36.369 --> 00:11:39.800
+happens is all the feedback you’re going
+to get right, whether you are going to get
+
+00:11:39.800 --> 00:11:43.230
+the 10 rupees or going to lose the 10 rupees
+at the end of the game so nobody tells you
+
+00:11:43.230 --> 00:11:47.529
+given this position this is the move you should
+have made that is what we mean by saying learning
+
+00:11:47.529 --> 00:11:55.339
+from rewards and punishments in the absence
+of detailed supervision is that clear okay?
+
+00:11:55.339 --> 00:12:01.439
+And the crucial component to this is trial
+and error learning because since I don't know
+
+00:12:01.439 --> 00:12:06.269
+what is the right thing to do given an input
+right I need to try multiple things to see
+
+00:12:06.269 --> 00:12:10.319
+what the outcome will be right, I need to
+try different things to see if I am going
+
+00:12:10.319 --> 00:12:15.089
+to get the reward or not right if I don't
+try different things, I'm not going to be
+
+00:12:15.089 --> 00:12:16.819
+able to learn anything at all right.
+
+00:12:16.819 --> 00:12:21.050
+So we will I can give you more formal mathematical
+reasons for why we need all of this as we
+
+00:12:21.050 --> 00:12:30.339
+let go on but this is intuitively you can
+understand this as a requiring exploration
+
+00:12:30.339 --> 00:12:33.559
+so, that you know what the right outcome is
+right.
+
+00:12:33.559 --> 00:12:37.529
+And there are a bunch of things which are
+also characteristic of reinforcement learning
+
+00:12:37.529 --> 00:12:44.480
+problems one of those is that the outcomes
+right they paid the rewards and punishments
+
+00:12:44.480 --> 00:12:49.949
+based on which you are learning can be fairly
+delayed in time they need not be temporarily
+
+00:12:49.949 --> 00:12:56.600
+close to the thing that cost it, I mean while
+you are playing a game let us say right, so
+
+00:12:56.600 --> 00:13:04.329
+you might you know drop a batsman right and
+then he goes on to score like 150 or something
+
+00:13:04.329 --> 00:13:08.279
+like that right so then you lose the match
+at the end of the day right but even that
+
+00:13:08.279 --> 00:13:12.839
+cost you to lose the match is the dropped
+catch that probably happened around the 12th
+
+00:13:12.839 --> 00:13:23.309
+over right, or it could be much more convoluted
+causal cause and effect right so and how many
+
+00:13:23.309 --> 00:13:26.930
+of you follow cricket?
+
+00:13:26.930 --> 00:13:31.249
+My god really losing popularity, put your
+hands down, I'm not going to give a cricket
+
+00:13:31.249 --> 00:13:37.019
+example then forget it okay so a bunch of
+other things right so, so we talked about
+
+00:13:37.019 --> 00:13:41.619
+delayed rewards the rewards could come much
+later in time from the action that cost the
+
+00:13:41.619 --> 00:13:46.660
+reward will happen right for example, let's
+go back to our cycling case that I might have
+
+00:13:46.660 --> 00:13:50.319
+done something stupid honoring all I might
+have gone over a stone somewhere right, while
+
+00:13:50.319 --> 00:13:54.120
+I am cycling at a very high speed and might
+have been a small stone in this the road and
+
+00:13:54.120 --> 00:13:56.029
+that that will cause me to lose my balance
+right.
+
+00:13:56.029 --> 00:14:01.129
+And then I will try my level best to get the
+balance back right I might not and I will
+
+00:14:01.129 --> 00:14:06.769
+finally fall down and get her that doesn't
+mean what caused the falling down is the last
+
+00:14:06.769 --> 00:14:12.980
+action I tried right, I might have desperately
+tried to jump off the cycle or something like
+
+00:14:12.980 --> 00:14:17.379
+that but that is not what caused the punishment
+right, the what caused the punishment happened
+
+00:14:17.379 --> 00:14:20.350
+a few seconds ago when I ran over the stone,
+right.
+
+00:14:20.350 --> 00:14:24.910
+So there could be this kind of a temporal
+disconnect between what causes the punishment
+
+00:14:24.910 --> 00:14:28.149
+from the actual reward and punishment so it
+becomes a little tricky how do you are going
+
+00:14:28.149 --> 00:14:31.240
+to learn those things like learn the association's
+right.
+
+00:14:31.240 --> 00:14:38.670
+So quite often write your wind need a sequence
+of actions to obtain a reward and it's not
+
+00:14:38.670 --> 00:14:44.759
+going to be like a one-shot thing they're
+going to need a sequence of actions, so again
+
+00:14:44.759 --> 00:14:48.820
+going back to the chess example right, you
+are not going to get a reward every time we
+
+00:14:48.820 --> 00:14:52.049
+move a piece on the board right, you have
+to finish playing the game at the end of the
+
+00:14:52.049 --> 00:14:58.420
+game if you actually manage to when you get
+a reward so, it is a sequence of actions right.
+
+00:14:58.420 --> 00:15:03.279
+And therefore you need to learn some kind
+of an association between the inputs that
+
+00:15:03.279 --> 00:15:07.529
+you are seeing in this case it will be both
+positions right or how fast the cycle is moving
+
+00:15:07.529 --> 00:15:12.999
+and how unbalanced do you feel and so on so
+forth right to actions so the inputs that
+
+00:15:12.999 --> 00:15:17.569
+you are getting which sometimes which we will
+call states right and the actions that you
+
+00:15:17.569 --> 00:15:20.629
+take in response to this input that you are
+seeing right.
+
+00:15:20.629 --> 00:15:27.350
+So this is essentially what you are going
+to be doing when you are solving a reinforcement
+
+00:15:27.350 --> 00:15:28.499
+learning problem.
+
+00:15:28.499 --> 00:15:34.709
+So this kind of associations is essentially
+called as policies right, so what you are
+
+00:15:34.709 --> 00:15:39.769
+essentially learning is a policy to behave
+in a world, right.
+
+00:15:39.769 --> 00:15:45.179
+So learning a policy to play chess or you
+are learning a policy to cycle right so this
+
+00:15:45.179 --> 00:15:47.819
+is essentially what you are learning that
+you are not just learning about individual
+
+00:15:47.819 --> 00:15:55.669
+actions right, and all of this happen typically
+in a noisy stochastic world that the mix things
+
+00:15:55.669 --> 00:16:00.439
+more challenging, so these are all the different
+characteristics of reinforcement learning
+
+00:16:00.439 --> 00:16:08.479
+problems right and I will be looking at all
+of this as we go along in when this not be
+
+00:16:08.479 --> 00:16:12.519
+explicitly talking about each and every one
+of these bullet points but everything that
+
+00:16:12.519 --> 00:16:16.040
+we look at all the algorithms all the methods
+that we look at as we go along in this course
+
+00:16:16.040 --> 00:16:21.410
+okay, we'll have all these aspects as part
+of it okay.
+
+00:16:21.410 --> 00:16:24.800
+.
+So reinforcement learning has been used fairly
+
+00:16:24.800 --> 00:16:34.220
+successfully in a wide variety of applications
+right, so you can see a helicopter there okay,
+
+00:16:34.220 --> 00:16:44.500
+so that is not a cut and paste error the helicopter
+is actually flying upside down, so the this
+
+00:16:44.500 --> 00:16:50.079
+group at Stanford and Berkeley which have
+actually use reinforcement learning to trainer
+
+00:16:50.079 --> 00:16:55.989
+after to fly all kinds of things not just
+upside down an aural agent can do all kinds
+
+00:16:55.989 --> 00:17:01.480
+of tricks on the helicopter so, I will show
+you a video in a minute and it is an amazing
+
+00:17:01.480 --> 00:17:07.829
+piece of work night I mean it's considered
+it was considered the showpiece application
+
+00:17:07.829 --> 00:17:12.160
+for reinforcement learning getting such a
+complex control system to work and it actually
+
+00:17:12.160 --> 00:17:18.870
+could do things at a much finer levels of
+control than a human being could.
+
+00:17:18.870 --> 00:17:22.810
+Relax after all a machine so we would expect
+that but the tricky part was how it learn
+
+00:17:22.810 --> 00:17:30.059
+to control this complex system from without
+any human intervention right, and in the middle
+
+00:17:30.059 --> 00:17:37.850
+right so they I have a couple of games there
+so that is can you see that is too small an
+
+00:17:37.850 --> 00:17:42.740
+arrow that's a game called backgammon right
+so how many of you know about backgammon,
+
+00:17:42.740 --> 00:17:46.830
+1, 2 plus one maybe.
+
+00:17:46.830 --> 00:17:52.110
+How many of you know about Ludo?
+
+00:17:52.110 --> 00:17:58.559
+Okay fine so backgammon is like a two player
+oh okay so you throw the dice you move pieces
+
+00:17:58.559 --> 00:18:04.761
+around and you take them off the board right,
+so it's a fairly easy game but then you have
+
+00:18:04.761 --> 00:18:09.230
+all kinds of strategies that you could do
+with it but it's also a hard game for computers
+
+00:18:09.230 --> 00:18:16.039
+to play because of the stochasticity right
+and also because of a large branching factor
+
+00:18:16.039 --> 00:18:20.419
+that is that in the game, so a teach point
+there are many combinations in which you could
+
+00:18:20.419 --> 00:18:26.620
+move the board pieces around and then there
+is die role that adds an additional complexity.
+
+00:18:26.620 --> 00:18:31.250
+So people are not really you know getting
+great results and then there's this person
+
+00:18:31.250 --> 00:18:39.860
+Jerry tesaro from IBM who came up with something
+called neuro gammon thing was called neuro
+
+00:18:39.860 --> 00:18:48.159
+gammon and that was trained using supervised
+learning and the neural network and, so if
+
+00:18:48.159 --> 00:18:54.210
+it had if he had done it recently it would
+have been called a deep learning version of
+
+00:18:54.210 --> 00:18:58.990
+neuro gamma or something because he did it
+back in the 90s early 90s it was just called
+
+00:18:58.990 --> 00:19:05.529
+neural network question of backgammon and
+I played really well for a computer program
+
+00:19:05.529 --> 00:19:10.350
+right so it was essentially the best computer
+program backgammon player at that point.
+
+00:19:10.350 --> 00:19:16.980
+And then Jerry heard about TDI we heard about
+reinforcement learning he decided to train
+
+00:19:16.980 --> 00:19:25.760
+a reinforcement learning agent to play backgammon
+so what he did was set up this reinforcement
+
+00:19:25.760 --> 00:19:31.929
+learning agent which played against another
+copy of itself, let them play hundreds and
+
+00:19:31.929 --> 00:19:37.179
+hundreds of games rather thousands and thousands
+of games so essentially what they did was
+
+00:19:37.179 --> 00:19:44.059
+so you train one copy for like 100 games or
+something then you move it here right freeze
+
+00:19:44.059 --> 00:19:45.880
+it and then continue learning with this.
+
+00:19:45.880 --> 00:19:50.279
+So essentially what was happening as you learn
+you are playing against better and better
+
+00:19:50.279 --> 00:19:53.090
+place gradually your opponent was also improving
+right.
+
+00:19:53.090 --> 00:19:59.700
+And then so this was called self play right,
+so he trained the backgammon using self play
+
+00:19:59.700 --> 00:20:07.110
+and he came to a point where they TD gammon
+as he called it was even better than the human
+
+00:20:07.110 --> 00:20:11.750
+player of backgammon at that point in the
+world right so they actually had head-to-head
+
+00:20:11.750 --> 00:20:16.820
+the challenge with the human champion that
+is a world championship of backgammon you
+
+00:20:16.820 --> 00:20:20.890
+know it's apparently very popular in the Middle
+East and people actually have World Championships
+
+00:20:20.890 --> 00:20:27.460
+that's the world championship of backgammon
+and so, he challenged the human champion which
+
+00:20:27.460 --> 00:20:32.529
+IBM seems to do a lot right i mean they challenged
+a caspero matches and things like this so,
+
+00:20:32.529 --> 00:20:36.519
+he also challenged just this out of work for
+IBM.
+
+00:20:36.519 --> 00:20:40.429
+You should realize right people who spend
+a lot of resources getting computers to play
+
+00:20:40.429 --> 00:20:48.080
+games, I will probably be working for IBM
+so, Jerry had this thing and it beat the world
+
+00:20:48.080 --> 00:20:52.720
+champion so we have reinforcement learning
+agent that's the best backgammon player in
+
+00:20:52.720 --> 00:20:57.889
+the world not no more best computer player
+or anything right so we could actually make
+
+00:20:57.889 --> 00:21:04.730
+that game right and there's another game that
+this is a snapshot from the game of Go right
+
+00:21:04.730 --> 00:21:18.140
+so people have let go, oh come on if that
+leaves one or two people who have played go
+
+00:21:18.140 --> 00:21:29.741
+okay, people have played the hotel oh okay
+that's not a very few number isn't it one
+
+00:21:29.741 --> 00:21:38.590
+of those free games on ubuntu I thought everybody
+plays that because I mean at some point or
+
+00:21:38.590 --> 00:21:43.210
+other well you would rather play Othello then
+watch paint dry you know.
+
+00:21:43.210 --> 00:21:49.940
+But anyway it goes a like a more complex version
+of Othello few with right it's again a very
+
+00:21:49.940 --> 00:21:56.290
+hard game for computers to play because the
+branching factor is huge right and it is actually
+
+00:21:56.290 --> 00:22:01.580
+a miracle that humans even play this because
+the search trees and other things that's really
+
+00:22:01.580 --> 00:22:07.420
+complex right so this is 11 case which clearly
+illustrates that humans actually solve problems
+
+00:22:07.420 --> 00:22:11.390
+in a fundamentally different way then we try
+to write down in our algorithms because, they
+
+00:22:11.390 --> 00:22:16.070
+seem to be making all kinds of intuitive leaps
+in order to be able to play go right.
+
+00:22:16.070 --> 00:22:22.690
+So there's this person David silver who currently
+works for Google deep mind and but before
+
+00:22:22.690 --> 00:22:28.740
+that he spent some time with Jerry tesoro
+at IBM and at some point along the way he
+
+00:22:28.740 --> 00:22:34.789
+came up with this reinforcement learning agent
+called the TD search that place go at a decent
+
+00:22:34.789 --> 00:22:40.610
+level still not, not like master human level
+performance but it performs plays at a pretty
+
+00:22:40.610 --> 00:22:45.650
+decent level ok so he what I'm pointing out
+here is things that are typically hard for
+
+00:22:45.650 --> 00:22:50.289
+traditional computer algorithms or even traditional
+machine learning approaches to solve a as
+
+00:22:50.289 --> 00:22:52.779
+had good success right.
+
+00:22:52.779 --> 00:22:57.880
+And here is another example of them to point
+emphasis this or that I forget which one right,
+
+00:22:57.880 --> 00:23:03.460
+they told me I should use only one of those
+screens for pointing because it's hard for
+
+00:23:03.460 --> 00:23:12.879
+them to record on the other one I forget which
+one okay, forget it there are some robots
+
+00:23:12.879 --> 00:23:21.830
+on the bottom left of the screen right and
+so that is a snapshot from the UT Austin Robo
+
+00:23:21.830 --> 00:23:30.289
+soccer team called Austin Villa right, and
+they usually first we're learning to get their
+
+00:23:30.289 --> 00:23:36.289
+robots to execute really complex strategies
+so this is really cool.
+
+00:23:36.289 --> 00:23:41.919
+But the nice thing about the Robo socket application
+is that they don't use reinforcement learning
+
+00:23:41.919 --> 00:23:48.750
+alone right they actually use a mix of different
+learning strategies and also planning and
+
+00:23:48.750 --> 00:23:53.690
+so on so forth, which is going on the other
+studio right so they use a mix of different
+
+00:23:53.690 --> 00:23:58.120
+kinds of AI and machine learning techniques
+in order to get a very very competent agent
+
+00:23:58.120 --> 00:24:03.559
+is very hard to beat and they I mean the Champions
+I think two or three years running now in
+
+00:24:03.559 --> 00:24:05.340
+the humanoid league right.
+
+00:24:05.340 --> 00:24:11.549
+And again hard control problems things like
+how do I take a spot-kick, you know those
+
+00:24:11.549 --> 00:24:15.379
+were the things for which they used reinforcement
+learning which is a really hard balancing
+
+00:24:15.379 --> 00:24:18.779
+products we basically have to balance the
+robot on one leg and then swing the other
+
+00:24:18.779 --> 00:24:23.650
+leg so that you can take the kick and it turns
+out to be a hard control problem right.
+
+00:24:23.650 --> 00:24:34.159
+So they used RL to order to solve those right
+and then up on the top right ok is an application
+
+00:24:34.159 --> 00:24:40.340
+which will probably the one that actually
+makes money of all these three all the others
+
+00:24:40.340 --> 00:24:51.140
+right that is on essentially on using read
+first learning to solve online learning right.
+
+00:24:51.140 --> 00:24:57.870
+So online learning is a use case where I do
+not get I don't have the feedback available
+
+00:24:57.870 --> 00:25:04.860
+to me a priori right, so the feedback keeps
+coming piecemeal right so for example that
+
+00:25:04.860 --> 00:25:11.210
+is a case where we are having new stories
+that need to be shown to people that come
+
+00:25:11.210 --> 00:25:17.230
+to me webpage right, and when people come
+to the page I will have like some editors
+
+00:25:17.230 --> 00:25:21.429
+will pick like 20 stories for mean d from
+those 20 stories i have to figure out which
+
+00:25:21.429 --> 00:25:29.120
+are the ones i put up there prominent and
+what is the feedback i am going again.
+
+00:25:29.120 --> 00:25:33.110
+Nobody tells me what stories that user is
+going to like I mean then I cannot have a
+
+00:25:33.110 --> 00:25:35.399
+supervised learning algorithm here right.
+
+00:25:35.399 --> 00:25:38.490
+So the feedback I am going to get this if
+the user clicks on the story i am going to
+
+00:25:38.490 --> 00:25:45.230
+get a reward the user does not click on the
+story I will not get a reward that's, essentially
+
+00:25:45.230 --> 00:25:48.399
+the feedback i am going to get nobody tells
+me anything beforehand.
+
+00:25:48.399 --> 00:25:52.740
+So i have to try out things i have to show
+different stories to figure out which one
+
+00:25:52.740 --> 00:25:58.460
+is going to click on and i have very few attempts
+to do this in so how do I do this more effectively
+
+00:25:58.460 --> 00:26:06.370
+so, people have done a supervisor approach
+for solving this and it has worked fairly
+
+00:26:06.370 --> 00:26:07.570
+successfully.
+
+00:26:07.570 --> 00:26:18.159
+So it has worked fairly successfully but what
+reinforcement seems to be a much more in a
+
+00:26:18.159 --> 00:26:20.059
+natural way of modeling these problems.
+
+00:26:20.059 --> 00:26:24.460
+So not only in these kinds of a new story
+selection people use reinforcement ending
+
+00:26:24.460 --> 00:26:29.320
+ideas even in ad selection right, so how do
+I see some of those ads that you see on the
+
+00:26:29.320 --> 00:26:35.080
+sides when you go to Google or some other
+page right so how are those ads selected so,
+
+00:26:35.080 --> 00:26:41.409
+so there might be some very basic economic
+criterion for selecting a slate of ads okay,
+
+00:26:41.409 --> 00:26:47.419
+here are these 10 ads which would probably
+give me the right payoff right and then you
+
+00:26:47.419 --> 00:26:51.990
+can figure out which of those which three
+of those 10am I going to put here and things
+
+00:26:51.990 --> 00:26:57.840
+like that you could use a reinforcement learning
+solution for selecting those right.
+
+00:26:57.840 --> 00:26:58.840
+.
+.
+
+00:26:58.840 --> 00:27:02.070
+Of course the this is this whole field called
+computational advertising right, it is a lot
+
+00:27:02.070 --> 00:27:08.259
+more complex than what I explained but RL
+is a component in computational brutalizing
+
+00:27:08.259 --> 00:27:09.759
+as well right.
+
+00:27:09.759 --> 00:27:43.200
+okay here is the video courtesy Andrews webpage
+the people recognized again there huh, okay
+
+00:27:43.200 --> 00:28:03.259
+which is not a human-sized helicopter but
+still it is a fairly large amazing all of
+
+00:28:03.259 --> 00:28:24.380
+this is being done by a aural agent this goes
+on for a while we stop.
+

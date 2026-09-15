@@ -1,0 +1,887 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:08.940 --> 00:04:39.949
+Okay, good took a while to write so essentially
+what we do is we start off with k arms right
+
+00:04:39.949 --> 00:04:45.900
+and then in the first round okay so median
+elimination is going to proceed in rounds
+
+00:04:45.900 --> 00:04:52.949
+okay. In the first round we pull each arm
+some number of times right determined by this
+
+00:04:52.949 --> 00:05:00.150
+magic quantity. So can people read this magic
+quantity it is 1 by ?L/2 the whole square
+
+00:05:00.150 --> 00:05:27.470
+better log 3 by ?L okay.
+So I pull each arm that many number of times
+
+00:05:27.470 --> 00:05:35.000
+okay and then I estimate their empirical value
+right QLA I will estimate it where L indicates
+
+00:05:35.000 --> 00:05:41.780
+that this is the Q function I am forming at
+the LF stage okay. Then what I do is I take
+
+00:05:41.780 --> 00:05:49.520
+these QLA arrange them in ascending, descending
+whatever order I find the median of all these
+
+00:05:49.520 --> 00:06:01.650
+arms. And then eliminate all those arms whose
+values is below the median right I am eliminating.
+
+00:06:01.650 --> 00:06:06.430
+So this is the set different so I take my
+current set SL that these are all the arms
+
+00:06:06.430 --> 00:06:11.240
+that are under consideration.
+So S1 will be all the arms and then I am eliminating
+
+00:06:11.240 --> 00:06:18.580
+all those arms such that so my QLA is less
+than ml where ml is the median at the Lth
+
+00:06:18.580 --> 00:06:26.990
+level right. And then I change my constants
+by magic amounts again. So my ?L + 1 becomes
+
+00:06:26.990 --> 00:06:32.020
+three-fourths of ?L, ?L itself started as
+?/4 okay.
+
+00:06:32.020 --> 00:06:42.090
+Now it becomes 3/4 of ?/4 and my ?L+1 becomes
+?L/2 which already started as ?/2 so it becomes
+
+00:06:42.090 --> 00:06:53.460
+?/4, and L=L+1 and I keep going until my SL
+becomes 1, the number of arms left becomes
+
+00:06:53.460 --> 00:07:05.560
+one right. So how many rounds will I go block
+k rounds because every time I am eliminating
+
+00:07:05.560 --> 00:07:09.500
+the half the arms right, because I am looking
+at the median and I am eliminating everything
+
+00:07:09.500 --> 00:07:12.710
+below the median.
+So I am guaranteed eliminate half the arms
+
+00:07:12.710 --> 00:07:19.910
+in every round, so I will end in lock K rounds
+okay. But the trick to provide proving any
+
+00:07:19.910 --> 00:07:25.430
+kind of sample complexity here is to show
+that okay, this quantity right when I sum
+
+00:07:25.430 --> 00:07:31.850
+it over this log K rounds is some bounded
+quantity right and that gives me the sample
+
+00:07:31.850 --> 00:07:34.250
+complexity round.
+I have already told you what the sample complexity
+
+00:07:34.250 --> 00:07:45.960
+is going to be, what was it k by ?2log 1/?
+some constant by ? so as far as order notations
+
+00:07:45.960 --> 00:07:50.110
+we can ignore the constant so log 1/?. So
+that is what this is going to be the sample
+
+00:07:50.110 --> 00:07:57.270
+complexity, so I will have to show you that
+first. Second in fact first I will have to
+
+00:07:57.270 --> 00:08:02.990
+show you that this is actually a pack algorithm
+right, that it actually gives you a ? optimal
+
+00:08:02.990 --> 00:08:07.710
+armed with a high probability right.
+It becomes a little tricky here, because I
+
+00:08:07.710 --> 00:08:10.960
+am eliminating half the arms every times.
+So now I will have to think about what is
+
+00:08:10.960 --> 00:08:20.010
+the probability that I have eliminated all
+the ? optimal arms right. So I have to, in
+
+00:08:20.010 --> 00:08:25.060
+some round along the way before I reach the
+final round okay I should not eliminate all
+
+00:08:25.060 --> 00:08:30.430
+the ? optimal arms right.
+So what we will do is we will see the trick,
+
+00:08:30.430 --> 00:08:35.029
+because at the end of the thing is that one
+arm left is some ? optimal arm and safe and
+
+00:08:35.029 --> 00:08:41.640
+that is along the way if I eliminate all the
+? optimal arms then I am in trouble. So what
+
+00:08:41.640 --> 00:08:48.750
+I will do now is to show that at every round
+the probability of me doing that is very small.
+
+00:08:48.750 --> 00:08:52.910
+So small that when you add up the probability
+of me eliminating across all the rounds it
+
+00:08:52.910 --> 00:08:59.940
+is still below ? still below ? so that is
+essentially what I am going to try and show
+
+00:08:59.940 --> 00:09:06.750
+did that make sense. So the every round the
+probability of me eliminating all the ? optimal
+
+00:09:06.750 --> 00:09:12.310
+arms is small, so small that when I add it
+up across all the rounds it is still less
+
+00:09:12.310 --> 00:09:26.300
+than ? okay. So that is essentially what I
+am going to what I mean to show.
+
+00:09:26.300 --> 00:09:29.330
+.
+Okay so first theorem that I will state it,
+
+00:09:29.330 --> 00:09:38.100
+but I will come back and prove this later
+is 
+
+00:09:38.100 --> 00:10:25.350
+the median elimination algorithm with takes
+??, this is ?? pack okay. So we will prove
+
+00:10:25.350 --> 00:10:49.750
+this in two parts the first lambda will help
+us establish that okay, and then we will have
+
+00:10:49.750 --> 00:10:53.220
+another result later that will help us establish
+the sample complex.
+
+00:10:53.220 --> 00:11:00.300
+Sample complex is actually trivial and if
+you think about it, it is essentially summing
+
+00:11:00.300 --> 00:11:08.670
+this quantity up right starting from ?/4 and
+?/2 and successively changing the value of
+
+00:11:08.670 --> 00:11:14.670
+? and ? okay. It is just a bunch of algebra
+race is just move numbers around and simplify
+
+00:11:14.670 --> 00:11:18.310
+things you will get it conceptually there
+is nothing deep about looking at the sample
+
+00:11:18.310 --> 00:11:25.230
+complexity. So I said yeah, so I essentially
+have to sum up this quantity right for every
+
+00:11:25.230 --> 00:11:28.200
+arm.
+So this will be multiplied by the size of
+
+00:11:28.200 --> 00:11:33.420
+the arms which will be, which will start with
+k and then it will become k/2, k/4 successively
+
+00:11:33.420 --> 00:11:39.019
+becomes smaller and smaller and likewise the
+? and my ? also becomes smaller and smaller.
+
+00:11:39.019 --> 00:11:48.660
+So the idea is just to submit over L this
+quantity and then replace this by a function
+
+00:11:48.660 --> 00:11:55.300
+of ? and L. I think we can replace ?L right
+by a function of ?.
+
+00:11:55.300 --> 00:12:13.130
+So what is ? 1 is ?/4 what is ?2 3/4?/2?/4
+?3 is (3/4)2 so ?L is essentially (¾)L-1x
+
+00:12:13.130 --> 00:12:19.060
+?/4. So like that so you can write this as
+a similar expression for ? and we can essentially
+
+00:12:19.060 --> 00:12:24.680
+simplify right. So that part is fairly straightforward
+so if you have time I will just give you an
+
+00:12:24.680 --> 00:12:27.740
+intuition to them otherwise you can work it
+out easily.
+
+00:12:27.740 --> 00:12:34.200
+Now the first part is one that requires some
+work right. So this is what we will do for
+
+00:12:34.200 --> 00:13:48.220
+every phase L in the median elimination algorithm
+we have the probability. So this requires
+
+00:13:48.220 --> 00:13:58.279
+a little bit of thought, so what I am saying
+so what is this, this is the two best arm
+
+00:13:58.279 --> 00:14:08.279
+at level L right. So at level 1 I would expect
+this to be A* right.
+
+00:14:08.279 --> 00:14:13.980
+So and the true best arm I am not talking
+about the Q right I am talking about Q* here,
+
+00:14:13.980 --> 00:14:19.519
+so I am talking about the true best arm right.
+So in this case I would expect the true this
+
+00:14:19.519 --> 00:14:24.210
+this should be Q* A* right in level 1, but
+in level two itself it could be something
+
+00:14:24.210 --> 00:14:30.120
+different because I might have lost A* in
+the first round itself right.
+
+00:14:30.120 --> 00:14:38.050
+What I am saying is okay this is the best
+I could have done in the Lth round right potentially
+
+00:14:38.050 --> 00:14:47.980
+right, and what is this, this is the best
+I could have done in the L+1th round right.
+
+00:14:47.980 --> 00:14:54.450
+So the bad cases when this is less than that,
+and that means I have eliminated some high-ranking
+
+00:14:54.450 --> 00:14:57.920
+arms well all I have left or low ranking arms
+right.
+
+00:14:57.920 --> 00:15:03.339
+So the bad cases when this quantity is less
+than that quantity right but how much it should
+
+00:15:03.339 --> 00:15:08.899
+be less right, that is a question we are asking
+here. So if I add an ? to this so essentially
+
+00:15:08.899 --> 00:15:20.779
+I have my, and let us call this J* right that
+is a maximum in the Lth level. So I have my
+
+00:15:20.779 --> 00:15:36.459
+Q* J* here and I have my Q* I* here which
+is the K that gives me the max here right.
+
+00:15:36.459 --> 00:15:49.569
+If I add an ? to this if I add an ? to this
+and this is within that that means this is
+
+00:15:49.569 --> 00:15:57.870
+? optimal when you can consider against that
+right, do you see that if an add an ? to this
+
+00:15:57.870 --> 00:16:03.440
+lower value and the higher value is actually
+less than that then it is an acceptable situation,
+
+00:16:03.440 --> 00:16:13.029
+because the lower value is within ? of the
+higher value correct, so this is a good outcome.
+
+00:16:13.029 --> 00:16:19.300
+So I am saying the probability of the good
+outcome is at least 1-? that means the probability
+
+00:16:19.300 --> 00:16:26.339
+is high okay, do that makes sense the probability
+of the good outcome is at least 1-? okay.
+
+00:16:26.339 --> 00:16:34.519
+Now the thing to notice here is this is not
+truly ? this ?L right and this is not ? this
+
+00:16:34.519 --> 00:16:41.990
+is ?L, so why is that the case because every
+round will lose ?L right at most ?L right.
+
+00:16:41.990 --> 00:16:48.890
+So at the end of the day I should not have
+lost more than ? right. So what I am going
+
+00:16:48.890 --> 00:16:54.519
+to show you is that every round I will lose
+?L and my ?L is chosen such that even if you
+
+00:16:54.519 --> 00:17:02.600
+lose the ?L for every L overall loss will
+be ? right. So that because we know that when
+
+00:17:02.600 --> 00:17:09.789
+the S, in S1 the best number is A* right.
+And if you overall loss is less than ? then
+
+00:17:09.789 --> 00:17:15.289
+at the end of this I will have at least 1?
+optimal on left okay, so that is basically
+
+00:17:15.289 --> 00:17:19.679
+what we are trying to show here. So this relation
+makes sense why we are trying to show this
+
+00:17:19.679 --> 00:17:26.399
+okay. And likewise this 1-?L is there because
+at the end of the day if all the events hold
+
+00:17:26.399 --> 00:17:29.929
+true also my probability must be at least
+1-? right.
+
+00:17:29.929 --> 00:17:37.470
+Therefore, we use ?L and that is the reason
+your ?1s and ?1s are already smaller than
+
+00:17:37.470 --> 00:18:02.450
+? and ?, because if I start off with ? here
+and ? here I am gone okay. So third one w
+
+00:18:02.450 --> 00:18:10.190
+log means ray without loss of generality I
+am going to consider L=1 right. So whatever
+
+00:18:10.190 --> 00:18:31.370
+results I show here will will hold for the
+subsequent L right.
+
+00:18:31.370 --> 00:18:59.340
+So we start off by looking at the first, the
+event E1 which is first thing I am looking
+
+00:18:59.340 --> 00:19:07.139
+at it I am grossly under estimating the true
+value right. I mean this should now start
+
+00:19:07.139 --> 00:19:11.919
+looking familiar to you, because in everything
+we have been doing the same thing we start
+
+00:19:11.919 --> 00:19:17.399
+off by say okay, first thing that has to go
+wrong is I grossly underestimate the true
+
+00:19:17.399 --> 00:19:20.270
+optimal actions value.
+And then we will think about okay what happens
+
+00:19:20.270 --> 00:19:24.190
+if I overestimate the sub optimal actions
+value but I start off by say okay grossly
+
+00:19:24.190 --> 00:19:42.859
+underestimate this right. So what is the probability
+of this, now we already have our magic number
+
+00:19:42.859 --> 00:19:52.649
+here, so substitute everything 
+so you have the expression here right and
+
+00:19:52.649 --> 00:20:11.260
+we have the magic number there.
+That this K will get cancelled out, again
+
+00:20:11.260 --> 00:20:25.590
+we have a four problem there so well the square
+should be outside I am just writing it down
+
+00:20:25.590 --> 00:20:43.009
+from the algorithm here, so their results
+are wrong right. So it should be ?L2/2 ?(L/2)2
+
+00:20:43.009 --> 00:20:51.129
+this is a one-sided bound. So the outside
+2 will not be there, right so everything will
+
+00:20:51.129 --> 00:21:27.049
+simplify and you will get ?1/?3 right.
+This is the first E1 suppose it does not hold
+
+00:21:27.049 --> 00:21:32.239
+okay, suppose E1 does not know that it essentially
+I have not made a bad mistake under estimating
+
+00:21:32.239 --> 00:21:42.019
+the best arm right. And since it is maybe
+I should have done it slightly differently
+
+00:21:42.019 --> 00:21:48.359
+I have said without loss of generality consider
+L=1, but then I put an A* here which actually
+
+00:21:48.359 --> 00:21:52.710
+violates the without loss of generality part
+okay.
+
+00:21:52.710 --> 00:21:59.970
+So the A* here is actually the best arm left
+at level L that is how we should think of
+
+00:21:59.970 --> 00:22:04.940
+it, it is not the overall based arm, whatever
+be the level L it is a best arm left at level
+
+00:22:04.940 --> 00:22:12.220
+L and for L=1 it happens to be A* the true
+A* right for L=3 and 4 this will essentially
+
+00:22:12.220 --> 00:22:20.879
+become the best arm at that level.
+So I will just put a L there so that you know
+
+00:22:20.879 --> 00:22:27.379
+what I mean okay. This is the best arm in
+the Lth level that is left among all the arms
+
+00:22:27.379 --> 00:22:55.119
+that is left true best arm in the Lth level
+okay. So next I am going to look at the probability
+
+00:22:55.119 --> 00:23:44.309
+that as well as translation skill this one,
+I should put the 2 in the numerator what do
+
+00:23:44.309 --> 00:24:19.729
+you need for it to cancel out.
+?1/2 so ?1/4 no yeah, so this is ?/2 so substitute
+
+00:24:19.729 --> 00:24:41.219
+that like an ?2/4 ?2 will become ½ so that
+is 1/?2/2 so I will get that is all fine okay
+
+00:24:41.219 --> 00:25:12.469
+good. So I am going to look at this problem
+right, so sorry not this, so E1 does not hold
+
+00:25:12.469 --> 00:25:18.929
+that means that this is kept to right. So
+even if E1 where I have underestimated it
+
+00:25:18.929 --> 00:25:23.269
+so I am saying E1 does not hold that means
+that there is no longer an underestimate.
+
+00:25:23.269 --> 00:25:28.919
+So this is my estimate is within ?/2 right,
+but then I am looking at the possibility that
+
+00:25:28.919 --> 00:25:49.210
+yeah, so with my some Jth arm which is not
+?1 optimal right. So that is a condition no,
+
+00:25:49.210 --> 00:26:10.340
+this shows I know that current estimate in
+the electron I am going to decide about eliminating
+
+00:26:10.340 --> 00:26:15.720
+the electron right in the current round I
+am not underestimated my A*L okay.
+
+00:26:15.720 --> 00:26:22.590
+So which I am within the ? of that, within
+?1/2 of the 2A* value right, but then I take
+
+00:26:22.590 --> 00:26:30.659
+some other arm J which is a bad arm, bad in
+the sense J is not ?L close to A* it is a
+
+00:26:30.659 --> 00:26:36.230
+bad arm right. And I figure out what is the
+probability that the Q estimate for that arm
+
+00:26:36.230 --> 00:26:42.019
+will be greater than the Q estimate for the
+A* right.
+
+00:26:42.019 --> 00:26:47.720
+So if this happens right, then there is a
+chance that A* will get eliminated only a
+
+00:26:47.720 --> 00:26:56.849
+chance right, it has to be in the lower half
+not just get bitten by one J but it has to
+
+00:26:56.849 --> 00:27:08.219
+be in the lower half of the arms right. So
+I need at least k/2 or whatever the size of
+
+00:27:08.219 --> 00:27:19.279
+SK SL/2 bad arms to beat me correct, for me
+to eliminate this arm.
+
+00:27:19.279 --> 00:27:23.759
+And I need at least half of the arms to beat
+me not just one arm right, but before we go
+
+00:27:23.759 --> 00:27:37.809
+to that part, so what is the probability of
+this happening. Well so this conditioning
+
+00:27:37.809 --> 00:27:48.049
+tells us that QLA* is not too bad right. So
+what does that mean QLJ has to be more than
+
+00:27:48.049 --> 00:27:55.609
+?/2 so we remember that figure we do right.
+So either this has to be under estimate was
+
+00:27:55.609 --> 00:28:00.840
+if I would erase the figure, but either the
+A* has to be underestimated by more than ?/2
+
+00:28:00.840 --> 00:28:08.080
+or the A’ has to be over estimated by more
+than ?/2 right, here we are conditioning it
+
+00:28:08.080 --> 00:28:15.940
+on the E1 that A* is not underestimated by
+more than ?/2. Therefore, J has to be over
+
+00:28:15.940 --> 00:28:21.619
+estimated by more than ?/2.
+Since this event we have conditioned it as
+
+00:28:21.619 --> 00:28:43.059
+false, so that even has to be true okay. So
+what do we get in that case same thing here,
+
+00:28:43.059 --> 00:28:52.820
+so kind of skipping a step here but people
+are all fine with that right, I am skipping,
+
+00:28:52.820 --> 00:28:59.039
+rewriting this bond right. So essentially
+you will have to now replace this with over
+
+00:28:59.039 --> 00:29:07.330
+estimating by ?/2 right. In fact I should
+probably just make you write that missing
+
+00:29:07.330 --> 00:29:13.109
+step as a homework.
+So that I am sure that people are all comfortable
+
+00:29:13.109 --> 00:29:16.990
+with the notation nothing more the notation
+can get really complex, otherwise the concepts
+
+00:29:16.990 --> 00:29:21.950
+are very simple, that is I am taking so much
+time talking over it and if I could just write
+
+00:29:21.950 --> 00:29:28.320
+the proof and leave it at that because it
+is fairly easy, these things are fairly easy.
+
+00:29:28.320 --> 00:29:51.649
+So this is for one arm right and like this
+I have k arms right, so the probability good.
+
+00:29:51.649 --> 00:29:55.639
+.
+So let now use the same symbols here, I do
+
+00:29:55.639 --> 00:30:05.999
+not agree with let # bad be the number of
+bad arms okay, # bad be the number of bad
+
+00:30:05.999 --> 00:30:18.240
+arms such that this this condition holds later
+# bad be the number of bad arms such that,
+
+00:30:18.240 --> 00:31:20.929
+that condition holds. So these are the number
+of bad arms that are beating the best arm.
+
+00:31:20.929 --> 00:31:51.331
+So you have this expectation be mod L/2 yeah,
+not really but I agree with the mod SL part
+
+00:31:51.331 --> 00:32:01.209
+but not SL/2 I have a probability for that
+happening right. And how many such experiments
+
+00:32:01.209 --> 00:32:07.049
+I actually mod SL-1 right potentially everything
+other than the best arm could be a bad arm
+
+00:32:07.049 --> 00:32:20.200
+with maximum thing is SL-1 right.
+And so it is a cell -1?1/3, so that is the
+
+00:32:20.200 --> 00:32:26.820
+probability of one arm being bad and one arm
+actually for which this first relation poles
+
+00:32:26.820 --> 00:32:33.419
+for one bad arm and there are SL-1 I am just
+making it SLl to make our life easier. So
+
+00:32:33.419 --> 00:32:44.049
+SL such bad arms so the expected number of
+bad arms will be SLx?1/3. Now I want to look
+
+00:32:44.049 --> 00:33:19.399
+at the probability that # bad 
+
+00:33:19.399 --> 00:33:30.279
+this is why we are going to use the Markov
+inequality right.
+
+00:33:30.279 --> 00:33:34.149
+So I have already written the expectation
+here, so I am asking you the probability of
+
+00:33:34.149 --> 00:33:41.469
+X greater than equal to A is the expected
+value of X divided by A right, so this is
+
+00:33:41.469 --> 00:34:12.060
+less than or equal to the expected value which
+is divided by A okay. So what have you shown
+
+00:34:12.060 --> 00:34:21.220
+there is that if E1 does not hold if I am
+good in my estimate for the best arm okay,
+
+00:34:21.220 --> 00:34:29.210
+the probability that half the I mean, so many
+bad arms will beat me is bounded by 2?1/3
+
+00:34:29.210 --> 00:34:34.339
+right.
+But I am also considering E1 as a bad event
+
+00:34:34.339 --> 00:34:39.950
+that E1 is also bad because my estimate for
+the best arm is really bad you know. So all
+
+00:34:39.950 --> 00:34:44.769
+bets are off in some sense that because I
+do not really, I cannot really identify my
+
+00:34:44.769 --> 00:34:51.500
+best term because it is so bad right, so all
+bets are off so E1 is also bad event that
+
+00:34:51.500 --> 00:34:55.619
+all of this is bad and E1 is also bad.
+So what is the total probability of something
+
+00:34:55.619 --> 00:35:08.569
+bad happening the two together, but they are
+you sticking in if you want to use a fancy
+
+00:35:08.569 --> 00:35:14.549
+term we use the Union bound and then we say
+the probability of something bad happening
+
+00:35:14.549 --> 00:35:29.030
+is bounded by ?1 right. So this bad is ?1/3,
+that bad is 2?1/3 and this is actually the
+
+00:35:29.030 --> 00:35:34.569
+complementary event of E1 in fact I can just
+add the probabilities, I do not really need
+
+00:35:34.569 --> 00:35:37.010
+the Union bound.
+So the total probability of something of bad
+
+00:35:37.010 --> 00:35:43.790
+happening is ?1 right. So that is essentially
+what we are started off by saying here. So
+
+00:35:43.790 --> 00:35:50.119
+the probability of good is 1-? now we have
+shown that the probability of bad is ?L, so
+
+00:35:50.119 --> 00:36:05.900
+the probability of good is 1-? okay. So one
+of the nice things about the median elimination
+
+00:36:05.900 --> 00:36:10.780
+algorithm is that it was one of the earliest
+papers to introduce this kind of a round based
+
+00:36:10.780 --> 00:36:18.309
+algorithms to the bounded literature right.
+Now a lot of later improvements on both regret
+
+00:36:18.309 --> 00:36:25.230
+based case and people trying to play around
+with the the pack guarantees all switch to
+
+00:36:25.230 --> 00:36:30.390
+some kind of round based ideas, you know so
+you do a certain number of pulls and then
+
+00:36:30.390 --> 00:36:35.089
+you eliminate a certain number of arms right,
+and then go back and pull the remaining arm
+
+00:36:35.089 --> 00:36:39.579
+some more and then eliminate some more arms.
+So this kind of a round based elimination
+
+00:36:39.579 --> 00:36:45.240
+methods have become very popular in the Pandit
+literature and the meeting our nation is one
+
+00:36:45.240 --> 00:36:50.260
+of the earliest such round based elimination
+approaches then after this is became very
+
+00:36:50.260 --> 00:36:54.309
+popular and a lot of papers started being
+written using this kind of a round based idea
+
+00:36:54.309 --> 00:36:58.289
+right.
+So we have so far what we have shown is that
+
+00:36:58.289 --> 00:37:14.900
+it is have you shown that it is back what
+is it that is fine I mean that I have already
+
+00:37:14.900 --> 00:37:21.060
+spoken about this lambda is taken as proved
+right, this lambda is taken as prove, so you
+
+00:37:21.060 --> 00:37:27.099
+have to still use the Union bound for every
+round that I am eliminating right, so what
+
+00:37:27.099 --> 00:37:36.789
+we have to show is well I have all these ?s
+right, so we have to keep adding them up to
+
+00:37:36.789 --> 00:37:47.779
+make sure that eventually you are less than
+overall you are less than ? right.
+
+00:37:47.779 --> 00:37:59.710
+So every round the probability of failure
+is bounded by ?1 right so for the K rounds
+
+00:37:59.710 --> 00:38:05.539
+the probability of failure is I mean whatever
+the log K rounds the probability of failure
+
+00:38:05.539 --> 00:38:16.650
+is bounded by summing it up. So ?2 ?/2, ?/4,
+?/8 and so on so forth until you reach 1 right,
+
+00:38:16.650 --> 00:38:23.940
+so that is the summation and not until you
+reach log K rounds.
+
+00:38:23.940 --> 00:38:37.130
+So it will get ?/2logk okay, and the summation
+of log will go to ? it is essentially ?x1/2
+
+00:38:37.130 --> 00:38:44.230
++one-fourth +one-eighth right if there is
+some runs to infinity you will get one, but
+
+00:38:44.230 --> 00:38:47.500
+the sum is not running to infinity it stops
+at some finite time, so it will be less than
+
+00:38:47.500 --> 00:38:50.910
+1, so the summation will be less than ? proved
+right.
+
+00:38:50.910 --> 00:38:56.069
+So some probability of something bad happening
+will be less than ?. So likewise you can show
+
+00:38:56.069 --> 00:39:05.190
+these same things for the ? right, so at every
+level you drop utmost by ?L right. So the
+
+00:39:05.190 --> 00:39:14.910
+total you would have dropped this ?/4+ so
+it is essentially one-fourth plus what is
+
+00:39:14.910 --> 00:39:25.170
+it three-fourth into one or write ?/4x1+1
+fourth and so on so forth right.
+
+00:39:25.170 --> 00:39:38.019
+3/4L-1 yeah yeah that was also upper bounded
+by 1 if you run it to infinite note some and
+
+00:39:38.019 --> 00:39:42.150
+suppose wanted by 1 if I run the summation
+to infinity but you are stopping at some finite
+
+00:39:42.150 --> 00:39:47.660
+amount so it will be less than ? okay. So
+both of that are satisfied that is easy enough,
+
+00:39:47.660 --> 00:39:55.650
+the harder, the trickier part is to show the
+sample complexity right.
+
+00:39:55.650 --> 00:40:09.269
+It was not hard, it is just algebra can you
+let you guys do it or you want me to do the
+
+00:40:09.269 --> 00:40:17.490
+sample complexity part of the proof as well
+no is it depends yeah nobody say depends depends
+
+00:40:17.490 --> 00:40:28.430
+on what that is a paper keys are in the paper
+yeah it is there in the paper you can look
+
+00:40:28.430 --> 00:40:34.770
+at it. And so I will stop it here for the
+pack the pack complexity will come back to
+
+00:40:34.770 --> 00:40:38.569
+all of this regulator and pack and everything
+when we look at the full RL problem at some
+
+00:40:38.569 --> 00:40:41.449
+point. Now right now for the bandits we will
+stop here.
+

@@ -1,0 +1,989 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.750 --> 00:00:32.349
+Okay 
+
+00:00:32.349 --> 00:00:41.630
+so now we come to what I think it is in some
+sense these the soul of RL okay temporal difference
+
+00:00:41.630 --> 00:00:49.280
+methods right I think I think TD is very important
+semantic we can argue that RL is all about
+
+00:00:49.280 --> 00:00:53.860
+learning from samples learning to control
+dynamic compute complex system by just sampling
+
+00:00:53.860 --> 00:00:57.739
+from the system and soon so forth in which
+case like the Monte Carlo methods we talked
+
+00:00:57.739 --> 00:01:04.789
+about are also reinforcement learning methods
+right but for me what is really cool about
+
+00:01:04.789 --> 00:01:12.860
+RL is the whole idea of temporal difference
+okay to what do temporal difference methods
+
+00:01:12.860 --> 00:01:21.939
+are many ways we shake and motivate this did
+any of you hear me in cinema securities class
+
+00:01:21.939 --> 00:01:31.410
+last lecture you did what is event count variance
+you are securities less.
+
+00:01:31.410 --> 00:01:41.280
+Yeah there are you are notice you in the class
+you keep too quiet or maybe we did not show
+
+00:01:41.280 --> 00:01:48.299
+up that day you did okay anyway so there are
+only processor but he do not count now you
+
+00:01:48.299 --> 00:01:55.009
+are not taking the class for cadet are you
+know even car maybe so I motivated in a very
+
+00:01:55.009 --> 00:01:58.340
+different way temporal difference is I motivated
+in a very different way from a completely
+
+00:01:58.340 --> 00:02:04.399
+neuroscience or not even Euro sign is more
+like a behavioral psychology point of view
+
+00:02:04.399 --> 00:02:08.619
+okay so now I will do it purely from a computational
+point of view right.
+
+00:02:08.619 --> 00:02:18.980
+So let us start up so what did we do when
+we did the dynamic programming right so when
+
+00:02:18.980 --> 00:02:24.780
+we are thinking about what we did with dynamic
+programming you start with some state s right
+
+00:02:24.780 --> 00:02:32.670
+then you look at all possible outcomes if
+you look at all possible outcomes from that
+
+00:02:32.670 --> 00:02:41.319
+state right so what is so this is all possible
+let us say these are actions right so all
+
+00:02:41.319 --> 00:02:55.620
+possible actions I can take 
+and all possible outcomes from those actions
+
+00:02:55.620 --> 00:03:02.910
+right so what does this correspond to make
+my p SA right.
+
+00:03:02.910 --> 00:03:08.269
+So sum over A p SA so that is what this corresponds
+to and what does what does this thing's correspond
+
+00:03:08.269 --> 00:03:16.659
+to this month sum over S’ PS’ is given
+s, right so this is essentially what I did
+
+00:03:16.659 --> 00:03:22.020
+when a dynamic programming right so every
+time I did a backup I took the entire possible
+
+00:03:22.020 --> 00:03:30.530
+outcome right and it took looked at each one
+of the state's here I use the values of the
+
+00:03:30.530 --> 00:03:42.110
+phase and did that back up right I did a backup
+so this kind of backups are called 
+
+00:03:42.110 --> 00:03:49.330
+full backups right and it is also distinguished
+by the fact that I am using the values here
+
+00:03:49.330 --> 00:03:58.480
+right this is called 
+boot strapping I did a full backup and it
+
+00:03:58.480 --> 00:04:07.239
+did that using bootstrapping.
+Okay so next we looked at Monte Carlo method
+
+00:04:07.239 --> 00:04:13.439
+so what we do in 10 Carlo methods I started
+in the state took some action went to another
+
+00:04:13.439 --> 00:04:19.600
+state took some other action went to another
+state I did this till I reach the terminal
+
+00:04:19.600 --> 00:04:25.900
+state then I use the rewards along the entire
+trajectory and updated the value of that state
+
+00:04:25.900 --> 00:04:38.310
+right so what did I do here these are called
+sample backups because I did not take the
+
+00:04:38.310 --> 00:04:48.970
+full possible set of outcomes I just sampled
+an outcome okay it is sampled an outcome and
+
+00:04:48.970 --> 00:04:55.311
+I do not use any bootstrapping so I do not
+use the value of this state update the value
+
+00:04:55.311 --> 00:04:59.940
+of this state right of course.
+In the three such thing we are talking about
+
+00:04:59.940 --> 00:05:03.400
+we did use bootstrapping but now we are not
+using any bootstrapping the plain vanilla
+
+00:05:03.400 --> 00:05:19.360
+things you do not use any no bootstrapping
+correct so what do you think I can do next
+
+00:05:19.360 --> 00:05:45.860
+bootstrap and sample yeah so I can do sample
+backups with bootstrap now will be extreme
+
+00:05:45.860 --> 00:05:58.740
+that is what is one sample and I will bootstrap
+just like we did here one sample but you find
+
+00:05:58.740 --> 00:06:02.860
+all the way to the end we did no bootstrap
+so here what I will do I will start from some
+
+00:06:02.860 --> 00:06:08.880
+state I will take an action I look at the
+next outcome and use the value of the state
+
+00:06:08.880 --> 00:06:14.650
+to update the value of this state it in the
+full backup I do all of this and update there
+
+00:06:14.650 --> 00:06:18.500
+is no simulation also involved right I am
+just using all possible outcomes well here
+
+00:06:18.500 --> 00:06:21.750
+there is a simulation involved here there
+is a simulation involved but here is only
+
+00:06:21.750 --> 00:06:27.250
+a one-step simulation I just used the value
+of this state to back up.
+
+00:06:27.250 --> 00:06:32.870
+So such methods are called temporal difference
+methods why are they called temporal difference
+
+00:06:32.870 --> 00:07:07.940
+yes the value at T + 1 to get a estimate of
+the value at T right so essentially you look
+
+00:07:07.940 --> 00:07:11.830
+at the prediction you make at time T + 1you
+said for changing the prediction you made
+
+00:07:11.830 --> 00:07:17.740
+at time T right so look at the difference
+over time so it is called temporal difference
+
+00:07:17.740 --> 00:07:20.699
+you look at the difference in predictions
+over time we call this call this a temporal
+
+00:07:20.699 --> 00:07:26.750
+difference production okay hey that is a very
+pictorial motivation for why you want to do
+
+00:07:26.750 --> 00:07:30.990
+something like that okay let us do a little
+bit more formal thing right.
+
+00:07:30.990 --> 00:07:34.650
+.
+So if you think about what we did with Monte
+
+00:07:34.650 --> 00:07:52.330
+Carlo methods is that I was interested in
+looking at that right but at every point of
+
+00:07:52.330 --> 00:07:59.349
+time I had some sample GT okay I did not have
+the expected value I just had some value that
+
+00:07:59.349 --> 00:08:06.129
+they had sample as GT right so if I want to
+write this as a stochastic averaging method
+
+00:08:06.129 --> 00:08:16.160
+right so what will I do I have 
+so v hat is okay let me not put that little
+
+00:08:16.160 --> 00:08:22.930
+confuse people a little bit so v hat let me
+not put little bit new so I want to form a
+
+00:08:22.930 --> 00:08:42.380
+new estimate of v hat what will I do I will
+take v hat old + some a times right this will
+
+00:08:42.380 --> 00:08:51.520
+give me we had ? so this is the classical
+stochastic averaging rule let me look at from
+
+00:08:51.520 --> 00:08:55.700
+very beginning you have been see stochastic
+averaging rule I told you that almost everything
+
+00:08:55.700 --> 00:08:59.560
+that we will see later will get converted
+to a stochastic averaging rule right.
+
+00:08:59.560 --> 00:09:08.991
+So this is stochastic averaging version of
+what Monte Carlo evaluation right this is
+
+00:09:08.991 --> 00:09:14.430
+Monte Carlo policy evaluation this is stochastic
+averaging version of it right so you can think
+
+00:09:14.430 --> 00:09:35.080
+of this as old value okay that is target-current
+okay so the target – the current prediction
+
+00:09:35.080 --> 00:09:39.360
+that added to your old prediction gives me
+the new prediction right and this is some
+
+00:09:39.360 --> 00:09:55.140
+form of a error term right okay so I can rule
+I can make this me at this is this is what
+
+00:09:55.140 --> 00:10:00.230
+we say sophistic averaging rule right so in
+the Bandit case then we showed you this a
+
+00:10:00.230 --> 00:10:04.610
+should be 1 / N and all can keep a constant
+a on all of those things we talked about it
+
+00:10:04.610 --> 00:10:07.170
+so this all of you are on board with this
+expression.
+
+00:10:07.170 --> 00:10:13.920
+So this is essentially the incremental version
+of simple Monte Carlo simply Monte Carlo estimator
+
+00:10:13.920 --> 00:10:18.050
+right without all the other complications
+I spoke about today no importance sampling
+
+00:10:18.050 --> 00:10:26.100
+the thing have a policy file and evaluating
+the police file target is 
+
+00:10:26.100 --> 00:10:34.170
+this the expected value of GT right the target
+does not expected value of GT but I do not
+
+00:10:34.170 --> 00:10:42.860
+know the expectation I do not know the expected
+value of GT so all I have is a sample right
+
+00:10:42.860 --> 00:10:48.800
+one sample of this quantity of whose expectation
+I am taking right so I plug in that sample
+
+00:10:48.800 --> 00:10:57.680
+here instead of the target yeah no I am talking
+about Monte Carlo here I am not talking about
+
+00:10:57.680 --> 00:11:04.300
+this why I say that is why I kept saying this
+is the incremental version of simple MC okay
+
+00:11:04.300 --> 00:11:13.319
+everybody on board so this is an MC not really
+everybody onboard with that.
+
+00:11:13.319 --> 00:11:19.550
+.
+Yes no maybe so now let us go look at this
+
+00:11:19.550 --> 00:11:33.769
+target fellow closely so what is the target
+it is GT right so what is GT going to look
+
+00:11:33.769 --> 00:12:17.030
+like right so we will do the same trick that
+we did earlier okay if I know the true value
+
+00:12:17.030 --> 00:12:34.141
+actually I do not know the true value I am
+going to write this as now can you plug this
+
+00:12:34.141 --> 00:12:58.500
+into this if I want to I mean right so now
+I can say that.
+
+00:12:58.500 --> 00:13:47.270
+.
+Let say everybody on board with that yes no
+
+00:13:47.270 --> 00:13:57.230
+maybe so notice when new is where the old
+is and where the T is and where the T + 1
+
+00:13:57.230 --> 00:14:05.610
+this is important okay so remember it right
+so I do not what you would tell me later that
+
+00:14:05.610 --> 00:14:12.610
+you are using value at time T to form an estimated
+time T +1 very careful you are forming an
+
+00:14:12.610 --> 00:14:18.300
+estimated time T + 1 so that is why this is
+the indicated ? initially I wrote VT and I
+
+00:14:18.300 --> 00:14:24.070
+erased it wrote ? because I wanted to make
+the distinction okay so the value function
+
+00:14:24.070 --> 00:14:34.269
+estimate is ? estimate but I am making it
+for the state I encountered at time T okay.
+
+00:14:34.269 --> 00:14:45.889
+And I am using the old value I had for the
+state I encountered at time T+ 1 right so
+
+00:14:45.889 --> 00:14:49.860
+this derivation clear right so what we did
+here very simple lesson see the same trick
+
+00:14:49.860 --> 00:14:55.630
+that we use for deriving the bellman updates
+right so the same trick I used here except
+
+00:14:55.630 --> 00:15:00.760
+that I plugged it into instead of plugging
+it into the original return equation I plugged
+
+00:15:00.760 --> 00:15:05.980
+it into the Monte Carlo update alright I use
+the same trick let me get into the Monte Carlo
+
+00:15:05.980 --> 00:15:10.740
+update I get this expression okay so if you
+think about it this is exactly what I wrote
+
+00:15:10.740 --> 00:15:15.029
+here in the picture right.
+So I am going to update the value of this
+
+00:15:15.029 --> 00:15:28.079
+state I will use the reward I get plus the
+value at the state 
+
+00:15:28.079 --> 00:15:41.570
+okay so a value I mean a policy evaluation
+algorithm that uses this kind of an update
+
+00:15:41.570 --> 00:15:56.580
+for finding the value function okay is called
+a TD(0) algorithm right so you should be able
+
+00:15:56.580 --> 00:15:59.690
+to write a whole algorithm around this and
+be able to implement it and all that right
+
+00:15:59.690 --> 00:16:05.050
+so you start off with some arbitrary guess
+for the value function you have a fixed policy
+
+00:16:05.050 --> 00:16:09.640
+p you start off with some guess for the value
+function then you start generating trajectories
+
+00:16:09.640 --> 00:16:15.740
+right as you go along the trajectory you keep
+updating the value function using this update.
+
+00:16:15.740 --> 00:16:21.130
+So we come to the end of an episode you go
+back reset the state but do not do you reset
+
+00:16:21.130 --> 00:16:26.839
+the value function okay reset the states and
+continue okay so that is essentially what
+
+00:16:26.839 --> 00:16:31.690
+is going to happen you could have been all
+kinds of tricks you could use you could have
+
+00:16:31.690 --> 00:16:36.850
+an optimistic initial value right you could
+do all kinds of different kinds of explorations
+
+00:16:36.850 --> 00:16:41.660
+on top of the basic policy right if you are
+going to use exploration on top of the basic
+
+00:16:41.660 --> 00:16:57.470
+policy what it should be careful about my
+god this is a chapter yeah this is chapter
+
+00:16:57.470 --> 00:17:05.889
+one question should you should you not if
+you know I am talking about valuation here
+
+00:17:05.889 --> 00:17:09.350
+I am not talking about evaluation here so
+I am not talking about control right.
+
+00:17:09.350 --> 00:17:14.459
+In evaluation you should not I am trying to
+evaluate a fixed policy if you update over
+
+00:17:14.459 --> 00:17:19.040
+an expository action you are evaluating a
+different policy right lower excavate reactions
+
+00:17:19.040 --> 00:17:31.370
+you should not make any updates 
+so that is basically TD(0) right so we have
+
+00:17:31.370 --> 00:17:38.380
+done one algorithm this is the basic policy
+evaluation algorithm right so people understand
+
+00:17:38.380 --> 00:17:43.710
+the concept of TD what we are doing here and
+looking at things that is one step away and
+
+00:17:43.710 --> 00:17:54.610
+we are trying to update things okay so let
+us 
+
+00:17:54.610 --> 00:17:59.299
+see that is what when you are look when you're
+doing then the depth limited rollouts right
+
+00:17:59.299 --> 00:18:04.120
+in some sense you are doing something like
+this right.
+
+00:18:04.120 --> 00:18:05.980
+.
+So when we are thinking about death limited
+
+00:18:05.980 --> 00:18:39.539
+rollouts is that right I doing depth limited
+rollers that is what you are doing I am counting
+
+00:18:39.539 --> 00:18:44.570
+the reward until I reach a certain point in
+time after that I am adding the value function
+
+00:18:44.570 --> 00:18:48.520
+so that is exactly what you are doing there
+right so you can think of this as just one
+
+00:18:48.520 --> 00:18:53.791
+step prologue not even so it is like it is
+take one step and immediately use the value
+
+00:18:53.791 --> 00:18:58.850
+function is one we are thinking about but
+I am doing only one sample and all those are
+
+00:18:58.850 --> 00:19:05.140
+there done that multiple times but here I
+am doing just one sample will come back and
+
+00:19:05.140 --> 00:19:09.870
+explore this question a little bit later right
+in the next chapter will explore this question
+
+00:19:09.870 --> 00:19:16.260
+where we will explain why the 0 is there.
+In is a family of algorithms called TD ? algorithms
+
+00:19:16.260 --> 00:19:22.799
+where we will actually look at this kind of
+having multiple step rewards and then having
+
+00:19:22.799 --> 00:19:33.799
+the value function case we will talk about
+that next time yeah well you 
+
+00:19:33.799 --> 00:19:43.000
+did not ask me that question when we are doing
+Monte Carlo no do I am asked I am asked you
+
+00:19:43.000 --> 00:19:47.809
+to think about what we did in the Monte Carlo
+case right so we started in some state s right
+
+00:19:47.809 --> 00:19:53.210
+we generated an entire trajectory and we use
+that update this value so I'm instead of generating
+
+00:19:53.210 --> 00:19:58.870
+meant a trajectory and they substituting this
+GT with a biased sample but I am still measuring
+
+00:19:58.870 --> 00:20:08.760
+the return starting from s st okay.
+Because I am not measuring the return from
+
+00:20:08.760 --> 00:20:24.039
+st + 1 tray tax could update the values st
++1 but not using this expression I will not
+
+00:20:24.039 --> 00:20:30.400
+use st +2 here no how no why am I getting
+a estimate of we had a st +1 from V hat of
+
+00:20:30.400 --> 00:20:39.660
+st see v had of st +1 if I do not have any
+loops in my state space we have a v+1 will
+
+00:20:39.660 --> 00:20:47.190
+not even have v st in this expression only
+way we had a V st will enter into the expression
+
+00:20:47.190 --> 00:20:54.640
+for V out of st +1 if you come back to st
+right but I see the you know it is a time
+
+00:20:54.640 --> 00:21:14.559
+index random variable so we will never come
+back to st Kalman filter you're trying to
+
+00:21:14.559 --> 00:21:17.850
+predict what the next state is going to be
+right.
+
+00:21:17.850 --> 00:21:22.250
+So here I am not doing that prediction right
+so if you want you can write a kalman filter
+
+00:21:22.250 --> 00:21:26.090
+like equation here to predict what the next
+state would be what I am trying to predict
+
+00:21:26.090 --> 00:21:30.220
+here what I am trying to learn here is the
+reward starting from the state I am not trying
+
+00:21:30.220 --> 00:21:35.200
+to predict the next state it is entirely possible
+for you to write the expression for st + 1
+
+00:21:35.200 --> 00:21:45.780
+in terms of st but not V hat st + 1 in terms
+of Vhat st does that make sense no we talk
+
+00:21:45.780 --> 00:22:01.370
+we can talk off line right yeah they stopped
+I actually had some other public and talk
+
+00:22:01.370 --> 00:22:09.340
+about it later anyway so that is TD(0) right
+so any other questions on TD(0) okay good.
+
+00:22:09.340 --> 00:22:14.331
+So I am going to talk a little bit about some
+time to make it give you a clearer as to what
+
+00:22:14.331 --> 00:22:19.460
+the difference between Monte Carlo and TD
+methods would give you right so we start off
+
+00:22:19.460 --> 00:22:23.620
+with a very simple data set right.
+.
+
+00:22:23.620 --> 00:22:55.510
+So I am going to give you as a terminal state
+after that right 
+
+00:22:55.510 --> 00:23:01.490
+so is the sequence of states and rewards that
+you have observed let us assume the policy
+
+00:23:01.490 --> 00:23:06.520
+is very dumb policy okay because I am doing
+evaluation right the policy is fixed I do
+
+00:23:06.520 --> 00:23:11.260
+not have to worry about the actions so whatever
+is the policy right I just observe the sequence
+
+00:23:11.260 --> 00:23:19.809
+of states and rewards words right so what
+is the value of A what is the value of B if
+
+00:23:19.809 --> 00:23:27.169
+I use Monte Carlo where if you say let us
+say I use first to set Monte Carlo let us
+
+00:23:27.169 --> 00:23:31.500
+keep things simple I use first visit Monte
+Carlo so what is the value of A what is the
+
+00:23:31.500 --> 00:23:37.440
+value of B or let me make things even simpler.
+Let us have no first visit every visit business
+
+00:23:37.440 --> 00:24:19.820
+so what is the value of A the last one is
+not critical for our example so well let us
+
+00:24:19.820 --> 00:24:34.480
+keep calm acquire 4/3 right what about B 
+
+00:24:34.480 --> 00:24:52.200
+so here okay I will make your phases let us
+not have 7 case okay so this is essentially
+
+00:24:52.200 --> 00:25:04.999
+a Monte Carlo estimate 
+they make a mistake here.
+
+00:25:04.999 --> 00:25:13.730
+.
+Hey sorry guys I made a mistake in the number
+
+00:25:13.730 --> 00:25:17.394
+I just cooked up some numbers suggest you
+realize now both Monte Carlo and TD will give
+
+00:25:17.394 --> 00:25:21.179
+you the same answers so I need to give you
+a set of numbers where Monte Carlo entity
+
+00:25:21.179 --> 00:26:15.000
+will give you different answers okay it is
+Monte Carlo kicked we have A is 1 + 2 / 3
+
+00:26:15.000 --> 00:26:32.510
+so 1, B is 3/ 6 this 1/2 okay so what will
+be the value is estimated by TD so essentially
+
+00:26:32.510 --> 00:26:46.860
+what you have to do is you have to keep updating
+this rule repeatedly till you converge I am
+
+00:26:46.860 --> 00:26:54.950
+not that cruel okay what you can show which
+we lock through or what we can show is that
+
+00:26:54.950 --> 00:27:01.090
+TD has this amazing property that you are
+applying that rule incrementally but it computes
+
+00:27:01.090 --> 00:27:11.240
+the value function by implicitly constructing
+an a Monte Carlo process right.
+
+00:27:11.240 --> 00:27:15.179
+So if you think about it every time I will
+go from A to B right so whenever I update
+
+00:27:15.179 --> 00:27:20.020
+the value of A I will use the value of B so
+in some sense of implicitly encoding that
+
+00:27:20.020 --> 00:27:28.450
+transition into my updation so it essentially
+it looked like something like this so A go
+
+00:27:28.450 --> 00:27:34.919
+To B and B will go to a terminal series we
+can see the right this is with probability
+
+00:27:34.919 --> 00:27:45.020
+1 all of these transitions will happen right
+what is the reward forgoing from A to B okay
+
+00:27:45.020 --> 00:27:49.820
+the reward is 2/3 the probability is 1 right
+like what is expected of all right I am just
+
+00:27:49.820 --> 00:27:58.450
+removing so what is the work from going from
+B to the terminal state right.
+
+00:27:58.450 --> 00:28:06.040
+So now the value function that the TD update
+will converge to is the value function of
+
+00:28:06.040 --> 00:28:12.980
+a and B in this MDP or in this Monte Carlo
+right so what is the value of B in this Monte
+
+00:28:12.980 --> 00:28:21.920
+Carlo shape that would not change okay here
+is the important interesting what is the value
+
+00:28:21.920 --> 00:29:11.130
+of a in this Markov shape it is the immediate
+reward + ? times value of B at ? is 1 7/ 6when
+
+00:29:11.130 --> 00:29:17.240
+people accept this right so what is the value
+of A is the immediate reward plus the value
+
+00:29:17.240 --> 00:29:23.690
+of the next state right so that is the bellman
+equation so the immediate reward is 2/3 the
+
+00:29:23.690 --> 00:29:27.350
+value of the next state turns out to be half
+in this case which we already computed is
+
+00:29:27.350 --> 00:29:30.659
+7/6 okay.
+So we came to a different answer than what
+
+00:29:30.659 --> 00:29:37.020
+recovery right Monte Carlo gave me one and
+half TD is giving me 7/6 and ½ which is the
+
+00:29:37.020 --> 00:30:06.570
+right answer so you see why TD tells me it
+is 7/6 see whenever A occurred before B right
+
+00:30:06.570 --> 00:30:13.779
+B is been very unrewarding right only one
+out of the three tens be gave me 1 but other
+
+00:30:13.779 --> 00:30:19.600
+times B occurred it has been very rewarding
+twice it gave me a 1 and once it gave me 0
+
+00:30:19.600 --> 00:30:25.659
+okay so what TD methods assume implicitly
+is that the whole system is mark of so regardless
+
+00:30:25.659 --> 00:30:31.980
+of how I came to B when I go out from B I
+am going to get that expected reward of half
+
+00:30:31.980 --> 00:30:35.580
+right but it so happened.
+That the few samples I drew from A turned
+
+00:30:35.580 --> 00:30:41.149
+out to be a bad sample for B right when I
+do the Monte Carlo estimates I am getting
+
+00:30:41.149 --> 00:30:45.620
+a lower value for A because of that I do not
+take into account the structure right the
+
+00:30:45.620 --> 00:30:49.840
+structure is from A I go to B and then I go
+to the terminal state and what TD methods
+
+00:30:49.840 --> 00:30:53.909
+assume is okay from be if you go to the terminal
+state this is the reward you are going to
+
+00:30:53.909 --> 00:30:57.950
+get and therefore from A if you go to B then
+you will get whatever reward will get from
+
+00:30:57.950 --> 00:31:02.350
+going from B to the terminal say it makes
+that very strong Markov an assumption right
+
+00:31:02.350 --> 00:31:07.299
+because it solves for this Markov chain okay.
+So now let me go back and ask you which is
+
+00:31:07.299 --> 00:31:18.580
+the right answer thank you here finally somebody
+said it depends on the depends on the problem
+
+00:31:18.580 --> 00:31:25.140
+and it turns out that what Monte Carlo methods
+are doing is essentially trying to minimize
+
+00:31:25.140 --> 00:31:32.279
+the prediction error right between this particular
+set of samples that you have drawn the returns
+
+00:31:32.279 --> 00:31:36.340
+computer according to these samples alone
+right going back to the definition of written
+
+00:31:36.340 --> 00:31:43.910
+okay it is actually minimizing the squared
+error between the value function you get and
+
+00:31:43.910 --> 00:31:49.269
+the return that you get from this right is
+just trying to minimize the squared error
+
+00:31:49.269 --> 00:31:53.340
+from this fixed set of samples that you get
+right.
+
+00:31:53.340 --> 00:31:59.480
+So what do TD methods do on the other hand
+is they form what are called a certainty equivalent
+
+00:31:59.480 --> 00:32:04.420
+model okay so people in control theory probably
+understand this better so there is something
+
+00:32:04.420 --> 00:32:09.490
+called the certainty equivalent model which
+essentially is the model best explains the
+
+00:32:09.490 --> 00:32:15.510
+data that you have seen so far under certain
+assumptions okay so under certain assumptions
+
+00:32:15.510 --> 00:32:19.850
+you can assume that this model is equivalent
+to the system that generated the data that
+
+00:32:19.850 --> 00:32:24.590
+you have seen so far and in this case we are
+making a very strong Markova an assumption.
+
+00:32:24.590 --> 00:32:30.230
+Then what TD methods try to do is try to make
+the prediction according to the certainty
+
+00:32:30.230 --> 00:32:35.809
+equivalent model I trying to minimize the
+error between the value function in the certainty
+
+00:32:35.809 --> 00:32:41.470
+equivalent model and the predictions you are
+making here right so they are optimizing very
+
+00:32:41.470 --> 00:32:48.260
+different objective functions given an infinite
+amount of data drawn from a truly Markova
+
+00:32:48.260 --> 00:32:56.899
+an system it both will converge to the same
+answer but given a finite amount of data right
+
+00:32:56.899 --> 00:33:02.870
+this will converge to the minimize of the
+squared error this will converge to whatever
+
+00:33:02.870 --> 00:33:06.880
+is the Markov model you can form with that
+limited data okay.
+
+00:33:06.880 --> 00:33:10.299
+This need not be the right model this need
+not be the model that gave rise to the data
+
+00:33:10.299 --> 00:33:15.730
+right given the limited data this is the best
+you can do that is all you can see we are
+
+00:33:15.730 --> 00:33:19.929
+saying here given this data what is the model
+you can form it will converge to that right
+
+00:33:19.929 --> 00:33:23.960
+whether this is the right answer or that is
+the right answer given a limited amount of
+
+00:33:23.960 --> 00:33:30.740
+data depends on what kind of application you
+are looking at all the other hand since the
+
+00:33:30.740 --> 00:33:36.789
+Monte Carlo methods make a less of an assumption
+about Markov witness if you suspect that your
+
+00:33:36.789 --> 00:33:41.429
+system is not very markup okay then do not
+use theory methods you are better off probably
+
+00:33:41.429 --> 00:33:44.940
+better of you see Monte Carlo kind of methods
+okay.
+
+00:33:44.940 --> 00:33:50.120
+But remember I told you that if you use the
+notion of a value function already or making
+
+00:33:50.120 --> 00:33:54.860
+an assumption about Mark of Venus right as
+you should be using values of history's right
+
+00:33:54.860 --> 00:33:59.120
+you should not be using values of states if
+you are already using values of states you
+
+00:33:59.120 --> 00:34:04.850
+have making a Markova assumption but that
+is okay right in some sense provided the is
+
+00:34:04.850 --> 00:34:11.710
+not estimates you are making since then right
+you take care of the Markova awareness non-
+
+00:34:11.710 --> 00:34:19.220
+Markova I think still it is not correct but
+at least we will be more robust to violations
+
+00:34:19.220 --> 00:34:24.800
+of the mark of assumptions and as you can
+see very clear from here right just going
+
+00:34:24.800 --> 00:34:29.179
+by the evidence of the trajectories I have
+given you should not think this is a marker
+
+00:34:29.179 --> 00:34:39.540
+system right so whenever A happens B seems
+to have a depressed outcome right display
+
+00:34:39.540 --> 00:34:44.250
+the evidence of the data here you should not
+think it is a Markova system but TD will just
+
+00:34:44.250 --> 00:34:50.210
+assume it is a Markova system and go ahead
+and do the updates okay so you see the difference
+
+00:34:50.210 --> 00:34:54.530
+between what TD does and Monte Carlo does
+okay we will stop here we will worry about
+
+00:34:54.530 --> 00:35:04.920
+TD control the next class I am still converts
+to the thus the least square estimate of the
+
+00:35:04.920 --> 00:35:06.100
+returns predicted by the data.
+

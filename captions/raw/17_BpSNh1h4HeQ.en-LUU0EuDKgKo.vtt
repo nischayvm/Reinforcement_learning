@@ -1,0 +1,1207 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.639 --> 00:00:20.099
+So we will continue looking at the reinforcement
+the full reinforcement learning problem so
+
+00:00:20.099 --> 00:00:30.199
+we left off where we defined a Markov addition
+process right and so today's class will probably
+
+00:00:30.199 --> 00:00:37.440
+be a short one okay because the next thing
+next topic I need to start requires me to
+
+00:00:37.440 --> 00:00:41.610
+define a lot of rotations and stuff like that
+so if I start that today I will probably end
+
+00:00:41.610 --> 00:00:47.800
+up just defining the notation today and then
+when I start again next week I will ask you
+
+00:00:47.800 --> 00:00:52.190
+to I will have to ask you to recall the notation
+and stuff like that or spend time writing
+
+00:00:52.190 --> 00:00:54.120
+it out again so I will not do it.
+
+00:00:54.120 --> 00:01:02.000
+So if I finish whatever I want to before the
+proofs start right I will just stop today
+
+00:01:02.000 --> 00:01:18.060
+so I will not start the notations okay so
+let us see how it goes so right.
+
+00:01:18.060 --> 00:01:21.040
+.
+So we started looking at Markov addition process
+
+00:01:21.040 --> 00:01:32.909
+plastic so we said that it is specified by
+set of states actions right transition probabilities
+
+00:01:32.909 --> 00:01:56.090
+and right and possibly a ? so if you look
+at the RL textbook right they leave out the
+
+00:01:56.090 --> 00:02:06.530
+? right if you look at any OR textbook were
+also mdps are used widely right they would
+
+00:02:06.530 --> 00:02:12.090
+have the ? in there right so for them g is
+a very inherent part of the problem but in
+
+00:02:12.090 --> 00:02:17.610
+the end the RL books you would see that they
+would leave out the ? even though I mean gamma
+
+00:02:17.610 --> 00:02:22.110
+is inherent part of the problem and somehow
+they just do not acknowledge the fact that
+
+00:02:22.110 --> 00:02:26.819
+gamma changes the solution right licit Lee
+in the problem definition itself so this is
+
+00:02:26.819 --> 00:02:36.120
+essentially what an MDP is all about so what
+I will do is walk through one of the examples
+
+00:02:36.120 --> 00:02:37.980
+from the textbook right.
+
+00:02:37.980 --> 00:02:44.370
+So I mean sticking is a textbook example so
+you can go back and read the book and also
+
+00:02:44.370 --> 00:02:52.410
+because it is kind of makes the course more
+related to the minor guys here okay, so let
+
+00:02:52.410 --> 00:02:58.870
+us take the example of a recycling robot from
+the book so how many of you have been reading
+
+00:02:58.870 --> 00:03:12.519
+the book okay the number went up by two since
+last time okay good Saudi remember the recycling
+
+00:03:12.519 --> 00:03:21.230
+robot so what was the thing about who is in
+any searches for the Cal State is where it
+
+00:03:21.230 --> 00:03:24.370
+wait for some someone to come and take an
+action between these three state based on
+
+00:03:24.370 --> 00:03:34.110
+the battery level reference ah based on that
+they will be reversed whenever it is where
+
+00:03:34.110 --> 00:03:35.849
+does one will be even okay.
+
+00:03:35.849 --> 00:03:52.519
+Now it runs out of battery otherwise hmm okay
+so it is interesting they just turn on the
+
+00:03:52.519 --> 00:03:59.250
+mice or something an interesting that you
+used the description states okay so people
+
+00:03:59.250 --> 00:04:04.160
+heard it and if I will repeat it since I seem
+to have the Lord Mike so you know that those
+
+00:04:04.160 --> 00:04:12.470
+can also pick up but I seem to have the Lord
+of Mike so let me repeat it so that is this
+
+00:04:12.470 --> 00:04:19.410
+robot okay that has been created for the express
+purpose of switch b hearth okay so it goes
+
+00:04:19.410 --> 00:04:26.120
+around the building and finds all the empty
+cans and gathers it and puts it in some kind
+
+00:04:26.120 --> 00:04:29.940
+of a no trash recovery system recycling system
+or whatever.
+
+00:04:29.940 --> 00:04:36.250
+So for every can the bot gathers is going
+to get a reward of 1 right this is a number
+
+00:04:36.250 --> 00:04:40.909
+I am pulling out of the Hat right so let us
+not talk about the reward in all right so
+
+00:04:40.909 --> 00:04:45.400
+the robot is supposed to gather Kemp's that
+is essentially what we wanted to do but being
+
+00:04:45.400 --> 00:04:51.010
+a robot it is going to have a limited amount
+of power that it can spend right it has a
+
+00:04:51.010 --> 00:04:55.550
+limited amount of battery power that it can
+spend so it has to choose carefully how it
+
+00:04:55.550 --> 00:05:00.830
+spends the battery right it can go around
+looking for cans right and if it is going
+
+00:05:00.830 --> 00:05:08.720
+to run out of battery then it can do one of
+two things it can recharge itself right.
+
+00:05:08.720 --> 00:05:18.780
+Or it can to sit in a place like a trash can
+and expect people to drop the empty cans into
+
+00:05:18.780 --> 00:05:23.500
+that but okay just kiss sits in a place and
+the people can just use it like a trash can
+
+00:05:23.500 --> 00:05:28.901
+right so this is essentially the set up so
+I have this but that should I would like you
+
+00:05:28.901 --> 00:05:34.100
+to go actively gather cans but I also do not
+like it to run out of battery because if it
+
+00:05:34.100 --> 00:05:40.030
+runs out of battery somebody has to go physically
+either roll the robot or carry the lift the
+
+00:05:40.030 --> 00:05:44.080
+robot and take it to a charging station and
+charge it ok that is a very painful operation
+
+00:05:44.080 --> 00:05:46.880
+so I really do not want it to run out of battery.
+
+00:05:46.880 --> 00:05:50.770
+But then I do not want it to just sit idle
+action as well because what it says is supposed
+
+00:05:50.770 --> 00:05:59.050
+to do is gather camps right so how would you
+model this problem so what are the states
+
+00:05:59.050 --> 00:06:13.600
+and what are the actions what should be the
+reward robot seems to be easy right so well
+
+00:06:13.600 --> 00:06:19.120
+what you wanted to do you wanted to gather
+Ken so whenever it gathers can whenever gather
+
+00:06:19.120 --> 00:06:23.500
+sir can you give it are ward right so never
+gather second to give it a reward of +1 right
+
+00:06:23.500 --> 00:06:35.140
+so I am going to call this our can +1 right
+then what you do not want it to do you do
+
+00:06:35.140 --> 00:06:36.750
+not want it to run out of battery.
+
+00:06:36.750 --> 00:06:58.520
+So yes it is just yeah something large right
+so yeah so I would I would prefer to give
+
+00:06:58.520 --> 00:07:05.050
+it -10 or something but since I am walking
+through the example in the book okay so it
+
+00:07:05.050 --> 00:07:12.300
+is a - 3 right so it is not that bad I mean
+if we can collect 15 cans and then die is
+
+00:07:12.300 --> 00:07:21.630
+okay right so it is not too it is not that
+bad thing so what else if it charges if it
+
+00:07:21.630 --> 00:07:27.970
+chooses to charge right so what happens do
+we give you what do we do for it is thing
+
+00:07:27.970 --> 00:07:48.770
+isn't even a positive reward or why does no
+reward make sense he'll give yeah just the
+
+00:07:48.770 --> 00:07:52.090
+heck for pick up getting that reward will
+get recharged right but then recharging is
+
+00:07:52.090 --> 00:07:54.630
+also good we want to convey the fact that
+recharging also good.
+
+00:07:54.630 --> 00:07:58.320
+So it is better than running out of battery
+and if you recharge you have the potential
+
+00:07:58.320 --> 00:08:03.490
+for getting more rewards in the future because
+you go out and seek more cans right so that
+
+00:08:03.490 --> 00:08:07.810
+way you have an indirect incentive for recharging
+because in the future it allows you to do
+
+00:08:07.810 --> 00:08:12.010
+something better if you just look at the immediate
+reward it looks like a bad thing but if you
+
+00:08:12.010 --> 00:08:15.430
+think about it so in the future you are making
+it more attractive for recharge I mean if
+
+00:08:15.430 --> 00:08:25.630
+you look at the future outcomes recharging
+is also very attractive okay.
+
+00:08:25.630 --> 00:08:31.099
+What is below are so many do if they were
+charged no this is not this is if you think
+
+00:08:31.099 --> 00:08:40.230
+about it this is more to do with actions or
+something with outcomes yeah battery levels
+
+00:08:40.230 --> 00:08:45.620
+you could you could make it all the more detail
+you can make it as detailed as you want right
+
+00:08:45.620 --> 00:08:50.431
+now comes the crux how detailed do you want
+to make the representation to be do you want
+
+00:08:50.431 --> 00:08:55.521
+to make it a real number saying how much battery
+charge I have you could get a continuous state
+
+00:08:55.521 --> 00:08:58.610
+there right so what do you want to do you
+want to do some kind of dis cartelization
+
+00:08:58.610 --> 00:09:03.960
+right so if I want to do a dis cartelization
+so how do I discredited ah that resistant
+
+00:09:03.960 --> 00:09:09.550
+question are completely we forgot answers
+that question what is the state?
+
+00:09:09.550 --> 00:09:18.330
+The battery charge level should be the stay
+right and then anything else the number of
+
+00:09:18.330 --> 00:09:29.890
+cans no let us just assume that magically
+it takes a can and transports it to well as
+
+00:09:29.890 --> 00:09:35.940
+an interesting if it has a finite carrying
+capacity then you probably need to throw in
+
+00:09:35.940 --> 00:09:40.090
+how many cans it has and so before it has
+to make it trip to the dump dumping ground
+
+00:09:40.090 --> 00:09:44.050
+or something like that so let us assume for
+the time being it so as soon as you put a
+
+00:09:44.050 --> 00:09:50.290
+can into that there is a teleported that takes
+it to the dumping ground okay.
+
+00:09:50.290 --> 00:09:54.860
+Or the bot has an infinite carry I am just
+trying to make the problem simpler right if
+
+00:09:54.860 --> 00:09:58.360
+you want to make the problem more and more
+realistic right you have to think about a
+
+00:09:58.360 --> 00:10:02.720
+whole bunch of other things right for example
+I am kind of making it at a very high level
+
+00:10:02.720 --> 00:10:07.740
+I am not talking about the person I mean the
+post of the robot let the velocity which the
+
+00:10:07.740 --> 00:10:11.000
+bot is moving so all of these things you need
+right if you want to actually going to control
+
+00:10:11.000 --> 00:10:14.840
+the one and then this assuming all of those
+are somehow going to be magically taken care
+
+00:10:14.840 --> 00:10:15.840
+of right.
+
+00:10:15.840 --> 00:10:21.420
+So we are just assuming that you are only
+worried about the charge of the bot right
+
+00:10:21.420 --> 00:10:34.190
+yeah we have been talking about only discrete
+States in discrete action so far we have not
+
+00:10:34.190 --> 00:10:41.050
+talked about continuous States and continues
+actions but you have continuous state contraction
+
+00:10:41.050 --> 00:10:50.840
+place okay, so the state is going to be the
+charge right and possibly number of cans right
+
+00:10:50.840 --> 00:10:56.360
+other things but for the time being I am just
+going to say I am not going to care about
+
+00:10:56.360 --> 00:11:00.070
+all of that we will just look at charges to
+keep it a simple example right.
+
+00:11:00.070 --> 00:11:04.750
+I am also keeping it in sync with the book
+so and again so what do I do with charge I
+
+00:11:04.750 --> 00:11:10.000
+can treat it as a number in which case I will
+have to figure out how to handle the continuous
+
+00:11:10.000 --> 00:11:17.490
+value right all I can start discrediting it
+so how will I discredited it yeah so I again
+
+00:11:17.490 --> 00:11:21.680
+well percentage is also not a dis cartelization
+unless you round it off okay.
+
+00:11:21.680 --> 00:11:28.740
+So yeah so you could do something like that
+or it could be even more aggressive right
+
+00:11:28.740 --> 00:11:36.140
+I could do low medium high right and if you
+really stop and think about it when would
+
+00:11:36.140 --> 00:11:41.570
+you if I said if I do low medium high or something
+like that whenever I actually change my decision
+
+00:11:41.570 --> 00:11:47.670
+about charging versus not charging only when
+I low okay so in some sense you could even
+
+00:11:47.670 --> 00:11:52.730
+try operating with high and low and or sufficient
+and low okay.
+
+00:11:52.730 --> 00:12:01.350
+Or whatever is it build is also probably actually
+I do not I am not having the location at all
+
+00:12:01.350 --> 00:12:07.600
+give it so assuming that there is always a
+convenient charging point located nearby okay
+
+00:12:07.600 --> 00:12:11.130
+just not like that a single base station I
+have to go there so as soon as I find out
+
+00:12:11.130 --> 00:12:14.240
+okay I am running out of search and let us
+assume that as long as the battery is low
+
+00:12:14.240 --> 00:12:19.110
+I can still get to a charging point in fact
+I am going to assume you in something stronger
+
+00:12:19.110 --> 00:12:26.610
+so I could with some probability keep operating
+even if my battery is low right.
+
+00:12:26.610 --> 00:12:35.600
+And I still not run out of assumption I make
+is the following whenever I say recharge okay
+
+00:12:35.600 --> 00:12:39.440
+I will have enough battery power to reach
+the nearest recharge station and recharge
+
+00:12:39.440 --> 00:12:43.470
+so after I pick the option to reach other
+I will not run out of battery power is again
+
+00:12:43.470 --> 00:12:48.342
+very simplifying assumption right this makes
+it easier for us to draw pictures as I will
+
+00:12:48.342 --> 00:12:53.550
+in a minute right but all the points that
+are being raised to our very good points right
+
+00:12:53.550 --> 00:12:57.840
+so when you start trying to model a real system
+right this is all calls that you will have
+
+00:12:57.840 --> 00:12:58.840
+to make right.
+
+00:12:58.840 --> 00:13:03.060
+So what I say that I would throw into my state
+right what I say that I can ignore right and
+
+00:13:03.060 --> 00:13:15.530
+so on so forth and yeah so Paulo we do you
+remember the homework assignment we are asking
+
+00:13:15.530 --> 00:13:18.730
+them yeah the third one we are asking them
+we are giving them a word problem when asking
+
+00:13:18.730 --> 00:13:29.029
+him to construct an MDP out of it right you
+think so you were saying Methodism yeah the
+
+00:13:29.029 --> 00:13:35.020
+one that was released today morning yeah press
+release yesterday then your time traveling
+
+00:13:35.020 --> 00:13:39.040
+okay released this morning.
+
+00:13:39.040 --> 00:13:55.700
+Yeah so the new assignment and it is due on
+feb14 yes 14th is what name Sunday yeah well
+
+00:13:55.700 --> 00:14:06.339
+plan ahead if it is important to you finish
+on the 13th or as it is more likely for lot
+
+00:14:06.339 --> 00:14:16.120
+of people who have nothing to do 14th only
+have a whole last question is that right so
+
+00:14:16.120 --> 00:14:19.820
+there is a word problem you expect you to
+correct MDP, so you can think of similar things
+
+00:14:19.820 --> 00:14:25.040
+but that is a more constrained word problem
+so you will see that there is not too many
+
+00:14:25.040 --> 00:14:27.250
+ways in which you can construct an MDP out
+of it.
+
+00:14:27.250 --> 00:14:32.560
+So but then the idea is that a lot of design
+choices that you make when they give you a
+
+00:14:32.560 --> 00:14:36.660
+problem specification that the Lord of choices
+that you make when you go from the problem
+
+00:14:36.660 --> 00:14:42.320
+specification to an MDP right so when you
+are talking about designing a reinforcement
+
+00:14:42.320 --> 00:14:48.000
+learning solution for a problem the things
+that you have to decide are the states the
+
+00:14:48.000 --> 00:14:52.600
+actions and the rewards these are the three
+things that you have to decide and when you
+
+00:14:52.600 --> 00:14:58.420
+are constructing an MDP additionally you will
+have to figure out what this the transition
+
+00:14:58.420 --> 00:15:01.450
+probabilities are also going to be because
+we thought that you cannot solve the problem.
+
+00:15:01.450 --> 00:15:07.610
+All right but in we are trying to use reinforcement
+learning techniques to solve these problems
+
+00:15:07.610 --> 00:15:12.690
+as we will see later on you do not need the
+transition dynamics I do not need to explicitly
+
+00:15:12.690 --> 00:15:16.900
+model the transition dynamics but you still
+need to make choices for states actions and
+
+00:15:16.900 --> 00:15:20.470
+towards so that is where we are right now
+so after we finish this I will tell you some
+
+00:15:20.470 --> 00:15:24.650
+simple way of consulting the transition probability
+for the robot but that is fine so essentially
+
+00:15:24.650 --> 00:15:31.230
+what I am going to do charge this is going
+to be now low or high okay.
+
+00:15:31.230 --> 00:15:43.660
+And then what about actions there is no pick
+up let us say when I actively we find that
+
+00:15:43.660 --> 00:15:50.310
+can I will automatically pick it up okay so
+I will go so explore essentially or as they
+
+00:15:50.310 --> 00:16:00.839
+say in the book actively seek cans 
+because explore is overloaded right so we
+
+00:16:00.839 --> 00:16:04.640
+have explore exploit those kinds of things
+already so I do not want to have an action
+
+00:16:04.640 --> 00:16:29.800
+called explore okay, so you have you actively
+seek cans or wait for cans of recharge right
+
+00:16:29.800 --> 00:16:39.339
+so there anything else that we need to define
+here 
+
+00:16:39.339 --> 00:16:43.279
+yeah so I will tell you how we can get around
+the day that is a good point so maybe you
+
+00:16:43.279 --> 00:16:44.970
+need a zero charge state.
+
+00:16:44.970 --> 00:16:48.460
+But I also tell you how to get around that
+right so the Assumption we are going to make
+
+00:16:48.460 --> 00:16:53.830
+is if you run out of charge somebody is going
+to take you and charge you right then you
+
+00:16:53.830 --> 00:17:02.120
+are going to get this penalty of minus three
+so what does that mean so from low I can actually
+
+00:17:02.120 --> 00:17:09.110
+go to high with a penalty of minus three ok
+so that is that is equivalent to the zero
+
+00:17:09.110 --> 00:17:21.130
+charge state that you can make it more complex
+so right, now I am assuming once you plug
+
+00:17:21.130 --> 00:17:28.160
+it in to charge I do not worry about it until
+fully charged later right see this is another
+
+00:17:28.160 --> 00:17:32.790
+thing which you with an interesting point
+because I have discredited it low and high
+
+00:17:32.790 --> 00:17:33.790
+right.
+
+00:17:33.790 --> 00:17:38.910
+So when will it run out of charge when it
+when it will go from high to low state so
+
+00:17:38.910 --> 00:17:43.660
+if I is one 100% high right it is probably
+not going to go to the low state when it take
+
+00:17:43.660 --> 00:17:50.800
+an action but if I say 40% high almost surely
+as soon as I take an action it is going to
+
+00:17:50.800 --> 00:17:55.880
+go into a low state let us say 40 is the way
+cutoff point all right so above 40 I say hi
+
+00:17:55.880 --> 00:18:01.210
+below 40 I say low let us percentage is right
+for 40% I will say hi below 40% I will say
+
+00:18:01.210 --> 00:18:04.980
+low, almost surely as soon as I take an action
+it is going to go too low.
+
+00:18:04.980 --> 00:18:08.300
+But then I am not making this distinction
+I have made a dis cartelization here right
+
+00:18:08.300 --> 00:18:13.560
+so what will it look like to me and if I run
+the robot multiple times what will it look
+
+00:18:13.560 --> 00:18:20.030
+like to me sometimes it goes from high to
+low sometimes it goes does not go from high
+
+00:18:20.030 --> 00:18:24.050
+to low it stays in high so what is going to
+happen here is I am going to translate this
+
+00:18:24.050 --> 00:18:28.550
+into the probabilities of transition right
+so what is the probability of going from high
+
+00:18:28.550 --> 00:18:38.160
+to low in fact if I you know if I knew all
+about my the battery dynamics if I know how
+
+00:18:38.160 --> 00:18:42.640
+much power each and every action takes and
+if I modeling this is a continuous valued
+
+00:18:42.640 --> 00:18:46.390
+state there might not be any causticity here.
+
+00:18:46.390 --> 00:18:51.670
+But I might be able to tell you very exactly
+okay now at this point if this is the action
+
+00:18:51.670 --> 00:18:55.000
+you are doing this is so much power that you
+will consume and therefore the battery will
+
+00:18:55.000 --> 00:18:59.080
+go from high to low all right so I might be
+able to give that to you exactly so inherently
+
+00:18:59.080 --> 00:19:04.520
+this might not be a stochastic system I am
+only saying might not be because people have
+
+00:19:04.520 --> 00:19:09.360
+worked with robots so you know that he met
+he would specify as many initial conditions
+
+00:19:09.360 --> 00:19:14.500
+as you want right the bots will do what it
+wants to do right.
+
+00:19:14.500 --> 00:19:19.160
+So it is still be a stochastic system but
+it could potentially not be a stochastic system
+
+00:19:19.160 --> 00:19:24.059
+if you know everything about the world right
+but we are making it stochastic by virtue
+
+00:19:24.059 --> 00:19:30.810
+of ignoring certain things that we could potentially
+know about the system right and ignoring this
+
+00:19:30.810 --> 00:19:35.150
+makes the system design a lot simpler maybe
+we are giving up some things in terms of how
+
+00:19:35.150 --> 00:19:39.580
+optimal or solutions can be but that is a
+trade-off that you will often have to make
+
+00:19:39.580 --> 00:19:46.460
+right so just the formulation itself is not
+an easy task way to think about it a lot to
+
+00:19:46.460 --> 00:19:49.860
+figure out toward it be the right place to
+draw the line okay.
+
+00:19:49.860 --> 00:19:53.620
+So these are the actions that we have to take
+so I can actively seek can is wait for ken's
+
+00:19:53.620 --> 00:19:57.730
+recharge is that something else that we have
+to specify so I specified the stage they specify
+
+00:19:57.730 --> 00:20:07.250
+the actions we specified rewards for events
+right so if I collector can I get a plus one
+
+00:20:07.250 --> 00:20:11.660
+right if I run out of battery you get a minus
+three then if a recharge you get is you these
+
+00:20:11.660 --> 00:20:15.550
+are events that could happen in the world
+right so these are so I have to relate this
+
+00:20:15.550 --> 00:20:23.980
+to the states and actions only then I can
+tell you what is the expected reward.
+
+00:20:23.980 --> 00:20:27.630
+I will not talk about time at all right so
+I told you for that at least for the initial
+
+00:20:27.630 --> 00:20:32.230
+part of the course will not talk about time
+with how long it run say so what is it that
+
+00:20:32.230 --> 00:20:35.960
+we need suppose I am actively seeking cans
+what is the probability I will get a reward
+
+00:20:35.960 --> 00:20:42.150
+of +1 if I am actively seeking cans right
+what is the probability that I will find a
+
+00:20:42.150 --> 00:20:51.750
+can correct it is I need to still specify
+that if I am actively you are if I am waiting
+
+00:20:51.750 --> 00:20:59.840
+for cans to come like what is the probability
+that I will get a can what is the derivative
+
+00:20:59.840 --> 00:21:04.880
+of what rid of which one?
+
+00:21:04.880 --> 00:21:21.600
+Yeah yeah was it Oh y-yeah maybe may be not
+I do not know why you chose to move from one
+
+00:21:21.600 --> 00:21:24.490
+to the other night I mean I could have just
+stopped seeking because of his running low
+
+00:21:24.490 --> 00:21:32.730
+on battery right so if I five min some facility
+where people are just taking cancer and throwing
+
+00:21:32.730 --> 00:21:39.410
+them the dustbin that I am a just happily
+go sit next to the can dispensing place and
+
+00:21:39.410 --> 00:21:42.960
+hacked us at the spin rate I will be happily
+getting rewards but I might not even worry
+
+00:21:42.960 --> 00:21:44.300
+about recharging or anything right.
+
+00:21:44.300 --> 00:21:49.330
+So I might just choose to stop right so it
+depends on that depends on the kind of environment
+
+00:21:49.330 --> 00:21:53.470
+you are operating in right so even if I act
+as a dustbin if do I get enough can send I
+
+00:21:53.470 --> 00:21:58.690
+might not want to seek right so maybe there
+is some time of the day maybe between 12and
+
+00:21:58.690 --> 00:22:03.890
+1 30 or something lot of cancel come if I
+just go stand outside the cafeteria I do not
+
+00:22:03.890 --> 00:22:08.170
+have to actively seek Ken's maybe after one
+30 I have to go around seeking cans and I
+
+00:22:08.170 --> 00:22:11.210
+do not know it depends on the system it.
+
+00:22:11.210 --> 00:22:17.480
+I am not trying to be too overly realistic
+here but I am just giving you what are the
+
+00:22:17.480 --> 00:22:21.420
+factors that you have to take into account
+right so if you start talking about what could
+
+00:22:21.420 --> 00:22:26.440
+be optimal policies right then you are going
+down a dangerous path that means you are going
+
+00:22:26.440 --> 00:22:30.880
+to start designing your problem itself depending
+on what you think the solution should be which
+
+00:22:30.880 --> 00:22:35.660
+is a bad thing right you should put in all
+the factors about the problem in the design
+
+00:22:35.660 --> 00:22:39.590
+and then you should go and let the algorithm
+figure out what the solution should be.
+
+00:22:39.590 --> 00:22:45.720
+So you should not start thinking about what
+the solution should be and then try to create
+
+00:22:45.720 --> 00:22:48.860
+the rewards and the model itself I will give
+you an example of that after I finish this
+
+00:22:48.860 --> 00:22:54.640
+I will give an example of when that became
+a problem okay so is it clear so now I need
+
+00:22:54.640 --> 00:22:59.160
+to figure out if I actively seek ends what
+is the probability that I will get cancer
+
+00:22:59.160 --> 00:23:07.520
+right is there anything else I need to know
+yeah we will come to that.
+
+00:23:07.520 --> 00:23:13.030
+Now it is related to that if I am actively
+seeking cans what is the probability that
+
+00:23:13.030 --> 00:23:20.870
+I will run out of battery because that also
+determines my reward right or if I am waiting
+
+00:23:20.870 --> 00:23:25.600
+for Kansas to come what is the probability
+I will run out of battery may be 0 because
+
+00:23:25.600 --> 00:23:31.720
+I have turned off everything and just waiting
+for or maybe there is a leakage that is happening
+
+00:23:31.720 --> 00:23:36.870
+yes a very small probability that I might
+actually run out of battery right so.
+
+00:23:36.870 --> 00:23:42.910
+So I need both of these to actually figure
+out what will be the expected reward right
+
+00:23:42.910 --> 00:23:44.100
+for a state action path.
+
+00:23:44.100 --> 00:23:47.100
+So I need to know what will be the expected
+or what so I have to actually think about
+
+00:23:47.100 --> 00:23:53.110
+both of these things if I am in a high state
+that a time actively seeking cans right so
+
+00:23:53.110 --> 00:24:00.610
+what is the probability I will find a can
+does it depend on whether I am in a high state
+
+00:24:00.610 --> 00:24:05.610
+or not no right so if I am actively seeking
+Ken's what is the probability I will get that
+
+00:24:05.610 --> 00:24:10.290
+can okay so that is one thing I need likewise
+if I am not actively seeking Ken's what is
+
+00:24:10.290 --> 00:24:14.840
+the probability I will get a can that is second
+thing you need on the other hand if I am in
+
+00:24:14.840 --> 00:24:17.060
+a high state and actively seeking cans.
+
+00:24:17.060 --> 00:24:24.690
+What is the probability I will run out of
+battery there are the state matters right
+
+00:24:24.690 --> 00:24:29.260
+and likewise if I am in a low state and actively
+seeking cans what is the probability I run
+
+00:24:29.260 --> 00:24:33.170
+out of battery that state matters likewise
+for waiting for can see if I am in a high
+
+00:24:33.170 --> 00:24:39.280
+state and I am waiting for a can yeah probably
+of me running out of batteries very very minuscule
+
+00:24:39.280 --> 00:24:42.790
+almost you know but I can low state and I
+am waiting for a can so even with the leakage
+
+00:24:42.790 --> 00:24:48.190
+power drawn I met actually run out of battery
+so these are the things so you need to know
+
+00:24:48.190 --> 00:24:49.190
+all of these right.
+
+00:24:49.190 --> 00:24:57.500
+The time being I will say a as the let the
+probability of you getting a can write and
+
+00:24:57.500 --> 00:25:06.380
+ß is the probability of you getting a can
+if you are waiting and then a &gt; ß hopefully
+
+00:25:06.380 --> 00:25:12.840
+typically we were talking about probabilities
+I mean that might be momentarily where ß
+
+00:25:12.840 --> 00:25:18.770
+is higher than a like I said stand outside
+the cafeteria during lunch time but then overall
+
+00:25:18.770 --> 00:25:23.740
+we are going to assume that a &gt;ß since we
+have not actually modeled that the time of
+
+00:25:23.740 --> 00:25:34.720
+day anywhere where is this going to say a
+&gt; ß right.
+
+00:25:34.720 --> 00:25:42.809
+So now what else do we need yet we need to
+define p right so for that what do we need
+
+00:25:42.809 --> 00:25:48.809
+well if I am in state high what is the probability
+I will go to state low okay forget about going
+
+00:25:48.809 --> 00:25:53.360
+to out of battery that is what we needed for
+the rewards but for the test state transition
+
+00:25:53.360 --> 00:25:59.760
+so from high to low what is the probability
+that will happen if I am actively seeking
+
+00:25:59.760 --> 00:26:03.870
+again so that is basically what we need right
+so I mean state hi I am actively seeking a
+
+00:26:03.870 --> 00:26:07.610
+can what is the probability I will stay in
+state high what is the probability will go
+
+00:26:07.610 --> 00:26:12.120
+to state low.
+
+00:26:12.120 --> 00:26:19.330
+Right so like that and likewise if I am in
+state low and I am actively seeking a care
+
+00:26:19.330 --> 00:26:23.860
+what is the probability I will stay in state
+low what is the probability will go to state
+
+00:26:23.860 --> 00:26:31.771
+high and I am in state low and I am waiting
+for can what is the probability I will stay
+
+00:26:31.771 --> 00:26:40.100
+in state lower the probability will go to
+state high right and so on so forth so these
+
+00:26:40.100 --> 00:26:45.480
+are all the things that you need for defining
+the state transition probabilities of course
+
+00:26:45.480 --> 00:26:54.830
+if I am in state high and I do action recharge
+what we want?
+
+00:26:54.830 --> 00:26:56.100
+Exactly.
+
+00:26:56.100 --> 00:27:03.059
+So if I am in state low I do action recharged
+with probability 1 I will go to state height
+
+00:27:03.059 --> 00:27:08.361
+right so we will actually prohibit recharge
+action instate Heidi well it does not make
+
+00:27:08.361 --> 00:27:11.890
+sense I am already fully charged I do not
+want to go plugging in again all right so
+
+00:27:11.890 --> 00:27:28.750
+I will fill diesel of that all depends right
+I could just have a stochastic policy I can
+
+00:27:28.750 --> 00:27:33.440
+say that ok my policy is that if I'm in state
+high with probability 0 point 8 I will search
+
+00:27:33.440 --> 00:27:40.429
+with probability 0 point 2 I will just stay
+so I mean so I am not talking about solutions
+
+00:27:40.429 --> 00:27:41.429
+here.
+
+00:27:41.429 --> 00:27:43.890
+I am just talking about defining the problem
+this is what I was mentioning earlier also
+
+00:27:43.890 --> 00:27:50.980
+do not do not get into how the solution will
+look like right sometimes you will have to
+
+00:27:50.980 --> 00:27:55.010
+think about how the solution will look like
+because you need to know if you are giving
+
+00:27:55.010 --> 00:27:59.520
+the state sufficient expressiveness so that
+you know when the solution should change and
+
+00:27:59.520 --> 00:28:05.500
+things like that but do not worry too much
+about the structure of the solution.
+
+00:28:05.500 --> 00:28:11.909
+So now we will just draw this some kind of
+a state transition diagram.
+
+00:28:11.909 --> 00:28:17.940
+.
+Right so let us do the act state high first
+
+00:28:17.940 --> 00:28:28.429
+so there are two actions from state high one
+and one is actively seek cans right so active
+
+00:28:28.429 --> 00:28:40.480
+so what are the possible outcomes of active
+so what is the probability that I am going
+
+00:28:40.480 --> 00:28:55.150
+to be in high know some values equal is also
+possible well depends on how wide my high
+
+00:28:55.150 --> 00:29:00.130
+band is rate and how much power my actor action
+is going to consider I don't know this is
+
+00:29:00.130 --> 00:29:22.220
+to say some numbers here right what is other
+action I can take here right and what is the
+
+00:29:22.220 --> 00:29:25.750
+something some numbers it has now is there
+anything else I need to specify I need to
+
+00:29:25.750 --> 00:29:30.510
+look at what the reward is going to be for
+having done that right.
+
+00:29:30.510 --> 00:29:50.590
+So what will be the robot here what yeah I
+will get plus one for a can but the expected
+
+00:29:50.590 --> 00:29:53.799
+number of cans I am going to collect this
+a right there is a probability of me getting
+
+00:29:53.799 --> 00:30:05.350
+a can so the expected reward will be a right
+likewise here the expected what is going to
+
+00:30:05.350 --> 00:30:12.640
+be so from low I again three actions no from
+low I have three actions or to read a three
+
+00:30:12.640 --> 00:30:31.800
+actions so what are the actions right so I
+will do the easy one first right from low
+
+00:30:31.800 --> 00:30:39.990
+if I do recharge with probability 1 I will
+go to high and I will get 0 to 1 right.
+
+00:30:39.990 --> 00:30:46.549
+So now come see more interesting suppose I
+do wait here the rein chance that we will
+
+00:30:46.549 --> 00:31:07.770
+go to hide I could write so it is also possible
+but very low very low probability when I am
+
+00:31:07.770 --> 00:31:12.840
+not doing anything so if I already set point
+one here is the probability of discharging
+
+00:31:12.840 --> 00:31:31.990
+I will say point 1 minus and I would still
+get a can write and this one is 
+
+00:31:31.990 --> 00:32:14.039
+likewise if I am actively seeking the set
+mixes some small probability I met not discharged
+
+00:32:14.039 --> 00:32:19.559
+and they will keep accruing rewards at a right
+but then I might actually discharged with
+
+00:32:19.559 --> 00:32:23.620
+a high probability and then I go to the high
+state and I also get the additional minus
+
+00:32:23.620 --> 00:32:24.720
+3 along the way.
+
+00:32:24.720 --> 00:32:30.429
+I mean whether you do this + ß + a or not
+is again a choice right you can say that as
+
+00:32:30.429 --> 00:32:35.630
+if I run out nobody is actually going to give
+me a can right so people might snatch away
+
+00:32:35.630 --> 00:32:40.120
+they can I already have I do not know what
+you can choose whatever I mean this is again
+
+00:32:40.120 --> 00:32:44.100
+a choice I just I just chose to add the a
+and ß here we can just not do but you can
+
+00:32:44.100 --> 00:32:48.340
+you get the sense of what we are doing here
+right so is a very simple problem it took
+
+00:32:48.340 --> 00:32:53.200
+us a while to identify all the factors right
+and we chose to ignore a whole bunch of factors
+
+00:32:53.200 --> 00:32:56.940
+because you identified a lot of useful factors
+right we chose to ignore a whole bunch of
+
+00:32:56.940 --> 00:33:02.920
+factors or in order to come up with a simple
+tractable MDP right okay.
+

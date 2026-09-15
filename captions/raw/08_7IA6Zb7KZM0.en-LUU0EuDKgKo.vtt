@@ -1,0 +1,1344 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:24.369 --> 00:00:36.350
+Now you remember but how many class we have
+for branded algorithms 4 you will try okay
+
+00:00:36.350 --> 00:00:41.960
+fine because the rate at which I am going
+I will probably need one more class just to
+
+00:00:41.960 --> 00:00:47.220
+finish the two proofs I wanted to do today
+so which should mean I would need one more
+
+00:00:47.220 --> 00:00:58.270
+extra class for finishing all of brand is
+did we do 4 class last year 6 yeah I think
+
+00:00:58.270 --> 00:01:22.490
+I we did we had visiting faculty you were
+talk okay. We have oh good fine then I am
+
+00:01:22.490 --> 00:01:27.159
+not too bad of okay.
+.
+
+00:01:27.159 --> 00:01:45.840
+Okay since of writing the compression 2ln
+n/s all over right so I am defining that as
+
+00:01:45.840 --> 00:01:54.490
+Cns okay then if I write Cn-1s it is ln of
+n-1/s and then I can do Cn, s + n so on forth
+
+00:01:54.490 --> 00:02:00.410
+right I can just like a function just substitute
+that make my life little easier right so the
+
+00:02:00.410 --> 00:02:06.220
+goal now as I mentioned earlier is to upper
+bound this expectation right so I will never
+
+00:02:06.220 --> 00:02:13.739
+play a suboptimal on more than this many times
+okay that is necessarily what we are try to
+
+00:02:13.739 --> 00:02:34.090
+show okay so one other notation I will just
+adopt the notation used in the proof here
+
+00:02:34.090 --> 00:02:37.819
+even though we introduced a different notation
+in the previous class where the same thing
+
+00:02:37.819 --> 00:02:50.780
+get makes it little easier for me.
+This notation indicates a I mean it denotes
+
+00:02:50.780 --> 00:02:56.939
+a random variable corresponding to that indicator
+right so this is a random variable whose value
+
+00:02:56.939 --> 00:03:08.590
+1 if IT = I whose value sis 0 if IT = not
+equal to I okay so whatever is this I will
+
+00:03:08.590 --> 00:03:15.939
+put in some kind of events of here later right
+so if IT = I then what does it mean it means
+
+00:03:15.939 --> 00:03:32.129
+that okay fine I apologies for the confusion
+this yeah so when I say In = I okay it means
+
+00:03:32.129 --> 00:03:40.730
+that at time n I played MI right so if this
+the hole expression within curly braces will
+
+00:03:40.730 --> 00:03:50.079
+be one if at time at n I played MI it will
+be 0 if at time n I played arm not I okay
+
+00:03:50.079 --> 00:03:55.909
+so there are couple of things which we can
+observe about this so at any instant I In
+
+00:03:55.909 --> 00:04:00.900
+= I will be 1 for some I for everything it
+will be .
+
+00:04:00.900 --> 00:04:06.700
+Right because at very time instant I can play
+only arm and at every time instance In I will
+
+00:04:06.700 --> 00:04:40.280
+play at least 1 arm so it will be 1 for 1
+of the arms so everything it will be 0 okay
+
+00:04:40.280 --> 00:04:50.370
+this yeah the paper is not really the most
+accessible of papers out there right so if
+
+00:04:50.370 --> 00:04:54.940
+you are going to read it on your own you will
+have to do some work okay so these are not
+
+00:04:54.940 --> 00:05:02.610
+I mean they just assume that to your are all
+really smart people reading the paper so since
+
+00:05:02.610 --> 00:05:06.380
+some of the gabs that you will have to fill
+in yourself right I am just doing one of the
+
+00:05:06.380 --> 00:05:09.370
+proofs in the papers so if you want to read
+the rest of the paper and understand all the
+
+00:05:09.370 --> 00:05:11.620
+theorems and all the algorithms that they
+describe in the paper.
+
+00:05:11.620 --> 00:05:17.950
+So you will need to some additional work okay
+so L is some arbiter positive integer so I
+
+00:05:17.950 --> 00:06:07.159
+start by saying this t as a running variable
+okay so the number of times I played arm I
+
+00:06:07.159 --> 00:06:16.800
+up till the nth instant will be one which
+I get from the initialization + k+1 obviously
+
+00:06:16.800 --> 00:06:22.800
+I could have played that ram again in the
+first K times right in the first k times I
+
+00:06:22.800 --> 00:06:27.599
+will play each arm only once right so am I
+also I would have also played once so in the
+
+00:06:27.599 --> 00:06:33.159
+first skate trails the S will be just 1 so
+I just have that 1 there and from the k +
+
+00:06:33.159 --> 00:06:42.180
+trail till the nth trail I add the number
+of times this variable is 1 what does it mean
+
+00:06:42.180 --> 00:06:49.409
+number of times I have taken arm I rights
+so I M – I will be 1 when ever take arm
+
+00:06:49.409 --> 00:06:53.919
+I so I just sum this up so that so that the
+number of times I played arm I is what I get
+
+00:06:53.919 --> 00:07:01.110
+right.
+Is it fine this expression is fine okay this
+
+00:07:01.110 --> 00:07:07.200
+is the only directly inductive path that we
+have here soon after this whatever you do
+
+00:07:07.200 --> 00:07:16.520
+or these are standard tricks that people play
+to bound random variables okay so to actually
+
+00:07:16.520 --> 00:07:23.199
+tell you about the general techniques all
+of this I recommend you take the ATTCO course
+
+00:07:23.199 --> 00:07:30.210
+because about third of the course is all about
+how to do proofs like this right how many
+
+00:07:30.210 --> 00:07:36.629
+of you have ATTCO already advanced techniques
+in theoretical computer science theory of
+
+00:07:36.629 --> 00:07:40.930
+computation.
+Okay that is a course that Jayala Srama teaches
+
+00:07:40.930 --> 00:07:47.570
+in the CS department so it is very relevant
+to lot of ml reaches because more lot, machine
+
+00:07:47.570 --> 00:07:53.819
+learning has become like randomized algorithms
+right so if people teach you how to analysis
+
+00:07:53.819 --> 00:07:57.220
+randomize algorithms you can take the same
+ideas and you algorithms machine learning
+
+00:07:57.220 --> 00:08:02.220
+algorithm as well so lot of the tools that
+are developed there are useful here and many
+
+00:08:02.220 --> 00:08:08.000
+of the things that we do here right essentially
+have their roots in the kind of analysis that
+
+00:08:08.000 --> 00:08:16.020
+people do for randomized algorithms okay.
+Any way we so we will start by doing that
+
+00:08:16.020 --> 00:08:22.500
+so I have an orbiter number l okay I say that
+okay fine let us assume that I played that
+
+00:08:22.500 --> 00:08:55.780
+arm L time okay then let us start counting
+
+00:08:55.780 --> 00:09:06.329
+right so assuming that up till the M- 1 step
+okay I have L or greater than L right only
+
+00:09:06.329 --> 00:09:12.209
+then I will count this sample so at some point
+I have discovered the I have pulled arm I
+
+00:09:12.209 --> 00:09:18.079
+okay should I add it to my count or not what
+I do I go head and look at the cumulative
+
+00:09:18.079 --> 00:09:23.260
+count so far if the cumulative count is L
+or higher I Add it to my count if it is below
+
+00:09:23.260 --> 00:09:31.940
+L I do not add it to my count because I am
+any way starting count from L okay.
+
+00:09:31.940 --> 00:09:38.040
+So this is slightly different way of doing
+that this I will star the count from some
+
+00:09:38.040 --> 00:09:42.620
+arbitrary number give that I have taken that
+arbitrary number already right so later on
+
+00:09:42.620 --> 00:09:48.610
+we will since now are going to bound this
+expression assuming that at least L time I
+
+00:09:48.610 --> 00:09:56.470
+have taken the arm right and then we will
+drive a bound for L so that we get whatever
+
+00:09:56.470 --> 00:10:01.050
+probability we want okay so that is idea behind
+doing this so this I can now derive a bound
+
+00:10:01.050 --> 00:10:07.240
+for this assuming I have done at least L time
+right then I will go back and find what is
+
+00:10:07.240 --> 00:10:14.350
+that value of L so that I get whatever probabilities
+I want right whatever grantees I want I will
+
+00:10:14.350 --> 00:11:22.980
+go and find that L okay that essentially we
+are going to do here.
+
+00:11:22.980 --> 00:12:39.630
+Okay I just need more notation here write
+this let me try this any way so when am I
+
+00:12:39.630 --> 00:12:54.871
+going to take arm I right when will I take
+arm I when arm I has the highest right arm
+
+00:12:54.871 --> 00:13:01.339
+I has the highest value for this quantity
+right when will I take arm I when in that
+
+00:13:01.339 --> 00:13:02.339
+as the highest value.
+.
+
+00:13:02.339 --> 00:13:11.130
+For this quantity among all the arms specifically
+I will take arm I only when Q+ C so that root
+
+00:13:11.130 --> 00:13:18.740
+term is now C right that root there is what
+I have written as C so I will take arm I only
+
+00:13:18.740 --> 00:13:29.709
+when Q+ that C term is greater than Q ( A*
++ the C term corresponding to S term.
+
+00:13:29.709 --> 00:13:33.080
+.
+Yes that is why I have lesser than or equal
+
+00:13:33.080 --> 00:13:39.200
+to here see at especially this should be 2
+right in fact it as larger than everything
+
+00:13:39.200 --> 00:13:46.269
+else but at least it has to be larger than
+S * right so it has been every other action
+
+00:13:46.269 --> 00:13:51.290
+but like he lightly pointed outer so this
+is the larger set there when I will actually
+
+00:13:51.290 --> 00:13:57.070
+be taking action but that is okay because
+I am trying to upper bound it right I am trying
+
+00:13:57.070 --> 00:14:01.000
+to give an exact number because trying to
+give exact number make it two involve right
+
+00:14:01.000 --> 00:14:04.920
+I am just trying to give an upper bound so
+I'm saying very specifically I am looking
+
+00:14:04.920 --> 00:14:09.630
+at the best arm I am saying that this should
+be better than the best arm.
+
+00:14:09.630 --> 00:14:21.360
+At least right so anything else we need have
+will still have this right that condition
+
+00:14:21.360 --> 00:14:36.089
+is also there so will but that conation back
+in and what does this curly bracket mean it
+
+00:14:36.089 --> 00:14:41.260
+is the curly bracket is a random variable
+that indicates the value of 1 and the expression
+
+00:14:41.260 --> 00:14:45.650
+within the curly bracket is true it will have
+value of 0 and expression with the curly bracket
+
+00:14:45.650 --> 00:14:54.480
+is falls so essentially this summation counts
+how may time this in equality become true
+
+00:14:54.480 --> 00:15:01.790
+after I as been taken L times nice so that
+I what we did here right so this counting
+
+00:15:01.790 --> 00:15:07.199
+is whatever we are doing here is after L times
+I has been taken because L I have added here
+
+00:15:07.199 --> 00:15:12.449
+as a count so like vise I am counting the
+number of times is in equality becomes true
+
+00:15:12.449 --> 00:15:18.300
+after I has been taken L times.
+So this is essentially what I have so far
+
+00:15:18.300 --> 00:15:41.490
+right. Back here this entire thing take another
+seat vacant here if you want to move as well
+
+00:15:41.490 --> 00:15:57.649
+you can see everything you guys are fine right
+no not to complain because I will tell you
+
+00:15:57.649 --> 00:16:05.740
+there is row vacant here no cannot you see
+what I have warren or do not understand what
+
+00:16:05.740 --> 00:16:14.380
+I have written well sun scripts become small
+right so right then large then it becomes
+
+00:16:14.380 --> 00:16:23.589
+confusing so that is Cm- 1 for people who
+cannot read it I am reading it that Cm -1
+
+00:16:23.589 --> 00:16:28.730
+, T A*M-1.
+That is basically the number of times I have
+
+00:16:28.730 --> 00:16:35.279
+played A * until the M-1 nth point right note
+that I do not have to know this because I
+
+00:16:35.279 --> 00:16:41.139
+do not know what is A* right this is just
+the there but you know the there exists A
+
+00:16:41.139 --> 00:16:50.810
+* right and I know that my I as to have better
+whatever into that quantity then A* let so
+
+00:16:50.810 --> 00:16:55.399
+it is just that right I do not know I do not
+need to know which is A* okay just do not
+
+00:16:55.399 --> 00:17:04.300
+get confused by the fact that I'm using A*
+in the proof right did you get that CM-1 , TA*M-1
+
+00:17:04.300 --> 00:17:18.390
+and this CM-1 , TI (m-1) no A* is a true.
+Bets action which you do not know anything
+
+00:17:18.390 --> 00:17:24.640
+about right for reader we have to compare
+again so true best action right so we are
+
+00:17:24.640 --> 00:17:31.350
+comparing against the true best action right
+okay so far so good people can who could not
+
+00:17:31.350 --> 00:17:43.010
+see heared me right and people understand
+what is going on right so now we will I'm
+
+00:17:43.010 --> 00:17:50.000
+shifting over here.
+.
+
+00:17:50.000 --> 00:18:50.080
+Writing one line I am talking for 10 minutes
+man really we too have an additional index
+
+00:18:50.080 --> 00:19:08.240
+for the Q-function for us to say this things,
+right. What I write there is M-1 so the Q-function
+
+00:19:08.240 --> 00:19:14.940
+at step M-1 okay I really need that additional
+thing because Q keeps changing over time right
+
+00:19:14.940 --> 00:19:19.570
+so I need to know at what stage I am talking
+about the Q-function, so at that point I am
+
+00:19:19.570 --> 00:19:27.640
+talking about the Q-function at the M-1 stage,
+right. Remember that the Q-function at the
+
+00:19:27.640 --> 00:19:32.270
+M-1 stage can be the same as the Q-function
+at the M stage if I had not taken the action
+
+00:19:32.270 --> 00:19:36.200
+previous.
+At the M-1 stage if I am not taking action
+
+00:19:36.200 --> 00:19:41.110
+A for action I then at the M stage also the
+Q-function of action A will be the same it
+
+00:19:41.110 --> 00:19:47.750
+will interchange, right just you have to be
+careful about how you interpret the index
+
+00:19:47.750 --> 00:20:16.970
+and I hope I also do not mess it up when I
+do this lecture. No so we do read the different
+
+00:20:16.970 --> 00:20:28.429
+interpretation for and I do need an additional
+notation I follow this for that 
+
+00:20:28.429 --> 00:20:31.400
+because we need to what we need to insert
+into this bound here.
+
+00:20:31.400 --> 00:20:42.720
+Is the number of time I have taken A* so far,
+right what I need to insert into this one,
+
+00:20:42.720 --> 00:20:52.470
+is the number of times I have taken A* so
+far which is TA* M-1 right and so it become
+
+00:20:52.470 --> 00:21:01.020
+a little combustion now this can be is this
+will be TA* or X okay fine we can get away
+
+00:21:01.020 --> 00:22:01.690
+with that. If it is a little weird expression
+so what I am saying here is okay take the
+
+00:22:01.690 --> 00:22:08.490
+minimum of this expression okay overall time
+instant 0 to end.
+
+00:22:08.490 --> 00:22:17.190
+Take the maximum of this expression right
+for all time instant L to M okay and look
+
+00:22:17.190 --> 00:22:24.370
+at the number of times one will be had on
+the other, right. This will be on over count
+
+00:22:24.370 --> 00:22:33.510
+of that event this is clear right but here
+I am talking about this quantity being higher
+
+00:22:33.510 --> 00:22:41.559
+than this quantity at that particular instant
+right I am talking about some time M-1 where
+
+00:22:41.559 --> 00:22:44.990
+the quantity for A* was lesser than the quantity
+for write.
+
+00:22:44.990 --> 00:22:50.210
+Talking about sometime instant M-1 at which
+this happened here what I am talking about,
+
+00:22:50.210 --> 00:22:56.919
+okay at a time M-1 right I look at all the
+A* values I have had in the previous time
+
+00:22:56.919 --> 00:23:05.200
+step okay, I will take the least of that,
+right and I will take all the I values Qi
+
+00:23:05.200 --> 00:23:09.429
+values I have added in the previous time step
+I will take the maths of that okay.
+
+00:23:09.429 --> 00:23:15.500
+If the maths of this is greater than the min
+of that then I will count that has 1 right
+
+00:23:15.500 --> 00:23:22.020
+so can you convince yourself that, that event
+will certainly be counted right because at
+
+00:23:22.020 --> 00:23:26.190
+that instant the values already greater so
+obviously the maths will be greater than the
+
+00:23:26.190 --> 00:23:34.790
+min so if this is not the Min right the Min
+should be lesser than this and if this is
+
+00:23:34.790 --> 00:23:38.760
+not the maths then the maths should be greater
+than this.
+
+00:23:38.760 --> 00:23:43.020
+So if this value is greater than this value
+then the some quantity greater than this value
+
+00:23:43.020 --> 00:23:48.140
+will certainly be greater than some quantity
+lesser than this value right you can see t
+
+00:23:48.140 --> 00:23:57.710
+that right, so this is just the over count
+of that event, right why am I writing this
+
+00:23:57.710 --> 00:24:07.850
+over count? Because it makes it easier for
+me to sorry now that is the event right the
+
+00:24:07.850 --> 00:24:12.850
+curly brackets makes it easier for me to write
+a expression.
+
+00:24:12.850 --> 00:24:43.840
+Yeah what is it, one second I will come let
+me finish yeah 0 &lt;S&lt;M L&lt;= S less than because
+
+00:24:43.840 --> 00:24:49.070
+L because I am I have that condition there
+right I have to I have to take this atleast
+
+00:24:49.070 --> 00:24:54.930
+L times, so the first L time what happens
+I do not worry so I will remove that right
+
+00:24:54.930 --> 00:24:59.850
+so only after that I am worried about, but
+this will be an over count okay this will
+
+00:24:59.850 --> 00:26:06.130
+be an over count of that. So little tricky
+here so know the proof actually assumes that
+
+00:26:06.130 --> 00:26:12.559
+at this point, okay.
+I have taken this at least S times not TES
+
+00:26:12.559 --> 00:26:18.380
+or S times okay the it is mainly because this
+is the notation translation problem but we
+
+00:26:18.380 --> 00:26:23.179
+will see we work with this and then I will
+probably adjust the results later, right.
+
+00:26:23.179 --> 00:26:27.059
+But we are reading the proof I am just telling
+you there is a mismatch in the notation that
+
+00:26:27.059 --> 00:26:31.470
+we have used so far, okay. But this is the
+neat trick that we have noted, right. We have
+
+00:26:31.470 --> 00:26:37.880
+taken rid of all the Min Max and everything,
+right,
+
+00:26:37.880 --> 00:26:45.000
+So what are we doing here so assume that the
+Min occurs at some index right let us call
+
+00:26:45.000 --> 00:26:55.000
+that index I do not p1 let we assume that
+the Max occurs at some index say P2 right,
+
+00:26:55.000 --> 00:27:01.790
+so now what I am doing here is I am summing
+over all possible indices for A when I am
+
+00:27:01.790 --> 00:27:10.179
+summing over all possible indices for I, correct.
+So the combination P1, P2 will occur somewhere
+
+00:27:10.179 --> 00:27:13.000
+because I am summing over all possible indices,
+right.
+
+00:27:13.000 --> 00:27:22.070
+At some point I would have use P1 for S and
+P2 for SA, correct because I am summing over
+
+00:27:22.070 --> 00:27:26.830
+all possible indices right so what was P1,
+P1 was the one for which this minimum was
+
+00:27:26.830 --> 00:27:32.289
+achieved P2 was the one for which this maximum
+was achieved, so when I am summing over S
+
+00:27:32.289 --> 00:27:38.270
+at some point S will have P1 at some point
+Si will have P2 right, at that point this
+
+00:27:38.270 --> 00:27:43.590
+expression will surely be true because I know
+from the Min and Max argument that we have
+
+00:27:43.590 --> 00:27:49.809
+earlier that will be true.
+So I will certainly be counting this right
+
+00:27:49.809 --> 00:27:53.520
+I will be over counting I will be counting
+other things also but I will certainly be
+
+00:27:53.520 --> 00:27:57.820
+counting this, so essentially so far we have
+not lost anything we are essentially still
+
+00:27:57.820 --> 00:28:05.559
+be maintaining at as Upper bond okay, so we
+started of with this event right now we have
+
+00:28:05.559 --> 00:28:10.610
+done a lot of simplifications and kept loosening
+the bound to this was a strict equality and
+
+00:28:10.610 --> 00:28:13.940
+there was nothing here, right.
+This was strict equality no approximation
+
+00:28:13.940 --> 00:28:20.840
+here, so from there at every step I am essentially
+counting a larger and larger event, now the
+
+00:28:20.840 --> 00:28:28.000
+thing is I have come to a point where I have
+a simple enough expression right that I can
+
+00:28:28.000 --> 00:28:37.269
+try to bound directly now, okay. So you can
+start thinking know this kind of should lead
+
+00:28:37.269 --> 00:28:41.640
+you to the shun of opting bond I can use the
+bound shun of opting bound to try and bound
+
+00:28:41.640 --> 00:28:48.779
+this expression.
+This is simple enough expression, okay. So
+
+00:28:48.779 --> 00:28:57.200
+this is true okay this is true when can this
+happen? So my claim is this can be true if
+
+00:28:57.200 --> 00:29:51.409
+one of several conditions hold right, so this
+can be true if, okay this can be true if I
+
+00:29:51.409 --> 00:30:03.240
+am either I am grossly under estimating my
+optimal actions value, right. So this is my
+
+00:30:03.240 --> 00:30:11.230
+optimal actions estimate now this is the true
+value right so the true value minus the confidence
+
+00:30:11.230 --> 00:30:14.640
+bound.
+Are other way around think about it, right.
+
+00:30:14.640 --> 00:30:21.919
+This Qs(A*) plus the confidence bound is less
+than the true value that means I am grossly
+
+00:30:21.919 --> 00:30:28.360
+under estimating the true value that is one
+thing right. So that could be one condition
+
+00:30:28.360 --> 00:30:36.140
+under which this could be true or it could
+be another condition your grossly over estimating
+
+00:30:36.140 --> 00:30:44.710
+the Ith value you are getting it, so either
+I have to make a big mistake for my Q*, A*
+
+00:30:44.710 --> 00:30:49.100
+or I have to make a big mistake the other
+way for my I right you see that, right.
+
+00:30:49.100 --> 00:30:55.440
+So I have to either come very down from a
+true Q* value I mean a Q*, A* or I have to
+
+00:30:55.440 --> 00:31:01.159
+be much above my normal value otherwise this
+is not going to happen, right. So second condition
+
+00:31:01.159 --> 00:31:35.080
+is, okay. Or when can it happen without me
+grossly over estimating or under estimating
+
+00:31:35.080 --> 00:31:44.350
+it? When the two values are close right if
+the two values the A* value and the I value
+
+00:31:44.350 --> 00:31:49.039
+are close to each other then I really do not
+have to gross and under estimate these things.
+
+00:31:49.039 --> 00:31:54.360
+So it is possible that I still could make
+errors, right. So essentially the other condition
+
+00:31:54.360 --> 00:32:31.429
+is right so I have my twice my take the confidents
+interval right so I have a confidents interval
+
+00:32:31.429 --> 00:32:41.440
+add here I will add from that side, right.
+So I will add a confidents interval right
+
+00:32:41.440 --> 00:32:47.779
+so I am taking twice the confidents interval
+from my lower value right, from the lower
+
+00:32:47.779 --> 00:32:52.230
+value I take twice the confidents interval.
+In the topper value there is optimal actions
+
+00:32:52.230 --> 00:32:57.950
+value lies within that right then I can make
+a mistake without making a gross error also,
+
+00:32:57.950 --> 00:33:04.950
+right I simply I am saying that these two
+are close together, right. And close is a
+
+00:33:04.950 --> 00:33:12.200
+relative term close is defined in terms of
+the current uncertainty I have, right. Because
+
+00:33:12.200 --> 00:33:15.010
+this is going to change every time I take
+an action this is going to become smaller
+
+00:33:15.010 --> 00:33:18.950
+and smaller, right.
+So at the beginning of the learning this can
+
+00:33:18.950 --> 00:33:26.299
+be fairly large so I can still make a mistake
+right even if the means are slightly far apart,
+
+00:33:26.299 --> 00:33:31.540
+right. So this is the 3 conditions one of
+this at least will have to be satisfied for
+
+00:33:31.540 --> 00:33:38.389
+these event to become true, second one says
+when second one is easy man, so the first
+
+00:33:38.389 --> 00:33:50.559
+one says okay I have my Q(A*) and I have my
+confidents bound this is the first one okay
+
+00:33:50.559 --> 00:33:57.840
+and the true Q*, A* is there, okay.
+That means I have grossly under estimated
+
+00:33:57.840 --> 00:34:09.600
+my Q*A* this is one condition, so the second
+condition says this is Q(I) right and this
+
+00:34:09.600 --> 00:34:22.560
+is Q*(I) so grossly overestimated by Q*(I)
+this is essentially what the second condition
+
+00:34:22.560 --> 00:34:31.480
+says so this is QI &gt; Q*I + the confidents
+one so this is the confidents bound so Q*I
+
+00:34:31.480 --> 00:34:38.670
++ this confidents bound will be only till
+here, right. But QI is greater than that.
+
+00:34:38.670 --> 00:34:49.510
+No, no is that eternal condition that can
+hold right when both of these do not hold
+
+00:34:49.510 --> 00:34:55.840
+also I could still be making a mistake right
+I could still this could still be one if the
+
+00:34:55.840 --> 00:35:08.330
+true means or not far apart with respect to
+this error bar I have. See basically what
+
+00:35:08.330 --> 00:35:17.640
+I am saying is, a true Q* could be somewhere
+here right but I still can make a mistake
+
+00:35:17.640 --> 00:35:30.100
+because it is too close. So probably draw
+all this pictures and put it somewhere permanently.
+
+00:35:30.100 --> 00:35:36.920
+Because every time I seem to be re-creating
+this pictures, right. So I have first thing
+
+00:35:36.920 --> 00:35:44.330
+I said okay the Q * is somewhere there right
+I make a mistake right so and then I have
+
+00:35:44.330 --> 00:35:52.090
+this guy right is possible for me to make
+an error, right and then the other case was
+
+00:35:52.090 --> 00:35:59.330
+okay this the true Q was somewhere here this
+possible for me to make a mistake right this
+
+00:35:59.330 --> 00:36:06.030
+third case say no none of this really need
+to happen, right the true Q* could be well
+
+00:36:06.030 --> 00:36:15.840
+within the boards right, but given the current
+uncertainty I have in my Q(I) right, so the
+
+00:36:15.840 --> 00:36:24.230
+true means are not so far apart right this
+is uncertainty cannot over well made right
+
+00:36:24.230 --> 00:36:29.080
+the true means are actually within the uncertainty.
+Therefore, I could still make a mistake so
+
+00:36:29.080 --> 00:36:45.640
+the first condition is not true the second
+condition is not true but I still made the
+
+00:36:45.640 --> 00:36:52.910
+mistake, okay.
+So people have all of this expression everyone
+
+00:36:52.910 --> 00:37:01.960
+has in their notebooks people who are writing
+notes, people were not writing notes you have
+
+00:37:01.960 --> 00:37:08.260
+this in your memory, because I am going to
+erase it but I am going to write it again,
+
+00:37:08.260 --> 00:37:33.670
+okay so I want to all of you to remember this.
+.
+
+00:37:33.670 --> 00:38:30.320
+Okay, so let us look at 1, so I want to look
+at the probability that a* what did I do so
+
+00:38:30.320 --> 00:38:45.270
+I want to bound that probability, right so
+can I do that remember I told you Sn is Q,
+
+00:38:45.270 --> 00:38:55.110
+I told you µ is Q* right, so we have they
+already right, if you remember when I wrote
+
+00:38:55.110 --> 00:38:58.920
+down the Hoeffding machine of bound, I told
+you their comparison right, I told you that
+
+00:38:58.920 --> 00:39:08.100
+Sn is Q µ is Q* so you have those there,
+right. So essentially then a e becomes CM
+
+00:39:08.100 --> 00:39:38.670
+right and by bound is e-2e2n right, and what
+is Cn so it is 2lnn/s2.
+
+00:39:38.670 --> 00:39:59.490
+.
+Okay, then simplified and tell what is the
+
+00:39:59.490 --> 00:40:12.640
+answer? So what is your n there, now what
+is the n that you have yo plug in to the expression,
+
+00:40:12.640 --> 00:40:25.510
+S this is where the thing became a little
+messy because the paper is S as the, when
+
+00:40:25.510 --> 00:40:31.360
+they introduce an addition notation, right
+but I did not use that I try to use the t*
+
+00:40:31.360 --> 00:40:37.340
+ta* notation itself, so it biomes ta* of S
+that is that thing that you have to plug in,
+
+00:40:37.340 --> 00:40:43.910
+okay so simplified and tell me what is the
+answer.
+
+00:40:43.910 --> 00:40:48.830
+.
+So I plug in ta* of S here M here right, and
+
+00:40:48.830 --> 00:40:56.460
+then I have to square it basically that is
+my e that will get squared, right so my ta*
+
+00:40:56.460 --> 00:41:11.940
+of S and my ta* of S get cancelled, right
+I get ln m come on, after all that we have
+
+00:41:11.940 --> 00:41:16.280
+done so far you could do this simplification
+easily enough just substitute this into that
+
+00:41:16.280 --> 00:41:23.180
+and then cancel things out and tell me what
+is happening.
+
+00:41:23.180 --> 00:41:30.390
+.
+1/m4 right, so essentially this will be Sn
+
+00:41:30.390 --> 00:42:38.050
+is equal to okay, so what about the second
+term okay, what about the third term okay,
+
+00:42:38.050 --> 00:42:50.030
+here is where we are going to use our mysterious
+L right, what did L what did I introduce L
+
+00:42:50.030 --> 00:42:55.900
+for I said that hey, I have done so many number
+of trails already, okay I am only looking
+
+00:42:55.900 --> 00:43:02.210
+at these events after that many number of
+times I have taken our MI, right.
+
+00:43:02.210 --> 00:43:33.760
+So I am going to make the following statement
+
+00:43:33.760 --> 00:43:44.120
+if I taken sufficient number of trials initially
+okay, if I have taken sufficient number of
+
+00:43:44.120 --> 00:43:53.520
+pulls of form i initially this event will
+never happen that is what I am claiming, right
+
+00:43:53.520 --> 00:44:14.370
+this rather easy to see right, so what do
+we have, we have q*a*-a*i-2Cm, okay right.
+
+00:44:14.370 --> 00:44:48.090
+SO 
+
+00:44:48.090 --> 00:44:55.600
+essentially I am saying that my TiSi is at
+least this much, right so that is what this
+
+00:44:55.600 --> 00:45:00.950
+means right okay, say L is equal to this much
+that means the number of times I have taken
+
+00:45:00.950 --> 00:45:08.020
+are my is at least this much.
+If you remember my Si ? starts from L right,
+
+00:45:08.020 --> 00:45:16.570
+I consider Si only from L so if say L is this
+so that means my TiSi is at least this much,
+
+00:45:16.570 --> 00:45:23.080
+correct go and plug this into my Cn expression.
+.
+
+00:45:23.080 --> 00:45:33.250
+So if my S is this much at least this much
+so what do I get, I get 2/8 ln m I mean ?a2
+
+00:45:33.250 --> 00:45:46.110
+will go up so ln m, ln m will get cancel,
+right so 2/8 will become 1/4 that is 1/2,
+
+00:45:46.110 --> 00:45:56.360
+1/2 x?i right, so 1/2 and 1/2 2 will get cancelled
+I will essentially get ?i, right so this expression
+
+00:45:56.360 --> 00:46:04.560
+will become.
+.
+
+00:46:04.560 --> 00:46:30.140
+Okay, and what is this equal to, so for any
+value of l greater than this, this quantity
+
+00:46:30.140 --> 00:46:39.420
+will be greater than 0 that means this is
+inequality will not fall, correct you people
+
+00:46:39.420 --> 00:46:53.590
+see there you want me to do that again, yes
+okay, so I am saying L is going to be at least
+
+00:46:53.590 --> 00:47:01.110
+this much so then if you remember my TiSi
+that the Si? is starting from L I am assuming
+
+00:47:01.110 --> 00:47:03.570
+that at least L times I have taken this already,
+right.
+
+00:47:03.570 --> 00:47:11.010
+So I am assuming you have taken this L times
+already so what I will do is L will plug the,
+
+00:47:11.010 --> 00:47:16.470
+this value for the number of times I have
+taken this already right this value, so I
+
+00:47:16.470 --> 00:47:24.800
+will plug in 8 ln m this is Cm, S right so
+this case look at the expression m, this so
+
+00:47:24.800 --> 00:47:32.910
+this will be ln m right I am plugging in here
+instead of S I will plug in 8 times ln m/?a2
+
+00:47:32.910 --> 00:47:42.830
+right, ln m, ln m will get cancelled so 2/8
+will become 1/4 and divide by ?a2 will go
+
+00:47:42.830 --> 00:47:51.490
+up right, so I will basically get v?a2/4 which
+is ?i/2, right.
+
+00:47:51.490 --> 00:47:55.120
+So I will come and plug in ?i/2 here and 2
+and 2 will get cancelled I will essentially
+
+00:47:55.120 --> 00:47:59.900
+end up getting ?i here, so that is what I
+have written here. So and by definition of
+
+00:47:59.900 --> 00:48:10.260
+?i this expression is 0, right and for values
+larger I mean if I take the ai more times
+
+00:48:10.260 --> 00:48:11.260
+than this will essentially become
+So this is you have done with UCB and they
+
+00:48:11.260 --> 00:48:12.260
+have shown that UCB is regretted is bounded
+and what is the nice thing we shown here is
+
+00:48:12.260 --> 00:48:13.260
+that the regret grows as ln m right, and there
+is a result from the 80s which tells us that
+
+00:48:13.260 --> 00:48:14.260
+you cannot have a regret optimizing algorithm
+that does better than ln m, right what you
+
+00:48:14.260 --> 00:48:15.260
+can try to improve on is the 8, right this
+is also impossible to get of that the ?i is
+
+00:48:15.260 --> 00:48:16.260
+also impossible to get regret of you cannot
+say that I will, I mean if the arms are close
+
+00:48:16.260 --> 00:48:17.260
+in revote right, it becomes hard to eliminate
+the bad arms, right. If they ate far away
+
+00:48:17.260 --> 00:48:18.260
+in revote then you can quickly figure out
+which are the bad arms but the arms are close
+
+00:48:18.260 --> 00:48:19.260
+in revote and it becomes harder to figure
+out so those things are always there.
+
+00:48:19.260 --> 00:48:20.260
+So those are essential components with sop
+basically people flied around with that date,
+
+00:48:20.260 --> 00:48:21.260
+okay and yeah so that is essentially lot of
+work that happens in regulate automate so
+
+00:48:21.260 --> 00:48:22.260
+let to stop here because we have reached 5’o
+greater than 0 and therefore that inequality
+
+00:48:22.260 --> 00:48:23.260
+that I wanted will never hold, if I have taken
+L at least if I have taken action i at least
+
+00:48:23.260 --> 00:48:28.561
+L number times where L is given by that expression.
+The third condition will never hold, okay
+
+00:48:28.561 --> 00:48:34.170
+so the probability of the third condition
+holding is 0 if L is greater than this, right.
+
+00:48:34.170 --> 00:48:41.430
+So now what happens so the probability of
+this whole thing happening is upper bounded
+
+00:48:41.430 --> 00:48:46.270
+by just two times this probability right,
+just add these events up so we are still not
+
+00:48:46.270 --> 00:49:02.610
+done. Where are we, so are bounding the expected
+value of the thing right, so we have expected
+
+00:49:02.610 --> 00:50:13.500
+value of, so and I am going to say you to
+write this out here okay.
+
+00:50:13.500 --> 00:50:21.020
+So this is lesser than or equal 8ln m/?a2
+because that is L plus the ? terms that we
+
+00:50:21.020 --> 00:50:27.060
+had earlier right, and I am substituting a
+specific value for L here okay, then what
+
+00:50:27.060 --> 00:50:34.380
+will be the internal term here. Remember,
+we have this random variable which could take
+
+00:50:34.380 --> 00:50:39.940
+values of 1 or 0 so what is the expected value
+of the random variable is just a probability
+
+00:50:39.940 --> 00:50:43.360
+of it being 1, right so there are only two
+of those things right.
+
+00:50:43.360 --> 00:50:50.060
+So the probability of this event plus the
+probability of this event, right that is basically
+
+00:50:50.060 --> 00:50:54.280
+right so I am not writing down this because
+this expression are going to take a long things
+
+00:50:54.280 --> 00:50:58.260
+so probability of this event plus the probability
+of that event so in which our case is just
+
+00:50:58.260 --> 00:51:12.830
+m-4, m-4 that is essentially, right so it
+is clear. So you see how that came up about,
+
+00:51:12.830 --> 00:51:19.240
+right so here this was the random variable
+right. Now once I took the expectation so
+
+00:51:19.240 --> 00:51:22.630
+I can replace that random variable with the
+probability of it being 1 that will be the
+
+00:51:22.630 --> 00:51:30.140
+expectation of that random variable, okay
+is it fine so replace that with the probability
+
+00:51:30.140 --> 00:51:41.240
+of it being 1 is upper bounded m-4, m-4 and
+that is basically here, okay great.
+
+00:51:41.240 --> 00:51:53.780
+So this ? okay, I am going to declare it to
+converge to 1+p2/3 okay, when you can little
+
+00:51:53.780 --> 00:52:17.480
+involve thing but it is pure algebra okay
+I mean you can work it out, okay or I mean
+
+00:52:17.480 --> 00:52:23.160
+this is the standard relation you can look
+it a person, right so that is basically what
+
+00:52:23.160 --> 00:52:27.690
+we have. So this is kind of see that this
+is going to because you going to be diminishing
+
+00:52:27.690 --> 00:52:34.070
+some so it is going to converge to a limit,
+right and so what is really interesting is
+
+00:52:34.070 --> 00:52:38.210
+this part, right in some constant whatever
+I said that it converges to it is not really
+
+00:52:38.210 --> 00:52:44.960
+of interest you know not really of great interest
+what is really of interest is this 8 ln m/?a,
+
+00:52:44.960 --> 00:52:48.300
+right.
+Because this is the one where you are going
+
+00:52:48.300 --> 00:52:55.980
+to get mistake a lot because it has the ln
+m term right, and it also has your ?i2, right
+
+00:52:55.980 --> 00:53:03.200
+but this is the only expected value of Tin
+but you have to multiplied by ?i to get the
+
+00:53:03.200 --> 00:53:10.691
+total integrate and you have to some more
+all i, right so that is essentially the thing
+
+00:53:10.691 --> 00:53:14.670
+that we have finally that expression that
+I erased here that is what you will end up
+
+00:53:14.670 --> 00:53:18.400
+with that is why I said keep that in your
+mind because that is the final expression
+
+00:53:18.400 --> 00:53:23.340
+you are going to end up with, right.
+This is for each arm this is for one suboptimal
+
+00:53:23.340 --> 00:53:28.280
+arm, right this is a total number of times
+you applied it right that is all we have derived
+
+00:53:28.280 --> 00:53:34.140
+now, so the regretted due to that suboptimal
+arm will be ?i times this number so that is
+
+00:53:34.140 --> 00:53:39.840
+why the ?i2 goes to ?i in the denominator
+in the original expression if you flip back
+
+00:53:39.840 --> 00:53:45.900
+and you look at the original expression we
+had a ?i here and we also had a 1+p2/3.?i.
+
+00:53:45.900 --> 00:54:06.110
+but this is for one arm, so you have to do
+this for all the suboptimal arms basically
+
+00:54:06.110 --> 00:54:34.730
+that is why your ? is overall i which is not
+optimal, okay great.
+
+00:54:34.730 --> 00:55:07.110
+clock I 
+do not know if how many of 
+
+00:55:07.110 --> 00:55:14.570
+noticed it so if you have not I will take
+that as I kept you successfully in gross,
+
+00:55:14.570 --> 00:55:17.610
+but if people were just biting their time
+to leave when I am apologies where keeping
+
+00:55:17.610 --> 00:55:21.800
+here for so long, but I needed to finish this
+right, I could not have stopped half way through
+
+00:55:21.800 --> 00:55:25.910
+chart in the next class with 3? or something,
+right.
+
+00:55:25.910 --> 00:55:31.910
+So in the next class right, so we will look
+at the last optimistic criterion was talking
+
+00:55:31.910 --> 00:55:34.660
+about which was pack optimality, okay.
+

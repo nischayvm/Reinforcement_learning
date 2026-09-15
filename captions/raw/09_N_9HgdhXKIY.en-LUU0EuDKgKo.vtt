@@ -1,0 +1,639 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:26.070 --> 00:01:59.270
+Turn of Huffing bomb, we saw that already
+so that is one result we looked right at the
+
+00:01:59.270 --> 00:02:06.190
+last class and you saw how we used it to manage
+to bond the regret of UCB right so we will
+
+00:02:06.190 --> 00:02:12.560
+be looking at yet another class of bandit
+algorithms today right so the pack bandits
+
+00:02:12.560 --> 00:02:17.140
+and we will be using the sheriff of ting bound
+again to bound a slightly different quantity
+
+00:02:17.140 --> 00:02:42.580
+but nevertheless of interest to remember the
+Markov inequality elect people, people will
+
+00:02:42.580 --> 00:02:57.489
+it probability theory one form of writing
+it is this which is what we will need 
+
+00:02:57.489 --> 00:03:12.799
+right assuming 
+is positively expected.
+
+00:03:12.799 --> 00:03:20.000
+So in the x support is in the positive range
+mean so I mean whatever makes appropriate
+
+00:03:20.000 --> 00:03:27.479
+sense for you to make sure that this is a
+probability right next thing you use is the
+
+00:03:27.479 --> 00:03:57.261
+Union bound this is 
+this all of you should know the probability
+
+00:03:57.261 --> 00:04:04.480
+of the union of multiple events right this
+is less than or equal to the sum of the probabilities
+
+00:04:04.480 --> 00:04:10.070
+of the individual events that is this rather
+straightforward has a fancy name called Union
+
+00:04:10.070 --> 00:04:15.760
+bound right so whenever somebody says hope
+hence by Union bound we can write this result
+
+00:04:15.760 --> 00:04:20.790
+essentially all they are saying is that they
+are upper bounding the probability of the
+
+00:04:20.790 --> 00:04:25.320
+joint event by the sum of the probabilities
+of the individual events okay these are the
+
+00:04:25.320 --> 00:04:32.500
+results we will just keep using them as we
+will do some of the proofs today.
+
+00:04:32.500 --> 00:04:40.940
+Okay so we talked about multiple solution
+concepts for bandit algorithms right so the
+
+00:04:40.940 --> 00:04:47.250
+first one was asymptotic correctness and the
+second when we talked about was regret optimality
+
+00:04:47.250 --> 00:04:51.930
+which we already looked at one example of
+a regret optimal algorithm UCB or UCB one
+
+00:04:51.930 --> 00:04:57.320
+more correctly even though popularly when
+people say UCB they refer to UCB one right
+
+00:04:57.320 --> 00:05:06.320
+and then what is the third one pack optimality
+right which was the probably approximately
+
+00:05:06.320 --> 00:05:14.710
+correct thing where you are trying to bound
+with some probability right that I mean you
+
+00:05:14.710 --> 00:05:18.710
+are close enough to the true solution. So
+that is essentially the guarantee that we
+
+00:05:18.710 --> 00:05:20.190
+want to give right.
+.
+
+00:05:20.190 --> 00:05:37.680
+So what we look at today are PAC so the pack
+bounds for multi-armed bandit problems right
+
+00:05:37.680 --> 00:05:47.460
+well start off with a very, very simple algorithm
+sort of with a very, very simple algorithm
+
+00:05:47.460 --> 00:05:51.970
+right this is just to get you started right
+it is not resorted to algorithm that you have
+
+00:05:51.970 --> 00:05:59.490
+to use and is just to get you started so I
+have an input which is I will give you an
+
+00:05:59.490 --> 00:06:11.870
+? under d and what I am asking for is a guarantee
+that at the end of this algorithm arm that
+
+00:06:11.870 --> 00:06:20.190
+a return to you will be ? close to the optimal
+armed with probability 1 minus d.
+
+00:06:20.190 --> 00:06:25.770
+With a very high probability if when this
+algorithm finishes running with a very high
+
+00:06:25.770 --> 00:06:32.210
+probability I will give you an arm which is
+? close to the true the payoff of the arm
+
+00:06:32.210 --> 00:06:36.420
+that I give you will be ? close to the true
+so if you remember the back guarantee that
+
+00:06:36.420 --> 00:06:41.620
+we wrote right so most pack algorithm pack
+style algorithms essentially take this ? and
+
+00:06:41.620 --> 00:06:46.800
+d as inputs right and they determine some
+parameters of the algorithms based on this
+
+00:06:46.800 --> 00:07:04.270
+? and d so I am writing the algorithm in the
+same style as it is in the paper that will
+
+00:07:04.270 --> 00:07:06.800
+give you to read so that it is easy for you
+to map it.
+
+00:07:06.800 --> 00:07:13.530
+Unfortunately I will still do the online translation
+of notation so that you can compare across
+
+00:07:13.530 --> 00:07:27.210
+multiple algorithms okay, and this paper is
+way, way better written than the UCB paper
+
+00:07:27.210 --> 00:07:33.160
+so it is actually you can understand the paper
+when you read it okay so this is the on the
+
+00:07:33.160 --> 00:07:39.660
+median elimination algorithm by Eail Evanda
+Shymanor and Ishai Mansoor okay, its title
+
+00:07:39.660 --> 00:07:45.260
+action elimination for reinforcement learning
+okay so the nice thing about this I can tell
+
+00:07:45.260 --> 00:07:48.480
+you of the next things about the paper later.
+But the really nice thing about the paper
+
+00:07:48.480 --> 00:09:14.130
+is it is well written so you can easily 
+
+00:09:14.130 --> 00:09:24.750
+very simple algorithm right algorithm is very
+simple algorithm what is any the log what
+
+00:09:24.750 --> 00:09:31.840
+is l inside a log N is a number of arms right
+so what did I say I change it to K rights
+
+00:09:31.840 --> 00:09:40.870
+over here all right the last class last lecture
+I change it to K yeah right is a very simple
+
+00:09:40.870 --> 00:09:46.440
+algorithm all I am saying is take each arm
+sample at some number of times okay we can
+
+00:09:46.440 --> 00:09:50.790
+think about it right this is this is work
+see if I if I get a good enough estimate for
+
+00:09:50.790 --> 00:09:57.150
+each arm right if you get a good enough estimate
+of the reward of each arm then I can say that
+
+00:09:57.150 --> 00:10:00.870
+with a very high probability I will be ? optimal
+right.
+
+00:10:00.870 --> 00:10:05.860
+So this of course there is always a small
+chance that I will go wrong right you see
+
+00:10:05.860 --> 00:10:12.100
+what I am saying it so the idea is very simple
+so I will take an arm keep pulling it many
+
+00:10:12.100 --> 00:10:19.740
+many times right until I have gotten a good
+estimate of the of the expectation right so
+
+00:10:19.740 --> 00:10:23.800
+remember the probability with which it is
+going to come up with one or whatever right
+
+00:10:23.800 --> 00:10:28.600
+so whatever is my expectation parameter I
+will just keep pulling them multiple times
+
+00:10:28.600 --> 00:10:32.050
+until I get a good estimate of the expectation
+I will do that for each of the arms that I
+
+00:10:32.050 --> 00:10:36.990
+have right.
+And once I have a good enough estimate of
+
+00:10:36.990 --> 00:10:43.020
+the expectation all I have to do is now go
+and play the arm that has the highest expectation
+
+00:10:43.020 --> 00:10:47.760
+right that is essentially what I am doing
+here now the magic here is in that number
+
+00:10:47.760 --> 00:10:53.810
+which I have written down there right I mean
+given K ? and ? that is actually a number
+
+00:10:53.810 --> 00:11:01.120
+okay remember I take ? and everything as inputs
+given all of this is actually it is actually
+
+00:11:01.120 --> 00:11:07.840
+a number right so that magic number how did
+I produce somewhere I all of this I wrote
+
+00:11:07.840 --> 00:11:10.720
+all of these things so that you know that
+you are going to use them to produce that
+
+00:11:10.720 --> 00:11:13.180
+magic number so it is very simple.
+.
+
+00:11:13.180 --> 00:12:29.010
+So let us make things a little formal so we
+call this algorithm new so then algorithm
+
+00:12:29.010 --> 00:12:37.209
+name which takes as input ? d is an ? d pack
+algorithm remember whatever what is ? d pack
+
+00:12:37.209 --> 00:12:42.540
+we defined it in the earlier lecture right
+? d pack gives you that whatever guarantees
+
+00:12:42.540 --> 00:12:47.950
+you are talking about right ? d pack algorithm
+with arm sample complexity this is the number
+
+00:12:47.950 --> 00:12:58.220
+of times you pull the arms given by or of
+n by ? squared into log N/d right so this
+
+00:12:58.220 --> 00:13:15.660
+part is obvious and I pull each arm 1 by ? square
+times lon K/d right so for n arms I have to
+
+00:13:15.660 --> 00:13:20.910
+do that n times so my overall sample complexity
+is this okay, so the interesting part now
+
+00:13:20.910 --> 00:13:38.810
+is to show that it is actually ? d pack was
+it obviously 
+
+00:13:38.810 --> 00:13:43.680
+here for today's lecture if I write n by mistake
+right please point it out to me.
+
+00:13:43.680 --> 00:13:55.690
+So I will correct it to K right okay so how
+do we prove it well the sample complexity
+
+00:13:55.690 --> 00:13:59.500
+path is obvious we do not have to prove that
+we just have to prove the ? d pack so for
+
+00:13:59.500 --> 00:14:33.519
+that we will assume that let A’ P and arm
+say slit we do this Q* A’ so A’ prime
+
+00:14:33.519 --> 00:14:41.399
+is an arm which is not ? optimal write a norm
+that is ? optimal is ? close to the best term
+
+00:14:41.399 --> 00:14:47.490
+right so Q* A* is the reward corresponding
+to the best top we know that right so I am
+
+00:14:47.490 --> 00:14:55.440
+saying then I will be pick in arm A’ says
+that it is at least ? away from Q* A* right.
+
+00:14:55.440 --> 00:15:04.480
+So the Q* of A’ is at least ? away from
+Q* A* right so that means it is a bad round
+
+00:15:04.480 --> 00:15:09.571
+right so arms about more than I mean? close
+to the true oh my do not care right if I select
+
+00:15:09.571 --> 00:15:14.910
+them I am happy because my guarantee is satisfies
+I really have to worry about making a mistake
+
+00:15:14.910 --> 00:15:21.269
+which in this case is selecting a and that
+is more than ? away from the true optimal
+
+00:15:21.269 --> 00:15:34.990
+okay so basically we are looking at the event
+right so this is what we want we are looking
+
+00:15:34.990 --> 00:15:45.600
+at right so this is the case then the algorithm
+will output A’ instead of A* correct.
+
+00:15:45.600 --> 00:15:54.279
+People onboard with me on this right so if
+Q A’&gt;QA* then my algorithm will output at
+
+00:15:54.279 --> 00:16:00.610
+least is not output a star for me to select
+A’ as the best or at least this condition
+
+00:16:00.610 --> 00:16:06.051
+has to be satisfied okay let us put it that
+way right for my algorithm to output A’
+
+00:16:06.051 --> 00:16:13.140
+as the best arm for sure this condition must
+be satisfied in fact A’ has to be higher
+
+00:16:13.140 --> 00:16:18.350
+than every other arm right only then I will
+output that but at least this condition has
+
+00:16:18.350 --> 00:16:24.589
+to be satisfied so essentially I am going
+to look at the probability of this happening
+
+00:16:24.589 --> 00:16:34.010
+all right and then we will try to bound that
+right.
+
+00:16:34.010 --> 00:16:39.820
+So people can see why we need this condition
+right so if a perm has to be reported as the
+
+00:16:39.820 --> 00:16:46.980
+west arm it has to be at least better than
+A* great so that is the condition was already
+
+00:16:46.980 --> 00:16:53.040
+we are the being little loose here okay, this
+is not really the probability that yes A’
+
+00:16:53.040 --> 00:16:58.380
+will be the best on okay but it is only looking
+at some sub B vent of that it is not all the
+
+00:16:58.380 --> 00:17:04.030
+events together but this will give me at least
+a bound on the probability so that is essentially
+
+00:17:04.030 --> 00:17:59.570
+what you are looking at this event right.
+So what is happening here, let us say that
+
+00:17:59.570 --> 00:18:26.549
+is my that is my Q*A* okay that is why and
+then this gap is at least this gap is at least
+
+00:18:26.549 --> 00:18:34.730
+?, okay so that is this is a setup that we
+have now so and I am making some estimate
+
+00:18:34.730 --> 00:18:43.190
+of Q* A’ prime which is QA’ right and
+I am making some estimate of Q*A* which is
+
+00:18:43.190 --> 00:18:51.540
+QA* so the condition I am asking is that Q’
+A’ should be higher than I mean QA’ should
+
+00:18:51.540 --> 00:18:57.940
+be higher than QA* a star.
+So essentially I am saying that I should have
+
+00:18:57.940 --> 00:19:11.990
+QA’ here QA* somewhere lower right so this
+is the case I am looking at right so this
+
+00:19:11.990 --> 00:19:21.679
+all automatically means that either QA’
+has to be more than ? by two from Q* A’
+
+00:19:21.679 --> 00:19:33.460
+it should be at least ? by more than ? /2
+above our QA* should be ?/2 below Q*A* if
+
+00:19:33.460 --> 00:19:40.090
+they are exactly ? / 2 there will be equal
+I mean there won't be one above the other
+
+00:19:40.090 --> 00:19:45.489
+nights if one is ? by two below others ? by
+two above so you can think of cases where
+
+00:19:45.489 --> 00:19:52.570
+this is actually here right so this could
+be here in which case Q* is the argument Q*A*
+
+00:19:52.570 --> 00:19:58.600
+has to be even below right it will be more
+than ? away forget about ?/2 right so likewise
+
+00:19:58.600 --> 00:20:04.720
+for cases where you are overestimating QA*.
+Then this will also have to be higher than
+
+00:20:04.720 --> 00:20:09.220
+that in which case again it will be more than
+? away right so the interesting case is when
+
+00:20:09.220 --> 00:20:16.869
+it is in between the two right then it has
+to at least one of them has to be ? /2 away
+
+00:20:16.869 --> 00:20:22.279
+from the true estimate right either as a overestimate
+or as an underestimate right is it clear so
+
+00:20:22.279 --> 00:21:21.960
+why I wrote this now, right one of these two
+events has to be satisfied right I am just
+
+00:21:21.960 --> 00:21:25.929
+taking them as independent events and summing
+them up and that still be an upper bound on
+
+00:21:25.929 --> 00:21:30.279
+the total probability I have rights and making
+things simpler and simpler for mean now what
+
+00:21:30.279 --> 00:21:37.929
+happens here it kind of in the Sherman off
+space right.
+
+00:21:37.929 --> 00:21:54.869
+So I can apply sure enough bound here so what
+would be the case here e -2?2/4 x l okay,
+
+00:21:54.869 --> 00:22:05.749
+yeah so let us do that so this will be less
+than or equal to e -2?2/4 x l what about the
+
+00:22:05.749 --> 00:22:19.119
+other term the same right it is 
+
+00:22:19.119 --> 00:22:26.749
+a symmetrical bound so there is plus ? bit
+or minus ? me too it is going to be the same
+
+00:22:26.749 --> 00:23:21.519
+right so is it clear take so now plug in this
+L there so do you get so essentially what
+
+00:23:21.519 --> 00:23:26.619
+we need to do now is adjust this yell so that
+all those things get cancelled out which is
+
+00:23:26.619 --> 00:23:33.369
+basically what we are looking for right and
+you will be left with what should I be left
+
+00:23:33.369 --> 00:23:36.450
+with.
+What should you be left with what do you think
+
+00:23:36.450 --> 00:23:47.289
+it should be left with no I want this probability
+? this is the probability of making a mistake
+
+00:23:47.289 --> 00:23:57.100
+right so it should be ? I should I be left
+with ? not quite this is the probability of
+
+00:23:57.100 --> 00:24:04.249
+me choosing one non optimal arm by mistake
+what if all my arms are non optimal except
+
+00:24:04.249 --> 00:24:12.309
+one optimal arm right everything is away from
+worst case so I should have d / k or k -1
+
+00:24:12.309 --> 00:24:18.789
+so we will take d/ k it is easier than and
+so this whole thing should simplify to d x
+
+00:24:18.789 --> 00:24:28.429
+k right so that is what I should be looking
+for so what should be my l right.
+
+00:24:28.429 --> 00:24:34.830
+So this if we plug this in what will I get
+so therefore by ? square will go so I will
+
+00:24:34.830 --> 00:25:01.730
+get 2 lon 2k/d is not quite right and what
+do I get then the 2 x 2 K / ? so I will get
+
+00:25:01.730 --> 00:25:13.369
+d base I will get d x k right is it fine I
+simplify this I get d / k so now you know
+
+00:25:13.369 --> 00:25:19.330
+how we actually come up with this magic number
+L right, by actually they are having this
+
+00:25:19.330 --> 00:25:24.429
+bound and then figuring out what else should
+I plug in here so that I get the necessary
+
+00:25:24.429 --> 00:26:22.479
+error for the probability 
+
+00:26:22.479 --> 00:27:30.090
+so that just for one A’ well as a two outside
+right to ? okay.
+
+00:27:30.090 --> 00:27:33.600
+So this is clearer this is a naïve algorithm
+the analysis also is pretty simple pretty
+
+00:27:33.600 --> 00:27:40.749
+straightforward it's all of you are happy
+with this right Sophie if I give you an algorithm
+
+00:27:40.749 --> 00:27:46.519
+with a slightly different way of selecting
+actions you can all derive the complex the
+
+00:27:46.519 --> 00:27:57.809
+L that is required basically great it turns
+out that so we have produced this complexity
+
+00:27:57.809 --> 00:28:04.580
+here right it turns out that it is almost
+impossible to get rid of this 1 / ? 2 right
+
+00:28:04.580 --> 00:28:13.019
+and log 1 / d right, so when I try to come
+up with another pack algorithm right I want
+
+00:28:13.019 --> 00:28:19.710
+to remember what I said about pack analysis.
+So I will give you an ? d and now the interesting
+
+00:28:19.710 --> 00:28:26.419
+part is telling me how you can achieve this
+? d with as few samples as possible correct
+
+00:28:26.419 --> 00:28:30.989
+so in this case I am telling you that this
+is the sample complexity right and k figures
+
+00:28:30.989 --> 00:28:42.999
+in two places you have a k /?2 and log k / d
+right it turns out that this 1 /?2 and log
+
+00:28:42.999 --> 00:28:54.519
+of 1 / d is very hard to get rid of right
+but then people now come up with and can you
+
+00:28:54.519 --> 00:29:09.399
+get rid of this k 
+
+00:29:09.399 --> 00:29:15.619
+it should depend on K why at least once right.
+I have to try every am at least one so I cannot
+
+00:29:15.619 --> 00:29:22.229
+get rid of the K also right so the only thing
+I can try and minimize hear this well I can
+
+00:29:22.229 --> 00:29:31.450
+if I and get rid of this K right so I can
+try to get rid of the log k dependency right
+
+00:29:31.450 --> 00:29:39.399
+and then have k / ?2 log 1/ d roughly I can
+try to move in that direction and once I reach
+
+00:29:39.399 --> 00:29:46.440
+there I will probably be in the left with
+trying to get rid of this to hear right and
+
+00:29:46.440 --> 00:29:54.139
+try to make the 2 2 x 3 / 2 or 1.77 or something
+let me show you know how these things proceed
+
+00:29:54.139 --> 00:30:00.320
+right so you can try to optimize the constants
+but more or less this 1 / ?2 and log 1 /d
+
+00:30:00.320 --> 00:30:07.469
+is something that will have to live with okay.
+

@@ -1,0 +1,464 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.650 --> 00:02:54.150
+So here is a value iteration theorem can read
+all of it I apologize I go t down the burden
+
+00:02:54.150 --> 00:03:04.340
+handwriting series dignity rates at which
+this condition in three is met for all N greater
+
+00:03:04.340 --> 00:03:15.760
+than capital in okay so ? defined by step
+four is ? optimal and VN + 1- V * is less
+
+00:03:15.760 --> 00:03:29.299
+than or equal to ?/ 2 when 3 holds so when
+this holds VN + 1 is ?x to close to be * right
+
+00:03:29.299 --> 00:03:35.640
+so what is it A and B of kind of easy we already
+seen that A and B as essentially Brouwer’s
+
+00:03:35.640 --> 00:03:37.739
+fixed point theorem right.
+I am sorry yeah the Brouwer’s fixed point
+
+00:03:37.739 --> 00:03:44.980
+theorem gives us A and B correct what is the
+difference between C&amp;D why do I have two of
+
+00:03:44.980 --> 00:03:54.319
+these things so they look contradict they
+look contradictory not order it Reaper safe
+
+00:03:54.319 --> 00:04:05.079
+but we did not anyone gives me the right answer
+I will give you a bonus mark that essentially
+
+00:04:05.079 --> 00:04:09.629
+which have been following whatever I have
+been saying so far so further we will have
+
+00:04:09.629 --> 00:04:18.889
+to take down the roll number and note down
+that now I got their attention two people
+
+00:04:18.889 --> 00:04:30.129
+who do not know the class averages for my
+wishes tend to be in like 2 or 3 out of 20
+
+00:04:30.129 --> 00:04:42.289
+or 50 it does not matter what the denominator
+is does not seemed to change but so every
+
+00:04:42.289 --> 00:04:55.330
+mark matters so tell me what is the difference
+why do I need C and D sorry this ? optimal
+
+00:04:55.330 --> 00:05:01.610
+means it is so maybe she phase say it in a
+different way then you will get it so what
+
+00:05:01.610 --> 00:05:15.930
+I am saying is that B p - v * is less than
+? here I am saying BN + 1 - V * is less than
+
+00:05:15.930 --> 00:05:19.729
+? / 2.
+Remember my space V does not necessarily contain
+
+00:05:19.729 --> 00:05:26.760
+only value functions it is just a space of
+functions right VN + 1 need not be the value
+
+00:05:26.760 --> 00:05:31.730
+function corresponding to the policy p even
+though I recover p by being greedy with respect
+
+00:05:31.730 --> 00:05:39.000
+to VN + 1 does not mean if I actually solve
+for value of p if I find Vp it need not be
+
+00:05:39.000 --> 00:05:45.729
+VN + 1 right so what three is telling me is
+that v p is ? not what C is telling me is
+
+00:05:45.729 --> 00:05:55.810
+v p epsilon optimal what D is telling me is
+that v+ 1 is ? / 2 optimal okay so fun let
+
+00:05:55.810 --> 00:06:03.129
+me give you the work how about you enough
+I never offered them before right.
+
+00:06:03.129 --> 00:06:09.289
+This is this is on offer nobody took it that
+is easy enough right all you need to do is
+
+00:06:09.289 --> 00:06:14.710
+just mean following the multiple times I kept
+saying that V is not the space of value function
+
+00:06:14.710 --> 00:06:20.900
+is the very beginning when somebody said V
+is a space of value function I corrected you
+
+00:06:20.900 --> 00:06:25.509
+of this class very beginning of this class
+anyway so let us look at the proof well A
+
+00:06:25.509 --> 00:06:29.909
+and B are immediate the follower Brouwer’s
+fixed point theorem so we will start off with
+
+00:06:29.909 --> 00:07:32.819
+C and D right 
+
+00:07:32.819 --> 00:07:37.560
+so just assume that 3 is made for some n okay
+so n it is already met that condition has
+
+00:07:37.560 --> 00:07:47.340
+been met right and that we p the p has been
+derived from doing this the p has been derived
+
+00:07:47.340 --> 00:07:52.409
+from doing this.
+And now I can use my triangle inequality right
+
+00:07:52.409 --> 00:07:57.180
+it does not matter that then this actually
+does not matter right whether these conditions
+
+00:07:57.180 --> 00:08:02.270
+are met or not I can take an arbitrary vp
+and a V * and I can use a triangle inequality
+
+00:08:02.270 --> 00:08:07.469
+and write this because it is just about three
+points in space right we talked about how
+
+00:08:07.469 --> 00:08:11.789
+I can keep using the triangle inequality in
+an arbitrary fashion because all I am talking
+
+00:08:11.789 --> 00:08:16.569
+about are just some 3 points in space it so
+happens that one of them is v p other one
+
+00:08:16.569 --> 00:08:21.539
+is VN + 1 the third one is v * but this will
+hold regardless of which three points I pick
+
+00:08:21.539 --> 00:08:28.650
+okay.
+So here is a tricky thing I want you to look
+
+00:08:28.650 --> 00:08:46.040
+at 
+so let us look at L p say I want L p to act
+
+00:08:46.040 --> 00:08:58.940
+on VN + 1 right I want Lp to act on BN + 1
+right so what will be L p acting on Vn + 1
+
+00:08:58.940 --> 00:09:16.000
+is it space of what l p is a an operator corresponding
+to the bellman equation for ? right sort of
+
+00:09:16.000 --> 00:09:22.580
+way I said last class we left off by saying
+l p is a contraction so that L p so L p is
+
+00:09:22.580 --> 00:09:31.080
+just a bellman value equation operating on
+VN + 1 so what would that be will be this
+
+00:09:31.080 --> 00:09:45.300
+right this but instead of R max here I will
+have a summation over p Sa say allow summation
+
+00:09:45.300 --> 00:09:50.880
+over p Sa but what I have done here by p itself
+is an R max a right just one action.
+
+00:09:50.880 --> 00:09:55.880
+So if you remember I told you about the deterministic
+policy is right so this whole thing will go
+
+00:09:55.880 --> 00:10:03.100
+I will just replace this with p S is this
+will be expected value of R given S, p S probability
+
+00:10:03.100 --> 00:10:12.000
+of s’ given s come up is VN + 1’ so that
+will essentially be the L p acting on VN+
+
+00:10:12.000 --> 00:10:47.710
+1 right is it clear this is L p on VN + 1
+I just read it out I just write in unit known
+
+00:10:47.710 --> 00:10:55.690
+as mnemonic expected value of R given s, ps
++ ? times summation over s’ probability
+
+00:10:55.690 --> 00:11:07.840
+of s’ given p s x VN + 1 s’ okay so now
+thing that you have to notice how would I
+
+00:11:07.840 --> 00:11:19.110
+get to this ps is by using max I use the max
+operator over this right.
+
+00:11:19.110 --> 00:11:37.360
+So if I had done L on VN + 1 what would I
+have obtained L on VN + 1 is essentially this
+
+00:11:37.360 --> 00:11:48.660
+right next right this is this is what this
+one L or VN + 1 is essentially this right
+
+00:11:48.660 --> 00:11:58.760
+so what I have done here because I chose my
+p to be the max action here so whether I apply
+
+00:11:58.760 --> 00:12:08.520
+L p on VN + 1 or whether I apply L on VN +
+1 it is the same because the p was chosen
+
+00:12:08.520 --> 00:12:18.370
+to be the max action right so I can say that
+this is equal to sorry not equivalent so the
+
+00:12:18.370 --> 00:12:25.470
+two are equal 
+that makes it easier.
+
+00:12:25.470 --> 00:12:27.579
+.
+Now we are going to start simplifying stuff.
+
+00:12:27.579 --> 00:12:31.270
+.
+So I am going to take this expression I am
+
+00:12:31.270 --> 00:13:13.030
+going to try and simplify that okay we can
+I can replace v p with L p v p dot ypp is
+
+00:13:13.030 --> 00:13:39.950
+a fixed point nothing will change I can just
+replace it to the LP vp now so can I do this
+
+00:13:39.950 --> 00:13:46.670
+same application of the triangle inequality
+as we had before so three points are Lp v
+
+00:13:46.670 --> 00:13:54.630
+/ vn+ 1 and L VN + 1 so L VN + 1 is just another
+point in space between three points I can
+
+00:13:54.630 --> 00:14:23.060
+write this triangle inequality so this is
+less than or equal to H this is equal to 
+
+00:14:23.060 --> 00:14:29.320
+right so this is the reduction we talked about
+here so from LV I went to L p LVL + 1 I cent
+
+00:14:29.320 --> 00:14:35.750
+L p VN + 1 and from VN + 1 I went to LVN because
+that is how VN + 1 was generated by applying
+
+00:14:35.750 --> 00:14:39.500
+L on VL okay so I have written that.
+.
+
+00:14:39.500 --> 00:15:01.720
+Now I can simplify this 
+
+00:15:01.720 --> 00:15:15.920
+so I have ep n + 1 here vp -VN + 1 here sorry
+and v p - VN+ 1 here so I can take it to that
+
+00:15:15.920 --> 00:15:52.251
+side simplify things so I will just get okay
+that is just the first term now we have to
+
+00:15:52.251 --> 00:16:49.790
+simplify the second term towards the second
+term.
+
+00:16:49.790 --> 00:16:52.100
+.
+I just like we did earlier I have done a repeated
+
+00:16:52.100 --> 00:16:58.530
+application of the triangle inequality is
+only tricky thing here is a summation goes
+
+00:16:58.530 --> 00:17:07.781
+to infinity because only when I repeat this
+till infinity will go to B* right but that
+
+00:17:07.781 --> 00:17:13.600
+is fine because this is anyway it is a vanishing
+quantity as we go along right so this of this
+
+00:17:13.600 --> 00:18:26.540
+sum will actually okay exist limit of a summation
+yeah well I am you can think of this as V
+
+00:18:26.540 --> 00:18:31.810
+* - VN+ 1 right because I am just talking
+about the norm right so as v*- VN + 1 and
+
+00:18:31.810 --> 00:18:39.030
+then I have written this up okay.
+So this is VN + 1 that is VN + 2 then Vn +
+
+00:18:39.030 --> 00:18:49.740
+2 VN + 3 blah this one so forth so what will
+this be you only said it to be a limit of
+
+00:18:49.740 --> 00:19:15.780
+a summation right guys I need to take 1 ? out
+okay so what do we have so we have the first
+
+00:19:15.780 --> 00:19:26.321
+component is less than equal to ?x1 – ? x
+VN + 1 – VN right but when three holes what
+
+00:19:26.321 --> 00:19:36.901
+is VN+ 1 - VF ? x 1 minus ?/ 2 ? right so
+if I plug that then what will I get ?/2 to
+
+00:19:36.901 --> 00:19:45.470
+plug it in there what will I get ? / two so
+I have few components here so vp - v * is
+
+00:19:45.470 --> 00:19:51.820
+less than or equal to ?x 2 + ?x 2 which is
+? right v p - v * is less than or equal to
+
+00:19:51.820 --> 00:20:01.630
+okay when we have actually to complete the
+proof we have to do that but I am asking you
+
+00:20:01.630 --> 00:20:15.980
+to do that what was the other thing that we
+wanted to show D or later right.
+
+00:20:15.980 --> 00:20:20.920
+So D essentially was to show that VN + 1will
+be at least ?x to close so we already done
+
+00:20:20.920 --> 00:20:27.190
+so we substitute that here so we get ?/ 2
+so is that so VN - p.m. sorry VN + 1 - v*
+
+00:20:27.190 --> 00:20:33.300
+is less than or equal to ?/2 and what we are
+showing there is v p - v * is less than or
+
+00:20:33.300 --> 00:20:38.470
+equal to ? like so that is basically done
+so we have shown this theorem so essentially
+
+00:20:38.470 --> 00:20:47.830
+what we have here is that value iteration
+converges with that stopping criterion it
+
+00:20:47.830 --> 00:20:54.390
+converges to a ? optimal policy so you have
+to pick an ? first remember ? comes as part
+
+00:20:54.390 --> 00:20:57.670
+of the problem definition.
+So once you pick an ? you can find a stopping
+
+00:20:57.670 --> 00:21:03.900
+criterion using that expression there and
+you are all set okay so there is one other
+
+00:21:03.900 --> 00:21:08.800
+very interesting thing that people talk about
+from a theoretical analysis of algorithms
+
+00:21:08.800 --> 00:21:15.050
+for solving these kinds of MDPs right so it
+is called the rate of convergence so I have
+
+00:21:15.050 --> 00:21:18.910
+shown you that it converges so there is a
+whole concept called rate of convergence right
+
+00:21:18.910 --> 00:21:25.520
+how quickly does it approached right so I
+am not going to get into a huge discussions
+
+00:21:25.520 --> 00:21:30.750
+on rate of convergence and like I mentioned
+with the deterministic policy thing I actually
+
+00:21:30.750 --> 00:21:34.330
+put up a small right upon rate of convergence
+as well you can read it.
+
+00:21:34.330 --> 00:21:55.440
+One thing which I want to tell you is that
+
+00:21:55.440 --> 00:22:03.760
+so you can with a little bit of not much right
+so L is a contraction mapping L is a contraction
+
+00:22:03.760 --> 00:22:16.980
+so at every iteration right so my 
+so what is the contraction factor for L we
+
+00:22:16.980 --> 00:22:24.590
+did this ? right so for every iteration I
+can show that my iterates that is basically
+
+00:22:24.590 --> 00:22:29.040
+I start off with v0 then I become take me
+one then V2 V3 and so on so forth every iteration
+
+00:22:29.040 --> 00:22:36.580
+I can so that the successive iterates will
+become ? closer to v* right.
+
+00:22:36.580 --> 00:22:46.430
+So I have some so v1 was some x close to v
+* then v2 will be ? X closer to so ? is small
+
+00:22:46.430 --> 00:22:53.550
+it will converge faster if ? is very large
+it will converse lower right so this is called
+
+00:22:53.550 --> 00:23:04.280
+linear convergence with the rate of ? right
+so if it falls as ?2 then it will be quadratic
+
+00:23:04.280 --> 00:23:09.450
+convergence right so but linear convergence
+with the rate of ? so this is essentially
+
+00:23:09.450 --> 00:23:13.940
+the thing so the interesting aspects I mean
+if you want to get into the more into the
+
+00:23:13.940 --> 00:23:17.480
+theory of all of these things is to start
+studying the rates of convergence of different
+
+00:23:17.480 --> 00:23:21.570
+algorithms and so on so forth which I am not
+going to get into but there is something for
+
+00:23:21.570 --> 00:23:26.220
+as an aside so that you can look at it.
+

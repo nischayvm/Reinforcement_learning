@@ -1,0 +1,1280 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.480 --> 00:00:17.320
+right so I keep saying long-term&nbsp;
+I said this multiple times in the&nbsp;&nbsp;
+
+00:00:17.320 --> 00:00:23.260
+earlier lectures also but what really&nbsp;
+is long-term right so we will try to&nbsp;&nbsp;
+
+00:00:23.260 --> 00:00:28.120
+quantify that now right by introducing&nbsp;
+the notion of something called return
+
+00:01:01.850 --> 00:01:05.330
+this is a common notation that I&nbsp;
+will use throughout where capital T&nbsp;&nbsp;
+
+00:01:05.330 --> 00:01:08.750
+indicates the timestamp of the end of the episode
+
+00:01:08.750 --> 00:01:16.190
+right T means the end of the episode rate&nbsp;
+essentially I have reached a surplus right&nbsp;&nbsp;
+
+00:01:16.190 --> 00:01:25.460
+so this could this is the most natural way&nbsp;
+of thinking about long term return okay this&nbsp;&nbsp;
+
+00:01:25.460 --> 00:01:30.830
+is most natural way of thinking about long term&nbsp;
+return and if there if that capital T is actually&nbsp;&nbsp;
+
+00:01:30.830 --> 00:01:38.210
+fine it right so this is actually this is not&nbsp;
+a bad idea I'll sum up all the word I'm going&nbsp;&nbsp;
+
+00:01:38.210 --> 00:01:46.040
+to get in the future and I'll try to optimize&nbsp;
+that okay so again you can see that if I try to&nbsp;&nbsp;
+
+00:01:46.040 --> 00:01:54.920
+optimize each one of these individually what will&nbsp;
+happen I might get a very high of T plus 1 and RT&nbsp;&nbsp;
+
+00:01:54.920 --> 00:02:00.710
+plus 2 but it might put me in such a bad as T&nbsp;
+plus 2 from then on even if I behave optimally&nbsp;&nbsp;
+
+00:02:00.710 --> 00:02:06.920
+individually for each of this these numbers&nbsp;
+might be small right so what I really want&nbsp;&nbsp;
+
+00:02:06.920 --> 00:02:13.940
+to do is behave in such a way that even if some&nbsp;
+of these numbers are small right overall in the&nbsp;&nbsp;
+
+00:02:13.940 --> 00:02:19.700
+future the somewhere I'm going to get should&nbsp;
+be the maximum right so overall some should&nbsp;&nbsp;
+
+00:02:19.700 --> 00:02:29.300
+be maximum so that's essentially the goal that I&nbsp;
+have yeah so this is fine it works fine that one&nbsp;&nbsp;
+
+00:02:29.300 --> 00:02:35.540
+circumstance where this won't work when T is&nbsp;
+I mean there is no end right so I keep doing&nbsp;&nbsp;
+
+00:02:35.540 --> 00:02:42.590
+this for forever and if I if I keep solving a&nbsp;
+problem forever then it becomes a problem and not&nbsp;&nbsp;
+
+00:02:42.590 --> 00:02:47.840
+necessarily forever if I'm also doing something&nbsp;
+over a very very very long horizon if T is very&nbsp;&nbsp;
+
+00:02:47.840 --> 00:02:55.040
+large not necessarily infinite but T is very&nbsp;
+large also I get into some issues because this&nbsp;&nbsp;
+
+00:02:55.040 --> 00:03:02.360
+will become quantity with a large variance so one&nbsp;
+other thing I should point out this is something&nbsp;&nbsp;
+
+00:03:02.360 --> 00:03:09.140
+which people miss and get confused sometimes&nbsp;
+while reading on their own so he here is a
+
+00:03:11.520 --> 00:03:22.770
+random variable right so every time I run the&nbsp;
+system it might stop at a different time I think&nbsp;&nbsp;
+
+00:03:22.770 --> 00:03:27.870
+of playing chess right that is a finite end point&nbsp;
+just will end but every time I play the game I&nbsp;&nbsp;
+
+00:03:27.870 --> 00:03:32.880
+don't stop at the same number of moves right you&nbsp;
+know something like tic-tac-toe right even though&nbsp;&nbsp;
+
+00:03:32.880 --> 00:03:38.370
+there's an upper limit on the number of moves&nbsp;
+you can make right it's not necessary that we'll&nbsp;&nbsp;
+
+00:03:38.370 --> 00:03:44.250
+always end up playing if I move that you might&nbsp;
+end might wind in four moves you might when in&nbsp;&nbsp;
+
+00:03:44.250 --> 00:03:51.240
+well yeah if you win in three moves okay where&nbsp;
+your opponent is really bad but so he could win&nbsp;&nbsp;
+
+00:03:51.240 --> 00:03:55.950
+in three moves you could win in four moves or you&nbsp;
+could win in five moves right or it could not win&nbsp;&nbsp;
+
+00:03:55.950 --> 00:04:01.440
+at all I mean so you could still end up drawing&nbsp;
+the game so like that so T is a random variable so&nbsp;&nbsp;
+
+00:04:01.440 --> 00:04:06.540
+when I put T here doesn't mean it always runs for&nbsp;
+some T steps okay so every time I run it it will&nbsp;&nbsp;
+
+00:04:06.540 --> 00:04:12.390
+be a different value for T so remember that right&nbsp;
+and consequently GT is also a random variable look&nbsp;&nbsp;
+
+00:04:12.390 --> 00:04:17.130
+at all of these are random variables I'm talking&nbsp;
+about some software and of variables okay and a&nbsp;&nbsp;
+
+00:04:17.130 --> 00:04:24.030
+random number of those random variables are being&nbsp;
+summed up okay so GT is also a random variable&nbsp;&nbsp;
+
+00:04:24.030 --> 00:04:29.550
+that denotes the return okay great so another&nbsp;
+notion of return that people typically use is
+
+00:05:03.140 --> 00:05:14.060
+right in fact I can even do that so good I&nbsp;
+can think about it purely from a mathematical&nbsp;&nbsp;
+
+00:05:14.060 --> 00:05:22.220
+perspective so if my son is going to run till&nbsp;
+infinity and my gamma is less than 1 and remember&nbsp;&nbsp;
+
+00:05:22.220 --> 00:05:28.430
+that individually each R is bounded okay so this&nbsp;
+sum will converge to something finite so I don't&nbsp;&nbsp;
+
+00:05:28.430 --> 00:05:33.710
+have to worry about what I had in this case this&nbsp;
+sum will not explode okay so that is fine right&nbsp;&nbsp;
+
+00:05:33.710 --> 00:05:39.200
+but that is even something more interesting&nbsp;
+about this discounted work formulation in fact&nbsp;&nbsp;
+
+00:05:39.200 --> 00:05:44.420
+originally when people proposed a discount rate&nbsp;
+or what formulation it was not really from the&nbsp;&nbsp;
+
+00:05:44.420 --> 00:05:58.220
+boundedness point of view there's more from from&nbsp;
+a psychology point of view immediate gratification&nbsp;&nbsp;
+
+00:05:58.220 --> 00:06:04.430
+versus delayed gratification right so if you&nbsp;
+know let's look at what happens if gamma is 0
+
+00:06:07.550 --> 00:06:13.670
+whole thing will go right it just RT plus&nbsp;
+1 this goes back to just optimizing further&nbsp;&nbsp;
+
+00:06:13.670 --> 00:06:20.030
+immediate immediate payoff right so this gives&nbsp;
+you essentially you are going to behave in a&nbsp;&nbsp;
+
+00:06:20.030 --> 00:06:24.350
+way so that the next time step what is the&nbsp;
+maximum reward that you are going to get so&nbsp;&nbsp;
+
+00:06:24.350 --> 00:06:29.540
+you're going to behave only in that way right&nbsp;
+so if you think about what gamma is doing so&nbsp;&nbsp;
+
+00:06:29.540 --> 00:06:35.600
+it's making suppose I get a 10 here we're just&nbsp;
+getting a 10 here so 10 here is more valuable&nbsp;&nbsp;
+
+00:06:35.600 --> 00:06:47.450
+than 10 here right of course then here is more&nbsp;
+valuable than 10 here right so let's go back to&nbsp;&nbsp;
+
+00:06:47.450 --> 00:06:53.450
+our robot grasping problem we're talking about&nbsp;
+having a minus 1 all the time and then giving&nbsp;&nbsp;
+
+00:06:53.450 --> 00:06:58.970
+you 100 when you actually grasp so in stuff that&nbsp;
+I can say I'm going to user discounted the rewards&nbsp;&nbsp;
+
+00:06:58.970 --> 00:07:10.940
+but gamma has say 0.8 so what does it mean so&nbsp;
+the sooner I grasp it the larger the value I'm&nbsp;&nbsp;
+
+00:07:10.940 --> 00:07:18.830
+going to see correct so the overall reward&nbsp;
+I'm starting from here I should put myself&nbsp;&nbsp;
+
+00:07:18.830 --> 00:07:26.450
+in a trajectory so that I grasp this quickly&nbsp;
+otherwise I will see some gamma power 10,000&nbsp;&nbsp;
+
+00:07:26.450 --> 00:07:33.020
+in 200 so that's very very small value so the&nbsp;
+shorter I so I know I can get rid of the minus&nbsp;&nbsp;
+
+00:07:33.020 --> 00:07:45.740
+1 right so I don't really have to do the minus&nbsp;
+1 but then what becomes tricky here I have to&nbsp;&nbsp;
+
+00:07:45.740 --> 00:07:53.420
+figure out what the right value of gamma all&nbsp;
+right so that becomes tricky so so this is
+
+00:08:07.960 --> 00:08:12.910
+so they use this kind of gamma to control for&nbsp;
+whether you are a nearsighted agent really worried&nbsp;&nbsp;
+
+00:08:12.910 --> 00:08:18.550
+about immediate gratification or whether you are&nbsp;
+okay delaying the gratification a little bit so&nbsp;&nbsp;
+
+00:08:18.550 --> 00:08:40.480
+that you get a higher payoff further down the line&nbsp;
+the only one one payoff right just fully whatever&nbsp;&nbsp;
+
+00:08:40.480 --> 00:08:45.250
+so you're talking about three Goods you're talking&nbsp;
+about regrets right I'm talking about the total&nbsp;&nbsp;
+
+00:08:45.250 --> 00:08:56.680
+reward case right so yeah having a discount that&nbsp;
+really doesn't make sense right so anyway you are&nbsp;&nbsp;
+
+00:08:56.680 --> 00:09:03.760
+trying to optimize regret right so in in some case&nbsp;
+your gamma is as small as possible right when you&nbsp;&nbsp;
+
+00:09:03.760 --> 00:09:07.300
+say you're optimizing regret that means you are&nbsp;
+trying to keep your gamma as small as possible&nbsp;&nbsp;
+
+00:09:07.300 --> 00:09:13.360
+so essentially you want all your winnings to come&nbsp;
+in one pull right and one pull live I want to be&nbsp;&nbsp;
+
+00:09:13.360 --> 00:09:18.280
+optimal so that is your optimal regret case right&nbsp;
+so when you're trying to do achieve something like&nbsp;&nbsp;
+
+00:09:18.280 --> 00:09:25.870
+this setting a gamma doesn't make sense right but&nbsp;
+even if you can come up with a different objective&nbsp;&nbsp;
+
+00:09:25.870 --> 00:09:30.280
+function maybe there is something that you can&nbsp;
+think of over the entire learning process okay&nbsp;&nbsp;
+
+00:09:30.280 --> 00:09:35.650
+so one thing which I should point out just let&nbsp;
+me finish one thing I should point out is that&nbsp;&nbsp;
+
+00:09:35.650 --> 00:09:42.580
+classically the RL people right look at bandit&nbsp;
+problems as immediate RL wait I mean the the the&nbsp;&nbsp;
+
+00:09:42.580 --> 00:09:49.060
+learning either the whole interaction is just that&nbsp;
+one Apple okay that is how we think of it while&nbsp;&nbsp;
+
+00:09:49.060 --> 00:09:53.590
+the the long-term case is the full RL problem&nbsp;
+but if you look at the people who work in the&nbsp;&nbsp;
+
+00:09:53.590 --> 00:09:58.450
+Bandit theory community right they think of the&nbsp;
+interaction as the entire learning process right&nbsp;&nbsp;
+
+00:09:58.450 --> 00:10:05.470
+they don't think of it as one ample they think&nbsp;
+of it as the whole process itself is that the&nbsp;&nbsp;
+
+00:10:05.470 --> 00:10:11.080
+learning process so for them it is like an episode&nbsp;
+right so it's a very different mindset so the&nbsp;&nbsp;
+
+00:10:11.080 --> 00:10:15.940
+other people don't think of it that way and the&nbsp;
+Bandit people don't think of biscone factors and&nbsp;&nbsp;
+
+00:10:15.940 --> 00:10:21.530
+other things because that is something which the&nbsp;
+RL guys came up with for looking at long-term pay&nbsp;&nbsp;
+
+00:10:21.530 --> 00:10:27.500
+so there's a mismatch of vocabulary there&nbsp;
+so maybe there is something to find that in&nbsp;&nbsp;
+
+00:10:27.500 --> 00:10:35.870
+the middle ground but I'm not sure return&nbsp;
+this is a function of the time step here
+
+00:10:45.610 --> 00:10:58.420
+let's put it this way so I should optimize&nbsp;
+my policy in such a way that wherever I am&nbsp;&nbsp;
+
+00:10:58.420 --> 00:11:06.640
+starting from that and going forward I should get&nbsp;
+maximum possible so even if I am the last step I&nbsp;&nbsp;
+
+00:11:06.640 --> 00:11:11.380
+don't want to goof up in the last step but if I&nbsp;
+find see one thing you should remember is that if&nbsp;&nbsp;
+
+00:11:11.380 --> 00:11:16.960
+I know where I am going to end if that capital&nbsp;
+T is given to me beforehand then it becomes a&nbsp;&nbsp;
+
+00:11:16.960 --> 00:11:25.000
+non stationery problem because I okay I have five&nbsp;
+more steps to go what should I do I take one more&nbsp;&nbsp;
+
+00:11:25.000 --> 00:11:30.460
+set how only four more steps to go what trudeau&nbsp;
+so immediately the problem changes and if I know&nbsp;&nbsp;
+
+00:11:30.460 --> 00:11:36.430
+the capital T then it's a non stationery sitting&nbsp;
+right so will not will not look at cases where the&nbsp;&nbsp;
+
+00:11:36.430 --> 00:11:42.280
+capital T is known it will only look at cases&nbsp;
+where capital T is known to be finite but not&nbsp;&nbsp;
+
+00:11:42.280 --> 00:11:47.320
+deterministic it's not known if so it's not like&nbsp;
+I can say that I'll opt amiss only at the last&nbsp;&nbsp;
+
+00:11:47.320 --> 00:11:51.730
+step or anything because I do not know what the&nbsp;
+last step is I might recognize it when I actually&nbsp;&nbsp;
+
+00:11:51.730 --> 00:11:56.740
+reach it but I don't know beforehand that okay I&nbsp;
+am going to have only so many statistical I mean&nbsp;&nbsp;
+
+00:11:56.740 --> 00:12:01.000
+this is the normal setting that we assume but you&nbsp;
+can immediately see it is not realistic you know&nbsp;&nbsp;
+
+00:12:01.000 --> 00:12:05.170
+I mean when you are playing chess you can always&nbsp;
+say I am going to win in three more moves or well&nbsp;&nbsp;
+
+00:12:05.170 --> 00:12:10.720
+I'm going to lose in 3 moves depending on right so&nbsp;
+how well the game is going so in some cases you do&nbsp;&nbsp;
+
+00:12:10.720 --> 00:12:15.850
+have this kind of a little bit of a forecasting&nbsp;
+ability as to what the capital T is but typical&nbsp;&nbsp;
+
+00:12:15.850 --> 00:12:24.730
+the basic set up that will talk about it will&nbsp;
+assume T is unknown the people understand why&nbsp;&nbsp;
+
+00:12:24.730 --> 00:12:33.940
+gamma equal to one may closer to one is farsighted&nbsp;
+right and closer to zero is nearsighted okay
+
+00:12:35.200 --> 00:12:58.840
+and then this action later business a higher&nbsp;
+reward but then in this equation we are actually&nbsp;&nbsp;
+
+00:12:58.840 --> 00:13:07.030
+giving more reward to the well depends on many&nbsp;
+things rate depends on the value of gamma and&nbsp;&nbsp;
+
+00:13:07.030 --> 00:13:12.580
+depends on the magnitude of the other rewards&nbsp;
+that you are getting right so let's say gamma&nbsp;&nbsp;
+
+00:13:12.580 --> 00:13:19.420
+is 0.99 nine nine nine nine nine when the&nbsp;
+bias is slow depending on how far sighted&nbsp;&nbsp;
+
+00:13:19.420 --> 00:13:26.890
+you want to be you have to pick your gamma yeah&nbsp;
+unsatisfactory you have another free parameter&nbsp;&nbsp;
+
+00:13:26.890 --> 00:13:33.490
+really free parameter that you'd have no way&nbsp;
+how to tune but yeah it's there it's so well&nbsp;&nbsp;
+
+00:13:33.490 --> 00:13:38.770
+talk about another reward formulation shortly&nbsp;
+which get to the guesser off the gamma but&nbsp;&nbsp;
+
+00:13:38.770 --> 00:13:48.370
+makes it very hard to optimize anyway so any&nbsp;
+other questions on this this is matter yeah
+
+00:14:05.930 --> 00:14:13.820
+but then that means I'm fall I'm failing after&nbsp;
+more time steps like so I'm okay I mean whether&nbsp;&nbsp;
+
+00:14:13.820 --> 00:14:17.000
+it is positive or negative it doesn't matter as&nbsp;
+far as these written definitions are concerned&nbsp;&nbsp;
+
+00:14:17.000 --> 00:14:21.230
+you are essentially interested in maximizing&nbsp;
+the return therefore if you are going to take&nbsp;&nbsp;
+
+00:14:21.230 --> 00:14:25.130
+an action that gives you a minus hundred reward&nbsp;
+the farther out in the future you take it it is&nbsp;&nbsp;
+
+00:14:25.130 --> 00:14:36.470
+better right so succeed for as long as you can&nbsp;
+and then die you know so yeah it doesn't matter&nbsp;&nbsp;
+
+00:14:36.470 --> 00:14:40.730
+so the rewards can be positive or negative&nbsp;
+yeah so the first learning is read that the&nbsp;&nbsp;
+
+00:14:40.730 --> 00:14:44.720
+community is looking where right so we talk&nbsp;
+about positive rewards and negative rewards&nbsp;&nbsp;
+
+00:14:44.720 --> 00:14:50.210
+and if you look at the psychology literature&nbsp;
+they talk about rewards and punishments right&nbsp;&nbsp;
+
+00:14:50.210 --> 00:14:56.420
+for some reason the RL community and if you&nbsp;
+look at the you know other places they call&nbsp;&nbsp;
+
+00:14:56.420 --> 00:15:03.050
+it payoffs right or they call it coughs negative&nbsp;
+rewards are called costs but the idle community&nbsp;&nbsp;
+
+00:15:03.050 --> 00:15:07.910
+somehow thinks of negative things also be&nbsp;
+as rewarding so we have positive rewards&nbsp;&nbsp;
+
+00:15:07.910 --> 00:15:12.530
+and you have negative rewards but in the&nbsp;
+larger scheme of things you know negative&nbsp;&nbsp;
+
+00:15:12.530 --> 00:15:16.940
+things also improve your experience you know they&nbsp;
+enrich your life in some way so you can think of&nbsp;&nbsp;
+
+00:15:16.940 --> 00:15:26.870
+negative rewards also anyway so good so this is&nbsp;
+a sign then we'll move on to one more definition
+
+00:15:31.740 --> 00:15:33.060
+how to get this right
+
+00:15:58.340 --> 00:16:08.870
+what is that blue just gives me the average right&nbsp;
+so the more of the reward I accumulate the larger&nbsp;&nbsp;
+
+00:16:08.870 --> 00:16:15.710
+the average is going to be right so for a finite&nbsp;
+number or n this makes sense right but what if&nbsp;&nbsp;
+
+00:16:15.710 --> 00:16:35.270
+I have an infinite number of rewards in the&nbsp;
+future under mild regularity assumptions and&nbsp;&nbsp;
+
+00:16:35.270 --> 00:16:41.510
+boundedness of the individual ARS this will be&nbsp;
+bounded okay what is not clear is that it will&nbsp;&nbsp;
+
+00:16:41.510 --> 00:16:49.580
+have actually have a limit might not right in&nbsp;
+general it might not have a limit so you have&nbsp;&nbsp;
+
+00:16:49.580 --> 00:16:54.830
+to impose additional constraints on the kind of&nbsp;
+problems that you are solving not all problems&nbsp;&nbsp;
+
+00:16:54.830 --> 00:17:01.040
+have this defined right or when you can make&nbsp;
+some small variations to this to make sure&nbsp;&nbsp;
+
+00:17:01.040 --> 00:17:07.340
+that all problems have this limit defined okay&nbsp;
+so there are slight different the limit can be&nbsp;&nbsp;
+
+00:17:07.340 --> 00:17:13.010
+you can play around with the limit for example one&nbsp;
+case where limit will not exceed exist is this if&nbsp;&nbsp;
+
+00:17:13.010 --> 00:17:20.540
+the sequence is periodic right if the sequence is&nbsp;
+periodic then the limit don't exist right because&nbsp;&nbsp;
+
+00:17:20.540 --> 00:17:25.520
+it'll just keep oscillating all the time right&nbsp;
+so in this case we use something called the we&nbsp;&nbsp;
+
+00:17:25.520 --> 00:17:33.800
+know how to handle limits of periodic sequences&nbsp;
+use something called the cesari's limit which&nbsp;&nbsp;
+
+00:17:33.800 --> 00:17:39.590
+essentially looks at the average over periods&nbsp;
+and lets the number of periods run to infinity&nbsp;&nbsp;
+
+00:17:39.590 --> 00:17:47.060
+right so in the reason the limit doesn't exist&nbsp;
+is because you cut the sequence in the middle of&nbsp;&nbsp;
+
+00:17:47.060 --> 00:17:53.210
+a period wait so it's going to be periodic so&nbsp;
+you you only take a period as a unit and take&nbsp;&nbsp;
+
+00:17:53.210 --> 00:17:59.150
+the reward over the period right and then you&nbsp;
+keep adding that over subsequent periods and&nbsp;&nbsp;
+
+00:17:59.150 --> 00:18:04.340
+take the average right and limit that's the&nbsp;
+number of such periods you consider this goes&nbsp;&nbsp;
+
+00:18:04.340 --> 00:18:10.370
+to infinity is called the cicero's limit then&nbsp;
+in such cases limit might exist because there&nbsp;&nbsp;
+
+00:18:10.370 --> 00:18:14.780
+are bunch of other conditions you have to put&nbsp;
+on the actual structure of the problem itself&nbsp;&nbsp;
+
+00:18:14.780 --> 00:18:20.480
+for it ensure that this limit exists but for a&nbsp;
+very broad class of problems you can talk about&nbsp;&nbsp;
+
+00:18:20.480 --> 00:18:25.880
+this limits as well so the nice thing about this&nbsp;
+kind of the return definition is that it doesn't&nbsp;&nbsp;
+
+00:18:25.880 --> 00:18:35.300
+have a pesky gamma parameter right so it makes&nbsp;
+it nice from a computational point of view not&nbsp;&nbsp;
+
+00:18:35.300 --> 00:18:41.840
+to have the gamma parameter but it makes it little&nbsp;
+weekend from with one of the original motivations&nbsp;&nbsp;
+
+00:18:41.840 --> 00:18:46.880
+of RL point of view because it doesn't have the&nbsp;
+gamma parameter okay so gamma parameter allows&nbsp;&nbsp;
+
+00:18:46.880 --> 00:18:53.630
+you to have you know some sense personality for&nbsp;
+your agent and is it the near-sighted agent or&nbsp;&nbsp;
+
+00:18:53.630 --> 00:18:58.700
+the farsighted agent and so on so forth right&nbsp;
+so especially people in neuroscience when they&nbsp;&nbsp;
+
+00:18:58.700 --> 00:19:06.650
+are looking at modeling reinforcement learning&nbsp;
+humans right so they actually have they think&nbsp;&nbsp;
+
+00:19:06.650 --> 00:19:14.120
+they can think of estimating what is your gamma&nbsp;
+by running experiments with you right because it's&nbsp;&nbsp;
+
+00:19:14.120 --> 00:19:19.550
+kind of you know it's it's a personality thing&nbsp;
+right so some people will tend to be in fact in&nbsp;&nbsp;
+
+00:19:19.550 --> 00:19:26.210
+fact there are studies that try to correlate&nbsp;
+the levels of serotonin in your head to gamma&nbsp;&nbsp;
+
+00:19:26.210 --> 00:19:34.010
+right so more the serotonin the larger the gamma&nbsp;
+value you have in your decision-making and so on&nbsp;&nbsp;
+
+00:19:34.010 --> 00:19:41.600
+so VIN is slick this is really weird how we seem&nbsp;
+to have all these parameters in our head tied up&nbsp;&nbsp;
+
+00:19:41.600 --> 00:19:49.460
+with the different kinds of neurotransmitters&nbsp;
+anyway so this is called the average reward
+
+00:19:53.390 --> 00:20:03.530
+this is called average reward return&nbsp;
+so any again any case is what this is&nbsp;&nbsp;
+
+00:20:03.530 --> 00:20:24.650
+called discounted return that huh sorry&nbsp;
+I can't get cumulative or total return&nbsp;&nbsp;
+
+00:20:24.650 --> 00:20:28.430
+on it so people yeah if you're going to&nbsp;
+call that cumulating then you have to&nbsp;&nbsp;
+
+00:20:28.430 --> 00:20:44.210
+call this cumulative disconnected okay so&nbsp;
+there is a very nice problem that people&nbsp;&nbsp;
+
+00:20:44.210 --> 00:20:51.830
+use for motivating wide discounted return is&nbsp;
+banned so let me let me try and do that here
+
+00:21:09.530 --> 00:21:15.350
+so I'm implying no no theological leanings&nbsp;
+here okay this is just a fun example
+
+00:21:35.860 --> 00:21:45.760
+so that's it and it's heaven and that's hell&nbsp;
+so the path to heaven has a minus 100 reward&nbsp;&nbsp;
+
+00:21:45.760 --> 00:21:51.940
+and the path to hell has a plus thousand&nbsp;
+reward right but once you reach heaven you&nbsp;&nbsp;
+
+00:21:51.940 --> 00:22:04.120
+get a plus-one infinitely once you reach hell&nbsp;
+you get a minus one infinitely I said I'm not&nbsp;&nbsp;
+
+00:22:04.120 --> 00:22:08.800
+getting into theology here okay this is just&nbsp;
+a fun example of course you can always think&nbsp;&nbsp;
+
+00:22:08.800 --> 00:22:18.400
+about other things yes no no the work for now&nbsp;
+anyway I've finished here right she said it's&nbsp;&nbsp;
+
+00:22:18.400 --> 00:22:26.890
+a transient state we don't care but then if I said&nbsp;
+gamma is two gamma s point one or something right&nbsp;&nbsp;
+
+00:22:26.890 --> 00:22:32.740
+you prefer going to hell right if gamma is like&nbsp;
+point nine is inside gamma has to be pretty hate&nbsp;&nbsp;
+
+00:22:32.740 --> 00:22:40.330
+for you to go to heaven right so it's the same&nbsp;
+problem so now gamma becomes part of the problem&nbsp;&nbsp;
+
+00:22:40.330 --> 00:22:48.190
+definition right depending on what value I set for&nbsp;
+gamma my optimal policy itself will change right&nbsp;&nbsp;
+
+00:22:48.190 --> 00:22:53.110
+so there is not a desirable state of affairs&nbsp;
+I mean if you are thinking about saying okay&nbsp;&nbsp;
+
+00:22:53.110 --> 00:22:59.590
+here is a problem solve it and it turns out that&nbsp;
+if I use average a reward scenario how is this&nbsp;&nbsp;
+
+00:22:59.590 --> 00:23:06.970
+better I'm going to heaven is better all of this&nbsp;
+doesn't depend on anything what does it depend&nbsp;&nbsp;
+
+00:23:06.970 --> 00:23:15.580
+on I'm going to have an infinite number of plus&nbsp;
+words right that'll help any my negative things&nbsp;&nbsp;
+
+00:23:15.580 --> 00:23:21.820
+I get initially I am getting a finite value for&nbsp;
+negative here I'm going to get a minus infinity&nbsp;&nbsp;
+
+00:23:21.820 --> 00:23:26.260
+then the plus infinity here so that trumps&nbsp;
+anything that happens here so average there&nbsp;&nbsp;
+
+00:23:26.260 --> 00:23:33.220
+what will tell me that this is the best thing to&nbsp;
+do but if I'm going to use discounted returns so&nbsp;&nbsp;
+
+00:23:33.220 --> 00:23:39.760
+I will go up or down depending on what my&nbsp;
+gamma is right now you can immediately see&nbsp;&nbsp;
+
+00:23:39.760 --> 00:23:45.910
+that discounted return is a more realistic return&nbsp;
+because not everybody is going to have it right
+
+00:23:48.120 --> 00:23:51.420
+anyway that's the fun part
+
+00:24:19.180 --> 00:24:26.110
+they'd come to the really the one of the crux&nbsp;
+of a reinforcement learning here right in the&nbsp;&nbsp;
+
+00:24:26.110 --> 00:24:31.990
+full aural and a lot of the algorithms that we&nbsp;
+look at and the notion of a value function but&nbsp;&nbsp;
+
+00:24:31.990 --> 00:24:35.350
+we already looked at the value function right&nbsp;
+with the value function we looked at was pretty&nbsp;&nbsp;
+
+00:24:35.350 --> 00:24:42.430
+simplistic right so what did we do that we&nbsp;
+said okay areas of all the words I obtained&nbsp;&nbsp;
+
+00:24:42.430 --> 00:24:45.850
+so far right that is the value function&nbsp;
+then we had another value which he looked&nbsp;&nbsp;
+
+00:24:45.850 --> 00:24:52.540
+at which is the expected to expected reward&nbsp;
+that I should get if I take an action right&nbsp;&nbsp;
+
+00:24:52.540 --> 00:24:58.720
+so we noted that my Q star and then denoted by Q&nbsp;
+the average that I'm maintaining for this right&nbsp;&nbsp;
+
+00:24:58.720 --> 00:25:09.130
+but here they are something more complex&nbsp;
+what do we have here we have a policy PI&nbsp;&nbsp;
+
+00:25:09.130 --> 00:25:14.620
+which determines not just the current reward&nbsp;
+but also the sequence that I am going to see&nbsp;&nbsp;
+
+00:25:14.620 --> 00:25:19.030
+henceforth right so when I'm going to talk&nbsp;
+about the value function here I will talk&nbsp;&nbsp;
+
+00:25:19.030 --> 00:25:30.040
+about something called V of pipe right so we PI&nbsp;
+is the value function associated with a policy PI
+
+00:25:30.040 --> 00:25:35.890
+right so when you say V PI off yes
+
+00:25:39.430 --> 00:25:49.720
+so this is essentially the the expectation of&nbsp;
+so what should I be taking the expectation of&nbsp;&nbsp;
+
+00:25:49.720 --> 00:26:00.520
+rewards or returns what do you think it I should&nbsp;
+be taking the expectation of the returns right&nbsp;&nbsp;
+
+00:26:00.520 --> 00:26:05.740
+because the return is what I am looking to&nbsp;
+optimize this is what I should be predicting&nbsp;&nbsp;
+
+00:26:05.740 --> 00:26:10.120
+so in the bandit case I was only looking at the&nbsp;
+reward so I was just making orderly expectation&nbsp;&nbsp;
+
+00:26:10.120 --> 00:26:18.550
+of the reward and here I should make it order&nbsp;
+the expectation of return so given anything
+
+00:26:26.600 --> 00:26:27.740
+anything else
+
+00:26:36.850 --> 00:26:42.070
+I need to conditionally kanpai right because I&nbsp;
+already have a PI here so so why do I need to&nbsp;&nbsp;
+
+00:26:42.070 --> 00:26:47.560
+condition kanpai because but GT is going to&nbsp;
+depend on pi regardless of what formulation&nbsp;&nbsp;
+
+00:26:47.560 --> 00:26:53.290
+I'm using the subsequent rewards I'm going to&nbsp;
+get depend on the actions I take right so I&nbsp;&nbsp;
+
+00:26:53.290 --> 00:26:57.640
+nearly need to know what my pi is right so&nbsp;
+I need to condition it on price so we will&nbsp;&nbsp;
+
+00:26:57.640 --> 00:27:01.810
+denote it like this right when I write when I&nbsp;
+write the PI here that means that's a policy&nbsp;&nbsp;
+
+00:27:01.810 --> 00:27:07.360
+I am conditioning off okay the expectation&nbsp;
+with respect to the distribution generated&nbsp;&nbsp;
+
+00:27:07.360 --> 00:27:22.120
+by following pi okay of GT given that at time T I&nbsp;
+started with state s does it make sense everyone&nbsp;&nbsp;
+
+00:27:22.120 --> 00:27:32.050
+on board right so I'm starting from status I am&nbsp;
+following PI am generating one trajectory right&nbsp;&nbsp;
+
+00:27:32.050 --> 00:27:43.900
+like this right so I start from yes go to some&nbsp;
+s prime go to s double prime so on wait so every&nbsp;&nbsp;
+
+00:27:43.900 --> 00:27:49.780
+time I take an action so I will take a a prime&nbsp;
+K double Prime and so on and I will get some
+
+00:27:57.540 --> 00:28:06.090
+this is one one trajectory so like that I'll&nbsp;
+start from this I'll do another trajectory then&nbsp;&nbsp;
+
+00:28:06.090 --> 00:28:10.020
+I'll start from SL do another trajectory I'll&nbsp;
+start from s I'll do another trajectory then I&nbsp;&nbsp;
+
+00:28:10.020 --> 00:28:15.600
+will be getting all these rewards like they have&nbsp;
+our R Prime double frame like that I'll get some&nbsp;&nbsp;
+
+00:28:15.600 --> 00:28:21.150
+R 1 prime R 1 double frame and so on so for each&nbsp;
+trajectory I will get one set sequence of rewards&nbsp;&nbsp;
+
+00:28:21.150 --> 00:28:26.460
+right so I'll add up all of these or I will take&nbsp;
+a discounted sum of all of this right so I'll do&nbsp;&nbsp;
+
+00:28:26.460 --> 00:28:32.310
+that right and I'll take your average so that's&nbsp;
+that's essentially what whatever that average&nbsp;&nbsp;
+
+00:28:32.310 --> 00:28:38.580
+will converge to is my expected value for this so&nbsp;
+this is essentially what I mean when I say GT says&nbsp;&nbsp;
+
+00:28:38.580 --> 00:28:45.330
+that s T equal to yes that means I'll start&nbsp;
+with this okay and compute this rewards okay
+
+00:29:00.990 --> 00:29:06.150
+Rick does it clear why we need to condition on&nbsp;
+the pie as well right the future is going to&nbsp;&nbsp;
+
+00:29:06.150 --> 00:29:13.800
+depend on right yeah yeah I'm talking about&nbsp;
+the expectation here I'm just explaining to&nbsp;&nbsp;
+
+00:29:13.800 --> 00:29:18.540
+you what the expectation is so every time&nbsp;
+I generate the trajectory through pie right&nbsp;&nbsp;
+
+00:29:18.540 --> 00:29:22.830
+two things could happen yeah I could pick&nbsp;
+different actions because pi is stochastic&nbsp;&nbsp;
+
+00:29:22.830 --> 00:29:28.740
+be the world could change in a different way&nbsp;
+because the world is stochastic so in the same&nbsp;&nbsp;
+
+00:29:28.740 --> 00:29:33.450
+yes I could take the same way I might end up&nbsp;
+in a different discipline every time right so&nbsp;&nbsp;
+
+00:29:33.450 --> 00:29:38.070
+there are multiple ways in which this to&nbsp;
+casa city can operate so one by itself is&nbsp;&nbsp;
+
+00:29:38.070 --> 00:29:42.690
+stochastic therefore in the same yes I need not&nbsp;
+take the same action again say first time I can&nbsp;&nbsp;
+
+00:29:42.690 --> 00:29:46.350
+take a1 next time I can take a two and so on&nbsp;
+so forth then that will completely change the&nbsp;&nbsp;
+
+00:29:46.350 --> 00:29:52.410
+trajectory that will come later or I'll take&nbsp;
+the same a and I might end up in a different&nbsp;&nbsp;
+
+00:29:52.410 --> 00:29:57.300
+s prime because of the transition probability&nbsp;
+so every time I do this trajectory I will get&nbsp;&nbsp;
+
+00:29:57.300 --> 00:30:03.330
+some different project every time I generate a&nbsp;
+trajectory I will get a different sequence right&nbsp;&nbsp;
+
+00:30:03.330 --> 00:30:08.610
+and the expectation is over all set sequences&nbsp;
+you know what is the total reward I'll get so&nbsp;&nbsp;
+
+00:30:08.610 --> 00:30:18.240
+that's essentially what the value functions okay&nbsp;
+yeah great let's let's confuse people some more
+
+00:30:21.930 --> 00:30:32.550
+so we had Q earlier right so what was Q of&nbsp;
+a Q start off here what's the true thing q&nbsp;&nbsp;
+
+00:30:32.550 --> 00:30:40.380
+obviously expectation a we are expected&nbsp;
+estimate for taking action a right but&nbsp;&nbsp;
+
+00:30:40.380 --> 00:30:44.430
+then here we have to worry about taking&nbsp;
+action yeah in a specific state because&nbsp;&nbsp;
+
+00:30:44.430 --> 00:30:51.060
+every state it is going to be different&nbsp;
+correct every state it will be different&nbsp;&nbsp;
+
+00:30:51.060 --> 00:30:57.780
+so what less will be she'll have to&nbsp;
+do this you shouldn't have to do this
+
+00:31:17.620 --> 00:31:31.630
+so what is a big difference between the V and Q&nbsp;
+sorry yeah action yes fix it so earlier when you&nbsp;&nbsp;
+
+00:31:31.630 --> 00:31:40.120
+were generating trajectories for V PI I said you&nbsp;
+start with this right then you go to s prime then&nbsp;&nbsp;
+
+00:31:40.120 --> 00:31:43.420
+you go to s double prime and so on so forth and&nbsp;
+then you could I said you could pick any action&nbsp;&nbsp;
+
+00:31:43.420 --> 00:31:56.080
+so first time will pick a and a prime so next&nbsp;
+time you cook some EA one so like this right so&nbsp;&nbsp;
+
+00:31:56.080 --> 00:32:00.280
+you could pick different actions every time we&nbsp;
+generated the trajectory so now I am saying you&nbsp;&nbsp;
+
+00:32:00.280 --> 00:32:10.660
+can't do that right so every time we generate&nbsp;
+the trajectory you have to pick a first right&nbsp;&nbsp;
+
+00:32:10.660 --> 00:32:19.960
+but subsequently you pick actions according to&nbsp;
+by the first action is something that is fixed&nbsp;&nbsp;
+
+00:32:19.960 --> 00:32:25.870
+now the first action will be all the time so&nbsp;
+what does this tell you it tells you how good&nbsp;&nbsp;
+
+00:32:25.870 --> 00:32:33.190
+is it to perform action a in a given state so&nbsp;
+earlier you did not have that information but&nbsp;&nbsp;
+
+00:32:33.190 --> 00:32:40.510
+now you have the information about how good&nbsp;
+is it to perform actually in a given State
+
+00:32:43.030 --> 00:32:55.390
+is it here going back and thinking about&nbsp;
+the problem itself right so there is a&nbsp;&nbsp;
+
+00:32:55.390 --> 00:32:59.440
+problem that we are trying to solve right&nbsp;
+so how do you define the problem how do&nbsp;&nbsp;
+
+00:32:59.440 --> 00:33:06.070
+you characterize the problem right so I am&nbsp;
+in a state s I take an action ok I go to a&nbsp;&nbsp;
+
+00:33:06.070 --> 00:33:12.130
+next state and I also get a new one right&nbsp;
+so for me to characterize the problem I&nbsp;&nbsp;
+
+00:33:12.130 --> 00:33:17.620
+need to tell you how this transitions&nbsp;
+happen and how the reward generation&nbsp;&nbsp;
+
+00:33:17.620 --> 00:33:23.410
+happens right so I need to really look at this&nbsp;
+following question what is the probability of
+
+00:33:33.520 --> 00:33:35.530
+given
+
+00:33:47.280 --> 00:33:52.200
+sorry Artie plus 1 given
+
+00:33:55.850 --> 00:34:06.500
+this is sufficient I mean think about it right&nbsp;
+riding a bicycle so you probably need to know&nbsp;&nbsp;
+
+00:34:06.500 --> 00:34:13.940
+what was the velocity momentum that you had&nbsp;
+before means not not enough to know how very&nbsp;&nbsp;
+
+00:34:13.940 --> 00:34:18.440
+war on the road and how you are tilting you&nbsp;
+might want to know something more about the&nbsp;&nbsp;
+
+00:34:18.440 --> 00:34:43.490
+history of how you got there right so you&nbsp;
+really need that quantity so you need to&nbsp;&nbsp;
+
+00:34:43.490 --> 00:34:50.570
+know what is the probability of s T plus 1 or&nbsp;
+T plus 1 given everything that went before that
+
+00:34:54.560 --> 00:35:00.950
+okay now this piece is a little complex to&nbsp;
+model because the number of parameters you&nbsp;&nbsp;
+
+00:35:00.950 --> 00:35:08.690
+will need for modeling something like this becomes&nbsp;
+pretty pretty huge right so what we typically end&nbsp;&nbsp;
+
+00:35:08.690 --> 00:35:30.830
+up doing is make a very strong assumption that&nbsp;
+this guy is equal to you what you truly need is&nbsp;&nbsp;
+
+00:35:30.830 --> 00:35:37.580
+the first quantity and because it becomes very&nbsp;
+hard to estimate very hard to define you make&nbsp;&nbsp;
+
+00:35:37.580 --> 00:35:42.800
+the assumption that that quantity is really equal&nbsp;
+to this right so what is this as a friend called&nbsp;&nbsp;
+
+00:35:42.800 --> 00:35:50.180
+typically Markov assumption it's essentially a&nbsp;
+first-order Markov assumption where the history&nbsp;&nbsp;
+
+00:35:50.180 --> 00:35:55.550
+doesn't matter right only the current state and&nbsp;
+current action matters that will determine what&nbsp;&nbsp;
+
+00:35:55.550 --> 00:36:03.110
+the next state of next action will be right&nbsp;
+so we make a further assumption which is
+
+00:36:49.020 --> 00:36:57.300
+what is in the assumption I made stationarity&nbsp;
+right so we typically operate with marco&nbsp;&nbsp;
+
+00:36:57.300 --> 00:37:05.280
+environments right and we'll typically assume&nbsp;
+they are stationary so for me to characterize&nbsp;&nbsp;
+
+00:37:05.280 --> 00:37:23.190
+the problem now what should I give you what I&nbsp;
+need is what is the question yeah to specify&nbsp;&nbsp;
+
+00:37:23.190 --> 00:37:30.060
+the problem what are the things I should give&nbsp;
+you okay and I should give you the states over&nbsp;&nbsp;
+
+00:37:30.060 --> 00:37:34.170
+which the problem is defined right I need&nbsp;
+to do that right I need to define the state&nbsp;&nbsp;
+
+00:37:34.170 --> 00:37:44.790
+space over which the problem is defined and&nbsp;
+then the set of actions that I can take and
+
+00:37:53.110 --> 00:38:02.200
+and the P function right so I need all&nbsp;
+of this to define the problem completely&nbsp;&nbsp;
+
+00:38:02.200 --> 00:38:14.470
+anything else I need depends on what is the&nbsp;
+return I'm using a man also neither gamma&nbsp;&nbsp;
+
+00:38:14.470 --> 00:38:22.150
+right if my return if I'm using a discounted&nbsp;
+return depending on what the value of gamma&nbsp;&nbsp;
+
+00:38:22.150 --> 00:38:26.350
+is the problem changes think that's what we&nbsp;
+discussed so if I'm going to use discounted&nbsp;&nbsp;
+
+00:38:26.350 --> 00:38:31.210
+return I should also specify gamma as part&nbsp;
+of the problem okay is it clear so I need&nbsp;&nbsp;
+
+00:38:31.210 --> 00:38:42.730
+all of this to define my problem right in some&nbsp;
+cases we use a slightly simplified definition
+
+00:38:53.620 --> 00:39:03.370
+when instead of having the single Joint&nbsp;
+Distribution is over s Prime and our right&nbsp;&nbsp;
+
+00:39:03.370 --> 00:39:10.690
+we also give it us to separate quantities so I&nbsp;
+will suggest yes I mean I have to specify s a&nbsp;&nbsp;
+
+00:39:10.690 --> 00:39:21.460
+then I will specify that so what is that called&nbsp;
+sometimes called the the transition function or&nbsp;&nbsp;
+
+00:39:21.460 --> 00:39:38.200
+transition probabilities okay and then I'll&nbsp;
+specify the the expected value of the return&nbsp;&nbsp;
+
+00:39:38.200 --> 00:39:48.970
+given that a tea I was in yes I did action yay&nbsp;
+and I went to s Prime right so essentially I'm&nbsp;&nbsp;
+
+00:39:48.970 --> 00:39:54.100
+writing this out splitting this up right so&nbsp;
+so instead of giving my Joint Distribution&nbsp;&nbsp;
+
+00:39:54.100 --> 00:39:59.920
+I am saying okay no no I'll specify the s Prime&nbsp;
+separately and for the are I will condition it on&nbsp;&nbsp;
+
+00:39:59.920 --> 00:40:07.360
+s prime also right so I can you can think of some&nbsp;
+sense I'm using the chain rule and splitting that&nbsp;&nbsp;
+
+00:40:07.360 --> 00:40:15.280
+joint probability as P of s Prime into PF are&nbsp;
+given s da s Prime but what is the difference&nbsp;&nbsp;
+
+00:40:15.280 --> 00:40:22.930
+here instead of specifying P of are given a CIS&nbsp;
+Prime I am giving you only the first Mumbai first&nbsp;&nbsp;
+
+00:40:22.930 --> 00:40:32.470
+movement or zeroth moment in the first moment&nbsp;
+of the distribution right so why is this enough
+
+00:40:39.380 --> 00:40:47.000
+why is this enough because I am going to&nbsp;
+be optimizing only the expected value of&nbsp;&nbsp;
+
+00:40:47.000 --> 00:40:52.490
+GT and then GT is composed of these guys right&nbsp;
+so essentially I will be taking the individual&nbsp;&nbsp;
+
+00:40:52.490 --> 00:40:57.320
+expectations of each one of these right and&nbsp;
+that's enough for me I don't really need&nbsp;&nbsp;
+
+00:40:57.320 --> 00:41:02.960
+to know the distribution we generated these&nbsp;
+rewards because individually I'll be taking&nbsp;&nbsp;
+
+00:41:02.960 --> 00:41:06.290
+the expectations of each one of these rewards&nbsp;
+and therefore knowing the expectation alone is&nbsp;&nbsp;
+
+00:41:06.290 --> 00:41:17.120
+enough so sometimes you specify the problem like&nbsp;
+this right and this is typically how you would I
+
+00:41:17.120 --> 00:41:32.900
+would specify what is called a Markov decision&nbsp;
+process so it's it's a system is a decision&nbsp;&nbsp;
+
+00:41:32.900 --> 00:41:37.640
+system that you have to for every state you&nbsp;
+have to actually keep giving a decision right&nbsp;&nbsp;
+
+00:41:37.640 --> 00:41:46.400
+and it follows Markovian dynamics right both the&nbsp;
+transition and the rewards follow having satisfy&nbsp;&nbsp;
+
+00:41:46.400 --> 00:41:53.060
+the Markov property right so such a system is&nbsp;
+called a Markov decision process right so we&nbsp;&nbsp;
+
+00:41:53.060 --> 00:41:58.910
+have states you have set of decisions right and&nbsp;
+the evolution of the states follows see all those&nbsp;&nbsp;
+
+00:41:58.910 --> 00:42:04.820
+are Markov process okay so they're called Markov&nbsp;
+decision processes and what we will assume is that&nbsp;&nbsp;
+
+00:42:04.820 --> 00:42:16.370
+the reinforcement learning problems that we are&nbsp;
+trying to solve can be modeled as MVPs we will&nbsp;&nbsp;
+
+00:42:16.370 --> 00:42:19.640
+assume that the real first filling problems you&nbsp;
+are trying to solve can be modeled as MD please&nbsp;&nbsp;
+
+00:42:19.640 --> 00:42:26.990
+so in some sense a value function really you know&nbsp;
+is useful only if you have the Markov property
+
+00:42:29.770 --> 00:42:30.970
+right
+
+00:42:40.120 --> 00:42:49.210
+because i am i sending a value to a state&nbsp;
+regardless of how i got to the state right so&nbsp;&nbsp;
+
+00:42:49.210 --> 00:42:53.740
+if my the Markov property is not satisfied how&nbsp;
+I got to the state will influence what happens&nbsp;&nbsp;
+
+00:42:53.740 --> 00:42:59.410
+in the future right since I am saying that no&nbsp;
+I don't care about what happened in the past&nbsp;&nbsp;
+
+00:42:59.410 --> 00:43:05.380
+I'm saying I'm starting in state s okay and I'm&nbsp;
+going to be following policy pi hereafter what&nbsp;&nbsp;
+
+00:43:05.380 --> 00:43:11.140
+is the expected return that's what I'm saying&nbsp;
+history is irrelevant right when I'm defending&nbsp;&nbsp;
+
+00:43:11.140 --> 00:43:15.490
+a value function another way of thinking about&nbsp;
+it is here the value function is marginalizing&nbsp;&nbsp;
+
+00:43:15.490 --> 00:43:19.870
+over history so it is essentially taking the&nbsp;
+expectation regardless of what the history&nbsp;&nbsp;
+
+00:43:19.870 --> 00:43:25.570
+was that's one way of looking at it I mean in&nbsp;
+some cases that is how you make sense out of&nbsp;&nbsp;
+
+00:43:25.570 --> 00:43:31.570
+the value functions because as we go along later&nbsp;
+we will see that we actually apply RL blind lead&nbsp;&nbsp;
+
+00:43:31.570 --> 00:43:38.890
+to problems are not one Markov right and we will&nbsp;
+be using the V function in the Q function in such&nbsp;&nbsp;
+
+00:43:38.890 --> 00:43:43.030
+cases so the only way to make sense out of what&nbsp;
+is happening in such cases is to say that hey we&nbsp;&nbsp;
+
+00:43:43.030 --> 00:43:49.210
+are essentially marginalizing the history say&nbsp;
+we are just doing they taking the expectation&nbsp;&nbsp;
+
+00:43:49.210 --> 00:43:55.360
+over all possible histories as well I know it&nbsp;
+may not be a sensible quantity but if it works&nbsp;&nbsp;
+
+00:43:55.360 --> 00:44:03.070
+hey you just use it right but normally the value&nbsp;
+function makes sense only if you have the Markov&nbsp;&nbsp;
+
+00:44:03.070 --> 00:44:07.990
+property forget about the future right and the&nbsp;
+because you are ignoring the past it makes sense&nbsp;&nbsp;
+
+00:44:07.990 --> 00:44:15.430
+only if you have the Markov property right it&nbsp;
+makes sense so that is why I was saying that I&nbsp;&nbsp;
+
+00:44:15.430 --> 00:44:20.230
+should have probably defined value functions&nbsp;
+after telling you what mark audition process&nbsp;&nbsp;
+
+00:44:20.230 --> 00:44:31.600
+but it's okay you can still understand it in the&nbsp;
+general sense as well great so the next thing we&nbsp;&nbsp;
+
+00:44:31.600 --> 00:44:36.490
+have to talk about is optimal value functions&nbsp;
+and what I will start that in the next class
+

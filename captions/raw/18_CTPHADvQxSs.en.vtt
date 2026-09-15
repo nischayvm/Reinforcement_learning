@@ -1,0 +1,384 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:12.763 --> 00:00:14.560
+[Music] so we are talking about value
+
+00:00:14.560 --> 00:00:21.520
+functions okay uh people remember&nbsp;
+value functions right we Define&nbsp;&nbsp;
+
+00:00:21.520 --> 00:00:29.960
+value functions we said B Pi of s&nbsp;
+equal to expected value under Pi of
+
+00:00:38.840 --> 00:00:59.920
+right and then we Define q pi
+
+00:01:18.280 --> 00:01:25.320
+okay good uh so now we're going to&nbsp;
+start unrolling their expectation so&nbsp;&nbsp;
+
+00:01:25.320 --> 00:01:28.760
+people remember this expression right so&nbsp;
+all of you are clear about I don't have&nbsp;&nbsp;
+
+00:01:28.760 --> 00:01:32.680
+to explain what what is happening there&nbsp;
+again right so V Pi s means starting in&nbsp;&nbsp;
+
+00:01:32.680 --> 00:01:38.200
+state s following policy Pi thereafter&nbsp;
+and taking the expectations of the the&nbsp;&nbsp;
+
+00:01:38.200 --> 00:01:42.440
+returns that I'm getting right I'm going to&nbsp;
+start unrolling this right so what does it
+
+00:01:42.440 --> 00:01:59.840
+uh what does it look like so I'm&nbsp;
+going to say V Pi of s equal to
+
+00:02:14.920 --> 00:02:29.840
+yes
+
+00:02:30.760 --> 00:02:31.320
+what can I write
+
+00:02:31.320 --> 00:02:47.440
+here huh GT + 1 right but what is what would be&nbsp;
+the value of GT + one the expected value of GT +
+
+00:02:47.440 --> 00:02:58.000
+1 V Pi of whatever state you land up in&nbsp;
+right so let us go I'm going to say that&nbsp;&nbsp;
+
+00:02:58.000 --> 00:03:03.640
+this is equal to V Pi of so S Prime where S&nbsp;
+Prime is a state I'm going to land up we'll&nbsp;&nbsp;
+
+00:03:03.640 --> 00:03:09.000
+we'll quantify S Prime in a minute right so&nbsp;
+so people agree with me on this right so S&nbsp;&nbsp;
+
+00:03:09.000 --> 00:03:15.440
+Prime is the state I go to from s right so&nbsp;
+I can take this summation and write it like
+
+00:03:15.440 --> 00:03:33.520
+this everybody on board okay great so now I did&nbsp;
+a slight slate of hand here right so I took GT&nbsp;&nbsp;
+
+00:03:33.520 --> 00:03:39.480
+and then I wrote it as one term plus the expected&nbsp;
+value of GT but that is fine because I'm anyway&nbsp;&nbsp;
+
+00:03:39.480 --> 00:03:45.520
+going to take a expectation eventually right so&nbsp;
+this is a slight reordering of the expectations&nbsp;&nbsp;
+
+00:03:45.520 --> 00:03:49.880
+right inste of taking the expectation of the full&nbsp;
+expression I took the expectation of the inner one&nbsp;&nbsp;
+
+00:03:49.880 --> 00:03:55.840
+alone but one thing you have to remember is it's&nbsp;
+only a partial expectation because S Prime can&nbsp;&nbsp;
+
+00:03:55.840 --> 00:04:02.320
+change right so for me to get the full expectation&nbsp;
+I need to condition on S Prime also that is why&nbsp;&nbsp;
+
+00:04:02.320 --> 00:04:08.960
+this expression is still inside the expectation&nbsp;
+so if this had been the full expectation I could&nbsp;&nbsp;
+
+00:04:08.960 --> 00:04:14.520
+have taken it out out of the expectation since&nbsp;
+it is still only partially conditioned so I need&nbsp;&nbsp;
+
+00:04:14.520 --> 00:04:20.000
+to condition it on the full thing okay so now I&nbsp;
+have to write it out so that we'll get rid of the&nbsp;&nbsp;
+
+00:04:20.000 --> 00:04:27.360
+expectations okay so one way of writing out this&nbsp;
+expectation is to think of it like a generative&nbsp;&nbsp;
+
+00:04:27.360 --> 00:04:37.040
+process okay so remember what did they say we&nbsp;
+are going to do we'll start in state s right&nbsp;&nbsp;
+
+00:04:37.040 --> 00:04:46.840
+then select actions according to policy PI right&nbsp;
+and measure the expected return right so you're&nbsp;&nbsp;
+
+00:04:46.840 --> 00:04:59.640
+starting in stateus and you're selecting actions&nbsp;
+according to policy Pi so what does it mean
+
+00:05:02.160 --> 00:05:04.160
+okay you're using pi
+
+00:05:04.160 --> 00:05:11.640
+right and I'm selecting actions according to&nbsp;
+policy Pi so let us say I picked some action&nbsp;&nbsp;
+
+00:05:11.640 --> 00:05:19.120
+a right so now what I'm going to do I'm going&nbsp;
+to get some reward corresponding to that RT&nbsp;&nbsp;
+
+00:05:19.120 --> 00:05:23.800
+plus yeah the rt+ one will be something&nbsp;
+that corresponds to that reward so but
+
+00:05:23.800 --> 00:05:29.920
+then before I can find out what RT +1 is I&nbsp;&nbsp;
+
+00:05:29.920 --> 00:05:33.520
+need to specify what the next&nbsp;
+state is going to be so I need
+
+00:05:33.520 --> 00:05:42.320
+this so I Tak an action a and then I&nbsp;
+determine what S Prime is and then I determine
+
+00:05:42.320 --> 00:05:59.640
+what right but I already determined&nbsp;
+what S Prime is so I can do this
+
+00:06:09.840 --> 00:06:14.560
+right so this is one step I'm taking a pick&nbsp;
+an action a according to PI right now that&nbsp;&nbsp;
+
+00:06:14.560 --> 00:06:20.040
+is going to cause a transition to some S Prime&nbsp;
+according to this P that we have there right and&nbsp;&nbsp;
+
+00:06:20.040 --> 00:06:25.160
+once I know what the S Prime is I can figure&nbsp;
+out what the expected reward will be as well&nbsp;&nbsp;
+
+00:06:25.160 --> 00:06:32.360
+as V Pi S Prime because I know what S Prime is&nbsp;
+so what is the probability that this will be my
+
+00:06:32.360 --> 00:06:38.280
+return is this times the probability I'll pick&nbsp;&nbsp;
+
+00:06:38.280 --> 00:06:44.240
+action a so this whole thing gives&nbsp;
+me the probability that this will be
+
+00:06:44.240 --> 00:06:51.840
+my expected return okay so now&nbsp;
+I have to do this over all all&nbsp;&nbsp;
+
+00:06:51.840 --> 00:06:59.520
+possible outcomes so basically a sum over S Prime
+
+00:07:02.960 --> 00:07:06.360
+okay is it clear how we got this right
+
+00:07:06.360 --> 00:07:16.600
+huh this one right so I have a sa a right that's I&nbsp;
+picked a a first then I pick an S Prime according&nbsp;&nbsp;
+
+00:07:16.600 --> 00:07:22.040
+to P now I have S S Prime right so what I need&nbsp;
+to do is figure out what this R expectation of&nbsp;&nbsp;
+
+00:07:22.040 --> 00:07:28.400
+RT +1 would be right so that is given in my mdp&nbsp;
+right the expectation of RT + one would be given&nbsp;&nbsp;
+
+00:07:28.400 --> 00:07:32.480
+s a s Prime what is the reward so that is this&nbsp;
+expectation I've written it here expectation of&nbsp;&nbsp;
+
+00:07:32.480 --> 00:07:39.440
+R given s s Prime right and then the future is&nbsp;
+gamma V Pi S Prime so that S Prime is already&nbsp;&nbsp;
+
+00:07:39.440 --> 00:07:44.720
+been fixed so I can just add the gamma V Pi S&nbsp;
+Prime here so the probability that this will be&nbsp;&nbsp;
+
+00:07:44.720 --> 00:07:51.600
+the outcome right is the probability of S Prime&nbsp;
+given S and A times the probability of picking&nbsp;&nbsp;
+
+00:07:51.600 --> 00:07:57.480
+a given s so all these things put together gives&nbsp;
+me the probability that this will be the outcome&nbsp;&nbsp;
+
+00:07:57.480 --> 00:08:04.840
+right so that is the expect Ed outcome for&nbsp;
+one choice of a and one choice of S Prime so&nbsp;&nbsp;
+
+00:08:04.840 --> 00:08:09.240
+I have to sum this over all choices of S Prime&nbsp;
+and all choices of a for me to get the overall&nbsp;&nbsp;
+
+00:08:09.240 --> 00:08:15.280
+expectation so that's essentially what I have done&nbsp;
+here sum over S Prime summ over a okay and this
+
+00:08:15.280 --> 00:08:29.440
+is it's nice right so we&nbsp;
+written V Pi in terms of V pi
+
+00:08:37.200 --> 00:08:40.960
+right so this this system of it's a system&nbsp;
+of equations right you can see there it's a&nbsp;&nbsp;
+
+00:08:40.960 --> 00:08:47.480
+system of equations right you have one equation&nbsp;
+for every every state how many variables are
+
+00:08:47.480 --> 00:08:57.760
+there number of as many variables as&nbsp;
+there are number of states right the&nbsp;&nbsp;
+
+00:08:57.760 --> 00:09:03.040
+number of states is not the variable that's&nbsp;
+also fixed as many variables as number of&nbsp;&nbsp;
+
+00:09:03.040 --> 00:09:08.800
+states and what is the variable here V Pi&nbsp;
+of s is the variable right so essentially&nbsp;&nbsp;
+
+00:09:08.800 --> 00:09:12.640
+so instead of thinking of it as a function now&nbsp;
+I can think of it as a collection of variables&nbsp;&nbsp;
+
+00:09:12.640 --> 00:09:19.960
+right one for each state right and I have&nbsp;
+n equations and N variables and can I solve
+
+00:09:19.960 --> 00:09:32.600
+it depends on what huh it's lar it's linear
+
+00:09:32.600 --> 00:09:38.560
+huh n variables n
+
+00:09:38.560 --> 00:09:43.640
+equations so when can you not solve
+
+00:09:43.640 --> 00:09:53.360
+it yeah when when when yeah so you get dependent&nbsp;
+columns and so becomes so you have multiple&nbsp;&nbsp;
+
+00:09:53.360 --> 00:09:57.680
+Solutions and so on so forth right so it turns&nbsp;
+out as I'll show you in the next class right&nbsp;&nbsp;
+
+00:09:57.680 --> 00:10:06.560
+uh these system of equations have a unique&nbsp;
+solution always right by virtue of the fact&nbsp;&nbsp;
+
+00:10:06.560 --> 00:10:16.000
+that the P that you're using is stochastic&nbsp;
+okay so the the rows of that P Matrix will&nbsp;&nbsp;
+
+00:10:16.000 --> 00:10:21.280
+sum to one right so by virtue of that fact we&nbsp;
+can actually go back and show that there'll&nbsp;&nbsp;
+
+00:10:21.280 --> 00:10:25.480
+be unique solution for this I I I just need&nbsp;
+to write write this slightly different in a&nbsp;&nbsp;
+
+00:10:25.480 --> 00:10:29.600
+different notation for us to see that so I'll&nbsp;
+do that in the next class right so this is&nbsp;&nbsp;
+
+00:10:29.600 --> 00:10:33.040
+pretty much has a unique solution&nbsp;
+and this is uh sometimes known
+
+00:10:33.040 --> 00:10:50.280
+as the bman equation for VP after uh Richard&nbsp;
+belman who is one of the Pioneers in uh the field&nbsp;&nbsp;
+
+00:10:50.280 --> 00:10:59.560
+of stochastic dynamic programming okay likewise&nbsp;
+you can write a bman equation for Q PI right&nbsp;&nbsp;
+
+00:10:59.560 --> 00:11:01.920
+s wants to tell me what the&nbsp;
+bman equation for Q Pi would
+
+00:11:01.920 --> 00:11:23.440
+be rest oftion some rest of the action&nbsp;
+think of it in a generative process right&nbsp;&nbsp;
+
+00:11:23.440 --> 00:11:29.360
+so what is the first thing you do when you're&nbsp;
+thinking about qsa so start with s I pick a&nbsp;&nbsp;
+
+00:11:29.360 --> 00:11:33.960
+right I mean it's fixed so there's no&nbsp;
+summing over there right it's s and a&nbsp;&nbsp;
+
+00:11:33.960 --> 00:11:39.600
+is picked right so what do I have to sum over&nbsp;
+next only the S primes because this Pi a s is&nbsp;&nbsp;
+
+00:11:39.600 --> 00:11:44.520
+out of the picture here right because I've&nbsp;
+already picked a right so I don't need to I&nbsp;&nbsp;
+
+00:11:44.520 --> 00:11:50.160
+don't need to sample from P right I already&nbsp;
+picked a so I just start by summing over S
+
+00:11:50.160 --> 00:12:00.280
+Prime right now now s s Prime are all&nbsp;
+fixed right so I can write expected&nbsp;&nbsp;
+
+00:12:00.280 --> 00:12:08.160
+value of R given s a s prime plus gamma *&nbsp;
+now the interesting question is what goes
+
+00:12:08.160 --> 00:12:17.160
+there I could write V pi and it'll be perfectly&nbsp;
+correct but I'll not be writing Q Pi in terms of Q
+
+00:12:17.160 --> 00:12:29.160
+Pi summation over summation over all actions
+
+00:12:39.560 --> 00:12:40.560
+[Music]
+
+00:12:40.560 --> 00:12:59.120
+huh this a equation for Q
+
+00:13:04.280 --> 00:13:29.120
+okay so this should also give you one one&nbsp;
+more ancillary equation there which is
+
+00:13:34.200 --> 00:13:40.080
+that's the way q and V are related and what&nbsp;
+about Q Pi can you write Q Pi in terms of V
+
+00:13:40.080 --> 00:13:47.480
+Pi that's exactly what what the earlier&nbsp;
+equation was the bman equation substitute&nbsp;&nbsp;
+
+00:13:47.480 --> 00:13:51.760
+the last summation with v pi and that&nbsp;
+is essentially Q Pi in terms of V
+
+00:13:51.760 --> 00:14:00.640
+PI right so I cannot write Q Pi sa in terms&nbsp;
+of V Pi s okay it has to be in terms of V Pi&nbsp;&nbsp;
+
+00:14:00.640 --> 00:14:23.120
+of the subsequent State okay right but V Pi&nbsp;
+is I can write in terms of Q Pi oops sorry
+
+00:14:23.120 --> 00:14:24.913
+[Music] [Applause]
+

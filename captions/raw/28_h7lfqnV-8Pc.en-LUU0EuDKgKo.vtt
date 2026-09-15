@@ -1,0 +1,889 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.660 --> 00:00:26.990
+Okay now what do we do what is next 
+exactly getting there right so we have now
+
+00:00:26.990 --> 00:00:29.820
+told you how to evaluate a policy.
+.
+
+00:00:29.820 --> 00:00:36.420
+Now the trick comes in or how to how to improve
+the policy how to solve the MDP basically
+
+00:00:36.420 --> 00:00:43.170
+I mean so this is called evaluation so this
+is called control sometimes right how do I
+
+00:00:43.170 --> 00:00:49.520
+learn to control the MDP so this is kind of
+terminology inherited from I mean so legacy
+
+00:00:49.520 --> 00:00:53.899
+terminology so this is inherited from control
+theory so now I want to know control so I
+
+00:00:53.899 --> 00:00:58.170
+have evaluation and I have control right so
+I have evaluation i have done that.
+
+00:00:58.170 --> 00:01:07.310
+So how do I how do I do control very simple
+right so I evaluate pixel policy by evaluate
+
+00:01:07.310 --> 00:01:12.899
+I do generalize policy iteration so not the
+extreme form with that I just basically the
+
+00:01:12.899 --> 00:01:20.240
+answer is positive fraction so I fix the policy
+? evaluated using this kinds of trajectories
+
+00:01:20.240 --> 00:01:27.080
+I do not run it until convergence right so
+I just evaluated on few trajectories right
+
+00:01:27.080 --> 00:01:30.420
+what do I mean the evaluation on a few trajectories
+here I start from SIM status.
+
+00:01:30.420 --> 00:01:34.530
+Just keep running the trajectory multiple
+times and then take the average and you say
+
+00:01:34.530 --> 00:01:39.310
+the C value for status right I have no guarantees
+that this value that I have computed is a
+
+00:01:39.310 --> 00:01:43.810
+true value for status under the policy ? look
+in some approximation of that but I am happy
+
+00:01:43.810 --> 00:01:47.130
+I will stop there right oh yeah this is one
+thing about generalized policy trajectory
+
+00:01:47.130 --> 00:01:50.860
+I did mention right so you do not have to
+value we do not have to find the true value
+
+00:01:50.860 --> 00:01:54.600
+of a state also.
+As long as you can find an approximate value
+
+00:01:54.600 --> 00:01:59.250
+for the state right you can keep going and
+do here then release policy information that
+
+00:01:59.250 --> 00:02:03.110
+is essentially what we will do here so we
+take a state we take some samples from the
+
+00:02:03.110 --> 00:02:08.000
+states right and then find the value and then
+you can go and try to be greedy with respect
+
+00:02:08.000 --> 00:02:14.989
+to that value function okay so any problems
+that you see here how will you be greedy with
+
+00:02:14.989 --> 00:02:22.670
+respect to value function 
+that way what is the problem being greedy
+
+00:02:22.670 --> 00:02:33.130
+that way I need that ? need the expected RSA.
+I just told you we doing Monte carol methods
+
+00:02:33.130 --> 00:02:36.610
+because we do not have any of those or we
+do not need any of those and I can work with
+
+00:02:36.610 --> 00:02:41.730
+a sample model right but now you are telling
+you just use that expression to be greedy
+
+00:02:41.730 --> 00:02:55.000
+I cannot how do I get it on that you already
+know how to do it good throw a chocolate you
+
+00:02:55.000 --> 00:03:07.840
+of all people know the answer do not use the
+v function use the Q function is the Q value
+
+00:03:07.840 --> 00:03:11.020
+function.
+I do remember I told you that and you want
+
+00:03:11.020 --> 00:03:16.490
+to recover a policy from the queue all you
+need to be you just look at the values of
+
+00:03:16.490 --> 00:03:24.370
+those actions at the state I do not need to
+look ahead, right so when I do control I use
+
+00:03:24.370 --> 00:03:41.130
+the Q function, now things get really interesting
+so how will they just do Monte Carlo evaluation
+
+00:03:41.130 --> 00:04:06.400
+for the Q function, exactly so basically starts
+with an s fix in A right and then follow ? thereafter.
+
+00:04:06.400 --> 00:04:16.519
+Then some of the rewards the summation and
+that gives me one sample for sa right let
+
+00:04:16.519 --> 00:04:19.930
+us straight forward enough I then I do this
+again I had another than other physically
+
+00:04:19.930 --> 00:04:29.270
+no physically no physically in it so the crucial
+thing is I start from a sign it take a okay,
+
+00:04:29.270 --> 00:04:35.820
+suppose I reach S again what do I do okay
+forget it let us not even go there okay there
+
+00:04:35.820 --> 00:04:39.130
+is even more fundamental question than that
+okay.
+
+00:04:39.130 --> 00:04:51.730
+So I did S I did A I get s one here okay I
+did some A one that is how action that suggested
+
+00:04:51.730 --> 00:05:02.470
+by policy ? right so this is equal to right
+so ? of s1 is a one so I do a one right now
+
+00:05:02.470 --> 00:05:13.010
+can I consider this as a sample taken from
+s1A1 you would think so it turns out that
+
+00:05:13.010 --> 00:05:20.810
+if you do this you get into all kinds of problems
+mainly because you draw a disproportionately
+
+00:05:20.810 --> 00:05:26.650
+larger number of samples from actions corresponding
+to ?.
+
+00:05:26.650 --> 00:05:33.810
+As opposed to actions that are not corresponding
+to ?, so it tends to terms of it sets up some
+
+00:05:33.810 --> 00:05:39.720
+conditions in which converges cannot be guaranteed
+right so you will get somewhere answers so
+
+00:05:39.720 --> 00:05:45.560
+you only have to know I want to evaluate all
+sa paths right only then I can do a policy
+
+00:05:45.560 --> 00:05:49.710
+improvement right there only evaluate the
+actions corresponding to ? then I cannot do
+
+00:05:49.710 --> 00:05:53.930
+policy improvement right so turns out that
+I will be disproportionately evaluating actions
+
+00:05:53.930 --> 00:05:58.780
+corresponding to ? right and therefore we
+never do this right.
+
+00:05:58.780 --> 00:06:05.919
+This whole sample and I use it only for updating
+the value of q SI at all the sample value
+
+00:06:05.919 --> 00:06:10.610
+is only for q SI and never use it for qs any
+one so if I want update the value of Q s 1
+
+00:06:10.610 --> 00:06:21.729
+a 1 I need to start from s 1 a 2 a 1 and then
+follow up I that after another thing you are
+
+00:06:21.729 --> 00:06:26.860
+drawing disproportionately large number of
+samples about one thing right it turns out
+
+00:06:26.860 --> 00:06:30.250
+it sets up some kind of instability in the
+convergence it is a little tricky.
+
+00:06:30.250 --> 00:06:39.100
+And in fact for a long time the convergence
+was of open question for updating on s1e1
+
+00:06:39.100 --> 00:06:45.360
+also right in fact If we look at look at the
+older version of the textbook they actually
+
+00:06:45.360 --> 00:06:51.020
+say in the textbook it is still open question
+because the text book was written in 97 and
+
+00:06:51.020 --> 00:06:58.660
+it was proven only in 2002 that it will not
+converge if you do that and they had to actually
+
+00:06:58.660 --> 00:07:02.240
+work on for two decades to get to the answer
+is a little tricky to give you the intuition.
+
+00:07:02.240 --> 00:07:06.630
+But the intuition is that so you are getting
+too many samples of one thing therefore the
+
+00:07:06.630 --> 00:07:11.620
+rate of convergence for this that SA is much
+faster than s1a1 will be much faster than
+
+00:07:11.620 --> 00:07:17.210
+the other kinds of things and therefore that
+you get up to get all kinds of problems, so
+
+00:07:17.210 --> 00:07:23.500
+11 probably convergent phase 2 only to use
+the first state for state in first action
+
+00:07:23.500 --> 00:07:34.280
+even longer than what yeah I mean I can estimate
+the value.
+
+00:07:34.280 --> 00:07:37.990
+But what will they do with it right I mean
+I can assume it only ? right I cannot do policy
+
+00:07:37.990 --> 00:07:44.000
+improvement on that having said all of this
+it is only for convergence issues right it
+
+00:07:44.000 --> 00:07:51.919
+turns out most cases in practice if you update
+for s1e1 also it works okay in practice it
+
+00:07:51.919 --> 00:07:55.740
+works but you cannot guarantee convenience
+so guaranteeing convergence you should do
+
+00:07:55.740 --> 00:08:00.580
+it only on the initial state.
+So now once I say that you have to do it only
+
+00:08:00.580 --> 00:08:04.901
+on the initial state you exploring starts
+becomes even more important and because you
+
+00:08:04.901 --> 00:08:09.900
+have to start at every state every action
+you have to do that often right so that you
+
+00:08:09.900 --> 00:08:14.669
+can get a good estimate for it and so you
+cannot be greedy at a particular state if
+
+00:08:14.669 --> 00:08:19.100
+unless you have taken at least a good fraction
+of the actions from the state right and try
+
+00:08:19.100 --> 00:08:32.409
+to estimate the thing so those becomes important.
+So one way of avoiding exploring starts right
+
+00:08:32.409 --> 00:08:40.539
+again it is not clear whether this kind of
+approaches 
+
+00:08:40.539 --> 00:08:52.580
+is going to be convergent is to use something
+called a epsilon soft policy right, so whenever
+
+00:08:52.580 --> 00:08:59.029
+I say do a policy improvement I do not give
+you the greedy policy I give you a policy
+
+00:08:59.029 --> 00:09:05.589
+that is mostly greedy right so most of the
+probability will go to one action and some
+
+00:09:05.589 --> 00:09:11.329
+of the probability will get distributed to
+all the other actions okay.
+
+00:09:11.329 --> 00:09:15.269
+So when I start from anywhere and earn a trajectory
+there is a probability of me sampling all
+
+00:09:15.269 --> 00:09:19.731
+the actions from all the states is not just
+the ? action corresponding to ? but I can
+
+00:09:19.731 --> 00:09:25.350
+sample all the actions from all the states
+so these are called epsilon soft policies,
+
+00:09:25.350 --> 00:09:33.879
+right so epsilon soft it means that every
+action has at least a probability of epsilon
+
+00:09:33.879 --> 00:09:44.209
+being taken from every state right so uniformly
+random policy is an epsilon soft policy right.
+
+00:09:44.209 --> 00:09:54.410
+An epsilon greedy execution of a policy is
+also epsilon soft policy and where the epsilon
+
+00:09:54.410 --> 00:10:01.639
+is a epsilon by n soft policy epsilon greedy
+policy is an epsilon by n soft policy right
+
+00:10:01.639 --> 00:10:07.200
+a purely random policy would be some for some
+epsilon it is a 1/n soft policy rate if I
+
+00:10:07.200 --> 00:10:25.630
+have n actions it is 1 by n soft policy state
+action tap they did can you see how much yes
+
+00:10:25.630 --> 00:10:27.510
+says this is a very simple straightforward
+thing right.
+
+00:10:27.510 --> 00:10:31.550
+It depends on the number of samples you draw
+right so there are rates of convergence that
+
+00:10:31.550 --> 00:10:43.570
+you can establish based on the number of samples
+inequality if you knew the transition probabilities
+
+00:10:43.570 --> 00:10:52.730
+and other things you could apply concentration
+inequalities there yeah good I do not recall
+
+00:10:52.730 --> 00:10:59.459
+the actual results but you could apply concentration
+abilities yeah sadly same innocence more like
+
+00:10:59.459 --> 00:11:03.560
+a textbook exercise application of concentration
+inequalities.
+
+00:11:03.560 --> 00:11:08.540
+But little complicated because the distribution
+you are sampling from is this horrendous the
+
+00:11:08.540 --> 00:11:12.930
+distribution that rolls in your oh in this
+case it is me fine right it is just a Markov
+
+00:11:12.930 --> 00:11:19.569
+chain I fixed a ? right I have fixed up I
+so there is no question of picking in actions
+
+00:11:19.569 --> 00:11:24.990
+here right so it just becomes a Markov chain
+and essentially I can drink this valley computational
+
+00:11:24.990 --> 00:11:28.720
+approach and it is very easy to show keen
+convergence and rates of convergence all of
+
+00:11:28.720 --> 00:11:33.649
+the things you can go here it become tricky.
+Because they keep changing the policy from
+
+00:11:33.649 --> 00:11:39.610
+one step to the other so it becomes a little
+tricky to show convenient right so epsilon
+
+00:11:39.610 --> 00:11:46.209
+soft policy so now the question becomes that
+we showed you policy iteration converges right
+
+00:11:46.209 --> 00:11:52.029
+but that is assuming that you are greedy with
+respect to the previous policies value function
+
+00:11:52.029 --> 00:11:55.720
+now I am saying do not be greedy be epsilon
+soft with respect to the previous value.
+
+00:11:55.720 --> 00:12:06.459
+And will this converge and if so to what okay
+and we are running out of time so it will
+
+00:12:06.459 --> 00:12:12.860
+converge and it converges to an optimal epsilon
+soft policy where the more highest probability
+
+00:12:12.860 --> 00:12:20.379
+will be given to the optimal action provider
+do you have a very specific way of generating
+
+00:12:20.379 --> 00:12:26.279
+the epsilon soft policy from the previous
+iteration right so it is essentially you take
+
+00:12:26.279 --> 00:12:33.379
+the greedy policy okay make it epsilon greedy
+or whatever epsilon by n greedy or something
+
+00:12:33.379 --> 00:12:36.410
+n epsilon greedy.
+And then keep doing this so you will converge
+
+00:12:36.410 --> 00:12:41.329
+to something that is optimal in the sense
+the highest probability will be on the optimal
+
+00:12:41.329 --> 00:12:45.720
+action okay there is a very simple proof given
+in the textbook I encourage you to look at
+
+00:12:45.720 --> 00:13:09.379
+it just so you know and themes any questions
+from this, there is one other topic that I
+
+00:13:09.379 --> 00:13:15.910
+have to cover under Monte Carlo methods which
+is do with something called important sampling.
+
+00:13:15.910 --> 00:13:21.850
+This goes back to one of the questions raised
+earlier about doing epsilon greedy exploration
+
+00:13:21.850 --> 00:13:28.180
+and so on so forth so if I am using an epsilon
+soft policy right whenever for non exploring
+
+00:13:28.180 --> 00:13:35.689
+starts right I am not really getting what
+I want right I am actually solving for something
+
+00:13:35.689 --> 00:13:42.449
+else right and if you want to evaluate a deterministic
+policy right we saw that you needed through
+
+00:13:42.449 --> 00:13:49.179
+exploring starts right if you want to evaluate
+a deterministic policy certainly have to do
+
+00:13:49.179 --> 00:13:52.759
+exploring stats.
+And I cannot do my usual exploration of the
+
+00:13:52.759 --> 00:13:58.190
+entire state space and then estimate the value
+of the policy ? so why because this will no
+
+00:13:58.190 --> 00:14:04.920
+longer be the policy ? right so ideally what
+I want is a situation where I can behave however
+
+00:14:04.920 --> 00:14:11.299
+I want in the state space but should give
+you the value for any policy that you ask
+
+00:14:11.299 --> 00:14:22.050
+me is it possible can a d couple the policy
+that I am evaluating from the policy that
+
+00:14:22.050 --> 00:14:36.029
+I am using for behaving right.
+So such kinds of methods are called 
+
+00:14:36.029 --> 00:14:40.459
+of policy methods so whatever you have talked
+about so far are called on policy methods
+
+00:14:40.459 --> 00:14:50.089
+why because the samples were generated by
+the policy which I am trying to evaluate whether
+
+00:14:50.089 --> 00:14:54.899
+it is here or here right in both cases when
+the samples are being generated it is with
+
+00:14:54.899 --> 00:15:03.230
+respect to the policy that I am trying to
+evaluate right in our policy methods the sample
+
+00:15:03.230 --> 00:15:16.350
+will be generated by a different policy.
+But I will try to evaluate a different policy
+
+00:15:16.350 --> 00:15:26.689
+technique we have 10 more minutes 
+okay let me let me try and do the simple thing
+
+00:15:26.689 --> 00:15:34.149
+right so essentially so I what I am looking
+at this I am I want to compute the expectation
+
+00:15:34.149 --> 00:15:48.169
+of some function f ( X) where X is sample
+from some distribution P this is the rotation
+
+00:15:48.169 --> 00:15:55.540
+for this sum of f of X is there and X is some
+random variable right and X is sample from
+
+00:15:55.540 --> 00:15:57.709
+some distribution P.
+So this is the expectation that I want to
+
+00:15:57.709 --> 00:16:06.860
+compute let us keep it simple so that is assume
+it is a discrete distribution so essentially
+
+00:16:06.860 --> 00:16:20.480
+a sum over X right 
+
+00:16:20.480 --> 00:16:28.720
+so this is the expectation now suppose I do
+not have access to p okay but I have some
+
+00:16:28.720 --> 00:16:33.519
+way of sampling X this is exactly one of the
+distribution we have whatever we have the
+
+00:16:33.519 --> 00:16:39.209
+setup that we are here right so then what
+will I do so I use P and asked me to give
+
+00:16:39.209 --> 00:16:43.309
+you ask you to give me an X.
+And you will say three then you will say for
+
+00:16:43.309 --> 00:16:49.069
+you will say three 4839 let us keep telling
+me numbers like this now what I will do is
+
+00:16:49.069 --> 00:16:54.600
+I will plug in 3 for 8 9 whatever I plug that
+into f of X I will add up all the values of
+
+00:16:54.600 --> 00:16:59.679
+f of x divided by n it will give you a number
+right so I how I approximate this is essentially
+
+00:16:59.679 --> 00:17:17.329
+very checks I was sampled from people this
+is how i do this right.
+
+00:17:17.329 --> 00:17:26.351
+But now let us say that I know what I know
+something about the probability of certain
+
+00:17:26.351 --> 00:17:33.020
+outcomes okay but you can only tell me things
+according to Q let us say so you are going
+
+00:17:33.020 --> 00:17:38.800
+to give me numbers according to Q so Q is
+a different coin that you are tossing right
+
+00:17:38.800 --> 00:17:42.400
+so instead of selling me 338 or something
+that now we are going to tell me 88 97 3874
+
+00:17:42.400 --> 00:17:51.380
+or something that I 
+so three and four occurred a lot of times
+
+00:17:51.380 --> 00:17:55.540
+in the first sequence of numbers I gave you.
+But three or four occur very few times now
+
+00:17:55.540 --> 00:18:01.300
+but eight and nine occur more right so now
+what I do is I am saying that I do not have
+
+00:18:01.300 --> 00:18:28.130
+p but I have some other distribution how do
+I do this so I have some other function Q
+
+00:18:28.130 --> 00:18:38.491
+alright so I am going to do this 
+is it finds people are okay with that so I
+
+00:18:38.491 --> 00:19:29.250
+am going to rewrite this as right, so I have
+taken the expectation off of X with respect
+
+00:19:29.250 --> 00:19:35.080
+to P and I written it as the expectation of
+some quantity with respect to the distribution
+
+00:19:35.080 --> 00:19:39.500
+q.
+So what is this quantity it is f of X but
+
+00:19:39.500 --> 00:19:52.320
+waited by the ratio of the probabilities right
+if are equated with ratio of the probability
+
+00:19:52.320 --> 00:20:05.330
+now I want to approximate this so what will
+I do I will do this 
+
+00:20:05.330 --> 00:20:15.920
+so for every sample you give me I will compute
+f of X right and also the x this ratio of
+
+00:20:15.920 --> 00:20:19.550
+P by Q and then we will add up everything
+and take the average that will give me the
+
+00:20:19.550 --> 00:20:30.280
+average of f of X if the samples are drawn
+according to p right.
+
+00:20:30.280 --> 00:20:39.950
+So I said fine so everybody is with me write
+this equivalence you are all agreeing so this
+
+00:20:39.950 --> 00:20:55.310
+quantity is called the 
+
+00:20:55.310 --> 00:21:02.660
+importance factor it tells you how important
+is the specific X in determining the expectation
+
+00:21:02.660 --> 00:21:07.930
+of f of X with respect to P when I am drawing
+samples according to Q so it gives me the
+
+00:21:07.930 --> 00:21:13.140
+relative difference in their probability so
+if P is very large and Q is very small then
+
+00:21:13.140 --> 00:21:17.480
+the importance will be very large for that
+X.
+
+00:21:17.480 --> 00:21:23.300
+So if P of X is very small and pure fix is
+very large then the importance will be small
+
+00:21:23.300 --> 00:21:28.920
+I do not care right because I am only interested
+in P of X if there are comparable probabilities
+
+00:21:28.920 --> 00:21:36.240
+then I will just use it as it is right P of
+XY q of x will be 1 I will be using as it
+
+00:21:36.240 --> 00:21:41.860
+is so it is fine right so if Q if X happens
+to be more frequent under Q then I want to
+
+00:21:41.860 --> 00:21:46.190
+give it a lower weight when they compute the
+expectation of X happens to be less frequent
+
+00:21:46.190 --> 00:21:50.640
+under Q then under p I want to give it more
+weight when I am computing the expectation
+
+00:21:50.640 --> 00:21:56.780
+so this way it is called importance waiting.
+And importance weight I am sorry important
+
+00:21:56.780 --> 00:22:09.470
+factor or importance weight right and this
+whole way of sampling to determine the expectations
+
+00:22:09.470 --> 00:22:25.420
+is called any guesses important sampling 
+
+00:22:25.420 --> 00:22:30.180
+yeah I am assuming p and q are no it is just
+that you are not able to sample from P notable
+
+00:22:30.180 --> 00:22:36.270
+to draw samples from p to draw samples from
+q can you think of a situation where that
+
+00:22:36.270 --> 00:22:43.360
+might happen when you want to draw a samples
+from a distribution I told you that I have
+
+00:22:43.360 --> 00:22:49.120
+to find thee this CD F.
+So for serious one or the CDF is hard to compute
+
+00:22:49.120 --> 00:22:54.980
+right4p so the Q CDF might be easier to compute
+earth might be easier to actually simulate
+
+00:22:54.980 --> 00:23:01.190
+samples from Q then from p right so in such
+cases I might want to do this important sample
+
+00:23:01.190 --> 00:23:06.400
+right or in the cases where we are talking
+about I will have a deterministic policy or
+
+00:23:06.400 --> 00:23:11.970
+I have a policy that is hard for me to execute
+I have some random behavior policy right.
+
+00:23:11.970 --> 00:23:17.340
+So I use the random behavior policy and generate
+trajectories some my f of X will become my
+
+00:23:17.340 --> 00:23:24.760
+gt-right the random sample I draw for the
+return I take from the trajectory right and
+
+00:23:24.760 --> 00:23:32.920
+my P and Q will be policies according to which
+I am behaving but so is there any condition
+
+00:23:32.920 --> 00:23:41.400
+that we have to be careful about here QX will
+become zero right away if Q X becomes 0 then
+
+00:23:41.400 --> 00:23:45.270
+it is going to become undefined.
+So one DC wait assume is that the Q X is not
+
+00:23:45.270 --> 00:23:50.150
+0 for any X but that is too strong a condition
+what we need to assume is QX is nonzero for
+
+00:23:50.150 --> 00:23:58.370
+any X for which px is non zero so 40 x 0 again
+kind of fed gen say that okay does not matter
+
+00:23:58.370 --> 00:24:06.080
+but if px is nonzero then Q X has to be non
+0 and 1 DC way to ensure that QX is nonzero
+
+00:24:06.080 --> 00:24:21.120
+for any PX is epsilon soft okay yeah so whatever
+yes of soft matte is another way of generating
+
+00:24:21.120 --> 00:24:25.260
+in epsilon policy here right.
+So however you generate it which could be
+
+00:24:25.260 --> 00:24:29.930
+epsilon DD epsilon of whatever the saying
+they should ensure that every action has atleast
+
+00:24:29.930 --> 00:24:36.010
+some small epsilon probability of being picked
+so that way for whatever be the policy that
+
+00:24:36.010 --> 00:24:41.630
+you want to estimate the value for this will
+never become zero whenever you want right
+
+00:24:41.630 --> 00:24:47.690
+so that is a good thing so this is all fine
+right so one small aside it turns out that
+
+00:24:47.690 --> 00:24:52.530
+this can suffer from instabilities if you
+are trying to do this numerically we are trying
+
+00:24:52.530 --> 00:24:59.120
+to do this why is that.
+Because for cases where px is non zero but
+
+00:24:59.120 --> 00:25:06.120
+QX is close to zero the importance weights
+can become very large it rare events under
+
+00:25:06.120 --> 00:25:14.340
+QX right which are not right under PX the
+importance can become very large disproportionately
+
+00:25:14.340 --> 00:25:19.030
+large and so you can cause severe oscillations
+in your estimations that if you add 1 1 1sample
+
+00:25:19.030 --> 00:25:25.460
+like this so what people typically do is instead
+of doing this right instead of dividing by
+
+00:25:25.460 --> 00:25:58.370
+1 by n.
+They do 
+
+00:25:58.370 --> 00:26:03.560
+so the ratio PA x qi becomes very large it
+will happen in the numerator and in the denominator
+
+00:26:03.560 --> 00:26:16.570
+so it kind of the ratio will be kept reasonable
+it would not oscillator too much okay so this
+
+00:26:16.570 --> 00:26:24.560
+is called the normalized important sampling
+this is please do not read anything in this
+
+00:26:24.560 --> 00:26:31.670
+place okay, so this is also an estimate of
+this but this turns out to have slightly higher
+
+00:26:31.670 --> 00:26:35.400
+bias than that when that will have a higher
+variance.
+
+00:26:35.400 --> 00:26:41.010
+So for every sample that you draw it can fluctuate
+tremendously right there which will not fluctuate
+
+00:26:41.010 --> 00:26:46.070
+as much for every sample and in the limit
+both converge to the same answer so we are
+
+00:26:46.070 --> 00:26:53.880
+all happy right but so this is weight over
+this normalized important sampling is considered
+
+00:26:53.880 --> 00:27:01.350
+better in practice because it is a lot more
+stable okay, so this let us it with the Polish
+
+00:27:01.350 --> 00:27:06.070
+sampling so I am going to stop today.
+So keep the important sampling in your mind
+
+00:27:06.070 --> 00:27:11.840
+somewhere right when you come to class on
+Wednesday I will tell you how to use important
+
+00:27:11.840 --> 00:27:18.990
+sampling to do of policy learn okay we will
+work out exactly what is that p and what is
+
+00:27:18.990 --> 00:27:25.260
+the cube that we have to use for important
+sampling okay that will take me about 15 minutes
+
+00:27:25.260 --> 00:27:28.680
+and after that we will move to chapter 6 that
+will be the end of chapter five so we are
+
+00:27:28.680 --> 00:27:33.070
+done most of certified today so there will
+be small bit of chapter five left in the next
+
+00:27:33.070 --> 00:27:35.360
+class and after that we will move chapter
+six.
+

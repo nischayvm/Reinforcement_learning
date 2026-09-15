@@ -1,0 +1,986 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:08.910 --> 00:04:39.910
+Okay, good took a while to write so essentially
+what we do is we start off with K arms right
+
+00:04:39.910 --> 00:04:45.880
+and then in the first round okay so median
+elimination is going to proceed in rounds
+
+00:04:45.880 --> 00:04:52.919
+okay. In the first round we pull each arm
+some number of times right determined by this
+
+00:04:52.919 --> 00:05:00.130
+magic quantity. So can people read this magic
+quantity it is 1 by epsilon l by two the whole
+
+00:05:00.130 --> 00:05:22.800
+squared, better? log 3 by delta l okay.
+
+00:05:22.800 --> 00:05:31.960
+So I pull each arm that many number of times
+okay and then I estimate their empirical value
+
+00:05:31.960 --> 00:05:37.550
+right Q l a I will estimate it where l indicates
+that this is the Q function I am forming at
+
+00:05:37.550 --> 00:05:44.759
+the lth stage okay. Then what I do is I take
+these Q l a, arrange them in ascending, descending
+
+00:05:44.759 --> 00:05:53.850
+whatever order I find the median of all these
+arms. And then eliminate all those arms whose
+
+00:05:53.850 --> 00:06:03.699
+values is below the median right I am eliminating.
+So this is the set difference so I take my
+
+00:06:03.699 --> 00:06:08.040
+current set S l, right these are all the arms
+that are under consideration.
+
+00:06:08.040 --> 00:06:14.850
+So S1 will be all the arms and then I am eliminating
+all those arms such that so my Q l a is less
+
+00:06:14.850 --> 00:06:23.419
+than ml where ml is the median at the lth
+level right. And then I change my constants
+
+00:06:23.419 --> 00:06:29.380
+by magic amounts again. So my epsilon l plus
+1 becomes three-fourths of epsilon l, epsilon
+
+00:06:29.380 --> 00:06:31.790
+l itself started as epsilon by four okay.
+
+00:06:31.790 --> 00:06:39.979
+Now it becomes 3/4 of epsilon by four and
+my delta l plus 1 becomes delta l by 2 which
+
+00:06:39.979 --> 00:06:47.319
+already started as delta by 2 so it becomes
+delta by 4, and l equals l plus 1 and I keep
+
+00:06:47.319 --> 00:06:57.630
+going until my S l becomes 1, the number of
+arms left becomes one right. So how many rounds
+
+00:06:57.630 --> 00:07:07.580
+will I go log K rounds because every time
+I am eliminating half the arms right, because
+
+00:07:07.580 --> 00:07:10.690
+I am looking at the median and I am eliminating
+everything below the median.
+
+00:07:10.690 --> 00:07:14.770
+So I am guaranteed to eliminate half the arms
+in every round, so I will end in log K rounds
+
+00:07:14.770 --> 00:07:22.599
+okay. But the trick to provide proving any
+kind of sample complexity here is to show
+
+00:07:22.599 --> 00:07:28.120
+that okay, this quantity right when I sum
+it over this log K rounds is some bounded
+
+00:07:28.120 --> 00:07:32.511
+quantity right and that gives me the sample
+complexity I want.
+
+00:07:32.511 --> 00:07:40.490
+I have already told you what the sample complexity
+is going to be, what was it K by epsilon square
+
+00:07:40.490 --> 00:07:46.500
+log 1 by delta, some constant by delta, so
+as far as order notations we can ignore the
+
+00:07:46.500 --> 00:07:51.229
+constant so log 1 by delta. So that is what
+this is going to be the sample complexity,
+
+00:07:51.229 --> 00:07:57.759
+so I will have to show you that first. Second
+in fact first I will have to show you that
+
+00:07:57.759 --> 00:08:03.449
+this is actually a pac algorithm right, that
+it actually gives you a epsilon optimal arm
+
+00:08:03.449 --> 00:08:05.039
+with a high probability right.
+
+00:08:05.039 --> 00:08:09.639
+It becomes a little tricky here, because I
+am eliminating half the arms every times.
+
+00:08:09.639 --> 00:08:13.610
+So now I will have to think about what is
+the probability that I have eliminated all
+
+00:08:13.610 --> 00:08:21.919
+the epsilon optimal arms right. So I have
+to, in some round along the way before I reach
+
+00:08:21.919 --> 00:08:27.520
+the final round okay I should not eliminate
+all the epsilon optimal arms right.
+
+00:08:27.520 --> 00:08:32.210
+So what we will do is you see that right,
+because at the end of the thing if that one
+
+00:08:32.210 --> 00:08:38.140
+arm left is some epsilon optimal arm, I am
+safe right if along the way if I eliminate
+
+00:08:38.140 --> 00:08:42.640
+all the epsilon optimal arms then I am in
+trouble. Right so what I will do now is to
+
+00:08:42.640 --> 00:08:48.740
+show that at every round the probability of
+me doing that is very small.
+
+00:08:48.740 --> 00:08:52.891
+So small that when I add up the probability
+of me eliminating across all the rounds it
+
+00:08:52.891 --> 00:08:58.890
+is still below delta right it is still below
+delta so that is essentially what I am going
+
+00:08:58.890 --> 00:09:04.760
+to try and show did that make sense. So at
+every round the probability of me eliminating
+
+00:09:04.760 --> 00:09:11.440
+all the epsilon optimal arms is small, so
+small that when I add it up across all the
+
+00:09:11.440 --> 00:09:16.740
+rounds it is still less than delta okay. So
+that is essentially what I am going to what
+
+00:09:16.740 --> 00:09:26.270
+I am going to show.
+
+00:09:26.270 --> 00:09:31.600
+Okay so first theorem that I will state it,
+but I will come back and prove this later
+
+00:09:31.600 --> 00:09:40.430
+is the 
+median elimination algorithm with takes epsilon,
+
+00:09:40.430 --> 00:10:46.440
+delta this is epsilon delta pac okay. So we
+will prove this in two parts the first lemma
+
+00:10:46.440 --> 00:10:51.620
+will help us establish that okay, and then
+we will have another result later that will
+
+00:10:51.620 --> 00:10:52.630
+help us establish the sample complexity.
+
+00:10:52.630 --> 00:11:00.270
+Sample complexity is actually trivial right
+if you think about it, it is essentially summing
+
+00:11:00.270 --> 00:11:07.690
+this quantity up right starting from epsilon
+by four and delta by two and successively
+
+00:11:07.690 --> 00:11:12.730
+changing the value of epsilon and delta okay.
+It is just a bunch of algebra right you just
+
+00:11:12.730 --> 00:11:16.399
+move numbers around and simplify things you
+will get it conceptually there is nothing
+
+00:11:16.399 --> 00:11:20.980
+deep about looking at the sample complexity.
+So is that clear, so I essentially have to
+
+00:11:20.980 --> 00:11:26.510
+sum up this quantity right for every arm.
+
+00:11:26.510 --> 00:11:30.600
+So this will be multiplied by the size of
+the arms which will be, which will start with
+
+00:11:30.600 --> 00:11:34.950
+K and then it will become K by two, K by four
+successively becomes smaller and smaller and
+
+00:11:34.950 --> 00:11:40.870
+likewise the epsilon and my delta also becomes
+smaller and smaller. So the idea is to just
+
+00:11:40.870 --> 00:11:51.430
+to sum it over l this quantity and then replace
+this by a function of epsilon and l. You can
+
+00:11:51.430 --> 00:11:55.440
+replace epsilon l right by a function of epsilon.
+
+00:11:55.440 --> 00:12:02.350
+So what is epsilon 1, it is epsilon by four,
+what is epsilon 2, three by four into epsilon
+
+00:12:02.350 --> 00:12:09.730
+by two, epsilon by four, epsilon 3 is three
+by four the whole square so epsilon l is essentially
+
+00:12:09.730 --> 00:12:15.070
+three by four whole power l minus one into
+epsilon by four right. So like that so you
+
+00:12:15.070 --> 00:12:20.060
+can write this a similar expression for delta
+and we can essentially simplify right. So
+
+00:12:20.060 --> 00:12:25.080
+that part is fairly straightforward so if
+you have time I will just give you an intuition
+
+00:12:25.080 --> 00:12:27.730
+into that otherwise you can work it out easily.
+
+00:12:27.730 --> 00:12:34.190
+Now the first part is one that requires some
+work right. So this is what we will do for
+
+00:12:34.190 --> 00:13:48.200
+every phase l in the median elimination algorithm
+we have the probability. So this requires
+
+00:13:48.200 --> 00:13:58.269
+a little bit of thought, so what I am saying
+so what is this, this is the true best arm
+
+00:13:58.269 --> 00:14:06.860
+at level l right. So at level 1 I would expect
+this to be a star right.
+
+00:14:06.860 --> 00:14:13.610
+So, the true best arm I am not talking about
+the capital Q right I am talking about the
+
+00:14:13.610 --> 00:14:18.440
+q stars here, so I am talking about the true
+best arm right. So in this case I would expect
+
+00:14:18.440 --> 00:14:23.709
+the true this this should be q star a star
+right in level 1, but in level 2 itself it
+
+00:14:23.709 --> 00:14:28.630
+could be something different because I might
+have lost a star in the first round itself
+
+00:14:28.630 --> 00:14:30.110
+right.
+
+00:14:30.110 --> 00:14:38.040
+What I am saying is okay this is the best
+I could have done in the lth round right potentially
+
+00:14:38.040 --> 00:14:47.040
+right, and what is this, this is the best
+I could have done in the l plus 1 th round
+
+00:14:47.040 --> 00:14:53.820
+right. So the bad case is when this is less
+than that, right that means I have eliminated
+
+00:14:53.820 --> 00:14:57.889
+some high-ranking arms well all I have left
+are low ranking arms right.
+
+00:14:57.889 --> 00:15:03.310
+So the bad case is when this quantity is less
+than that quantity right by how much it should
+
+00:15:03.310 --> 00:15:07.370
+be less right, that is the question that is
+the trick we are asking here. So if I add
+
+00:15:07.370 --> 00:15:17.250
+an epsilon to this so essentially I have my,
+hmm, I dont know, let us call this j star
+
+00:15:17.250 --> 00:15:25.420
+right that is the maximum in the lth level.
+So I have my q star j star here and I have
+
+00:15:25.420 --> 00:15:36.440
+my q star i star here which is the guy that
+gives me the max here right.
+
+00:15:36.440 --> 00:15:48.370
+If I add an epsilon to this if I add an epsilon
+to this and this is within that that means
+
+00:15:48.370 --> 00:15:57.110
+this is epsilon optimal when you can consider
+against that right, do you see that if I add
+
+00:15:57.110 --> 00:16:01.670
+an epsilon to this lower value and the higher
+value is actually less than that then it is
+
+00:16:01.670 --> 00:16:10.020
+an acceptable situation, because the lower
+value is within epsilon of the higher value
+
+00:16:10.020 --> 00:16:13.019
+correct, so this is a good outcome.
+
+00:16:13.019 --> 00:16:18.760
+So I am saying the probability of the good
+outcome is at least 1 minus delta l that means
+
+00:16:18.760 --> 00:16:24.750
+the probability is high okay, does it make
+sense the probability of the good outcome
+
+00:16:24.750 --> 00:16:31.790
+is at least 1 minus delta okay. Now the thing
+to notice here is this is not truly epsilon,
+
+00:16:31.790 --> 00:16:37.360
+this is epsilon l right and this is not delta,
+this is delta l, so why is that the case because
+
+00:16:37.360 --> 00:16:41.980
+every round I will lose epsilon l, right at
+most epsilon l right.
+
+00:16:41.980 --> 00:16:48.740
+So at the end of the day I should not have
+lost more than epsilon right. So what I am
+
+00:16:48.740 --> 00:16:52.860
+going to show you is that every round I will
+lose epsilon l and my epsilon l is chosen
+
+00:16:52.860 --> 00:17:00.480
+such that even if i lose the epsilon l for
+every l, overall loss will be epsilon right.
+
+00:17:00.480 --> 00:17:06.020
+So that because we know that when the S, in
+S1 the best number is a star right.
+
+00:17:06.020 --> 00:17:12.770
+And if the overall loss is less than epsilon,
+then at the end of this I will have at least
+
+00:17:12.770 --> 00:17:16.770
+1 epsilon optimal arm left okay, so that is
+basically what we are trying to show here.
+
+00:17:16.770 --> 00:17:22.439
+So this relation makes sense why we are trying
+to show this okay. And likewise this 1 minus
+
+00:17:22.439 --> 00:17:28.520
+delta l is there because at the end of the
+day if all the events hold true also my probability
+
+00:17:28.520 --> 00:17:30.570
+must be at least 1 minus delta right.
+
+00:17:30.570 --> 00:17:36.340
+Therefore, we use delta l and that is the
+reason your epsilon 1 and delta 1 are already
+
+00:17:36.340 --> 00:17:41.150
+smaller than epsilon and delta, because if
+I start off with epsilon here and delta here
+
+00:17:41.150 --> 00:18:06.570
+I am gone okay. So people know what wlog means
+right, without loss of generality I am going
+
+00:18:06.570 --> 00:18:12.420
+to consider l equal to one right. So whatever
+results I show here will will hold for the
+
+00:18:12.420 --> 00:18:31.350
+subsequent l right.
+
+00:18:31.350 --> 00:18:58.350
+So we start off by looking at the first, the
+event E1 which is 
+
+00:18:58.350 --> 00:19:06.409
+first thing I am looking at it I am grossly
+under estimating the true value right. I mean
+
+00:19:06.409 --> 00:19:10.929
+this should now start looking familiar to
+you, because in everything we have been doing
+
+00:19:10.929 --> 00:19:15.669
+the same thing we start off by say okay, first
+thing that has to go wrong is I grossly underestimate
+
+00:19:15.669 --> 00:19:18.559
+the true optimal actions value.
+
+00:19:18.559 --> 00:19:22.289
+And then we will think about okay what happens
+if I overestimate the sub optimal actions
+
+00:19:22.289 --> 00:19:30.530
+value but I start off by say okay grossly
+underestimate this right. So now what is the
+
+00:19:30.530 --> 00:19:45.400
+probability of this, and we already have our
+magic number here, so substitute everything
+
+00:19:45.400 --> 00:19:59.470
+and tell me, so you have the expression here
+right and you have the magic number there.
+
+00:19:59.470 --> 00:20:22.520
+Right this guy will get cancelled out, again
+do you have a 4 problem there yeah yeah so
+
+00:20:22.520 --> 00:20:26.490
+well the square should be outside I mean I
+am just writing it down from the algorithm
+
+00:20:26.490 --> 00:20:34.299
+here, so their results are wrong right. So
+it should be epsilon l squared by two not
+
+00:20:34.299 --> 00:20:48.200
+epsilon l by two the whole squared and this
+is a one-sided bound. So the outside 2 will
+
+00:20:48.200 --> 00:21:20.690
+not be there, right so everything will simplify
+and you will get delta 1 by 3 right.
+
+00:21:20.690 --> 00:21:29.470
+Okay, this is the first event. Suppose it
+does not hold okay, suppose E1 does not hold
+
+00:21:29.470 --> 00:21:35.630
+essentially I have not made a bad mistake
+under estimating the best arm right. And since
+
+00:21:35.630 --> 00:21:44.310
+it is maybe I should have done it slightly
+differently I have said without loss of generality
+
+00:21:44.310 --> 00:21:50.440
+consider l equal to one, but then I put in
+a star here which actually violates the without
+
+00:21:50.440 --> 00:21:52.700
+loss of generality part okay.
+
+00:21:52.700 --> 00:21:59.850
+So the a star here is actually the best arm
+left at level l that is how we should think
+
+00:21:59.850 --> 00:22:04.659
+of it, it is not the overall based arm, whatever
+be the level l it is the best arm left at
+
+00:22:04.659 --> 00:22:10.340
+level l and for l equal to 1 it happens to
+be a star, the true a star right for l equal
+
+00:22:10.340 --> 00:22:14.740
+to 2 , 3 and 4 this will essentially become
+the best arm at that level.
+
+00:22:14.740 --> 00:22:25.350
+So I will just put a l there so that you know
+what I mean okay. This is the best arm in
+
+00:22:25.350 --> 00:22:29.940
+the lth level that is left among all the arms
+that is left the true best arm in the lth
+
+00:22:29.940 --> 00:23:39.330
+level okay. So next I am going to look at
+the probability that, hmm, this one I should
+
+00:23:39.330 --> 00:23:57.770
+put the 2 in the numerator is it what do you
+need for it to cancel out.
+
+00:23:57.770 --> 00:24:21.140
+Epsilon1 by 2, so epsilon1 by 4 no yeah, so
+this is epsilon by 2 so substitute that I
+
+00:24:21.140 --> 00:24:29.110
+get epsilon squared by four, right that will
+become half so that is 1 by epsilon squared
+
+00:24:29.110 --> 00:24:59.880
+by 2 so I will get that things are all fine
+okay good. So I am going to look at this problem
+
+00:24:59.880 --> 00:25:15.760
+right, so sorry not this, so E1 does not hold
+that means that this is kept true right. So
+
+00:25:15.760 --> 00:25:20.500
+E1 is the event where I have underestimated
+this so I am saying E1 does not hold that
+
+00:25:20.500 --> 00:25:23.240
+means that it is no longer an underestimate.
+
+00:25:23.240 --> 00:25:28.590
+So this is my estimate is within epsilon by
+2 right, but then I am looking at the possibility
+
+00:25:28.590 --> 00:25:50.630
+that yeah, so with my some jth arm which is
+not epsilon1 optimal right. So that is a condition,
+
+00:25:50.630 --> 00:26:09.860
+no, right I know that my current estimate
+in the lth round I am going to decide about
+
+00:26:09.860 --> 00:26:15.190
+eliminating in the lth round right in the
+current round I am not underestimated my a
+
+00:26:15.190 --> 00:26:16.190
+star l okay.
+
+00:26:16.190 --> 00:26:22.200
+So I am within epsilon of that with epsilon1
+by 2 of the true a star value right, but then
+
+00:26:22.200 --> 00:26:29.130
+I take some other arm j which is a bad arm,
+bad in the sense j is not epsilon l close
+
+00:26:29.130 --> 00:26:35.510
+to a star, it is a bad arm right. And I figure
+out what is the probability that the Q estimate
+
+00:26:35.510 --> 00:26:41.990
+for that arm will be greater than the Q estimate
+for the a star right.
+
+00:26:41.990 --> 00:26:47.490
+So if this happens right, then there is a
+chance that a star will get eliminated only
+
+00:26:47.490 --> 00:26:56.590
+a chance right, why it has to be in the lower
+half not just get beaten by one guy but it
+
+00:26:56.590 --> 00:27:06.140
+has to be in the lower half of the arms right.
+So I need at least K by two or whatever the
+
+00:27:06.140 --> 00:27:18.230
+size of S l by 2 bad arms to beat me correct,
+for me to eliminate this arm.
+
+00:27:18.230 --> 00:27:23.539
+Right I need at least half of the arms to
+beat me not just one arm right, but before
+
+00:27:23.539 --> 00:27:37.790
+we go to that part, so what is the probability
+of this happening. Well so this conditioning
+
+00:27:37.790 --> 00:27:47.840
+tells us that Q l a star is not too bad right.
+So what does that mean Q l j has to be more
+
+00:27:47.840 --> 00:27:51.900
+than epsilon by 2 so you remember that figure
+we drew right.
+
+00:27:51.900 --> 00:27:59.010
+So either this has to be under estimate, well
+I erased the figure, but either the a star
+
+00:27:59.010 --> 00:28:04.500
+has to be underestimated by more than epsilon
+by 2 or the a prime has to be over-estimated
+
+00:28:04.500 --> 00:28:09.820
+by more than epsilon by 2 right, here we are
+conditioning it on the event that a star is
+
+00:28:09.820 --> 00:28:17.570
+not underestimated by more than epsilon by
+2. Therefore, j has to be over-estimated by
+
+00:28:17.570 --> 00:28:19.299
+more than epsilon by 2.
+
+00:28:19.299 --> 00:28:26.840
+Right since this event we have conditioned
+it as false, so that event has to be true
+
+00:28:26.840 --> 00:28:48.990
+okay. So what do we get in that case same
+thing here right, so I am kind of skipping
+
+00:28:48.990 --> 00:28:54.530
+a step here but people are all fine with that
+right, I am skipping, rewriting this bound
+
+00:28:54.530 --> 00:28:59.760
+right. So essentially you will have to now
+replace this with over estimating by epsilon
+
+00:28:59.760 --> 00:29:11.100
+by 2 right. In fact I should probably just
+make you write that missing step as a homework.
+
+00:29:11.100 --> 00:29:15.110
+So that I am sure that people are all comfortable
+with the notation nothing more the notation
+
+00:29:15.110 --> 00:29:18.720
+can get really complex, otherwise the concepts
+are very simple, that is why I am taking so
+
+00:29:18.720 --> 00:29:23.370
+much time talking over it and if I could just
+write the proof and leave it at that because
+
+00:29:23.370 --> 00:29:31.480
+it is fairly easy, these things are fairly
+easy. So this is for one arm right and like
+
+00:29:31.480 --> 00:29:51.630
+this I have K arms right, so the probability
+hmm good.
+
+00:29:51.630 --> 00:29:58.799
+So let now use the same symbols here, I do
+not agree with, let hash bad be the number
+
+00:29:58.799 --> 00:30:10.490
+of bad arms okay, hash bad be the number of
+bad arms such that this this condition holds
+
+00:30:10.490 --> 00:30:20.330
+right hash bad be the number of bad arms such
+that, that condition holds. So these are the
+
+00:30:20.330 --> 00:31:20.919
+number of bad arms that are beating the best
+arm.
+
+00:31:20.919 --> 00:31:50.660
+So what will that expectation be? Mod S l
+by 2..yeah, not really but I agree with the
+
+00:31:50.660 --> 00:32:00.860
+mod S l part but not S l by 2 I have a probability
+for that happening right. And how many such
+
+00:32:00.860 --> 00:32:05.539
+experiments I actually its mod S l minus 1
+right potentially everything other than the
+
+00:32:05.539 --> 00:32:12.559
+best arm could be a bad arm right maximum
+thing is S l minus 1 right.
+
+00:32:12.559 --> 00:32:22.039
+And so it is S l minus 1 into delta1 by 3,
+so that is the probability of one arm being
+
+00:32:22.039 --> 00:32:28.080
+bad, one arm actually for which this first
+relation holds for one bad arm and there are
+
+00:32:28.080 --> 00:32:34.860
+S l minus 1, I am just making it S l to make
+our life easier. So S l such bad arms so the
+
+00:32:34.860 --> 00:32:45.080
+expected number of bad arms will be S l into
+delta1 by 3. Now I want to look at the probability
+
+00:32:45.080 --> 00:33:30.250
+that hash bad... this is where we are going
+to use the Markov inequality right.
+
+00:33:30.250 --> 00:33:34.139
+So I have already written the expectation
+here, so I am asking you the probability of
+
+00:33:34.139 --> 00:33:41.429
+X greater than equal to a is the expected
+value of X divided by a right, so this is
+
+00:33:41.429 --> 00:34:12.040
+less than or equal to the expected value which
+is, divided by a okay. So what have you shown
+
+00:34:12.040 --> 00:34:21.200
+there is that if E1 does not hold if I am
+good in my estimate for the best arm okay,
+
+00:34:21.200 --> 00:34:28.250
+the probability that half the I mean, so many
+bad arms will beat me is bounded by 2 delta1
+
+00:34:28.250 --> 00:34:29.820
+by 3 right.
+
+00:34:29.820 --> 00:34:36.810
+But I am also considering E1 as a bad event
+right E1 is also bad because my estimate for
+
+00:34:36.810 --> 00:34:42.450
+the best arm is really bad you know. So all
+bets are off in some sense right because I
+
+00:34:42.450 --> 00:34:48.240
+do not really, I cannot really identify my
+best term because it is so bad right, so all
+
+00:34:48.240 --> 00:34:53.629
+bets are off so E1 is also bad event right
+all of this is bad and E1 is also bad.
+
+00:34:53.629 --> 00:35:03.280
+So what is the total probability of something
+bad happening, the two together, but they
+
+00:35:03.280 --> 00:35:10.910
+are you plug this in if you want to use a
+fancy term we use the Union bound and then
+
+00:35:10.910 --> 00:35:25.609
+we say the probability of something bad happening
+is bounded by delta1 right. So this bad is
+
+00:35:25.609 --> 00:35:30.180
+delta1 by 3, that bad is 2 delta1 by 3 and
+this is actually the complementary event of
+
+00:35:30.180 --> 00:35:35.440
+E1 in fact I can just add the probabilities,
+I do not really need the Union bound.
+
+00:35:35.440 --> 00:35:41.230
+So the total probability of something of bad
+happening is delta1 right. So that is essentially
+
+00:35:41.230 --> 00:35:47.020
+what we are started off by saying here. So
+the probability of good is 1 minus delta now
+
+00:35:47.020 --> 00:35:51.050
+we have shown that the probability of bad
+is delta l, so the probability of good is
+
+00:35:51.050 --> 00:36:06.440
+1 minus delta l okay. Great. So one of the
+nice things about the median elimination algorithm
+
+00:36:06.440 --> 00:36:11.370
+is that it was one of the earliest papers
+to introduce this kind of a round based algorithms
+
+00:36:11.370 --> 00:36:13.800
+to the bandit literature right.
+
+00:36:13.800 --> 00:36:20.460
+Now a lot of later improvements on both regret
+based case and people trying to play around
+
+00:36:20.460 --> 00:36:28.099
+with the the pac guarantees all have switched
+to some kind of round based ideas, you know
+
+00:36:28.099 --> 00:36:33.300
+so you do a certain number of pulls and then
+you eliminate a certain number of arms right,
+
+00:36:33.300 --> 00:36:37.319
+and then go back and pull the remaining arm
+some more and then eliminate some more arms.
+
+00:36:37.319 --> 00:36:42.089
+So this kind of a round based elimination
+methods have become very popular in the bandit
+
+00:36:42.089 --> 00:36:48.609
+literature and the median elimination is one
+of the earliest such round based elimination
+
+00:36:48.609 --> 00:36:52.609
+approaches then after this it became very
+popular and a lot of papers started being
+
+00:36:52.609 --> 00:36:56.430
+written using this kind of a round based idea
+right.
+
+00:36:56.430 --> 00:37:05.740
+So we have so far what we have shown is that
+it is have you shown that it is pac hmm..
+
+00:37:05.740 --> 00:37:16.730
+what is it that is fine that ..that I have
+already spoken about this lemma is taken as
+
+00:37:16.730 --> 00:37:23.290
+proved right, this lemma is taken as proved,
+so yeah you have to still use the Union bound
+
+00:37:23.290 --> 00:37:28.430
+for every round that I am eliminating right,
+so what we have to show is well I have all
+
+00:37:28.430 --> 00:37:38.460
+these deltas right, so we have to keep adding
+them up to make sure that eventually you are
+
+00:37:38.460 --> 00:37:47.910
+less than overall you are less than delta
+right.
+
+00:37:47.910 --> 00:37:59.690
+So every round the probability of failure
+is bounded by delta1 right so for the K rounds
+
+00:37:59.690 --> 00:38:05.530
+the probability of failure is I mean whatever
+the log K rounds the probability of failure
+
+00:38:05.530 --> 00:38:13.140
+is bounded by summing it up. So delta by 2,
+delta by 4, delta by 8 and so on so forth
+
+00:38:13.140 --> 00:38:22.720
+until you reach 1 right, so that is the summation
+and or not until you reach 1, until you reach
+
+00:38:22.720 --> 00:38:23.930
+log K rounds.
+
+00:38:23.930 --> 00:38:32.130
+So you will get delta by 2 power logK okay,
+and the summation of that will go to delta
+
+00:38:32.130 --> 00:38:40.869
+right it is essentially delta into half plus
+one fourth plus one eighth right .. if that
+
+00:38:40.869 --> 00:38:45.780
+sum runs to infinity you will get one, but
+the sum is not running to infinity it stops
+
+00:38:45.780 --> 00:38:50.420
+at some finite time, so it will be less than
+1, so the summation will be less than delta
+
+00:38:50.420 --> 00:38:51.420
+proved right.
+
+00:38:51.420 --> 00:38:55.910
+So some probability of something bad happening
+will be less than delta. So likewise you can
+
+00:38:55.910 --> 00:39:03.569
+show these same things for the epsilon right,
+so at every level you drop utmost by epsilon
+
+00:39:03.569 --> 00:39:12.210
+l right. So the total you would have dropped
+is epsilon by 4 plus so it is essentially
+
+00:39:12.210 --> 00:39:21.500
+one-fourth plus what is it three-fourth into
+one or epsilon by 4 into one plus one-fourth
+
+00:39:21.500 --> 00:39:26.160
+and so on so forth right.
+
+00:39:26.160 --> 00:39:36.720
+Three by four l minus 1 yeah yeah that is
+also upper bounded by 1 if you run it to infinity
+
+00:39:36.720 --> 00:39:40.860
+no its not..yeah it is upper bounded by one
+if you run that summation to infinity but
+
+00:39:40.860 --> 00:39:45.240
+you are stopping at some finite amount so
+it will be less than epsilon okay. So both
+
+00:39:45.240 --> 00:39:52.500
+of that are satisfied that is easy enough,
+the harder, the trickier part is to show the
+
+00:39:52.500 --> 00:39:54.020
+sample complexity right.
+
+00:39:54.020 --> 00:40:09.260
+It is not hard, it is just algebra can you
+let you guys do it or you want me to do the
+
+00:40:09.260 --> 00:40:17.470
+sample complexity part of the proof as well
+no is it.. depends..somebody say depends,
+
+00:40:17.470 --> 00:40:28.110
+depends on what that is a paper yeah it is
+there in the paper..it is there in the paper
+
+00:40:28.110 --> 00:40:33.930
+you can look at it. And so I will stop it
+here for the pac the pac complexity will come
+
+00:40:33.930 --> 00:40:38.630
+back to all of this regret and pac and everything
+when we look at the full RL problem at some
+
+00:40:38.630 --> 00:40:41.420
+point. Now right now for the bandits we will
+stop here.
+
+00:40:41.420 --> 00:40:42.420
+IIT Madras Production
+
+00:40:42.420 --> 00:40:43.420
+Funded by
+Department of Higher Education
+
+00:40:43.420 --> 00:40:44.420
+Ministry of Human Resource Development
+Government of India
+
+00:40:44.420 --> 00:40:45.420
+www.nptel.ac.in
+
+00:40:45.420 --> 00:40:45.422
+Copyrights Reserved
+

@@ -1,0 +1,712 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:26.090 --> 00:01:53.810
+Chernoff Hoeffding bound, we saw that already.
+So that is one result right we looked at it
+
+00:01:53.810 --> 00:02:05.610
+in the last class and you saw how we used
+it to manage to bound the regret of UCB right
+
+00:02:05.610 --> 00:02:12.060
+so we will be looking at yet another class
+of bandit algorithms today right so the PAC
+
+00:02:12.060 --> 00:02:16.440
+bandits and we will be using the Chernoff
+hoeffding bound again to bound a slightly
+
+00:02:16.440 --> 00:02:42.540
+different quantity but nevertheless of interest
+you remember the Markov inequality Elec people,
+
+00:02:42.540 --> 00:02:47.420
+people who did probability theory one form
+of writing it is this which is what we will
+
+00:02:47.420 --> 00:03:12.310
+need 
+right assuming a is, a is positive, the expected.
+
+00:03:12.310 --> 00:03:20.030
+So, the x support is in the positive range
+I mean so I mean whatever makes appropriate
+
+00:03:20.030 --> 00:03:27.500
+sense for you to make sure that this is a
+probability right next thing you use is the
+
+00:03:27.500 --> 00:03:48.900
+Union bound 
+
+00:03:48.900 --> 00:04:02.170
+this is this all of you should know the probability
+of the union of multiple events right is less
+
+00:04:02.170 --> 00:04:08.970
+than or equal to the sum of the probabilities
+of the individual events that is rather straightforward
+
+00:04:08.970 --> 00:04:13.860
+it has a fancy name called Union bound right
+so whenever somebody says oh, hence by Union
+
+00:04:13.860 --> 00:04:19.260
+bound we can write this result essentially
+all they are saying is that they are upper
+
+00:04:19.260 --> 00:04:24.640
+bounding the probability of the joint event
+by the sum of the probabilities of the individual
+
+00:04:24.640 --> 00:04:28.759
+events okay these are the results we will
+just keep using them as we will do some of
+
+00:04:28.759 --> 00:04:32.520
+the proofs today.
+
+00:04:32.520 --> 00:04:41.000
+Okay so we talked about multiple solution
+concepts for bandit algorithms right so the
+
+00:04:41.000 --> 00:04:47.280
+first one was asymptotic correctness and the
+second one we talked about was regret optimality
+
+00:04:47.280 --> 00:04:52.130
+which we already looked at one example of
+a regret optimal algorithm UCB or UCB1 more
+
+00:04:52.130 --> 00:04:58.920
+correctly even though popularly when people
+say UCB they refer to UCB1 right and then
+
+00:04:58.920 --> 00:05:07.419
+what is the third one pac optimality right
+which was the probably approximately correct
+
+00:05:07.419 --> 00:05:15.130
+thing where you are trying to bound with some
+probability right that I mean you are close
+
+00:05:15.130 --> 00:05:18.880
+enough to the true solution right So that
+is essentially the guarantee that we want
+
+00:05:18.880 --> 00:05:20.220
+to give right.
+
+00:05:20.220 --> 00:05:33.919
+So what we look at today are 
+
+00:05:33.919 --> 00:05:40.230
+right so pac bounds for multi-armed bandit
+problems right I will start off with a very,
+
+00:05:40.230 --> 00:05:48.889
+very simple algorithm start off with a very,
+very simple algorithm right this is just to
+
+00:05:48.889 --> 00:05:53.270
+get you started right it is not a true algorithm
+that you have to use, its just to get you
+
+00:05:53.270 --> 00:06:04.980
+started so I have an input which is I will
+give you an epsilon and a delta and what I
+
+00:06:04.980 --> 00:06:12.410
+am asking for is a guarantee that at the end
+of this algorithm the arm that I return to
+
+00:06:12.410 --> 00:06:19.650
+you will be epsilon close to the optimal arm
+with probability 1 minus delta.
+
+00:06:19.650 --> 00:06:25.699
+Right with a very high probability if when
+this algorithm finishes running with a very
+
+00:06:25.699 --> 00:06:31.030
+high probability I will give you an arm which
+is epsilon close to the true arm the payoff
+
+00:06:31.030 --> 00:06:35.130
+of the arm that I give you will be epsilon
+close to the true arm so if you remember the
+
+00:06:35.130 --> 00:06:40.759
+pac guarantee that we wrote right so most
+pac algorithm pac style algorithms essentially
+
+00:06:40.759 --> 00:06:45.759
+take this epsilon and delta as inputs right
+and they determine some parameters of the
+
+00:06:45.759 --> 00:07:01.259
+algorithms based on this epsilon and delta
+okay so I am writing the algorithm in the
+
+00:07:01.259 --> 00:07:05.750
+same style as it is in the paper that we will
+give you to read so that it is easy for you
+
+00:07:05.750 --> 00:07:06.819
+to map it.
+
+00:07:06.819 --> 00:07:13.560
+Unfortunately I will still do the online translation
+of notation so that you can compare across
+
+00:07:13.560 --> 00:07:25.650
+multiple algorithms okay, and this paper is
+way, way better written than the UCB paper
+
+00:07:25.650 --> 00:07:32.410
+okay so it is actually you can understand
+the paper when you read it okay so this is
+
+00:07:32.410 --> 00:07:38.520
+the on the median elimination algorithm by
+Eyal Even-Dar, Shie Mannor and Yishay Mansour
+
+00:07:38.520 --> 00:07:43.541
+okay, it is titled Action elimination for
+Reinforcement Learning okay so the nice thing
+
+00:07:43.541 --> 00:07:47.060
+about this ok I will tell you the nice things
+about the paper later.
+
+00:07:47.060 --> 00:07:49.840
+But the really nice thing about the paper
+is it is well written so you can easily read
+
+00:07:49.840 --> 00:09:23.730
+it. very simple algorithm right the algorithm
+is a very simple algorithm what is the n in
+
+00:09:23.730 --> 00:09:29.290
+the log, where where, what is n inside the
+log, n is the number of arms right so what
+
+00:09:29.290 --> 00:09:37.490
+did I say I changed it to K right sorry yeah
+you are right over in the last class, last
+
+00:09:37.490 --> 00:09:41.700
+lecture I changed it to K yeah right this
+is a very simple algorithm all I am saying
+
+00:09:41.700 --> 00:09:47.220
+is take each arm sample it some number of
+times okay we can think about it right this
+
+00:09:47.220 --> 00:09:52.530
+is this will work see if I if I get a good
+enough estimate for each arm right if you
+
+00:09:52.530 --> 00:09:57.640
+get a good enough estimate of the reward of
+each arm then I can say that with a very high
+
+00:09:57.640 --> 00:10:00.890
+probability I will be epsilon optimal right.
+
+00:10:00.890 --> 00:10:05.870
+So this of course there is always a small
+chance that I will go wrong right do you see
+
+00:10:05.870 --> 00:10:11.779
+what I am saying here so the idea is very
+simple so I will take an arm keep pulling
+
+00:10:11.779 --> 00:10:19.250
+it many many times right until I have gotten
+a good estimate of the of the expectation
+
+00:10:19.250 --> 00:10:23.540
+right so remember the probability with which
+it is going to come up with 1 or whatever
+
+00:10:23.540 --> 00:10:27.930
+right so whatever is my expectation parameter
+I will just keep pulling the arm multiple
+
+00:10:27.930 --> 00:10:32.070
+times until I get a good estimate of the expectation
+I will do that for each of the arms that I
+
+00:10:32.070 --> 00:10:35.160
+have right.
+
+00:10:35.160 --> 00:10:39.810
+And once I have a good enough estimate of
+the expectation all I have to do is now go
+
+00:10:39.810 --> 00:10:44.980
+and play the arm that has the highest expectation
+right that is essentially what I am doing
+
+00:10:44.980 --> 00:10:50.529
+here now the magic here is in that number
+which I have written down there right I mean
+
+00:10:50.529 --> 00:10:56.350
+given K, epsilon and delta that is actually
+a number okay remember I take epsilon and
+
+00:10:56.350 --> 00:11:02.890
+everything as inputs given all of this is
+actually a it is actually a number right so
+
+00:11:02.890 --> 00:11:08.110
+that magic number how did I produce somewhere
+yeah I wrote all of this I wrote all of these
+
+00:11:08.110 --> 00:11:12.440
+things so that you know that you are going
+to use them to produce that magic number so
+
+00:11:12.440 --> 00:11:13.440
+it is very simple.
+
+00:11:13.440 --> 00:12:28.971
+So let us make things a little formal so we
+call this algorithm naive, so then algorithm
+
+00:12:28.971 --> 00:12:34.279
+Naive which takes as input epsilon delta is
+an epsilon delta pac algorithm, you remember
+
+00:12:34.279 --> 00:12:40.610
+what is epsilon delta pac we defined it in
+the earlier lecture right epsilon delta pac
+
+00:12:40.610 --> 00:12:45.170
+gives you that whatever guarantees you are
+talking about right epsilon delta pac algorithm
+
+00:12:45.170 --> 00:12:49.980
+with arm sample complexity essentially the
+number of times you pull the arms given by
+
+00:12:49.980 --> 00:13:00.660
+order of n by epsilon squared into log n by
+delta right so this part is obvious right
+
+00:13:00.660 --> 00:13:15.670
+I pull each arm 1 by epsilon square times
+ln K by delta right so for n arms I have to
+
+00:13:15.670 --> 00:13:20.930
+do that n times so my overall sample complexity
+is this okay, so the interesting part now
+
+00:13:20.930 --> 00:13:39.690
+is to show that it is actually epsilon delta
+pac whats it obviously yeah for today's lecture
+
+00:13:39.690 --> 00:13:43.690
+if I write n by mistake right please point
+it out to me.
+
+00:13:43.690 --> 00:13:55.589
+So I will correct it to K right okay so how
+do we prove it well the sample complexity
+
+00:13:55.589 --> 00:13:59.170
+part is obvious we do not have to prove that
+we just have to prove the epsilon delta pac
+
+00:13:59.170 --> 00:14:19.600
+so for that we will assume that let a prime
+be an arm such that 
+
+00:14:19.600 --> 00:14:37.589
+q star a prime okay so a prime is an arm which
+is not epsilon optimal right an arm that is
+
+00:14:37.589 --> 00:14:44.709
+epsilon optimal is epsilon close to the best
+arm right so q star a star is the reward corresponding
+
+00:14:44.709 --> 00:14:49.870
+to the best arm we know that right so I am
+saying that I will pick an arm a prime such
+
+00:14:49.870 --> 00:14:55.459
+that it is at least epsilon away from q star
+a star right.
+
+00:14:55.459 --> 00:15:00.400
+So the q star of a prime is at least epsilon
+away from q star a star right so that means
+
+00:15:00.400 --> 00:15:08.959
+it is a bad arm right so arms that are more
+than epsilon close to the true arm I do not
+
+00:15:08.959 --> 00:15:12.750
+care right if I select them I am happy because
+my guarantee is satisfied I really have to
+
+00:15:12.750 --> 00:15:18.160
+worry about making a mistake which in this
+case is selecting an arm that is more than
+
+00:15:18.160 --> 00:15:33.279
+epsilon away from the true optimal okay so
+basically we are looking at the event 
+
+00:15:33.279 --> 00:15:37.990
+right so this is what we want we are looking
+at right so if this is the case then the algorithm
+
+00:15:37.990 --> 00:15:45.610
+will output a prime instead of a star correct.
+
+00:15:45.610 --> 00:15:52.500
+People onboard with me on this right so if
+Q a prime is greater than Q a star, then my
+
+00:15:52.500 --> 00:15:59.000
+algorithm will output at least it will not
+output a star for me to select a prime as
+
+00:15:59.000 --> 00:16:04.570
+the best arm at least this condition has to
+be satisfied okay let us put it that way right
+
+00:16:04.570 --> 00:16:11.970
+for my algorithm to output a prime as the
+best arm for sure this condition must be satisfied
+
+00:16:11.970 --> 00:16:17.199
+in fact a prime has to be higher than every
+other arm right only then I will output that
+
+00:16:17.199 --> 00:16:22.030
+but at least this condition has to be satisfied
+so essentially I am going to look at the probability
+
+00:16:22.030 --> 00:16:34.029
+of this happening all right and then we will
+try to bound that right.
+
+00:16:34.029 --> 00:16:39.720
+So people can see why we need this condition
+right so if a prime has to be reported as
+
+00:16:39.720 --> 00:16:46.490
+the best arm it has to be at least better
+than a star right great so that is the condition
+
+00:16:46.490 --> 00:16:52.150
+so already we are being little loose here
+okay, this is not really the probability that
+
+00:16:52.150 --> 00:16:57.519
+yes a prime will be the best arm okay but
+it is only looking at some sub event of that
+
+00:16:57.519 --> 00:17:03.240
+it is not all the events together but this
+will give me at least a bound on the probability
+
+00:17:03.240 --> 00:17:38.130
+so that is essentially why you are looking
+at this event okay.
+
+00:17:38.130 --> 00:18:05.530
+Right so what is happening here, let us say
+that is my 
+
+00:18:05.530 --> 00:18:26.490
+that is my q star a star okay that is my right
+and this gap is at least this gap is at least
+
+00:18:26.490 --> 00:18:34.770
+epsilon, okay so there is this is the setup
+that we have now so and I am making some estimate
+
+00:18:34.770 --> 00:18:42.540
+of q star a prime which is Q a prime right
+and I am making some estimate of q star a
+
+00:18:42.540 --> 00:18:49.650
+star which is Q a star so the condition I
+am asking is that Q prime a prime should be
+
+00:18:49.650 --> 00:18:55.410
+higher than I mean Q a prime should be higher
+than Q a star right.
+
+00:18:55.410 --> 00:19:09.510
+So essentially I am saying that I should have
+Q a prime here Q a star somewhere lower right
+
+00:19:09.510 --> 00:19:14.900
+so this is the case I am looking at right
+so this all automatically means that either
+
+00:19:14.900 --> 00:19:24.530
+Q a prime has to be more than epsilon by two
+from q star a prime right it should be at
+
+00:19:24.530 --> 00:19:31.179
+least epsilon by more than epsilon by two
+above or Q a star should be more than epsilon
+
+00:19:31.179 --> 00:19:38.820
+by two below q star a star, right if they
+are exactly epsilon by two they will be equal
+
+00:19:38.820 --> 00:19:42.390
+I mean they won't be one above the other nights
+if one is epsilon by two below other is epsilon
+
+00:19:42.390 --> 00:19:49.230
+by two above so you can think of cases where
+this is actually here right so this could
+
+00:19:49.230 --> 00:19:53.730
+be here in which case q star I mean q star
+a star has to be even below right it will
+
+00:19:53.730 --> 00:19:59.640
+be more than epsilon away forget about epsilon
+by two right so likewise for cases where you
+
+00:19:59.640 --> 00:20:03.100
+are overestimating Q a star
+
+00:20:03.100 --> 00:20:07.230
+Then this will also have to be higher than
+that in which case again it will be more than
+
+00:20:07.230 --> 00:20:11.980
+epsilon away right so the interesting case
+is when it is in between the two right then
+
+00:20:11.980 --> 00:20:18.410
+it has to at least one of them has to be epsilon
+by two away from the true estimate right either
+
+00:20:18.410 --> 00:20:24.780
+as a overestimate or as an underestimate right
+is it clear so why I wrote this down, right
+
+00:20:24.780 --> 00:21:23.040
+one of these two events has to be satisfied.
+right I am just taking them as independent
+
+00:21:23.040 --> 00:21:26.780
+events and summing them up and that still
+be an upper bound on the total probability
+
+00:21:26.780 --> 00:21:34.809
+you have right, making things simpler and
+simpler for me and now what happens here it
+
+00:21:34.809 --> 00:21:37.840
+kind of in the Chernoff space right.
+
+00:21:37.840 --> 00:21:50.880
+So I can apply Chernoff bound here so what
+would be the case here e power minus two epsilon
+
+00:21:50.880 --> 00:22:02.400
+squared by four into l, yeah so let us do
+that so this will be less than or equal to
+
+00:22:02.400 --> 00:22:18.220
+e power minus two epsilon squared by four
+into l, what about the other term, the same
+
+00:22:18.220 --> 00:22:23.370
+right it is a symmetrical bound so if that
+is plus epsilon by two or minus epsilon by
+
+00:22:23.370 --> 00:22:55.090
+two, it is going to be the same right so is
+it clear okay so now plug in this l there
+
+00:22:55.090 --> 00:23:24.490
+so what do you get, hmm, so essentially what
+we need to do now is adjust this l so that
+
+00:23:24.490 --> 00:23:29.610
+all those things get cancelled out that is
+basically what we are looking for right and
+
+00:23:29.610 --> 00:23:35.220
+you will be left with what should you be left
+with.
+
+00:23:35.220 --> 00:23:42.340
+What should you be left with what do you think
+you should be left with no no no I want this
+
+00:23:42.340 --> 00:23:48.970
+probability delta this is the probability
+of me making a mistake right so it should
+
+00:23:48.970 --> 00:23:57.919
+be delta, should I be left with delta, not
+quite this is the probability of me choosing
+
+00:23:57.919 --> 00:24:04.630
+one non optimal arm by mistake what if all
+my arms are non-optimal except the one optimal
+
+00:24:04.630 --> 00:24:11.170
+arm right everything is away from that is
+the worst case so I should have delta by K
+
+00:24:11.170 --> 00:24:16.950
+or K-1 so we will take delta by K, okay that
+is easier than and so this whole thing should
+
+00:24:16.950 --> 00:24:21.470
+simplify to delta by K right so that is what
+I should be looking for so what should be
+
+00:24:21.470 --> 00:24:28.450
+my l right.
+
+00:24:28.450 --> 00:24:33.690
+So this if we plug this in what will I get
+so the four by epsilon squared will go so
+
+00:24:33.690 --> 00:24:56.659
+I will get 2 ln 2K by delta, that is not quite
+right 
+
+00:24:56.659 --> 00:25:04.740
+and what do I get then, yeah 2 into 2K by
+delta so I will get delta by K I will get
+
+00:25:04.740 --> 00:25:14.039
+delta by K right is it fine I simplify this
+I get delta by K so now you know how you actually
+
+00:25:14.039 --> 00:25:21.299
+come up with this magic number l right, by
+actually deriving this bound and then figuring
+
+00:25:21.299 --> 00:25:27.480
+out what else should I plug in here so that
+I get the necessary error for the probability
+
+00:25:27.480 --> 00:26:22.490
+okay 
+
+00:26:22.490 --> 00:27:30.110
+so that is just for one a prime hmm there
+is a two outside right, two epsilon okay.
+
+00:27:30.110 --> 00:27:33.620
+So this is clear this is a naive algorithm
+and the analysis also is pretty simple, pretty
+
+00:27:33.620 --> 00:27:40.320
+straightforward right so all of you are happy
+with this right so if you if I give you an
+
+00:27:40.320 --> 00:27:46.500
+algorithm with a slightly different way of
+selecting actions you can all derive the complex
+
+00:27:46.500 --> 00:27:57.929
+the l that is required basically great it
+turns out that so we have produced this complexity
+
+00:27:57.929 --> 00:28:02.950
+here right it turns out that it is almost
+impossible to get rid of this 1 by epsilon
+
+00:28:02.950 --> 00:28:11.799
+squared right and log 1 by delta right, so
+when I try to come up with another pac algorithm
+
+00:28:11.799 --> 00:28:16.559
+right I want to you remember what I said about
+pac analysis.
+
+00:28:16.559 --> 00:28:21.300
+So I will give you an epsilon delta and now
+the interesting part is telling me how you
+
+00:28:21.300 --> 00:28:27.620
+can achieve this epsilon delta with as few
+samples as possible correct so in this case
+
+00:28:27.620 --> 00:28:32.370
+I am telling you that this is the sample complexity
+right and K figures in two places you have
+
+00:28:32.370 --> 00:28:41.470
+a K by epsilon squared and log K by delta
+right it turns out that this 1 by epsilon
+
+00:28:41.470 --> 00:28:51.380
+squared and log of 1 by delta is very hard
+to get rid of right but then people have come
+
+00:28:51.380 --> 00:29:13.370
+up with and can you get rid of this K, it
+should depend on K why at least once right.
+
+00:29:13.370 --> 00:29:18.500
+I have to try every am at least one so I cannot
+get rid of the K also right so the only thing
+
+00:29:18.500 --> 00:29:28.320
+I can try and minimize here is well I can
+try and get rid of this K right so I can try
+
+00:29:28.320 --> 00:29:36.289
+to get rid of the log K dependency right and
+then have K by epsilon squared log 1 by delta
+
+00:29:36.289 --> 00:29:40.990
+roughly I can try to move in that direction
+and once I reach there I will probably be
+
+00:29:40.990 --> 00:29:49.890
+in, left with trying to get rid of this two
+here right and try to make the 2 into 3 by
+
+00:29:49.890 --> 00:29:54.600
+2 or 1.77 or something like that. you know
+how these things proceed right so you can
+
+00:29:54.600 --> 00:29:59.890
+try to optimize the constants but more or
+less this 1 by epsilon squared and log 1 by
+
+00:29:59.890 --> 00:30:03.090
+delta is something that will have to live
+with okay.
+
+00:30:03.090 --> 00:30:04.090
+IIT Madras Production
+
+00:30:04.090 --> 00:30:05.090
+Funded by
+Department of Higher Education
+
+00:30:05.090 --> 00:30:06.779
+Ministry of Human Resource Development
+Government of India
+
+00:30:06.779 --> 00:30:07.779
+www.nptel.ac.in
+
+00:30:07.779 --> 00:30:07.781
+Copyrights reserved
+

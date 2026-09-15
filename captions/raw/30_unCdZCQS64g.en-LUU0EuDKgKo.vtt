@@ -1,0 +1,1218 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.799 --> 00:00:17.440
+So I am going to move on to a couple of other
+things about more but Monte Carlo methods
+
+00:00:17.440 --> 00:00:24.440
+which is actually not there in the book right,
+so rather than we need to add the you see
+
+00:00:24.440 --> 00:00:36.670
+trees paper to the model page right, bandit
+based Monte Carlo planning, what is so amazing
+
+00:00:36.670 --> 00:00:39.800
+about it, okay.
+.
+
+00:00:39.800 --> 00:00:47.219
+So there is a technique which people have
+used people who typically talk about Monte
+
+00:00:47.219 --> 00:00:51.820
+Carlo methods and you saw something called
+row loads okay, so the idea behind roller
+
+00:00:51.820 --> 00:00:56.940
+is the following so I have a heuristic way
+of selecting actions I am trying to solve
+
+00:00:56.940 --> 00:01:01.519
+the power problem they have some heuristic
+way of selecting actions okay, so what do
+
+00:01:01.519 --> 00:01:11.320
+I do is when I come to a particular state
+right, so I use the heuristic right, and select
+
+00:01:11.320 --> 00:01:17.220
+actions and then multiple trials from there,
+right so I use whatever heuristic I have I
+
+00:01:17.220 --> 00:01:26.221
+select run multiple trails so what is this
+the heuristic you can think of it like a policy,
+
+00:01:26.221 --> 00:01:29.440
+right.
+Policy is what a mapping from states action
+
+00:01:29.440 --> 00:01:32.940
+right I am not talking about value functions
+or anything just a policy I use the policy
+
+00:01:32.940 --> 00:01:37.360
+RN several trajectories like they just like
+we talked about in the Monte Carlo case and
+
+00:01:37.360 --> 00:01:47.060
+then what I do here is evaluate all the different
+outcomes that came from running that particular
+
+00:01:47.060 --> 00:01:58.060
+heuristic, right and then I pick the action
+right that gives me the best possible expected
+
+00:01:58.060 --> 00:02:05.979
+outcome.
+If that did not make sense let us try it again,
+
+00:02:05.979 --> 00:02:10.890
+okay if you have a deterministic heuristic
+then what you should do is probably select
+
+00:02:10.890 --> 00:02:16.090
+actions probabilistically at the beginning
+and then run your heuristic okay so I start
+
+00:02:16.090 --> 00:02:20.519
+from some state let us say I pick action a1
+and then let us say I can pick action a2 there
+
+00:02:20.519 --> 00:02:24.870
+are two actions that I can pick, let me heuristic
+will suggest something well, let us say pick
+
+00:02:24.870 --> 00:02:33.480
+action a1 first and then I run, I will policy
+p and likewise pick action a2 run my policy
+
+00:02:33.480 --> 00:02:43.110
+p okay, then I take the average value I get
+here, so I take the average value I get here
+
+00:02:43.110 --> 00:02:48.110
+then I take the action which ever gives me
+the better average value, right.
+
+00:02:48.110 --> 00:02:54.870
+So this might not be action given by p or
+it might be action given by p we do not know,
+
+00:02:54.870 --> 00:03:01.620
+right so all I am saying is given any policy
+p I can do a roll out version of this, okay
+
+00:03:01.620 --> 00:03:07.210
+what is it nice thing about doing this rollout
+version I am guaranteeing you that whatever
+
+00:03:07.210 --> 00:03:13.860
+policy you execute by virtue of doing roll
+outs on p right, will be at least as good
+
+00:03:13.860 --> 00:03:21.020
+as p and quite often better than p if a p
+is not optimal right then this rollout execution
+
+00:03:21.020 --> 00:03:31.170
+of the policy p will be better than p.
+This rollout is this time generating multiple
+
+00:03:31.170 --> 00:03:39.100
+trajectories using p right, it is like rolling
+out the policies it is something like q(a)
+
+00:03:39.100 --> 00:03:43.150
+right but this predates all of this thing
+so this kind of roll out the idea of execution
+
+00:03:43.150 --> 00:03:49.830
+right, this is nothing to do with the first
+of all this is nothing to do with MDPs right,
+
+00:03:49.830 --> 00:03:52.990
+so it could be any kind of games that you
+are playing it could be adversarial setting
+
+00:03:52.990 --> 00:03:57.320
+it could be anything right, I talk nothing
+about value functions right, I talk nothing
+
+00:03:57.320 --> 00:04:00.130
+about returns nothing is it predates all of
+that okay.
+
+00:04:00.130 --> 00:04:06.220
+This is in fact it is called rollout execution
+of a policy okay, roller the execution could
+
+00:04:06.220 --> 00:04:11.290
+the p could come from any heuristic right,
+it did not have any notion of optimality associated
+
+00:04:11.290 --> 00:04:17.099
+with it so what the roller the execution gives
+you is whatever be the performance of p that
+
+00:04:17.099 --> 00:04:22.940
+we had earlier I can better it if it is better
+able, okay if I do not get a better policy
+
+00:04:22.940 --> 00:04:25.919
+than that with a very high likelihood p is
+optimal.
+
+00:04:25.919 --> 00:04:34.500
+It why, think about it is very much like doing
+one step of policy improvement then I have
+
+00:04:34.500 --> 00:04:38.219
+done one step of policy improvement over p
+if you think about it right so what did I
+
+00:04:38.219 --> 00:04:43.490
+do here this is essentially an evaluation
+of p like I did an evaluation of p specific
+
+00:04:43.490 --> 00:04:50.719
+for starting from one step after s right,
+so I just need a policy evaluation of p and
+
+00:04:50.719 --> 00:04:54.219
+there was greedy with respect to that policy
+evaluation so this is called rollout execution.
+
+00:04:54.219 --> 00:05:09.749
+Yeah it is all a p till you reach the goal
+state here. This depends, now I want to tell
+
+00:05:09.749 --> 00:05:13.860
+me what it depends on.
+UCT the least where the arms and you would
+
+00:05:13.860 --> 00:05:20.539
+have from the root to the in each iteration
+you mark from the root to the least that is
+
+00:05:20.539 --> 00:05:24.900
+you are taking at one arm at each time step.
+Yeah, and the each of the individual notes
+
+00:05:24.900 --> 00:05:29.060
+you have that upper bound term there to maximize.
+You are confusing to many things but they
+
+00:05:29.060 --> 00:05:34.509
+are gone yeah so there was nothing good we
+follow at one time still be follow one that
+
+00:05:34.509 --> 00:05:38.900
+was 15 TVD still with you. Yeah. Using that
+here we are following many.
+
+00:05:38.900 --> 00:05:44.379
+Basically only one p but I am doing many territories.
+Yeah, there it is holding one trajectory at
+
+00:05:44.379 --> 00:05:48.300
+each time step we are following one. Yeah,
+so we will come to that right I am not okay
+
+00:05:48.300 --> 00:05:51.529
+I am not at talk to you about you trajectories
+just ask me questions on what I have taught
+
+00:05:51.529 --> 00:05:59.180
+you so far. This is not a history, this is
+just rollouts so I am just talking to you
+
+00:05:59.180 --> 00:06:04.939
+about rollouts I have not started talking
+to you about trajectories okay, your question
+
+00:06:04.939 --> 00:06:15.939
+was how many times should have run those trajectories.
+Of course but how much anyway wants to tell
+
+00:06:15.939 --> 00:06:29.150
+me what it depends on yeah, indirectly 
+exactly so closer so it depends on the variability
+
+00:06:29.150 --> 00:06:35.300
+in the system, right. If this is deterministic
+and p is deterministic one trajectory is enough,
+
+00:06:35.300 --> 00:06:40.050
+right if the system is very stochastic you
+know all kinds of random things are happening
+
+00:06:40.050 --> 00:06:44.710
+then you probably need to run lot of trajectories
+all if p itself is a very stochastic policy
+
+00:06:44.710 --> 00:06:46.279
+you will have to run a lot of trajectories,
+okay.
+
+00:06:46.279 --> 00:06:51.129
+So it depends on the variability in this sampling
+process if the variance in the samples you
+
+00:06:51.129 --> 00:06:55.789
+draw is very small it is sufficient run a
+small number of times, okay so any other factor
+
+00:06:55.789 --> 00:07:04.460
+that will determine this trajectory length
+why should trajectory length the determining
+
+00:07:04.460 --> 00:07:11.749
+factor, in directly affects you know then
+not about the variability trajectory length
+
+00:07:11.749 --> 00:07:18.899
+can be a factor in another way computation
+right, so how much computation time do you
+
+00:07:18.899 --> 00:07:23.430
+have to spare between every decision is a
+very practical consideration and you have
+
+00:07:23.430 --> 00:07:27.159
+to actually be cognizant of it right.
+So the length will affect the variability
+
+00:07:27.159 --> 00:07:30.380
+but also affects amount of computation that
+you have to do, so the longer the trajectories
+
+00:07:30.380 --> 00:07:35.069
+are the fewer that you can generate. Ironically
+the longer the trajectories are the more you
+
+00:07:35.069 --> 00:07:39.449
+want to generate because it increases the
+variability but you will have to do the opposite
+
+00:07:39.449 --> 00:07:51.009
+so said any way of cutting down variability
+here, exactly so do not go all the way to
+
+00:07:51.009 --> 00:07:59.050
+the end right, stop somewhere in between depending
+on how much time you have how much computation
+
+00:07:59.050 --> 00:08:08.389
+you can spare for this and how much variability
+is there in the system okay, so if you can
+
+00:08:08.389 --> 00:08:14.400
+find a good heuristic that tells you how much
+more it is going to cost if I run till the
+
+00:08:14.400 --> 00:08:19.123
+end, right you can use that heuristic as a
+terminal cost and remember when we talked
+
+00:08:19.123 --> 00:08:23.719
+about why we call a value iteration dynamic
+programming I said you can think of the value
+
+00:08:23.719 --> 00:08:27.749
+as a terminal cost right.
+So we have one step problem and then we have
+
+00:08:27.749 --> 00:08:31.440
+a terminal cost like that here you will have
+a many step problem and you will have a terminal
+
+00:08:31.440 --> 00:08:35.700
+cost, right so what should be the terminal
+cost or the natural terminal cost for us to
+
+00:08:35.700 --> 00:08:42.360
+use it is a value function right, if you have
+an estimate of the value function you can
+
+00:08:42.360 --> 00:08:46.990
+use that as the terminal cost, see so far
+I did not talk about the need for a value
+
+00:08:46.990 --> 00:08:53.120
+function and I can do rollouts just given
+a policy I do not need a value function but
+
+00:08:53.120 --> 00:08:57.470
+the reason for me using a value function with
+rollouts is if the trajectories are very long
+
+00:08:57.470 --> 00:09:01.430
+the variability is very high, right.
+So the longer vector is a case the smaller
+
+00:09:01.430 --> 00:09:06.149
+the number of samples you can take refer it
+is going to be very self defeating, because
+
+00:09:06.149 --> 00:09:10.579
+the larger the variability you want to take
+more samples so to kind of get around that
+
+00:09:10.579 --> 00:09:15.630
+people started using estimates of value functions,
+okay. So once you have value functions estimate
+
+00:09:15.630 --> 00:09:29.089
+you can start doing something clever, okay
+good. So this instead of apartment rollouts
+
+00:09:29.089 --> 00:09:34.339
+was like a kind of a peripheral thing in the
+RL community for a while right in fact when
+
+00:09:34.339 --> 00:09:39.480
+I started teaching this course I used to give
+a handout from a dynamic programming book
+
+00:09:39.480 --> 00:09:45.620
+on load of rollouts because it was not covered
+in the RL textbook so I used to take a Xerox
+
+00:09:45.620 --> 00:09:51.800
+of well this was before every text book ever
+printed became freely available on the internet
+
+00:09:51.800 --> 00:09:55.639
+so I used to give a photocopy of the few pages
+that discuss rollout policies right.
+
+00:09:55.639 --> 00:10:00.370
+I gave it out to the class to read about rollout
+policies and things like that and then things
+
+00:10:00.370 --> 00:10:11.350
+change dramatically when I go I thought his
+name was harder to pronounce well Chava and
+
+00:10:11.350 --> 00:10:18.250
+another Hungarian with a hard to pronounce
+name came up with something called upper confidence
+
+00:10:18.250 --> 00:10:25.810
+trees UC trees, okay. so UC trees at the heart
+use a rollout like idea right but we also
+
+00:10:25.810 --> 00:10:31.519
+use the notion of value functions and upper
+confidence bonds that we saw for bandits that
+
+00:10:31.519 --> 00:10:37.470
+they use the notion of up UC upper conference
+bound bandits UCB1 specifically they use the
+
+00:10:37.470 --> 00:10:40.240
+idea from UCB1.
+If you told you there are many variations
+
+00:10:40.240 --> 00:10:45.490
+to UCB they use side is a very simple one
+the UCB one and then married with them what
+
+00:10:45.490 --> 00:10:49.000
+they call the Monte Carlo tree search, so
+I am going to explain Monte Carlo tree search
+
+00:10:49.000 --> 00:10:53.000
+first and then I will tell you what they did
+to get UCTs and it turns out to be one of
+
+00:10:53.000 --> 00:11:00.569
+the most powerful planning algorithms that
+people use in the literature, okay. I should
+
+00:11:00.569 --> 00:11:06.930
+explain what I meant by planning here because
+it is very unique to Richchatin.
+
+00:11:06.930 --> 00:11:11.720
+So Rich introduced this difference between
+learning and planning into the community,
+
+00:11:11.720 --> 00:11:18.490
+so learning is when you try to solve an MDP
+without knowing any of the parameters well,
+
+00:11:18.490 --> 00:11:24.779
+it is online that it is completely sample
+driven and so on so forth. While planning
+
+00:11:24.779 --> 00:11:31.730
+is when you have a some kind of specification
+of a model right, and you use the model somehow
+
+00:11:31.730 --> 00:11:37.709
+to solve their problem so all of these Monte
+Carlo methods if you use a sample model.
+
+00:11:37.709 --> 00:11:42.199
+Remember we talked about sample models and
+full models right, so if you use a simulation
+
+00:11:42.199 --> 00:11:50.940
+model or a sample model it comes under the
+regime of planning because you are using a
+
+00:11:50.940 --> 00:11:55.720
+model okay. So whatever we talked about can
+either be planning our learning algorithm
+
+00:11:55.720 --> 00:12:01.490
+depending on how you draw your samples, okay
+if you draw your samples from the real system
+
+00:12:01.490 --> 00:12:04.829
+then it becomes a learning algorithm if you
+draw a samples from a simulation model then
+
+00:12:04.829 --> 00:12:10.589
+it becomes a planning algorithm, right.
+But there are other methods that use the model
+
+00:12:10.589 --> 00:12:17.740
+more integrate a more integrally in their
+method as opposed to whatever we have spoken
+
+00:12:17.740 --> 00:12:21.680
+about so far, so there are many Monte Carlo
+planning methods so we will talk about Monte
+
+00:12:21.680 --> 00:13:03.190
+Carlo tree search. Let me see if I can might
+what I really need to get my classes. The
+
+00:13:03.190 --> 00:15:51.970
+will sorry hand it must be much worse than
+usual today but let us put it down to variability
+
+00:15:51.970 --> 00:15:58.120
+in the system. So you have to go and heat
+the paper to get a better estimate so essentially
+
+00:15:58.120 --> 00:16:03.100
+objective one subroutine of this right, so
+this is a search function I am writing where
+
+00:16:03.100 --> 00:16:09.389
+is a function called search, okay it is tarts
+at some state and some depth at which it is
+
+00:16:09.389 --> 00:16:16.589
+going to be called that right.
+So I have some kind of a depth to which I
+
+00:16:16.589 --> 00:16:22.300
+will search like some depth to which I will
+search and I start by checking if this is
+
+00:16:22.300 --> 00:16:27.029
+a terminal state, okay if it is double a state
+I just returned a reward of 0 in the simple
+
+00:16:27.029 --> 00:16:30.620
+case but i will return the terminal reward
+so whatever is the terminal reward, right.
+
+00:16:30.620 --> 00:16:35.120
+So in this case all the terminal rewards are
+0 we are assuming that all the terminal rewards
+
+00:16:35.120 --> 00:16:48.110
+are 0 otherwise I will return whatever is
+the reward okay, and then I check if I have
+
+00:16:48.110 --> 00:16:55.120
+reached my required depth right.
+So if this say something is a leaf state that
+
+00:16:55.120 --> 00:17:01.499
+means it is a state at which i will not do
+any further processing right then I evaluate
+
+00:17:01.499 --> 00:17:09.660
+whatever the state is whatever is the value
+of the state I will return that value this
+
+00:17:09.660 --> 00:17:14.510
+is like the terminal cost that we spoke about
+it, if I stop here I leaves the value of such
+
+00:17:14.510 --> 00:17:18.450
+state as the terminal cost right, so we will
+evaluate that state somehow and will return
+
+00:17:18.450 --> 00:17:25.760
+the value, okay. So what is next okay, now
+it is not a lipstick okay, it is not a terminal
+
+00:17:25.760 --> 00:17:29.790
+state so that means we have some assume so
+we are not here we are not here so that means
+
+00:17:29.790 --> 00:17:39.220
+you are somewhere here right,
+So somewhere there what do I do is elect an
+
+00:17:39.220 --> 00:17:50.580
+action right, so how do I select an action
+sorry, based on the yeah, so heuristic function
+
+00:17:50.580 --> 00:17:54.800
+so whatever was the original heuristic function
+given to me, I will selected action based
+
+00:17:54.800 --> 00:17:58.340
+on that heuristic function right, I will select
+an action based on the heuristic function
+
+00:17:58.340 --> 00:18:01.790
+then I will take one step I will simulate
+the trajectory so this essentially what I'm
+
+00:18:01.790 --> 00:18:07.360
+doing it I simulate the trajectory right,
+I find what the next state is I also find
+
+00:18:07.360 --> 00:18:17.450
+one is the reward I get for taking that action
+okay. Well if you can actually behave in the
+
+00:18:17.450 --> 00:18:21.030
+real world go ahead and behave in the real
+world but how are you going to reset you back
+
+00:18:21.030 --> 00:18:24.700
+to that thing and generate another trajectory
+right, so if you want to do something like
+
+00:18:24.700 --> 00:18:29.270
+this you better have a simulation model right,
+so this is the whole idea behind rollouts
+
+00:18:29.270 --> 00:18:32.860
+so you need to have a simulation model okay,
+that is a point I missed or but you need to
+
+00:18:32.860 --> 00:18:34.860
+have a simulation model can absorb obvious,
+right.
+
+00:18:34.860 --> 00:18:38.390
+When otherwise how am I going to generate
+multiple trajectory starting from here, if
+
+00:18:38.390 --> 00:18:42.240
+it is a real world then I have to roll my
+robot back there and then say okay run again
+
+00:18:42.240 --> 00:18:46.370
+okay, then catch it does not put it back there
+and say run again and so on so forth that
+
+00:18:46.370 --> 00:19:00.380
+is not going to work right, or imagine playing
+games, right just like playing with a kid
+
+00:19:00.380 --> 00:19:05.580
+right so the kid play some moves and say no,
+no I want to take that back after four moves
+
+00:19:05.580 --> 00:19:11.540
+so there will be like that right, anyway so
+you do the next state and you get the reward
+
+00:19:11.540 --> 00:19:18.430
+based on a simulation models.
+And then what do you do you take your return
+
+00:19:18.430 --> 00:19:26.210
+right, initialize it with the reward right
+and then what do you do gamma times search
+
+00:19:26.210 --> 00:19:31.150
+from the next stage essentially you are going
+to face the entire path until you reach a
+
+00:19:31.150 --> 00:19:38.310
+terminal state. Once you reach a terminal
+state you keep popping back all the rewards
+
+00:19:38.310 --> 00:19:42.120
+that you get not a terminal state once you
+reach either a leaf state which means you
+
+00:19:42.120 --> 00:19:45.950
+have reached the depth at which are going
+to cut off or you reach the terminal state
+
+00:19:45.950 --> 00:19:51.780
+at what you do at that point is you keep passing
+the rewards back up the calling stack, right.
+
+00:19:51.780 --> 00:19:56.750
+So this is like a recursive call I will keep
+popping the reward back up so this summation
+
+00:19:56.750 --> 00:20:04.870
+when it finally finishes computing will have
+the return the complete return or the kind
+
+00:20:04.870 --> 00:20:11.830
+of an adjusted return why I am saying adjusted
+return because if i come to the stopping to
+
+00:20:11.830 --> 00:20:16.150
+indicate condition here I will use some kind
+of a value function estimator some evaluation
+
+00:20:16.150 --> 00:20:20.020
+that I have so it is like a corrected return
+or a truncated return.
+
+00:20:20.020 --> 00:20:25.730
+So i will have that as my g right, and then
+what they do I update the value of the state
+
+00:20:25.730 --> 00:20:33.900
+and action, right I say this value of state
+and this action you took and that is the total
+
+00:20:33.900 --> 00:20:40.180
+return and they said depth at which the action
+was taken from the state okay. So why is the
+
+00:20:40.180 --> 00:20:54.292
+depth important here was it the first terminal
+thing I would not even reach the right the
+
+00:20:54.292 --> 00:20:59.730
+state is a terminal state I return 0 at the
+very top I would not even reach the update
+
+00:20:59.730 --> 00:21:12.240
+condition. Yeah, why do you how will the depth
+give you how many states you move through
+
+00:21:12.240 --> 00:21:25.330
+okay, and why do I need that so it turns out
+that we are not even making any mark of hidden
+
+00:21:25.330 --> 00:21:33.280
+assumptions here, so the so closer I am to
+the end right so the value function will be
+
+00:21:33.280 --> 00:21:39.990
+different right if I take if I have five more
+steps to go or if I only take a scene 5 steps
+
+00:21:39.990 --> 00:21:44.501
+I have a long longer direction to go right,
+so I lead to maintain the distinction with
+
+00:21:44.501 --> 00:21:53.310
+the value function right, I am still not come
+to UC trees.
+
+00:21:53.310 --> 00:22:00.160
+I told you about this right, so when we have
+a fixed horizon when I say this event is going
+
+00:22:00.160 --> 00:22:05.200
+to stop at time t=10 or something like that
+right, so if you are one step away from that
+
+00:22:05.200 --> 00:22:08.950
+you will behave in a different way, if you
+100 steps away from that will behave in a
+
+00:22:08.950 --> 00:22:12.890
+different way so I am just giving you the
+number of steps that I have gone so that if
+
+00:22:12.890 --> 00:22:16.980
+you want to specialize your value function
+based on the number of steps that you have
+
+00:22:16.980 --> 00:22:22.050
+taken you could do so, okay.
+But there is another reason for carrying the
+
+00:22:22.050 --> 00:22:27.110
+depth on but for the before we get to it okay,
+before I talk about upper confidence bounds
+
+00:22:27.110 --> 00:22:31.240
+and stuff like that so the Monte Carlo tree
+search algorithm okay, we require you to carry
+
+00:22:31.240 --> 00:22:37.030
+the depth run only for the diversion as you
+can throw away the depth in the update, right.
+
+00:22:37.030 --> 00:22:42.340
+So you need the depth here, so you can throw
+in a depth in the update if you are assuming
+
+00:22:42.340 --> 00:22:57.330
+everything is completely markup okay, yeah
+it does not matter wherever you are in the
+
+00:22:57.330 --> 00:23:04.970
+system right, so you do not need depth in
+the case that is what I am saying even in
+
+00:23:04.970 --> 00:23:06.480
+this.
+Yeah, but only in the previous one you need
+
+00:23:06.480 --> 00:23:12.530
+left leaf right, so this is fine so when you
+call this you call it with your initial state
+
+00:23:12.530 --> 00:23:18.750
+and the depth of 0 right, so here when you
+call it you call it with the s and a depth
+
+00:23:18.750 --> 00:23:27.170
+of 0 okay, and you could call this multiple
+times from data, so every time you call it,
+
+00:23:27.170 --> 00:23:34.270
+it will traverse one trajectory and it will
+give you one return corresponding to that,
+
+00:23:34.270 --> 00:23:44.820
+right. So every time you call this it will
+give you a return corresponding to that and
+
+00:23:44.820 --> 00:23:51.260
+then you can choose your best action based
+on the returns that you are getting from that,
+
+00:23:51.260 --> 00:23:56.500
+okay is it clear right.
+So from here you will run this multiple times
+
+00:23:56.500 --> 00:24:04.350
+right, now is take the returns again and again
+and from there you choose your best action.
+
+00:24:04.350 --> 00:24:23.050
+Other yeah, like I told you right, it depends
+on how you choose the actions if your policy
+
+00:24:23.050 --> 00:24:30.710
+has sufficient acceleration then you are fine
+right, if you policy a sufficient exploration
+
+00:24:30.710 --> 00:24:35.730
+you are fine that policy does not have sufficient
+exploration then it becomes an issue right,
+
+00:24:35.730 --> 00:24:45.770
+and how will each is the best action anyway
+whichever next state gives you the maxi so
+
+00:24:45.770 --> 00:24:50.490
+basically you will simulate each action once
+okay, and then see which are the next states
+
+00:24:50.490 --> 00:24:53.500
+you land up in which other next state gives
+you the highest value you pick that action
+
+00:24:53.500 --> 00:24:58.300
+we go okay, once or multiple times you can
+always if you remember how you select actions
+
+00:24:58.300 --> 00:25:05.440
+using the value function right, you have to
+remember what we covered earlier so I said
+
+00:25:05.440 --> 00:25:11.210
+how to recover a policy given a value function.
+I given how to behave greedily with respect
+
+00:25:11.210 --> 00:25:16.700
+to a value function not a Q function v function
+so you could do that or you could modify this
+
+00:25:16.700 --> 00:25:23.410
+whole thing to give you Q functions instead
+of V functions highly modified is to give
+
+00:25:23.410 --> 00:25:45.440
+you Q okay, so 
+this is this is a basic structure of what
+
+00:25:45.440 --> 00:25:50.990
+is called as Monte Carlo tree search okay,
+and depending on how you select actions which
+
+00:25:50.990 --> 00:25:55.670
+you can get different kinds of algorithms
+out of it and the most popular one is called
+
+00:25:55.670 --> 00:26:06.250
+UC trees right.
+Where the select action is going to use a
+
+00:26:06.250 --> 00:26:11.100
+upper confidence bound like formulation so
+I am going to look at the expected reward
+
+00:26:11.100 --> 00:26:20.510
+for taking an action plus a term for the confidence
+one right, so what is the term going to depend
+
+00:26:20.510 --> 00:26:35.210
+on number of times you have pulled that arm
+anything else Subha, yeah, so there is one
+
+00:26:35.210 --> 00:26:40.440
+magic constant that comes in there okay, which
+is what they needed to actually help them
+
+00:26:40.440 --> 00:26:50.810
+prove some results okay, and they had one
+son bound on that p constant.
+
+00:26:50.810 --> 00:27:03.140
+Yeah, I forget what is it bound was remember
+what the bond was yeah, so there is a bound
+
+00:27:03.140 --> 00:27:07.710
+on that p constant essentially it is exactly
+like you are all you see bandits right, the
+
+00:27:07.710 --> 00:27:13.890
+expression will all be the same except that
+instead of just having root of.
+
+00:27:13.890 --> 00:27:20.350
+.
+so it will 2 lnT by right, that used to be
+
+00:27:20.350 --> 00:27:31.990
+the that is to be the constant that you add
+right, so here what you do is instead of that
+
+00:27:31.990 --> 00:27:41.210
+you have some magic constant CP times root
+of ln T/n okay, so when you select action
+
+00:27:41.210 --> 00:27:45.660
+so instead of selecting actions randomly or
+I are going to fix p so what you do is you
+
+00:27:45.660 --> 00:27:54.290
+look at the current estimated value function
+for each action add CP root ln T/n okay, where
+
+00:27:54.290 --> 00:27:59.810
+CP is a constant that is going to depend on
+the problem that you are solving okay, so
+
+00:27:59.810 --> 00:28:06.620
+the higher the variability in the system the
+larger the CP has to be right.
+
+00:28:06.620 --> 00:28:10.370
+Because you want to explore more right, higher
+the variability in the system the larger the
+
+00:28:10.370 --> 00:28:15.410
+CP will be okay this is something you typically
+end up with determining empirically but there
+
+00:28:15.410 --> 00:28:20.070
+is some bound on how large you have to search
+and so on so forth right, I can get you that
+
+00:28:20.070 --> 00:28:29.170
+numbers later. But you do this CP into root
+ln T/n plus the q value right, and then you
+
+00:28:29.170 --> 00:28:39.490
+select actions according to that and then
+go back and pick your best action.
+
+00:28:39.490 --> 00:29:09.780
+So what this is by U 
+
+00:29:09.780 --> 00:29:15.540
+so you have you have your explorer exploit
+problem here right, so you need to explore
+
+00:29:15.540 --> 00:29:20.100
+many different actions in this actual selection
+space so that when we go back and select your
+
+00:29:20.100 --> 00:29:26.180
+best action you have selected every action
+offer enough right but you do not want to
+
+00:29:26.180 --> 00:29:29.480
+keep exploring all the time because when you
+go back you will not talk when you have wasted
+
+00:29:29.480 --> 00:29:33.590
+too many sample suppose I give you like a
+thousand samples that you can take you would
+
+00:29:33.590 --> 00:29:39.690
+like to explore the more promising actions
+more than the obviously hopeless actions so
+
+00:29:39.690 --> 00:29:44.380
+if you do some kind of uniform acceleration
+you are going to skip your budget too much
+
+00:29:44.380 --> 00:29:49.750
+right across all of these things so doing
+UCT like exploration gives you much more focused
+
+00:29:49.750 --> 00:29:53.390
+learning right so just like we have in the
+UCT case this gives you much more focused
+
+00:29:53.390 --> 00:30:02.270
+learning okay, and this is one very elegant
+way of converting a bandage solution for solving
+
+00:30:02.270 --> 00:30:10.480
+the full RL problem right. Only to carry of
+car is you need a simulation model you need
+
+00:30:10.480 --> 00:30:14.790
+a simulation model to be able to do this right,
+if you have a simulation bowl you can do UCT
+
+00:30:14.790 --> 00:30:21.790
+style planning and turns out that in many
+cases you can come up with some kind of a
+
+00:30:21.790 --> 00:30:25.690
+rough simulation model, okay.
+And you can get away with it and so it turns
+
+00:30:25.690 --> 00:30:31.320
+out now it's become one of the very popular
+solution methods and in many robotic situation
+
+00:30:31.320 --> 00:30:35.790
+where you have a simulator it turns out to
+be a very, very robust planning algorithm
+
+00:30:35.790 --> 00:30:42.800
+right, and a lot of robotics now like to use
+UC threes in their process okay any questions
+
+00:30:42.800 --> 00:30:49.590
+on this so we will be putting up the paper
+for you to read I will not say that the paper
+
+00:30:49.590 --> 00:30:56.260
+is easy to read okay so most of where unlike
+his lectures most of Chavez writings are very
+
+00:30:56.260 --> 00:31:01.790
+hard to penetrate so how many of you watch
+Chavez lecture.
+
+00:31:01.790 --> 00:31:09.760
+One, linear bandits I told you to go to see
+a video on linear bandits right its links
+
+00:31:09.760 --> 00:31:18.260
+on the Moodle page not sure it's in Moodle
+all the recharge our lectures are there is
+
+00:31:18.260 --> 00:31:25.400
+it okay, so those are the three classes that
+Java took right so you should see it not enough
+
+00:31:25.400 --> 00:31:30.290
+to just see the link rather watch the video
+so many people are telling me three links
+
+00:31:30.290 --> 00:31:35.120
+are there and when I asked have you seen the
+video only one hand goes up did you see the
+
+00:31:35.120 --> 00:31:42.650
+video of Chavez you are not herein the RA
+all happened you did not understand anything
+
+00:31:42.650 --> 00:31:44.500
+okay.
+You were here when they will trap happened
+
+00:31:44.500 --> 00:31:55.040
+here you are going to say something, you have
+live demo hopefully you will understand a
+
+00:31:55.040 --> 00:32:12.480
+lot more now and the pleased to see that so
+any questions on this you see threes yeah,
+
+00:32:12.480 --> 00:32:18.280
+if you can come up with the parameter is representation
+for the value function okay, that is well
+
+00:32:18.280 --> 00:32:27.660
+behaved in the action dimension then it will
+work so we will come to that aspect of it
+
+00:32:27.660 --> 00:32:31.960
+later in the thing where I talked about using
+this kind of parameter is representations
+
+00:32:31.960 --> 00:32:35.040
+which since you asked.
+I am telling it will work if you have a parameter
+
+00:32:35.040 --> 00:32:39.130
+is representation so when you do this update
+value right, so essentially that update our
+
+00:32:39.130 --> 00:32:43.510
+actual set of parameters that represent the
+function just like we talked about in reinforce
+
+00:32:43.510 --> 00:32:48.820
+right, where we update the policy parameters
+you need the value function parameterized
+
+00:32:48.820 --> 00:32:57.710
+like that then you can get it to work and
+give it more conditions on the well-behaved
+
+00:32:57.710 --> 00:33:13.120
+nests of the value function.
+Oh, in the continued action space is a good
+
+00:33:13.120 --> 00:33:22.680
+question so let us think about that so that
+is the thing I have right, so this N is essentially
+
+00:33:22.680 --> 00:33:26.070
+the number of times I have basically taken
+action so that is basically my depth kind
+
+00:33:26.070 --> 00:33:34.320
+of thing and oh, yeah n is your depth so that
+is the reason you need to pass depth everywhere
+
+00:33:34.320 --> 00:33:39.310
+right and ln T is the number of times you
+have taken that action.
+
+00:33:39.310 --> 00:33:47.210
+Total number of yeah that is what it is right
+the depth will be the total number of pulls
+
+00:33:47.210 --> 00:34:00.480
+yeah, now T is the number of times have taken
+that particular action right, so there is
+
+00:34:00.480 --> 00:34:03.990
+that you be n is the number of times I have
+taken that you sorry, sorry T is the total
+
+00:34:03.990 --> 00:34:09.149
+so T will be the depth is I have to keep track
+of n how many times have taken the action
+
+00:34:09.149 --> 00:34:14.390
+so far right, so one possibility is to say
+that I am going to do this in a parameter
+
+00:34:14.390 --> 00:34:18.589
+explosion but glad to see whether that will
+work or not right.
+
+00:34:18.589 --> 00:34:25.429
+So yeah so without the exploration bonus this
+will work in the country action space for
+
+00:34:25.429 --> 00:34:34.180
+this we will have to figure out how to make
+it work okay fine, all set okay we can move
+
+00:34:34.180 --> 00:34:46.740
+on to the next topic 
+
+00:34:46.740 --> 00:34:50.300
+so this is end of chapter five so starting
+chapter six but chapter five in the second
+
+00:34:50.300 --> 00:34:55.190
+edition of the book has one additional section
+okay so where they talk about some of the
+
+00:34:55.190 --> 00:35:05.090
+recent work primarily being done by with certain
+and his group on I'm trying to reduce variance
+
+00:35:05.090 --> 00:35:09.470
+in Monte Carlo sampling right.
+So one thing which they talk about is when
+
+00:35:09.470 --> 00:35:19.620
+you really have long trajectories right, but
+you have a small discount factor I say gamma
+
+00:35:19.620 --> 00:35:24.290
+is like point three or something so the contribution
+in the return of the subsequent terms is going
+
+00:35:24.290 --> 00:35:30.680
+to die down very quickly right so you really
+do not need to maintain this full product
+
+00:35:30.680 --> 00:35:36.080
+that you could get away with doing something
+that is truncated right I am looking at the
+
+00:35:36.080 --> 00:35:42.330
+Pxi/Qxi right I do not have to do the whole
+product I can do something truncated.
+
+00:35:42.330 --> 00:35:47.000
+So how do you do that in a principled manner
+and give some kind of guarantees about convergence
+
+00:35:47.000 --> 00:35:51.810
+and stuff like that the he gives a very, very
+high level quick discussion about that in
+
+00:35:51.810 --> 00:36:00.160
+the last section in the chapter in the book
+right, so again you can read it for information
+
+00:36:00.160 --> 00:36:09.830
+that means I will ask questions on it in the
+exam is what it means if you want to know
+
+00:36:09.830 --> 00:36:16.440
+what it translates to but there are other
+things you say ask you to rate which I did
+
+00:36:16.440 --> 00:36:18.630
+not say our for information so those are fair
+game.
+

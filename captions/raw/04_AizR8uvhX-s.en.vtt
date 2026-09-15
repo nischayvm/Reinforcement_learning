@@ -1,0 +1,596 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:16.121 --> 00:00:16.680
+[Music]
+
+00:00:16.680 --> 00:00:20.240
+so these kinds of problems this&nbsp;
+is a very very simplified version
+
+00:00:20.240 --> 00:00:30.200
+of what are called in the statistics&nbsp;
+literature as banded problem&nbsp;&nbsp;
+
+00:00:30.200 --> 00:00:33.760
+s right so you know why they're called Bandit
+
+00:00:33.760 --> 00:00:42.320
+problems you know this
+
+00:00:42.320 --> 00:00:52.320
+typic no oh come on you enough of&nbsp;
+lab meetings to know these things&nbsp;&nbsp;
+
+00:00:52.320 --> 00:00:59.920
+anyway so people know what a one-arm bandit is
+
+00:01:03.280 --> 00:01:11.760
+come on man anyway so one arm bandit is a slot&nbsp;
+machine you know what slot machines are you put&nbsp;&nbsp;
+
+00:01:11.760 --> 00:01:19.800
+a coin there then you pull a lever right and then&nbsp;
+what it does it steals your money basically I me&nbsp;&nbsp;
+
+00:01:19.800 --> 00:01:24.280
+all of that is mumbo jumbo you know of course all&nbsp;
+of you must realize that no casinos is going to&nbsp;&nbsp;
+
+00:01:24.280 --> 00:01:30.040
+put up a machine that actually makes money for&nbsp;
+the customer right so in the long run the slot&nbsp;&nbsp;
+
+00:01:30.040 --> 00:01:34.520
+machine will steal your money right and then&nbsp;
+you just keep pulling that thing so that lever&nbsp;&nbsp;
+
+00:01:34.520 --> 00:01:40.160
+that you pull is called the arm right and since&nbsp;
+it has one lever is called the one arm bandit&nbsp;&nbsp;
+
+00:01:40.160 --> 00:01:45.360
+because it steals your money right so it's one&nbsp;
+arm bandit so here this is very similar to the&nbsp;&nbsp;
+
+00:01:45.360 --> 00:01:54.600
+slot machine except that instead of having one&nbsp;
+arm it has n arms right so each time you pull&nbsp;&nbsp;
+
+00:01:54.600 --> 00:01:59.960
+an arm you get some kind of a payoff right and&nbsp;
+if you want to really complete the Bandit and&nbsp;&nbsp;
+
+00:01:59.960 --> 00:02:04.160
+ology so every time you need to pull an arm&nbsp;
+you have to pay one rupee right sometimes&nbsp;&nbsp;
+
+00:02:04.160 --> 00:02:07.240
+you get back one rupee sometimes you get&nbsp;
+back nothing so that way you know that&nbsp;&nbsp;
+
+00:02:07.240 --> 00:02:10.800
+it's certainly stealing your money right&nbsp;
+so something like that right so but that's&nbsp;&nbsp;
+
+00:02:10.800 --> 00:02:15.360
+essentially why it is called a bandit&nbsp;
+problem uh sometimes it it's also called
+
+00:02:15.360 --> 00:02:27.520
+the multi-arm bandits right so it's called&nbsp;
+multiarm Bandits because well it has multiple&nbsp;&nbsp;
+
+00:02:27.520 --> 00:02:33.120
+arms right and the Dynamics is very Sim SAR&nbsp;
+to a slot machine right now we know why I kept&nbsp;&nbsp;
+
+00:02:33.120 --> 00:02:40.120
+calling actions as arms right so because the&nbsp;
+the the literature typically talks about arms&nbsp;&nbsp;
+
+00:02:40.120 --> 00:02:45.200
+on a bandit right but it's it's really for us we&nbsp;
+don't have to worry about the Bandit connections&nbsp;&nbsp;
+
+00:02:45.200 --> 00:02:54.400
+so then it's essentially this actions right&nbsp;
+good any questions so far there are many many&nbsp;&nbsp;
+
+00:02:54.400 --> 00:02:59.960
+ways in which you can solve this multiarm banded&nbsp;
+problems right but uh the Crux here is always that&nbsp;&nbsp;
+
+00:02:59.960 --> 00:03:07.760
+you have to be balancing the exploration versus&nbsp;
+exploitation right so I'll talk about multiple&nbsp;&nbsp;
+
+00:03:07.760 --> 00:03:15.640
+uh solution Concepts right what do we mean&nbsp;
+when we say I want to solve a multiarm banded
+
+00:03:15.640 --> 00:03:29.760
+problem right so one solution concept right
+
+00:03:39.720 --> 00:03:44.240
+it's asymptotic correctness so what do&nbsp;
+I mean by that I don't put any bounds&nbsp;&nbsp;
+
+00:03:44.240 --> 00:03:48.800
+on you or anything right here is&nbsp;
+this multi-arm banded problem so&nbsp;&nbsp;
+
+00:03:48.800 --> 00:03:54.120
+give me a guarantee that eventually you'll&nbsp;
+be selecting the arm which has the highest
+
+00:03:54.120 --> 00:04:01.880
+payoff right as T tends to Infinity you'll be&nbsp;
+selecting the arm that has the highest payoff&nbsp;&nbsp;
+
+00:04:01.880 --> 00:04:06.200
+right so that is called asymptotic correctness&nbsp;
+right so this is one way of solving it a lot&nbsp;&nbsp;
+
+00:04:06.200 --> 00:04:12.640
+of the older literature on Bandit problems&nbsp;
+essentially concern themselves with asymptotic&nbsp;&nbsp;
+
+00:04:12.640 --> 00:04:16.600
+correctness and then of course they had some&nbsp;
+results on things like rat of convergence and&nbsp;&nbsp;
+
+00:04:16.600 --> 00:04:21.680
+so on so forth how quickly you reach the the&nbsp;
+guarantee and so on so forth but by and large&nbsp;&nbsp;
+
+00:04:21.680 --> 00:04:25.320
+the analysis was on asymptotic correctness you&nbsp;
+come up with very simple algorithms and then&nbsp;&nbsp;
+
+00:04:25.320 --> 00:04:31.760
+you show that the ASM totically they will&nbsp;
+converge to the right right right so this&nbsp;&nbsp;
+
+00:04:31.760 --> 00:04:41.240
+is the one kind of thing right the second uh uh&nbsp;
+popular uh solution concept is essentially known
+
+00:04:41.240 --> 00:04:49.360
+as regret
+
+00:04:49.360 --> 00:04:54.680
+optimality suppose I
+
+00:04:54.680 --> 00:05:04.560
+knew right suppose I knew from&nbsp;
+Time Zero which is the best arm&nbsp;&nbsp;
+
+00:05:04.560 --> 00:05:08.160
+right suppose I knew from the beginning&nbsp;
+what is the best arm to pull right and I&nbsp;&nbsp;
+
+00:05:08.160 --> 00:05:11.840
+keep pulling the arm over and over and&nbsp;
+over again right and I keep repeating&nbsp;&nbsp;
+
+00:05:11.840 --> 00:05:18.160
+this experiment multiple times what&nbsp;
+will be my expected payoff so this is
+
+00:05:18.160 --> 00:05:29.640
+time expected payoff it's going to be&nbsp;&nbsp;
+
+00:05:30.400 --> 00:05:34.880
+some kind of a flat line right so that's&nbsp;
+possibly the best expected payoff that&nbsp;&nbsp;
+
+00:05:34.880 --> 00:05:41.160
+I can achieve right because I know from the&nbsp;
+beginning I know what is the right arm right&nbsp;&nbsp;
+
+00:05:41.160 --> 00:05:46.160
+but since I don't know this I have to do this&nbsp;
+exploration right to figure out which is the right
+
+00:05:46.160 --> 00:05:51.920
+arm right so my payoff will look something like
+
+00:05:51.920 --> 00:06:02.880
+this right over time it'll eventually&nbsp;
+reach that right as time becomes T&nbsp;&nbsp;
+
+00:06:02.880 --> 00:06:10.120
+goes to Infinity I'll eventually reach that&nbsp;
+point right so now this reward that you see&nbsp;&nbsp;
+
+00:06:10.120 --> 00:06:15.440
+here right this is what I could have got&nbsp;
+if I had known the right answer from the
+
+00:06:15.440 --> 00:06:23.080
+beginning right so this is in some sense&nbsp;
+a loss that I incurred because of my&nbsp;&nbsp;
+
+00:06:23.080 --> 00:06:29.880
+learning process right so this is sometimes&nbsp;
+colorfully referred to as regret so it's like&nbsp;&nbsp;
+
+00:06:29.880 --> 00:06:33.600
+if I had known this from the beginning you&nbsp;
+know I could have done so much better so this&nbsp;&nbsp;
+
+00:06:33.600 --> 00:06:38.600
+is Regret so another way of thinking about&nbsp;
+regret is that I'm trying to maximize the&nbsp;&nbsp;
+
+00:06:38.600 --> 00:06:44.680
+total reward that I obtain okay not just the&nbsp;
+asymptotically the payoff right even during&nbsp;&nbsp;
+
+00:06:44.680 --> 00:06:52.400
+the learning I need to get as much payoff&nbsp;
+as possible right so ideally I would want&nbsp;&nbsp;
+
+00:06:52.400 --> 00:07:02.160
+this slope to be pretty steep right if the slope&nbsp;
+is very steep so what will happen is this this&nbsp;&nbsp;
+
+00:07:02.160 --> 00:07:06.560
+this area will come down right if the slope is&nbsp;
+very steep this area is going to come down but&nbsp;&nbsp;
+
+00:07:06.560 --> 00:07:13.840
+what is the tradeoff typically you'll have to&nbsp;
+give up is it'll take a longer time to reach
+
+00:07:13.840 --> 00:07:23.160
+optimality usually there's a tradeoff right&nbsp;
+because you typically to do this right you&nbsp;&nbsp;
+
+00:07:23.160 --> 00:07:29.840
+will be giving up some amount of&nbsp;
+exploration right so there are&nbsp;&nbsp;
+
+00:07:29.840 --> 00:07:35.120
+some Corner cases where you might actually miss&nbsp;
+out on important exploration because you are&nbsp;&nbsp;
+
+00:07:35.120 --> 00:07:42.240
+trying to be very optimistic with respect to this&nbsp;
+regret thing right so I wanted to be I wanted to&nbsp;&nbsp;
+
+00:07:42.240 --> 00:07:47.880
+have very very little regret so what what I might&nbsp;
+end up doing is I might miss out on certain key&nbsp;&nbsp;
+
+00:07:47.880 --> 00:07:52.960
+exploration that I should have done so essentially&nbsp;
+what will happen is so in some cases I will never&nbsp;&nbsp;
+
+00:07:52.960 --> 00:07:59.120
+reach optimality also because I would have ignored&nbsp;
+certain important outcomes along the way so this&nbsp;&nbsp;
+
+00:07:59.120 --> 00:08:04.320
+is the trade-off that you have to worry about but&nbsp;
+regret optimality is essentially looking at how&nbsp;&nbsp;
+
+00:08:04.320 --> 00:08:11.560
+steeply you learn at the outside okay of course&nbsp;
+that doesn't mean I can be really bad right I
+
+00:08:11.560 --> 00:08:16.200
+mean does it have a small
+
+00:08:16.200 --> 00:08:22.680
+regret right but I did learn very&nbsp;
+fast I actually went up the y-&nbsp;&nbsp;
+
+00:08:22.680 --> 00:08:29.440
+Axis right but then I'm going to incur a&nbsp;
+constant very very large constant regret&nbsp;&nbsp;
+
+00:08:31.120 --> 00:08:35.480
+okay so that's not that's not so you have to&nbsp;
+balance it right so because you keep accumulating&nbsp;&nbsp;
+
+00:08:35.480 --> 00:08:39.760
+even though this has reached here but you still&nbsp;
+keep accumulating regret right so this is not yet&nbsp;&nbsp;
+
+00:08:39.760 --> 00:08:49.920
+come to the optimal case in fact we know that no&nbsp;
+algorithm can guarantee that your regret will grow&nbsp;&nbsp;
+
+00:08:49.920 --> 00:08:57.400
+small I mean essentially regret will fall right&nbsp;
+faster than Lo T so it has to grow at least as Lo&nbsp;&nbsp;
+
+00:08:57.400 --> 00:09:03.720
+T right suppose you have taken T time steps the&nbsp;
+regret you have accumulated till that point will&nbsp;&nbsp;
+
+00:09:03.720 --> 00:09:10.400
+be proportional to log T right so and as T becomes&nbsp;
+larger the rate of growth will become smaller and&nbsp;&nbsp;
+
+00:09:10.400 --> 00:09:15.240
+smaller right but that is the best rate of growth&nbsp;
+that you can achieve all that you can fiddle play&nbsp;&nbsp;
+
+00:09:15.240 --> 00:09:21.880
+around with is some a * log T will be the rate&nbsp;
+right so that a is what you can fiddle around&nbsp;&nbsp;
+
+00:09:21.880 --> 00:09:27.080
+with so those constants you can fit around with&nbsp;
+but log T itself is non-negotiable so there are&nbsp;&nbsp;
+
+00:09:27.080 --> 00:09:32.520
+results that show that log T is a lower Bond so&nbsp;
+you can't do better than log T in achieving regret&nbsp;&nbsp;
+
+00:09:32.520 --> 00:09:38.720
+right so essentially so if you think of this area&nbsp;
+above this curve and between this dotted line and&nbsp;&nbsp;
+
+00:09:38.720 --> 00:09:44.680
+this curve so that area will keep growing at&nbsp;
+some rate right as T becomes larger and larger&nbsp;&nbsp;
+
+00:09:44.680 --> 00:09:49.520
+that area keeps growing at some rate so the&nbsp;
+rate at which it will grow will be at least&nbsp;&nbsp;
+
+00:09:49.520 --> 00:09:55.200
+Lo so that's the result that we have so I'm not&nbsp;
+going to show you that result but I'll we'll talk&nbsp;&nbsp;
+
+00:09:55.200 --> 00:10:01.960
+about a couple of other uh other things okay so&nbsp;
+is it clear so people understand what regret is
+
+00:10:01.960 --> 00:10:10.040
+right good okay so third thing that&nbsp;
+I want to talk about is what is
+
+00:10:10.040 --> 00:10:25.760
+called pack optimality right or not&nbsp;
+it's not I shouldn't really call it&nbsp;&nbsp;
+
+00:10:25.760 --> 00:10:32.440
+pack optimality but it should be more pack&nbsp;
+complexity right so here's a little tricky
+
+00:10:32.440 --> 00:10:45.000
+thing so pack stands for probably approximately
+
+00:10:45.000 --> 00:10:49.280
+correct
+
+00:10:49.280 --> 00:10:59.480
+okay sometimes in a very loose fashion we tend&nbsp;
+to use these as interchangeable things yeah he&nbsp;&nbsp;
+
+00:10:59.480 --> 00:11:05.400
+probably right okay and he's approximately right&nbsp;
+right so but they are not interchangeable they&nbsp;&nbsp;
+
+00:11:05.400 --> 00:11:08.920
+very different context very very different&nbsp;
+things when they say somebody is probably&nbsp;&nbsp;
+
+00:11:08.920 --> 00:11:16.160
+right that means he's either right or wrong&nbsp;
+okay so he's right with some probability and&nbsp;&nbsp;
+
+00:11:16.160 --> 00:11:22.920
+he's wrong with some probability right when they&nbsp;
+say somebody's approximately right he's almost&nbsp;&nbsp;
+
+00:11:22.920 --> 00:11:28.640
+surely not right right but he very close&nbsp;
+to being right this is essentially what&nbsp;&nbsp;
+
+00:11:28.640 --> 00:11:36.320
+approximately means so it turns out that both of&nbsp;
+these concepts are applicable in a bandit setting&nbsp;&nbsp;
+
+00:11:36.320 --> 00:11:39.680
+so when I say somebody is approximately&nbsp;
+right in the Bandit setting what do I
+
+00:11:39.680 --> 00:11:47.240
+mean that I give you an arm right finally you&nbsp;
+know what is the goal at the end of the day I'm&nbsp;&nbsp;
+
+00:11:47.240 --> 00:11:51.240
+supposed to give you an arm back right and and&nbsp;
+this is supposed to have the highest expected&nbsp;&nbsp;
+
+00:11:51.240 --> 00:11:57.360
+payoff when they say I'm approximately right that&nbsp;
+means that arm I'm going to return to you will be&nbsp;&nbsp;
+
+00:11:57.360 --> 00:12:06.360
+very close in payoff to the the best possible&nbsp;
+on right suppose I return some a to you so Q&nbsp;&nbsp;
+
+00:12:06.360 --> 00:12:16.280
+star of a will be very close to say qar of a star&nbsp;
+which is the best arm right does it make sense so&nbsp;&nbsp;
+
+00:12:16.280 --> 00:12:21.920
+I'll return some arm a to you at the end of my&nbsp;
+algorithm Q star of a will be very very close to&nbsp;&nbsp;
+
+00:12:21.920 --> 00:12:30.240
+qar of a star right what is qar again the true&nbsp;
+expected payoff which which I don't know about&nbsp;&nbsp;
+
+00:12:30.240 --> 00:12:35.480
+right the algorithm doesn't know what qar is but&nbsp;
+it'll return an arm and the guarantee I give you&nbsp;&nbsp;
+
+00:12:35.480 --> 00:12:42.160
+is the qar of the ter the unknown Q star of the&nbsp;
+arm will be close to the Q star of the best arm&nbsp;&nbsp;
+
+00:12:42.160 --> 00:12:46.680
+okay so this is the approximately correct&nbsp;
+okay so what is the probably correct part
+
+00:12:46.680 --> 00:12:59.800
+here optim is the optimal no no no no it is&nbsp;
+either approximately correct or not because we&nbsp;&nbsp;
+
+00:12:59.800 --> 00:13:04.200
+already only gu giving you approximately correct&nbsp;
+guarantees right so with a very high probability&nbsp;&nbsp;
+
+00:13:04.200 --> 00:13:11.320
+it is approximately correct right with some small&nbsp;
+probability it might give you an arm that is more&nbsp;&nbsp;
+
+00:13:11.320 --> 00:13:19.240
+than some distance away from the best arm this&nbsp;
+is probably approximately correct yeah that's&nbsp;&nbsp;
+
+00:13:19.240 --> 00:13:25.200
+what PC is probably approximately correct oh okay&nbsp;
+probably correct would mean yeah either optimal&nbsp;&nbsp;
+
+00:13:25.200 --> 00:13:30.000
+or not optimal yeah probably approximately&nbsp;
+correct is well with some probability you&nbsp;&nbsp;
+
+00:13:30.000 --> 00:13:36.360
+are approximately correct some probability you&nbsp;
+are not right so typically uh there are many&nbsp;&nbsp;
+
+00:13:36.360 --> 00:13:44.600
+ways in which uh people talk about this that&nbsp;
+a one one popular way of specifying this is&nbsp;&nbsp;
+
+00:13:44.600 --> 00:13:53.320
+called the Epsilon Delta pack uh where [Music]&nbsp;
+Epsilon refers to the the approximately part&nbsp;&nbsp;
+
+00:13:53.320 --> 00:13:59.040
+and the Delta refers to the probability part&nbsp;
+right so with the probability of 1 minus Delta&nbsp;&nbsp;
+
+00:13:59.960 --> 00:14:03.920
+okay the solution I return to you&nbsp;
+will be within Epsilon of the best
+
+00:14:03.920 --> 00:14:29.040
+arm right so this essentially&nbsp;
+means probability that
+
+00:14:45.560 --> 00:14:51.880
+probability that qar of a that's&nbsp;
+armor return to you is greater than
+
+00:14:51.880 --> 00:14:59.040
+uh there's one way of writing it but&nbsp;
+that is not what the pack framework
+
+00:14:59.600 --> 00:15:18.320
+guarantees okay so what is the&nbsp;
+difference between the first one and this
+
+00:15:18.320 --> 00:15:28.960
+one no that is the first one is relative&nbsp;
+guarantee this an absolute guarantee
+
+00:15:37.080 --> 00:15:41.200
+so you could think of either way&nbsp;
+you can think of absolute guarantee&nbsp;&nbsp;
+
+00:15:41.200 --> 00:15:49.080
+or as a relative guarantee but this is&nbsp;
+essentially what pack op pack optimality&nbsp;&nbsp;
+
+00:15:49.080 --> 00:15:54.280
+means right so for a given Epsilon Delta&nbsp;
+if I can give that guarantee right then&nbsp;&nbsp;
+
+00:15:54.280 --> 00:15:59.200
+you say that is back optimal for this&nbsp;
+but what is the interesting part here
+
+00:15:59.200 --> 00:16:08.160
+right if I allow you to draw an infinite number of&nbsp;
+samples from the arms right I can always guarantee&nbsp;&nbsp;
+
+00:16:08.160 --> 00:16:14.000
+this given give me whatever Epsilon Delta I want&nbsp;
+I can just keep drawing arms okay and then some&nbsp;&nbsp;
+
+00:16:14.000 --> 00:16:18.280
+point I can say okay now I have satisfied this&nbsp;
+okay the optimality part comes in when you want&nbsp;&nbsp;
+
+00:16:18.280 --> 00:16:25.560
+to minimize the sample complexity right so given&nbsp;
+an Epsilon and a Delta what is the smallest number&nbsp;&nbsp;
+
+00:16:25.560 --> 00:16:34.760
+of times I have to select arms such that I can&nbsp;
+give you that Epsilon Delta pack guarantee right&nbsp;&nbsp;
+
+00:16:34.760 --> 00:16:41.360
+does it make sense so that's essentially what we&nbsp;
+are looking at here so this is a sample complexity&nbsp;&nbsp;
+
+00:16:41.360 --> 00:16:48.800
+question right this is the correctness question&nbsp;
+right this is a kind of a rate of convergence&nbsp;&nbsp;
+
+00:16:48.800 --> 00:16:52.880
+question and this is a sample complexity&nbsp;
+question so these are all slightly different&nbsp;&nbsp;
+
+00:16:52.880 --> 00:16:57.200
+Notions of solutions when I say you're solving&nbsp;
+a banded problem these are different Notions of&nbsp;&nbsp;
+
+00:16:57.200 --> 00:17:01.440
+solutions the kind of algorithms that you come&nbsp;
+up with for addressing each of these questions&nbsp;&nbsp;
+
+00:17:01.440 --> 00:17:11.000
+would be pretty different so how do you know&nbsp;
+qar a star you don't know but I give you the
+
+00:17:11.000 --> 00:17:19.680
+guarantee this is the if if you know qar a&nbsp;
+star then this will be as close as that so&nbsp;&nbsp;
+
+00:17:19.680 --> 00:17:26.840
+how will we know when when to stop how will&nbsp;
+we know that will beep what will be number&nbsp;&nbsp;
+
+00:17:26.840 --> 00:17:31.000
+of exactly so these are questions that we look&nbsp;
+at as we go along I have not told you what the&nbsp;&nbsp;
+
+00:17:31.000 --> 00:17:35.400
+I'm just telling you what the solution concepts&nbsp;
+are right I not even told you how you actually&nbsp;&nbsp;
+
+00:17:35.400 --> 00:17:39.480
+solve these problems right so when we look&nbsp;
+at those I'll tell you how to go about doing&nbsp;&nbsp;
+
+00:17:39.480 --> 00:17:45.080
+this in fact it'll turn out that the algorithms&nbsp;
+themselves are very simple okay but to analyze&nbsp;&nbsp;
+
+00:17:45.080 --> 00:17:55.077
+it to show that this kind of guarantee holds&nbsp;
+is where all the trick lies [Music] [Applause]
+

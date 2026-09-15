@@ -1,0 +1,868 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.920 --> 00:00:22.490
+So where were we in the last class we are
+looking at looking at.
+
+00:00:22.490 --> 00:00:29.910
+.
+Bellman I mean MDP s and you are taking it
+
+00:00:29.910 --> 00:00:50.720
+the bellman equation right so the MDP is are
+rectified by s a 
+
+00:00:50.720 --> 00:00:55.700
+right so this is what we use for defining
+in MDP right and what is the bellman equation
+
+00:00:55.700 --> 00:01:38.369
+let us stick with the bellman equation for
+B for the simplicity sake tell me timber okay
+
+00:01:38.369 --> 00:02:04.499
+likewise we had another optimality equation
+
+00:02:04.499 --> 00:02:08.280
+right so we have the optimality equations
+one thing which I want you to note about the
+
+00:02:08.280 --> 00:02:19.330
+optimality equation is that we are making
+an assumption that 
+
+00:02:19.330 --> 00:02:25.680
+so the optimal policy would have the same
+max here right.
+
+00:02:25.680 --> 00:02:35.230
+So that is fine correct another assumption
+that you will make as we go long trying to
+
+00:02:35.230 --> 00:02:46.430
+solve the MDP is that the optimal policy is
+deterministic right so and we will also use
+
+00:02:46.430 --> 00:02:54.849
+this following notation instead of saying
+p (a) given is I will use the notation p (s),
+
+00:02:54.849 --> 00:03:03.650
+so p (s) given is office is essentially a
+single action a that we will always do whenever
+
+00:03:03.650 --> 00:03:10.940
+you come to status right so by of a given
+s is a probability distribution right this
+
+00:03:10.940 --> 00:03:17.380
+is essentially saying that if my p is says
+that it is one for one action and 0for all
+
+00:03:17.380 --> 00:03:24.360
+the rest for every state right.
+Then I can represent it as this is where I
+
+00:03:24.360 --> 00:03:30.060
+will return the action for which the probability
+is 1 okay so this is a deterministic policy
+
+00:03:30.060 --> 00:03:39.440
+so this is a notation that you use so this
+is the note sir right and later on well we
+
+00:03:39.440 --> 00:03:43.680
+will see that will make an assumption that
+the deterministic policy I mean the optimal
+
+00:03:43.680 --> 00:03:52.939
+policy is deterministic right, in fact more
+correctly you will assume that if the MDP
+
+00:03:52.939 --> 00:03:58.489
+has an optimal policy then there exists a
+deterministic optimal policy right there could
+
+00:03:58.489 --> 00:04:04.219
+be multiple stochastic optimal policies but
+that will exist at least one deterministic
+
+00:04:04.219 --> 00:04:08.549
+optimal policy.
+So that is assumption that will make so later
+
+00:04:08.549 --> 00:04:16.690
+so in fact I will see if I can actually develop
+all the machinery required to prove that but
+
+00:04:16.690 --> 00:04:23.460
+we would not have to go do that right so we
+will see if I do not get to that then please
+
+00:04:23.460 --> 00:04:34.220
+take it on faith okay so a couple of things
+so now I am going to talk about so the existence
+
+00:04:34.220 --> 00:04:41.170
+and the uniqueness of solutions for these
+sets of equations right going to talk about
+
+00:04:41.170 --> 00:04:45.900
+the existence and uniqueness of solutions
+for this set of equations so for us to get
+
+00:04:45.900 --> 00:04:49.650
+into that we need a little bit of analysis
+right.
+
+00:04:49.650 --> 00:04:56.060
+So we need to know a little bit of fun days
+from functional analysis and so I will I'm
+
+00:04:56.060 --> 00:05:00.380
+going to keep it very very light okay I am
+not worried I am not going to do anything
+
+00:05:00.380 --> 00:05:05.450
+very deep in this but for that people have
+to recall all their things about vector spaces
+
+00:05:05.450 --> 00:05:11.600
+and so on so forth remember vector spaces
+right so vector spaces you have a set of elements
+
+00:05:11.600 --> 00:05:21.980
+are closed under addition and scalar multiplication
+right, so we are going to consider at some
+
+00:05:21.980 --> 00:05:30.660
+point welcome to that so one way of thinking
+about the value functions right.
+
+00:05:30.660 --> 00:05:36.540
+In a finite MDP you can think about it in
+a non-final a discrete state space also but
+
+00:05:36.540 --> 00:05:43.420
+for the simplicity sake let us assume that
+what I am going to talk about now is only
+
+00:05:43.420 --> 00:05:52.970
+about finite MDP so what are finite MDP these
+are MVP where s is finite right and is finite
+
+00:05:52.970 --> 00:05:59.400
+both s and a are finite and we already know
+that the expectation should be bounded right
+
+00:05:59.400 --> 00:06:04.880
+so these are the three conditions that we
+need is a finite MDP then s is finite a is
+
+00:06:04.880 --> 00:06:11.020
+finite and this expectation is bounded so
+if you think of a finite MDP I can think of
+
+00:06:11.020 --> 00:06:24.740
+my value function as a vector in a size of
+s dimensional vector space right.
+
+00:06:24.740 --> 00:06:49.980
+So I can think of it as a vector which has
+s components 
+
+00:06:49.980 --> 00:06:58.590
+in fact 
+so it is it is a space on which I can define
+
+00:06:58.590 --> 00:07:04.500
+a notion of a norm that normally something
+like a size of the you can think of at roughly
+
+00:07:04.500 --> 00:07:09.240
+as equal to being size of the vector that
+I can define a norm on this vector space right
+
+00:07:09.240 --> 00:07:13.720
+but I am interested in using a specific kind
+of norm on this space which we will call the
+
+00:07:13.720 --> 00:07:39.150
+maximum right so people know norms so you
+can think of it as this kind of some kind
+
+00:07:39.150 --> 00:08:22.090
+of a measure of size right so let us put this
+down here okay, so what if and only if x is
+
+00:08:22.090 --> 00:08:30.090
+0 norm x is 0 right and Alpha X is alpha where
+a is a scalar is alpha times norm of X and
+
+00:08:30.090 --> 00:08:40.860
+this is the triangle inequality okay great
+we have this now I am just seeing what notations
+
+00:08:40.860 --> 00:08:48.610
+I should introduce for you.
+So that is fine so people know all about vector
+
+00:08:48.610 --> 00:08:54.629
+spaces okay so in vector space where you have
+a norm defined on the vectors is called that
+
+00:08:54.629 --> 00:09:00.240
+non vector space ok so all of you know that
+great.
+
+00:09:00.240 --> 00:09:02.439
+.
+So now I want to talk about something called
+
+00:09:02.439 --> 00:09:16.490
+a complete normed vector space we all know
+about water normed vector spaces so when do
+
+00:09:16.490 --> 00:09:37.100
+you say it is complete okay, so for that we
+need to understand something called was it
+
+00:09:37.100 --> 00:09:40.501
+not Cauchy-Schwarz inequality really need
+to understand what is called a Cauchy sequence
+
+00:09:40.501 --> 00:10:34.029
+okay, so a sequence of course is something
+like this okay right so what does Cauchy sequence
+
+00:10:34.029 --> 00:10:39.180
+it says that okay.
+For any real epsilon that you give me I can
+
+00:10:39.180 --> 00:10:46.029
+find some point in the sequence ok beyond
+which if you pick any two elements they are
+
+00:10:46.029 --> 00:10:54.180
+within epsilon of each other selective says
+for any epsilon you give me right so what
+
+00:10:54.180 --> 00:10:58.839
+does this mean so this sequence should be
+such that the successive elements are coming
+
+00:10:58.839 --> 00:11:05.830
+closer and closer to each other right does
+it make sense is a sequence in which the successive
+
+00:11:05.830 --> 00:11:10.439
+elements are coming closer and closer to each
+other.
+
+00:11:10.439 --> 00:11:23.249
+So if every Cauchy sequence in a normed vector
+space converges to a point in the vector space
+
+00:11:23.249 --> 00:11:31.790
+right then you call the vector space as a
+complete space X1 X2 the rescission x1 and
+
+00:11:31.790 --> 00:11:43.420
+x2 will be greater than X2 and X3 yeah so
+x1 x2 the distance will be greater than explain
+
+00:11:43.420 --> 00:11:47.791
+extreme possibly it should be can you further
+from the definition of a Cauchy sequence the
+
+00:11:47.791 --> 00:11:54.050
+Cauchy sequence just says the successive difference
+are getting smaller and smaller and smaller
+
+00:11:54.050 --> 00:11:57.249
+does not necessarily say there is a limit
+right.
+
+00:11:57.249 --> 00:12:03.740
+Does not necessarily say there is a limit
+it just says it becomes smaller and smaller
+
+00:12:03.740 --> 00:12:09.569
+and smaller and smaller so you could have
+a limit right that is outside the space that
+
+00:12:09.569 --> 00:12:18.750
+you are considering it right so if you want
+to look at examples of Cauchy sequences that
+
+00:12:18.750 --> 00:12:23.871
+are not convergent go look at Wikipedia right
+so there are enough material out there that
+
+00:12:23.871 --> 00:12:30.629
+talk about all of these things right so you
+could have them becomes smaller and smaller
+
+00:12:30.629 --> 00:12:38.660
+and smaller right but the point to which they
+converge might be a point which does not belong
+
+00:12:38.660 --> 00:12:46.480
+to the space that you originally are defining
+right.
+
+00:12:46.480 --> 00:12:54.200
+So these kinds of things would happen because
+when we are dealing with infinitely long sequence
+
+00:12:54.200 --> 00:13:00.129
+in all kinds of crazy things happen okay I
+should have noted down one such example anyone
+
+00:13:00.129 --> 00:13:08.279
+can recall an example of the top of their
+head non convergent Cauchy sequence something
+
+00:13:08.279 --> 00:13:17.010
+is like 1 by n and it converges to 0 but then
+we can define of space which excludes 0 right
+
+00:13:17.010 --> 00:13:25.761
+can you can you define a vector space at exclude
+0no then they have to come up with some other
+
+00:13:25.761 --> 00:13:39.300
+example say something that converges to some
+other value 1 -1/x.
+
+00:13:39.300 --> 00:13:46.500
+We converse to and now define a space that
+excludes Monday so but that people get the
+
+00:13:46.500 --> 00:13:50.790
+idea right so Cauchy sequences might not be
+convergent in the in the domain that you are
+
+00:13:50.790 --> 00:14:30.860
+operating in right so the if every Cauchy
+sequence okay good so I think that is all
+
+00:14:30.860 --> 00:14:43.059
+we need from that 
+
+00:14:43.059 --> 00:14:45.949
+so when introduced a few more vector notation.
+.
+
+00:14:45.949 --> 00:14:53.069
+So that we can translate all these bellman
+equations into in to some nice underlying
+
+00:14:53.069 --> 00:15:03.689
+vector space and then show some results there
+okay so we already have VS a vector. So I
+
+00:15:03.689 --> 00:15:41.649
+am going to depend r p of s essentially I
+am saying that what is the reward I will get
+
+00:15:41.649 --> 00:15:47.720
+in-state case for following policy pipe and
+what is expected reward in state tests for
+
+00:15:47.720 --> 00:15:53.300
+following policy pie it makes life a little
+simple as you can see some of this thing here
+
+00:15:53.300 --> 00:15:59.819
+I am kind of compressing and writing it as
+a single vector essentially the first term
+
+00:15:59.819 --> 00:16:04.379
+here right.
+I have compressed it and I am writing it as
+
+00:16:04.379 --> 00:16:14.089
+ARP is okay which is the reward I expect to
+get starting in state s and following policy
+
+00:16:14.089 --> 00:16:22.720
+p just like the immediate one-step probe all
+right it is not it is not expected reward
+
+00:16:22.720 --> 00:16:30.149
+for return we need the v p ? v p just the
+one-step reward that I will get starting from
+
+00:16:30.149 --> 00:16:52.980
+is following policy p, so likewise I am going
+to write so 
+
+00:16:52.980 --> 00:17:00.870
+this gives me the one step transition probability
+under policy p right I fixed policy pie right
+
+00:17:00.870 --> 00:17:05.079
+so this will give me the one step transition
+probability under policy file so what is the
+
+00:17:05.079 --> 00:17:08.400
+probability.
+I will end up in state Jif I start from state
+
+00:17:08.400 --> 00:17:15.550
+tests and take one action according to policy
+p and there could be many ways in which I
+
+00:17:15.550 --> 00:17:28.000
+can get to state J from status S right these
+are the two things that we needed and so just
+
+00:17:28.000 --> 00:17:36.660
+as an aside if I am using a deterministic
+thing this becomes a little easier so this
+
+00:17:36.660 --> 00:17:52.580
+will essentially be 
+
+00:17:52.580 --> 00:17:57.260
+the deterministic policy so at some points
+it makes it easier for us to explicitly consider
+
+00:17:57.260 --> 00:18:01.150
+deterministic policies so I am just writing
+out the notation here so whenever I want to
+
+00:18:01.150 --> 00:18:05.900
+used deterministic policies I might actually
+switch to this notation the summation over
+
+00:18:05.900 --> 00:18:22.410
+a disappears right.
+So likewise here this will be just I because
+
+00:18:22.410 --> 00:18:27.520
+only one action I will take under policy pie
+right therefore the probability of going to
+
+00:18:27.520 --> 00:18:35.490
+jay from yes is a probability of going to
+gay from is under that action p of s just
+
+00:18:35.490 --> 00:18:41.571
+a notational convenience okay so do not do
+not work cookers of too much for it so one
+
+00:18:41.571 --> 00:19:16.410
+thing to notice this Rp is ayes dimensional
+vector again so our p sorry Rp is dimensional
+
+00:19:16.410 --> 00:19:24.400
+vector and pp is a s-cross s dimensional matrix
+it is also a special kind of metric is a stochastic
+
+00:19:24.400 --> 00:19:28.330
+matrix.
+So what is the stochastic matrix those are
+
+00:19:28.330 --> 00:19:40.360
+up to one and anything else all the negativism
+on-oh no hit an equal to zero okay so all
+
+00:19:40.360 --> 00:19:44.840
+the all the rows have greater than equal to
+0 essentially each row you can think of it
+
+00:19:44.840 --> 00:19:49.880
+as a discrete the probability distribution
+right they are the entries in a row sum up
+
+00:19:49.880 --> 00:20:05.140
+to 1 and they all have to be non-negative
+so basically they lie between 0 and 1 then
+
+00:20:05.140 --> 00:20:10.210
+so the normal essential we are going to make
+is that ? lies between 0 included and one
+
+00:20:10.210 --> 00:20:15.780
+okay.
+This assumption we will make and if you think
+
+00:20:15.780 --> 00:20:36.700
+about it that one step returned it I can write
+it as tourism I will come to that in a minute
+
+00:20:36.700 --> 00:20:48.150
+right so what do you think this is so if you
+think of an MDP right where I am making one
+
+00:20:48.150 --> 00:20:55.540
+decision right so the decision is going to
+cost me to make a transition to some state
+
+00:20:55.540 --> 00:21:00.790
+right I will starting from some sadly some
+yes okay making a decision it is going to
+
+00:21:00.790 --> 00:21:07.060
+cause a transition to a state J right there
+will be a reward along the way and I also
+
+00:21:07.060 --> 00:21:13.310
+have a terminal cost or a terminal reward
+for landing in j.
+
+00:21:13.310 --> 00:21:20.210
+That terminal reward is given by the function
+V so if you think of it this way so my entire
+
+00:21:20.210 --> 00:21:28.020
+problem consists of taking only one step right
+I pick a step I take an action I perform it
+
+00:21:28.020 --> 00:21:32.300
+I get my choose an action we perform the action
+I am going to make one transition and that
+
+00:21:32.300 --> 00:21:37.350
+is it Island right in what will happen is
+for that one transition I will get some reward
+
+00:21:37.350 --> 00:21:41.900
+right and for ending in that particular state
+J I am going to get some payoff for ending
+
+00:21:41.900 --> 00:21:48.560
+in j right and that pair of literacy is given
+by V then this is the total reward I am going
+
+00:21:48.560 --> 00:21:54.860
+to get right.
+So r is the vote for the one transition and
+
+00:21:54.860 --> 00:22:02.830
+v is the final cost right and where I am going
+to land up is determined by pp, now you can
+
+00:22:02.830 --> 00:22:11.790
+think of it as a one-step transition function
+where the terminal costs is given by V, so
+
+00:22:11.790 --> 00:22:16.160
+what we really want to do is instead of assuming
+that there is an arbitrary function V that
+
+00:22:16.160 --> 00:22:23.030
+is giving us this terminal cost we want to
+find a function v p right which in some sense
+
+00:22:23.030 --> 00:22:28.560
+substitutes for the terminal cost of following
+policy p.
+
+00:22:28.560 --> 00:22:40.390
+Right so we want a v p that satisfies this
+equation so you can see why v p is a terminal
+
+00:22:40.390 --> 00:22:50.150
+cost side so it is like what is v p so value
+I am going to get expected return and going
+
+00:22:50.150 --> 00:22:54.280
+to get starting from the next state and following
+I mean starting from the state and following
+
+00:22:54.280 --> 00:22:59.380
+all this impact right, so one way of thinking
+about it is my decision making problem ended
+
+00:22:59.380 --> 00:23:06.210
+with making one decision then I made the choice
+according to p I stopped there and whatever
+
+00:23:06.210 --> 00:23:09.910
+in the future regardless I am going to consider
+that as one value and then add it to main
+
+00:23:09.910 --> 00:23:15.010
+function so that is be fine so I am thinking
+take in treating v p as a terminal cost for
+
+00:23:15.010 --> 00:23:19.960
+a one-step decision problem and then what
+I really want Leslie prior to satisfy it should
+
+00:23:19.960 --> 00:23:23.110
+be the total cost right.
+Now starting from here so this is essentially
+
+00:23:23.110 --> 00:23:28.770
+the equation that I want to solve for v p
+so we'll come to we solve later this is the
+
+00:23:28.770 --> 00:23:36.641
+equation I want to solve for B p X so people
+are all onboard with this right and so you
+
+00:23:36.641 --> 00:23:42.280
+can substitute that for R p and this for p
+p and you write it out you see that it is
+
+00:23:42.280 --> 00:23:46.970
+essentially this expression like I started
+from this expression and simplified it there
+
+00:23:46.970 --> 00:23:52.010
+but I wanted you to look at the other way
+of interpreting this expression that is why
+
+00:23:52.010 --> 00:23:57.140
+I started with this terminal cost interpretation
+okay.
+
+00:23:57.140 --> 00:24:01.870
+So if the terminal cost interpretation does
+not appeal to you can do algebra start from
+
+00:24:01.870 --> 00:24:05.670
+this expression which way wish I hopefully
+convinced you in the last class is correct
+
+00:24:05.670 --> 00:24:34.130
+right simplified you will get that expression
+okay great so this implies that okay, as simple
+
+00:24:34.130 --> 00:24:40.190
+as if I just took this to other side and took
+multiply it by the inverse on both sides I
+
+00:24:40.190 --> 00:24:50.940
+get this so what can you say about this matrix
+is it invertible will remember determinants
+
+00:24:50.940 --> 00:24:57.041
+anyway fine.
+So well you know what the Eigen values are
+
+00:24:57.041 --> 00:25:07.150
+IR all ones right and what about p p it is
+so caste x so the largest Eigen value for
+
+00:25:07.150 --> 00:25:12.940
+a stochastic matrix is 1 okay, so the largest
+Eigen value for a stochastic matrix is 1 and
+
+00:25:12.940 --> 00:25:20.480
+I multiplied gamma so the largest Eigen value
+is going to be less than 1 so the whole matrix
+
+00:25:20.480 --> 00:25:27.810
+that cannot have a zero Eigen value that for
+this thing will be invertible it in there
+
+00:25:27.810 --> 00:25:35.560
+for there exists a unique solution for V p
+was it well.
+
+00:25:35.560 --> 00:25:41.190
+So for stochastic matrices right the Eigen
+values the largest Eigen value for a stochastic
+
+00:25:41.190 --> 00:25:48.820
+matrix is 1 this is why I said this is a particularly
+mentioned that this thing is a stochastic
+
+00:25:48.820 --> 00:25:53.270
+matrix right because the rows all sum to 1
+you can show with little bit of work that
+
+00:25:53.270 --> 00:25:59.992
+the largest Eigen value for stochastic matrix
+is 1 okay so I am multiplying it by ? which
+
+00:25:59.992 --> 00:26:07.950
+is less than one right so this whole thing
+is going to be going to have an Eigen value
+
+00:26:07.950 --> 00:26:14.320
+largest Eigen value which is less than 1 right
+and the Eigen values for I are all one right
+
+00:26:14.320 --> 00:26:19.520
+so if you take the difference matrix and try
+to find the Eigen values for those right it
+
+00:26:19.520 --> 00:26:23.590
+cannot have an Eigen value of zero right as
+long as the matrix does not have an Eigen
+
+00:26:23.590 --> 00:26:35.120
+value of zero it is invertible.
+This is basic linear algebra properties I
+
+00:26:35.120 --> 00:26:45.980
+right so s table therefore this is unique
+there is a unique solution to this and we
+
+00:26:45.980 --> 00:26:53.030
+are all set correct so this is sometimes known
+as the green equation but not always because
+
+00:26:53.030 --> 00:26:56.990
+there is something else also called the greens
+equations I do not want to write it down that
+
+00:26:56.990 --> 00:27:13.210
+so this is one way of showing that p p is
+unique right sorry r is equal to dimension
+
+00:27:13.210 --> 00:27:22.510
+for a unique solution yeah, that must be equal
+to dimension for it to be invertible okay
+
+00:27:22.510 --> 00:27:27.130
+right this is one way of convincing people
+that this works right so another way of convincing
+
+00:27:27.130 --> 00:27:36.000
+people is to look at the whole dynamics of
+what happens right in that equation right.
+
+00:27:36.000 --> 00:27:43.980
+So think about something like this right I
+start with some arbitrary function for v p
+
+00:27:43.980 --> 00:27:50.160
+I start with an arbitrary guess for v p okay,
+so I plug this in here right and I am going
+
+00:27:50.160 --> 00:27:54.630
+to solve this equation not solve there is
+going to run this computation so I am going
+
+00:27:54.630 --> 00:28:00.490
+to get another expression for I mean other
+value for v p let us start with some arbitrary
+
+00:28:00.490 --> 00:28:06.030
+gates let us call it be not okay I will compute
+this I will get say v1 right and then I will
+
+00:28:06.030 --> 00:28:11.290
+go back and plug v1 back into this expression
+okay I will compute this I will get V2 and
+
+00:28:11.290 --> 00:28:23.620
+I keep doing this iteratively right I am going
+to claim that this will converge to V p.
+
+00:28:23.620 --> 00:28:27.680
+Right we are going to make several claims
+I am going to say I made several claims in
+
+00:28:27.680 --> 00:28:37.510
+that statement first claim was is going to
+converge so you can claim was third claim
+
+00:28:37.510 --> 00:28:44.890
+is it is unique right so we already know it
+is unique from this expression this thing
+
+00:28:44.890 --> 00:28:48.990
+this thing we know it is unique but I can
+also try to show it in a different way right
+
+00:28:48.990 --> 00:28:52.661
+so I am going to show that it is going to
+converge right and it will converge to be
+
+00:28:52.661 --> 00:28:59.330
+pi and that v p is unique right so then I
+am going to do it this way is it makes it
+
+00:28:59.330 --> 00:29:04.150
+easier for us to handle the optimality equation
+as well later right.
+
+00:29:04.150 --> 00:29:08.030
+So if I show you how to do this in the v pi
+case it makes it easier for the stand in a
+
+00:29:08.030 --> 00:29:14.510
+optimality equation later great so people
+have heard me before know that I am going
+
+00:29:14.510 --> 00:29:24.491
+dead slow today I would have normally finished
+everything I wanted to do by now but I will
+
+00:29:24.491 --> 00:29:30.310
+probably go to a second class because I wanted
+to make sure that people get what is what
+
+00:29:30.310 --> 00:29:37.410
+I am saying right so let us see so if you
+have any questions or anything are you are
+
+00:29:37.410 --> 00:29:46.680
+completely lost how many of you are completely
+lost that us basic basically energy world
+
+00:29:46.680 --> 00:29:53.850
+basic linear so go do me a favor go Google
+up relationship of Eigen values to invert
+
+00:29:53.850 --> 00:30:01.690
+ability of matrices they probably get a stack
+over flocked okay.
+
+00:30:01.690 --> 00:30:11.660
+I do no stack state x change it stack exchange
+is here no that is a stat exchange right yeah
+
+00:30:11.660 --> 00:30:17.190
+you would probably get a stat exchange hit
+on this yeah anyway so that is very basics
+
+00:30:17.190 --> 00:30:21.710
+term right so you know about determinants
+and products of Eigen values being equal to
+
+00:30:21.710 --> 00:30:28.110
+determinant right so a matrix is not invertible
+only if the determinant is 0 right and if
+
+00:30:28.110 --> 00:30:34.610
+know the Eigen values 0 then the determinant
+cannot be 0 therefore the matrix will be invertible
+
+00:30:34.610 --> 00:30:42.580
+that convince you maybe a bit more okay.
+Anyway right let us go look up so I am not
+
+00:30:42.580 --> 00:30:48.770
+going to do basically in algebra now so let
+us now take you kicking and screaming into
+
+00:30:48.770 --> 00:31:02.650
+something more I need to erase this part which
+part can a race okay so I probably end up
+
+00:31:02.650 --> 00:31:08.200
+erasing this part so everyone has copied down
+what this our pie and R p and P p rare right,
+
+00:31:08.200 --> 00:31:11.820
+so everyone has it in the notebook so I can
+erase this because I am going to use it but
+
+00:31:11.820 --> 00:31:17.000
+I want that expression also to stay I do not
+want a race that so everyone has this great
+
+00:31:17.000 --> 00:31:17.780
+so I am going to raise it.
+

@@ -1,0 +1,382 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:21.880 --> 00:00:31.429
+Right so this has to be true if v star is
+truly a fixed point right something they star
+
+00:00:31.429 --> 00:00:36.000
+is truly a fixed point then this will be 0
+so there should be something greater than
+
+00:00:36.000 --> 00:00:43.550
+zero right so because of the fact of this
+being a norm there is no case of less than
+
+00:00:43.550 --> 00:00:48.911
+zero so this is finest all of this is the
+thing so now what we will do is we will use
+
+00:00:48.911 --> 00:00:54.780
+our friend the triangle inequality again like
+I say it is very simple proof right all we
+
+00:00:54.780 --> 00:00:58.820
+are doing is just using the triangle inequality
+again and again I souse a triangle in you
+
+00:00:58.820 --> 00:02:00.740
+call it again so what we get so 
+
+00:02:00.740 --> 00:02:09.890
+what do we know we know that V n is Cauchy
+so we know that V n is Cauchy.
+
+00:02:09.890 --> 00:02:19.390
+So this sequence is going to this thing right
+V star minus V n minus 1 is going to go to
+
+00:02:19.390 --> 00:02:26.580
+zero I mean that is my definition of Cauchy
+sequence V star minus V n minus 1 will go
+
+00:02:26.580 --> 00:02:33.580
+to 0 likewise v n minus v star will also go
+to zero by virtue of the fact that v n is
+
+00:02:33.580 --> 00:02:42.030
+Cauchy that is a definition we had earlier
+it so that is going to converge right so it
+
+00:02:42.030 --> 00:02:50.599
+will go to 0 no v star is a convergent point
+right so we know that v star because of the
+
+00:02:50.599 --> 00:02:57.850
+being Barack you know that v star exists in
+u right so that is the thing we had right
+
+00:02:57.850 --> 00:03:02.909
+limit as n tends to infinity v n will go to
+v star that is what we mean by saying it is
+
+00:03:02.909 --> 00:03:08.100
+convergent weight limit as n tends to infinity
+v nis going to v star.
+
+00:03:08.100 --> 00:03:15.970
+So limit as n tends to infinity v star minus
+v n will go to 0 limit as n tends to infinity
+
+00:03:15.970 --> 00:03:21.799
+that is the crucial point here right it would
+not be doing this forever and if the difference
+
+00:03:21.799 --> 00:03:27.879
+is going to be something small when he goes
+far away that means is not convergent that
+
+00:03:27.879 --> 00:03:37.599
+is the assumption we have made see what I
+am trying to prove is that 
+
+00:03:37.599 --> 00:03:38.930
+what I am trying to prove is that.
+
+00:03:38.930 --> 00:03:47.340
+T V star equal to V star is a fixed point
+that V star is a fixed point of T is what
+
+00:03:47.340 --> 00:03:55.930
+I am trying to prove right the fact that v
+n is Cauchy right when she tells me that if
+
+00:03:55.930 --> 00:04:02.200
+I applied T or infinitely often enough I will
+anyway converge to V star when we reach V
+
+00:04:02.200 --> 00:04:05.890
+star . What I am trying to show is once is
+v star you do not go anywhere you just stop
+
+00:04:05.890 --> 00:04:15.319
+there under T that make sense so the sequence
+I am generating V VN +1 VN + 2 and so on so
+
+00:04:15.319 --> 00:04:21.019
+forth I am showing that it is Cauchy right
+so that means if I applied t infinitely often
+
+00:04:21.019 --> 00:04:27.639
+enough I will eventually reach infinitely
+often infinite should be enough so if I apply
+
+00:04:27.639 --> 00:04:31.400
+the infinitely often I will reach v star .
+
+00:04:31.400 --> 00:04:35.669
+So that process is that what we are trying
+to say is okay v star is actually a fixed
+
+00:04:35.669 --> 00:04:45.110
+point once you reach me star you are going
+nowhere take a little bit n tends to infinity
+
+00:04:45.110 --> 00:04:52.930
+for we want one what would you have gotten
+like in n equal to 1 and then m equal to 1
+
+00:04:52.930 --> 00:04:59.110
+tending to infinity take a little bit yeah
+what would have got it just becomes zero okay
+
+00:04:59.110 --> 00:05:07.880
+and then you show that it is the successive
+differences become 0 that is the v n plus
+
+00:05:07.880 --> 00:05:14.830
+1 is can be written as Tv n minus v n will
+be less than equal to 0 yeah.
+
+00:05:14.830 --> 00:05:19.620
+So essentially you show that asset tends to
+infinity it will become 0 you become it will
+
+00:05:19.620 --> 00:05:25.139
+become 0 but you have to show that we v star
+reaches v star to stop that that is all we
+
+00:05:25.139 --> 00:05:30.110
+are showing here when it reaches v star it
+would not go anywhere beyond v star that is
+
+00:05:30.110 --> 00:05:33.810
+it right so we are just showing that it will
+stop at v star that is basically what we are
+
+00:05:33.810 --> 00:06:27.180
+trying to show here and since this is trivial
+in fact we can actually show it that way also
+
+00:06:27.180 --> 00:07:06.449
+as limit n tends to infinity okay now the
+uniqueness 
+
+00:07:06.449 --> 00:07:08.460
+from the contraction property.
+
+00:07:08.460 --> 00:07:13.430
+So U star and in V star or two different fixed
+point 4 from the contraction property we have
+
+00:07:13.430 --> 00:07:18.199
+TU star minus TV star should be less than
+or equal to lambda times u star minus V star
+
+00:07:18.199 --> 00:07:23.460
+norm of U star - v star but since they are
+six points the right hand left hand side is
+
+00:07:23.460 --> 00:07:29.470
+also U star - V star so I'm asking Q for U
+star minus V star should be less than or equal
+
+00:07:29.470 --> 00:07:40.490
+to lambda times U star minus v star for lambda
+non 0 lambda that is satisfied only for only
+
+00:07:40.490 --> 00:07:51.300
+if V star equal to u star e start to stop
+well sorry if lambda is not 1 then it satisfied
+
+00:07:51.300 --> 00:08:00.030
+for yeah so even if lambda is zero it has
+to be that u star equal to v star okay.
+
+00:08:00.030 --> 00:08:12.700
+This does not matter anyway just using the
+contraction property just this is sufficient
+
+00:08:12.700 --> 00:08:20.669
+to show that u star has to be equal to v star
+rights as long as lambda is not one and anyway
+
+00:08:20.669 --> 00:08:25.330
+we have excluded lambda 1 here right so as
+long as lambda is not equal to 1 this implies
+
+00:08:25.330 --> 00:08:42.510
+that.
+
+00:08:42.510 --> 00:08:48.070
+Great so what we have done so far is shown
+the at the benefits point theorem is correct
+
+00:08:48.070 --> 00:08:55.520
+that we need to show that L pi is a contraction
+so if you so L pi is a contraction you get
+
+00:08:55.520 --> 00:09:02.912
+everything else for free right so we need
+to show a a is a contraction so let us do
+
+00:09:02.912 --> 00:12:10.490
+that and I will stop after that ah I do not
+people stop me what okay when I do v minus
+
+00:12:10.490 --> 00:12:31.720
+U V minus okay so far it just algebra okay
+so now what I am going to say is well I do
+
+00:12:31.720 --> 00:12:41.180
+not care what j I am considering the notation
+so of U and V are vectors but US and Vs are
+
+00:12:41.180 --> 00:12:49.680
+scalars but all the contraction mapping results
+are four vector norms it so mean all the contraction
+
+00:12:49.680 --> 00:12:51.470
+mapping is so far vector norms here.
+
+00:12:51.470 --> 00:12:56.990
+So do element wise do they correspond to that
+I mean the maximum of that particular vector
+
+00:12:56.990 --> 00:13:01.050
+has to be lesser than the maximum of another
+vector but each element wise they need not
+
+00:13:01.050 --> 00:13:11.100
+be lesser element wise they need not be lesser
+no that is I not needed yes only the max noun
+
+00:13:11.100 --> 00:13:21.790
+ways yeah the max of this should be less than
+that expression is again for a scalar expression
+
+00:13:21.790 --> 00:13:26.440
+again for a scalar expression whatever I am
+writing so far is a scalar I will come to
+
+00:13:26.440 --> 00:13:35.660
+the vector form of this case so far I am writing
+scalar now so the tricky thing you know I
+
+00:13:35.660 --> 00:13:40.139
+am going to say so I am summing over all j
+right so I am going to look at this expression.
+
+00:13:40.139 --> 00:13:50.260
+So what I am going to serve is this expression
+right will always be bounded by v minus U
+
+00:13:50.260 --> 00:14:16.310
+like the max norm alright so this is a pretty
+loose bond right so I am taking each element
+
+00:14:16.310 --> 00:14:20.940
+here I am looking at this that each element
+of this will be bounded at most by the maximum
+
+00:14:20.940 --> 00:14:26.040
+right so it cannot be any greater than the
+max norm difference therefore I will say that
+
+00:14:26.040 --> 00:14:32.570
+this expression is lesser than or equal to
+? times the max norm into that right so that
+
+00:14:32.570 --> 00:14:42.230
+anyway goes to zero so this is essentially
+equal to okay.
+
+00:14:42.230 --> 00:14:58.389
+So at every point this will satisfy that this
+is one way so go the other way me let into
+
+00:14:58.389 --> 00:15:03.400
+the other way easily enough right you will
+end up with the same thing norm of V minus
+
+00:15:03.400 --> 00:15:10.089
+U the same of Norm of U minus V so we will
+end up with the same expression right so essentially
+
+00:15:10.089 --> 00:15:15.350
+I can say that so I am assuming that you guys
+will finish the other way around okay.
+
+00:15:15.350 --> 00:15:25.060
+So what is otherwise is when L pi V of s is
+less than L pi V of s okay so greater than
+
+00:15:25.060 --> 00:15:29.759
+less than so I am just assuming you guys will
+do that right putting these things together
+
+00:15:29.759 --> 00:16:10.990
+gives us what right so what can infer from
+this point place it is being drawn closer
+
+00:16:10.990 --> 00:16:16.959
+right by gamma so the max difference should
+also have come down point where is being drawn
+
+00:16:16.959 --> 00:16:25.530
+closer even if the max difference is at different
+points right it should have shrunk all right
+
+00:16:25.530 --> 00:16:33.980
+so essentially that so this essentially means
+that implies that L pi is a contraction.
+
+00:16:33.980 --> 00:16:46.100
+So next thing to do is to start the same thing
+for the optimality equation right so we will
+
+00:16:46.100 --> 00:16:58.879
+go here in the next class and then I have
+to also talk about so assuming that at every
+
+00:16:58.879 --> 00:17:10.080
+point at every point the functions are being
+drawn closer so I am saying that see L pi
+
+00:17:10.080 --> 00:17:26.429
+VS minus L pi us is closer right then the
+max difference that you had in V minus U right
+
+00:17:26.429 --> 00:17:37.940
+and this holds for all state S right and that
+the otherwise the right-hand side is infinity
+
+00:17:37.940 --> 00:17:50.630
+norm left-hand side is just absolute value
+so we also have to show algorithms for solving
+
+00:17:50.630 --> 00:17:55.910
+this right and so we will do all of that in
+the next class possibly it might spill over
+
+00:17:55.910 --> 00:17:58.370
+into the subsequent class as well.
+
+00:17:58.370 --> 00:17:59.370
+IIT Madras Production
+
+00:17:59.370 --> 00:18:00.370
+Funded by
+Department of Higher Education
+
+00:18:00.370 --> 00:18:01.430
+Ministry of Human Resource Development
+Government of India
+
+00:18:01.430 --> 00:18:02.430
+www.nptel.ac.in
+
+00:18:02.430 --> 00:18:02.432
+Copyrights Reserved
+

@@ -1,0 +1,889 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.344 --> 00:00:14.000
+[Music]
+
+00:00:14.000 --> 00:00:18.520
+so so where were we uh in&nbsp;
+the last class we looking at
+
+00:00:18.520 --> 00:00:29.960
+uh looking at bman I mean mdps and looking here
+
+00:00:30.840 --> 00:00:36.040
+the mman equation right so&nbsp;
+the mdps are defined by S
+
+00:00:36.040 --> 00:00:54.640
+A right so this is what we use for&nbsp;
+defining an mdp correct and what&nbsp;&nbsp;
+
+00:00:54.640 --> 00:00:59.920
+was the bman equation let's stick with the&nbsp;
+bman equation for v for the Simplicity sake
+
+00:01:02.600 --> 00:01:08.800
+tell me tell me that
+
+00:01:08.800 --> 00:01:13.280
+uh
+
+00:01:13.280 --> 00:01:29.920
+okay expectation of
+
+00:01:37.600 --> 00:01:59.840
+okay and likewise we had&nbsp;
+another optimality equation
+
+00:02:04.440 --> 00:02:06.840
+right so we have the optimality&nbsp;
+equation so one thing which I&nbsp;&nbsp;
+
+00:02:06.840 --> 00:02:10.520
+want you to note about the optimality&nbsp;
+equation is that we making an assumption
+
+00:02:10.520 --> 00:02:30.000
+that so the optimal policy would have a same&nbsp;
+Max here right right so that's fine correct&nbsp;&nbsp;
+
+00:02:30.000 --> 00:02:35.040
+right another assumption that he&nbsp;
+will make as we go along uh trying&nbsp;&nbsp;
+
+00:02:35.040 --> 00:02:41.280
+to solve the mdp is that uh the optimal policy is
+
+00:02:41.280 --> 00:02:47.520
+deterministic right so and we'll&nbsp;
+also use this following notation&nbsp;&nbsp;
+
+00:02:47.520 --> 00:02:55.400
+instead of saying Pi of a given&nbsp;
+s I'll use the notation Pi of
+
+00:02:55.400 --> 00:03:04.040
+yes so Pi of s is essentially a single action&nbsp;
+a that we will always do whenever we come to
+
+00:03:04.040 --> 00:03:12.600
+status right so Pi of a given is a probability&nbsp;
+distribution right this is essentially saying that&nbsp;&nbsp;
+
+00:03:12.600 --> 00:03:20.640
+if my Pi is such that it is one for one action&nbsp;
+and zero for all the rest for every state right&nbsp;&nbsp;
+
+00:03:20.640 --> 00:03:26.280
+then I can represent it as just Pi s where Pi&nbsp;
+will return the action for which the probability&nbsp;&nbsp;
+
+00:03:26.280 --> 00:03:32.600
+is one okay so this is a deterministic policy so&nbsp;
+this is a notation that we'll use so this denotes
+
+00:03:32.600 --> 00:03:42.760
+a right and later on we'll see that we'll make an&nbsp;
+assumption that the deterministic policy I mean&nbsp;&nbsp;
+
+00:03:42.760 --> 00:03:52.120
+the optimal policy is deterministic right um in&nbsp;
+fact more uh correctly we'll assume that if the&nbsp;&nbsp;
+
+00:03:52.120 --> 00:03:58.360
+mdp has an optimal policy then there exists&nbsp;
+a deterministic optimal policy right there&nbsp;&nbsp;
+
+00:03:58.360 --> 00:04:04.200
+could be multiple stochastic optimal policies but&nbsp;
+that that will exist at least one deterministic&nbsp;&nbsp;
+
+00:04:04.200 --> 00:04:11.120
+optimal policy so that's assumption that we'll&nbsp;
+make okay so later so in fact uh I'll see if I&nbsp;&nbsp;
+
+00:04:11.120 --> 00:04:19.480
+can actually develop all the missionary required&nbsp;
+to prove that uh but uh we don't have to go do&nbsp;&nbsp;
+
+00:04:19.480 --> 00:04:28.400
+that right so uh we'll see if I don't get to that&nbsp;
+then please take it on faith um okay so a couple&nbsp;&nbsp;
+
+00:04:28.400 --> 00:04:36.200
+of things so now I'm going to talk about uh so&nbsp;
+the existence and the uniqueness of solutions&nbsp;&nbsp;
+
+00:04:36.200 --> 00:04:42.600
+for these uh sets of equations right we going&nbsp;
+to talk about the existence and uniqueness of&nbsp;&nbsp;
+
+00:04:42.600 --> 00:04:48.920
+solutions for the set of equations so for us&nbsp;
+to get into that we need a little bit of uh&nbsp;&nbsp;
+
+00:04:48.920 --> 00:04:55.920
+analysis right so we need to know a little bit of&nbsp;
+fundas from functional analysis uh uh and so I'll&nbsp;&nbsp;
+
+00:04:55.920 --> 00:04:59.640
+I'm going to keep it very very light okay I'm not&nbsp;
+don't worry I'm not going to do anything very uh&nbsp;&nbsp;
+
+00:05:00.280 --> 00:05:05.440
+very deep in this but for that people have to&nbsp;
+recall all their things about Vector spaces&nbsp;&nbsp;
+
+00:05:05.440 --> 00:05:10.840
+and so on so forth people remember Vector&nbsp;
+spaces right so Vector spaces you have&nbsp;&nbsp;
+
+00:05:10.840 --> 00:05:16.320
+a set of elements that are closed under&nbsp;
+addition and scalar multiplication right
+
+00:05:16.320 --> 00:05:27.120
+right right so we are going to consider at some&nbsp;
+point uh um so I'll come to that so one way of&nbsp;&nbsp;
+
+00:05:27.120 --> 00:05:33.000
+thinking about uh the value functions right&nbsp;
+in a finite mdp you can think about it in a&nbsp;&nbsp;
+
+00:05:33.000 --> 00:05:41.720
+non discrete State space also but for the for&nbsp;
+Simplicity sake let's assume that uh what I'm&nbsp;&nbsp;
+
+00:05:41.720 --> 00:05:48.040
+going to talk about now is only about finite&nbsp;
+mdps so what are finite mdps these are mdps&nbsp;&nbsp;
+
+00:05:48.040 --> 00:05:56.600
+where s is finite right and a is finite both&nbsp;
+s and a are finite and we already know that&nbsp;&nbsp;
+
+00:05:56.600 --> 00:06:01.040
+the expectation should be bounded right so&nbsp;
+these are the three conditions that we need&nbsp;&nbsp;
+
+00:06:01.040 --> 00:06:08.440
+when we say finite mdp then s is finite a is&nbsp;
+finite and this expectation is bounded okay&nbsp;&nbsp;
+
+00:06:08.440 --> 00:06:21.080
+so if you think of a finite mdp I can think&nbsp;
+of my value function as a vector in a size&nbsp;&nbsp;
+
+00:06:21.080 --> 00:06:29.560
+of s dimensional Vector space right so I can&nbsp;
+think of it as a vector which has s components
+
+00:06:29.560 --> 00:06:30.480
+[Music]
+
+00:06:30.480 --> 00:06:50.120
+okay in
+
+00:06:50.120 --> 00:06:59.640
+fact so it's a it's a space on&nbsp;
+which I can define a notion of&nbsp;&nbsp;
+
+00:06:59.640 --> 00:07:05.240
+a norm right Norm is something like a size of&nbsp;
+the you can think of it roughly as equalent to&nbsp;&nbsp;
+
+00:07:05.240 --> 00:07:09.880
+being size of the vector right I can define&nbsp;
+a norm on this Vector space right but I'm&nbsp;&nbsp;
+
+00:07:09.880 --> 00:07:29.520
+interested in using a specific kind of Norm on&nbsp;
+this space which we'll call the max Norm right
+
+00:07:33.400 --> 00:07:39.000
+so people know Norms okay so&nbsp;
+you can think of it as some&nbsp;&nbsp;
+
+00:07:39.000 --> 00:07:59.440
+kind of a measure of size right&nbsp;
+uh so I just put this down here
+
+00:08:17.680 --> 00:08:27.880
+okay so if and only if x is z n x is z right&nbsp;
+and alpha x is Alpha where Alpha is a scalar&nbsp;&nbsp;
+
+00:08:27.880 --> 00:08:35.640
+is Alpha time Norm of x and this is the&nbsp;
+triangle inequality okay great we have
+
+00:08:35.640 --> 00:08:43.880
+this no I'm just seeing what notations I&nbsp;
+should introduce for you okay so that's
+
+00:08:43.880 --> 00:08:51.400
+fine so people know know all about Vector&nbsp;
+spaces okay so in Vector space where you&nbsp;&nbsp;
+
+00:08:51.400 --> 00:08:57.880
+have a norm defined on the vectors&nbsp;
+is called a normed vector space okay&nbsp;&nbsp;
+
+00:08:57.880 --> 00:09:02.640
+so all of you know that great so now I&nbsp;
+want to talk about something called a
+
+00:09:02.640 --> 00:09:14.360
+complete normed Vector space we all know about&nbsp;&nbsp;
+
+00:09:14.360 --> 00:09:18.240
+what a nored vector spaces so&nbsp;
+when do you say it is complete
+
+00:09:18.240 --> 00:09:29.360
+okay so for that we need to&nbsp;
+understand something called a
+
+00:09:32.440 --> 00:09:32.640
+what is
+
+00:09:32.640 --> 00:09:59.320
+it not C inequality we need to understand&nbsp;
+what's called a quy quy sequence okay
+
+00:10:22.320 --> 00:10:24.480
+so a sequence of course is something like
+
+00:10:24.480 --> 00:10:36.640
+this okay okay right so what do kosi&nbsp;
+sequence it says that okay for any&nbsp;&nbsp;
+
+00:10:36.640 --> 00:10:43.520
+real Epsilon that you give me I can find&nbsp;
+some point in the sequence okay Beyond&nbsp;&nbsp;
+
+00:10:43.520 --> 00:10:46.960
+which if I pick any two elements&nbsp;
+they are within Epsilon of each
+
+00:10:46.960 --> 00:10:55.360
+other essentially says for any Epsilon you&nbsp;
+give me right so what does this mean so the&nbsp;&nbsp;
+
+00:10:55.360 --> 00:10:59.560
+sequence should be say that the successive&nbsp;
+elements are coming closer closer and closer&nbsp;&nbsp;
+
+00:10:59.560 --> 00:11:06.120
+to each other correct does it make sense it's&nbsp;
+a sequence in which the successive elements&nbsp;&nbsp;
+
+00:11:06.120 --> 00:11:17.600
+are coming closer and closer to each other so&nbsp;
+if every CI sequence in a norm Vector space
+
+00:11:17.600 --> 00:11:29.240
+converges to a point in the vector space right&nbsp;
+then you call the vector space as a complete space&nbsp;&nbsp;
+
+00:11:29.800 --> 00:11:38.960
+so X1 and X2 the distance between X1 and X2 will&nbsp;
+be greater than X2 and X3 X1 is a constant yeah&nbsp;&nbsp;
+
+00:11:38.960 --> 00:11:46.280
+yes so X1 and X2 the distance will be greater&nbsp;
+than X2 and X3 possibly it should can you show&nbsp;&nbsp;
+
+00:11:46.280 --> 00:11:52.280
+that from the definition of a c sequence&nbsp;
+uh the C sequence just says the successive&nbsp;&nbsp;
+
+00:11:52.280 --> 00:11:59.240
+difference are getting smaller and smaller and&nbsp;
+smaller doesn't necessarily say there's a limit
+
+00:12:00.280 --> 00:12:03.720
+right doesn't necessarily say there is a limit it&nbsp;
+just says become smaller and smaller and smaller&nbsp;&nbsp;
+
+00:12:03.720 --> 00:12:09.760
+and smaller smaller so you could have a limit&nbsp;
+right that's outside the space that you are
+
+00:12:09.760 --> 00:12:18.760
+considering right so if you want to&nbsp;
+look at examples of CI sequences that&nbsp;&nbsp;
+
+00:12:18.760 --> 00:12:23.280
+are not Cent go look at wik Wikipedia&nbsp;
+right so there are enough material out&nbsp;&nbsp;
+
+00:12:23.280 --> 00:12:29.320
+there that talk about all of these&nbsp;
+things right so you could have them&nbsp;&nbsp;
+
+00:12:29.320 --> 00:12:36.000
+becomes smaller and smaller and smaller&nbsp;
+right but the point to which they converge&nbsp;&nbsp;
+
+00:12:36.000 --> 00:12:40.600
+might be a point which doesn't belong&nbsp;
+to the the space that you originally are
+
+00:12:40.600 --> 00:12:51.440
+defining right so these kinds of uh things&nbsp;
+would happen uh because when we're dealing&nbsp;&nbsp;
+
+00:12:51.440 --> 00:12:58.640
+with infinitely long sequences all kinds of&nbsp;
+crazy things happen Okay uh yeah I should have&nbsp;&nbsp;
+
+00:12:58.640 --> 00:13:04.360
+noted down one such example anyone can recall an&nbsp;
+example of the top of their head non-convergent Cy
+
+00:13:04.360 --> 00:13:10.760
+sequences something with like&nbsp;
+1 by n and it converges to zero&nbsp;&nbsp;
+
+00:13:10.760 --> 00:13:12.920
+but then you can define a space which excludes
+
+00:13:12.920 --> 00:13:19.680
+zero right can you can you define&nbsp;
+a vector space that exclude
+
+00:13:19.680 --> 00:13:26.360
+zero h no then they have to come&nbsp;
+up with some other example say&nbsp;&nbsp;
+
+00:13:26.360 --> 00:13:29.120
+something that converges to some other value&nbsp;&nbsp;
+
+00:13:30.600 --> 00:13:41.480
+1 - 1 1 - 1 by x 1 - 1 - 1 byx will converge&nbsp;
+to one now Define a space that excludes one
+
+00:13:41.480 --> 00:13:48.160
+then right so but that people get the&nbsp;
+idea right so CI sequences might not be&nbsp;&nbsp;
+
+00:13:48.160 --> 00:13:59.040
+convergent in the in the domain that you are&nbsp;
+operating in right so the if every CI sequence
+
+00:14:24.040 --> 00:14:29.520
+okay
+
+00:14:29.520 --> 00:14:32.320
+good so I think that's all we need from
+
+00:14:32.320 --> 00:14:47.320
+that okay so I'm going to introduce&nbsp;
+a few more Vector notation so that uh&nbsp;&nbsp;
+
+00:14:47.320 --> 00:14:53.360
+we can translate all these bman equations&nbsp;
+into into some uh nice underlying Vector&nbsp;&nbsp;
+
+00:14:53.360 --> 00:14:59.040
+space and then show some results there&nbsp;
+okay uh so we already have v as a vector
+
+00:15:04.560 --> 00:15:28.960
+so I'm going to Define r Pi of s
+
+00:15:38.120 --> 00:15:42.200
+essentially I'm saying that what&nbsp;
+is the reward I'll get in state yes&nbsp;&nbsp;
+
+00:15:42.200 --> 00:15:48.400
+for following policy Pi what is expected&nbsp;
+reward in state test for following policy&nbsp;&nbsp;
+
+00:15:48.400 --> 00:15:54.120
+Pi it makes life a little simple you can&nbsp;
+see some of this thing here I am kind of&nbsp;&nbsp;
+
+00:15:54.120 --> 00:15:59.160
+compressing and writing it as a single&nbsp;
+Vector okay essentially the first term
+
+00:15:59.160 --> 00:16:06.080
+here right I have compressed&nbsp;
+it and I'm writing it as RPS&nbsp;&nbsp;
+
+00:16:06.080 --> 00:16:14.040
+okay which is the reward I expect to get&nbsp;
+starting in state s and following policy
+
+00:16:14.040 --> 00:16:21.680
+Pi it's like the immediate One Step&nbsp;
+reward right it's not it's not the&nbsp;&nbsp;
+
+00:16:21.680 --> 00:16:28.200
+expected reward so return we need the&nbsp;
+VP gamma VP right just the one step&nbsp;&nbsp;
+
+00:16:28.200 --> 00:16:32.600
+reward that I'll get starting from his&nbsp;
+following five so likewise I'm going to
+
+00:16:32.600 --> 00:16:59.320
+write so this gives me the the one step&nbsp;
+transition probability under policy pi&nbsp;&nbsp;
+
+00:16:59.320 --> 00:17:03.880
+right I fixed policy PI right so this will give me&nbsp;
+the one step transition probability under policy&nbsp;&nbsp;
+
+00:17:03.880 --> 00:17:09.920
+Pi so what is the probability I'll end up in&nbsp;
+state J if I start from State s and take one&nbsp;&nbsp;
+
+00:17:09.920 --> 00:17:17.600
+action according to policy Pi there could be&nbsp;
+many ways in which I can get to State J from&nbsp;&nbsp;
+
+00:17:17.600 --> 00:17:28.840
+State s right okay good so these are the two&nbsp;
+things that we needed and soest as an asite&nbsp;&nbsp;
+
+00:17:29.480 --> 00:17:37.240
+uh if I'm using a deterministic thing this&nbsp;
+becomes a little easier so this will essentially
+
+00:17:37.240 --> 00:17:56.200
+be right so deterministic policy so at&nbsp;
+some points it makes it easier for us&nbsp;&nbsp;
+
+00:17:56.200 --> 00:17:59.520
+to explicitly consider deterministic&nbsp;
+policies so I'm just writing out the&nbsp;&nbsp;
+
+00:17:59.520 --> 00:18:03.000
+notation here so whenever I want to use&nbsp;
+deterministic policies I might actually&nbsp;&nbsp;
+
+00:18:03.000 --> 00:18:11.440
+switch to this notation the summation over a&nbsp;
+disappears right so likewise here this will be
+
+00:18:11.440 --> 00:18:27.120
+just because there only one action I'll take&nbsp;
+under policy PI right therefore the probability&nbsp;&nbsp;
+
+00:18:27.120 --> 00:18:32.760
+of going to J from s is a probability of&nbsp;
+going to J from s under that action Pi of&nbsp;&nbsp;
+
+00:18:32.760 --> 00:18:39.840
+s okay it's just a notational convenience okay&nbsp;
+so don't don't work work yourself too much about&nbsp;&nbsp;
+
+00:18:39.840 --> 00:18:58.720
+it right so one thing to not is this RP is&nbsp;
+a s dimensional Vector again so R Pi sorry
+
+00:19:15.040 --> 00:19:22.480
+R Pi is s dimensional vector and P Pi is a s cross&nbsp;
+s dimensional Matrix okay and it's also a special&nbsp;&nbsp;
+
+00:19:22.480 --> 00:19:30.880
+kind of matrix it's a stochastic Matrix so what's&nbsp;
+a stochastic Matrix columns add up to rows add up&nbsp;&nbsp;
+
+00:19:30.880 --> 00:19:38.320
+to one and anything else greater than all the&nbsp;
+Val areer than Z on negative greater than equal&nbsp;&nbsp;
+
+00:19:38.320 --> 00:19:44.560
+to Z okay so all the all the rows are greater than&nbsp;
+equal to zero essentially each row you can think&nbsp;&nbsp;
+
+00:19:44.560 --> 00:19:49.800
+of it as a discrete probability distribution&nbsp;
+right they all the the entries in a row sum&nbsp;&nbsp;
+
+00:19:49.800 --> 00:19:58.640
+up to one and they all have to be non- negative&nbsp;
+so basically they lie between zero and one then
+
+00:20:05.000 --> 00:20:13.680
+so the normal assumption we going to make is that&nbsp;
+gamma lies between zero included and one okay this&nbsp;&nbsp;
+
+00:20:13.680 --> 00:20:28.640
+assumption we'll make and if you think about&nbsp;
+it that one step return right I can write it as
+
+00:20:32.640 --> 00:20:38.520
+all I'll come to that in a minute&nbsp;
+right so what do you think this
+
+00:20:38.520 --> 00:20:50.920
+is so if you think of an mdp right where I'm&nbsp;
+making one decision right so that decision&nbsp;&nbsp;
+
+00:20:50.920 --> 00:20:58.960
+is going to cost me to make a transition to some&nbsp;
+state right and starting from some some state some&nbsp;&nbsp;
+
+00:20:58.960 --> 00:21:04.800
+s okay I'm making a decision it's going to cause&nbsp;
+a transition to a state J right there will be a&nbsp;&nbsp;
+
+00:21:04.800 --> 00:21:13.160
+reward along the way and I also have a terminal&nbsp;
+cost or a terminal reward for landing in J okay&nbsp;&nbsp;
+
+00:21:13.160 --> 00:21:20.760
+that terminal reward is given by the function V so&nbsp;
+if you think of it this way so my entire problem&nbsp;&nbsp;
+
+00:21:20.760 --> 00:21:28.720
+consists of taking only one step right I pick a&nbsp;
+step I I I mean I take an action I perform it I I&nbsp;&nbsp;
+
+00:21:28.720 --> 00:21:33.960
+an action I perform the action I'm going to make&nbsp;
+one transition and that's it I'll end right and&nbsp;&nbsp;
+
+00:21:33.960 --> 00:21:38.680
+what will happen is for that one transition&nbsp;
+I'll get some reward right and for ending&nbsp;&nbsp;
+
+00:21:38.680 --> 00:21:44.000
+in that particular State J I'm going to get some&nbsp;
+payoff for ending in j right and that payoff let&nbsp;&nbsp;
+
+00:21:44.000 --> 00:21:54.000
+us say is given by V then this is the total reward&nbsp;
+I'm going to get right so R is the reward for the&nbsp;&nbsp;
+
+00:21:54.000 --> 00:21:59.360
+one transition and V is the final cost right&nbsp;
+and where I'm going to land up is determined&nbsp;&nbsp;
+
+00:21:59.360 --> 00:22:07.240
+by P Pi okay you can think of it as a one-step&nbsp;
+transition function where the terminal cost is&nbsp;&nbsp;
+
+00:22:07.240 --> 00:22:15.720
+given by V so what we really want to do is instead&nbsp;
+of assuming that there is some arbitrary function&nbsp;&nbsp;
+
+00:22:15.720 --> 00:22:23.040
+V that is giving us this terminal cost we want&nbsp;
+to find a function V PI right which in some sense&nbsp;&nbsp;
+
+00:22:23.040 --> 00:22:30.280
+substitutes for the terminal cost of following&nbsp;
+policy PI right right so we want a v Pi that
+
+00:22:30.280 --> 00:22:33.560
+satisfies this
+
+00:22:33.560 --> 00:22:43.120
+equation okay so you can see why V Pi is a&nbsp;
+terminal cost right so it's like what is V
+
+00:22:43.120 --> 00:22:52.360
+Pi it's a value I'm going to get expected return&nbsp;
+I'm going to get starting from the next state and&nbsp;&nbsp;
+
+00:22:52.360 --> 00:22:56.840
+following I mean starting from that state and&nbsp;
+following policy F right so one way of thinking&nbsp;&nbsp;
+
+00:22:56.840 --> 00:23:03.880
+about it is my decision problem ended with making&nbsp;
+one decision right I made the choice according to&nbsp;&nbsp;
+
+00:23:03.880 --> 00:23:08.880
+Pi I stopped there and whatever the future&nbsp;
+reward is I'm going to consider that as one&nbsp;&nbsp;
+
+00:23:08.880 --> 00:23:14.600
+value and then add it to my function so that's VP&nbsp;
+so I'm thinking thinking treating VP as a terminal&nbsp;&nbsp;
+
+00:23:14.600 --> 00:23:19.760
+cost for a one step decision problem right and&nbsp;
+then what I really want this VP to satisfy it&nbsp;&nbsp;
+
+00:23:19.760 --> 00:23:24.280
+should be the total cost right of starting from&nbsp;
+here so this is essentially the equation that I&nbsp;&nbsp;
+
+00:23:24.280 --> 00:23:29.920
+want to solve for VP okay so I'll come to V Star&nbsp;
+later this is the equation I want to solve for V
+
+00:23:29.920 --> 00:23:38.280
+PI right so people are all on board with this&nbsp;
+right right so you can substitute that for R&nbsp;&nbsp;
+
+00:23:38.280 --> 00:23:44.240
+pi and this for p pi and you write it out you&nbsp;
+see that it's essentially this expression right&nbsp;&nbsp;
+
+00:23:44.240 --> 00:23:47.960
+I could have started from this expression&nbsp;
+and simplified it there but I wanted you&nbsp;&nbsp;
+
+00:23:47.960 --> 00:23:52.400
+to look at the other way of uh interpreting&nbsp;
+this expression that is why I started with&nbsp;&nbsp;
+
+00:23:52.400 --> 00:23:59.720
+this terminal cost interpretation okay so if the&nbsp;
+terminal cost interet ation doesn't appeal to you&nbsp;&nbsp;
+
+00:23:59.720 --> 00:24:04.320
+you can do Algebra start from this expression&nbsp;
+which which I hopefully convinced you in the&nbsp;&nbsp;
+
+00:24:04.320 --> 00:24:13.040
+last class is correct right simplify it you'll&nbsp;
+get that expression okay great so this implies
+
+00:24:13.040 --> 00:24:28.360
+that okay
+
+00:24:33.360 --> 00:24:39.320
+very simple asbra just took this to other&nbsp;
+side that took multiplied by the inverse&nbsp;&nbsp;
+
+00:24:39.320 --> 00:24:46.200
+on both sides I get this okay so what&nbsp;
+can you say about this Matrix is it
+
+00:24:46.200 --> 00:24:58.320
+invertible remember determinants uh anyway fine&nbsp;
+so well you know what the I values of I are&nbsp;&nbsp;
+
+00:24:59.200 --> 00:25:01.600
+all ones right and what about P
+
+00:25:01.600 --> 00:25:10.960
+piastic stochastic so the largest value for a&nbsp;
+stochastic Matrix is one okay so the largest&nbsp;&nbsp;
+
+00:25:10.960 --> 00:25:16.600
+value for a stochastic Matrix is one and&nbsp;
+I multiplied gamma so the largest I value&nbsp;&nbsp;
+
+00:25:16.600 --> 00:25:23.880
+is going to be less than one so the whole&nbsp;
+Matrix that cannot have a zero again value&nbsp;&nbsp;
+
+00:25:23.880 --> 00:25:28.720
+therefore this thing will be invertible&nbsp;
+right and therefore that there exists a&nbsp;&nbsp;
+
+00:25:28.720 --> 00:25:36.600
+unique solution for VP can you explain the&nbsp;
+reasoning one what's that so for stochastic&nbsp;&nbsp;
+
+00:25:36.600 --> 00:25:44.760
+matrices right the igen values the largest igen&nbsp;
+value for a stochastic Matrix is one okay this&nbsp;&nbsp;
+
+00:25:44.760 --> 00:25:50.080
+is why I said this is particularly mentioned&nbsp;
+that this thing is a stochastic Matrix right&nbsp;&nbsp;
+
+00:25:50.080 --> 00:25:54.000
+because the rows all sum to one you can show&nbsp;
+with little bit of work that the largest I&nbsp;&nbsp;
+
+00:25:54.000 --> 00:26:00.520
+value for stochastic Matrix is one okay so so&nbsp;
+I'm multiplying it by gamma Which is less than
+
+00:26:00.520 --> 00:26:08.760
+one right so this whole thing is going to be&nbsp;
+going to have an igen value largest igen value&nbsp;&nbsp;
+
+00:26:08.760 --> 00:26:14.760
+Which is less than one right and the igen&nbsp;
+values for I are all one right so if you&nbsp;&nbsp;
+
+00:26:14.760 --> 00:26:20.040
+take the difference Matrix and try to find the&nbsp;
+igen values for those right it cannot have an&nbsp;&nbsp;
+
+00:26:20.040 --> 00:26:24.040
+igen value of zero right as long as a matrix&nbsp;
+does not have an igen value of zero it is
+
+00:26:24.040 --> 00:26:33.320
+invertible this is basic&nbsp;
+linear algebra properties right
+
+00:26:33.320 --> 00:26:45.400
+uh right so yeah so it's invertible therefore&nbsp;
+this is unique there's a unique solution to this&nbsp;&nbsp;
+
+00:26:45.400 --> 00:26:53.000
+and we all set right so this is sometimes known&nbsp;
+as the green equation uh but not always because&nbsp;&nbsp;
+
+00:26:53.000 --> 00:26:58.240
+there's something else also called The Greens&nbsp;
+equation I don't want to write it down there
+
+00:27:00.480 --> 00:27:08.320
+right so this is one way of showing that VP is&nbsp;
+unique right rank must be equal to dimension&nbsp;&nbsp;
+
+00:27:08.320 --> 00:27:18.600
+for a sorry rank must be equal to dimension for a&nbsp;
+unique solution if it's in must diens for it to be
+
+00:27:18.600 --> 00:27:26.520
+in okay fine this is one way of convincing&nbsp;
+people that this works right so another way&nbsp;&nbsp;
+
+00:27:26.520 --> 00:27:36.320
+of convincing people is to look at the whole&nbsp;
+dynamics of what happens right in that equation&nbsp;&nbsp;
+
+00:27:36.320 --> 00:27:42.960
+right so think about something like this&nbsp;
+right I start with some arbitrary function&nbsp;&nbsp;
+
+00:27:42.960 --> 00:27:49.760
+for V Pi I start with an arbitrary guess for&nbsp;
+VP okay so I plug this in here right and I'm&nbsp;&nbsp;
+
+00:27:49.760 --> 00:27:54.160
+going to solve this equation not solve&nbsp;
+I'm just going to run this computation&nbsp;&nbsp;
+
+00:27:54.160 --> 00:27:59.640
+so I'm going to get another expression for I&nbsp;
+mean another value for V PI right let's start&nbsp;&nbsp;
+
+00:27:59.640 --> 00:28:05.160
+with some arbitrary guess let us call it V&nbsp;
+not okay I'll compute this I'll get say V1&nbsp;&nbsp;
+
+00:28:05.160 --> 00:28:09.560
+right and then I'll go back and plug V1 back&nbsp;
+into this expression okay I'll compute this&nbsp;&nbsp;
+
+00:28:09.560 --> 00:28:17.200
+I'll get V2 right I keep doing this iteratively&nbsp;
+right I'm going to claim that this will converge
+
+00:28:17.200 --> 00:28:27.280
+to V PI right I'm going to make several&nbsp;
+claims I'm going to I mean I made several&nbsp;&nbsp;
+
+00:28:27.280 --> 00:28:35.800
+claims in that statement first claim was it's&nbsp;
+going to converge second claim was third claim
+
+00:28:35.800 --> 00:28:45.120
+is it's Unique right so we already know it's&nbsp;
+Unique from this expression this thing this&nbsp;&nbsp;
+
+00:28:45.120 --> 00:28:49.520
+thing we know it's Unique but I can also try to&nbsp;
+show it in a different way right so I'm going to&nbsp;&nbsp;
+
+00:28:49.520 --> 00:28:55.040
+show that it's going to converge right and it'll&nbsp;
+converge to V pi and that V Pi is unique right&nbsp;&nbsp;
+
+00:28:55.040 --> 00:29:02.320
+so the reason I'm going to do it this way is it&nbsp;
+makes it easier for us to handle the optimality&nbsp;&nbsp;
+
+00:29:02.320 --> 00:29:06.920
+equation as well later right so if I if I show&nbsp;
+you how to do this in the VP case it makes it&nbsp;&nbsp;
+
+00:29:06.920 --> 00:29:13.640
+easier for us to handle the optimality equation&nbsp;
+later okay great so so people have heard me before&nbsp;&nbsp;
+
+00:29:13.640 --> 00:29:20.960
+know that I'm going dead slow today I would have&nbsp;
+normally finished everything I wanted to do by&nbsp;&nbsp;
+
+00:29:20.960 --> 00:29:29.640
+now but uh I'll probably go to a second class&nbsp;
+okay because I wanted to make sure that people&nbsp;&nbsp;
+
+00:29:29.640 --> 00:29:35.160
+get what's what I'm saying right uh so let's&nbsp;
+see so if you have any questions or anything&nbsp;&nbsp;
+
+00:29:35.160 --> 00:29:44.520
+uh are you completely lost how many of you&nbsp;
+are completely lost that's basic basic linear
+
+00:29:44.520 --> 00:29:52.480
+algebra basic linear algebra so go do do&nbsp;
+me a favor go Google up relationship of&nbsp;&nbsp;
+
+00:29:52.480 --> 00:29:59.080
+igen values to invertibility of matrices&nbsp;
+okay you probably get a stack Overflow
+
+00:29:59.080 --> 00:30:10.040
+hit okay oh no no stack stack exchange&nbsp;
+hit stack exchange hit yeah no no that's&nbsp;&nbsp;
+
+00:30:10.040 --> 00:30:15.680
+a stat exchange right stat exch yeah you'll&nbsp;
+probably get a stat exchange hit on this yeah&nbsp;&nbsp;
+
+00:30:15.680 --> 00:30:19.800
+uh anyway so that's that's very basic stuff&nbsp;
+right so so you remember about determinants&nbsp;&nbsp;
+
+00:30:19.800 --> 00:30:25.000
+and products of again values being equal&nbsp;
+to determinant right so a matrix is not&nbsp;&nbsp;
+
+00:30:25.000 --> 00:30:29.920
+invertible only if the determinant is zero&nbsp;
+right and if no I value is zero then the&nbsp;&nbsp;
+
+00:30:29.920 --> 00:30:34.600
+determinant cannot be zero therefore the&nbsp;
+Matrix will be invertible okay okay that&nbsp;&nbsp;
+
+00:30:34.600 --> 00:30:42.760
+convince you maybe a bit more okay anyway&nbsp;
+fine so go go look up so I'm not going to&nbsp;&nbsp;
+
+00:30:42.760 --> 00:30:49.080
+do basic linear algebra now okay so let's now&nbsp;
+take you kicking and screaming into something
+
+00:30:49.080 --> 00:30:57.920
+more I I need to erase this&nbsp;
+part which part can I erase
+
+00:31:01.440 --> 00:31:04.520
+okay so I'll probably end up erasing this&nbsp;
+part so everyone has copied down what this&nbsp;&nbsp;
+
+00:31:04.520 --> 00:31:10.120
+R pi and P Pi are right so everyone has&nbsp;
+it in their notebook so I can erase this&nbsp;&nbsp;
+
+00:31:10.120 --> 00:31:13.440
+because I'm going to use it but I want&nbsp;
+that expression also to stay I don't&nbsp;&nbsp;
+
+00:31:13.440 --> 00:31:23.377
+want to erase that so everyone has this&nbsp;
+great so I'm going to erase it [Applause]
+

@@ -1,0 +1,251 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.480 --> 00:00:17.820
+But then in the writer I talk about something
+called after stage I just wanted to mention
+
+00:00:17.820 --> 00:00:25.650
+that very quickly, so what is an after state
+now it is a very interesting concept yeah
+
+00:00:25.650 --> 00:00:37.480
+what is in after State, yeah so in many problem
+instances especially things like games or
+
+00:00:37.480 --> 00:00:47.430
+like this kind of a civil mean like a system
+where that is moves by nature right so there
+
+00:00:47.430 --> 00:00:52.039
+are moves by the human the moves by nature
+or moves by an opponent right.
+
+00:00:52.039 --> 00:00:56.780
+So that is the whole stochastic city in the
+system is introduced either by this opponent
+
+00:00:56.780 --> 00:01:03.000
+or by nature right you are actions the effects
+of your actions on the system are deterministic
+
+00:01:03.000 --> 00:01:07.820
+right but you do not know what the opponent
+will do right so in this case of nature is
+
+00:01:07.820 --> 00:01:14.840
+like cows aging and things like that so your
+action is selling cows that is deterministic
+
+00:01:14.840 --> 00:01:19.220
+if you send a cow the cow is gone from you
+right you know that effect right.
+
+00:01:19.220 --> 00:01:24.009
+You make a move then the piece moves right
+there is no stochastic there right when I
+
+00:01:24.009 --> 00:01:30.080
+want to move upon on the board I put it there
+well as long as you do not have Parkinson's
+
+00:01:30.080 --> 00:01:35.229
+or something okay it will actually land up
+in the square that you wanted to go right
+
+00:01:35.229 --> 00:01:45.970
+and well you have to consider all eventualities
+right but then you do not know what the opponent
+
+00:01:45.970 --> 00:01:50.209
+is going to do right so if you look at the
+actual state transition dynamics it is going
+
+00:01:50.209 --> 00:01:55.200
+to look stochastic.
+But that is a deterministic component and
+
+00:01:55.200 --> 00:02:01.039
+then there is a stochastic component so sometimes
+it makes it a lot more convenient to come
+
+00:02:01.039 --> 00:02:09.959
+up with a solution if you pull out the deterministic
+component separately and represent s x a as
+
+00:02:09.959 --> 00:02:19.760
+an after state right so what is an after state
+it is some sense you take your S right you
+
+00:02:19.760 --> 00:02:34.189
+apply A to it so you get to some other space
+which we will call s’ and now all your stochastic
+
+00:02:34.189 --> 00:02:42.469
+is applied to state in s’ right and this
+will result in a in a state S right so this
+
+00:02:42.469 --> 00:02:50.359
+is essentially what is happening so S x A
+yet S’, S’ to s so if I am going to represent
+
+00:02:50.359 --> 00:02:58.040
+things as s after states instead of learning
+a Q function I can learn a value over the
+
+00:02:58.040 --> 00:03:02.060
+elements in after States.
+I can learn a V function over the entries
+
+00:03:02.060 --> 00:03:08.510
+in s prime this is essentially a combination
+of s x a so the v function over s’ is almost
+
+00:03:08.510 --> 00:03:13.969
+like learning a Q function and what is the
+advantage of learning this v function over
+
+00:03:13.969 --> 00:03:23.549
+s’ instead of q / s x a, I have one less
+dimension and anything else one less dimension
+
+00:03:23.549 --> 00:03:34.159
+okay then I explained that in the writer so
+it could be that many state action paths yield
+
+00:03:34.159 --> 00:03:43.140
+the same s’ right.
+I actually talked about this very briefly
+
+00:03:43.140 --> 00:03:47.180
+talking about Tic Tac toe I told you there
+are many different ways in which you could
+
+00:03:47.180 --> 00:03:52.599
+have come here right so I do not care which
+way you got the right I could have for example
+
+00:03:52.599 --> 00:04:11.019
+I could have from there I could go that right
+offer 
+
+00:04:11.019 --> 00:04:17.450
+I could go there right so this is a state
+and the action was put across there and this
+
+00:04:17.450 --> 00:04:22.300
+is the state the action was put across here
+but both have the same after state.
+
+00:04:22.300 --> 00:04:26.550
+And since the evaluation from here is going
+to be the same but this is an after state
+
+00:04:26.550 --> 00:04:31.560
+right this is a state this is after state
+right so you see why I denoted the after state
+
+00:04:31.560 --> 00:04:41.640
+by S’ why, a tic-tac-toe S is going to have
+an equal number of X and O’s, s’ will
+
+00:04:41.640 --> 00:04:49.980
+have one next more than O and if I am playing
+x whenever I see the board whenever I have
+
+00:04:49.980 --> 00:04:52.910
+to make a move that will be equal number of
+X and O’s right.
+
+00:04:52.910 --> 00:04:57.310
+But not the state will have one next more
+than O right so it is actually different set
+
+00:04:57.310 --> 00:05:02.450
+of states they are not really States I mean
+I might or might not see them in reality for
+
+00:05:02.450 --> 00:05:12.910
+example in the cow task after states are possibly
+states I mean cannot be stated it they are
+
+00:05:12.910 --> 00:05:16.780
+also states like they are also stays after
+sets are also states but in detect O case
+
+00:05:16.780 --> 00:05:22.790
+after states are not steps because you will
+never see a state that has a more access than
+
+00:05:22.790 --> 00:05:27.720
+O’s.
+So that is why that is why I denote it this
+
+00:05:27.720 --> 00:05:31.690
+is s’ as a separate thing it could be the
+same as S but it could also be different but
+
+00:05:31.690 --> 00:05:36.780
+the point here was this is actually a QSA
+right I mean if I learn a value function over
+
+00:05:36.780 --> 00:05:40.130
+the states its QSA and since the whole thing
+is deterministic.
+
+00:05:40.130 --> 00:05:43.870
+.
+If I know the rules of the game I can do the
+
+00:05:43.870 --> 00:05:51.720
+look-ahead so I give you a state I look at
+all possible after States and then I pick
+
+00:05:51.720 --> 00:05:57.470
+an action which leads me to the best possible
+after state, now I can do the look ahead because
+
+00:05:57.470 --> 00:06:01.930
+it is only the application of the action I
+do not have to model nature and I only have
+
+00:06:01.930 --> 00:06:08.490
+to model what happens when I apply my action
+to it so it is a possible look ahead and this
+
+00:06:08.490 --> 00:06:11.710
+is how Gerry Tesauro implemented is backgammon
+also.
+
+00:06:11.710 --> 00:06:17.890
+Now he did not learn a value function over
+state axles you learn to value function over
+
+00:06:17.890 --> 00:06:25.160
+after States right back and also write once
+the die roll is determined that you take an
+
+00:06:25.160 --> 00:06:31.050
+action right when you take an action your
+state includes the die roll and once you know
+
+00:06:31.050 --> 00:06:34.790
+the die roll then whatever action you do the
+effects will be deterministic and then they
+
+00:06:34.790 --> 00:06:41.840
+are opponent will actually make a non-deterministic
+move so that is fine, okay any questions?
+
+00:06:41.840 --> 00:06:50.550
+Okay so that means is the end of chapter 6
+so at some point I will do some proof sketches
+
+00:06:50.550 --> 00:06:59.330
+for TD 0 and possibly q-learning but it might
+not be next week we will see and so next I
+
+00:06:59.330 --> 00:07:01.030
+will start off on Chapter seven.
+

@@ -1,0 +1,454 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.843 --> 00:00:14.360
+[Music]
+
+00:00:14.360 --> 00:00:15.520
+so we're looking at
+
+00:00:15.520 --> 00:00:25.080
+uh
+
+00:00:25.080 --> 00:00:29.960
+right looking at multiarm banded problems&nbsp;&nbsp;
+
+00:00:30.880 --> 00:00:36.280
+right so you looked at a couple of ways of solving&nbsp;
+it so essentially you try to keep an estimate of&nbsp;&nbsp;
+
+00:00:36.280 --> 00:00:42.000
+the value function around right the value function&nbsp;
+is the expected payoff that you get for pulling an&nbsp;&nbsp;
+
+00:00:42.000 --> 00:00:48.760
+arm right you keep an estimate of the value&nbsp;
+function around and then you behave um some&nbsp;&nbsp;
+
+00:00:48.760 --> 00:00:52.560
+explorative fashion with respect to that value&nbsp;
+function that you have right so either you do&nbsp;&nbsp;
+
+00:00:52.560 --> 00:00:59.920
+Epsilon 3D or you do soft Max or something and uh&nbsp;
+you get some kind of asymptotic guarantees correct
+
+00:01:02.280 --> 00:01:10.600
+yes okay good um we also spoke about other&nbsp;
+forms of optimality so one of them we spoke&nbsp;&nbsp;
+
+00:01:10.600 --> 00:01:20.480
+about was regret optimality so regret optimality&nbsp;
+is what reducing the total I mean or increasing&nbsp;&nbsp;
+
+00:01:20.480 --> 00:01:26.920
+the total reward that you get over the process&nbsp;
+of learning right so so the initial loss that&nbsp;&nbsp;
+
+00:01:26.920 --> 00:01:33.160
+you get due to the EXP the exploration you want&nbsp;
+to minimize so that I come as close as possible&nbsp;&nbsp;
+
+00:01:33.160 --> 00:01:37.320
+to the optimal case as quickly as possible&nbsp;
+right so that is essentially what regret is&nbsp;&nbsp;
+
+00:01:37.320 --> 00:01:44.360
+all about and so we'll start by looking at uh&nbsp;
+one algorithm which in some sense has become uh&nbsp;&nbsp;
+
+00:01:44.360 --> 00:01:51.280
+the popular most popular uh Bandit algorithm&nbsp;
+around right now uh because it's so easy to&nbsp;&nbsp;
+
+00:01:51.280 --> 00:01:59.840
+implement and also gives you not too bad regret&nbsp;
+bonds okay it's called the upper confidence Bond
+
+00:02:14.080 --> 00:02:19.600
+the upper confidence Bond algorithm or the&nbsp;
+UCB algorithm okay so I'll use slightly&nbsp;&nbsp;
+
+00:02:19.600 --> 00:02:25.800
+different notation today right uh not not too&nbsp;
+different I'll try to as much as possible uh&nbsp;&nbsp;
+
+00:02:25.800 --> 00:02:31.760
+I'll try to translate on the Fly okay to&nbsp;
+the notation that is used in the textbook&nbsp;&nbsp;
+
+00:02:31.760 --> 00:02:37.000
+right so even though I we will give we will&nbsp;
+be giving you some papers to read uh you can&nbsp;&nbsp;
+
+00:02:37.000 --> 00:02:41.080
+take care of linking the UCB paper and the B&nbsp;
+elimination paper and other things right on&nbsp;&nbsp;
+
+00:02:41.080 --> 00:02:44.800
+mod we'll be giving you some papers to read&nbsp;
+and the notation in the papers will be very&nbsp;&nbsp;
+
+00:02:44.800 --> 00:02:49.680
+different okay you probably have to spend like&nbsp;
+half an hour just uh trying to understand the&nbsp;&nbsp;
+
+00:02:49.680 --> 00:02:54.720
+notation but when I'm explaining it in class&nbsp;
+to the extent possible I'll try to map it to&nbsp;&nbsp;
+
+00:02:54.720 --> 00:02:59.840
+the notations used in the book right so that you&nbsp;
+have one uniform set of things that you can keep&nbsp;&nbsp;
+
+00:02:59.840 --> 00:03:06.240
+track off throughout right the changes are the&nbsp;
+following right I'm going to assume that there
+
+00:03:06.240 --> 00:03:18.480
+are capital K arms right so earlier I&nbsp;
+was assuming there were n arms but it&nbsp;&nbsp;
+
+00:03:18.480 --> 00:03:24.200
+turns out the reason I want to change n is&nbsp;
+uh we're going to now talk about a notion&nbsp;&nbsp;
+
+00:03:24.200 --> 00:03:29.760
+of time right so now so there are going to be&nbsp;
+pulls at every time instant and so on so forth&nbsp;&nbsp;
+
+00:03:30.560 --> 00:03:35.720
+and uh this should be familiar to electrical&nbsp;
+engineers so if time is discrete you denote&nbsp;&nbsp;
+
+00:03:35.720 --> 00:03:41.920
+it by n okay if time is continuous denoted by&nbsp;
+T right so I want to be able to denote discrete&nbsp;&nbsp;
+
+00:03:41.920 --> 00:03:48.520
+time so I want to use n for discrete time okay&nbsp;
+and so we'll save n for discrete time and I'll&nbsp;&nbsp;
+
+00:03:48.520 --> 00:03:57.240
+not use that for the number of arms so that's&nbsp;
+the reason I switch to K okay assume there are&nbsp;&nbsp;
+
+00:03:57.240 --> 00:04:05.520
+K arms and uh so as before with each arm there is&nbsp;
+associated some arbitrary probability distribution&nbsp;&nbsp;
+
+00:04:05.520 --> 00:04:10.800
+which I don't know right whenever I pull an arm&nbsp;
+I'll get a sample drawn from that probability&nbsp;&nbsp;
+
+00:04:10.800 --> 00:04:15.320
+distribution it could be veroli it could be&nbsp;
+goian right it could be poison we don't know&nbsp;&nbsp;
+
+00:04:15.320 --> 00:04:22.440
+what distribution it is but according to that&nbsp;
+distribution we'll get a payoff right and what&nbsp;&nbsp;
+
+00:04:22.440 --> 00:04:30.200
+else do we did we assume last time that there&nbsp;
+is the expectation given for that distribution&nbsp;&nbsp;
+
+00:04:30.200 --> 00:04:34.640
+right yeah yeah we assume that the distribution&nbsp;
+is stationary it's not going to change with time&nbsp;&nbsp;
+
+00:04:34.640 --> 00:04:40.600
+right and that there is an expectation associated&nbsp;
+with that distribution which you denote by Q qar&nbsp;&nbsp;
+
+00:04:40.600 --> 00:04:50.760
+of a right when you say qar of a it is the the&nbsp;
+expectation for pulling arm a okay this clear so&nbsp;&nbsp;
+
+00:04:50.760 --> 00:04:59.640
+here is the UCB algorithm so assume there&nbsp;
+are K arms so the initialization phase is
+
+00:05:03.320 --> 00:05:07.320
+play each arm at least once play each&nbsp;
+arm once right you have to pull every&nbsp;&nbsp;
+
+00:05:07.320 --> 00:05:12.600
+arm at least one time you can't do better&nbsp;
+than that agreed if if I never pull the&nbsp;&nbsp;
+
+00:05:12.600 --> 00:05:16.800
+arm I don't know anything about that arms&nbsp;
+right so I need to pull each arm at least&nbsp;&nbsp;
+
+00:05:16.800 --> 00:05:29.640
+once so that's the least so we start off with&nbsp;
+that and then we do the following in a loop
+
+00:05:57.400 --> 00:05:59.640
+so you remember what QJ is
+
+00:06:01.680 --> 00:06:06.840
+is estimated payoff expected payoff right so this&nbsp;
+is average reward that we'll be maintaining right&nbsp;&nbsp;
+
+00:06:06.840 --> 00:06:15.000
+that's a value function right for RJ so&nbsp;
+QJ is the estimate that I have at time n&nbsp;&nbsp;
+
+00:06:15.000 --> 00:06:20.480
+right QJ is estimate I have a Time n for MJ&nbsp;
+so essentially what I'm doing is I'm taking&nbsp;&nbsp;
+
+00:06:20.480 --> 00:06:29.920
+whatever is the current estimate right and&nbsp;
+I'm adding this expression to that right&nbsp;&nbsp;
+
+00:06:29.920 --> 00:06:34.760
+and then I'm playing the arm that gives&nbsp;
+me the highest value for this total
+
+00:06:34.760 --> 00:06:44.440
+expression right so the way to think about&nbsp;
+this is the following I'll come back to this&nbsp;&nbsp;
+
+00:06:44.440 --> 00:06:56.200
+we'll show things more precisely later but let's&nbsp;
+assume that this is my Q of om1 right whatever&nbsp;&nbsp;
+
+00:06:56.200 --> 00:07:00.840
+is some some scale this the the x-axis I&nbsp;
+mean the x axis let us assume is the arm&nbsp;&nbsp;
+
+00:07:00.840 --> 00:07:12.800
+index and the y axis is the expected payoff&nbsp;
+right so that is q1 then I have Q2 say Q3 and
+
+00:07:12.800 --> 00:07:25.680
+Q4 let's say I have four arms right so what the&nbsp;
+idea behind upper confidence bond is to say that&nbsp;&nbsp;
+
+00:07:25.680 --> 00:07:32.280
+hey I'm not going to use just the estimated&nbsp;
+expectation so far right so I've actually&nbsp;&nbsp;
+
+00:07:32.280 --> 00:07:37.920
+drawn many samples right I can use the samples&nbsp;
+that I have drawn so far to figure out what is&nbsp;&nbsp;
+
+00:07:37.920 --> 00:07:45.480
+the confidence with which I can say that this is&nbsp;
+the expectation right so so you can you can think&nbsp;&nbsp;
+
+00:07:45.480 --> 00:07:50.560
+of giving kind some kind of a bound around this&nbsp;
+you can say that okay this is the expectation I
+
+00:07:50.560 --> 00:08:00.320
+have right but the true value of q1 or qar one&nbsp;&nbsp;
+
+00:08:00.320 --> 00:08:03.400
+right the Q value of qar one&nbsp;
+is going to lie within that
+
+00:08:03.400 --> 00:08:10.640
+band right so intuitively you can see that&nbsp;
+the more number of times I have sampled arm&nbsp;&nbsp;
+
+00:08:10.640 --> 00:08:17.600
+one the smaller is this going to be right if I&nbsp;
+taken a lot of samples then I'm more confident&nbsp;&nbsp;
+
+00:08:17.600 --> 00:08:21.440
+about the expectation that I'm going to tell you&nbsp;
+right we know that as the number of samples tends&nbsp;&nbsp;
+
+00:08:21.440 --> 00:08:29.800
+to Infinity I this q q will converge to qar so&nbsp;
+we know that right q1 will converge to qar 1&nbsp;&nbsp;
+
+00:08:29.800 --> 00:08:33.240
+if the number of times have sampled one&nbsp;
+goes to Infinity so the more the number&nbsp;&nbsp;
+
+00:08:33.240 --> 00:08:41.240
+of samples I draw the narrower will&nbsp;
+be this band of uncertainty right so&nbsp;&nbsp;
+
+00:08:41.240 --> 00:08:50.000
+likewise I'll have a band like this for&nbsp;
+Q2 right I'll have a band like this for&nbsp;&nbsp;
+
+00:08:50.000 --> 00:08:59.440
+Q3 I'll have a band like this for Q4 so what&nbsp;
+arm do you am I suggesting that you take now
+
+00:09:04.520 --> 00:09:10.360
+no I'm I'm saying take I'm one that's what&nbsp;
+essentially UCB tell here right so why do&nbsp;&nbsp;
+
+00:09:10.360 --> 00:09:13.680
+you think this kind of a scenario might have&nbsp;
+happened I might have chosen arm for a lot of&nbsp;&nbsp;
+
+00:09:13.680 --> 00:09:19.120
+times because it seems to have a higher value&nbsp;
+so my uncertainty and the value of arm four has&nbsp;&nbsp;
+
+00:09:19.120 --> 00:09:24.440
+come down all lot right but arm one I have&nbsp;
+not taken enough times arm three obviously&nbsp;&nbsp;
+
+00:09:24.440 --> 00:09:29.360
+I not taken enough times but I'm really not&nbsp;
+inclined to take arm three anymore because&nbsp;&nbsp;
+
+00:09:29.960 --> 00:09:36.600
+given my current state of uncertainty right the&nbsp;
+probability that arm three will be higher than&nbsp;&nbsp;
+
+00:09:36.600 --> 00:09:41.240
+this end right I mean it's very very small&nbsp;
+right even though my uncertainty arm three&nbsp;&nbsp;
+
+00:09:41.240 --> 00:09:47.360
+is very high I'm not inclined to take that&nbsp;
+arm because the chance that it will truly be
+
+00:09:47.360 --> 00:09:56.320
+high the chance that it will truly&nbsp;
+be high is very small right while&nbsp;&nbsp;
+
+00:09:56.320 --> 00:09:59.320
+for arm one the chance that it&nbsp;
+might be better than arm four&nbsp;&nbsp;
+
+00:10:00.680 --> 00:10:06.840
+it's fairly decent so this interval I'm telling&nbsp;
+you is some kind of bound that says that with&nbsp;&nbsp;
+
+00:10:06.840 --> 00:10:13.320
+very high probability right the true value of q1&nbsp;
+will lie within this bond that means there is a&nbsp;&nbsp;
+
+00:10:13.320 --> 00:10:21.040
+chance that it will lie here which case it can&nbsp;
+be higher than Q4 right so I'll take this if I&nbsp;&nbsp;
+
+00:10:21.040 --> 00:10:29.320
+take this a few more times and let us say after&nbsp;
+some time my estimate moves up like this but my
+
+00:10:34.400 --> 00:10:40.080
+estimate moves up a little bit but my bounds also&nbsp;
+shrink right now it might not look attractive&nbsp;&nbsp;
+
+00:10:40.080 --> 00:10:48.040
+compared to Q4 so I'll go back to taking&nbsp;
+Q4 right so that's why you can see in this&nbsp;&nbsp;
+
+00:10:48.040 --> 00:10:56.080
+expression I have the total number of samples&nbsp;
+I have drawn of MJ right what NJ is number of&nbsp;&nbsp;
+
+00:10:56.080 --> 00:11:02.320
+times I have trans sampled arm J so the larger&nbsp;
+the NJ the smaller this expression is going to
+
+00:11:02.320 --> 00:11:08.240
+become okay so larger the number&nbsp;
+of samples I draw the smaller this&nbsp;&nbsp;
+
+00:11:08.240 --> 00:11:12.600
+expression will become and therefore&nbsp;
+this interval will keep coming down
+
+00:11:12.600 --> 00:11:21.800
+okay what's that yeah that's more like a&nbsp;
+normalizing term right it is there in all the&nbsp;&nbsp;
+
+00:11:21.800 --> 00:11:26.040
+Expressions all the values right all the intervals&nbsp;
+that you compute so it's not relatively it is not&nbsp;&nbsp;
+
+00:11:26.040 --> 00:11:34.880
+going to matter but you'll need it to show some&nbsp;
+results later so so algorithm itself very clear&nbsp;&nbsp;
+
+00:11:34.880 --> 00:11:41.880
+right so the things here the N is essentially the&nbsp;
+number of times I have played arm so far any arm&nbsp;&nbsp;
+
+00:11:41.880 --> 00:11:48.320
+NJ is the number of times I played arj okay so&nbsp;
+you have that pictorial description of what this&nbsp;&nbsp;
+
+00:11:48.320 --> 00:11:53.880
+algorithm is doing great so what is nice about&nbsp;
+this algorithm it's very very simple algorithm&nbsp;&nbsp;
+
+00:11:53.880 --> 00:11:59.400
+you saw that right there's nothing about it all&nbsp;
+you need to do is apart from keeping track of&nbsp;&nbsp;
+
+00:11:59.400 --> 00:12:07.200
+QJ you have to keep track of NJ as well&nbsp;
+which you are anyway doing if you are doing&nbsp;&nbsp;
+
+00:12:07.200 --> 00:12:12.760
+that incremental update right if you remember&nbsp;
+last class we wrote the incremental update so&nbsp;&nbsp;
+
+00:12:12.760 --> 00:12:17.240
+the step size was anywhere related to NJ&nbsp;
+so the only additional overhead would be&nbsp;&nbsp;
+
+00:12:17.240 --> 00:12:21.680
+if you had been using a constant Alpha for your&nbsp;
+updates you'll have to remember NJ and addition&nbsp;&nbsp;
+
+00:12:21.680 --> 00:12:27.560
+otherwise it's exactly the same thing like we did&nbsp;
+for Epsilon gring so instead of randomly deciding&nbsp;&nbsp;
+
+00:12:27.560 --> 00:12:32.880
+which action to take for exploration you you&nbsp;
+don't do any exploration also the random the&nbsp;&nbsp;
+
+00:12:32.880 --> 00:12:41.440
+random number generator also is gone now right&nbsp;
+this is very deterministic algorithm right so&nbsp;&nbsp;
+
+00:12:41.440 --> 00:12:48.000
+what is so great about it yeah so don't we need&nbsp;
+some kind of normalizing on QJ no because the&nbsp;&nbsp;
+
+00:12:48.000 --> 00:12:51.680
+other term might be a very small term even&nbsp;
+when Q might be a very large value doesn't
+
+00:12:51.680 --> 00:13:01.680
+matter why does it matter like the like you like&nbsp;
+the expected pay offs can be something like 10 ah&nbsp;&nbsp;
+
+00:13:01.680 --> 00:13:06.320
+that way okay fine fine fine fine fine uh yeah&nbsp;
+so all of this this this particular form of&nbsp;&nbsp;
+
+00:13:06.320 --> 00:13:12.760
+expression does assume that the rewards are bonded&nbsp;
+between 0o and one right so yeah I'll come to that&nbsp;&nbsp;
+
+00:13:12.760 --> 00:13:19.400
+in a minute so yeah you right so you can rescale&nbsp;
+the rewards if you want to right as long as all&nbsp;&nbsp;
+
+00:13:19.400 --> 00:13:24.880
+the rewards are positive so you can rescale&nbsp;
+them to lie between zero and one but if you&nbsp;&nbsp;
+
+00:13:24.880 --> 00:13:30.451
+have negative rewards you'll have to think about&nbsp;
+how we want to do this okay [Music] [Applause]
+

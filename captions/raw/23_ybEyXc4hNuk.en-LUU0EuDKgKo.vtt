@@ -1,0 +1,854 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.730 --> 00:00:24.060
+So these guys are going to follow today so
+last week we left off by showing that.
+
+00:00:24.060 --> 00:00:30.920
+.
+Lp is a contraction and it is others may leave
+
+00:00:30.920 --> 00:00:39.650
+if they want to 
+the guys who would not actually revised last
+
+00:00:39.650 --> 00:00:45.339
+week's lecture if you are so interested or
+so disinterested you could leave right so
+
+00:00:45.339 --> 00:00:54.489
+just teach for the six people could read okay
+I do not care right so there is one question
+
+00:00:54.489 --> 00:01:01.820
+last class to show that this actually works
+we need to show that we say V is a barrack
+
+00:01:01.820 --> 00:01:07.540
+space okay how hard is it to show that V is
+a barrack space what is V what is v V what
+
+00:01:07.540 --> 00:01:17.070
+is the space V they want to show as a barrack
+space of all valid functions okay.
+
+00:01:17.070 --> 00:01:21.810
+Well value functions is little tricky because
+value functions means that there is some policy
+
+00:01:21.810 --> 00:01:25.050
+or something that generates that right need
+that need not necessarily be true it is very
+
+00:01:25.050 --> 00:01:32.979
+hard to quantify it such a space right so
+V is a space of all functions that satisfy
+
+00:01:32.979 --> 00:01:42.530
+something for us what is that very simple
+what is the most basic condition we put bounded
+
+00:01:42.530 --> 00:01:55.280
+right so component wise the function is bounded
+see so think of an element here right and
+
+00:01:55.280 --> 00:02:04.420
+then I take V(S) which is one component of
+the vector V like that component will be always
+
+00:02:04.420 --> 00:02:09.379
+bounded right.
+Okay and think of what is the norm that we
+
+00:02:09.379 --> 00:02:16.230
+are considering here in this space so essentially
+what capital V is it is a space of all bounded
+
+00:02:16.230 --> 00:02:24.940
+what functions right the space of all bounded
+functions right so because we have this function
+
+00:02:24.940 --> 00:02:31.409
+operating on a discrete space right so we
+can just think of this as points in space
+
+00:02:31.409 --> 00:02:37.420
+right but it is actually is a function space
+is actually space of functions right so V
+
+00:02:37.420 --> 00:02:43.950
+is a space of bounded functions right and
+what is the norm that we consider max now
+
+00:02:43.950 --> 00:02:51.709
+right the max now right and what is it that
+we need to show if it is a barracks phase
+
+00:02:51.709 --> 00:03:00.400
+it converts right but what we know here all
+Cauchy sequences what does the Cauchy sequence
+
+00:03:00.400 --> 00:03:03.810
+a as you keep growing difference becomes smaller
+and smaller and smaller so what does that
+
+00:03:03.810 --> 00:03:08.580
+mean it converges it should be in the same
+space right.
+
+00:03:08.580 --> 00:03:16.170
+So what can you tell me about any such space
+with the max norm on it so it is a complete
+
+00:03:16.170 --> 00:03:23.989
+it is a full space right I am not excluding
+anything the only problem I have is that my
+
+00:03:23.989 --> 00:03:28.829
+functions have to be component ways bounded
+right the functions have to be component wise
+
+00:03:28.829 --> 00:03:36.659
+bounded right and if you look at the right
+so essentially the idea is that since I am
+
+00:03:36.659 --> 00:03:43.230
+assuming that my functions are getting epsilon
+close to each other my vectors are getting
+
+00:03:43.230 --> 00:03:47.269
+epsilon close to each other and given the
+fact that their component wise they are all
+
+00:03:47.269 --> 00:03:53.239
+bounded right.
+So the limit also has to be a bounded function
+
+00:03:53.239 --> 00:03:58.560
+and as long as it is a bounded function it
+will exist in this space so the easier thing
+
+00:03:58.560 --> 00:04:05.769
+to show is RM is bounded under the equilibrium
+norms right under the max norm so RN is bounded
+
+00:04:05.769 --> 00:04:14.069
+under any now okay so the tricky part is this
+is not RN it is a subset of RN right why is
+
+00:04:14.069 --> 00:04:20.620
+it a subset of RN v and they say all components
+have to be bounded right so RL does not have
+
+00:04:20.620 --> 00:04:24.360
+that restriction I could have some components
+that can grow unbounded right.
+
+00:04:24.360 --> 00:04:30.820
+So the volatility part here is so that okay
+since I am talking about bounded vectors okay
+
+00:04:30.820 --> 00:04:38.011
+the point is the limit of this bounded vector
+should also be bounded is actually not always
+
+00:04:38.011 --> 00:04:44.730
+the case right I mean I can actually set up
+space set up situations where I'm considering
+
+00:04:44.730 --> 00:04:52.130
+bound identities but the limit of the bound
+identities happens to be at set up a sequence
+
+00:04:52.130 --> 00:04:55.140
+where I am considering only bound identities
+and but the limit of the boundary identities
+
+00:04:55.140 --> 00:05:01.060
+happens to be something that is unbounded
+right but in this case I am not setting up
+
+00:05:01.060 --> 00:05:05.540
+any kind of a generic sequence like this right
+so I am actually setting up a sequence of
+
+00:05:05.540 --> 00:05:09.180
+bounded function so the sequence eventually
+has to be bounded.
+
+00:05:09.180 --> 00:05:16.840
+So it is little tricky to show that but the
+intuition is that it is going to be a set
+
+00:05:16.840 --> 00:05:20.790
+of sequence of bounded functions and I am
+assuming that the difference between them
+
+00:05:20.790 --> 00:05:26.280
+is becoming smaller and smaller and sway infinitely
+smaller right as it becomes larger and larger
+
+00:05:26.280 --> 00:05:32.840
+and therefore you cannot have an unbounded
+value that is infinitely close to a bounded
+
+00:05:32.840 --> 00:05:39.510
+value so therefore we assume that it is finally
+the limit exists in V so I am not doing a
+
+00:05:39.510 --> 00:05:52.280
+formal proof for it because it involves introducing
+more concepts but the intuition is there.
+
+00:05:52.280 --> 00:06:21.180
+So next we have to move on to the optimality
+equation right 
+
+00:06:21.180 --> 00:06:43.100
+you know the bellman optimality equation 
+
+00:06:43.100 --> 00:06:50.480
+order dated is all these foundations so we
+talked about this right marginalizing over
+
+00:06:50.480 --> 00:07:16.000
+s’ identities this notation in the last
+line right so this is essentially the expected
+
+00:07:16.000 --> 00:07:22.060
+value of the reward given the state and the
+action right I am marginalizing over a spread
+
+00:07:22.060 --> 00:07:28.240
+so basically summing over the probability
+of seeing all possible expense and this we
+
+00:07:28.240 --> 00:07:38.060
+spoke about right and yeah so this is this
+is the optimality equation right.
+
+00:07:38.060 --> 00:07:46.270
+So what we are doing to go from here to here
+right is writing this in a vector notation
+
+00:07:46.270 --> 00:07:53.120
+right so translating all of this into vector
+notation is if remember I defined R p as the
+
+00:07:53.120 --> 00:07:59.830
+expected value will get following p right
+for the next immediate step right so where
+
+00:07:59.830 --> 00:08:10.920
+so the only difference here is here I assume
+that you use a here at but here I am assuming
+
+00:08:10.920 --> 00:08:17.630
+you are using a p okay and so this is the
+probability of that of the next state following
+
+00:08:17.630 --> 00:08:23.170
+policy p right here again I am assuming a
+here I am assuming fight and here I am saying
+
+00:08:23.170 --> 00:08:28.660
+v*j and here I am saying v* the summation
+is gone.
+
+00:08:28.660 --> 00:08:40.750
+Vp no so I will tell you why right so I am
+doing max over a right so for each state I
+
+00:08:40.750 --> 00:08:45.890
+get one max or A so I will get 1action as
+the max action let us say let us assume that
+
+00:08:45.890 --> 00:08:51.290
+there is one action as the max action for
+each yes right so what essentially this is
+
+00:08:51.290 --> 00:08:57.800
+give me it gives me a mapping from state to
+action so what is that mapping it is a policy
+
+00:08:57.800 --> 00:09:02.670
+so that is a policy p we are talking about
+here right this is essentially a component
+
+00:09:02.670 --> 00:09:08.660
+wise maximization of this expression so for
+every state I will write out this expression
+
+00:09:08.660 --> 00:09:13.050
+for every state I will find the a that correspondingly
+maximizes that expression.
+
+00:09:13.050 --> 00:09:19.230
+Let us just like it I there right so every
+state I will solve this thing I will find
+
+00:09:19.230 --> 00:09:27.649
+out what that is I can set that as the max
+by right so this max here is a cut for saying
+
+00:09:27.649 --> 00:09:34.089
+it is a component wise max right for every
+S I learn this max independently I could afford
+
+00:09:34.089 --> 00:09:39.709
+to do I am not making any assumptions about
+the structure of the policy p right so for
+
+00:09:39.709 --> 00:09:45.870
+every state I can set an arbitrary action
+as the action for p right.
+
+00:09:45.870 --> 00:09:54.820
+So this is my well-being optimality equation
+return in vector form right makes it is so
+
+00:09:54.820 --> 00:10:05.139
+now I am going to define this as an operator.
+.
+
+00:10:05.139 --> 00:10:15.519
+So I am going to define L as that operator
+that takes in V* unless this computation okay
+
+00:10:15.519 --> 00:10:24.709
+and gives you back another point in the space
+let L is an operator so L is essentially so
+
+00:10:24.709 --> 00:10:50.499
+LV and what we are claiming is that V* is
+the fixed point of n right so last class we
+
+00:10:50.499 --> 00:10:56.019
+looked at Lp right which was the iterative
+process for valve an equation for V p now
+
+00:10:56.019 --> 00:11:00.379
+this is a bellman equation for V * so I have
+written it like this right and then taken
+
+00:11:00.379 --> 00:11:06.319
+this whole operation and converted that into
+a single matrix operation right and so now
+
+00:11:06.319 --> 00:11:14.029
+the function essentially becomes LV is this.
+Say L is a not a linear function of V because
+
+00:11:14.029 --> 00:11:17.440
+of the max it is L is not a linear function
+of wave just for convenience I am writing
+
+00:11:17.440 --> 00:11:25.639
+it as LV it looks like it is a matrix multiplication
+it is not okay and that is basically the claim
+
+00:11:25.639 --> 00:11:42.110
+here is that what is the clam L is a contraction
+so if I say L is a contraction what do you
+
+00:11:42.110 --> 00:11:47.220
+get you get lots of things for free right
+so what do you do what do you get if L is
+
+00:11:47.220 --> 00:11:53.130
+a contraction in kind of hand waving lee argued
+that V is a Barak space L is a contraction
+
+00:11:53.130 --> 00:12:02.300
+so what do you get a that is a unique fixed
+point V* right.
+
+00:12:02.300 --> 00:12:10.189
+And if you do it iterative it converges to
+be stuff okay so it starts from some arbitrary
+
+00:12:10.189 --> 00:12:15.040
+V or repeatedly apply a L it converse to Easter
+so we got both this thing for free so let
+
+00:12:15.040 --> 00:13:00.680
+us look at showing this 
+
+00:13:00.680 --> 00:13:06.160
+right so when they say a star office it means
+that the best action to do at least one of
+
+00:13:06.160 --> 00:13:10.339
+the best actions to do in status.
+.
+
+00:13:10.339 --> 00:13:13.870
+Remember we talked about the world they could
+go in any combination so you could reach the
+
+00:13:13.870 --> 00:13:21.709
+top right necessarily so it could go either
+right or you could go up any combination of
+
+00:13:21.709 --> 00:13:25.809
+right and up will work to get you to the final
+state right so either both right and up where
+
+00:13:25.809 --> 00:13:42.879
+the best actions it could be more than one
+best action both of this do not preclude multiple
+
+00:13:42.879 --> 00:13:48.519
+things being best okay and this is just finding
+out the value corresponding to the best action
+
+00:13:48.519 --> 00:13:54.379
+right I am not so we argued that earlier also
+there could be multiple best actions but there
+
+00:13:54.379 --> 00:13:58.689
+will be only one value corresponding to those
+best actions.
+
+00:13:58.689 --> 00:14:01.819
+Regardless of whether we go up where you go
+right you will take the same number of steps
+
+00:14:01.819 --> 00:14:06.300
+to reach the goal right so the value will
+be the same but you could have multiple policies
+
+00:14:06.300 --> 00:14:11.769
+so I'm not procuring this any one of those
+next a you plug in here right let us likewise
+
+00:14:11.769 --> 00:14:15.970
+any one of the best p you plug in here and
+re compute we stop so I am not saying you
+
+00:14:15.970 --> 00:14:21.019
+have to find one p or anything right so this
+here I am picking one such a that is why I
+
+00:14:21.019 --> 00:14:26.119
+did not say a is equal to a* is equal to R
+max I am saying a* belongs to our max okay.
+
+00:14:26.119 --> 00:14:30.610
+So what we really have to establish is that
+later on which will be useful for you in your
+
+00:14:30.610 --> 00:14:35.350
+doing the assignment is that you do not really
+have to consider probability stochastic policies
+
+00:14:35.350 --> 00:14:40.319
+when you are doing dealing with MDPs at least
+you do not have to consider sarcastic policies
+
+00:14:40.319 --> 00:14:45.839
+for finite MDPs there will always be a deterministic
+optimal policy so it is enough if you only
+
+00:14:45.839 --> 00:14:50.809
+search for one deterministic policy you do
+not have to search for stochastic policies
+
+00:14:50.809 --> 00:14:57.160
+that will have to show right what I will do
+is I will not do it in class so I will give
+
+00:14:57.160 --> 00:15:01.170
+you a small right up to read so from my notes
+I will make up right up and put it online
+
+00:15:01.170 --> 00:15:07.230
+so you can read it from so this just to convince
+you that is a little bit of algebra not too
+
+00:15:07.230 --> 00:15:10.329
+much right.
+So just to convince you that deterministic
+
+00:15:10.329 --> 00:15:15.850
+policies are sufficient okay but right now
+so far I have not assumed anything like that
+
+00:15:15.850 --> 00:15:24.290
+and this assuming that is one action that
+is the best right 
+
+00:15:24.290 --> 00:15:39.730
+and let us assume that I have 
+two functions V and U okay and I have L operating
+
+00:15:39.730 --> 00:15:51.910
+on V and L operating on U remember from our
+discussion in the last class that LV is a
+
+00:15:51.910 --> 00:15:59.749
+function LV is a function LV(s) is the sth
+of that component of that function or LV acting
+
+00:15:59.749 --> 00:16:07.190
+on s whatever is the output okay so the function
+is LV L is not operating on VS I think a lot
+
+00:16:07.190 --> 00:16:12.429
+of you had a confusion last class L is not
+operating on V(S) L is something that takes
+
+00:16:12.429 --> 00:16:20.939
+a function as an argument and outputs a function
+right so LV is the function right you take
+
+00:16:20.939 --> 00:16:26.559
+V you apply L on it and then the resulting
+function you apply on S right.
+
+00:16:26.559 --> 00:16:32.420
+So likewise U take you apply L on it and the
+resulting function you apply on S okay so
+
+00:16:32.420 --> 00:16:41.500
+I am first making the assumption that LV of
+s is greater than LU(S) okay so what do I
+
+00:16:41.500 --> 00:16:51.310
+need to show come closer than VS and US that
+is basic to order remember we did this last
+
+00:16:51.310 --> 00:16:55.970
+class also we did the same thing so we assumed
+one way we showed it and then we flip the
+
+00:16:55.970 --> 00:17:00.949
+other way showed it and then we showed that
+for every state s the absolute value in contracted
+
+00:17:00.949 --> 00:17:04.800
+that for the norm will also contract exactly.
+The same thing that we did last class that
+
+00:17:04.800 --> 00:17:09.060
+is why I asked people to revise from the last
+class and come so that I can just go through
+
+00:17:09.060 --> 00:17:13.559
+this very easily right and this clarifying
+this because last class after the class a
+
+00:17:13.559 --> 00:17:20.029
+lot of people are asking me questions about
+this LVLU business so that is clear right
+
+00:17:20.029 --> 00:18:06.750
+so LV is a function which is operating on
+S okay 
+
+00:18:06.750 --> 00:18:12.000
+right so a* is the one that gives you the
+max right so that gives you the max here so
+
+00:18:12.000 --> 00:18:21.740
+I remove the max and wrote it in terms of
+a a* right so this is essentially a L(V) okay.
+
+00:18:21.740 --> 00:18:25.690
+So I put a less than or equal to here so I
+am going to do something on the other term
+
+00:18:25.690 --> 00:18:31.159
+which L(U) okay so if I am going to expand
+I L(U) I might as L = equal to right so I
+
+00:18:31.159 --> 00:19:08.429
+am going to do something tricky with the other
+term so what is it tricky things I recommended
+
+00:19:08.429 --> 00:19:15.380
+so sick eating at it I got rid of the max
+here also but instead of using the max corresponding
+
+00:19:15.380 --> 00:19:25.380
+to you Uj I am using the max corresponding
+to V right so a* is what is a max when V is
+
+00:19:25.380 --> 00:19:32.669
+the function here right a*is the max and V
+is the function here but I am plugging in
+
+00:19:32.669 --> 00:19:40.549
+a* itself here right.
+So what can you tell me about this it will
+
+00:19:40.549 --> 00:19:50.789
+be less than the actual max when L operates
+on U see that so when the L is operating on
+
+00:19:50.789 --> 00:19:59.050
+this right so essentially there is a max over
+here and there will be U here right but instead
+
+00:19:59.050 --> 00:20:03.750
+of taking the max action I am taking some
+arbitrary action which is a* and they plugging
+
+00:20:03.750 --> 00:20:12.490
+it in there for this will be less than the
+max right there for this difference will be
+
+00:20:12.490 --> 00:20:19.690
+greater than this because this in this term
+this is also the max corresponding to V and
+
+00:20:19.690 --> 00:20:24.720
+this will be the max corresponding to U right
+so I am taking the difference but now what
+
+00:20:24.720 --> 00:20:29.490
+I have done is have replaced this term with
+something that smaller therefore this will
+
+00:20:29.490 --> 00:20:32.900
+be greater this difference will be greater
+okay.
+
+00:20:32.900 --> 00:20:42.350
+Is it clear V is not optimal but a* is optimal
+for V when I am doing that maxing maximizing
+
+00:20:42.350 --> 00:20:48.611
+thing here right so a* is the solution for
+this maximizing this optimization this is
+
+00:20:48.611 --> 00:20:54.210
+an optimization problem right so I am doing
+our max over a so as a* is one of the solutions
+
+00:20:54.210 --> 00:20:59.830
+for solving this problem when the function
+here is V it may or may not be the solution
+
+00:20:59.830 --> 00:21:05.889
+when the function is U so if it is the solution
+then this will be inequality if it is not
+
+00:21:05.889 --> 00:21:08.750
+a solution then this will be lesser than okay
+great.
+
+00:21:08.750 --> 00:21:12.929
+So now the advantage of doing this we can
+start canceling out some terms and try to
+
+00:21:12.929 --> 00:21:20.700
+make this simpler so what will you end up
+with is.
+
+00:21:20.700 --> 00:22:02.200
+.
+So this term is equal to there is a same trick
+
+00:22:02.200 --> 00:22:09.059
+that we did head right so this is component-wise
+difference it will be bounded by the max difference
+
+00:22:09.059 --> 00:22:13.870
+which is the norm right and once I write it
+as the norm it becomes independent of J so
+
+00:22:13.870 --> 00:22:21.740
+I can take that out and they have this summation
+and the summation is 1 right so what do I
+
+00:22:21.740 --> 00:22:42.679
+have here so I have so I can do the same thing
+I can flip things around right I can start
+
+00:22:42.679 --> 00:22:50.480
+with 0 less than or equal to LU – LV right
+and then pick the action that maximizes the
+
+00:22:50.480 --> 00:22:56.669
+right-hand side for U and then do the whole
+thing right I will get exactly the same thing.
+
+00:22:56.669 --> 00:23:28.200
+So showing the other way round also right
+so I finally get that okay so now this gives
+
+00:23:28.200 --> 00:23:31.779
+us a way of solving the solving in MTP.
+.
+
+00:23:31.779 --> 00:23:41.860
+How do I do that start with an arbitrary value
+function just keep applying L repeatedly I
+
+00:23:41.860 --> 00:23:45.419
+will end up with an optimal value function
+so once I have an optimal value function how
+
+00:23:45.419 --> 00:23:52.260
+will I recover an optimal policy I can do
+this essentially what I did here run this
+
+00:23:52.260 --> 00:23:58.309
+on V* right this will give me an optimal policy
+then I can pick any action in the arbitrary
+
+00:23:58.309 --> 00:24:04.500
+action from that from the R max and take that
+as may optimal action or I could just define
+
+00:24:04.500 --> 00:24:08.220
+some kind of a probability distribution over
+that take the dress off Matt great so we will
+
+00:24:08.220 --> 00:24:27.600
+just write that down so this is a very popular
+algorithm called 
+
+00:24:27.600 --> 00:24:30.880
+value iteration because you start with the
+value and then you iterate over it until you
+
+00:24:30.880 --> 00:24:36.889
+come to the final conversion value right.
+So this is yeah so for people who are wondering
+
+00:24:36.889 --> 00:24:42.190
+about their programming assignment herd management
+assignment so value iteration is one of the
+
+00:24:42.190 --> 00:24:47.809
+things I am asking you to do right so you
+just start with an arbitrary value function
+
+00:24:47.809 --> 00:24:54.340
+later then repeatedly implement L and run
+it until you come to a fixed point the only
+
+00:24:54.340 --> 00:25:03.920
+interesting thing now here is what is the
+what is what how many more times do you have
+
+00:25:03.920 --> 00:25:11.779
+to say arbitrary what is the more interesting
+point is we have talked about one end I said
+
+00:25:11.779 --> 00:25:21.130
+it is not the right answer.
+When do I stop and wait not the number but
+
+00:25:21.130 --> 00:25:24.639
+when do I stop it cannot be a simple number
+I just cannot say run a thousand times okay
+
+00:25:24.639 --> 00:25:30.340
+so I should have some other convergent test
+that tells me when it has topped right essentially
+
+00:25:30.340 --> 00:25:37.020
+I keep doing it until successive iterates
+or within a few are same you are a great event
+
+00:25:37.020 --> 00:25:48.470
+but same will not happen same will take forever
+very close let us listen ah but then you are
+
+00:25:48.470 --> 00:25:51.690
+not computing the policy every time right
+the policy itself a painful process you have
+
+00:25:51.690 --> 00:25:55.690
+to be greedy with respect to the value function.
+So every time if every iteration you are computing
+
+00:25:55.690 --> 00:26:00.330
+the same policy it becomes a problem we are
+going to compute the policy in every iteration
+
+00:26:00.330 --> 00:26:05.279
+then it might be a problem because you have
+to do an additional computation maybe not
+
+00:26:05.279 --> 00:26:09.970
+I mean it is a call that you have to make
+but if you want to give certain guarantees
+
+00:26:09.970 --> 00:26:15.320
+about what will hold when things converge
+then you better have a bound on the value
+
+00:26:15.320 --> 00:26:18.760
+function okay.
+So we will come to another algorithm called
+
+00:26:18.760 --> 00:26:25.730
+policy iteration where we can work with the
+space of policies okay but right now I am
+
+00:26:25.730 --> 00:26:36.780
+just going to do this with value functions
+right yeah so select some V0 belonging to
+
+00:26:36.780 --> 00:27:45.179
+be pick an epsilon for our stopping criterion
+and start your iteration another just a little
+
+00:27:45.179 --> 00:28:08.940
+component-wise have written your VN+ 1 =VVN+
+1= LVN is basically what I am asking you to
+
+00:28:08.940 --> 00:28:16.580
+do here right.
+.
+
+00:28:16.580 --> 00:29:54.839
+So this is nothing okay so the interesting
+part is this.
+
+00:29:54.839 --> 00:29:57.159
+.
+Is fine all of this is fine the only tricky
+
+00:29:57.159 --> 00:30:01.100
+thing is why do you have this weird expression
+here why not just epsilon why do you have
+
+00:30:01.100 --> 00:30:14.410
+epsilon into 1- ? / 2 ? so I am doing value
+iteration what I am I computing what I am
+
+00:30:14.410 --> 00:30:21.340
+interested in compliment what do I expect
+output at the end of V* or ? star or whatever
+
+00:30:21.340 --> 00:30:30.070
+it I'm expecting to output V* right but my
+stopping condition is VN and VN+ 1 right but
+
+00:30:30.070 --> 00:30:36.200
+I would like to give you guarantees on how
+far away I am from V* at the end of the day
+
+00:30:36.200 --> 00:30:42.029
+not necessarily how close VN and VN + 1 are
+right so we will take this close class condition
+
+00:30:42.029 --> 00:30:48.600
+and convert it into a guarantee on how close
+you are to be S* and then when we do that
+
+00:30:48.600 --> 00:30:58.509
+conversion we will find that you will be what
+do you think you will be guess guys I mean
+
+00:30:58.509 --> 00:31:08.730
+you should be able to guess by now what do
+you think will be epsilon close to V* okay.
+

@@ -1,0 +1,1161 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.146 --> 00:00:14.760
+[Music]
+
+00:00:14.760 --> 00:00:18.360
+so the first thing I want to&nbsp;
+talk about is our very simple
+
+00:00:18.360 --> 00:00:35.320
+uh what the uh what the textbook&nbsp;
+calls value function based
+
+00:00:35.320 --> 00:00:46.680
+methods okay uh what the textbook calls value&nbsp;
+function based methods uh these are approaches&nbsp;&nbsp;
+
+00:00:46.680 --> 00:00:52.560
+where I don't know the Q Star right but I'm&nbsp;
+going to try and form a estimate of the Q&nbsp;&nbsp;
+
+00:00:52.560 --> 00:01:03.080
+Stars so how can I do that so what is qar the&nbsp;
+expected payoff right so I I play each action I&nbsp;&nbsp;
+
+00:01:03.080 --> 00:01:08.720
+choose each action say 10 times I can take the&nbsp;
+average of that that gives me an estimate for
+
+00:01:08.720 --> 00:01:21.120
+Q right so we'll denote the estimates by QT&nbsp;
+so whenever we attach a estimate to an action&nbsp;&nbsp;
+
+00:01:21.120 --> 00:01:26.600
+we'll be using the notation Q okay this this so&nbsp;
+that you know so we use cues here and whenever&nbsp;&nbsp;
+
+00:01:26.600 --> 00:01:39.720
+we estimate attach a estimate of the payoffs&nbsp;
+to a state we'll denote it by v v stands for&nbsp;&nbsp;
+
+00:01:39.720 --> 00:01:48.440
+Value function okay that's easy to remember&nbsp;
+don't ask me what Q stands for so so one of&nbsp;&nbsp;
+
+00:01:48.440 --> 00:01:54.880
+the problems with RL is that uh because there are&nbsp;
+so many different influences that came in right&nbsp;&nbsp;
+
+00:01:54.880 --> 00:01:59.840
+uh so you have at least three different sets&nbsp;
+of notations that people use in the literature&nbsp;&nbsp;
+
+00:02:01.400 --> 00:02:06.600
+okay so you would have to swap back and forth if&nbsp;
+you're reading papers in reinforcement learning&nbsp;&nbsp;
+
+00:02:06.600 --> 00:02:14.440
+right so somebody will say that uh uh the value&nbsp;
+function is denoted by J right and Q denotes the&nbsp;&nbsp;
+
+00:02:14.440 --> 00:02:21.120
+cost function right so if they had used disjoint&nbsp;
+set of symbols at least it's easy for us right but&nbsp;&nbsp;
+
+00:02:21.120 --> 00:02:25.840
+they'll use the same symbol that one one body of&nbsp;
+literature will call the value function another&nbsp;&nbsp;
+
+00:02:25.840 --> 00:02:31.520
+body will call that the payoff function right&nbsp;
+which essentially responds to the reward that&nbsp;&nbsp;
+
+00:02:31.520 --> 00:02:39.600
+you are getting at every time right so that will&nbsp;
+be denoted by Q so there all kinds of confusions&nbsp;&nbsp;
+
+00:02:39.600 --> 00:02:47.560
+are there so this is one one set of notations that&nbsp;
+I'm choosing essentially because it's the one that&nbsp;&nbsp;
+
+00:02:47.560 --> 00:02:55.600
+is adopted in the SAT and B book in fact people&nbsp;
+who are reading Edition one right there's been a&nbsp;&nbsp;
+
+00:02:55.600 --> 00:03:03.920
+overhaul of uh notation in Edition two right&nbsp;
+so to the extent possible I'll try to follow&nbsp;&nbsp;
+
+00:03:03.920 --> 00:03:09.520
+the Edition two notation uh but Edition one is&nbsp;
+ingrained in me right so I mean I've been using&nbsp;&nbsp;
+
+00:03:09.520 --> 00:03:19.480
+Edition one notation for uh God knows 15 years&nbsp;
+or something right so suddenly they decided to&nbsp;&nbsp;
+
+00:03:19.480 --> 00:03:24.360
+change the notation in Edition two so by force&nbsp;
+of habit I might slip into Edition one notation&nbsp;&nbsp;
+
+00:03:24.360 --> 00:03:31.440
+occasionally so it's in your uh well-being to&nbsp;
+read ahead so that you can correct me whenever&nbsp;&nbsp;
+
+00:03:31.440 --> 00:03:35.920
+I do that right just don't wait for me to&nbsp;
+teach and then go and or well don't wait&nbsp;&nbsp;
+
+00:03:35.920 --> 00:03:42.240
+for the quizzes and then read the book right&nbsp;
+uh but read ahead and come to class okay this&nbsp;&nbsp;
+
+00:03:42.240 --> 00:03:47.760
+will certainly certainly help you significantly&nbsp;
+in following the material better right so I'm&nbsp;&nbsp;
+
+00:03:47.760 --> 00:03:56.640
+deliberately going slow today warming you up&nbsp;
+okay but then uh there's lot lot of material&nbsp;&nbsp;
+
+00:03:56.640 --> 00:04:02.760
+that we cover in fact uh usually I cover the&nbsp;
+material in the book in about uh one and a half
+
+00:04:02.760 --> 00:04:09.400
+months right and the rest of the time I'll&nbsp;
+be doing material outside the book that one&nbsp;&nbsp;
+
+00:04:09.400 --> 00:04:19.120
+and half months 2 months something okay so&nbsp;
+and the book is Big right so at some point&nbsp;&nbsp;
+
+00:04:19.120 --> 00:04:26.720
+I'll switch modes and start going fast so so&nbsp;
+reading ahead helps okay uh so we're going&nbsp;&nbsp;
+
+00:04:26.720 --> 00:04:32.000
+to have QT so essentially what you can&nbsp;
+do is uh you can just take uh whenever I
+
+00:04:32.000 --> 00:04:43.120
+took whenever I took action a right the&nbsp;
+reward I got at that time and I can just&nbsp;&nbsp;
+
+00:04:43.120 --> 00:04:49.520
+keep adding those up and divide by the number&nbsp;
+of times I took action a that will give me my
+
+00:04:49.520 --> 00:04:59.640
+QT right so how will we write this&nbsp;
+let's look at introduce some notation
+
+00:05:04.560 --> 00:05:09.880
+so that is a notation that I will use whenever&nbsp;
+I want an indicator function right so normally&nbsp;&nbsp;
+
+00:05:09.880 --> 00:05:22.040
+what is the notation that people use for indicator&nbsp;
+functions huh I or Delta right so people typically&nbsp;&nbsp;
+
+00:05:22.040 --> 00:05:29.800
+use Delta or I so I'll use one uh because&nbsp;
+we use I and Delta for other things later on&nbsp;&nbsp;
+
+00:05:29.800 --> 00:05:36.440
+okay so this essentially means that it is&nbsp;
+one whenever a is a otherwise it's zero
+
+00:05:36.440 --> 00:05:47.840
+times so what should I divide this
+
+00:05:47.840 --> 00:06:04.720
+by okay so this gives me the the average&nbsp;
+right great so once I have this now I have&nbsp;&nbsp;
+
+00:06:04.720 --> 00:06:12.200
+made an estimate for my qars right once I have an&nbsp;
+estimate for my Q Stars so how will I select an
+
+00:06:12.200 --> 00:06:29.720
+action ah apologies
+
+00:06:29.720 --> 00:06:33.840
+okay so I use T on the left hand side so&nbsp;
+I can't use T as the running variable as
+
+00:06:33.840 --> 00:06:45.680
+well okay so now I have come to time T&nbsp;
+I have this estimates for my Q Stars so&nbsp;&nbsp;
+
+00:06:45.680 --> 00:06:51.840
+how can I use that for selecting actions&nbsp;
+ma select the maximum right so I could
+
+00:06:51.840 --> 00:07:01.720
+be what we call Greedy right&nbsp;
+so greedy would be I'm going to
+
+00:07:01.720 --> 00:07:18.640
+select right so I'll take&nbsp;
+that action that gives me the
+
+00:07:18.640 --> 00:07:28.560
+max so AR Max is the action that gives me the max&nbsp;
+right so I'll take that action that gives me the&nbsp;&nbsp;
+
+00:07:28.560 --> 00:07:36.200
+Max and use that has the action to perform at that&nbsp;
+time right is that a good choice or alternatively&nbsp;&nbsp;
+
+00:07:36.200 --> 00:07:42.680
+what does this Choice correspond to exploitation&nbsp;
+this Choice corresponds to exploitation but I&nbsp;&nbsp;
+
+00:07:42.680 --> 00:07:48.160
+can't just exploit right I have to explore as&nbsp;
+well right so I can't come up with an algorithm&nbsp;&nbsp;
+
+00:07:48.160 --> 00:07:54.480
+that only exploits right so what do you think&nbsp;
+will happen let us say that I pulled an arm&nbsp;&nbsp;
+
+00:07:54.480 --> 00:07:59.440
+right the first time well I select an action&nbsp;
+and then I get a reward of one let us say&nbsp;&nbsp;
+
+00:08:00.120 --> 00:08:06.800
+right so what will happen to my Q's it will be&nbsp;
+one what about my other Q's well depends on what&nbsp;&nbsp;
+
+00:08:06.800 --> 00:08:11.040
+you initialize them with so if you initialize&nbsp;
+them with zero they'll stay at zero I could have&nbsp;&nbsp;
+
+00:08:11.040 --> 00:08:18.120
+initialized them with 100 right or could have&nbsp;
+initialized them with minus 100 I don't know&nbsp;&nbsp;
+
+00:08:18.120 --> 00:08:22.760
+whatever it is initialize them with they'll&nbsp;
+stay there but this one will become one and&nbsp;&nbsp;
+
+00:08:22.760 --> 00:08:29.560
+now if I'm doing greedy what will happen I'll&nbsp;
+do this again let's assume that I get a one&nbsp;&nbsp;
+
+00:08:29.560 --> 00:08:36.040
+again right and they keep getting one every&nbsp;
+time I pull this so what will happen is I'll&nbsp;&nbsp;
+
+00:08:36.040 --> 00:08:43.400
+never ever sample any of the other arms right it&nbsp;
+could very well be that arm three has a reward of
+
+00:08:43.400 --> 00:08:50.360
+50 right just because I happen to&nbsp;
+pull arm one the first time right&nbsp;&nbsp;
+
+00:08:50.360 --> 00:08:54.480
+I'll never ever go and pull arm three&nbsp;
+even though it has a much much higher
+
+00:08:54.480 --> 00:08:59.440
+reward right&nbsp;&nbsp;
+
+00:09:00.120 --> 00:09:05.440
+so we don't want to be exploitative completely&nbsp;
+so we need to have some kind of a exploration
+
+00:09:05.440 --> 00:09:29.360
+policy so the simple exploration policy okay so&nbsp;
+I'm going to confuse you a little bit uh is called
+
+00:09:29.920 --> 00:09:36.720
+called Epsilon greedy nothing to do with this&nbsp;
+Epsilon okay so this Epsilon is completely&nbsp;&nbsp;
+
+00:09:36.720 --> 00:09:41.120
+different okay talks about a solution concept&nbsp;
+and just because I have something Epsilon grey&nbsp;&nbsp;
+
+00:09:41.120 --> 00:09:45.120
+doesn't mean I'm going to give you some&nbsp;
+Epsilon uh pack guarantee okay this is&nbsp;&nbsp;
+
+00:09:45.120 --> 00:09:49.880
+a completely different Epsilon uh in fact&nbsp;
+it was named Epsilon 3D before people even&nbsp;&nbsp;
+
+00:09:49.880 --> 00:09:56.960
+started thinking about bringing all these pack&nbsp;
+optimality questions into uh RL okay so what&nbsp;&nbsp;
+
+00:09:56.960 --> 00:10:05.800
+does epsilon GD mean any guesses choosin of the&nbsp;
+sorry May choosing within epon of the 3 solution&nbsp;&nbsp;
+
+00:10:05.800 --> 00:10:09.400
+with within Epsilon of the 3D solution okay good&nbsp;
+choice but I say that has nothing to do with this
+
+00:10:09.400 --> 00:10:16.440
+Epsilon it's got nothing to do with this&nbsp;
+Epsilon what I do is with probability 1&nbsp;&nbsp;
+
+00:10:16.440 --> 00:10:21.840
+minus Epsilon I'll be greedy okay&nbsp;
+with probability Epsilon I'll just
+
+00:10:21.840 --> 00:10:33.000
+explore okay so Epsilon gitty&nbsp;
+means with 1 minus Epsilon I'll
+
+00:10:33.000 --> 00:10:44.880
+choose okay with probability 1us&nbsp;
+Epsilon probability Epsilon I'll
+
+00:10:44.880 --> 00:11:02.440
+choose I'll choose uniformly from the set of&nbsp;
+actions here okay so one thing which you should&nbsp;&nbsp;
+
+00:11:02.440 --> 00:11:09.800
+note here is that if I choose uniformly from&nbsp;
+a I still have a probability of hitting that&nbsp;&nbsp;
+
+00:11:09.800 --> 00:11:22.080
+AR maxia right so in fact the probability of me&nbsp;
+taking this action is 1 - Epsilon plus Epsilon by
+
+00:11:22.080 --> 00:11:29.720
+n right the probability of&nbsp;
+me exploring is actually&nbsp;&nbsp;
+
+00:11:29.720 --> 00:11:37.600
+N - 1 Epsilon by n okay so this&nbsp;
+is something just small thing&nbsp;&nbsp;
+
+00:11:37.600 --> 00:11:41.840
+nitpicking thing but just remember that&nbsp;
+so the probability of exploration is not
+
+00:11:41.840 --> 00:11:49.720
+Epsilon okay because because I'm picking&nbsp;
+uniformly randomly you could choose to say&nbsp;&nbsp;
+
+00:11:49.720 --> 00:11:56.720
+that I pick uniformly from a minus this argmax&nbsp;
+action right doesn't make a difference but I'm&nbsp;&nbsp;
+
+00:11:56.720 --> 00:12:02.480
+just pointing out that there is a small difference&nbsp;
+just remember that okay so Epsilon Grey by far is&nbsp;&nbsp;
+
+00:12:02.480 --> 00:12:08.960
+one of the most popular uh exploration it's by far&nbsp;
+the most popular exploration strategy that people&nbsp;&nbsp;
+
+00:12:08.960 --> 00:12:18.280
+adopt okay by far the most popular exploration&nbsp;
+strategy uh there's another one which ironically&nbsp;&nbsp;
+
+00:12:18.280 --> 00:12:28.240
+I couldn't find in Edition two of the book which&nbsp;
+is also rather popular it's called [Applause] Uh&nbsp;&nbsp;
+
+00:12:28.240 --> 00:12:34.520
+softmax or maybe I flip through Edition to to&nbsp;
+quickly to notice it uh but uh so the softmax&nbsp;&nbsp;
+
+00:12:34.520 --> 00:12:41.760
+exploration policy does something slightly&nbsp;
+cleverer okay so if you think about the Epsilon&nbsp;&nbsp;
+
+00:12:41.760 --> 00:12:49.960
+greedy what is it uh that you would notice is&nbsp;
+that I have the best action best according to&nbsp;&nbsp;
+
+00:12:49.960 --> 00:12:54.240
+my current estimates right so when I say whenever&nbsp;
+I say greedy or best it is according to my current&nbsp;&nbsp;
+
+00:12:54.240 --> 00:12:59.920
+estimate it's not Q Stars okay it's according to&nbsp;
+capital Q whenever I say greedy is according to&nbsp;&nbsp;
+
+00:12:59.920 --> 00:13:08.440
+capital Q okay so the greedy action gets the&nbsp;
+bulk of the probability right and every other&nbsp;&nbsp;
+
+00:13:08.440 --> 00:13:17.040
+action has a equal probability of being picked in&nbsp;
+Exploration correct but then if some actions are&nbsp;&nbsp;
+
+00:13:17.040 --> 00:13:23.000
+clearly bad right if I figure out some actions&nbsp;
+are clearly bad so I don't want to be picking
+
+00:13:23.000 --> 00:13:29.560
+them in during exploration because I know that&nbsp;
+they are bad I really don't don't want to be&nbsp;&nbsp;
+
+00:13:29.560 --> 00:13:33.520
+picking them during exploration or at least I want&nbsp;
+to reduce the probability of picking them during
+
+00:13:33.520 --> 00:13:41.680
+exploration right and if two actions look&nbsp;
+equally likely to be good right maybe Point&nbsp;&nbsp;
+
+00:13:41.680 --> 00:13:49.040
+001 difference right some small Delta difference&nbsp;
+between the two actions in epsilon 3D what will&nbsp;&nbsp;
+
+00:13:49.040 --> 00:13:55.640
+happen the one that is that 01 higher will get&nbsp;
+the highest probability okay and the other one&nbsp;&nbsp;
+
+00:13:55.640 --> 00:14:02.720
+will have the same probability as the all the&nbsp;
+other arms of being picked right but then in&nbsp;&nbsp;
+
+00:14:02.720 --> 00:14:07.920
+reality I just want to be able to compare these&nbsp;
+two things more closely and figure out which one&nbsp;&nbsp;
+
+00:14:07.920 --> 00:14:12.640
+is better right because the difference is so&nbsp;
+small I really want to compare them and figure&nbsp;&nbsp;
+
+00:14:12.640 --> 00:14:19.520
+out which one is better right so what people did&nbsp;
+was they came up with this soft Max idea right&nbsp;&nbsp;
+
+00:14:19.520 --> 00:14:27.560
+where instead of uh giving all the probability&nbsp;
+to one action right I make the probability of&nbsp;&nbsp;
+
+00:14:27.560 --> 00:14:33.920
+picking the actions proportional to the the&nbsp;
+estimate current estimate so whatever is the&nbsp;&nbsp;
+
+00:14:33.920 --> 00:14:42.000
+current Q I'll make the probability proportional&nbsp;
+to the Q right so ideally it should be something
+
+00:14:42.000 --> 00:14:59.040
+like right so this should be&nbsp;
+the probability with which
+
+00:15:02.960 --> 00:15:09.240
+at the T step I'll pick action a right that should&nbsp;
+be the probability right what is the problem with
+
+00:15:09.240 --> 00:15:22.120
+that different of one of them might beus&nbsp;
+one might be one different orders ERS yeah&nbsp;&nbsp;
+
+00:15:22.120 --> 00:15:26.600
+different signs right so I mean so&nbsp;
+things could be all so so negative&nbsp;&nbsp;
+
+00:15:26.600 --> 00:15:28.960
+numbers in fact I could even end&nbsp;
+up with a negative probability
+
+00:15:31.000 --> 00:15:36.320
+right if my QT of a was minus one&nbsp;
+right then I'll end up with a minus&nbsp;&nbsp;
+
+00:15:36.320 --> 00:15:38.680
+something as the probability of&nbsp;
+picking that action doesn't make&nbsp;&nbsp;
+
+00:15:38.680 --> 00:15:58.920
+sense right so to Encompass all kinds&nbsp;
+of options what do we do exponentiate
+
+00:16:09.440 --> 00:16:10.960
+right so why is this called Soft
+
+00:16:10.960 --> 00:16:18.520
+Max because it is not greedy does not return&nbsp;
+to you the one that has the highest Q value&nbsp;&nbsp;
+
+00:16:18.520 --> 00:16:29.360
+all the time but if that is a big difference it&nbsp;
+will return return that value to you most often
+
+00:16:29.360 --> 00:16:35.920
+let's Suppose there are four actions right&nbsp;
+and action one has a value of say 19 Action&nbsp;&nbsp;
+
+00:16:35.920 --> 00:16:44.480
+two has a value of uh 1.2 action 3 has a&nbsp;
+value of uh 7 Action 4 has a value of Min&nbsp;&nbsp;
+
+00:16:44.480 --> 00:16:50.760
+-.3 right so now this will return to&nbsp;
+you most often it will return action&nbsp;&nbsp;
+
+00:16:50.760 --> 00:16:56.120
+one to you right so because that has a&nbsp;
+significantly higher value okay that's&nbsp;&nbsp;
+
+00:16:56.120 --> 00:17:00.240
+why it's called Soft Max right sometimes&nbsp;
+what people do is they throw in another
+
+00:17:00.240 --> 00:17:12.920
+parameter called the temperature parameter&nbsp;
+sometimes so beta right so now think about it if&nbsp;&nbsp;
+
+00:17:12.920 --> 00:17:23.680
+beta is very very high so what will happen to your&nbsp;
+soft Max function Rel Rel larg value everything&nbsp;&nbsp;
+
+00:17:23.680 --> 00:17:28.840
+will get squished down right so beta is very&nbsp;
+very high so essentially you'll be behaving at&nbsp;&nbsp;
+
+00:17:30.480 --> 00:17:35.800
+random uniformly random right because all the&nbsp;
+regardless of what the Q values are right if&nbsp;&nbsp;
+
+00:17:35.800 --> 00:17:41.200
+the beta is very very let's say beta is 1 million&nbsp;
+right and I say 17 and 1.8 no no no doesn't make&nbsp;&nbsp;
+
+00:17:41.200 --> 00:17:48.480
+any difference right all of them will look close&nbsp;
+to zero right so essentially I'll be picking all&nbsp;&nbsp;
+
+00:17:48.480 --> 00:17:53.440
+actions uniformly randomly right so this way&nbsp;
+it's called temperature so if you're very very&nbsp;&nbsp;
+
+00:17:53.440 --> 00:17:59.920
+hot right so things will move around at random&nbsp;
+right and then people typically cool it down so&nbsp;&nbsp;
+
+00:17:59.920 --> 00:18:04.240
+they make beta smaller and smaller and smaller&nbsp;
+so that from a very high temperature where you&nbsp;&nbsp;
+
+00:18:04.240 --> 00:18:08.360
+are essentially behaving at random regardless&nbsp;
+of what the Q values are as you keep cooling&nbsp;&nbsp;
+
+00:18:08.360 --> 00:18:14.600
+it down it becomes more and more peaked so if&nbsp;
+beta becomes closer and closer to zero what
+
+00:18:14.600 --> 00:18:24.680
+happens it becomes Max right as beta&nbsp;
+goes to zero this function goes to&nbsp;&nbsp;
+
+00:18:24.680 --> 00:18:29.040
+Max right so it become greedy so&nbsp;
+it gives an additional parameter&nbsp;&nbsp;
+
+00:18:29.040 --> 00:18:33.080
+for tuning I mean if you if you don't trust&nbsp;
+me you can work it out right you guys are&nbsp;&nbsp;
+
+00:18:33.080 --> 00:18:36.640
+smart enough to work that out right so this&nbsp;
+gives you an additional parameter for tuning&nbsp;&nbsp;
+
+00:18:36.640 --> 00:18:46.600
+how sharp your probability needs to fall&nbsp;
+right so so this called Soft Max and uh&nbsp;&nbsp;
+
+00:18:46.600 --> 00:18:58.720
+so if you think about Epsilon greedy then uh&nbsp;
+writing it in this notation so this will be
+
+00:19:25.600 --> 00:19:31.480
+right so probability a equal to a star will be 1&nbsp;
+- Epsilon plus Epsilon by n where a star is the&nbsp;&nbsp;
+
+00:19:31.480 --> 00:19:39.280
+greedy action according to the current estimate&nbsp;
+right the probability 8 is not equal to a star or&nbsp;&nbsp;
+
+00:19:39.280 --> 00:19:47.280
+probability a is equal to a which is not equal to&nbsp;
+a star will be Epsilon by n okay and likewise here&nbsp;&nbsp;
+
+00:19:47.280 --> 00:19:52.200
+you have this probabilities here okay so these&nbsp;
+are the two rather popular ways of selecting&nbsp;&nbsp;
+
+00:19:52.200 --> 00:19:58.640
+actions in fact uh Epsilon gy and softmax are also&nbsp;
+used in the full reinforcement learning problem
+
+00:20:01.520 --> 00:20:07.440
+right it's also used in the full reinforcement&nbsp;
+learning problem for selecting for implementing&nbsp;&nbsp;
+
+00:20:07.440 --> 00:20:14.240
+the exploration policy right you can&nbsp;
+convince yourself that Epsilon very&nbsp;&nbsp;
+
+00:20:14.240 --> 00:20:20.280
+simply you can convince yourself that Epsilon&nbsp;
+greeny right uh will give you asymptotic
+
+00:20:20.280 --> 00:20:26.200
+correctness provided something but uh can&nbsp;&nbsp;
+
+00:20:26.200 --> 00:20:28.640
+you convince yourself that it'll&nbsp;
+give you a SYM totic correctness
+
+00:20:33.520 --> 00:20:39.160
+right I mean you're always going to be taking&nbsp;
+all the actions right So eventually you'll&nbsp;&nbsp;
+
+00:20:39.160 --> 00:20:46.400
+converge to the true true true expectations&nbsp;
+right you'll eventually converge to Q star&nbsp;&nbsp;
+
+00:20:46.400 --> 00:20:51.640
+because you're taking all the actions all&nbsp;
+the time right so but what is the problem&nbsp;&nbsp;
+
+00:20:51.640 --> 00:20:57.640
+if I keep my Epsilon fixed at some value let&nbsp;
+say I keep Epsilon fixed at 0.1 right 90% of&nbsp;&nbsp;
+
+00:20:57.640 --> 00:21:03.880
+the times I'm behaving optimally 10% of the&nbsp;
+times I choose at random right so what will&nbsp;&nbsp;
+
+00:21:03.880 --> 00:21:09.360
+happen I will know the right Q Stars after a&nbsp;
+long time but I'll still be behaving randomly&nbsp;&nbsp;
+
+00:21:09.360 --> 00:21:15.960
+10% of the times right what Astic correctness&nbsp;
+says is eventually I should be only giving&nbsp;&nbsp;
+
+00:21:15.960 --> 00:21:20.560
+you the behaving the according to the right arm&nbsp;
+right so I should be only doing the right choice&nbsp;&nbsp;
+
+00:21:20.560 --> 00:21:28.640
+eventually to achieve that what should you do&nbsp;
+you have to cool Epsilon right so Epsilon has&nbsp;&nbsp;
+
+00:21:28.640 --> 00:21:33.560
+to keep decreasing but then you shouldn't&nbsp;
+decrease it too fast if you decrease it&nbsp;&nbsp;
+
+00:21:33.560 --> 00:21:38.680
+too fast then you don't have the guarantee that&nbsp;
+you will get the correct Q Stars right so there&nbsp;&nbsp;
+
+00:21:38.680 --> 00:21:48.400
+are ways in which you can balance this right and&nbsp;
+uh so in fact people show that if Epsilon Falls
+
+00:21:48.400 --> 00:21:53.120
+as 1 by
+
+00:21:53.120 --> 00:22:02.960
+T right that's usually a sufficient ient rate&nbsp;
+but unfortunately uh that will actually slow&nbsp;&nbsp;
+
+00:22:02.960 --> 00:22:09.680
+down your convergence tremendously because uh&nbsp;
+it becomes truly an asymptotic convergence I&nbsp;&nbsp;
+
+00:22:09.680 --> 00:22:14.840
+mean you have to run it till Infinity for you&nbsp;
+to get convergence so so in practice what you&nbsp;&nbsp;
+
+00:22:14.840 --> 00:22:22.600
+can do is you can cool it in steps right set&nbsp;
+a high Epsilon right run it for a while okay&nbsp;&nbsp;
+
+00:22:22.600 --> 00:22:26.520
+and then drop it a little bit and then run it&nbsp;
+for a while and then drop it a little bit then&nbsp;&nbsp;
+
+00:22:26.520 --> 00:22:32.040
+run it for a while and so on so forth right&nbsp;
+so the figuring out how long the while should&nbsp;&nbsp;
+
+00:22:32.040 --> 00:22:36.680
+be is is is a tricky question depends on&nbsp;
+a variety of factors but you can do some&nbsp;&nbsp;
+
+00:22:36.680 --> 00:22:44.360
+kind of empirical estimates for the time&nbsp;
+being right good um so do we move on from
+
+00:22:44.360 --> 00:22:54.680
+here okay so before I go on to uh regret&nbsp;
+optimality one small thing which I want to talk&nbsp;&nbsp;
+
+00:22:54.680 --> 00:23:03.960
+about right so here I gave you a way of estimating&nbsp;
+the qts right so what do you notice about
+
+00:23:03.960 --> 00:23:16.640
+that I run experiments till time T right and&nbsp;
+then when I want to know what QT is I look back&nbsp;&nbsp;
+
+00:23:16.640 --> 00:23:21.400
+and see how many times I have taken action&nbsp;
+a and then I take the average right so that&nbsp;&nbsp;
+
+00:23:21.400 --> 00:23:26.760
+essentially means that at time step T I need to&nbsp;
+know what were all the actions I picked earlier&nbsp;&nbsp;
+
+00:23:26.760 --> 00:23:31.920
+and what were all the rewards I got for those&nbsp;
+actions right so I need to remember this whole
+
+00:23:31.920 --> 00:23:36.960
+history right so is there a&nbsp;
+bit more efficient way of doing
+
+00:23:36.960 --> 00:23:40.200
+it
+
+00:23:40.200 --> 00:23:50.560
+huh don't
+
+00:23:50.560 --> 00:23:57.800
+get yeah so I can I can essentially do this in a&nbsp;&nbsp;
+
+00:23:57.800 --> 00:24:01.680
+kind of doing run I can do this&nbsp;
+running sum right so how do I do
+
+00:24:01.680 --> 00:24:07.880
+that right so I want QT of
+
+00:24:07.880 --> 00:24:20.240
+a right so it is some some numbers right&nbsp;
+so it will be essentially QT minus one of
+
+00:24:20.240 --> 00:24:23.400
+a
+
+00:24:23.400 --> 00:24:31.560
+right uh so let me introduce a little bit of&nbsp;
+a notation it make my life a little easier
+
+00:24:31.560 --> 00:24:58.320
+okay okay so the number of times I've&nbsp;
+taken action a I'll denote by NA a okay
+
+00:25:32.240 --> 00:25:33.360
+right people will agree with
+
+00:25:33.360 --> 00:25:43.080
+you yes okay great so assuming&nbsp;
+that I actually took action a&nbsp;&nbsp;
+
+00:25:43.080 --> 00:25:59.240
+at this time right so what will happen [Applause]
+
+00:26:19.520 --> 00:26:20.720
+okay you want me to erase and
+
+00:26:20.720 --> 00:26:28.240
+reite both the numerator and the&nbsp;
+denominator only the denominator
+
+00:26:39.680 --> 00:26:45.120
+numerator is fine okay I'm assuming this is
+
+00:26:45.120 --> 00:26:58.240
+fine okay so now I can do&nbsp;
+this in a incremental fashion
+
+00:27:01.800 --> 00:27:06.760
+right so this is Na by NA + 1 r t by&nbsp;
+NA + 1 I can just keep adding this
+
+00:27:06.760 --> 00:27:14.960
+right so I don't need to remember all the rewards&nbsp;
+all I need to know is how many times I've taken&nbsp;&nbsp;
+
+00:27:14.960 --> 00:27:24.800
+action a so far and what is the previous estimate&nbsp;
+of QT right if a was not equal to a what happens&nbsp;&nbsp;
+
+00:27:24.800 --> 00:27:29.280
+this will vanish this will vanish n and will&nbsp;
+get canceled just the same thing okay so no
+
+00:27:29.280 --> 00:27:41.400
+change is there is there a&nbsp;
+different way we can write
+
+00:27:41.400 --> 00:27:49.960
+this
+
+00:27:49.960 --> 00:27:58.120
+go QT of a okay
+
+00:28:09.080 --> 00:28:09.400
+is it
+
+00:28:09.400 --> 00:28:19.640
+fine people agree with
+
+00:28:19.640 --> 00:28:29.360
+that right this is n by Na by NA a&nbsp;
++ 1 so I can write it as 1 minus 1&nbsp;&nbsp;
+
+00:28:29.360 --> 00:28:58.040
+by NA + 1 right great now I can rearrange this&nbsp;
+quantities and get a better looking expression
+
+00:29:13.240 --> 00:29:19.040
+right looks good so this is a form of&nbsp;
+a general class of equations known as&nbsp;&nbsp;
+
+00:29:19.040 --> 00:29:25.400
+stochastic averaging equations okay and&nbsp;
+there's really no stochasticity uh that&nbsp;&nbsp;
+
+00:29:25.400 --> 00:29:28.040
+you need to worry about here but this&nbsp;
+is called stochastic averaging equation&nbsp;&nbsp;
+
+00:29:28.640 --> 00:29:38.400
+so one way to think about it is I have an old&nbsp;
+estimate right and to the old estimate I add a&nbsp;&nbsp;
+
+00:29:38.400 --> 00:29:46.360
+error term so what is the error term this is my&nbsp;
+target right I should have predicted the reward&nbsp;&nbsp;
+
+00:29:46.360 --> 00:29:54.520
+is RT right so this is my Target and that is my&nbsp;
+actual output right QT minus one is what I said&nbsp;&nbsp;
+
+00:29:54.520 --> 00:30:03.360
+will be the payoff RT was what the actual payoff&nbsp;
+that occurred right so RT minus QT minus 1 a is&nbsp;&nbsp;
+
+00:30:03.360 --> 00:30:13.480
+some kind of a error term right and this is some&nbsp;
+kind of a step size 1 by NA a + 1 is some kind of&nbsp;&nbsp;
+
+00:30:13.480 --> 00:30:21.400
+a step size so what I'm doing is I'm taking my&nbsp;
+world estimate and adding some Alpha times an
+
+00:30:21.400 --> 00:30:29.640
+error right so many many iterative algorithms&nbsp;
+that we have looked at uh even if you had taken&nbsp;&nbsp;
+
+00:30:29.640 --> 00:30:33.760
+ml that some of the algorithms you looked at in&nbsp;
+ml right and many iterative algorithms that we'll&nbsp;&nbsp;
+
+00:30:33.760 --> 00:30:40.960
+look at later in the course will all have this&nbsp;
+form old estimate times I mean plus some Alpha&nbsp;&nbsp;
+
+00:30:40.960 --> 00:30:47.960
+times an error term right what is the thing that&nbsp;
+you should note here why is it called stochastic&nbsp;&nbsp;
+
+00:30:47.960 --> 00:30:57.640
+averaging rule what I'm really trying to find&nbsp;
+out what my real Target is is the what is my&nbsp;&nbsp;
+
+00:30:57.640 --> 00:31:06.120
+real Target Target expect the expected value of RT&nbsp;
+my real Target is not RT right my real Target is&nbsp;&nbsp;
+
+00:31:06.120 --> 00:31:11.360
+the expected value of RT right so my actual&nbsp;
+error should have been expected value of RT&nbsp;&nbsp;
+
+00:31:11.360 --> 00:31:18.800
+minus QT minus one right that would have been my&nbsp;
+actual error but since I don't know the expected&nbsp;&nbsp;
+
+00:31:18.800 --> 00:31:27.920
+value of RT so what I'm using here is a some kind&nbsp;
+of a measurement of that expected value right and&nbsp;&nbsp;
+
+00:31:27.920 --> 00:31:35.320
+and the unbiased measurement is a sample drawn&nbsp;
+from the distribution According to which you're&nbsp;&nbsp;
+
+00:31:35.320 --> 00:31:42.160
+taking the expectation right when I say expected&nbsp;
+value of RT right so RT is a sample right I'm just&nbsp;&nbsp;
+
+00:31:42.160 --> 00:31:45.160
+take I'm going to take the average of all these&nbsp;
+samples that's going to give me the expected&nbsp;&nbsp;
+
+00:31:45.160 --> 00:31:51.920
+value since I don't know the true expectations&nbsp;
+I can operate with these samples right so I'm&nbsp;&nbsp;
+
+00:31:51.920 --> 00:31:58.120
+going to form the an estimate of the Target or&nbsp;
+estimate of the error right by using a sample&nbsp;&nbsp;
+
+00:31:58.120 --> 00:32:03.160
+as opposed to using the true expectation that's&nbsp;
+why we call these a stochastic averaging rules and&nbsp;&nbsp;
+
+00:32:03.160 --> 00:32:08.600
+so this is a very standard form that we'll keep&nbsp;
+seeing again and again in all the algorithms that&nbsp;&nbsp;
+
+00:32:08.600 --> 00:32:17.640
+we look at right so current estimate plus Target&nbsp;
+minus current estimate right so this is the thing&nbsp;&nbsp;
+
+00:32:17.640 --> 00:32:30.240
+right and this particular choice for my Alpha here&nbsp;
+1 by NA + 1 uh uh gives me the the exact average&nbsp;&nbsp;
+
+00:32:30.240 --> 00:32:35.520
+I mean this is exactly I did no approximations&nbsp;
+anywhere this gives me exactly the same estimate&nbsp;&nbsp;
+
+00:32:35.520 --> 00:32:42.840
+as I would have obtained by storing all the values&nbsp;
+and taking the average at every time okay great
+
+00:32:42.840 --> 00:32:58.720
+um yeah so we'll stop here today or maybe I can&nbsp;
+just do one more thing and then we can move on&nbsp;&nbsp;
+
+00:32:58.720 --> 00:33:07.520
+to the other things in the next class uh so&nbsp;
+far we have assumed that your uh coins are&nbsp;&nbsp;
+
+00:33:07.520 --> 00:33:14.320
+not changed right so you're assuming that the&nbsp;
+the uh the distributions from which the rewards&nbsp;&nbsp;
+
+00:33:14.320 --> 00:33:21.480
+are sampled or the payoffs are sampled is Conant&nbsp;
+stationary okay constant has a different meaning&nbsp;&nbsp;
+
+00:33:21.480 --> 00:33:28.160
+it's stationary stationary means it doesn't&nbsp;
+change with time okay so if it is so when I&nbsp;&nbsp;
+
+00:33:28.160 --> 00:33:32.680
+say something doesn't change with time what does&nbsp;
+it mean it means the coin doesn't change with&nbsp;&nbsp;
+
+00:33:32.680 --> 00:33:38.280
+time it doesn't mean it always comes up heads&nbsp;
+okay when I say something is stationary okay&nbsp;&nbsp;
+
+00:33:38.280 --> 00:33:43.240
+it doesn't mean that it outcome is always the&nbsp;
+same okay it means that the distribution from&nbsp;&nbsp;
+
+00:33:43.240 --> 00:33:48.720
+which I'm sampling the outcomes is always the same&nbsp;
+okay but sometimes you might have non-stationary&nbsp;&nbsp;
+
+00:33:48.720 --> 00:33:55.040
+problems right so is ESS you keep tossing&nbsp;
+the coin the coin one side starts weing off&nbsp;&nbsp;
+
+00:33:55.040 --> 00:34:02.480
+a little bit right so after a while it might&nbsp;
+start falling Tails more often than heads or&nbsp;&nbsp;
+
+00:34:02.480 --> 00:34:06.960
+what will happen if the head wears off will&nbsp;
+start falling heads more often or tails more
+
+00:34:06.960 --> 00:34:13.120
+often start falling heads more
+
+00:34:13.120 --> 00:34:20.520
+often right because there'll be more metal&nbsp;
+on the head side so it'll be heavier so it&nbsp;&nbsp;
+
+00:34:20.520 --> 00:34:25.280
+will tend to come at the bottom more often&nbsp;
+so if head starts wearing off okay it will&nbsp;&nbsp;
+
+00:34:25.280 --> 00:34:30.440
+tend to come relatively more frequently&nbsp;
+on the top than it used to earlier anyway&nbsp;&nbsp;
+
+00:34:30.440 --> 00:34:35.400
+fine so things will start changing over&nbsp;
+time right and so what do you do in such
+
+00:34:35.400 --> 00:34:44.520
+cases so you need a way I mean there are&nbsp;
+technical ways of handling it I'm just giving&nbsp;&nbsp;
+
+00:34:44.520 --> 00:34:51.000
+you a practical way of handling it you need a way&nbsp;
+to be able to track the changes over time right so&nbsp;&nbsp;
+
+00:34:51.000 --> 00:34:57.960
+if I'm going to use this kind of an update so what&nbsp;
+will be the problem after I have pulled an arm say&nbsp;&nbsp;
+
+00:34:57.960 --> 00:35:05.400
+times right this number will become very small&nbsp;
+it will be 1 by th000 + 1 like it'll be 1 by,&nbsp;&nbsp;
+
+00:35:05.400 --> 00:35:12.200
+1 right so the impact of the new samples I'm&nbsp;
+drawing will become smaller and smaller and&nbsp;&nbsp;
+
+00:35:12.200 --> 00:35:19.440
+smaller right suppose I pulled an arm thousand&nbsp;
+times okay thousand and first time I pull the&nbsp;&nbsp;
+
+00:35:19.440 --> 00:35:24.680
+arm right the impact will be very very small&nbsp;
+think about it I'm averaging like a thousand&nbsp;&nbsp;
+
+00:35:24.680 --> 00:35:30.880
+numbers any individual number is going to have a&nbsp;
+very small impact on the average right but this&nbsp;&nbsp;
+
+00:35:30.880 --> 00:35:35.200
+is all fine if I'm sampling from a stationary&nbsp;
+distribution because I already drawn thousand&nbsp;&nbsp;
+
+00:35:35.200 --> 00:35:40.240
+samples what is the thousand and first sample&nbsp;
+going to tell me right but if I'm drawing&nbsp;&nbsp;
+
+00:35:40.240 --> 00:35:46.840
+from a changing distribution so the more recent&nbsp;
+samples are more important to me than the older&nbsp;&nbsp;
+
+00:35:46.840 --> 00:35:53.440
+samples right things are changing if my coin&nbsp;
+is varying out over time then the more recent&nbsp;&nbsp;
+
+00:35:53.440 --> 00:36:27.560
+samples are more important to me than the older&nbsp;
+samples right so what I do in such cases is uh
+
+00:36:35.560 --> 00:36:36.560
+where Alpha is less than
+
+00:36:36.560 --> 00:36:48.720
+one so you can do a little bit of expanding out&nbsp;
+on this and you can convince yourself that the&nbsp;&nbsp;
+
+00:36:48.720 --> 00:36:57.520
+as time passes by the older rewards that&nbsp;
+I get will get exponentially lesser weight&nbsp;&nbsp;
+
+00:36:58.840 --> 00:37:04.360
+right the first time I do this right the&nbsp;
+new reward will get in a weight of alpha&nbsp;&nbsp;
+
+00:37:04.360 --> 00:37:09.080
+right but second time I get another reward&nbsp;
+what will happen I'll get a weight of alpha&nbsp;&nbsp;
+
+00:37:09.080 --> 00:37:14.880
+squared going in there for the older reward&nbsp;
+right the new reward will still get an alpha&nbsp;&nbsp;
+
+00:37:14.880 --> 00:37:19.440
+older reward will get an alpha squared right&nbsp;
+so like that so I'll be paying more and more&nbsp;&nbsp;
+
+00:37:19.440 --> 00:37:25.640
+attention to the newer rewards right and the&nbsp;
+older rewards will keep getting decayed and&nbsp;&nbsp;
+
+00:37:25.640 --> 00:37:30.400
+all I did was a very simple change instead of&nbsp;
+having one 1 by N I made it a constant Alpha&nbsp;&nbsp;
+
+00:37:30.400 --> 00:37:35.920
+so making it a constant Alpha actually allows&nbsp;
+me to pay more attention to recent rewards and&nbsp;&nbsp;
+
+00:37:35.920 --> 00:37:41.040
+less attention to the older rewards right&nbsp;
+and depending on how quickly your rewards&nbsp;&nbsp;
+
+00:37:41.040 --> 00:37:48.840
+are changing you can tune the value of alpha&nbsp;
+right so problem with keeping Alpha fixed is
+
+00:37:48.840 --> 00:37:57.440
+what start
+
+00:37:59.800 --> 00:38:06.760
+if it is stationary right you will not converge if&nbsp;
+it is stationary you'll still not converge because&nbsp;&nbsp;
+
+00:38:06.760 --> 00:38:11.320
+you're still paying attention to the more recent&nbsp;
+rewards right and you'll keep oscillating around&nbsp;&nbsp;
+
+00:38:11.320 --> 00:38:16.360
+the true reward right so whenever you get a one&nbsp;
+you'll go up whenever you get a zero you'll come&nbsp;&nbsp;
+
+00:38:16.360 --> 00:38:20.880
+down up down up down you'll keep going like&nbsp;
+that right because you paying more attention&nbsp;&nbsp;
+
+00:38:20.880 --> 00:38:26.240
+to the recent wordss right but the advantage of&nbsp;
+keeping Alpha constant is that if it happens to&nbsp;&nbsp;
+
+00:38:26.240 --> 00:38:33.320
+be non-stationary right you'll track it to&nbsp;
+some extent okay there are other more more&nbsp;&nbsp;
+
+00:38:33.320 --> 00:38:38.320
+robust ways of tracking non-stationary problems&nbsp;
+but this is a very simple trick that you can use&nbsp;&nbsp;
+
+00:38:38.320 --> 00:38:43.360
+right and more often than not we'll actually&nbsp;
+end up using a constant Alpha in many of the&nbsp;&nbsp;
+
+00:38:43.360 --> 00:38:48.880
+algorithms that we look at and uh but whenever we&nbsp;
+talk about theoretical convergence we'll always&nbsp;&nbsp;
+
+00:38:48.880 --> 00:38:53.320
+talk about alpha decay right whenever we look&nbsp;
+at practical implementations of this algorithms&nbsp;&nbsp;
+
+00:38:53.320 --> 00:38:59.440
+you'll always have a constant Alpha right so&nbsp;
+the problem with dking Alpha as 1 byn is again&nbsp;&nbsp;
+
+00:38:59.440 --> 00:39:04.720
+the same thing which I told you about dking&nbsp;
+Epsilon right uh the changes will become small&nbsp;&nbsp;
+
+00:39:04.720 --> 00:39:17.038
+very fast right so that's always a trade-off&nbsp;
+that you have to pay okay so good [Applause]
+

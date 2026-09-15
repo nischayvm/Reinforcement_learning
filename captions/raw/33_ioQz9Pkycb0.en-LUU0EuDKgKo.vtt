@@ -1,0 +1,879 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:08.940 --> 00:00:18.110
+There is another way of looking at learning
+with the learning control right. So I am going
+
+00:00:18.110 --> 00:00:32.689
+to think about how can I learn control using
+a value iteration kind of an approach right.
+
+00:00:32.689 --> 00:00:45.040
+So what do I want, so that is my target right
+and that is my current estimate of something
+
+00:00:45.040 --> 00:01:02.760
+right. So remember I am learning the Q function,
+so what does the Q function tell me, take
+
+00:01:02.760 --> 00:01:07.820
+an action whatever is action given in the
+Q arguments right.
+
+00:01:07.820 --> 00:01:12.300
+And then behave optimally that after right,
+the first action is whatever I take right
+
+00:01:12.300 --> 00:01:41.060
+there is no question of optimality or anything
+about it.
+
+00:01:41.060 --> 00:01:42.680
+.
+That is being the thing that I am looking
+
+00:01:42.680 --> 00:02:03.430
+at right, I 
+should move away very quickly after writing
+
+00:02:03.430 --> 00:02:14.310
+something on the board that other vegetable
+waved me away right. I mean people x kind
+
+00:02:14.310 --> 00:02:21.460
+of buy that right. So what I am really looking
+for when I say Q* I say is expected value
+
+00:02:21.460 --> 00:02:27.060
+of RT+1 which is what I get for performing
+A+ gamma times V* of whatever comes afterwards
+
+00:02:27.060 --> 00:02:34.150
+correct.
+But we know about V* we can write V* in terms
+
+00:02:34.150 --> 00:02:50.040
+of the Q function how is that V* max it is
+a best right there is no p here talking about
+
+00:02:50.040 --> 00:03:22.590
+optimal value function right. So this is some
+term equal to correct. Now we can now do our
+
+00:03:22.590 --> 00:03:31.410
+stochastic updating rule this is my target
+this is my current estimate, so putting this
+
+00:03:31.410 --> 00:03:34.629
+together I can just write a rule like this
+right.
+
+00:03:34.629 --> 00:04:06.629
+.
+So what will be my rule, so target-current
+
+00:04:06.629 --> 00:04:23.940
+estimate right, let us see people get that
+right I mean whatever you are trying to get
+
+00:04:23.940 --> 00:04:27.820
+earlier we were just trying to take the definition
+of the Q function is the expected value of
+
+00:04:27.820 --> 00:04:33.880
+the return. Now I am looking at the definition
+of the Q function as I expected optimal Q
+
+00:04:33.880 --> 00:04:39.280
+function as expected value of this expression,
+but now I am converting that into an update
+
+00:04:39.280 --> 00:04:45.480
+rule okay.
+Now I can put in the rest of it around this
+
+00:04:45.480 --> 00:04:49.350
+so what is a nice thing here just like in
+the expected SARSA I do not have to pick the
+
+00:04:49.350 --> 00:04:53.950
+action before hand I can pick the action afterwards
+also right because I am only doing the max
+
+00:04:53.950 --> 00:05:00.050
+right. So I do not have to do the pick an
+action first and then apply it that I can
+
+00:05:00.050 --> 00:05:12.700
+move this within the loop try to remove this
+I can flip this around basically.
+
+00:05:12.700 --> 00:05:28.240
+Why is it important why am I so concerned
+that is because yeah, so there are a couple
+
+00:05:28.240 --> 00:05:32.720
+of things here so one thing the most straightforward
+answer is it could come back to S in which
+
+00:05:32.720 --> 00:05:37.410
+case I would have change the value function
+right I would have used one year for updating
+
+00:05:37.410 --> 00:05:40.660
+this here assuming that, that is the A I am
+going to take right.
+
+00:05:40.660 --> 00:05:46.950
+But then I would actually perform a different
+A in which case my return see what I was trying
+
+00:05:46.950 --> 00:05:53.040
+to do here was substitute my return right.
+So I am going to see RT+1+gamma this because
+
+00:05:53.040 --> 00:05:57.420
+that is in there is a sample of the return
+right. So if the sample of the return that
+
+00:05:57.420 --> 00:06:02.140
+means I should actually be sampling according
+to whatever updation I am making, but I would
+
+00:06:02.140 --> 00:06:04.940
+not be doing that I will be sampling my different
+action.
+
+00:06:04.940 --> 00:06:11.320
+If I picked another action after I do the
+updation okay so I will be breaking the assumption
+
+00:06:11.320 --> 00:06:16.650
+that this is a approximation for the return.
+So that is the reason we need to pick the
+
+00:06:16.650 --> 00:06:24.560
+action beforehand and then stick with it right.
+And later on when we see how we will be using
+
+00:06:24.560 --> 00:06:32.500
+a an approximate function value function right,
+we talked about contextual bandits right,
+
+00:06:32.500 --> 00:06:36.389
+we talked about policy parameterization like
+that you can use a value function parameterization.
+
+00:06:36.389 --> 00:06:41.169
+So when you use that you do not have to come
+back to the same state right because of the
+
+00:06:41.169 --> 00:06:45.210
+functional form if I change the value in one
+state it may change it in some other state
+
+00:06:45.210 --> 00:06:51.669
+also. So the whole policy would get up now
+messed up so it becomes a little tricky then.
+
+00:06:51.669 --> 00:06:57.240
+So essentially the trajectory along which
+I am doing the updation will be somewhat a
+
+00:06:57.240 --> 00:07:02.400
+messed-up version of the trajectory which
+I am actually taking right.
+
+00:07:02.400 --> 00:07:12.860
+So it might lead to some trouble in convergence
+this way, but that section I will actually
+
+00:07:12.860 --> 00:07:21.560
+be performing right so it is fine. As long
+as that is actually performing it is okay
+
+00:07:21.560 --> 00:07:25.783
+your question is what you keep changing the
+policy anyway right yeah that is why I said
+
+00:07:25.783 --> 00:07:28.960
+we do not use a explicit representation of
+the policy anywhere so it is okay.
+
+00:07:28.960 --> 00:07:34.240
+So I really do not know what is a policy I
+am estimating the value function of is just
+
+00:07:34.240 --> 00:07:42.630
+that as ? and a go to 0 it will converge to
+something at the end right. As long as the
+
+00:07:42.630 --> 00:07:47.220
+return I am using here when I actually roll
+it outright I can roll it out, when I roll
+
+00:07:47.220 --> 00:07:54.729
+out the return name whatever I am using is
+using all the actions I took then I am fine.
+
+00:07:54.729 --> 00:08:05.810
+What is it, yeah we really on the initial
+value of Q that is a policy you start off
+
+00:08:05.810 --> 00:08:10.400
+this here. So you could actually make it a
+valid policy or you could start off with all
+
+00:08:10.400 --> 00:08:16.970
+zeros in which case it is a uniform random
+policy, it will just be call actions with
+
+00:08:16.970 --> 00:08:59.750
+equal probability to begin with right. So
+you can do the same thing here which is empty
+
+00:08:59.750 --> 00:09:53.920
+space okay.
+No not it is equal you just pick it the sequence
+
+00:09:53.920 --> 00:10:05.940
+happens after you have done the updation okay.
+I am picking it according to QST before I
+
+00:10:05.940 --> 00:10:12.930
+make the update here I am picking it according
+to QST after I make the update QST+1 okay
+
+00:10:12.930 --> 00:10:17.680
+here when I say picker action for QST+1 that
+is before this updation is happening.
+
+00:10:17.680 --> 00:10:23.600
+So if I use Q volt Qnu you will see the theorem
+using Q volt here I am using Qnu for picking
+
+00:10:23.600 --> 00:10:41.519
+the action 80+1, I also put that thing in
+bracket I will come to that why I put that
+
+00:10:41.519 --> 00:10:49.710
+pick action 80 according to QST I put that
+in bracket but you can see the difference
+
+00:10:49.710 --> 00:10:55.580
+between this algorithm and that algorithm
+right nothing much except for that simple
+
+00:10:55.580 --> 00:11:07.850
+change in the update rule if you cool a and
+? properly it actually converges to the optimal
+
+00:11:07.850 --> 00:11:11.970
+policy.
+So what will the second algorithm converge
+
+00:11:11.970 --> 00:11:21.529
+to, optimal policy okay provided cool the
+a properly we had decreased a properly will
+
+00:11:21.529 --> 00:11:26.440
+converge to the optimal policy and this one
+if you have to decrease both a and ? properly
+
+00:11:26.440 --> 00:11:37.320
+it will eventually converge to the optimal
+policy. Yeah for a I have the usual stochastic
+
+00:11:37.320 --> 00:11:46.990
+averaging formula right.
+So yeah, tell me 1MIT is one one thing that
+
+00:11:46.990 --> 00:11:52.290
+you fit the conditions right, so summation
+a should be infinity, summation a2 tribulation
+
+00:11:52.290 --> 00:12:01.670
+infinity right. So that is basically the conditions
+for a so as sum over all a is so essentially
+
+00:12:01.670 --> 00:12:07.780
+I had to put an at there and sum over all
+at so just summing over at should be infinity,
+
+00:12:07.780 --> 00:12:13.060
+summing over at2 should be bounded less than
+infinity.
+
+00:12:13.060 --> 00:12:17.260
+So that is essentially the conditioner because
+the at equal infinity tells you that you are
+
+00:12:17.260 --> 00:12:22.860
+making enough updates and at2 goes to let
+mean converges to a point listen infinity
+
+00:12:22.860 --> 00:12:38.050
+means that you will eventually stop making
+updates what, good that is 
+
+00:12:38.050 --> 00:12:44.399
+what the rest of the class is all about, but
+so this algorithm 1 the right is probably
+
+00:12:44.399 --> 00:12:49.810
+the most popular reinforcement algorithm people
+use I said when I wrote down SARSA I said
+
+00:12:49.810 --> 00:12:53.492
+this is the second most popular right.
+And that is the first most popular and it
+
+00:12:53.492 --> 00:13:10.610
+is called Q-learning. So chronologically td0
+came first I think which proposed it in like
+
+00:13:10.610 --> 00:13:21.070
+84 yeah I think which proposed td0 and 84
+and short convergence in 88 or something and
+
+00:13:21.070 --> 00:13:30.579
+Q-learning was proposed by Chris Watkins in
+89 and SARSA was proposed by Rummery and Niranjan
+
+00:13:30.579 --> 00:13:36.410
+may be 91, 92 and I do not know the exact
+date sometime around that.
+
+00:13:36.410 --> 00:13:44.410
+So surprisingly both Watkins and Rummery Niranjan
+are from England. So lot of the early algorithms
+
+00:13:44.410 --> 00:13:51.720
+for RL came from England. And Q-learning is
+amazing so what is even more amazing about
+
+00:13:51.720 --> 00:13:56.800
+Q-learning is that since I do not care what
+is the sequence on which you are picking the
+
+00:13:56.800 --> 00:14:03.800
+actions right here I amusing an approximation
+to the optimal return right I am not looking
+
+00:14:03.800 --> 00:14:07.149
+at the current written.
+If I am looking an approximation to the optimal
+
+00:14:07.149 --> 00:14:11.880
+written so I do not care about the trajectory
+in fact in Q-learning I do not even have to
+
+00:14:11.880 --> 00:14:18.790
+sample according to any trajectory in fact
+the next action I execute need not even come
+
+00:14:18.790 --> 00:14:24.630
+from ST+1, I can arbitrarily reset if I have
+a simulation model right I can arbitrarily
+
+00:14:24.630 --> 00:14:30.000
+reset to some other state right.
+And then sample one action from there update
+
+00:14:30.000 --> 00:14:36.160
+Q-learning and then go and take action from
+somewhere else, some other state update you
+
+00:14:36.160 --> 00:14:41.620
+think you can just do a proper asynchronous
+generalized policy iteration kind of an approach,
+
+00:14:41.620 --> 00:14:47.250
+I just sample from all over the place just
+take one step each and keep updating it.
+
+00:14:47.250 --> 00:14:53.329
+But still it is better to update it along
+trajectories like we saw in the argument for
+
+00:14:53.329 --> 00:14:58.180
+RTDP right, if you updated along trajectories
+it is more meaningful because the values should
+
+00:14:58.180 --> 00:15:03.540
+have more likely to have changed along those
+trajectories right. So that is essentially
+
+00:15:03.540 --> 00:15:09.370
+why we sample according to the trajectories.
+So this thing need not be an ? greedy sample
+
+00:15:09.370 --> 00:15:22.940
+at all right. So I can sample actions arbitrarily
+I can just take pick an action AT and ST randomly
+
+00:15:22.940 --> 00:15:27.940
+okay, I does not have to follow any rule.
+So what does this do it just tells me which
+
+00:15:27.940 --> 00:15:34.279
+action I am going to update next right. If
+I am not sampling according to trajectories
+
+00:15:34.279 --> 00:15:36.890
+it only tell me which action I am going to
+update next.
+
+00:15:36.890 --> 00:15:43.019
+So why do you want to pick according to this,
+so that you can just like an RTDP so you can
+
+00:15:43.019 --> 00:15:48.579
+focus the updates along the most most likely
+paths, so what the reason you do it ? greedy
+
+00:15:48.579 --> 00:15:53.459
+fashion is that you quickly want to converge
+to the most likely path that you are going
+
+00:15:53.459 --> 00:15:57.880
+to take under optimal policy and you want
+to do the updates along that most likely path
+
+00:15:57.880 --> 00:16:04.380
+okay. And that is why you use the ? greedy
+sampling for Q-learning.
+
+00:16:04.380 --> 00:16:14.130
+And so what are the advantage of SARSA, SARSA
+you can continue to explore right and while
+
+00:16:14.130 --> 00:16:20.339
+exploring you learn something that is taking
+into account the exploration. So what does
+
+00:16:20.339 --> 00:16:26.720
+Q-learning do that is why I am saying you
+can arbitrarily with Q-learning but if you
+
+00:16:26.720 --> 00:16:32.420
+choose to behave according to the Q function
+you are learning, here it does not take into
+
+00:16:32.420 --> 00:17:01.399
+account the fact that you are doing exploration
+okay. So why would that matter.
+
+00:17:01.399 --> 00:17:28.979
+.
+So it is a simple grid world problem called
+
+00:17:28.979 --> 00:17:37.289
+the cliff world. So those squares marked in
+red of represent a cliff so if the agent wanders
+
+00:17:37.289 --> 00:17:47.239
+over the cliff is going to get a reward of
+-100 and to top it off agent will also die
+
+00:17:47.239 --> 00:17:52.289
+okay. Basically episode will end the agent
+will get a reward of -100 and it goes back
+
+00:17:52.289 --> 00:17:56.999
+to the beginning and you start all over again
+maybe incarnate and you start going all over
+
+00:17:56.999 --> 00:18:02.049
+again.
+And otherwise you get a reward of -1 for every
+
+00:18:02.049 --> 00:18:07.989
+time step that you move okay. So everything
+is deterministic so for every time step that
+
+00:18:07.989 --> 00:18:14.200
+you move you will get a reward of -1 okay
+and yet we will try to get from this start
+
+00:18:14.200 --> 00:18:19.200
+to the go as quickly as possible no gamma
+here gamma is one right whenever I say no
+
+00:18:19.200 --> 00:18:23.830
+gamma does not mean gamma 0 means gamma is
+one okay.
+
+00:18:23.830 --> 00:18:36.409
+And so what do you think will happen and while
+learning I use a ? greedy action selection
+
+00:18:36.409 --> 00:18:49.229
+? let us say I fix it at 0.1 I am not going
+to reduce ? I will fix ? at 0.1 okay. So what
+
+00:18:49.229 --> 00:18:52.580
+do you think is the policy what do you think
+Q-learning will do what do you think SARSA
+
+00:18:52.580 --> 00:19:02.590
+will do. Well we said both the learn optimal
+policies and what is optimal policy here.
+
+00:19:02.590 --> 00:19:18.450
+Alright so, here you go up there you go left
+right, right right, right, so this is the
+
+00:19:18.450 --> 00:19:23.229
+optimal policy of course if I want to write
+down the optimal policy elsewhere maybe I
+
+00:19:23.229 --> 00:19:29.720
+can just write down arrows everywhere does
+not matter right. So I can do down arrows
+
+00:19:29.720 --> 00:19:37.659
+everywhere or right everywhere except the
+last column where I go down this is optimal
+
+00:19:37.659 --> 00:19:42.240
+policy and there is no question about there
+is this is the optimal policy right.
+
+00:19:42.240 --> 00:19:48.909
+At least for these states right for these
+states you have a choice you can either go
+
+00:19:48.909 --> 00:19:53.230
+right or down for these states this is the
+optimal policy right. Okay will Q-learning
+
+00:19:53.230 --> 00:20:05.249
+find this optimal policy yes, will SARSA find
+this optimal policy. In this case it would
+
+00:20:05.249 --> 00:20:30.559
+not because I have fixed ? at 0.1 right. So
+what will SARSA learn, will the show up if
+
+00:20:30.559 --> 00:20:46.840
+any ? is at a 0.1 let us say. Yeah it may
+take a safer and safer row.
+
+00:20:46.840 --> 00:20:55.269
+If I give you more rows right it will probably
+go but then this is too small right it basically
+
+00:20:55.269 --> 00:21:00.679
+needs to exploratory moves to fall off the
+cliff and I given it like 10 moves in which
+
+00:21:00.679 --> 00:21:04.599
+to take this two exploratory moves. So it
+is very high probability it will take those
+
+00:21:04.599 --> 00:21:09.789
+two exploratory moves right. So it will try
+to stay as far away if it just goes here right
+
+00:21:09.789 --> 00:21:11.769
+this will be just two moves right now this
+is three moves.
+
+00:21:11.769 --> 00:21:16.269
+So that is the reason it will try to go as
+far away as possible because the reward is
+
+00:21:16.269 --> 00:21:22.599
+sufficiently negative I said -100 right so
+that is really really bad negative reward.
+
+00:21:22.599 --> 00:21:26.179
+So it will try to go further and further away
+so this is the difference between SARSA and
+
+00:21:26.179 --> 00:21:30.580
+Q-learning right. So SARSA takes into account
+the fact that you are doing the exploration
+
+00:21:30.580 --> 00:21:38.759
+right, while Q-learning might learn the optimal
+policy right, it would also end up killing
+
+00:21:38.759 --> 00:21:47.229
+you more often while learning the optimal
+policy right.
+
+00:21:47.229 --> 00:21:57.149
+There are also more you are name answers for
+this because if you continue to explore right
+
+00:21:57.149 --> 00:22:02.070
+not this is not exactly name but slightly
+less compelling reasons. If you are going
+
+00:22:02.070 --> 00:22:08.799
+to continue to explore after you finish learning
+right it is better to learn the policy through
+
+00:22:08.799 --> 00:22:13.970
+SARSA then through Q-learning, because Q-learning
+assumes that eventually you are going to be
+
+00:22:13.970 --> 00:22:20.210
+executing the optimal policy right.
+But that is a reason for us not to execute
+
+00:22:20.210 --> 00:22:34.349
+the optimal policy greedily ever why, more
+but better than forecast is everyone there
+
+00:22:34.349 --> 00:22:40.779
+is a reason for us not to use the optimal
+policy greedily even after sufficient learning
+
+00:22:40.779 --> 00:22:48.909
+non-stationary. It is not the stochastic I
+am worried about it is a non stationary I
+
+00:22:48.909 --> 00:22:52.169
+am worried about right.
+So if you are convinced that the world is
+
+00:22:52.169 --> 00:22:57.429
+not changing then great you can start behaving
+greedily after some time, but there is a chance
+
+00:22:57.429 --> 00:23:01.440
+if the world might actually some things might
+happen right, or suppose you are robot learning
+
+00:23:01.440 --> 00:23:07.020
+in a world right. So it is possible that obstacles
+can be moved around right. So it do not want
+
+00:23:07.020 --> 00:23:12.330
+to become so rigid that you are completely
+unadoptable when things change right.
+
+00:23:12.330 --> 00:23:18.309
+So that that is they way, so you want to keep
+the option of being able to explore and discover
+
+00:23:18.309 --> 00:23:23.289
+new things. So you do not want to turn off
+your ? ever, but in such cases it is better
+
+00:23:23.289 --> 00:23:29.289
+to use SARSA than Q-learning, because Q-learning
+kind of ignores exploration at all right and
+
+00:23:29.289 --> 00:23:35.059
+it converges to an optimal policy and then
+it sticks there right.
+
+00:23:35.059 --> 00:23:44.249
+So right and so the problem with the converging
+to optimal policy in sticking there is this
+
+00:23:44.249 --> 00:23:49.999
+right, if I want to keep my ? on and I will
+keep falling off the cliff by every one single
+
+00:23:49.999 --> 00:23:54.090
+move I make wrong where exploratory move I
+make I will keep falling off the cliff. So
+
+00:23:54.090 --> 00:24:01.190
+on the expected reward I get for executing
+this optimal policy will be far lesser then
+
+00:24:01.190 --> 00:24:05.289
+what my agent believes it should be getting
+because agent is ignoring the exploration
+
+00:24:05.289 --> 00:24:08.679
+okay.
+So that is the crucial difference between
+
+00:24:08.679 --> 00:24:22.149
+Q-learning and SARSA that is why you would
+like to use SARSA in many cases. Q-learning
+
+00:24:22.149 --> 00:24:39.470
+is actually good in yeah in some aspects yeah,
+there is no danger and the state space is
+
+00:24:39.470 --> 00:24:48.869
+very large. So why should the size of the
+state space matter see it is exploring why
+
+00:24:48.869 --> 00:24:55.870
+I mean Q-learning can explore much more than
+SARSA it right because it ignores exploratory
+
+00:24:55.870 --> 00:25:01.499
+policy completely you can actually have a
+region became completely randomly and still
+
+00:25:01.499 --> 00:25:13.119
+learn the optimal policy in Q-learning.
+In fact that makes Q-learning 
+
+00:25:13.119 --> 00:25:18.080
+of policy method right you can do arbitrary
+exploration and still learn the optimal policy
+
+00:25:18.080 --> 00:25:26.669
+right. So I am at the estimation policy for
+me is the optimal policy and the behavior
+
+00:25:26.669 --> 00:25:31.499
+policy can be something completely random.
+So that is one reason you would want to use
+
+00:25:31.499 --> 00:25:34.679
+Q-learning in a large state space because
+I can behave arbitrarily.
+
+00:25:34.679 --> 00:26:05.659
+So that I get to explore a larger fraction
+of the state space, everything will be slow
+
+00:26:05.659 --> 00:26:23.049
+both will be slow. Why would you think Q-learning
+will be slower compared to SARSA. So I am
+
+00:26:23.049 --> 00:26:35.659
+not a 100% sure about the convergence rates
+between ? I mean Q-learning and SARSA 
+
+00:26:35.659 --> 00:26:42.409
+I am not sure about the convergence rates,
+I do believe that Q-learning converges faster
+
+00:26:42.409 --> 00:26:47.109
+than SARSA in general.
+And I am not sure about large state space
+
+00:26:47.109 --> 00:26:55.289
+issues but I will have to look it up. Yeah
+but you should know that these are the basic
+
+00:26:55.289 --> 00:26:58.320
+algorithms right if you want to operate in
+large state spaces you will be using something
+
+00:26:58.320 --> 00:27:02.879
+else over on top of this, this would not be
+using plain vanilla Q-learning and SARSA in
+
+00:27:02.879 --> 00:27:05.240
+large state spaces.
+So there are other issues that will come into
+
+00:27:05.240 --> 00:27:09.960
+play but I am not 100% sure about the comparison
+of rates of convergence between Q-learning
+
+00:27:09.960 --> 00:27:23.009
+and SARSA right great. So any other questions
+on these two okay, so I have this three actually
+
+00:27:23.009 --> 00:27:31.259
+we talked about expected SARSA as well right
+and in fact we can think of all kinds of hybrid
+
+00:27:31.259 --> 00:27:34.159
+algorithms right.
+So for example, you can think of an algorithm
+
+00:27:34.159 --> 00:27:43.409
+that will take one step two steps according
+to the current policy and then you say max
+
+00:27:43.409 --> 00:28:08.039
+right. So what do I mean by that it is something
+like this right. So this is, this part is
+
+00:28:08.039 --> 00:28:15.570
+on policy right, so that class is off policy
+right. So that is why it is a hybrid kind
+
+00:28:15.570 --> 00:28:21.820
+of thing so you can do all kinds of, different
+kinds of samplers for your value function
+
+00:28:21.820 --> 00:28:30.279
+okay.
+So in fact it is more common to use the Q
+
+00:28:30.279 --> 00:28:40.570
+function there, so that is still on policy
+everything is on policy but I am using more
+
+00:28:40.570 --> 00:28:48.529
+of the actual samples and less of the bootstrapping
+right. Why I say less of the bootstrapping
+
+00:28:48.529 --> 00:28:54.089
+because it is discounted by a larger power
+of gamma. So the total contribution of the
+
+00:28:54.089 --> 00:28:58.379
+bootstrap thing will be coming down okay.
+So I can do all kinds of modifications to
+
+00:28:58.379 --> 00:29:04.190
+the return, so in fact there was a time when
+we are trying to get a reinforcement learning
+
+00:29:04.190 --> 00:29:15.690
+agent to play what is the thing called a hockey
+right. So somebody in CF, I wanted to do a
+
+00:29:15.690 --> 00:29:19.809
+project I wanted to get an RL agent to play
+air hockey in fact, it was building a physical
+
+00:29:19.809 --> 00:29:25.289
+system that was going to move the slider around
+and he wanted to use RL to control it.
+
+00:29:25.289 --> 00:29:30.289
+And then he turned out in the simulator at
+least that he had built using a three-step
+
+00:29:30.289 --> 00:29:38.730
+return like RT+1, RT+2, RT+3 then the Q function
+of the rest they turned out to give a better
+
+00:29:38.730 --> 00:29:44.039
+performance or whatever reason right. So it
+is kind of a tied to the the stochasticity
+
+00:29:44.039 --> 00:29:48.309
+in the system and how far ahead is the system
+predictable and so on so forth.
+
+00:29:48.309 --> 00:29:52.590
+So I think it turned out that case for at
+least for three steps into the future the
+
+00:29:52.590 --> 00:29:56.919
+system was more or less predictable and therefore
+he could use this kind of writer. So it is
+
+00:29:56.919 --> 00:30:02.409
+very complicated things right it is not easy
+to figure out what is the right look ahead
+
+00:30:02.409 --> 00:30:06.229
+that they should be using for these returns
+okay. So they more or less done with chapter
+
+00:30:06.229 --> 00:30:06.429
+six.
+

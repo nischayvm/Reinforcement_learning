@@ -1,0 +1,473 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.500 --> 00:00:32.760
+So we are looking at right looking at multi-armed
+band it problems, we looked at a couple of
+
+00:00:32.760 --> 00:00:36.960
+ways of solving it so essentially you try
+to keep an estimate of the value function
+
+00:00:36.960 --> 00:00:42.750
+around, right the value function is the expected
+payoff that you get for pulling in all, right
+
+00:00:42.750 --> 00:00:49.350
+you keep an estimate of the value function
+around and then you be have some expletive
+
+00:00:49.350 --> 00:00:52.120
+fashion with respect to that value function
+that you have right.
+
+00:00:52.120 --> 00:00:53.540
+.
+So either you do epsilon greedy or you do
+
+00:00:53.540 --> 00:01:03.329
+soft max or something and, you get some kind
+of asymptotic guarantees correct, yes okay
+
+00:01:03.329 --> 00:01:13.840
+good, we also spoke about other forms of optimality
+so one of them we spoke about was regret optimality
+
+00:01:13.840 --> 00:01:21.490
+so regret optimality is what, reducing the
+total I mean or increasing the total reward
+
+00:01:21.490 --> 00:01:27.630
+that you get over the process of learning
+right, so the initial loss that you get due,
+
+00:01:27.630 --> 00:01:31.570
+to the exploration you want to minimize.
+
+00:01:31.570 --> 00:01:35.920
+So that I come as close as possible to the
+optimal case as quickly as possible right
+
+00:01:35.920 --> 00:01:41.310
+so that is essentially what regret is all
+about and, so we will start by looking at
+
+00:01:41.310 --> 00:01:48.909
+one algorithm which in some sense has become
+the popular most popular bandit algorithm
+
+00:01:48.909 --> 00:01:53.950
+around right now, because it's so easy to
+implement and also gives you not too bad the
+
+00:01:53.950 --> 00:02:15.530
+great bounds okay is called the upper confidence
+bond, the upper confidence bound algorithm
+
+00:02:15.530 --> 00:02:18.490
+or the UCB algorithm, okay.
+
+00:02:18.490 --> 00:02:23.620
+So I will use slightly different notation
+today, right not not too different I will
+
+00:02:23.620 --> 00:02:30.129
+try to as much as possible I will try to translation
+the fly, okay to the notation that issued
+
+00:02:30.129 --> 00:02:34.580
+in the textbook right so even though I will
+give we will be giving you some papers to
+
+00:02:34.580 --> 00:02:40.180
+read, we can take care of linking the UCB
+paper and the median elimination paper and
+
+00:02:40.180 --> 00:02:43.940
+other things right, on what will be giving
+you some papers to read and the notation in
+
+00:02:43.940 --> 00:02:46.420
+the papers will be very different okay.
+
+00:02:46.420 --> 00:02:50.790
+You probably have to spend like half an hour
+just trying to understand the notation, but
+
+00:02:50.790 --> 00:02:56.239
+when I am explaining it in class to the extent
+possible I will try to map it to the notation
+
+00:02:56.239 --> 00:02:59.790
+is used in the book rights, so that you have
+one uniform set of things that you can keep
+
+00:02:59.790 --> 00:03:05.930
+track of throughout right, the changes or
+the following right, I am going to assume
+
+00:03:05.930 --> 00:03:18.730
+that there are capital K arms right, earlier
+I was assuming there were n arms but the terms
+
+00:03:18.730 --> 00:03:26.090
+of the reason I want to change n is we are
+going to now talk about a notion of time right.
+
+00:03:26.090 --> 00:03:31.879
+So now so they are going to be pull set every
+time instant and so on so forth and this should
+
+00:03:31.879 --> 00:03:38.040
+be familiar to electrical engineer, so if
+time is discrete you denote it by n if time
+
+00:03:38.040 --> 00:03:43.040
+is continuously noted by T right so I want
+to be able to denote discrete time, so I want
+
+00:03:43.040 --> 00:03:48.739
+to use n for discrete time okay and so we
+will save n for discrete time and I will not
+
+00:03:48.739 --> 00:03:57.040
+use it for the number of arms, so that is
+the reason I switch to K okay, assume there
+
+00:03:57.040 --> 00:04:04.959
+are K arms and so as before with each arm
+that is associated some arbitrary probability
+
+00:04:04.959 --> 00:04:05.959
+distributions.
+
+00:04:05.959 --> 00:04:10.799
+I don’t know that whenever I pull an arm
+I will get a sample drawn from that probability
+
+00:04:10.799 --> 00:04:14.950
+distribution it could be where only it could
+be Gaussian right it could be poised on we
+
+00:04:14.950 --> 00:04:21.380
+do not know what distribution it is but according
+to that distribution we will get a, payoff
+
+00:04:21.380 --> 00:04:28.810
+right and what else do we did we assume last
+time there is the expectation given for that
+
+00:04:28.810 --> 00:04:32.630
+distribution right now yeah we assume that
+the distribution is stationary.
+
+00:04:32.630 --> 00:04:37.181
+It is not going to change the time right and
+that there is an expectation associated with
+
+00:04:37.181 --> 00:04:45.440
+that distribution which will denote by Q*
+of A right, when you say Q* of A it is the
+
+00:04:45.440 --> 00:04:48.490
+expectation for pulling arum A ok.
+
+00:04:48.490 --> 00:04:55.080
+Let's clear here is a UCB algorithm so there
+is assume there are K arms so the initialization
+
+00:04:55.080 --> 00:05:07.310
+phase is play each arm at least once let play
+each arms once right, you have to pull every
+
+00:05:07.310 --> 00:05:12.360
+arm at least one time you cannot do better
+than that agree it, I never pull the arm I
+
+00:05:12.360 --> 00:05:15.600
+do not know anything about the arms.
+
+00:05:15.600 --> 00:05:18.470
+So I need to pull each I’m at least one
+so that is the least so we start off with
+
+00:05:18.470 --> 00:06:03.850
+that and then we do the following in a loop,
+remember what QJ is estimated payoff as expected
+
+00:06:03.850 --> 00:06:07.340
+payoff right so this is average reward that
+we'll be maintaining right there is a value
+
+00:06:07.340 --> 00:06:16.410
+function right for arm J so QJ is the estimate
+that I have a time n right QJ estimate I have
+
+00:06:16.410 --> 00:06:20.420
+a time n for arm J.
+So essentially what I am doing is I am taking
+
+00:06:20.420 --> 00:06:30.060
+whatever is the current estimate right, and
+I am adding this expression to that right,
+
+00:06:30.060 --> 00:06:35.170
+and then I am playing the arm that gives me
+the highest value for this total expression
+
+00:06:35.170 --> 00:06:45.590
+right, so the way to think about this is following
+I will come back to this it will show things
+
+00:06:45.590 --> 00:06:56.720
+more precisely later, but let us assume that
+this is my, Q of arm one right whatever is
+
+00:06:56.720 --> 00:07:02.460
+some scale this the x-axis, mean the x-axis
+let us assume is armed index and the y-axis
+
+00:07:02.460 --> 00:07:05.169
+is the expected payoff right.
+
+00:07:05.169 --> 00:07:22.580
+So that is Q1 then I have Q2 say Q3 and Q4,
+let us say I have four arms right so what
+
+00:07:22.580 --> 00:07:27.090
+the idea behind upper confidence bound is
+to say that hey, I am not going to use just
+
+00:07:27.090 --> 00:07:33.900
+the estimated expectations so far right, so
+I've actually drawn many samples right I can
+
+00:07:33.900 --> 00:07:39.900
+use the samples that I have drawn so far to
+figure out, what is the confidence with which,
+
+00:07:39.900 --> 00:07:44.050
+I can say that this is the expectation right.
+
+00:07:44.050 --> 00:07:46.310
+.
+So you can come you can think of giving some
+
+00:07:46.310 --> 00:07:55.819
+kind of a bound around this you can say that
+ok, this is the expectation I have right but
+
+00:07:55.819 --> 00:08:03.639
+the true value of Q1 or Q*1 right the true
+value of Q*1 is going to lie within that band
+
+00:08:03.639 --> 00:08:11.819
+right, so intuitively you can see that the
+more number of times have sampled arm one
+
+00:08:11.819 --> 00:08:17.050
+the smaller is this going to be, right if
+I have taken a lot of samples then I'm more
+
+00:08:17.050 --> 00:08:20.470
+confident about the expectation that I am
+giving you tell you right we know that as
+
+00:08:20.470 --> 00:08:26.229
+the number of samples tends to infinity this
+QQ will converge to Q*.
+
+00:08:26.229 --> 00:08:32.070
+So we know that that Q1 will converge to Q*1
+if number of times have sampled one goes to
+
+00:08:32.070 --> 00:08:38.300
+infinity, so the more the number of samples
+I draw the narrower will be this band of uncertainty
+
+00:08:38.300 --> 00:08:46.850
+right, so likewise I will have a band like
+this for Q2 right I will have a band like
+
+00:08:46.850 --> 00:08:56.440
+this for Q3, another band like this for Q4,
+so what arm do am I suggesting that you take
+
+00:08:56.440 --> 00:09:09.940
+now, I am saying take arm one that is what
+essentially UCB tells you right.
+
+00:09:09.940 --> 00:09:13.450
+So why do you think this kind of scenario
+meta happened I met a chosen arm for a lot
+
+00:09:13.450 --> 00:09:18.550
+of times because it seems to have a higher
+value, so my uncertainty and the value of
+
+00:09:18.550 --> 00:09:24.450
+arm 4 has come down all lot right, but arm
+one I’m not take n of times, arm 3 obviously
+
+00:09:24.450 --> 00:09:29.980
+I have not taken n of times, but I am really
+not inclined to take arm 3 anymore because
+
+00:09:29.980 --> 00:09:36.180
+given my current state of uncertainty right,
+the probability that arm 3 will be higher
+
+00:09:36.180 --> 00:09:41.740
+than this end right, a minute it is very small
+that even though man certainty arm 3 is very
+
+00:09:41.740 --> 00:09:52.470
+high I am not inclined to take that arm, because
+the chance that it will truly be high a chance
+
+00:09:52.470 --> 00:09:55.180
+that it will truly be high is very small right.
+
+00:09:55.180 --> 00:10:03.050
+While for arm 1 the chance that it might be
+better than arm 4 it fairly decent so this
+
+00:10:03.050 --> 00:10:07.690
+is interval I am Telling You is some kind
+of bound, that says it with very high probability
+
+00:10:07.690 --> 00:10:15.110
+like the true value of Q 1, like within this
+bond, that means that is a chance I did lie
+
+00:10:15.110 --> 00:10:21.540
+here which case it can be higher than Q4 right,
+so I will k take this if I take this a few
+
+00:10:21.540 --> 00:10:34.680
+more times and let us say after some time,
+my estimate moves up like this but my 
+
+00:10:34.680 --> 00:10:38.060
+estimate moves up a little bit but my bounds
+also shrink right.
+
+00:10:38.060 --> 00:10:43.000
+Now I'd my tonight it might not look attractive
+compared to Q4, so I will go back to taking
+
+00:10:43.000 --> 00:10:52.750
+Q4 right, so that is why you can see in this
+expression I have the total number, of samples
+
+00:10:52.750 --> 00:10:58.370
+I have drawn off arm J right, were NJ is the
+number of times I have sampled, I am j so
+
+00:10:58.370 --> 00:11:06.280
+the larger the NJ the smaller this expression
+is going to become, ok a larger the number
+
+00:11:06.280 --> 00:11:10.670
+of samples I draw the smaller this expression
+will become, therefore this interval will
+
+00:11:10.670 --> 00:11:13.770
+keep coming down.
+
+00:11:13.770 --> 00:11:22.290
+What that yeah that is more like a normalizing
+term right it is there in all the expressions
+
+00:11:22.290 --> 00:11:26.019
+all the values right all the intervals, that
+I compute so it is not relatively it is not
+
+00:11:26.019 --> 00:11:32.649
+going to matter but you will need it to show
+some results later, so there is algorithm
+
+00:11:32.649 --> 00:11:39.190
+itself clear right, so they explain things
+here the n is essentially the number of times
+
+00:11:39.190 --> 00:11:46.399
+I have played arm so for any of NJ a number
+of times have played arm J okay.
+
+00:11:46.399 --> 00:11:50.829
+So you have that pictorial description of
+what this algorithm is doing great, so what
+
+00:11:50.829 --> 00:11:55.570
+is nice about this algorithm it is very simple
+algorithm in saw that right is nothing about
+
+00:11:55.570 --> 00:12:02.750
+it all you need to do is apart from keeping
+track of QJ you have to keep track of NJ,
+
+00:12:02.750 --> 00:12:10.200
+as well which you are anyway doing if you
+are doing that incremental update right, if
+
+00:12:10.200 --> 00:12:14.220
+you remember last class we wrote the incremental
+update so the step size was any way related
+
+00:12:14.220 --> 00:12:15.220
+to NJ.
+
+00:12:15.220 --> 00:12:19.730
+So the only additional overhead would be if
+you have been using constant alpha for your
+
+00:12:19.730 --> 00:12:23.480
+updates you will have to remember NJ in addition
+otherwise it is exactly the same thing like
+
+00:12:23.480 --> 00:12:30.060
+we did for epsilon greedy, so instead of random
+lead deciding which action to take for exploration
+
+00:12:30.060 --> 00:12:34.220
+you do not do any exploration also the random
+color the random number generator also has
+
+00:12:34.220 --> 00:12:41.410
+gone now that this is a very deterministic
+algorithm right.
+
+00:12:41.410 --> 00:12:48.839
+So what is so great about it yeah, QJ no because
+the other term might be a very small term
+
+00:12:48.839 --> 00:12:56.870
+Q might be a very large then matter, why does
+it matter, they like QJ like the expected
+
+00:12:56.870 --> 00:13:04.760
+payoff scale me something like ah that way
+okay, fine fine fine fine fine yeah, so all
+
+00:13:04.760 --> 00:13:08.590
+of this this this particular form of expression
+does assume that the rewards are bounded between
+
+00:13:08.590 --> 00:13:13.430
+0 and 1 right, so yeah I will come to that
+in a minute.
+
+00:13:13.430 --> 00:13:18.950
+So yeah you are right, so then you can rescale
+the rewards if you want to write as long as
+
+00:13:18.950 --> 00:13:25.019
+all the rewards are positive so you can rescale
+them to lie between 0 and 1 but if you have
+
+00:13:25.019 --> 00:13:28.089
+negative or reverse you'll have to think about
+always not do this okay.
+

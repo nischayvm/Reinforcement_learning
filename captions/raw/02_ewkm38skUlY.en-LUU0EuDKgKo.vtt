@@ -1,0 +1,2231 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.969 --> 00:00:16.760
+.
+You can do all kinds of fancy stuff with reinforcement
+
+00:00:16.760 --> 00:00:17.949
+learning, right.
+.
+
+00:00:17.949 --> 00:00:23.350
+So the Kirk's in reinforcement learning is
+that the agent is going to notice is learning
+
+00:00:23.350 --> 00:00:28.699
+agent right it is going to learn in close
+interaction with an environment, right. So
+
+00:00:28.699 --> 00:00:33.720
+the environment could be the helicopter it
+could be the cycle right and or it could be
+
+00:00:33.720 --> 00:00:37.989
+your backgammon board and your opponent all
+of this could constitute environment variety
+
+00:00:37.989 --> 00:00:42.640
+of different choices, so you sense the state
+in which the environment is in right.
+
+00:00:42.640 --> 00:00:48.160
+Since the state of the environment and figure
+out what is the action that you should take
+
+00:00:48.160 --> 00:00:53.050
+in response to the state, right. So in apply
+the action back to the environment this causes
+
+00:00:53.050 --> 00:00:59.090
+a change in the state right. So now comes
+in a tricky part right so you should not just
+
+00:00:59.090 --> 00:01:04.360
+choose actions that are beneficial in the
+current state but it should choose actions
+
+00:01:04.360 --> 00:01:11.570
+in such a way that they will put you in a
+state which is beneficial for you in the future,
+
+00:01:11.570 --> 00:01:15.320
+right.
+Just capturing the queen of your opponent
+
+00:01:15.320 --> 00:01:18.650
+is not enough in the chase that might give
+you a higher reward but it might put you in
+
+00:01:18.650 --> 00:01:23.670
+a really bad position, so you do not want
+that I do you really want to be looking at
+
+00:01:23.670 --> 00:01:27.400
+the entire sequence of decisions that you
+are going to have to make and then try to
+
+00:01:27.400 --> 00:01:31.330
+behave optimally with respect to that, right.
+So what we mean by behave optimally in this
+
+00:01:31.330 --> 00:01:37.400
+case right where we had assume that the environment
+right is giving you some kind of an evaluation.
+
+00:01:37.400 --> 00:01:43.760
+It is like falling down hurts when or capturing
+a piece maybe gives you a small +0.5 or winning
+
+00:01:43.760 --> 00:01:48.740
+the game gives you like hundred right, so
+every time you win every time you make a move
+
+00:01:48.740 --> 00:01:53.420
+or every time you execute an action you did
+not get a reward or you did not get an evaluation
+
+00:01:53.420 --> 00:01:59.770
+from the environment right so it could be
+just zero it could be this could be nothing,
+
+00:01:59.770 --> 00:02:04.080
+right. So I should point out that this whole
+idea of having an evaluation come from the
+
+00:02:04.080 --> 00:02:09.090
+environment is just a mathematical convenience
+that we have here.
+
+00:02:09.090 --> 00:02:13.120
+But in reality if you think about biological
+systems that are learning using reinforcement
+
+00:02:13.120 --> 00:02:19.041
+learning right all they are getting is the
+usual sensory inputs right so there is some
+
+00:02:19.041 --> 00:02:23.770
+fracture in the brain okay that sits there
+and interprets some of those sensory input
+
+00:02:23.770 --> 00:02:33.700
+as rewards or punishments, right so you fall
+down you get hurt I mean that is still a sensory
+
+00:02:33.700 --> 00:02:37.150
+input that is coming from your skin right
+or somebody pats you on aback that still a
+
+00:02:37.150 --> 00:02:42.090
+sensory input that comes from the skin.
+And it is just another kind of an input right
+
+00:02:42.090 --> 00:02:47.480
+so it could choose to interpret this as a
+reward right or this as a collision with an
+
+00:02:47.480 --> 00:02:53.090
+obstacle something is brushing against my
+shoulder let me move in right or you can just
+
+00:02:53.090 --> 00:02:57.770
+take it as somebody is patting my back so
+I did something good right so it is a matter
+
+00:02:57.770 --> 00:03:02.380
+of interpretation so this is a this whole
+thing about having a state signal and having
+
+00:03:02.380 --> 00:03:06.210
+a separate evaluation coming from the environment
+is a friction right.
+
+00:03:06.210 --> 00:03:11.270
+There is created to have a clearer and clearer
+mathematical model but in reality things are
+
+00:03:11.270 --> 00:03:18.010
+a lot messier you know you do not have such
+a clean separation, right and like I said
+
+00:03:18.010 --> 00:03:22.190
+so you have a stochastic environment you have
+delayed evaluation.
+
+00:03:22.190 --> 00:03:25.250
+.
+Noisy so the new term that we have added here
+
+00:03:25.250 --> 00:03:36.010
+is scalar the new term we have added is scalar,
+so that is one of the things with the classical
+
+00:03:36.010 --> 00:03:41.569
+reinforcement learning approaches he said
+I am going to assume that my reward is a scalar
+
+00:03:41.569 --> 00:03:47.400
+signal right so have we talked about getting
+hurt and having food and so on so forth what
+
+00:03:47.400 --> 00:03:51.670
+will all of this will happen mathematically
+is I will convert that into some kind of a
+
+00:03:51.670 --> 00:03:57.970
+number on a scale right.
+So getting hurt might be -100 right getting
+
+00:03:57.970 --> 00:04:05.489
+food might be +5 winning the game might be
++20 right capturing a piece might be +0.5
+
+00:04:05.489 --> 00:04:10.800
+or something like that, so I am going to convert
+them to a scale right and the goal is now
+
+00:04:10.800 --> 00:04:15.240
+that I have a single number that represents
+the evaluation the goal is now to get as much
+
+00:04:15.240 --> 00:04:24.650
+as possible of that quantity over the long
+run, okay make sense right. So if you have
+
+00:04:24.650 --> 00:04:29.280
+questions doubts stop me and ask.
+So mathematically a scalar which is easy at
+
+00:04:29.280 --> 00:04:38.930
+optimized, not necessarily right I am just
+talking about which is like a cost function
+
+00:04:38.930 --> 00:04:42.870
+if you want to think about it in terms of
+in terms of control systems right so this
+
+00:04:42.870 --> 00:04:48.150
+is like a cost and I am trying to optimize
+the cost all right and so for the cost is
+
+00:04:48.150 --> 00:04:52.280
+going to be vector value then I will have
+to start trading off one direction of director
+
+00:04:52.280 --> 00:04:55.480
+against the other.
+So which component of the vector is more important
+
+00:04:55.480 --> 00:05:01.340
+so then you get into all kinds of separate
+optimality and of questions so it is not really
+
+00:05:01.340 --> 00:05:07.970
+clear what exactly is optimal in such cases
+right, so in fact later on I we have a homework
+
+00:05:07.970 --> 00:05:12.400
+exercise for you to argue for and against
+scalar rewards so you can put on your thoughts
+
+00:05:12.400 --> 00:05:19.000
+then right, so here again let me emphasize
+its not supervised learning right in supervised
+
+00:05:19.000 --> 00:05:20.000
+learning, right.
+.
+
+00:05:20.000 --> 00:05:21.900
+In supervise learning this is essentially
+what you are going to see there will be an
+
+00:05:21.900 --> 00:05:25.430
+input and that will be an output that you
+are producing and somebody will be giving
+
+00:05:25.430 --> 00:05:29.920
+you a target output okay so this is what you
+are supposed to produce and essentially compare
+
+00:05:29.920 --> 00:05:35.360
+the output you are producing to the target
+output right and we can form some error signal
+
+00:05:35.360 --> 00:05:40.160
+right and you can use that error in order
+to train your agent right.
+
+00:05:40.160 --> 00:05:43.760
+You can try to minimize error you can do gradient
+descent on their work into variety of things
+
+00:05:43.760 --> 00:05:47.830
+you can try to train the agent, so here I
+do not have a target I do have to learn a
+
+00:05:47.830 --> 00:05:51.360
+mapping from the input to the output but I
+do not have a target and hence I cannot form
+
+00:05:51.360 --> 00:05:59.340
+an error right and therefore my trial and
+error becomes very essential see if I have
+
+00:05:59.340 --> 00:06:02.639
+errors rate I can form gradients of the errors
+and they can go in the opposite direction
+
+00:06:02.639 --> 00:06:08.860
+of the gradient of the error, right.
+And then that gives me some direction in which
+
+00:06:08.860 --> 00:06:14.190
+to change my parameters and that constitute
+the agent, right neither it is going to be
+
+00:06:14.190 --> 00:06:18.789
+described in some way right the error gives
+me a direction right but now since I do not
+
+00:06:18.789 --> 00:06:22.979
+know a direction right so I just I do something
+I get one evaluations I don't know that the
+
+00:06:22.979 --> 00:06:28.150
+evaluation is good or bad right so think of
+writing an exam right I do not tell you the
+
+00:06:28.150 --> 00:06:37.150
+right answer I just tell you three right.
+And so what do you do now do happy with answer
+
+00:06:37.150 --> 00:06:41.320
+should you change it should he change it in
+one direction or should he change it to the
+
+00:06:41.320 --> 00:06:46.050
+other direction, so what makes it even more
+tricky is I you do not even know how much
+
+00:06:46.050 --> 00:06:53.810
+the exam is out of, so when I say 3 it could
+be three out of three it could be three out
+
+00:06:53.810 --> 00:07:05.750
+of 100 right and or it could be like 3 out
+of 18 which is what the class average in level
+
+00:07:05.750 --> 00:07:12.229
+in the first quiz right.
+So it could be any of these things right so
+
+00:07:12.229 --> 00:07:15.451
+you do not even know whether there is a good
+number or a bad number so you have to explore
+
+00:07:15.451 --> 00:07:20.490
+to figure out a if you can get higher than
+three right or three is the best the second
+
+00:07:20.490 --> 00:07:26.020
+thing is if I can get higher than three how
+should I change my parameters to get to become
+
+00:07:26.020 --> 00:07:30.509
+higher than three it is I have to change my
+parameters a little bit that way okay.
+
+00:07:30.509 --> 00:07:34.691
+I have to change the parameter is a little
+bit this way right so if I am cycling wait
+
+00:07:34.691 --> 00:07:38.229
+I have to push down a little harder on the
+pedal okay all I have to push down a little
+
+00:07:38.229 --> 00:07:41.819
+softer on the pedal to figure out whether
+I am staying balanced for a longer period
+
+00:07:41.819 --> 00:07:45.729
+of time or not I do not know that otherwise
+unless I try these things I would not know
+
+00:07:45.729 --> 00:07:50.190
+this is why the trial and error part, so if
+you pushed on a little harder and I say balance
+
+00:07:50.190 --> 00:07:52.850
+maybe I should try pushing down even more
+harder next time right.
+
+00:07:52.850 --> 00:07:57.039
+So maybe that will make it better and then
+there might be some point where into port
+
+00:07:57.039 --> 00:08:00.840
+so I need to come back so this is of things
+which you have to try unless you try that
+
+00:08:00.840 --> 00:08:05.610
+you do not even know which direction you have
+to move in right so this is much more than
+
+00:08:05.610 --> 00:08:09.449
+just the psychological aspects of trial and
+error there is also a mathematical reason
+
+00:08:09.449 --> 00:08:14.009
+if you want to adapt my parameters wait I
+need to know the gradient okay so that he
+
+00:08:14.009 --> 00:08:23.840
+will need to look, yeah.
+The reward is the one that you know that gives
+
+00:08:23.840 --> 00:08:32.250
+you the evaluation for the output right so
+here in the supervised case the error is the
+
+00:08:32.250 --> 00:08:37.240
+evaluation for the output of the error is
+0 then your output is perfect right but then
+
+00:08:37.240 --> 00:08:42.190
+have a way of gauging what the error is because
+you have a target which you can compare right
+
+00:08:42.190 --> 00:08:46.560
+and from there you get the error so in the
+reinforcement learning case the evaluation
+
+00:08:46.560 --> 00:08:51.499
+is directly given to you as the evaluation
+of the output right.
+
+00:08:51.499 --> 00:08:55.959
+It is not necessarily comparing against target
+value or anything you do not know how the
+
+00:08:55.959 --> 00:09:00.230
+evaluation was generated now you just get
+an evaluation directly so you just get some
+
+00:09:00.230 --> 00:09:04.910
+number corresponding to the output right so
+maybe I should have done put an arrow from
+
+00:09:04.910 --> 00:09:10.259
+the top saying evaluation comes in from there
+but that is exactly where it is coming it
+
+00:09:10.259 --> 00:09:15.050
+is a substitute for the error signal but it
+just that you do not know what the evaluation
+
+00:09:15.050 --> 00:09:18.410
+is.
+Of course way differs from the error is minor
+
+00:09:18.410 --> 00:09:23.670
+differences you typically tend to minimize
+error but you are tend to maximize evaluation
+
+00:09:23.670 --> 00:09:27.579
+right it is also not unsupervised learning
+so I'm super learning you have some kind of
+
+00:09:27.579 --> 00:09:28.579
+an input right.
+.
+
+00:09:28.579 --> 00:09:33.610
+That goes to the agent and then it figures
+out what are the patterns for the in the input
+
+00:09:33.610 --> 00:09:38.029
+right here you have some kind of an evaluation
+and you are expected to produce an action
+
+00:09:38.029 --> 00:09:42.480
+in response to the input it is not simply
+pattern detection right so you might want
+
+00:09:42.480 --> 00:09:46.170
+to detect patterns in the input so that you
+know what is the right response to give but
+
+00:09:46.170 --> 00:09:51.160
+that is not the primary goal right but in
+unsupervised learning the pattern reduction
+
+00:09:51.160 --> 00:09:58.649
+itself is the primary curve so that is the
+difference right.
+
+00:09:58.649 --> 00:10:00.959
+.
+So here is this one slide which I think is
+
+00:10:00.959 --> 00:10:10.430
+kind of the soul of reinforcement learning
+right it is called temporal difference so
+
+00:10:10.430 --> 00:10:16.550
+I will explain it little more detail and in
+a couple of slides but the intuition here
+
+00:10:16.550 --> 00:10:21.439
+right so if you remember the Pavlov's dog
+experiment right what was the dog doing it
+
+00:10:21.439 --> 00:10:26.009
+was predicting the outcome of the bell you
+know if the bell rings there is an outcome
+
+00:10:26.009 --> 00:10:29.160
+that is going to happen is predicting the
+outcome which is food is going to happen.
+
+00:10:29.160 --> 00:10:33.660
+And then it was reacting appropriate to the
+outcome right so most of reinforcement learning
+
+00:10:33.660 --> 00:10:37.559
+you are going to be predicting some kind of
+outcome this going to happen since I am I
+
+00:10:37.559 --> 00:10:42.190
+going to get a reward if I do this or if I
+am I going to not get a reward am I going
+
+00:10:42.190 --> 00:10:46.810
+to win this game if I make this move what
+am I not going to win this game all right
+
+00:10:46.810 --> 00:10:51.970
+so I am print always trying to predict the
+outcome the outcome here is the amount of
+
+00:10:51.970 --> 00:10:55.180
+reward or punishment I am going to get right.
+This is essentially what I am trying to predict
+
+00:10:55.180 --> 00:11:00.860
+at every point right so the intuition behind
+what is called temporal difference learning
+
+00:11:00.860 --> 00:11:09.279
+is the following right so the prediction that
+I make at time T+1 okay of what will be the
+
+00:11:09.279 --> 00:11:14.459
+eventual outcome let us say I am playing a
+game right I am going to say I am going to
+
+00:11:14.459 --> 00:11:21.540
+win now I am very sure I am going to win now
+right, so I can say that with a greater confidence
+
+00:11:21.540 --> 00:11:27.410
+when I am closer to the end of the game.
+Then I can at the beginning of the game right
+
+00:11:27.410 --> 00:11:31.929
+so I have all the pieces set up and if I am
+going to sit there and say I am going to win
+
+00:11:31.929 --> 00:11:37.750
+the game right it is most probably wishful
+thinking right but then you have played the
+
+00:11:37.750 --> 00:11:41.839
+game for like 30 minutes or something and
+there are like five pieces left on the board
+
+00:11:41.839 --> 00:11:45.839
+now I am going to say I am going to win the
+game now I say I am going to win the game
+
+00:11:45.839 --> 00:11:50.509
+that is a much more confident prediction then
+what I did at the beginning right.
+
+00:11:50.509 --> 00:11:56.949
+So taking this to the extreme right so the
+prediction I make at t+1 is probably more
+
+00:11:56.949 --> 00:12:04.529
+accurate than the prediction I make it t,
+right the prediction I make a t+1 is more
+
+00:12:04.529 --> 00:12:09.209
+accurate than the prediction I make it t,
+so if I want to improve the prediction I make
+
+00:12:09.209 --> 00:12:16.249
+a t what can I do I can look go forward in
+time basically go to the next day let the
+
+00:12:16.249 --> 00:12:20.980
+clock tick over and see what is the prediction
+I will make a time T+1 with additional knowledge
+
+00:12:20.980 --> 00:12:24.429
+I am getting right.
+I would have moved one step closer to the
+
+00:12:24.429 --> 00:12:28.749
+end of the game so I know is little bit better
+about the game right I know how the game is
+
+00:12:28.749 --> 00:12:33.739
+proceeding I know I can may now make a prediction
+about whether I will win or lose right and
+
+00:12:33.739 --> 00:12:41.739
+use this go back and modify the prediction
+I make it time t, right T I think there is
+
+00:12:41.739 --> 00:12:46.550
+a possibility of say probability of 0 point
+6 of me winning the game okay and then they
+
+00:12:46.550 --> 00:12:51.189
+make a move then I find out that I am going
+to lose the game with a very high probability.
+
+00:12:51.189 --> 00:12:55.899
+Then what will I do is I will go back and
+reduce the probability of winning that I made
+
+00:12:55.899 --> 00:13:01.049
+at time T so instead of 0 point six I will
+say okay maybe point five or something alright,
+
+00:13:01.049 --> 00:13:06.570
+so next time I come to the same state as I
+was at time T, I would not make the prediction
+
+00:13:06.570 --> 00:13:12.139
+of 0.6 I will say 0.55 okay that essentially
+the idea behind capital difference learning,
+
+00:13:12.139 --> 00:13:18.110
+right. So it is a whole lot of advantages
+we will talk about it a couple of slides down.
+
+00:13:18.110 --> 00:13:24.600
+But one thing is he said the significant impact
+in behavioral psychology and in neuroscience
+
+00:13:24.600 --> 00:13:31.929
+right so it is widely accepted that animals
+actually use some form of temporal difference
+
+00:13:31.929 --> 00:13:38.269
+learning and in fact there are specific models
+right that that have been proposed for temporal
+
+00:13:38.269 --> 00:13:42.769
+difference learning which seemed to explain
+some of the neurotransmitter behaviors in
+
+00:13:42.769 --> 00:14:02.139
+the brain, yeah. No yeah see at this point
+I will be making a prediction about what is
+
+00:14:02.139 --> 00:14:06.209
+the probability of winning.
+And it could be for each of the moves right
+
+00:14:06.209 --> 00:14:08.820
+if I make this move what is the probability
+of finding if I make this move what is the
+
+00:14:08.820 --> 00:14:14.910
+probability of finding, let us say I make
+move two okay and then I go I see a new position
+
+00:14:14.910 --> 00:14:19.529
+let me open it responds to it and then I decide
+oh my god this is a much worse move than I
+
+00:14:19.529 --> 00:14:25.549
+thought earlier so what I do is I will change
+the prediction I make for move two in the
+
+00:14:25.549 --> 00:14:30.579
+previous state.
+You see that the other moves would not be
+
+00:14:30.579 --> 00:14:34.639
+affected because the only move it took was
+two only about that move I have additional
+
+00:14:34.639 --> 00:14:39.769
+information therefore I can go back and change
+the prediction I make for move to alone, so
+
+00:14:39.769 --> 00:14:51.199
+you still have the ten moves so they are not
+changing any of them. Seeing the prediction
+
+00:14:51.199 --> 00:14:56.270
+is not like I mean if an ideal world you should
+be able to take back a bad move right except
+
+00:14:56.270 --> 00:15:00.739
+if it is a parent playing with the kid I do
+not think those things are allowed right.
+
+00:15:00.739 --> 00:15:04.769
+Infact I when I play with my son we have sometimes
+had to remain back all the way to the beginning
+
+00:15:04.769 --> 00:15:09.689
+it will probably be me asking to do the remaining
+not him because he will be drubbing me in
+
+00:15:09.689 --> 00:15:15.730
+some one of those games but yeah otherwise
+you cannot you just make the change the prediction
+
+00:15:15.730 --> 00:15:22.199
+so next time you play the game it will be
+better at it, it not for that game well basically
+
+00:15:22.199 --> 00:15:29.470
+you are messed up. Or you did well I mean
+so whatever it is yeah looking at RL right
+
+00:15:29.470 --> 00:15:34.459
+so listen look at tic-tac-toe.
+.
+
+00:15:34.459 --> 00:15:44.980
+How many of you have played tic-tac-toe, good
+oh you and you put it right up okay good okay
+
+00:15:44.980 --> 00:15:51.359
+good so in tic-tac-toe so you have these both
+positions right and so you make different
+
+00:15:51.359 --> 00:15:55.839
+moves so in the first this is what I have
+drawn here is called the game tree right so
+
+00:15:55.839 --> 00:16:01.549
+I start off with the initial board which is
+empty right and there are how many possible
+
+00:16:01.549 --> 00:16:07.629
+branches there for people making moves nine
+possible branches right.
+
+00:16:07.629 --> 00:16:11.989
+For excess move there are nine possible moves
+I have nine possible branches and then for
+
+00:16:11.989 --> 00:16:18.519
+each of these I will have like eight possible
+I am not sure this is the right TV for each
+
+00:16:18.519 --> 00:16:24.019
+of this I have eight possible branches and
+they keep going right so what we are going
+
+00:16:24.019 --> 00:16:31.369
+to be doing is essentially trying to this
+formulate this as a reinforcement learning
+
+00:16:31.369 --> 00:16:36.089
+problem, so how will you do this as a reinforcement
+problem right.
+
+00:16:36.089 --> 00:16:40.649
+So I have all these board positions right
+let us say X is the reinforcement learning
+
+00:16:40.649 --> 00:16:46.989
+agent and O is the opponent right so initially
+given a blank board I will have to choose
+
+00:16:46.989 --> 00:16:51.569
+one among nine actions right so there the
+state that I am going to see is this black
+
+00:16:51.569 --> 00:16:58.009
+the accessory goes on the board right and
+the moves I will be making are the actions
+
+00:16:58.009 --> 00:17:02.989
+right, so in the initial position I have nine
+actions I make that do I get any reward not
+
+00:17:02.989 --> 00:17:07.089
+really there is no natural reward signal that
+you can give.
+
+00:17:07.089 --> 00:17:10.800
+Essentially the reward that I am going to
+get in this case is if at the end of the moves
+
+00:17:10.800 --> 00:17:17.140
+if I win I will get a one if I do not win
+I get a zero and if I when I get a one if
+
+00:17:17.140 --> 00:17:22.319
+I do not print I get a zero right so what
+is going to happen is I am going to keep playing
+
+00:17:22.319 --> 00:17:32.750
+these games multiple times right and at each
+point right yeah okay so there is a note here
+
+00:17:32.750 --> 00:17:38.080
+so what is it not say we ought to assume it
+is an imperfect opponent right.
+
+00:17:38.080 --> 00:17:45.080
+Away there is no point in trying to learn
+tic-tac-toe why, they will always draw and
+
+00:17:45.080 --> 00:17:50.580
+the way we are set up the game your indifferent
+between drawing and losing so you learn nothing
+
+00:17:50.580 --> 00:17:54.140
+I mean basically so you will not know even
+learn to draw okay you will just learn to
+
+00:17:54.140 --> 00:17:59.910
+nothing basically you learn nothing because
+you can never win right so you are never going
+
+00:17:59.910 --> 00:18:03.000
+to get a reward of 1 so it will just be playing
+randomly.
+
+00:18:03.000 --> 00:18:08.210
+So it is this is a bad idea so let us assume
+that you have an agent that in that is imperfect
+
+00:18:08.210 --> 00:18:12.210
+right that makes mistakes so that you can
+actually learn to figure out where the agent
+
+00:18:12.210 --> 00:18:17.190
+makes mistakes where the open it makes mistakes
+and learn to exploit those things okay, right.
+
+00:18:17.190 --> 00:18:20.830
+So your states are going to be this board
+positions as you can see we give you see a
+
+00:18:20.830 --> 00:18:25.309
+game that has been played out on the top of
+the slide right and the actions you take or
+
+00:18:25.309 --> 00:18:30.250
+in response to those board positions.
+And finally at the end of the game and if
+
+00:18:30.250 --> 00:18:42.029
+you win you get a 1 if you do not win you
+get a 0, right. There are people you lose
+
+00:18:42.029 --> 00:18:48.990
+a 0 if you draw 1-1 sure you could even know
+other things like if you win it is one if
+
+00:18:48.990 --> 00:19:01.240
+you lose this minus 1 yeah you possibly could
+but you probably have to pay a lot of not
+
+00:19:01.240 --> 00:19:06.659
+of games because the perfect opponent it is
+almost impossible for you to start getting
+
+00:19:06.659 --> 00:19:09.559
+any feedback in the beginning right you will
+always be losing.
+
+00:19:09.559 --> 00:19:12.210
+So it is going to be hard for it learn but
+you will eventually learn something yeah it
+
+00:19:12.210 --> 00:19:18.659
+will take a lot of Missoula will she learn
+something if I say that at every point like
+
+00:19:18.659 --> 00:19:25.200
+at a particular stage the probability of winning
+and like you are having to us date so your
+
+00:19:25.200 --> 00:19:30.549
+storing information for your storing information
+for each and every state that you have entered
+
+00:19:30.549 --> 00:19:34.640
+right so how will it be different from exploring
+the proper know like states place every time.
+
+00:19:34.640 --> 00:19:39.799
+Because after you have done let us say a thousand
+ten thousand games or a million games you
+
+00:19:39.799 --> 00:19:43.529
+really explored a lot of states and you have
+to store for each state the probability of
+
+00:19:43.529 --> 00:19:47.279
+you bidding at that point yeah and all that
+so how will that be different from exploring
+
+00:19:47.279 --> 00:19:56.289
+it again like I know the probability of winning
+oh this still I'm not even totally hope you
+
+00:19:56.289 --> 00:20:00.230
+are going to solve it okay let me explain
+that and then you can come back and ask me
+
+00:20:00.230 --> 00:20:03.830
+descriptions okay if you still have it okay
+great.
+
+00:20:03.830 --> 00:20:09.190
+So what the way we are going to try and solve
+this game is as follows right for every board
+
+00:20:09.190 --> 00:20:15.419
+position I am going to try and estimate the
+reward I will get if I start from there and
+
+00:20:15.419 --> 00:20:21.750
+play the game to the end, right every board
+position I am going to look at the reward
+
+00:20:21.750 --> 00:20:26.110
+I will get if I start from there and play
+till the end, now if you think about it what
+
+00:20:26.110 --> 00:20:33.299
+will this reward connect Connor Tate right.
+So if I win from there I will get a 1 if I
+
+00:20:33.299 --> 00:20:38.140
+lose from that or if I do not win from that
+I will get a 0 right, when I say what is the
+
+00:20:38.140 --> 00:20:42.350
+reward I expect to get starting from this
+board position right it is essentially this
+
+00:20:42.350 --> 00:20:47.750
+average over multiple games it some games
+I will win some games I will lose I or I will
+
+00:20:47.750 --> 00:20:54.100
+not win like some games I win some games I
+will not win so what will this expected reward
+
+00:20:54.100 --> 00:21:01.920
+represent.
+After having played many games, the probability
+
+00:21:01.920 --> 00:21:06.990
+of winning right the reward is going to represent
+the probability of winning in this particular
+
+00:21:06.990 --> 00:21:11.860
+case that if the robot had not been one right
+if you had been something else if it had been
+
+00:21:11.860 --> 00:21:17.580
++5 that you would have been some function
+of the probability of any right after it has
+
+00:21:17.580 --> 00:21:22.680
+been +1 for winning -1 for loosing and 0 for
+draw well it is something more complex.
+
+00:21:22.680 --> 00:21:27.850
+It is no longer the probability of winning
+right it is the gain a expect to get right
+
+00:21:27.850 --> 00:21:31.960
+how much what fraction of games I expect to
+win over the fraction of games I expect to
+
+00:21:31.960 --> 00:21:35.920
+lose or something like the rate it becomes
+a little bit more complex, so that there could
+
+00:21:35.920 --> 00:21:41.390
+be some interpretation for the value function
+but in general it is just the expected reward
+
+00:21:41.390 --> 00:21:47.250
+that I am going to get starting from a particular
+board position okay.
+
+00:21:47.250 --> 00:21:53.980
+So that is what I am trying to estimate right
+let us assume that I have such a expectation
+
+00:21:53.980 --> 00:22:00.370
+well defined for me right as I say I have
+such an expectation well defined right now
+
+00:22:00.370 --> 00:22:06.711
+I come to us a specific position let us say
+I come to this position here let us say I
+
+00:22:06.711 --> 00:22:16.950
+come to this position how will I decide what
+is the next move I have to make, sorry whichever
+
+00:22:16.950 --> 00:22:18.840
+next state has the highest probability of
+ending.
+
+00:22:18.840 --> 00:22:24.740
+So I just look ahead to see okay where if
+I put if I put the X here right if I put the
+
+00:22:24.740 --> 00:22:27.769
+X here what is the probability of winning
+if I put the X here what is the probability
+
+00:22:27.769 --> 00:22:32.809
+of winning if you put takes here what is the
+probability of winning and I do this for each
+
+00:22:32.809 --> 00:22:37.610
+one of these right and then I figure out which
+ever has the highest probability of winning
+
+00:22:37.610 --> 00:22:45.070
+and I will put the X there alright so that
+is how I am going to use this function.
+
+00:22:45.070 --> 00:22:52.440
+Does it make sense yes it is very important
+so this is this is something which you should
+
+00:22:52.440 --> 00:22:56.240
+understand this is the crux of all reinforcement
+learning algorithms right I am going to learn
+
+00:22:56.240 --> 00:23:01.460
+this function that tells me if you are in
+this state right if you play things out to
+
+00:23:01.460 --> 00:23:09.059
+the end what will be the expected payoff that
+you will get right whether the rewards or
+
+00:23:09.059 --> 00:23:12.470
+punishment or cost whatever you want to call
+it what is the expected value you are going
+
+00:23:12.470 --> 00:23:19.190
+to get and I want to behave according to a
+this learnt function.
+
+00:23:19.190 --> 00:23:25.289
+So when I come to a state I look ahead figure
+out which of the next States has the highest
+
+00:23:25.289 --> 00:23:36.139
+expectation and then go to the state okay,
+great how do I learn this expectation. What
+
+00:23:36.139 --> 00:23:52.090
+is the simplest way to learn the expectation,
+this is actually keep track of what happens
+
+00:23:52.090 --> 00:23:56.080
+this is to keep track of the trajectory through
+the game tree that you play a game you go
+
+00:23:56.080 --> 00:24:01.460
+all the way to the end right so you keep track
+of the trajectory and if you win right you
+
+00:24:01.460 --> 00:24:05.470
+go back along the trajectory and update every
+state that you saw on the trajectory.
+
+00:24:05.470 --> 00:24:10.000
+You update the probability of winning right
+is this increase it a little bit or you come
+
+00:24:10.000 --> 00:24:14.529
+to the end of the game and he found that you
+are not one if you go back around the subject
+
+00:24:14.529 --> 00:24:19.770
+tree decrease the probability of winning a
+little bit right alternatively you can keep
+
+00:24:19.770 --> 00:24:25.940
+the history of all the games you have played
+so far right at every after every game has
+
+00:24:25.940 --> 00:24:30.620
+been completed you can go back and compute
+the average probability of winning across
+
+00:24:30.620 --> 00:24:35.650
+the entire history of all the games in which
+you saw that particular position right make
+
+00:24:35.650 --> 00:24:42.940
+sense this easiest way of estimating this
+probability right but the problem with this
+
+00:24:42.940 --> 00:24:49.261
+is A you have to wait till the game ends right
+or you have to store the history of all the
+
+00:24:49.261 --> 00:24:52.600
+games you have played item in all of these
+could be potential drawbacks okay you can
+
+00:24:52.600 --> 00:24:56.460
+get around the history part by coming up with
+an incremental rule but the main difficulty
+
+00:24:56.460 --> 00:25:00.960
+here is you have to wait all the way to the
+end of the game right before you can change
+
+00:25:00.960 --> 00:25:03.649
+anything along the way.
+So tic-tac-toe is easy like how many moves
+
+00:25:03.649 --> 00:25:10.580
+can you make in tic-tac-toe at best, four
+right the fifth one is determined for you
+
+00:25:10.580 --> 00:25:19.779
+and so it is basically four choices that you
+can make right there so and that is easy enough
+
+00:25:19.779 --> 00:25:22.710
+to remember right you can always wait till
+the end of the game and then you can always
+
+00:25:22.710 --> 00:25:27.779
+make the updates right what if it's a much
+more complex situation right what if you are
+
+00:25:27.779 --> 00:25:31.759
+playing chess.
+Maybe you can wait till the end so what if
+
+00:25:31.759 --> 00:25:44.059
+you are cycling maybe you can wait till end,
+exactly he we do not know right this it depends
+
+00:25:44.059 --> 00:25:47.679
+on where your cycling if you are cycling learning
+to cyclonite embedded it is fine when you
+
+00:25:47.679 --> 00:25:52.190
+are learning to cycle somewhere on the southern
+portal road even do not even think about what
+
+00:25:52.190 --> 00:25:58.440
+end is there right so this is not some tasks
+for which you really like to learn along the
+
+00:25:58.440 --> 00:26:01.600
+way right.
+So this is where TD learning comes into it
+
+00:26:01.600 --> 00:26:08.700
+comes to help wait I do not think I have a
+slight anyway and I am not using the fancy
+
+00:26:08.700 --> 00:26:18.490
+thing where I can draw on the on the projection
+so let us see if I can do it here right suppose
+
+00:26:18.490 --> 00:26:24.950
+I have come here right and from here I have
+played at this point I know the probability
+
+00:26:24.950 --> 00:26:35.370
+of winning is say 0.4 right so I came here
+by making a move from this position.
+
+00:26:35.370 --> 00:26:40.510
+So I said we were here net and we made a we
+know that the probability of winning from
+
+00:26:40.510 --> 00:26:48.320
+here is 0.3 right but I made the move from
+here to come here right but here I had thought
+
+00:26:48.320 --> 00:26:54.780
+my probability of winning was let us say 0.6
+then I thought my probability of winning was
+
+00:26:54.780 --> 00:27:03.490
+0.6 right but then I looked at my next States
+and I found that the best one was 0.3 somehow
+
+00:27:03.490 --> 00:27:09.830
+right so I went there right but now since
+the best I can do from here is 0.3 me saying
+
+00:27:09.830 --> 00:27:14.240
+0.6 here there is something wrong right so
+I should probably decrease the probability
+
+00:27:14.240 --> 00:27:20.279
+of winning from here right.
+So why could it be why could it have happened
+
+00:27:20.279 --> 00:27:27.570
+that I thought that was 0.6 but the best among
+the next was 0.3 may be the other 0.4 that
+
+00:27:27.570 --> 00:27:37.649
+was fully explored all of that the I thing
+is so that whenever I came to came through
+
+00:27:37.649 --> 00:27:44.309
+this part right maybe I one before right that
+it so happened that when I went through like
+
+00:27:44.309 --> 00:27:48.740
+this right initially I would have gone through
+like this and played the game and I am the
+
+00:27:48.740 --> 00:27:52.340
+examples I drew I might have actually won
+some of those games right.
+
+00:27:52.340 --> 00:27:57.850
+So I would have changes 2.6 right but it is
+possible for me to get here by playing a different
+
+00:27:57.850 --> 00:28:05.610
+sequence of moves also right so for example
+to come here right I could have put the X
+
+00:28:05.610 --> 00:28:11.409
+first here and then here or I could have put
+the X like I did here I put the X first here
+
+00:28:11.409 --> 00:28:16.619
+and then here but either way I would have
+reached this position right so there are many
+
+00:28:16.619 --> 00:28:23.159
+combinations in which I could have reached
+the same positions right it just to be nice
+
+00:28:23.159 --> 00:28:28.350
+to these guys right to reach here there are
+different orders in which I could have put
+
+00:28:28.350 --> 00:28:33.890
+the zeros and the X’S right here we are
+showing a specific order now 0 first 1st put
+
+00:28:33.890 --> 00:28:38.559
+here then put here that the x was first put
+here then put in it could very well be I put
+
+00:28:38.559 --> 00:28:42.840
+the X first here and the o first here and
+then I put the X here in the O here right
+
+00:28:42.840 --> 00:28:45.669
+the multiple ways in this thing goes reach
+right.
+
+00:28:45.669 --> 00:28:52.320
+So sometimes when I play those games right
+I lost right sometimes when I play these games
+
+00:28:52.320 --> 00:28:58.720
+I won therefore it turns out that for due
+to some random fluctuations right so sometimes
+
+00:28:58.720 --> 00:29:03.759
+I will when I go through this specific point
+and therefore I have a higher evaluation of
+
+00:29:03.759 --> 00:29:08.149
+winning right but when I went through the
+other paths I had a lower evaluation of winning
+
+00:29:08.149 --> 00:29:13.120
+right but we know that really does not matter
+what path you went through in tic-tac-toe
+
+00:29:13.120 --> 00:29:17.540
+right once your each that point right what
+is going to happen further is determined only
+
+00:29:17.540 --> 00:29:26.070
+by that point right.
+So what I can do now is take this point 3
+
+00:29:26.070 --> 00:29:36.890
+right you should update that 0.6 down so I
+am very confident here I think will the probability
+
+00:29:36.890 --> 00:29:42.149
+of 0.6 right but the best probability I have
+from the next stage is 0.3 therefore here
+
+00:29:42.149 --> 00:29:50.809
+is should not be so confident right good point
+that depends on how sarcastic your game is
+
+00:29:50.809 --> 00:29:57.470
+right so if you are game has a lot of variability
+then you do not want to make a complete you
+
+00:29:57.470 --> 00:30:01.179
+know commitment 2.3 so you might want to say
+okay now let me move it little bit towards
+
+00:30:01.179 --> 00:30:06.950
+0.3 right but if it is a more or less a deterministic
+game then you can say okay yeah 0.3 yes sure
+
+00:30:06.950 --> 00:30:10.870
+let me go to all the way 0.3 it depends on
+the nature of the game we will talk about
+
+00:30:10.870 --> 00:30:20.519
+these issues later there but how far down
+is a tricky thing yeah it is misleading it
+
+00:30:20.519 --> 00:30:30.720
+is called game tree actually but it is a game
+graph in this case yeah .
+
+00:30:30.720 --> 00:30:34.720
+So as I said kid when this is this is an instance
+of temporal difference learning so how while
+
+00:30:34.720 --> 00:30:40.850
+I use the thing to update this is called temporal
+difference learning ok so there is one other
+
+00:30:40.850 --> 00:30:49.820
+thing which is Should mention here right if
+I always take the move that which I think
+
+00:30:49.820 --> 00:30:57.179
+is the best move right now right let us talk
+about it I start tab Laura's I never played
+
+00:30:57.179 --> 00:31:04.030
+tic-tac-toe before right so I play the game
+I play it once I get to the end I win so now
+
+00:31:04.030 --> 00:31:08.450
+what I do I go back right whether I am using
+temporal difference learning or waiting till
+
+00:31:08.450 --> 00:31:14.299
+the end up dating whatever it is I change
+the value of all the moves I have made in
+
+00:31:14.299 --> 00:31:19.120
+this particular game right.
+So the next time I come to a board position
+
+00:31:19.120 --> 00:31:24.320
+what am I going to do I look at all possible
+outcomes everything except the one that I
+
+00:31:24.320 --> 00:31:29.539
+have played will have a 0 right and the one
+that I have played will have something slightly
+
+00:31:29.539 --> 00:31:36.559
+higher than 0 I am going to take that in fact
+it will be like how many of you watch the
+
+00:31:36.559 --> 00:31:42.260
+movie Groundhog Day it will be like Groundhog
+Day I will be playing I will be playing the
+
+00:31:42.260 --> 00:31:47.150
+same game again and again because that is
+what happened to give you win in the first
+
+00:31:47.150 --> 00:31:50.989
+time around right that but that might not
+be the best way to play this right.
+
+00:31:50.989 --> 00:31:58.289
+So I need to explore right so I need to explore
+multiple options right so I should not be
+
+00:31:58.289 --> 00:32:06.080
+always playing the best rest room right and
+I should always be paying the best move I
+
+00:32:06.080 --> 00:32:10.539
+need to do some amount of exploration so that
+I can figure out if there are better moves
+
+00:32:10.539 --> 00:32:17.389
+than what I think is currently the best move
+right so tic-tac-toe there is inherently some
+
+00:32:17.389 --> 00:32:22.990
+kind of noise if your opponent is random right
+but if an operand is not random and if operand
+
+00:32:22.990 --> 00:32:27.820
+is also playing a fixed rule and if you are
+playing greedy then you will be just play
+
+00:32:27.820 --> 00:32:33.190
+a very small fraction of the game tree and
+you would not have explored the rest of the
+
+00:32:33.190 --> 00:32:36.129
+outcomes right.
+So you have to do some amount of things at
+
+00:32:36.129 --> 00:32:44.820
+random so that you learn more about the game
+right so here is a question for you when I
+
+00:32:44.820 --> 00:32:54.139
+am estimating this probabilities of winning
+right let us say I have reached here I look
+
+00:32:54.139 --> 00:32:59.269
+downright and the action that gives me the
+highest probability of winning set gives me
+
+00:32:59.269 --> 00:33:04.820
+a probability of say 0.8 right but I want
+to explore right so I take an action that
+
+00:33:04.820 --> 00:33:11.260
+gives me a probability say 0.4 okay so I will
+go from here to another action that has a
+
+00:33:11.260 --> 00:33:17.070
+probability 0.4 another board position that
+has a probability of 0.4 of winning so should
+
+00:33:17.070 --> 00:33:26.590
+I use this 0.4 to update this probability
+or not 
+
+00:33:26.590 --> 00:33:52.179
+know why that you are questioning the whole
+TD idea yeah okay any other answer because
+
+00:33:52.179 --> 00:33:59.330
+you are learning that whether good or a bad
+move will be found out I.
+
+00:33:59.330 --> 00:34:03.519
+Have to update the value of that smooth I
+agree to update the value of winning from
+
+00:34:03.519 --> 00:34:08.310
+the previous birth position was the question
+so that 0.4 I will have to change right but
+
+00:34:08.310 --> 00:34:12.610
+to exchange the 0. 8 that was a question the
+0.8 was a probability of winning from here
+
+00:34:12.610 --> 00:34:17.450
+right I look or whatever the probability say
+I had a probability of winning of 0.6 from
+
+00:34:17.450 --> 00:34:22.830
+here I look at the bottom and the best probability
+of winning says 0. 8 but then I take because
+
+00:34:22.830 --> 00:34:26.380
+I am exploring I would take an action that
+has a probability of winning of 0.4.
+
+00:34:26.380 --> 00:34:32.799
+Right the question is do I go back and change
+the 0.6 towards point for or do I leave the
+
+00:34:32.799 --> 00:34:43.960
+0.6 as it sorry I am exploring rate I mean
+this is we may be necessarily be less than
+
+00:34:43.960 --> 00:34:49.909
+0.8 this will be 0 .4 for that will be 0.6
+so the question here is see one way of arguing
+
+00:34:49.909 --> 00:34:55.960
+about this is to say that hey if I am playing
+to win right I will play the best action from
+
+00:34:55.960 --> 00:35:01.330
+here right then the best action says 0.8 therefore
+I should not penalize it for the bad action
+
+00:35:01.330 --> 00:35:03.980
+which is 0.4 which I did to learn more about
+the system.
+
+00:35:03.980 --> 00:35:09.160
+That is one way of thinking about it another
+way of arguing is to say that hey no this
+
+00:35:09.160 --> 00:35:13.820
+is how I am actually behaving now right so
+I should give you the probability of winning
+
+00:35:13.820 --> 00:35:19.720
+a book about the current behavior policy right
+this should not be some other ideal policy
+
+00:35:19.720 --> 00:35:25.819
+should be about to what I am behaving currently
+and therefore I should update it right so
+
+00:35:25.819 --> 00:35:35.250
+which one is correct first or the second you
+do not know what the second you would say
+
+00:35:35.250 --> 00:35:38.670
+the second one great so all of you can go
+right here in your homework answers.
+
+00:35:38.670 --> 00:35:43.960
+Okay I think this is one of the homework questions
+as well right are you looking at the question
+
+00:35:43.960 --> 00:35:47.280
+I know you are browsing you are not paying
+attention to me but can you look at the question
+
+00:35:47.280 --> 00:36:01.819
+Jasper you do not have network here I see
+is our network does not work okay there should
+
+00:36:01.819 --> 00:36:09.549
+be a Wi-Fi access point called ICS our studio
+or something no fine do you 
+
+00:36:09.549 --> 00:36:18.020
+have the question we have the book offline
+I do believe this one of the question say
+
+00:36:18.020 --> 00:36:21.910
+so otherwise make up a question and write
+the answer to that so we will feel will make
+
+00:36:21.910 --> 00:36:25.540
+sure this is one of the questions but this
+is something these are this is like I said
+
+00:36:25.540 --> 00:36:29.440
+I am going to ask you to think about the whole
+tic-tac-toe thing and many of these answers
+
+00:36:29.440 --> 00:36:33.700
+have relevance later on in fact there are
+two different algorithms one does option one
+
+00:36:33.700 --> 00:36:39.160
+and one does option two.
+Right so there is no right answer or wrong
+
+00:36:39.160 --> 00:36:48.781
+answer right answer is depends yeah so yeah
+so this is a different things that you can
+
+00:36:48.781 --> 00:36:52.880
+think about in this but I told you about two
+different ways of learning with tic-tac-toe
+
+00:36:52.880 --> 00:36:57.309
+one wait till the end and figure out what
+the probabilities will be the other one this
+
+00:36:57.309 --> 00:37:01.530
+keep adapting this as you go along right and
+both cases you will have to explore that is
+
+00:37:01.530 --> 00:37:07.480
+it to key part here in both cases you have
+to explore otherwise you will not learn about
+
+00:37:07.480 --> 00:37:21.250
+the entire game so this is where the Explorer
+exploit thingy comes in okay yeah great question
+
+00:37:21.250 --> 00:37:24.930
+different algorithms deal with it different
+way that is one of the crucial questions that
+
+00:37:24.930 --> 00:37:32.839
+you have to answer in NRL.
+So it is called the Explorer exploit dilemma
+
+00:37:32.839 --> 00:37:40.859
+aright so you have to explore to find out
+which is the best action right and you have
+
+00:37:40.859 --> 00:37:41.859
+to exploit.
+.
+
+00:37:41.859 --> 00:37:46.790
+Whatever knowledge you have gathered right
+and you have to act according to the best
+
+00:37:46.790 --> 00:37:52.170
+observations already made right so this is
+called exploitation right so the key was the
+
+00:37:52.170 --> 00:37:56.420
+key questions is when do you know you have
+explored enough right should I explore know
+
+00:37:56.420 --> 00:38:02.170
+or should I exploit now this is called the
+Explorer exploit dilemma right and a slightly
+
+00:38:02.170 --> 00:38:08.010
+simpler version of reinforcement learning
+called the Bandit problems okay some colorfully
+
+00:38:08.010 --> 00:38:14.280
+called banded problems they of course he is
+an expert on bandit problems here you can
+
+00:38:14.280 --> 00:38:17.580
+the Bandit problems encapsulate this Explorer
+exploit dilemma.
+
+00:38:17.580 --> 00:38:26.310
+My god lot of people are turning and looking
+at irritable and so this is the next chapter
+
+00:38:26.310 --> 00:38:30.589
+we are going to look at this so probably in
+the next class I will start plunging into
+
+00:38:30.589 --> 00:38:35.250
+bandit problems in more detail but so this
+will ignore a whole bunch of other things
+
+00:38:35.250 --> 00:38:41.150
+like the delayed rewards you know the sequential
+decisions and other things even in the absence
+
+00:38:41.150 --> 00:38:45.730
+of all of these other complications that even
+if I say that you are all your problem is
+
+00:38:45.730 --> 00:38:50.070
+you have to take an action and you will get
+a reward okay your goal is to pick the action
+
+00:38:50.070 --> 00:38:53.290
+that gives the highest reward.
+I will give you 10 actions you are to pick
+
+00:38:53.290 --> 00:38:58.569
+the action that gives you the highest reward
+right but the problem is you do not know what
+
+00:38:58.569 --> 00:39:06.109
+is the probability distribution from which
+these rewards are coming right so you will
+
+00:39:06.109 --> 00:39:12.040
+have to do some exploration I have to actually
+do every action at least once okay to know
+
+00:39:12.040 --> 00:39:17.720
+what will be the reward even if they are deterministic
+right so I cannot say which is the best action
+
+00:39:17.720 --> 00:39:21.849
+before I try every action at least once if
+it is deterministic it is fine I can just
+
+00:39:21.849 --> 00:39:27.680
+try every action once and I know what is the
+payoff right but if it is stochastic I have
+
+00:39:27.680 --> 00:39:32.010
+to try every action multiple times right.
+How many times do you have to try it depends
+
+00:39:32.010 --> 00:39:37.430
+on the variability of the distribution right
+so these are the subtle questions which we
+
+00:39:37.430 --> 00:39:45.740
+will talk about as we look at the next chapter
+in the first chapter in the book the first
+
+00:39:45.740 --> 00:39:49.440
+real chapter in the book okay there is an
+intro chapter which talks about tic tac toe
+
+00:39:49.440 --> 00:40:03.530
+and a whole bunch of other things and yeah
+you ever stop soon not sure they do all of
+
+00:40:03.530 --> 00:40:11.619
+this yeah so we come back and talk about all
+of this later right so I thought I would not
+
+00:40:11.619 --> 00:40:15.890
+spend enough time talking about the general
+background of RNL applications so I put in
+
+00:40:15.890 --> 00:40:18.920
+a little bit more slides I typically do this
+on the board right.
+
+00:40:18.920 --> 00:40:23.430
+So I will do this on the board when I get
+to chapter 3 right and so one thing which
+
+00:40:23.430 --> 00:40:31.230
+I wanted to tell you was this right there
+are you know two classes of algorithms that
+
+00:40:31.230 --> 00:40:34.799
+we will be talking about so one of them is
+based on what is called dynamic programming
+
+00:40:34.799 --> 00:40:36.270
+right.
+.
+
+00:40:36.270 --> 00:40:47.090
+So dynamic programming how many of you know
+what dynamic programming is I expect at least
+
+00:40:47.090 --> 00:40:54.099
+23 hands out and I having mechanical engineers
+putting their heads have not the CS guys really
+
+00:40:54.099 --> 00:41:04.750
+you know what dynamic programming is something
+wrong with your hand then okay fine so what
+
+00:41:04.750 --> 00:41:08.960
+this essential idea behind dynamic I will
+talk again I will talk ass as usual with other
+
+00:41:08.960 --> 00:41:15.270
+things will well win this in larger detail
+the essential idea behind dynamic programming
+
+00:41:15.270 --> 00:41:20.549
+is you will be using some kind of repeated
+structure in the problem right.
+
+00:41:20.549 --> 00:41:26.359
+So and to solve the problem more efficiently
+right suppose I have a solution that I can
+
+00:41:26.359 --> 00:41:33.430
+give for a problem of say size n right then
+I will try to see if I can use that for defining
+
+00:41:33.430 --> 00:41:38.030
+the solution for the problem of size n + 1
+so some kind of a repeater sub structure in
+
+00:41:38.030 --> 00:41:44.150
+the problems right very rough way of describing
+more dynamic programming is right so for example
+
+00:41:44.150 --> 00:41:49.799
+one way of thinking about dynamic programming
+is I have this game tree right so I look at
+
+00:41:49.799 --> 00:41:55.930
+the values of winning or the expectations
+of winning from all of these steps right.
+
+00:41:55.930 --> 00:42:00.730
+.
+I will use these in order to compute the value
+
+00:42:00.730 --> 00:42:06.410
+of winning or the probability of winning from
+the state right so if you think about it if
+
+00:42:06.410 --> 00:42:12.480
+from here if I'm going to take say n steps
+from here how many steps will be expect me
+
+00:42:12.480 --> 00:42:17.359
+to take n- 1 steps right so I look at the
+probability of winning when I when I have
+
+00:42:17.359 --> 00:42:23.180
+only n - 1 steps left right I will estimate
+that first I will use that solution for estimating
+
+00:42:23.180 --> 00:42:27.640
+the probability of winning when I have n steps
+left right so that is essentially the idea
+
+00:42:27.640 --> 00:42:31.849
+behind dynamic programming and so what we
+will do is well we will talk about how do
+
+00:42:31.849 --> 00:42:36.270
+you use dynamic programming to solve reinforcement
+learning problems right.
+
+00:42:36.270 --> 00:42:41.630
+And then we will talk about various reinforcement
+learning methods which are essentially online
+
+00:42:41.630 --> 00:42:46.070
+approximate dynamic programming you know so
+they are they use dynamic programming ideas
+
+00:42:46.070 --> 00:42:50.920
+but they do not have any knowledge of the
+system dynamics right so the P&amp;R other things
+
+00:42:50.920 --> 00:42:59.660
+become clear later and so all you do now is
+instead of having the entire out come.
+
+00:42:59.660 --> 00:43:01.599
+.
+And using that for estimating the probability
+
+00:43:01.599 --> 00:43:07.789
+of winning here right I am going to just use
+one step that I take through the tree right
+
+00:43:07.789 --> 00:43:13.760
+I use this what happens in this one step I
+will use that in order to update the probability
+
+00:43:13.760 --> 00:43:18.710
+of winning here rights instead of using the
+entire outcome right as in dynamic programming
+
+00:43:18.710 --> 00:43:23.220
+in reinforcement learning methods we will
+be using samples that you are getting through
+
+00:43:23.220 --> 00:43:27.930
+the state space.
+This is the TD method in the other method
+
+00:43:27.930 --> 00:43:33.930
+I explained to win for tic-tac-toe what would
+you do your sample will run all the way to
+
+00:43:33.930 --> 00:43:40.200
+the end right and you use that to update so
+this is the two different ways of using samples
+
+00:43:40.200 --> 00:44:05.390
+here so 
+if you are doing it for the first time right
+
+00:44:05.390 --> 00:44:10.500
+first times down the tree there will be no
+updates actually because ST + 1 will also
+
+00:44:10.500 --> 00:44:16.339
+be 0ST will also be 0 the first time we go
+down there will be no updates but once you
+
+00:44:16.339 --> 00:44:21.210
+reach an end then from there you will start
+updating the previous day.
+
+00:44:21.210 --> 00:44:37.750
+So the next time you go down the tree then
+it will keep going further up whether in what
+
+00:44:37.750 --> 00:44:42.960
+the game have lost the game I actually I am
+taking the exact outcome that happened in
+
+00:44:42.960 --> 00:44:49.010
+that particular trial right at that particular
+game and I used that to change my probabilities
+
+00:44:49.010 --> 00:44:53.450
+right but here I am not just taking the outcome
+of that particular game right I am looking
+
+00:44:53.450 --> 00:45:02.560
+at the expected value of winning from the
+next board position right so if I wait till
+
+00:45:02.560 --> 00:45:07.590
+all the way here and I say I won and it take
+this in update as T then I will be only updating
+
+00:45:07.590 --> 00:45:12.690
+it with the fact whether I won or not okay
+but if I am updating it from ST + 1 see I
+
+00:45:12.690 --> 00:45:15.670
+could have reached this T+ 1 multiple ways
+before right
+
+00:45:15.670 --> 00:45:19.910
+When I am doing the update on from XT + 1
+it is essentially the average accumulated
+
+00:45:19.910 --> 00:45:24.910
+over all the previous trails that I will be
+using right so if I play all the way to the
+
+00:45:24.910 --> 00:45:29.411
+end and update it will be with a one or a
+zero but ST+ 1 could be anywhere between 1
+
+00:45:29.411 --> 00:45:31.010
+and 0 depending on what is the probability
+of winning,.
+
+00:45:31.010 --> 00:45:38.310
+So I will be using that value for update that
+is a crucial difference I so there are many
+
+00:45:38.310 --> 00:45:41.880
+different solution methods so there are all
+this which are called temporal difference
+
+00:45:41.880 --> 00:45:42.880
+methods.
+.
+
+00:45:42.880 --> 00:45:46.780
+So these are all different algorithms TD ? Q
+learning’s our sector critic so on so forth
+
+00:45:46.780 --> 00:45:53.810
+and then there is a so of algorithms which
+called policy search algorithms and then there
+
+00:45:53.810 --> 00:45:59.770
+is dynamic programming so will actually look
+at each of these classes of algorithms in
+
+00:45:59.770 --> 00:46:06.349
+the and the next few lectures right these
+are all essentially mostly from the textbook
+
+00:46:06.349 --> 00:46:12.069
+except policy search algorithms which I will
+be covering from other material right and
+
+00:46:12.069 --> 00:46:15.880
+then whole bunch of other applications for
+Aaron it.
+
+00:46:15.880 --> 00:46:19.609
+.
+So could they are all over the place as you
+
+00:46:19.609 --> 00:46:26.720
+could see optimal control optimization company
+to combinatorial optimization for psychology
+
+00:46:26.720 --> 00:46:31.680
+neuroscience so that is not a three since
+it was asking is there anyone from biotech
+
+00:46:31.680 --> 00:46:36.860
+because biotech people do use reinforcement
+learning a lot and usually there are one or
+
+00:46:36.860 --> 00:46:42.070
+two people in the RL class so this is a surprise
+or maybe that is that was a bear trick with
+
+00:46:42.070 --> 00:46:49.220
+this trip according to the economic website
+I mean this is gave up in CS 36 and win back
+
+00:46:49.220 --> 00:46:52.400
+I do not know right.
+.
+
+00:46:52.400 --> 00:47:01.359
+So here is the most recent the hot thing that
+comes from came from RL right more game playing
+
+00:47:01.359 --> 00:47:09.160
+and for a change is not from IBM is from Google
+but the company that actually built the first
+
+00:47:09.160 --> 00:47:13.630
+this arcade game playing engine was called
+deep mind and as soon as deep mind built a
+
+00:47:13.630 --> 00:47:19.230
+successful engine Google bought them right
+and so now it is Google deep mind but it is
+
+00:47:19.230 --> 00:47:24.849
+a separate entity right it is not part of
+Google deep mind operate out of London and
+
+00:47:24.849 --> 00:47:30.040
+they are doing all kinds of interesting stuff
+many of the hot advances a very recent advances
+
+00:47:30.040 --> 00:47:34.589
+in the last year or so in the reinforcement
+learning seem to be coming out of different.
+
+00:47:34.589 --> 00:47:40.160
+So what they did was how many if you know
+about this Atari games right everyone knows
+
+00:47:40.160 --> 00:47:50.470
+about Atari games people are getting tired
+really no one has played bat -man yeah how
+
+00:47:50.470 --> 00:48:00.270
+would how about pong breakout space invaders
+come on yeah anyway so what happened was this
+
+00:48:00.270 --> 00:48:05.530
+is team in University of Alberta ok which
+put out this their what they call the LED
+
+00:48:05.530 --> 00:48:10.970
+arcade learn and I the Atari learning environment
+or arcade learning environment which essentially
+
+00:48:10.970 --> 00:48:16.530
+they allowed computers to play these games
+right these Atari games and what the deep
+
+00:48:16.530 --> 00:48:20.640
+mine fellows came up with is a reinforcement
+un engaging that learn to play this game from
+
+00:48:20.640 --> 00:48:26.859
+scratch I just by looking at the screen.
+Okay that is all the input it was getting
+
+00:48:26.859 --> 00:48:30.500
+just the pixels from the screen they are all
+pixels on the screen are given as inputs to
+
+00:48:30.500 --> 00:48:38.010
+it used to very complex neural network so
+it us a deep learning deep network right and
+
+00:48:38.010 --> 00:48:42.329
+it is considered one of the hardest learning
+problem solved by a computer and I believe
+
+00:48:42.329 --> 00:48:47.980
+it is a one the only computational reinforcement
+learning paper ever appear in nature right
+
+00:48:47.980 --> 00:48:55.529
+so usually is very hard for non natural science
+people to publish in nature kind of obviously
+
+00:48:55.529 --> 00:49:02.380
+it is usually Hartford computer science folks
+the population nature but this was totaled
+
+00:49:02.380 --> 00:49:09.220
+out as a next step in trying to understand
+how humans process inputs blah all kinds of
+
+00:49:09.220 --> 00:49:16.640
+marketing jargon right but more importantly
+than anything else about this it is reproducible.
+
+00:49:16.640 --> 00:49:23.859
+So I told you about I think that is a warning
+sign for me to stop so I told you about the
+
+00:49:23.859 --> 00:49:27.990
+helicopter right so there is basically Stanford
+and Berkeley or the two people who get the
+
+00:49:27.990 --> 00:49:34.700
+helicopter o fly I told me about the backgammon
+player is like Jarrett SRO is the one person
+
+00:49:34.700 --> 00:49:39.750
+who gets the backgammon player to work right
+partly because all the input features he uses
+
+00:49:39.750 --> 00:49:44.069
+in there or proprietary but partly because
+has a very hard problem to solve right what
+
+00:49:44.069 --> 00:49:49.720
+is amazing thing about this Atari game engine
+is that this case are very sub code right
+
+00:49:49.720 --> 00:49:55.339
+you can if you have enough powerful GPUs right
+you can set it up here and get it to play
+
+00:49:55.339 --> 00:50:00.539
+and get a reasonably working engine right.
+That plays those places Atari games that's
+
+00:50:00.539 --> 00:50:04.760
+the amazing thing about it that is reproducible
+as opposed to many of the other things other
+
+00:50:04.760 --> 00:50:10.460
+success stories other success stories we have
+had in the past so I do believe I had just
+
+00:50:10.460 --> 00:50:19.780
+one more slide after this so let us see if
+this will work.
+
+00:50:19.780 --> 00:50:36.390
+.
+Okay so if you are any doubts the green one
+
+00:50:36.390 --> 00:51:17.320
+is the learning agent is it no this just sped
+up for you to see you mean it is not like
+
+00:51:17.320 --> 00:51:26.940
+the game is progressing at the same rate but
+you can see the score slow mind you it was
+
+00:51:26.940 --> 00:51:34.040
+not given a reward okay it is just given the
+screen never got to reward for winning ideas
+
+00:51:34.040 --> 00:51:42.490
+and understand what the pixels on the top
+or rewarding and if we give it roars it becomes
+
+00:51:42.490 --> 00:51:55.920
+cheating right how does it 
+
+00:51:55.920 --> 00:52:01.180
+which is what they did they did they did at
+a game over which is misty the Ailey pure
+
+00:52:01.180 --> 00:52:08.910
+is considered as cheating but they did not
+a game over side so the longer you keep it
+
+00:52:08.910 --> 00:52:27.020
+going the better it is basically nothing this
+is getting boring right.
+
+00:52:27.020 --> 00:52:41.510
+So it is learnt here 
+so this is a sea quest you have to swim and
+
+00:52:41.510 --> 00:52:47.279
+then sink down get some things and come up
+so sequence is a game that it never learned
+
+00:52:47.279 --> 00:53:23.650
+to do greatly on and sequence is not something
+which it learn to solve well so there are
+
+00:53:23.650 --> 00:53:29.369
+a few games like this so they initially published
+the nature paper I think they had like 45
+
+00:53:29.369 --> 00:53:36.529
+or 46 out of the 50 ale games they were able
+to play well and I think in 43 of them it
+
+00:53:36.529 --> 00:53:41.559
+had better than human performance and I think
+the current state is they have like one game
+
+00:53:41.559 --> 00:53:47.670
+that doesn't play well right and have better
+than human performance in like 48 of those
+
+00:53:47.670 --> 00:53:54.160
+games or something.
+So is this is amazing you think about it right
+
+00:53:54.160 --> 00:54:00.020
+so these are all lot of references but we
+will be using the Sutton and bought Oh textbook
+
+00:54:00.020 --> 00:54:04.890
+the second edition we there is a pre-release
+copy which rich certain this continuously
+
+00:54:04.890 --> 00:54:12.819
+updating on his webpage right and the very
+short introduction to heading for learning
+
+00:54:12.819 --> 00:54:18.270
+in Tom Mitchell's book and there is a chapter
+in Russell and nor wig and if you are interested
+
+00:54:18.270 --> 00:54:25.089
+in looking at the neuroscience perspective
+of reinforcement learning or the history of
+
+00:54:25.089 --> 00:54:29.920
+how behavioral psychology models evolved to
+temporal difference learning you can look
+
+00:54:29.920 --> 00:54:35.150
+at Diana and Abbott it is one chapter on reinforce
+learning you do not have to understand the
+
+00:54:35.150 --> 00:54:39.170
+neuroscience to understand the RL chapter.
+So do not get put off by the title of the
+
+00:54:39.170 --> 00:54:46.720
+book right and then the more mathematically
+well grounded introduction to reinforce money
+
+00:54:46.720 --> 00:54:52.359
+would be from vs occurs and sickness so apart
+from this we will use one book which is Markov
+
+00:54:52.359 --> 00:54:57.880
+decision processes by putter men that will
+use certain chapters from put Roman and they
+
+00:54:57.880 --> 00:55:01.859
+are just for us to understand MDPs better
+motivation process better.
+

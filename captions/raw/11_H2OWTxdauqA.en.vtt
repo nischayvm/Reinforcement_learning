@@ -1,0 +1,547 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.332 --> 00:00:19.000
+[Music] there's only one thing which I want to&nbsp;
+mention more in a very uh you know very very high&nbsp;&nbsp;
+
+00:00:19.000 --> 00:00:22.240
+level I don't want to get into the proofs and&nbsp;
+other things the guys who did the course last&nbsp;&nbsp;
+
+00:00:22.240 --> 00:00:28.920
+year actually had a uh guest lecture from somebody&nbsp;
+who works in this field and who was able to talk&nbsp;&nbsp;
+
+00:00:28.920 --> 00:00:34.480
+about another technique which is gaining a lot of&nbsp;
+popularity recently uh so he talked about that in&nbsp;&nbsp;
+
+00:00:34.480 --> 00:00:39.560
+in in gory detail in fact he did some proofs from&nbsp;
+one of the papers that they wrote and so on so&nbsp;&nbsp;
+
+00:00:39.560 --> 00:00:45.400
+forth uh but unfortunately I don't have the guest&nbsp;
+lecturer here this time and it's also I mean just&nbsp;&nbsp;
+
+00:00:45.400 --> 00:00:52.160
+I introduce you the ideas to you and then if you&nbsp;
+want you can read up on those later right uh but&nbsp;&nbsp;
+
+00:00:52.160 --> 00:00:56.000
+in some sense whatever we have done so far gives&nbsp;
+you all the tools that you need you know it gives&nbsp;&nbsp;
+
+00:00:56.000 --> 00:01:00.120
+you the basic tools for you to understand more&nbsp;
+complex algorithms and so on so forth that's&nbsp;&nbsp;
+
+00:01:00.120 --> 00:01:06.040
+that's the whole idea for me to do this and if&nbsp;
+you actually look at the book right the textbook&nbsp;&nbsp;
+
+00:01:06.040 --> 00:01:11.600
+um they almost in passing mention all of these&nbsp;
+algorithms right mean they have like one paragraph&nbsp;&nbsp;
+
+00:01:11.600 --> 00:01:15.960
+saying oh this is how you do UCB and this is how&nbsp;
+you do they don't talk about Medan elimination&nbsp;&nbsp;
+
+00:01:15.960 --> 00:01:19.640
+at all uh this is how you do something else&nbsp;
+which I'll talk about in the next class called&nbsp;&nbsp;
+
+00:01:19.640 --> 00:01:24.240
+reinforce right they mentioned these things in&nbsp;
+passing and then they say oh we'll build on some&nbsp;&nbsp;
+
+00:01:24.240 --> 00:01:29.120
+of these ideas as and when required for the full&nbsp;
+reinforcement learning problem right so in some&nbsp;&nbsp;
+
+00:01:29.120 --> 00:01:34.000
+sense the the book treats Bandits as something&nbsp;
+that you is a necessary evil that you need to&nbsp;&nbsp;
+
+00:01:34.000 --> 00:01:39.800
+know about on your way to learning about the full&nbsp;
+ARL problem right given the focus of the book&nbsp;&nbsp;
+
+00:01:39.800 --> 00:01:46.240
+that's a valid way of treating Bandit problems&nbsp;
+uh but in fact it Bandits itself is a very very&nbsp;&nbsp;
+
+00:01:46.240 --> 00:01:50.040
+rich large literature and it's very active area&nbsp;
+of research for a lot of reinforcement learning&nbsp;&nbsp;
+
+00:01:50.040 --> 00:01:56.400
+people that's one of the reasons I actually&nbsp;
+covered uh bandits in a little more depth than I&nbsp;&nbsp;
+
+00:01:56.400 --> 00:02:02.160
+used to do uh maybe a couple of years ago right so&nbsp;
+a couple of years ago I did banditss in like one
+
+00:02:02.160 --> 00:02:09.880
+class right all of Bandits anyway so&nbsp;
+one thing which I want to talk about
+
+00:02:09.880 --> 00:02:32.680
+was Thompson sampling which is gaining a lot of&nbsp;
+traction now okay uh so it's more descriptively&nbsp;&nbsp;
+
+00:02:32.680 --> 00:02:36.320
+you could call it posterior sampling depending&nbsp;
+on which literature you're reading some some&nbsp;&nbsp;
+
+00:02:36.320 --> 00:02:40.960
+people call it posterior sampling some people&nbsp;
+call it Thompson sampling so the basic idea is&nbsp;&nbsp;
+
+00:02:40.960 --> 00:02:48.920
+the following right so I'm trying to solve a&nbsp;
+bandit problem right and we know that if you&nbsp;&nbsp;
+
+00:02:48.920 --> 00:02:53.760
+know the the parameters of the Bandit if&nbsp;
+I knew all the Q Stars right I can solve&nbsp;&nbsp;
+
+00:02:53.760 --> 00:03:01.200
+it very easily right so how what do I do take&nbsp;
+the highest right so what I'm going to do when&nbsp;&nbsp;
+
+00:03:01.200 --> 00:03:08.240
+I do this kind of Thompson sampling approach&nbsp;
+uh is to uh take a somewhat a basian way of&nbsp;&nbsp;
+
+00:03:08.240 --> 00:03:12.240
+looking at these things right I'm going&nbsp;
+to say that okay I'm solving this unknown&nbsp;&nbsp;
+
+00:03:12.240 --> 00:03:17.840
+problem I'm solving this unknown problem but&nbsp;
+I'm going to make some assumption about the&nbsp;&nbsp;
+
+00:03:17.840 --> 00:03:24.280
+parameters of this unknown problem right&nbsp;
+so essentially the Assumption I'm making&nbsp;&nbsp;
+
+00:03:24.280 --> 00:03:32.120
+here is about the Q Stars I'm going to make&nbsp;
+an assumption that the true Q stars come from&nbsp;&nbsp;
+
+00:03:32.120 --> 00:03:38.520
+some distribution right I'll start with some&nbsp;
+guess for this the True Q stars come from some
+
+00:03:38.520 --> 00:03:47.720
+distribution right so if my if my uh if I know&nbsp;
+that my uh rewards are limited between 0 and&nbsp;&nbsp;
+
+00:03:47.720 --> 00:03:51.600
+one right like many of the cases we being&nbsp;
+assuming rewards are limited between 0 and&nbsp;&nbsp;
+
+00:03:51.600 --> 00:03:59.720
+one so what would be an appropriate&nbsp;
+assumption for this qar distribution
+
+00:04:02.600 --> 00:04:11.680
+beta distribution so people remember beta&nbsp;
+distribution the guys who are in ml yes the&nbsp;&nbsp;
+
+00:04:11.680 --> 00:04:16.920
+guys who are in ml at least should remember the&nbsp;
+beta distribution so the beta distribution is is&nbsp;&nbsp;
+
+00:04:16.920 --> 00:04:24.240
+a distribution that is limited to 01 right and&nbsp;
+it can take all kinds of weird forms uh right&nbsp;&nbsp;
+
+00:04:24.240 --> 00:04:31.160
+and um so this is typically a prior that prior&nbsp;
+distribution that you assume uh whenever you
+
+00:04:31.160 --> 00:04:40.760
+have you you're trying to find parameters of a&nbsp;
+uh uh distribution where the parameters limited&nbsp;&nbsp;
+
+00:04:40.760 --> 00:04:46.440
+between 0 and one okay so the beta distribution&nbsp;
+is a very popular prior that is used like that I&nbsp;&nbsp;
+
+00:04:46.440 --> 00:04:51.640
+make some kind of an assumption let us say that&nbsp;
+I don't know anything about the underlying uh&nbsp;&nbsp;
+
+00:04:51.640 --> 00:04:57.480
+problem right then what will I assume uniform&nbsp;
+right you can assume a uniform distribution&nbsp;&nbsp;
+
+00:04:57.480 --> 00:05:02.680
+saying that I don't know anything so my Q Stars&nbsp;
+can come from from anywhere so now what do I do&nbsp;&nbsp;
+
+00:05:02.680 --> 00:05:08.680
+and one way of solving this problem is to say that&nbsp;
+given my current knowledge about the parameters&nbsp;&nbsp;
+
+00:05:08.680 --> 00:05:15.160
+given my current knowledge about the parameters&nbsp;
+which arm should I play okay so that I my reward&nbsp;&nbsp;
+
+00:05:15.160 --> 00:05:21.920
+is optimized that's one way of thinking about it&nbsp;
+so what should I do then I should take each Bandit&nbsp;&nbsp;
+
+00:05:21.920 --> 00:05:29.760
+combination right I should I should say that okay&nbsp;
+okay the probability of I me so Q star one is&nbsp;&nbsp;
+
+00:05:29.760 --> 00:05:37.320
+some value say3 Q star two is. five Q star three&nbsp;
+is something else 1.2 like that so I had to make&nbsp;&nbsp;
+
+00:05:37.320 --> 00:05:42.320
+one banded problem and then figure out okay&nbsp;
+what is the best ter to play here and then&nbsp;&nbsp;
+
+00:05:42.320 --> 00:05:46.400
+take another banded problem figure out what&nbsp;
+is the best ter to play take another Bandit&nbsp;&nbsp;
+
+00:05:46.400 --> 00:05:50.440
+problem figure out what is the best arm to play&nbsp;
+and for each of these Bandit problems I should&nbsp;&nbsp;
+
+00:05:50.440 --> 00:05:57.560
+look at what is the probability that this is the&nbsp;
+True Q Stars according to my current knowledge&nbsp;&nbsp;
+
+00:05:57.560 --> 00:06:02.440
+about the problem so if I start with a uniform&nbsp;
+distribution then everything is equally likely&nbsp;&nbsp;
+
+00:06:02.440 --> 00:06:07.080
+right so all arms I mean can be optimal all&nbsp;
+arms can be non-optimal and so on so forth&nbsp;&nbsp;
+
+00:06:07.080 --> 00:06:15.360
+so I basically how to play at random right but it&nbsp;
+turns out that doing this computation can be very&nbsp;&nbsp;
+
+00:06:15.360 --> 00:06:21.560
+very cumbersome you can just think about it right&nbsp;
+I'm I'm asking you to figure out for each arm&nbsp;&nbsp;
+
+00:06:21.560 --> 00:06:26.760
+combination what is the probability that the arm&nbsp;
+combination can occur right and depending on the&nbsp;&nbsp;
+
+00:06:26.760 --> 00:06:30.680
+nature of the probability distributions you're&nbsp;
+assuming this comp computation can become very&nbsp;&nbsp;
+
+00:06:30.680 --> 00:06:38.320
+very complex right so the posterior sampling idea&nbsp;
+is a way of approximating this computation so what&nbsp;&nbsp;
+
+00:06:38.320 --> 00:06:44.840
+I do is the following it's very very simple okay&nbsp;
+I have some distribution over what my qar values&nbsp;&nbsp;
+
+00:06:44.840 --> 00:06:51.840
+will be I have some distribution over my qar&nbsp;
+values so what I do is I draw a sample from the
+
+00:06:51.840 --> 00:06:59.520
+distribution right so let us&nbsp;
+say something like this so my uh
+
+00:07:04.480 --> 00:07:08.200
+right so qar one I'm saying it's&nbsp;
+something like this right and
+
+00:07:08.200 --> 00:07:13.120
+then that's qar
+
+00:07:13.120 --> 00:07:21.160
+two plus qar
+
+00:07:21.160 --> 00:07:30.560
+three you have another color okay okay&nbsp;
+good for arms because I'm running out of
+
+00:07:30.560 --> 00:07:39.840
+colors right so qar 1 2 3 4 right this&nbsp;
+is the current distribution I have so&nbsp;&nbsp;
+
+00:07:39.840 --> 00:07:45.240
+I'm I'm assuming that the true value&nbsp;
+of qar Lies somewhere in this range&nbsp;&nbsp;
+
+00:07:45.240 --> 00:07:48.960
+right and it's most probably this value&nbsp;
+but I don't know yet right there's some&nbsp;&nbsp;
+
+00:07:48.960 --> 00:07:53.240
+uncertainty about what the values are now&nbsp;
+what I do is I draw samples you remember&nbsp;&nbsp;
+
+00:07:53.240 --> 00:07:59.440
+we talked about drawing samples from goian and&nbsp;
+other distribution I draw samples so I draw a
+
+00:08:02.920 --> 00:08:09.880
+so basically right so this is basically my
+
+00:08:09.880 --> 00:08:14.160
+reward this is my reward axis and this&nbsp;&nbsp;
+
+00:08:14.160 --> 00:08:21.360
+are a probability axis I draw a&nbsp;
+sample for that is one that is
+
+00:08:21.360 --> 00:08:24.960
+another that is
+
+00:08:24.960 --> 00:08:35.200
+another okay so now I have a specific&nbsp;
+Bandit problem where my qar one is this&nbsp;&nbsp;
+
+00:08:35.200 --> 00:08:43.880
+qar 2 is this Q star three is this and qar&nbsp;
+4 is this so I've taken this distribution&nbsp;&nbsp;
+
+00:08:43.880 --> 00:08:50.080
+right and I have drawn one banded problem&nbsp;
+from this distribution okay now I solve&nbsp;&nbsp;
+
+00:08:50.080 --> 00:08:56.960
+this problem the right I basically pull&nbsp;
+arm three because arm 3 gives me the gave&nbsp;&nbsp;
+
+00:08:56.960 --> 00:09:01.320
+me the best value here so I pull arm three&nbsp;
+now I look at the actual reward I get for
+
+00:09:01.320 --> 00:09:10.880
+arm3 right so I pull arm three and let's&nbsp;
+say that my arm three reward is that this&nbsp;&nbsp;
+
+00:09:10.880 --> 00:09:15.480
+is the actual reward that I get for arm&nbsp;
+three and now I go back and update this&nbsp;&nbsp;
+
+00:09:15.480 --> 00:09:21.360
+pH based on this reward right so&nbsp;
+what what do you think it should
+
+00:09:21.360 --> 00:09:29.800
+be it will become narrower because&nbsp;
+this is I kind of read en forcing&nbsp;&nbsp;
+
+00:09:29.800 --> 00:09:33.400
+my original belief that this&nbsp;
+is the most probable outcome
+
+00:09:33.400 --> 00:09:42.360
+so yeah this will become my belief now this&nbsp;
+is my new distribution now again I try to&nbsp;&nbsp;
+
+00:09:42.360 --> 00:09:47.400
+sample so the probability that I will sample&nbsp;
+a high value for the green arm goes down now&nbsp;&nbsp;
+
+00:09:47.400 --> 00:09:52.440
+because I when I played the Green arm I got&nbsp;
+a smaller value so I keep doing this until&nbsp;&nbsp;
+
+00:09:52.440 --> 00:09:59.640
+my probability is kind of converge to the True Q&nbsp;
+Stars at the time when a sample problem from that&nbsp;&nbsp;
+
+00:09:59.640 --> 00:10:05.680
+I'll most probably be sampling the true problem&nbsp;
+right the actual problem underlying that which I'm&nbsp;&nbsp;
+
+00:10:05.680 --> 00:10:11.280
+trying to solve this is called Thompson sampling&nbsp;
+or posterior sampling so this is getting a lot&nbsp;&nbsp;
+
+00:10:11.280 --> 00:10:17.440
+of uh attention recently mainly because people&nbsp;
+have been able to show that uh this can give&nbsp;&nbsp;
+
+00:10:17.440 --> 00:10:24.960
+you better regret bounds than UCB right so this&nbsp;
+can give you better regret bounds than UCB and&nbsp;&nbsp;
+
+00:10:24.960 --> 00:10:29.720
+therefore there's a lot of attention that's&nbsp;
+being paid to uh Thompson sampling approaches&nbsp;&nbsp;
+
+00:10:29.720 --> 00:10:36.040
+uh the analysis gets really hay and in fact until&nbsp;
+recently there was no analysis of the Thompson&nbsp;&nbsp;
+
+00:10:36.040 --> 00:10:40.440
+sampling approach uh but more recently there have&nbsp;
+been several papers in the last 3 4 years there&nbsp;&nbsp;
+
+00:10:40.440 --> 00:10:46.560
+have been several papers uh that uh that have&nbsp;
+come up with new techniques for analyzing uh these&nbsp;&nbsp;
+
+00:10:46.560 --> 00:10:50.480
+kinds of algorithms different from what we have&nbsp;
+been talking about so far are there round this
+
+00:10:50.480 --> 00:10:59.680
+th it's kind of round based right&nbsp;
+only us one looking at each time is&nbsp;&nbsp;
+
+00:10:59.680 --> 00:11:03.600
+yeah we're not eliminating any arms that's what&nbsp;
+you're saying right well it turns out that you&nbsp;&nbsp;
+
+00:11:03.600 --> 00:11:08.760
+don't have to even without eliminating arms you&nbsp;
+getting very good complexity and typically what&nbsp;&nbsp;
+
+00:11:08.760 --> 00:11:14.040
+happens is after some time the posteriors&nbsp;
+become so focused right so the probability&nbsp;&nbsp;
+
+00:11:14.040 --> 00:11:19.800
+of you actually selecting the bad arm is gone I&nbsp;
+mean you don't really need to do a round based uh&nbsp;&nbsp;
+
+00:11:19.800 --> 00:11:25.280
+uh computation there but yeah I mean that might&nbsp;
+be a after few steps room for sorry after few&nbsp;&nbsp;
+
+00:11:25.280 --> 00:11:30.320
+steps that after few steps that can be done El&nbsp;
+yeah I mean yeah that's the possibility so the&nbsp;&nbsp;
+
+00:11:30.320 --> 00:11:33.600
+only thing is the only tricky part is once&nbsp;
+you do this kind of elimination you have to&nbsp;&nbsp;
+
+00:11:33.600 --> 00:11:38.240
+come back and analyze it so you saw how tricky&nbsp;
+this became right I mean I gave you the right&nbsp;&nbsp;
+
+00:11:38.240 --> 00:11:44.680
+events to consider here right but to come up with&nbsp;
+these events is a tricky part right so once you&nbsp;&nbsp;
+
+00:11:44.680 --> 00:11:48.520
+come up with this events it's easy to bound the&nbsp;
+probabilities right how do you know that this&nbsp;&nbsp;
+
+00:11:48.520 --> 00:11:54.000
+is the actual set of conditions that you should&nbsp;
+consider right for you to prove the result so that&nbsp;&nbsp;
+
+00:11:54.000 --> 00:11:59.240
+is the tricky path now once I say that okay here&nbsp;
+is a a round based uh Thompson sampling approach&nbsp;&nbsp;
+
+00:12:00.280 --> 00:12:05.640
+then uh going and showing that it actually gives&nbsp;
+you the guarantees that you want becomes tricky&nbsp;&nbsp;
+
+00:12:05.640 --> 00:12:10.920
+I mean people just the plain Thompson sampling&nbsp;
+without any round basing itself resisted analysis&nbsp;&nbsp;
+
+00:12:10.920 --> 00:12:18.560
+for about a decade right uh and so so it's not&nbsp;
+not immediately clear but there's more interesting&nbsp;&nbsp;
+
+00:12:18.560 --> 00:12:26.240
+results that have come in uh yeah so people uh&nbsp;
+I mean there is a very old uh style uh algorithm&nbsp;&nbsp;
+
+00:12:26.240 --> 00:12:31.160
+very old class of algorithms for solving Bandit&nbsp;
+problems called learning automat algorithm these&nbsp;&nbsp;
+
+00:12:31.160 --> 00:12:35.240
+are the people know about finite State machines&nbsp;
+right all of you know about finite State machines&nbsp;&nbsp;
+
+00:12:35.240 --> 00:12:38.560
+that they have a bunch of states and you have&nbsp;
+some input signal symbols coming and then you jump&nbsp;&nbsp;
+
+00:12:38.560 --> 00:12:44.760
+around the states and so on so forth right uh so&nbsp;
+there is a a class of finite State machines called&nbsp;&nbsp;
+
+00:12:44.760 --> 00:12:51.000
+variable structured finite State machines variable&nbsp;
+structured automator right and people have used&nbsp;&nbsp;
+
+00:12:51.000 --> 00:12:55.280
+variable structured automator to solve bandaid&nbsp;
+problems I'm not going to get into the details&nbsp;&nbsp;
+
+00:12:55.280 --> 00:13:02.600
+of it right so it's uh and uh it turns out that&nbsp;
+uh some of what the variable structure automate&nbsp;&nbsp;
+
+00:13:02.600 --> 00:13:08.080
+algorithms are doing is posterior sampling right&nbsp;
+it turns out to be very similar to posterior&nbsp;&nbsp;
+
+00:13:08.080 --> 00:13:14.680
+sampling and very recently and and earlier we&nbsp;
+knew results only for asymptotic convergence&nbsp;&nbsp;
+
+00:13:14.680 --> 00:13:23.160
+of this uh learning automated algorithms so very&nbsp;
+recently like late last year October or November&nbsp;&nbsp;
+
+00:13:23.160 --> 00:13:29.120
+of last year uh people have shown that uh they&nbsp;
+also satisfy regret bounds they they satisfy the&nbsp;&nbsp;
+
+00:13:29.120 --> 00:13:35.160
+the log t uh regret Bond so that mean so a lot of&nbsp;
+interesting work that's happening in this space&nbsp;&nbsp;
+
+00:13:35.160 --> 00:13:41.080
+and uh yeah I mean of course you're welcome to&nbsp;
+try a round based Thomson sampling algorithm I&nbsp;&nbsp;
+
+00:13:41.080 --> 00:13:47.000
+don't know or just check on RK right the rate at&nbsp;
+which work comes out in this space there might be&nbsp;&nbsp;
+
+00:13:47.000 --> 00:13:54.920
+something already out there okay so stop here uh&nbsp;
+the next class we will look at uh ways of solving&nbsp;&nbsp;
+
+00:13:54.920 --> 00:14:00.480
+the Bandit problem which do not depend on the do&nbsp;
+not depend on estimating the value function so&nbsp;&nbsp;
+
+00:14:00.480 --> 00:14:07.200
+everything we have looked on so far look finds the&nbsp;
+function Q right capital Q so next class we look&nbsp;&nbsp;
+
+00:14:07.200 --> 00:14:12.320
+at one class of algorithms which don't look at uh&nbsp;
+maintaining the value function and directly try&nbsp;&nbsp;
+
+00:14:12.320 --> 00:14:22.085
+to learn uh uh the probabilities which which&nbsp;
+you have to select the arms okay [Applause]
+

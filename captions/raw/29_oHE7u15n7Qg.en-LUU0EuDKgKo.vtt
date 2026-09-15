@@ -1,0 +1,315 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:23.140 --> 00:00:28.760
+So we started looking at off policy Monte
+Carlo methods in the last class, right and
+
+00:00:28.760 --> 00:00:44.460
+let us continue from there, so people remember
+important sampling, yes I said something like
+
+00:00:44.460 --> 00:01:23.220
+expected value of what is the, right so expected
+value of f(x) where is x is sampled according
+
+00:01:23.220 --> 00:01:33.771
+to p can be given by expected value of f(x).p(x)/q(x)
+where f is sample from q, I mean x is sample
+
+00:01:33.771 --> 00:01:37.950
+from q, okay so this is the basic area been
+an important sampling and we saw some expression
+
+00:01:37.950 --> 00:01:46.060
+for it, so which was essentially so notice
+that there is no approximation here, right.
+
+00:01:46.060 --> 00:02:28.519
+So this is approximation we do 1/n right,
+we also wrote another sampler which was okay,
+
+00:02:28.519 --> 00:02:38.879
+so this is the I think this is called the
+weighted 
+
+00:02:38.879 --> 00:02:44.319
+important sampling estimated right, this is
+a weighted important sampling or normalize
+
+00:02:44.319 --> 00:02:54.680
+right, so different ways in which people calling,
+okay. so how are we going to use it in Monte
+
+00:02:54.680 --> 00:03:02.400
+Carlo learning so what are the samples we
+are talking here, what is our f(xi) what is
+
+00:03:02.400 --> 00:03:08.580
+xi what is f(xi) right, and what is p(xi)
+and q(xi) what are these quantities in a Monte
+
+00:03:08.580 --> 00:03:22.830
+Carlo setting.
+Start with the x, exactly it is the trajectory
+
+00:03:22.830 --> 00:03:30.400
+where you saw doubtful about it if you say
+trajectory yeah, okay good. Well, I am happy
+
+00:03:30.400 --> 00:03:36.319
+nobody said it depends because it does not
+okay, so in this case xi is the trajectory
+
+00:03:36.319 --> 00:03:43.659
+and so you are drawing samples you are drawing
+trajectories so what f(xi), the return right
+
+00:03:43.659 --> 00:03:58.220
+f(xi) is a return on the trajectory, okay.
+Now what is p(xi), little bit more, little
+
+00:03:58.220 --> 00:04:09.940
+bit more you have to related xi, right probability
+of the trajectory given that I am following
+
+00:04:09.940 --> 00:04:15.069
+policy p, right.
+So p(xi) is a probability of the trajectory
+
+00:04:15.069 --> 00:04:20.890
+xi given that I am following the policy p
+according to which, for which I am trying
+
+00:04:20.890 --> 00:04:29.020
+to do the evaluation, okay. So what will be
+q(xi) probability of the trajectory under
+
+00:04:29.020 --> 00:04:36.810
+the policy that I am actually following, okay
+so for to sinking up with the text book case
+
+00:04:36.810 --> 00:04:44.800
+we will p is the policy that you are interested
+in and µ is the policy that you are following,
+
+00:04:44.800 --> 00:05:26.170
+okay sometimes it is called the behavior policy.
+.
+
+00:05:26.170 --> 00:05:29.700
+.
+So let us say xi is some trajectory okay,
+
+00:05:29.700 --> 00:05:43.740
+so x is some trajectory which starts of with
+some state s0 right, what will I do after
+
+00:05:43.740 --> 00:06:03.510
+that right, so that will be a trajectory correct.
+So there is some, so what will be the probability
+
+00:06:03.510 --> 00:06:10.010
+what will be the p(xi) so in fact I can leave
+out the rs because they will be captured in
+
+00:06:10.010 --> 00:06:18.839
+the f part, right so I can actually ignore
+I mean the r are there, right but when I am
+
+00:06:18.839 --> 00:06:22.900
+computing the probability of xi I can ignore
+the r parts, because they will be captured
+
+00:06:22.900 --> 00:06:28.410
+in the f, okay.
+So I must put them back here, yeah so what
+
+00:06:28.410 --> 00:06:43.910
+is the probability of xi what it will look
+like, p(a0) it will looks like a q, a0 given
+
+00:06:43.910 --> 00:07:10.190
+s0(p(s1)) given s0,a0 into anything else,
+right so 
+
+00:07:10.190 --> 00:07:23.649
+I need a some probability that I will start
+with s0 okay, that is the USL thing, is it
+
+00:07:23.649 --> 00:08:18.779
+fine, okay. So what will be q(xi) right, so
+can you compute p(xi) trick question. I need
+
+00:08:18.779 --> 00:08:23.160
+the ps right, I do not know the p I mean the
+whole idea behind going to Monte Carlo methods
+
+00:08:23.160 --> 00:08:32.080
+is we do not want the ps right, likewise exactly
+but if you think about it where we need p
+
+00:08:32.080 --> 00:08:36.700
+is only as a ratio with q.
+So I never need to compute p and q separately
+
+00:08:36.700 --> 00:08:53.370
+all I need to do is compute the ratio so if
+I take the ratio what happens it reduces to,
+
+00:08:53.370 --> 00:09:33.000
+right if I can write this as a product of
+the ratios that is fine, so I think that might
+
+00:09:33.000 --> 00:09:54.590
+been easier way of doing it, so I mean historically
+I mean p is used for both the product as well
+
+00:09:54.590 --> 00:10:04.050
+as the policy so please this ambiguity on
+context, okay it is clear. So now I know how
+
+00:10:04.050 --> 00:10:19.650
+to find the ratio p(xi)/q(xi) so would this
+kind be then, so if you think about it little
+
+00:10:19.650 --> 00:10:33.140
+tricky I should not have used i here I apologies,
+really apologies.
+
+00:10:33.140 --> 00:10:48.620
+Okay, we have i on the left hand side I should
+not have use i as the running variable, sorry
+
+00:10:48.620 --> 00:10:54.550
+okay, so what do we have here, so what is
+this correspond to what does it weighted important
+
+00:10:54.550 --> 00:11:08.130
+sample here correspond to the expected value
+of f(x) right, so what is that, what is that
+
+00:11:08.130 --> 00:11:15.600
+value function right, so the value function
+of some state right, vp(s) right some s, right.
+
+00:11:15.600 --> 00:12:22.070
+So essentially we have now vp(s) is equal
+to, so let us put a super script in brackets
+
+00:12:22.070 --> 00:12:28.860
+i to denote that this quantities come from
+the ith trajectory, right.
+
+00:12:28.860 --> 00:12:34.240
+So this i=1 to n means I am running n different
+trajectories so I put this super script to
+
+00:12:34.240 --> 00:12:41.600
+denote that they are coming from the ith trajectory
+and the return is computed starting from state
+
+00:12:41.600 --> 00:13:03.100
+s, okay so likewise I mean I need to have
+a thing here, so 
+
+00:13:03.100 --> 00:13:33.660
+is that fine, so this is how I will do Monte
+Carlo policy evaluation, okay in off policy
+
+00:13:33.660 --> 00:13:46.140
+fashion, okay. So why do I want to into off
+policy learning right, so this is allow me
+
+00:13:46.140 --> 00:13:51.080
+to explore lot of lot more states right, then
+if I am following policy p so I can get larger
+
+00:13:51.080 --> 00:13:54.790
+samples of states values estimated and so
+on and so forth.
+
+00:13:54.790 --> 00:14:00.780
+And it can also be that maybe view and so
+easier exploration policy than what I have
+
+00:14:00.780 --> 00:14:05.470
+with p I am trying to sampling from so that
+could be variety of reasons well I want to
+
+00:14:05.470 --> 00:14:16.850
+do this and I encourage all of you to read
+the text book, right and yeah I miss something
+
+00:14:16.850 --> 00:14:29.140
+in the denominator I need a big p thanks,
+right I just indicative here all know what
+
+00:14:29.140 --> 00:14:43.120
+I missed there, so just filled in, okay. So
+there were few tricks that they do in their
+
+00:14:43.120 --> 00:14:48.430
+book they take this and convert this into
+an incremental method where you can keep I
+
+00:14:48.430 --> 00:14:51.720
+mean you do not have to wait till if you finish
+running the trajectory to compute this importance
+
+00:14:51.720 --> 00:14:54.620
+weight.
+You can keep updating it as we go along right
+
+00:14:54.620 --> 00:14:58.600
+and then you can keep updating this estimate
+also as you go along in the trajectory you
+
+00:14:58.600 --> 00:15:02.100
+do not have to remember everything right,
+so they give you all kinds of small arithmetic
+
+00:15:02.100 --> 00:15:07.120
+tricks to make it incremental right, so again
+I encourage all of you to look it up right,
+
+00:15:07.120 --> 00:15:10.990
+if you are going to ever implement a Monte
+Carlo method that is the way you will do it
+
+00:15:10.990 --> 00:15:22.240
+not like this, right so I am really, really
+trying to get you guys to read the book, right.
+
+00:15:22.240 --> 00:15:31.460
+So somebody other than Sekhar I mean try to
+guilt him into reading the book yeah, anyway
+
+00:15:31.460 --> 00:15:36.110
+great, so this is all fine for evaluation
+so what do you do for control is there anything
+
+00:15:36.110 --> 00:15:55.250
+else you have to be careful about for control.
+What said, yeah so how will it change, how
+
+00:15:55.250 --> 00:16:10.450
+will this change for first visit and every
+visit, will it change, we need action values
+
+00:16:10.450 --> 00:16:14.399
+so what is the problem with using action values
+there is any specific problem if receiver
+
+00:16:14.399 --> 00:16:21.480
+using action values, okay.
+So I am going to integrate actually go read
+
+00:16:21.480 --> 00:16:25.640
+the book, okay I am not going to tell you
+just go read the book and figure out how would
+
+00:16:25.640 --> 00:16:27.730
+you do off policy Monte Carlo control, okay.
+

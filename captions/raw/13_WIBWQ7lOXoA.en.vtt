@@ -1,0 +1,1274 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:19.426 --> 00:00:20.040
+[Music]
+
+00:00:20.040 --> 00:00:23.120
+let's denote the set of parameters by&nbsp;
+Theta so I'm going to come up with some&nbsp;&nbsp;
+
+00:00:23.120 --> 00:00:29.960
+kind of a performance measure for a specific&nbsp;
+choice of theta so I'll call it EA of theta&nbsp;&nbsp;
+
+00:00:30.520 --> 00:00:37.760
+right so for what is a specific choice of theta&nbsp;
+correspond to suppose my Theta is like composed&nbsp;&nbsp;
+
+00:00:37.760 --> 00:00:43.680
+of theta 1 theta2 Theta K so I give you values&nbsp;
+for Theta 1 Theta 2 theta 3 up to Theta K so&nbsp;&nbsp;
+
+00:00:43.680 --> 00:00:50.920
+what does this correspond to one policy okay when&nbsp;
+I say I'm looking at a specific value for Theta&nbsp;&nbsp;
+
+00:00:50.920 --> 00:00:56.160
+it corresponds to one policy so when I say EA&nbsp;
+of theta that means I'm evaluating that policy&nbsp;&nbsp;
+
+00:00:56.160 --> 00:01:00.280
+somehow okay so what is the most natural&nbsp;
+evaluation measure you can think of for a
+
+00:01:00.280 --> 00:01:05.160
+policy the expected payoff
+
+00:01:05.160 --> 00:01:18.920
+right the expected expected payoff is&nbsp;
+the evaluation for the policy so yeah&nbsp;&nbsp;
+
+00:01:18.920 --> 00:01:22.040
+I'm going to do I'm going to do that there okay&nbsp;&nbsp;
+
+00:01:22.040 --> 00:01:29.920
+so what is the expected payoff you&nbsp;
+know what the expected pay off is
+
+00:01:44.720 --> 00:01:48.840
+this is the expected payoff I get for&nbsp;
+taking action a this is a probability&nbsp;&nbsp;
+
+00:01:48.840 --> 00:01:56.040
+that I'll take action a when I'm selecting&nbsp;
+actions according to Theta right right so&nbsp;&nbsp;
+
+00:01:56.040 --> 00:01:59.840
+this is a standard notation I I don't&nbsp;
+know if people are familiar with this
+
+00:02:03.520 --> 00:02:08.560
+this means Pi is a function that's parameterized&nbsp;
+by Theta right and whatever specific value I give&nbsp;&nbsp;
+
+00:02:08.560 --> 00:02:13.520
+for Theta will Define what that Pi is okay and&nbsp;
+then this means it's going to take some other&nbsp;&nbsp;
+
+00:02:13.520 --> 00:02:20.880
+argument okay so this is the input to the function&nbsp;
+okay which is defined by these parameters Theta&nbsp;&nbsp;
+
+00:02:20.880 --> 00:02:29.840
+okay so this is how I when you put a semicolon&nbsp;
+here that means it is parameterized form okay&nbsp;&nbsp;
+
+00:02:30.480 --> 00:02:38.160
+okay your arms are tied from taking all&nbsp;
+the notes that's all okay fine uh yeah so&nbsp;&nbsp;
+
+00:02:38.160 --> 00:02:43.080
+so essentially Pi a semicolon Theta means&nbsp;
+that is the policy defined by the current&nbsp;&nbsp;
+
+00:02:43.080 --> 00:02:49.400
+settings of parameters Theta times the Q star&nbsp;
+a right because qar is a true expectation for&nbsp;&nbsp;
+
+00:02:49.400 --> 00:02:56.080
+taking arm a right and then some over all a I'll&nbsp;
+basically get the expected but if I'm having a&nbsp;&nbsp;
+
+00:02:56.080 --> 00:03:00.960
+deterministic policy that means essentially&nbsp;
+only one arm I'll take all the other arms of&nbsp;&nbsp;
+
+00:03:00.960 --> 00:03:10.280
+probability is zero then the payoff will be Q&nbsp;
+star of that arm right okay great okay so now&nbsp;&nbsp;
+
+00:03:10.280 --> 00:03:17.920
+once I have this kind of a performance measure&nbsp;
+so what do I do is essentially I take Theta
+
+00:03:17.920 --> 00:03:32.800
+okay I take Theta I find the gradient of&nbsp;
+the performance okay so where the gradient&nbsp;&nbsp;
+
+00:03:32.800 --> 00:03:38.240
+is taken with respect to Theta right so I&nbsp;
+look at how the performance changes with&nbsp;&nbsp;
+
+00:03:38.240 --> 00:03:45.120
+changing Theta and I'll try to move Theta&nbsp;
+in the direction of the increase in the&nbsp;&nbsp;
+
+00:03:45.120 --> 00:03:51.400
+performance okay so this is called gradient&nbsp;
+Ascent the people might have heard about&nbsp;&nbsp;
+
+00:03:51.400 --> 00:03:55.840
+gradient descent earlier so this is gradient&nbsp;
+Ascent so I'm going up the gradient right if&nbsp;&nbsp;
+
+00:03:55.840 --> 00:04:01.000
+the performance improves if I change Theta in&nbsp;
+some direction then I'll change my Theta in that
+
+00:04:01.000 --> 00:04:12.400
+direction okay does that make sense people&nbsp;
+see this or do you need more pictorial
+
+00:04:12.400 --> 00:04:20.480
+analogies right so let's say
+
+00:04:20.480 --> 00:04:29.840
+that I have one parameter Theta okay&nbsp;
+let say I have one parameter Theta right
+
+00:04:29.840 --> 00:04:41.000
+and that's e of theta let's say&nbsp;
+this my uh this is a good way to do
+
+00:04:41.000 --> 00:04:50.960
+it right let's say that I have my performance&nbsp;
+whatever is an acceptable range of theta so my&nbsp;&nbsp;
+
+00:04:50.960 --> 00:04:58.400
+performance goes like this right so I initially&nbsp;
+start off with some guess for Theta and that&nbsp;&nbsp;
+
+00:04:58.400 --> 00:05:08.120
+will be my initial guess for Theta right then&nbsp;
+what I do I measure this and then I compute
+
+00:05:08.120 --> 00:05:15.880
+the gradient right so the gradient is there so if&nbsp;
+I look at which direction I should move my Theta&nbsp;&nbsp;
+
+00:05:15.880 --> 00:05:23.760
+so essentially I should move in this direction&nbsp;
+so I move a little bit and set that as Theta&nbsp;&nbsp;
+
+00:05:23.760 --> 00:05:33.680
+one okay then I measure the gradient again&nbsp;
+okay still I have to move in this direction
+
+00:05:33.680 --> 00:05:41.920
+more so I keep doing that and I&nbsp;
+think I I'll declare that I have&nbsp;&nbsp;
+
+00:05:41.920 --> 00:05:44.800
+reached the highest performance&nbsp;
+there so this is essentially how&nbsp;&nbsp;
+
+00:05:44.800 --> 00:05:48.120
+I do it okay so there are a couple&nbsp;
+of questions which you might ask me
+
+00:05:48.120 --> 00:05:56.680
+here why do I have to do this in this kind&nbsp;
+of an incremental fashion why can't I just&nbsp;&nbsp;
+
+00:05:56.680 --> 00:06:02.400
+take the derivative of that and find&nbsp;
+the highest point and settle down there
+
+00:06:02.400 --> 00:06:11.920
+sorry I don't have the function at all forget&nbsp;
+about close form I don't have that function&nbsp;&nbsp;
+
+00:06:11.920 --> 00:06:18.720
+at all what is that function that is qar a *&nbsp;
+pi right I know Pi but I don't know qar if I&nbsp;&nbsp;
+
+00:06:18.720 --> 00:06:22.640
+know qar my problem is solved right I don't&nbsp;
+need to do any of these things that function&nbsp;&nbsp;
+
+00:06:22.640 --> 00:06:29.560
+itself I don't know right so how am I evaluating&nbsp;
+this function and trying to find the gradient
+
+00:06:31.760 --> 00:06:37.240
+by sampling so I'm pulling a lot of arms right&nbsp;
+according to my current policy P right and then&nbsp;&nbsp;
+
+00:06:37.240 --> 00:06:42.880
+I'm trying to evaluate the policy pi and trying&nbsp;
+to find a gradient at that point right so because&nbsp;&nbsp;
+
+00:06:42.880 --> 00:06:47.880
+everything is done through sampling so whatever&nbsp;
+gradient I compute at this point will not be the&nbsp;&nbsp;
+
+00:06:47.880 --> 00:06:53.120
+correct gradient right I this is too simple&nbsp;
+I mean it has to either be that direction or&nbsp;&nbsp;
+
+00:06:53.120 --> 00:06:57.560
+this direction this is too simple right but&nbsp;
+think of a multi-dimensional Cas when there&nbsp;&nbsp;
+
+00:06:57.560 --> 00:07:01.560
+are many many parameters the right direction&nbsp;
+you have compute can get messed up right so&nbsp;&nbsp;
+
+00:07:01.560 --> 00:07:05.320
+instead of going in all the parameters inste of&nbsp;
+identifying the right direction some parameters&nbsp;&nbsp;
+
+00:07:05.320 --> 00:07:09.040
+you might get the right direction some parameters&nbsp;
+you will get the wrong direction and so on so&nbsp;&nbsp;
+
+00:07:09.040 --> 00:07:14.840
+forth right therefore every time you make only&nbsp;
+small steps because if you try if you say oh I&nbsp;&nbsp;
+
+00:07:14.840 --> 00:07:20.880
+have computed the direction of the gradient I'll&nbsp;
+just keep moving in the direction until my or or&nbsp;&nbsp;
+
+00:07:20.880 --> 00:07:24.320
+I'll take a huge step in the direction until&nbsp;
+my performance drops or something that won't&nbsp;&nbsp;
+
+00:07:24.320 --> 00:07:30.680
+work because the direction itself might be wrong&nbsp;
+right so in this case I mean we' always moved in&nbsp;&nbsp;
+
+00:07:30.680 --> 00:07:35.680
+the right direction every every step but it&nbsp;
+is possible that because you're estimating&nbsp;&nbsp;
+
+00:07:35.680 --> 00:07:39.960
+the gradient you might actually make the wrong&nbsp;
+computations and move in the wrong direction&nbsp;&nbsp;
+
+00:07:39.960 --> 00:07:45.640
+sometimes okay so what uh really you can hope&nbsp;
+for from these kinds of methods which are
+
+00:07:45.640 --> 00:07:53.880
+called stochastic gradient approaches&nbsp;
+okay they're called stochastic gradient&nbsp;&nbsp;
+
+00:07:53.880 --> 00:07:57.400
+approaches because you don't know the&nbsp;
+true gradient and every time you make&nbsp;&nbsp;
+
+00:07:57.400 --> 00:08:00.200
+an estimate of what the true gradient&nbsp;
+will be and then you're using that
+
+00:08:00.200 --> 00:08:07.400
+for making mov so I mean the most popular&nbsp;
+form of this will be called SGD which is&nbsp;&nbsp;
+
+00:08:07.400 --> 00:08:13.240
+stochastic gradient descent okay it's a very&nbsp;
+popular optimization technique nowadays but&nbsp;&nbsp;
+
+00:08:13.240 --> 00:08:17.840
+in this case you're using stochastic gradient&nbsp;
+Ascent okay but still it's the same stochastic&nbsp;&nbsp;
+
+00:08:17.840 --> 00:08:22.280
+gradient idea and so you have to be careful&nbsp;
+about how you use it and the best that you&nbsp;&nbsp;
+
+00:08:22.280 --> 00:08:29.720
+can hope to get is that in an expected sense&nbsp;
+over many many updates right I did I did know I&nbsp;&nbsp;
+
+00:08:29.720 --> 00:08:33.160
+two updates so if you make this updates&nbsp;
+these kinds of updates many many times in&nbsp;&nbsp;
+
+00:08:33.160 --> 00:08:40.000
+an expected sense you will move in the right&nbsp;
+direction of the gradient right so that is the&nbsp;&nbsp;
+
+00:08:40.000 --> 00:08:45.040
+kind of guarantee that typically you expect&nbsp;
+for these kinds of methods okay is it clear&nbsp;&nbsp;
+
+00:08:45.040 --> 00:08:51.880
+now it's clearer now right people are not 100%&nbsp;
+clear about what I'm talking just stop and ask&nbsp;&nbsp;
+
+00:08:51.880 --> 00:08:59.680
+right I can elaborate at the risk of slowing&nbsp;
+down yeah how exactly we estimate the gradi&nbsp;&nbsp;
+
+00:08:59.680 --> 00:09:04.120
+good point yeah so we'll come to that so we can&nbsp;
+talk about that so if we don't know the function&nbsp;&nbsp;
+
+00:09:04.120 --> 00:09:08.000
+itself right how are you going to estimate&nbsp;
+the gradient right so we'll come to that in a
+
+00:09:08.000 --> 00:09:11.320
+minute
+
+00:09:11.320 --> 00:09:18.200
+uh so we know we have a functional form&nbsp;
+for this now I'm going to write down the&nbsp;&nbsp;
+
+00:09:18.200 --> 00:09:20.560
+the gradient for this expression right this is the&nbsp;&nbsp;
+
+00:09:20.560 --> 00:09:29.360
+expression we have I'm going to write&nbsp;
+down the gradient for this expression
+
+00:09:50.600 --> 00:09:55.840
+so this is assuming that qar a because it's a&nbsp;
+parameter of the problem right it has nothing&nbsp;&nbsp;
+
+00:09:55.840 --> 00:10:02.680
+to do with the policy right as far as your policy&nbsp;
+parameterization is concern Q star is a constant&nbsp;&nbsp;
+
+00:10:02.680 --> 00:10:06.600
+right because it's a it's something to do with the&nbsp;
+problem so I can I don't have to do this I just&nbsp;&nbsp;
+
+00:10:06.600 --> 00:10:29.320
+have to differentiate this with respect to Theta&nbsp;
+right so now I'm going to do some um hand waving
+
+00:10:37.800 --> 00:10:47.840
+so what did I do here I multiplied and&nbsp;
+divided by pi okay so for this to work&nbsp;&nbsp;
+
+00:10:47.840 --> 00:10:53.480
+what do I need Pi is non zero for all a&nbsp;
+so this is one condition that you need&nbsp;&nbsp;
+
+00:10:53.480 --> 00:10:59.240
+for all of this any kind of Pi that you&nbsp;
+assume okay has to be non zero for all a&nbsp;&nbsp;
+
+00:11:00.920 --> 00:11:07.160
+just AUM some some nonzero probity now if&nbsp;
+you think about this particular expression&nbsp;&nbsp;
+
+00:11:07.160 --> 00:11:14.040
+right I'll put a bracket around that&nbsp;
+right so what does this remind you
+
+00:11:14.040 --> 00:11:22.400
+of does it look like an expectation&nbsp;
+computation I'm looking at the expected&nbsp;&nbsp;
+
+00:11:22.400 --> 00:11:29.240
+value of some function right where I'm&nbsp;
+taking samples according to probability pi&nbsp;&nbsp;
+
+00:11:30.280 --> 00:11:34.360
+right this looks like an expected value right&nbsp;
+I'm summing over all possible outcomes of a&nbsp;&nbsp;
+
+00:11:34.360 --> 00:11:40.320
+all possible values here right right that&nbsp;
+is a probability so I'm essentially taking
+
+00:11:40.320 --> 00:11:44.840
+the expectation taken according
+
+00:11:44.840 --> 00:11:59.240
+to Pi of
+
+00:12:11.360 --> 00:12:11.680
+is it
+
+00:12:11.680 --> 00:12:20.160
+fine right so everybody on board&nbsp;
+with it right so that I can write&nbsp;&nbsp;
+
+00:12:20.160 --> 00:12:29.160
+their expectation oh okay sorry about the font
+
+00:12:41.680 --> 00:12:50.800
+so the expectation is taken with respect to Pi&nbsp;
+okay is it clear so now we know how to make an&nbsp;&nbsp;
+
+00:12:50.800 --> 00:12:59.400
+estimate of the expectations right how do we&nbsp;
+do that we draw sample and then take an average&nbsp;&nbsp;
+
+00:12:59.400 --> 00:13:04.320
+right so we can do that so essentially&nbsp;
+what I'm going to do is pull an
+
+00:13:04.320 --> 00:13:11.360
+arm that's a sample right when you say draw a&nbsp;
+sample according to Pi that essentially means&nbsp;&nbsp;
+
+00:13:11.360 --> 00:13:17.240
+I have to pull an arm right and what happens when&nbsp;
+I pull an arm I get a reward right but the reward&nbsp;&nbsp;
+
+00:13:17.240 --> 00:13:23.200
+does not figure in here the expectation of the&nbsp;
+reward directly figures in here right so I can&nbsp;&nbsp;
+
+00:13:23.200 --> 00:13:29.240
+actually write this as a double expectation&nbsp;
+you know mean the the expectation is taken&nbsp;&nbsp;
+
+00:13:29.240 --> 00:13:37.800
+over not only Pi but also over the process&nbsp;
+that generates the reward Q Star right it's&nbsp;&nbsp;
+
+00:13:37.800 --> 00:13:44.160
+also the process that generates the reward&nbsp;
+so my sample here is going to consist of
+
+00:13:44.160 --> 00:13:52.040
+RT right is is it clear I mean this is&nbsp;
+a very subtle thing people are with me&nbsp;&nbsp;
+
+00:13:52.040 --> 00:13:59.320
+here on this is it clear see qar itself is&nbsp;
+already an expectation right so instead of&nbsp;&nbsp;
+
+00:13:59.320 --> 00:14:03.640
+because I don't know this expectation I have&nbsp;
+estimate this expectation as well and that can&nbsp;&nbsp;
+
+00:14:03.640 --> 00:14:09.760
+be done by just taking the RTS so what I'll do&nbsp;
+now is at every time T I'll sample an arm I'll&nbsp;&nbsp;
+
+00:14:09.760 --> 00:14:18.920
+pull the arm figure out what the reward is right&nbsp;
+but is that sufficient no I have to do this right&nbsp;&nbsp;
+
+00:14:18.920 --> 00:14:29.040
+so I just can't use the RT directly I have to&nbsp;
+use this also right so I'll take the gradient of
+
+00:14:29.840 --> 00:14:36.680
+Pi so evaluated at a divide&nbsp;
+by the so this is my one
+
+00:14:36.680 --> 00:14:42.160
+sample right is is clear because&nbsp;
+the expectation I'm taking is of&nbsp;&nbsp;
+
+00:14:42.160 --> 00:14:47.320
+this quantity so the sample that I draw is&nbsp;
+actually this right and I have to do this
+
+00:14:47.320 --> 00:14:53.320
+over I don't know some number
+
+00:14:53.320 --> 00:14:59.560
+in p 0 you're
+
+00:14:59.560 --> 00:15:12.960
+right just fine so oh no no&nbsp;
+no no no I'm not using T I'm
+
+00:15:12.960 --> 00:15:30.240
+sorry so I promised you that I'll use n for&nbsp;
+discrete time and T for continuous time so&nbsp;&nbsp;
+
+00:15:30.240 --> 00:15:34.560
+we're talking about discrete times here it&nbsp;
+has to be N I don't know if I use T here&nbsp;&nbsp;
+
+00:15:34.560 --> 00:15:45.920
+sorry about that but uh all of you erase in your&nbsp;
+notebook the T and write down n for this part of&nbsp;&nbsp;
+
+00:15:45.920 --> 00:15:58.920
+think it's okay sorry about that right so&nbsp;
+is this clear is there anything missing
+
+00:16:04.920 --> 00:16:13.480
+right so I need to have 1 byn there so this gives&nbsp;
+me the gradient right so this is fine are we still
+
+00:16:13.480 --> 00:16:23.040
+okay if not because this is&nbsp;
+actually a estimation okay&nbsp;&nbsp;
+
+00:16:23.040 --> 00:16:31.040
+so I can't put equal to there it's only an&nbsp;
+approximation okay great so can we compute
+
+00:16:31.040 --> 00:16:42.680
+this we can right because we know Pi we&nbsp;
+are the ones who determine what pi should&nbsp;&nbsp;
+
+00:16:42.680 --> 00:16:48.360
+be right because at the beginning I choose a&nbsp;
+parameterized representation right I can choose&nbsp;&nbsp;
+
+00:16:48.360 --> 00:16:53.760
+whatever suppose it's soft Max well I know how&nbsp;
+to take the derivative of softmax or if it's a&nbsp;&nbsp;
+
+00:16:53.760 --> 00:16:59.040
+continuous actions I can just use a say a goian&nbsp;
+right I know how to take the derivative of a&nbsp;&nbsp;
+
+00:16:59.040 --> 00:17:06.680
+goian with respect to its parameters right or&nbsp;
+if it's a multinomial what do I do we know how&nbsp;&nbsp;
+
+00:17:06.680 --> 00:17:12.880
+to take the derivative of a multinomial as&nbsp;
+well right so the derivative is very simple&nbsp;&nbsp;
+
+00:17:12.880 --> 00:17:16.640
+so so I know what form of the function I&nbsp;
+choose it so I can go ahead and take the
+
+00:17:16.640 --> 00:17:30.320
+derivative there are a couple of reasons for it
+
+00:17:30.320 --> 00:17:50.320
+uh so estimating Q star need not always be the&nbsp;
+right thing to do okay uh I not introduced all&nbsp;&nbsp;
+
+00:17:50.320 --> 00:17:58.280
+the complications I'm hesitating whether I should&nbsp;
+go there or not uh but the thing is um so the qar&nbsp;&nbsp;
+
+00:17:58.280 --> 00:18:05.440
+function sometimes turns out to be incredibly&nbsp;
+complex okay as a function of the state space&nbsp;&nbsp;
+
+00:18:05.440 --> 00:18:09.400
+okay not necessarily here right as a function&nbsp;
+of the state space Q turns out to be incredibly&nbsp;&nbsp;
+
+00:18:09.400 --> 00:18:16.400
+complex whereas a direct representation of the&nbsp;
+policy turns out to be a lot more simple right&nbsp;&nbsp;
+
+00:18:16.400 --> 00:18:21.760
+for example uh there are many inventory control&nbsp;
+problems where the policy essentially turns out&nbsp;&nbsp;
+
+00:18:21.760 --> 00:18:26.760
+to be if the inventory is below a certain level&nbsp;
+you buy inventory is above a certain level you&nbsp;&nbsp;
+
+00:18:26.760 --> 00:18:33.400
+don't buy okay but then the value function itself&nbsp;
+becomes a very complicated function of how many of&nbsp;&nbsp;
+
+00:18:33.400 --> 00:18:38.880
+the items are left of different types and so on so&nbsp;
+forth the function itself becomes a lot harder to&nbsp;&nbsp;
+
+00:18:38.880 --> 00:18:44.560
+learn so there are instances like this where this&nbsp;
+is easier to learn right and there are a couple of&nbsp;&nbsp;
+
+00:18:44.560 --> 00:18:51.680
+other uh cases um especially when you're talking&nbsp;
+about very large problems for example uh we'll&nbsp;&nbsp;
+
+00:18:51.680 --> 00:18:58.720
+see that policy gradient approaches generalize&nbsp;
+very easily to problems with continuous actions&nbsp;&nbsp;
+
+00:18:59.560 --> 00:19:03.600
+so where there are individual action so but&nbsp;
+if I'm talking about value function methods&nbsp;&nbsp;
+
+00:19:03.600 --> 00:19:09.320
+right where I typically store a value for each&nbsp;
+Action Now him going to have continuous actions&nbsp;&nbsp;
+
+00:19:09.320 --> 00:19:14.800
+it's not clear how to handle it there are ways of&nbsp;
+handling it but it turns out that uh they are not&nbsp;&nbsp;
+
+00:19:14.800 --> 00:19:20.400
+that well behaved as policy gradient approaches&nbsp;
+are and the action space is continuous right so&nbsp;&nbsp;
+
+00:19:20.400 --> 00:19:27.000
+there are many reasons why you want to consider&nbsp;
+the continuous actions I mean policy gr methods&nbsp;&nbsp;
+
+00:19:27.000 --> 00:19:33.080
+primarily I would say the one of the primary&nbsp;
+motivations is to handle uh continuous actions
+
+00:19:33.080 --> 00:19:47.200
+okay so this is some kind of a batch batch
+
+00:19:47.200 --> 00:20:01.400
+updates uh because the expectation&nbsp;
+is taken with respect to the
+
+00:20:01.400 --> 00:20:09.200
+pi are
+
+00:20:09.200 --> 00:20:12.960
+the
+
+00:20:12.960 --> 00:20:21.600
+um yeah you could do more simplifications of that&nbsp;
+if you want to right but uh what is your question
+
+00:20:21.600 --> 00:20:33.360
+again no but I need to take this expectation&nbsp;
+with respect to the samp the the probability&nbsp;&nbsp;
+
+00:20:33.360 --> 00:20:41.360
+distribution PI right so um and I I I&nbsp;
+can't separate this I can't write this&nbsp;&nbsp;
+
+00:20:41.360 --> 00:20:47.160
+out as a some I really can't simplify this&nbsp;
+further because my qar is here right so this&nbsp;&nbsp;
+
+00:20:47.160 --> 00:20:53.960
+is the expectation of this whole quantity so&nbsp;
+I really can't split this apart and say that&nbsp;&nbsp;
+
+00:20:53.960 --> 00:20:58.600
+okay I'll just simplify this expectation and&nbsp;
+take only the expected value of qar a can I&nbsp;&nbsp;
+
+00:20:59.320 --> 00:21:03.840
+I can't take e of a b is not a&nbsp;
+into e of B is it if a is only&nbsp;&nbsp;
+
+00:21:03.840 --> 00:21:10.520
+a constant right not otherwise I'm not&nbsp;
+sure that you can simplify this further
+
+00:21:10.520 --> 00:21:18.400
+uh right so what we are doing here is some&nbsp;
+kind of a batch mode so if you think of how&nbsp;&nbsp;
+
+00:21:18.400 --> 00:21:28.800
+we are doing this sampling so I am taking some&nbsp;
+Theta fixing it pulling arms multiple times
+
+00:21:28.800 --> 00:21:33.600
+right I'm fixing Theta pulling arms&nbsp;
+capital N times and then taking this&nbsp;&nbsp;
+
+00:21:33.600 --> 00:21:41.280
+average right and then or Computing the&nbsp;
+gradient and then using that to change&nbsp;&nbsp;
+
+00:21:41.280 --> 00:21:47.280
+the parameters this is one way of doing it&nbsp;
+another way of doing it to say that okay&nbsp;&nbsp;
+
+00:21:47.280 --> 00:21:53.440
+I'll have a Theta I'll pull an arm I'll&nbsp;
+compute the gradient and I'll change the
+
+00:21:53.440 --> 00:21:58.720
+parameters right so you can&nbsp;
+have a some kind of an increment
+
+00:21:58.720 --> 00:22:16.080
+version right so where I'm saying at&nbsp;
+every step I'll change my parameters&nbsp;&nbsp;
+
+00:22:16.080 --> 00:22:19.600
+by some fraction delta T&nbsp;
+I'll do this at every step
+
+00:22:19.600 --> 00:22:28.520
+right sorry
+
+00:22:49.520 --> 00:22:58.720
+so this is what I'm doing so what I'm essentially&nbsp;
+will end up doing is uh Theta will be theta plus&nbsp;&nbsp;
+
+00:22:58.720 --> 00:23:05.800
+Delta Theta right Theta n + 1 will be Theta n plus&nbsp;
+Delta Theta n right so this basically what I'm
+
+00:23:05.800 --> 00:23:28.440
+saying right I'll do this at every time for&nbsp;
+every time I pull an off I'll change this
+
+00:23:42.000 --> 00:23:50.400
+right I mean that is essentially the gradient of&nbsp;
+the lawn it turns out this simplifies your life a&nbsp;&nbsp;
+
+00:23:50.400 --> 00:23:56.720
+lot this observation simplifies your life a lot&nbsp;
+when you're trying to actually solve the solve&nbsp;&nbsp;
+
+00:23:56.720 --> 00:24:00.600
+problems later right now you can immed immediately&nbsp;
+think of soft Max becoming very easy to
+
+00:24:00.600 --> 00:24:07.400
+differentiate now taken lawn and&nbsp;
+there's Al lots of e there right&nbsp;&nbsp;
+
+00:24:07.400 --> 00:24:09.920
+so all the E power will thing will&nbsp;
+vanish so it will become lot easier&nbsp;&nbsp;
+
+00:24:09.920 --> 00:24:20.520
+to differentiate for you right so what I'm&nbsp;
+going to do now is to include another term
+
+00:24:20.520 --> 00:24:28.360
+here rather arbitrarily
+
+00:24:37.240 --> 00:24:37.600
+called
+
+00:24:37.600 --> 00:24:49.120
+BN which we refer to as the reinforcement&nbsp;
+Baseline right and adding the BN should&nbsp;&nbsp;
+
+00:24:49.120 --> 00:24:52.960
+not affect the whole process therefore&nbsp;
+the BN should not really be a function
+
+00:24:52.960 --> 00:25:01.320
+OFA a uh yeah Theta basically so should not&nbsp;
+be a function of the action I take right if&nbsp;&nbsp;
+
+00:25:01.320 --> 00:25:07.040
+it's a function of the action I take then it&nbsp;
+becomes dependent on uh Theta so as long as&nbsp;&nbsp;
+
+00:25:07.040 --> 00:25:11.000
+it's not a function of the action I take I can&nbsp;
+keep adding a I can add this thing it's called&nbsp;&nbsp;
+
+00:25:11.000 --> 00:25:17.200
+the reinforcement Baseline right so one way of&nbsp;
+thinking about it is I'm when I get a reward&nbsp;&nbsp;
+
+00:25:17.200 --> 00:25:22.560
+right I don't know if the reward is a good reward&nbsp;
+or a bad reward so giving a Baseline and saying&nbsp;&nbsp;
+
+00:25:22.560 --> 00:25:25.880
+that if you're above this Baseline it's a good&nbsp;
+reward if you're below this Baseline it's is a&nbsp;&nbsp;
+
+00:25:25.880 --> 00:25:32.960
+bad reward okay kind of allows you to Cal Cate the&nbsp;
+rewards right one uh uh typical way in which this&nbsp;&nbsp;
+
+00:25:32.960 --> 00:25:38.440
+reinforcement Baseline is used is to just take&nbsp;
+the average of all the rewards I have obtained&nbsp;&nbsp;
+
+00:25:38.440 --> 00:25:45.360
+so far right this is all the rewards regardless&nbsp;
+of which arm I played I keep accumulating the&nbsp;&nbsp;
+
+00:25:45.360 --> 00:25:50.400
+rewards right now when I play a particular arm&nbsp;
+if it is above this average then it is a good&nbsp;&nbsp;
+
+00:25:50.400 --> 00:26:02.080
+arm if it's below this average then it's a bad&nbsp;
+arm right valid after aaging after after yeah
+
+00:26:02.080 --> 00:26:13.520
+only it's fine eventually it'll eventually it'll&nbsp;
+be all fine right so initially you might be making&nbsp;&nbsp;
+
+00:26:13.520 --> 00:26:18.680
+some mistakes because initial few the the B&nbsp;
+will be wrong right uh so you might actually&nbsp;&nbsp;
+
+00:26:18.680 --> 00:26:25.360
+think a good arm is bad and a bad arm is good I&nbsp;
+mean depending but eventually it will all work&nbsp;&nbsp;
+
+00:26:25.360 --> 00:26:32.760
+out doesn't matter right so if think about if&nbsp;
+the reward is good right then I will go in the&nbsp;&nbsp;
+
+00:26:32.760 --> 00:26:38.040
+direction of the gradient right if the reward is&nbsp;
+bad and it'll go in the opposite direction of the&nbsp;&nbsp;
+
+00:26:38.040 --> 00:26:45.320
+gradient right so in some sense that's a little&nbsp;
+waving here that but then it's fine it turns out&nbsp;&nbsp;
+
+00:26:45.320 --> 00:26:51.160
+that adding the reinforcement Baseline uh makes&nbsp;
+the convergence behavior of this algorithm a&nbsp;&nbsp;
+
+00:26:51.160 --> 00:26:55.840
+little more stable okay but it is not necessary&nbsp;
+you can if you're going to implement this you&nbsp;&nbsp;
+
+00:26:55.840 --> 00:26:59.880
+can do it without the reinforcement&nbsp;
+Baseline also right so this is called
+
+00:26:59.880 --> 00:27:15.520
+the and this term is sometimes called
+
+00:27:15.520 --> 00:27:28.160
+the called the characteristic eligibility
+
+00:27:31.480 --> 00:27:34.320
+so what is the characteristic&nbsp;
+eligibility it essentially tells
+
+00:27:34.320 --> 00:27:51.040
+you if you do that then you get into actor critic&nbsp;
+I'll talk about that later I'll talk about that&nbsp;&nbsp;
+
+00:27:51.040 --> 00:27:56.640
+later yeah sure yeah you could do that right and&nbsp;
+that's essentially the one of the motivations for&nbsp;&nbsp;
+
+00:27:56.640 --> 00:28:04.720
+getting into ttic algorithms so that is requires&nbsp;
+you to maintain a qar estimates as well as the pi&nbsp;&nbsp;
+
+00:28:04.720 --> 00:28:09.600
+estimates as well as a pi representation so the&nbsp;
+pi would be the critic and the qar would be the&nbsp;&nbsp;
+
+00:28:09.600 --> 00:28:14.520
+actor other way don't the pi would be the actor&nbsp;
+the qar would be the critic so that's another&nbsp;&nbsp;
+
+00:28:14.520 --> 00:28:20.760
+class of algorithms right which address some of&nbsp;
+the drawbacks of policy gradient approaches right&nbsp;&nbsp;
+
+00:28:20.760 --> 00:28:26.880
+so I'll talk about it uh but somewhere halfway&nbsp;
+down the course not now so after this I'm going&nbsp;&nbsp;
+
+00:28:26.880 --> 00:28:30.720
+to go back and start talking about for the full&nbsp;
+RL problem and at some point I'll come back and&nbsp;&nbsp;
+
+00:28:30.720 --> 00:28:41.360
+do actor critic yeah so his question was why do&nbsp;
+I use RN right why can't I plug-in Q there right&nbsp;&nbsp;
+
+00:28:41.360 --> 00:28:50.080
+you could and uh yeah and typically when you&nbsp;
+do that it performs better the algorithm it's&nbsp;&nbsp;
+
+00:28:50.080 --> 00:28:58.280
+actually it reduces variance significantly&nbsp;
+at the cost of adding uh significant buys
+
+00:28:58.280 --> 00:29:02.520
+right and uh yeah there are other&nbsp;
+other issues you know you well you&nbsp;&nbsp;
+
+00:29:02.520 --> 00:29:05.800
+know what are the other issues going&nbsp;
+to act critic but I'll talk about it&nbsp;&nbsp;
+
+00:29:05.800 --> 00:29:09.360
+later right anyway going back uh so&nbsp;
+why is that called the characteristic
+
+00:29:09.360 --> 00:29:21.680
+eligibility so if you think about it so it&nbsp;
+essentially chooses which of the thetas are&nbsp;&nbsp;
+
+00:29:21.680 --> 00:29:28.480
+most responsible for a change at that point right&nbsp;
+so that is the term that determines that is the&nbsp;&nbsp;
+
+00:29:28.480 --> 00:29:34.320
+term that is the Theta dependent term in your&nbsp;
+updates right and it tells you which Theta is&nbsp;&nbsp;
+
+00:29:34.320 --> 00:29:39.800
+more responsible for change that is happening here&nbsp;
+there are three or four different parameters that&nbsp;&nbsp;
+
+00:29:39.800 --> 00:29:47.080
+I have right so whichever has the highest gradient&nbsp;
+whichever direction you have the highest gradient&nbsp;&nbsp;
+
+00:29:47.080 --> 00:29:53.200
+that is a direction where the largest change is&nbsp;
+going to happen right so essentially it is telling&nbsp;&nbsp;
+
+00:29:53.200 --> 00:29:59.880
+you which Theta is more eligible to receive the&nbsp;
+update that's why it's called the characteristic
+
+00:29:59.880 --> 00:30:08.000
+eligibility right did that make sense to people I&nbsp;&nbsp;
+
+00:30:08.000 --> 00:30:10.160
+think I've lost more people&nbsp;
+today than in the previous
+
+00:30:10.160 --> 00:30:19.520
+classes no great uh so this whole&nbsp;
+thing right this this way of doing&nbsp;&nbsp;
+
+00:30:19.520 --> 00:30:27.960
+this incremental version of doing&nbsp;
+this update is actually called the
+
+00:30:29.000 --> 00:30:39.080
+called the reinforce algorithm was first proposed&nbsp;
+by this guy called Williams in um 88 uh Williams&nbsp;&nbsp;
+
+00:30:39.080 --> 00:30:46.280
+repos uh reinforce uh in I think in 1988 and in&nbsp;
+fact he proposed this in the context of neural&nbsp;&nbsp;
+
+00:30:46.280 --> 00:30:55.400
+networks right so he when he came up with this&nbsp;
+algorithm neural networks were uh still ruling&nbsp;&nbsp;
+
+00:30:55.400 --> 00:31:00.480
+right so he proposed this in the context of&nbsp;
+neural network he said that your thetas are&nbsp;&nbsp;
+
+00:31:00.480 --> 00:31:05.960
+weights of a neural network right and then he&nbsp;
+came up with this update and then the the the&nbsp;&nbsp;
+
+00:31:05.960 --> 00:31:12.560
+biggest contribution he did was uh he said that&nbsp;
+hey this looks like a really crazy update right&nbsp;&nbsp;
+
+00:31:12.560 --> 00:31:16.880
+I mean how is this going to work and initially&nbsp;
+people are very skeptical he actually showed&nbsp;&nbsp;
+
+00:31:16.880 --> 00:31:21.960
+that in an expected sense that even though&nbsp;
+I'm doing this update after just pulling one&nbsp;&nbsp;
+
+00:31:21.960 --> 00:31:28.360
+arm okay in an expected sense the gradient will&nbsp;
+be in the right direction right if if I repeat&nbsp;&nbsp;
+
+00:31:28.360 --> 00:31:33.440
+this experiment multiple times and I watch how&nbsp;
+the weights evolve right they'll actually move&nbsp;&nbsp;
+
+00:31:33.440 --> 00:31:39.040
+in the same direction as it would have happened&nbsp;
+if I had computed the correct gradient and then&nbsp;&nbsp;
+
+00:31:39.040 --> 00:31:43.960
+taken steps in that direction so essentially he&nbsp;
+established that uh for this reinforce update&nbsp;&nbsp;
+
+00:31:43.960 --> 00:31:50.440
+and it since then it has kind of been uh the one&nbsp;
+sole hope of convergence for all kinds of complex&nbsp;&nbsp;
+
+00:31:50.440 --> 00:31:58.960
+function approximations and RL okay so it works&nbsp;
+um works really well but it's extra extremely&nbsp;&nbsp;
+
+00:31:58.960 --> 00:32:06.960
+slow reinforce is extremely slow because the&nbsp;
+variance is very high okay so when I want to move&nbsp;&nbsp;
+
+00:32:06.960 --> 00:32:15.600
+on from this I'll talk about the other problems of&nbsp;
+reinforce here is a horrible part about the paper&nbsp;&nbsp;
+
+00:32:15.600 --> 00:32:23.560
+uh so reinforce is actually an acronym there's an&nbsp;
+expansion each letter stands actually for a word&nbsp;&nbsp;
+
+00:32:23.560 --> 00:32:27.840
+so he came up with a name for the algorithm&nbsp;
+which actually shortened to reinforce okay&nbsp;&nbsp;
+
+00:32:29.720 --> 00:32:39.200
+and then that started the trend for convoluted&nbsp;
+names inal Community okay so anyone knows what&nbsp;&nbsp;
+
+00:32:39.200 --> 00:32:46.080
+the expansion of reinforce do you know what&nbsp;
+the expansion of reinforce is forgot okay&nbsp;&nbsp;
+
+00:32:46.080 --> 00:32:53.760
+yeah I I I I can't for the life of me I refuse&nbsp;
+to memorize what reinforce stands for okay great&nbsp;&nbsp;
+
+00:32:53.760 --> 00:33:01.360
+so let us do some uh special cases of uh uh&nbsp;
+reinforce right uh I want to consider a binary
+
+00:33:01.360 --> 00:33:20.760
+Bandit okay or let's say I take a bandit with two&nbsp;&nbsp;
+
+00:33:20.760 --> 00:33:27.760
+actions okay but they can&nbsp;
+have arbitrary rewards okay
+
+00:33:53.960 --> 00:33:58.600
+so here is the parameterization I choose&nbsp;
+this is essentially the the berol thing&nbsp;&nbsp;
+
+00:33:58.600 --> 00:34:02.480
+right so I have two actions so some&nbsp;
+probability Theta I'll select action&nbsp;&nbsp;
+
+00:34:02.480 --> 00:34:11.160
+one 1 minus Theta I'll select action zero okay&nbsp;
+so what do I need to do now to get that update
+
+00:34:11.160 --> 00:34:17.440
+rule have to find Long Pi
+
+00:34:17.440 --> 00:34:27.840
+by Theta so what this will be
+
+00:34:27.840 --> 00:34:30.080
+it will be one if a is 1 it'll
+
+00:34:30.080 --> 00:34:36.080
+beus one
+
+00:34:36.080 --> 00:34:50.840
+if correct no yeah looking La PI right it's&nbsp;
+not Pi by Theta long Pi by do theta yeah so&nbsp;&nbsp;
+
+00:34:50.840 --> 00:34:59.800
+it will be 1 by Theta of here is 1 and&nbsp;
+it will be - 1 by 1 - th if a is zero
+
+00:34:59.800 --> 00:35:18.320
+right can write it like that substitute a is 1 so&nbsp;
+1us Theta 1- Theta will get cancel out you'll get&nbsp;&nbsp;
+
+00:35:18.320 --> 00:35:27.640
+1 by Theta you subtitute a is z Theta and Theta&nbsp;
+will get cancel out you'll get - 1 by 1us Theta
+
+00:35:29.560 --> 00:35:33.200
+okay very compact way of writing it and&nbsp;&nbsp;
+
+00:35:33.200 --> 00:35:39.800
+now I'm going to say that I'll&nbsp;
+choose my Alpha to be some row
+
+00:35:45.120 --> 00:35:47.040
+* Theta into 1us
+
+00:35:47.040 --> 00:35:59.040
+Theta so it turns out that as long as your&nbsp;
+Alpha is not dependent on the actual reward&nbsp;&nbsp;
+
+00:35:59.040 --> 00:36:02.520
+that you get okay it can be dependent on&nbsp;
+the Theta this is what Williams showed as&nbsp;&nbsp;
+
+00:36:02.520 --> 00:36:07.200
+long as it's not dependent on the actual&nbsp;
+reward you all fine okay you will converge&nbsp;&nbsp;
+
+00:36:07.200 --> 00:36:12.080
+so that's essentially the result so I can&nbsp;
+make it dependent on my Theta it should not&nbsp;&nbsp;
+
+00:36:12.080 --> 00:36:17.320
+be dependent on the uh the actual action you&nbsp;
+sampled okay and the actual reward that you&nbsp;&nbsp;
+
+00:36:17.320 --> 00:36:22.200
+received so as long as that is there it's&nbsp;
+fine all right and I'm going to choose my
+
+00:36:22.200 --> 00:36:30.960
+B to be zero why why I making&nbsp;
+this specific choices so now&nbsp;&nbsp;
+
+00:36:30.960 --> 00:36:34.960
+let me plug everything back in&nbsp;
+so what does my Delta Theta look
+
+00:36:34.960 --> 00:36:46.880
+like so alpha n which is row into&nbsp;
+Theta and 1us Theta into RN minus&nbsp;&nbsp;
+
+00:36:46.880 --> 00:36:50.240
+B which is zero so it's RN into do on this which&nbsp;&nbsp;
+
+00:36:50.240 --> 00:36:57.520
+will be a minus Theta by Theta into 1us&nbsp;
+Theta right so what do I end up getting
+
+00:36:58.200 --> 00:37:07.640
+row okay so what is what is the interpretation for
+
+00:37:07.640 --> 00:37:19.800
+this let us say I take action one okay and&nbsp;
+I get a reward of one so what do I get row&nbsp;&nbsp;
+
+00:37:19.800 --> 00:37:28.400
+into 1us Theta that is how much I change&nbsp;
+my value by so which is essentially this
+
+00:37:28.400 --> 00:37:41.160
+right row into 1us Theta right suppose I took&nbsp;
+action uh what what about I took action one&nbsp;&nbsp;
+
+00:37:41.160 --> 00:37:48.640
+right and my reward was one right what will I&nbsp;
+do for uh zero oh there's no there's only one&nbsp;&nbsp;
+
+00:37:48.640 --> 00:37:52.040
+parameter right so automatically my other&nbsp;
+parameter will get adjusted because it's&nbsp;&nbsp;
+
+00:37:52.040 --> 00:37:57.440
+1us Theta suppose I took action one&nbsp;
+and got a rward of zero what happens
+
+00:37:59.120 --> 00:38:03.760
+no change suppose I took an action&nbsp;
+of zero and got a reward of one what
+
+00:38:03.760 --> 00:38:16.200
+happens minus Theta into RN right so&nbsp;
+that's essentially what I have here&nbsp;&nbsp;
+
+00:38:16.200 --> 00:38:21.680
+right so this is minus Theta into RN right&nbsp;
+so Theta is my P T8 if you remember right&nbsp;&nbsp;
+
+00:38:21.680 --> 00:38:27.600
+and then this is so that's essentially&nbsp;
+what I have so this is this this is what
+
+00:38:27.600 --> 00:38:30.360
+L
+
+00:38:30.360 --> 00:38:39.120
+right so essentially L is a it's a gradient&nbsp;
+following algorithm actually it's a reinforced
+
+00:38:39.120 --> 00:38:50.400
+algorithm right so you can try to look at&nbsp;
+different choices for the uh the uh uh alphas&nbsp;&nbsp;
+
+00:38:50.400 --> 00:38:57.440
+and the different choices for PI right and try&nbsp;
+to come up with these kinds of update rules right&nbsp;&nbsp;
+
+00:38:57.960 --> 00:39:03.280
+we'll do the soft Max action selection as I&nbsp;
+described in the previous class right so do&nbsp;&nbsp;
+
+00:39:03.280 --> 00:39:11.640
+that right where I replace all my Q's with some&nbsp;
+arbitrary Theta suppose I have K actions or k&nbsp;&nbsp;
+
+00:39:11.640 --> 00:39:16.800
+arms then I'll have Theta 1 2 Theta K these are&nbsp;
+my parameters and the probability of selecting&nbsp;&nbsp;
+
+00:39:16.800 --> 00:39:26.360
+arm I will be E power Theta I by Beta divided&nbsp;
+by summation over J e^ Theta J by vaa right so&nbsp;&nbsp;
+
+00:39:26.360 --> 00:39:32.840
+this is my soft Max expression so derive my&nbsp;
+reinforce update rules assuming that's the
+
+00:39:32.840 --> 00:39:41.040
+expression right that's one&nbsp;
+I'm going to give you another
+
+00:39:41.040 --> 00:39:45.520
+homework the same
+
+00:39:45.520 --> 00:39:57.320
+thing so I said one of the nice&nbsp;
+things about uh doing reinforce
+
+00:40:03.160 --> 00:40:07.200
+is said it allows us to handle&nbsp;
+continuous actions right it&nbsp;&nbsp;
+
+00:40:07.200 --> 00:40:10.320
+allows us to handle continuous action&nbsp;
+actions need not be discrete so far&nbsp;&nbsp;
+
+00:40:10.320 --> 00:40:27.320
+we have been looking at the cases where&nbsp;
+actions are discrete so I'm going to use
+
+00:40:41.400 --> 00:40:45.800
+that is my probability&nbsp;
+distribution that is my policy
+
+00:40:45.800 --> 00:40:53.400
+okay give me the reinforce update&nbsp;
+rules so how many rules will I have&nbsp;&nbsp;
+
+00:40:53.400 --> 00:40:58.960
+for reinforce update rules here&nbsp;
+two one for the MU one for the
+
+00:40:58.960 --> 00:41:02.680
+sigma
+
+00:41:02.680 --> 00:41:18.640
+right get me the reinforce update rules&nbsp;
+and uh yeah so try to simplify it as&nbsp;&nbsp;
+
+00:41:18.640 --> 00:41:22.800
+much as possible because when&nbsp;
+you do the lawn mu I mean the&nbsp;&nbsp;
+
+00:41:22.800 --> 00:41:27.520
+the lawn Pi derivatives you'll get&nbsp;
+all kinds of we at constants coming&nbsp;&nbsp;
+
+00:41:27.520 --> 00:41:33.680
+there so you can choose your Alpha appropriately&nbsp;
+so that some of these constants get canceled out&nbsp;&nbsp;
+
+00:41:33.680 --> 00:41:38.880
+so that I can have I can just like we did here&nbsp;
+right I chose my row to be Theta and 1us Theta&nbsp;&nbsp;
+
+00:41:38.880 --> 00:41:44.920
+likewise you can choose your constants in this&nbsp;
+case also right the the alphas to be something&nbsp;&nbsp;
+
+00:41:44.920 --> 00:41:55.237
+different so that you end up with a good uh&nbsp;
+uh nice looking form okay great [Applause]
+
